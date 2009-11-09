@@ -1,0 +1,440 @@
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (151.6ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (271.6ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateProfiles (20091109105049)
+  [4;35;1mSQL (119.5ms)[0m   [0mCREATE TABLE `profiles` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `family_name` varchar(255), `name` varchar(255), `town` varchar(255), `sex` varchar(255), `birthday` date, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091109105049')[0m
+Migrating to CreateUsers (20091109105426)
+  [4;35;1mSQL (8.7ms)[0m   [0mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `username` varchar(255), `email` varchar(255), `crypted_password` varchar(255), `password_salt` varchar(255), `persistence_token` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091109105426')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (82.7ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mdescribe `people`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW KEYS FROM `people`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSHOW FIELDS FROM `profiles`[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mdescribe `profiles`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `profiles`[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mdescribe `users`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProfilesController#index (for 127.0.0.1 at 2009-11-09 14:08:01) [GET]
+  [4;35;1mProfile Load (0.4ms)[0m   [0mSELECT * FROM `profiles` [0m
+Rendering template within layouts/profiles
+Rendering profiles/index
+Completed in 59ms (View: 53, DB: 1) | 200 OK [http://0.0.0.0/profiles]
+  [4;36;1mSQL (7.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProfilesController#new (for 127.0.0.1 at 2009-11-09 14:34:28) [GET]
+  [4;35;1mProfile Columns (31.9ms)[0m   [0mSHOW FIELDS FROM `profiles`[0m
+Rendering template within layouts/profiles
+Rendering profiles/new
+Completed in 177ms (View: 139, DB: 39) | 200 OK [http://0.0.0.0/profiles/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProfilesController#new (for 127.0.0.1 at 2009-11-09 15:28:05) [GET]
+  [4;35;1mProfile Columns (33.8ms)[0m   [0mSHOW FIELDS FROM `profiles`[0m
+Rendering template within layouts/profiles
+Rendering profiles/new
+Completed in 56ms (View: 15, DB: 34) | 200 OK [http://0.0.0.0/profiles/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProfilesController#index (for 127.0.0.1 at 2009-11-09 15:28:41) [GET]
+  [4;35;1mProfile Load (0.4ms)[0m   [0mSELECT * FROM `profiles` [0m
+Rendering template within layouts/profiles
+Rendering profiles/index
+Completed in 9ms (View: 2, DB: 1) | 200 OK [http://0.0.0.0/profiles]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProfilesController#index (for 127.0.0.1 at 2009-11-09 16:17:01) [GET]
+  [4;35;1mProfile Load (0.3ms)[0m   [0mSELECT * FROM `profiles` [0m
+Rendering template within layouts/application
+Rendering profiles/index
+Completed in 15ms (View: 8, DB: 0) | 200 OK [http://0.0.0.0/profiles]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProfilesController#index (for 127.0.0.1 at 2009-11-09 16:17:01) [GET]
+  [4;35;1mProfile Load (0.3ms)[0m   [0mSELECT * FROM `profiles` [0m
+Rendering template within layouts/application
+Rendering profiles/index
+Completed in 8ms (View: 1, DB: 0) | 200 OK [http://0.0.0.0/profiles]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-11-09 16:17:05) [GET]
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering users/new
+
+ActionView::TemplateError (undefined method `title' for #<ActionView::Base:0xb740ac9c>) on line #1 of app/views/users/new.html.erb:
+1: <% title "New User" %>
+2: 
+3: <%= render :partial => 'form' %>
+
+    app/views/users/new.html.erb:1
+
+Rendered rescues/_trace (101.9ms)
+Rendered rescues/_request_and_response (18.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-11-09 16:19:28) [GET]
+  [4;35;1mUser Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (6.6ms)
+Completed in 28ms (View: 16, DB: 1) | 200 OK [http://0.0.0.0/users/new]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-11-09 16:27:34) [GET]
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering users/new
+
+ActionView::TemplateError (undefined method `confirmation' for #<User:0xb7445ae0>) on line #17 of app/views/users/_form.html.erb:
+14:   </p>
+15:   <p>
+16:     <%= f.label :confirmation %><br />
+17:     <%= f.text_field :confirmation %>
+18:   </p>
+19: 
+20: 
+
+    app/views/users/_form.html.erb:17
+    app/views/users/_form.html.erb:1
+    app/views/users/new.html.erb:3
+
+Rendered rescues/_trace (125.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-11-09 16:27:34) [GET]
+  [4;35;1mUser Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering users/new
+
+ActionView::TemplateError (undefined method `confirmation' for #<User:0xb74be1fc>) on line #17 of app/views/users/_form.html.erb:
+14:   </p>
+15:   <p>
+16:     <%= f.label :confirmation %><br />
+17:     <%= f.text_field :confirmation %>
+18:   </p>
+19: 
+20: 
+
+    app/views/users/_form.html.erb:17
+    app/views/users/_form.html.erb:1
+    app/views/users/new.html.erb:3
+
+Rendered rescues/_trace (123.6ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-11-09 16:28:27) [GET]
+  [4;35;1mUser Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (7.6ms)
+Completed in 25ms (View: 13, DB: 1) | 200 OK [http://0.0.0.0/users/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-11-09 16:28:27) [GET]
+  [4;35;1mUser Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (6.5ms)
+Completed in 20ms (View: 8, DB: 1) | 200 OK [http://0.0.0.0/users/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-11-09 16:31:20) [GET]
+  [4;35;1mUser Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (6.4ms)
+Completed in 19ms (View: 8, DB: 1) | 200 OK [http://0.0.0.0/users/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-11-09 16:31:20) [GET]
+  [4;35;1mUser Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (6.6ms)
+Completed in 20ms (View: 8, DB: 1) | 200 OK [http://0.0.0.0/users/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-11-09 16:31:43) [GET]
+  [4;35;1mUser Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (56.7ms)
+Completed in 73ms (View: 62, DB: 1) | 200 OK [http://0.0.0.0/users/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-11-09 16:31:43) [GET]
+  [4;35;1mUser Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (8.1ms)
+Completed in 22ms (View: 10, DB: 1) | 200 OK [http://0.0.0.0/users/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProfilesController#index (for 127.0.0.1 at 2009-11-09 17:09:43) [GET]
+  [4;35;1mProfile Load (48.0ms)[0m   [0mSELECT * FROM `profiles` [0m
+Rendering template within layouts/application
+Rendering profiles/index
+Completed in 60ms (View: 6, DB: 48) | 200 OK [http://0.0.0.0/profiles]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-11-09 17:09:45) [GET]
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (6.8ms)
+Completed in 21ms (View: 8, DB: 1) | 200 OK [http://0.0.0.0/users/new]
+  [4;36;1mSQL (5.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#create (for 127.0.0.1 at 2009-11-09 17:10:07) [POST]
+  Parameters: {"commit"=>"Submit", "authenticity_token"=>"MDyp2CU7gvdWxRat6ZF9Snt//Tjycz19AaqmtyEVSKI=", "user"=>{"password_confirmation"=>"testtest", "username"=>"test", "password"=>"testtest", "email"=>"test@yahoo.fr"}}
+  [4;35;1mUser Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (22.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (102.7ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`email` = BINARY 'test@yahoo.fr') LIMIT 1[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`username` = BINARY 'test') LIMIT 1[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`persistence_token` = BINARY 'af33727ac61a68e135b3c411556a13d830e2aec86cb5628a5af1306c0819cb132ba8015e4e08909502fa0a179c4fcf2ad448ec8bd03f3ea7c356b0a46c35e262') LIMIT 1[0m
+  [4;36;1mUser Create (98.1ms)[0m   [0;1mINSERT INTO `users` (`created_at`, `crypted_password`, `updated_at`, `username`, `password_salt`, `persistence_token`, `email`) VALUES('2009-11-09 14:10:07', '80b441775301b93e51f0390e7eeaa83ef3092120d5fddd4dd03fa2b36027c5bce0ba99e9c0bb530f13be840dcebb98fee0ca4e8850c35737da68a358b88a50aa', '2009-11-09 14:10:07', 'test', 'g5jkgcjjh2KyecCrHuRc', 'af33727ac61a68e135b3c411556a13d830e2aec86cb5628a5af1306c0819cb132ba8015e4e08909502fa0a179c4fcf2ad448ec8bd03f3ea7c356b0a46c35e262', 'test@yahoo.fr')[0m
+  [4;35;1mSQL (46.6ms)[0m   [0mCOMMIT[0m
+
+NameError (undefined local variable or method `root_url' for #<UsersController:0xb796e058>):
+  app/controllers/users_controller.rb:10:in `create'
+
+Rendered rescues/_trace (40.7ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#destroy (for 127.0.0.1 at 2009-11-09 17:18:00) [GET]
+  [4;35;1mUser Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`persistence_token` = 'af33727ac61a68e135b3c411556a13d830e2aec86cb5628a5af1306c0819cb132ba8015e4e08909502fa0a179c4fcf2ad448ec8bd03f3ea7c356b0a46c35e262') LIMIT 1[0m
+
+NameError (undefined local variable or method `root_url' for #<UserSessionsController:0xb73d85e4>):
+  app/controllers/user_sessions_controller.rb:20:in `destroy'
+
+Rendered rescues/_trace (38.2ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-11-09 17:23:15) [GET]
+  [4;36;1mUser Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (7.3ms)
+Completed in 22ms (View: 9, DB: 1) | 200 OK [http://0.0.0.0/users/new]
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#create (for 127.0.0.1 at 2009-11-09 17:23:33) [POST]
+  Parameters: {"commit"=>"Submit", "authenticity_token"=>"MDyp2CU7gvdWxRat6ZF9Snt//Tjycz19AaqmtyEVSKI=", "user"=>{"password_confirmation"=>"test", "username"=>"test", "password"=>"test", "email"=>"test@yahoo.fr"}}
+  [4;36;1mUser Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (1.8ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`email` = BINARY 'test@yahoo.fr') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`username` = BINARY 'test') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`persistence_token` = BINARY '5a78d47056d021b5f24115353626478aa76fc0d93f9077982a986f7ab075a16b8c77d0265f79e24f8a031d3c4d2eab538a3bdfae931e0d82ffdffb61e54ef763') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (13.3ms)
+Completed in 37ms (View: 15, DB: 4) | 200 OK [http://0.0.0.0/users]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#create (for 127.0.0.1 at 2009-11-09 17:23:43) [POST]
+  Parameters: {"commit"=>"Submit", "authenticity_token"=>"MDyp2CU7gvdWxRat6ZF9Snt//Tjycz19AaqmtyEVSKI=", "user"=>{"password_confirmation"=>"test", "username"=>"test2", "password"=>"test", "email"=>"test@yahoo.fr"}}
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`email` = BINARY 'test@yahoo.fr') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`username` = BINARY 'test2') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`persistence_token` = BINARY '866b79e06625630b1a4bb8f6304282b79065ea5871a9680d3b63c3a0a09d7fb0de913231d0ea5e87653adb2ea24bf0afb251cabf55c3783c71c168265b8af7f4') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (9.1ms)
+Completed in 29ms (View: 11, DB: 2) | 200 OK [http://0.0.0.0/users]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#create (for 127.0.0.1 at 2009-11-09 17:24:08) [POST]
+  Parameters: {"commit"=>"Submit", "authenticity_token"=>"MDyp2CU7gvdWxRat6ZF9Snt//Tjycz19AaqmtyEVSKI=", "user"=>{"password_confirmation"=>"test", "username"=>"test2", "password"=>"test", "email"=>"test23@yahoo.fr"}}
+  [4;36;1mUser Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`email` = BINARY 'test23@yahoo.fr') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`username` = BINARY 'test2') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`persistence_token` = BINARY '4180640ccb466350daf2cd1c6dde597d69691d25d2edae9f1e51ca4802d22ee649f91495fe01a95a405bcaa995c143a77da8213a10655a45cbb161af0e71b15b') LIMIT 1[0m
+  [4;35;1mUser Create (0.3ms)[0m   [0mINSERT INTO `users` (`created_at`, `crypted_password`, `updated_at`, `username`, `password_salt`, `persistence_token`, `email`) VALUES('2009-11-09 14:24:09', '73c2b5cbb255514eeb824f5c80f6f50dc63beb355d7647b10bbd067af779ec93bbd47ebe3c07ac442346003be9bd3173ad407815369be5d821546134dc910072', '2009-11-09 14:24:09', 'test2', '62nfMY25Z9h5ObtA4_FX', '4180640ccb466350daf2cd1c6dde597d69691d25d2edae9f1e51ca4802d22ee649f91495fe01a95a405bcaa995c143a77da8213a10655a45cbb161af0e71b15b', 'test23@yahoo.fr')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://0.0.0.0:3000/users
+Completed in 73ms (DB: 3) | 302 Found [http://0.0.0.0/users]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-11-09 17:24:09) [GET]
+
+ActionController::UnknownAction (No action responded to index. Actions: create, edit, new, and update):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (6.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#destroy (for 127.0.0.1 at 2009-11-09 17:24:25) [GET]
+  [4;35;1mUser Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`persistence_token` = '4180640ccb466350daf2cd1c6dde597d69691d25d2edae9f1e51ca4802d22ee649f91495fe01a95a405bcaa995c143a77da8213a10655a45cbb161af0e71b15b') LIMIT 1[0m
+
+NameError (undefined local variable or method `root_url' for #<UserSessionsController:0xb7493614>):
+  app/controllers/user_sessions_controller.rb:20:in `destroy'
+
+Rendered rescues/_trace (38.1ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#destroy (for 127.0.0.1 at 2009-11-09 17:24:31) [GET]
+  [4;36;1mUser Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of ActiveRecord::Base.
+The error occurred while evaluating nil.destroy):
+  app/controllers/user_sessions_controller.rb:18:in `destroy'
+
+Rendered rescues/_trace (100.4ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#destroy (for 127.0.0.1 at 2009-11-09 17:24:31) [GET]
+  [4;36;1mUser Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of ActiveRecord::Base.
+The error occurred while evaluating nil.destroy):
+  app/controllers/user_sessions_controller.rb:18:in `destroy'
+
+Rendered rescues/_trace (37.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-11-09 17:24:41) [GET]
+  [4;36;1mUser Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (6.7ms)
+Completed in 20ms (View: 8, DB: 1) | 200 OK [http://0.0.0.0/users/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#create (for 127.0.0.1 at 2009-11-09 17:24:48) [POST]
+  Parameters: {"commit"=>"Submit", "authenticity_token"=>"MDyp2CU7gvdWxRat6ZF9Snt//Tjycz19AaqmtyEVSKI=", "user"=>{"password_confirmation"=>"", "username"=>"test", "password"=>"", "email"=>""}}
+  [4;36;1mUser Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`email` = BINARY '') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`username` = BINARY 'test') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`persistence_token` = BINARY '07be7c95ab8b55251e9b629d9ed08ef4252bea19285dd2c136de3d08f9831015e937c97287b78aa289fe68c67ea29cdc8934ae5c015ca5cdd677aaae8fa70a25') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (26.4ms)
+Completed in 47ms (View: 28, DB: 2) | 200 OK [http://0.0.0.0/users]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#create (for 127.0.0.1 at 2009-11-09 17:25:07) [POST]
+  Parameters: {"commit"=>"Submit", "authenticity_token"=>"MDyp2CU7gvdWxRat6ZF9Snt//Tjycz19AaqmtyEVSKI=", "user"=>{"password_confirmation"=>"test", "username"=>"test", "password"=>"test", "email"=>"test231@yahoo.fr"}}
+  [4;35;1mUser Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`email` = BINARY 'test231@yahoo.fr') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`username` = BINARY 'test') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`persistence_token` = BINARY 'a05235c18b03f5a2032c3873e5799bfae452edc0bdb9264b56608ee4ba3d7b05dc110dd3b230e7afc5acd93936e0ec75ea61ee11fe1a7bdc705262f8fb983b3d') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (9.2ms)
+Completed in 29ms (View: 11, DB: 2) | 200 OK [http://0.0.0.0/users]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#create (for 127.0.0.1 at 2009-11-09 17:25:44) [POST]
+  Parameters: {"commit"=>"Submit", "authenticity_token"=>"MDyp2CU7gvdWxRat6ZF9Snt//Tjycz19AaqmtyEVSKI=", "user"=>{"password_confirmation"=>"fenoum", "username"=>"fenoum", "password"=>"fenoum", "email"=>"test231@hotmail.fr"}}
+  [4;36;1mUser Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`email` = BINARY 'test231@hotmail.fr') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`username` = BINARY 'fenoum') LIMIT 1[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`persistence_token` = BINARY '103275e2ec0776b583412e8781f4d596d29509a7990d04cee1eec3a69370bec1f0a303a1f066c882d9b0d42be861a34d6e28374974b7356e7d789b21879ea720') LIMIT 1[0m
+  [4;35;1mUser Create (0.4ms)[0m   [0mINSERT INTO `users` (`created_at`, `crypted_password`, `updated_at`, `username`, `password_salt`, `persistence_token`, `email`) VALUES('2009-11-09 14:25:44', '37a08b4e7a2d6415ab9ec0f4fe6030295699b35a58d9e60b8f85f254e00b50dc62b9ba6db8da3a9f35575648417672e761ea6bb871c16acc7e74fba52c22e8b3', '2009-11-09 14:25:44', 'fenoum', 'ud9geVo8WkUWjLB2ZO-j', '103275e2ec0776b583412e8781f4d596d29509a7990d04cee1eec3a69370bec1f0a303a1f066c882d9b0d42be861a34d6e28374974b7356e7d789b21879ea720', 'test231@hotmail.fr')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://0.0.0.0:3000/users
+Completed in 25ms (DB: 3) | 302 Found [http://0.0.0.0/users]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-11-09 17:25:44) [GET]
+
+ActionController::UnknownAction (No action responded to index. Actions: create, edit, new, and update):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (6.5ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#create (for 127.0.0.1 at 2009-11-09 17:28:26) [POST]
+  Parameters: {"commit"=>"Submit", "authenticity_token"=>"MDyp2CU7gvdWxRat6ZF9Snt//Tjycz19AaqmtyEVSKI=", "user"=>{"password_confirmation"=>"", "username"=>"fenoum", "password"=>"", "email"=>"test231@hotmail.fr"}}
+  [4;35;1mUser Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`email` = BINARY 'test231@hotmail.fr') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`username` = BINARY 'fenoum') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`persistence_token` = BINARY '8951ceb7b9e8922a1fbfa27150a89ca540f8b2b2da8c37a67c082b0d5e41406dcf3901a92a86c968060fd64cf06c0debdba58c31d0eb22b498059211c30f4576') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (23.2ms)
+Completed in 96ms (View: 25, DB: 8) | 200 OK [http://0.0.0.0/users]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#destroy (for 127.0.0.1 at 2009-11-09 17:28:34) [GET]
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`persistence_token` = '103275e2ec0776b583412e8781f4d596d29509a7990d04cee1eec3a69370bec1f0a303a1f066c882d9b0d42be861a34d6e28374974b7356e7d789b21879ea720') LIMIT 1[0m
+
+NameError (undefined local variable or method `root_url' for #<UserSessionsController:0xb748d994>):
+  app/controllers/user_sessions_controller.rb:20:in `destroy'
+
+Rendered rescues/_trace (36.8ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)

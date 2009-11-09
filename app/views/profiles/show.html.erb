@@ -1,0 +1,28 @@
+<p>
+  <b>Family name:</b>
+  <%=h @profile.family_name %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%=h @profile.name %>
+</p>
+
+<p>
+  <b>Town:</b>
+  <%=h @profile.town %>
+</p>
+
+<p>
+  <b>Sex:</b>
+  <%=h @profile.sex %>
+</p>
+
+<p>
+  <b>Birthday:</b>
+  <%=h @profile.birthday %>
+</p>
+
+
+<%= link_to 'Edit', edit_profile_path(@profile) %> |
+<%= link_to 'Back', profiles_path %>
