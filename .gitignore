@@ -1,0 +1,12 @@
+nbproject
+log/*
+doc/*
+config/database.yml
+.DS_Store
+*.swp
+tmp/**
+vimsession
+db/.mysql
+*.log
+config/sphinx.yml
+public/images/uploaded
