@@ -4,8 +4,8 @@ class CreateOfferings < ActiveRecord::Migration
       t.string :name
       t.text :description
       t.string :author
-      t.datetime :Date
-
+      t.datetime :date_depot
+      t.datetime :validity
       t.timestamps
     end
   end

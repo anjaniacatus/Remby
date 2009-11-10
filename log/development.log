@@ -2222,3 +2222,102 @@ Rendering offerings/index
   [4;35;1mOffering Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `offerings`[0m
   [4;36;1mUser Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
 Completed in 55ms (View: 39, DB: 4) | 200 OK [http://0.0.0.0/]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2009-11-10 15:35:03) [GET]
+  [4;36;1mUser Columns (2.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 38ms (View: 11, DB: 2) | 200 OK [http://0.0.0.0/login]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2009-11-10 15:35:10) [POST]
+  Parameters: {"commit"=>"Submit", "user_session"=>{"username"=>"test", "password"=>""}, "authenticity_token"=>"46Hng6c7e6A35kuyZj2tCLjSOCY7yHDoDppeyKzHI0E="}
+  [4;36;1mUser Columns (23.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 98ms (View: 23, DB: 24) | 200 OK [http://0.0.0.0/user_sessions]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-11-10 15:35:12) [GET]
+  [4;36;1mUser Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (12.5ms)
+Completed in 45ms (View: 22, DB: 2) | 200 OK [http://0.0.0.0/users/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#create (for 127.0.0.1 at 2009-11-10 15:35:46) [POST]
+  Parameters: {"commit"=>"Submit", "authenticity_token"=>"46Hng6c7e6A35kuyZj2tCLjSOCY7yHDoDppeyKzHI0E=", "user"=>{"password_confirmation"=>"fenoum22", "username"=>"fenoum22", "password"=>"fenoum22", "email"=>"fenoum22@hotmail.com"}}
+  [4;36;1mUser Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (16.4ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`email` = BINARY 'fenoum22@hotmail.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`username` = BINARY 'fenoum22') LIMIT 1[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`persistence_token` = BINARY '840ed3f0c85ed81465ead3222599263693645881b05a14227c0a500cc8985e67bf2d62f56d5b0431a5b8fad53c4566c38e44d851f102e4eb04696db594484169') LIMIT 1[0m
+  [4;35;1mUser Create (0.4ms)[0m   [0mINSERT INTO `users` (`created_at`, `crypted_password`, `updated_at`, `username`, `password_salt`, `persistence_token`, `email`) VALUES('2009-11-10 12:35:46', 'd9ebbfc1f4182f3d2ae4fc9b040521da6a066b038600ccb6cd6759ef26f81557c1963eb5b167914c45065475830b44e1bcacba571aa08ea9bf82c293a0f1d482', '2009-11-10 12:35:46', 'fenoum22', 'e0bX6X0OR0Glxl1N0qli', '840ed3f0c85ed81465ead3222599263693645881b05a14227c0a500cc8985e67bf2d62f56d5b0431a5b8fad53c4566c38e44d851f102e4eb04696db594484169', 'fenoum22@hotmail.com')[0m
+  [4;36;1mSQL (23.0ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://0.0.0.0:3000/
+Completed in 122ms (DB: 43) | 302 Found [http://0.0.0.0/users]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OfferingsController#index (for 127.0.0.1 at 2009-11-10 15:35:46) [GET]
+  [4;36;1mOffering Load (0.5ms)[0m   [0;1mSELECT * FROM `offerings` [0m
+Rendering template within layouts/application
+Rendering offerings/index
+  [4;35;1mOffering Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `offerings`[0m
+  [4;36;1mUser Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`persistence_token` = '840ed3f0c85ed81465ead3222599263693645881b05a14227c0a500cc8985e67bf2d62f56d5b0431a5b8fad53c4566c38e44d851f102e4eb04696db594484169') LIMIT 1[0m
+Completed in 70ms (View: 53, DB: 5) | 200 OK [http://0.0.0.0/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#destroy (for 127.0.0.1 at 2009-11-10 16:32:03) [GET]
+  [4;35;1mUser Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`persistence_token` = '840ed3f0c85ed81465ead3222599263693645881b05a14227c0a500cc8985e67bf2d62f56d5b0431a5b8fad53c4566c38e44d851f102e4eb04696db594484169') LIMIT 1[0m
+Redirected to http://0.0.0.0:3000/
+Completed in 134ms (DB: 3) | 302 Found [http://0.0.0.0/logout]
+  [4;35;1mSQL (7.5ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OfferingsController#index (for 127.0.0.1 at 2009-11-10 16:32:04) [GET]
+  [4;36;1mOffering Load (0.5ms)[0m   [0;1mSELECT * FROM `offerings` [0m
+Rendering template within layouts/application
+Rendering offerings/index
+  [4;35;1mOffering Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `offerings`[0m
+  [4;36;1mUser Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Completed in 58ms (View: 43, DB: 11) | 200 OK [http://0.0.0.0/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OfferingsController#new (for 127.0.0.1 at 2009-11-10 16:46:42) [GET]
+  [4;36;1mOffering Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `offerings`[0m
+Rendering template within layouts/application
+Rendering offerings/new
+  [4;35;1mUser Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Completed in 68ms (View: 53, DB: 4) | 200 OK [http://0.0.0.0/offerings/new]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (85.9ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (347.4ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateProfiles (20091109105049)
+Migrating to CreateUsers (20091109105426)
+Migrating to CreateOfferings (20091110090547)
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (1.9ms)[0m   [0;1mSHOW FIELDS FROM `offerings`[0m
+  [4;35;1mSQL (14.7ms)[0m   [0mdescribe `offerings`[0m
+  [4;36;1mSQL (21.1ms)[0m   [0;1mSHOW KEYS FROM `offerings`[0m
+  [4;35;1mSQL (18.5ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mdescribe `people`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `people`[0m
+  [4;36;1mSQL (13.4ms)[0m   [0;1mSHOW FIELDS FROM `profiles`[0m
+  [4;35;1mSQL (1.7ms)[0m   [0mdescribe `profiles`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW KEYS FROM `profiles`[0m
+  [4;35;1mSQL (1.7ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (1.6ms)[0m   [0;1mdescribe `users`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `users`[0m
