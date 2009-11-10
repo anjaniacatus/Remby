@@ -1,0 +1,23 @@
+<p>
+  <b>Name:</b>
+  <%=h @offering.name %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%=h @offering.description %>
+</p>
+
+<p>
+  <b>Author:</b>
+  <%=h @offering.author %>
+</p>
+
+<p>
+  <b>Date:</b>
+  <%=h @offering.Date %>
+</p>
+
+
+<%= link_to 'Edit', edit_offering_path(@offering) %> |
+<%= link_to 'Back', offerings_path %>
