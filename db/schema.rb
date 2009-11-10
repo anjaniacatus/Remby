@@ -15,12 +15,8 @@ ActiveRecord::Schema.define(:version => 20091110090547) do
     t.string   "name"
     t.text     "description"
     t.string   "author"
-    t.datetime "Date"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "people", :force => true do |t|
+    t.datetime "date_depot"
+    t.datetime "validity"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
