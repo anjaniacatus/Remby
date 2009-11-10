@@ -10,9 +10,14 @@
 <body>
 <div id="container">
   <div id="user_nav">
-    <%= link_to "Register", new_user_path %>
-    <%= link_to "Login", login_path %>
-  </div>  
+    <% if current_user %>
+      <%= link_to "Edit Account", edit_user_path(:current) %>|
+      <%= link_to "logout", logout_path %>   
+    <% else %>  
+      <%= link_to "Register", new_user_path %> |
+      <%= link_to "Login", login_path %>
+    <% end %>
+    </div>  
 </div>
 <p style="color: green"><%= flash[:notice] %></p>
 <%= yield %>

@@ -1408,3 +1408,817 @@ Migrating to CreateOfferings (20091110090547)
   [4;35;1mSQL (1.7ms)[0m   [0mSHOW FIELDS FROM `users`[0m
   [4;36;1mSQL (1.7ms)[0m   [0;1mdescribe `users`[0m
   [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OfferingsController#index (for 127.0.0.1 at 2009-11-10 12:08:38) [GET]
+  [4;35;1mOffering Load (0.4ms)[0m   [0mSELECT * FROM `offerings` [0m
+Rendering template within layouts/offerings
+Rendering offerings/index
+Completed in 44ms (View: 25, DB: 1) | 200 OK [http://0.0.0.0/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OfferingsController#index (for 127.0.0.1 at 2009-11-10 12:26:01) [GET]
+  [4;35;1mOffering Load (0.4ms)[0m   [0mSELECT * FROM `offerings` [0m
+Rendering template within layouts/application
+Rendering offerings/index
+Completed in 15ms (View: 3, DB: 1) | 200 OK [http://0.0.0.0/]
+  [4;36;1mSQL (42.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OfferingsController#index (for 127.0.0.1 at 2009-11-10 13:27:52) [GET]
+  [4;35;1mOffering Load (70.5ms)[0m   [0mSELECT * FROM `offerings` [0m
+Rendering template within layouts/application
+Rendering offerings/index
+Completed in 202ms (View: 120, DB: 113) | 200 OK [http://0.0.0.0/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OfferingsController#index (for 127.0.0.1 at 2009-11-10 13:28:02) [GET]
+  [4;35;1mOffering Load (11.6ms)[0m   [0mSELECT * FROM `offerings` [0m
+Rendering template within layouts/application
+Rendering offerings/index
+Completed in 27ms (View: 3, DB: 12) | 200 OK [http://0.0.0.0/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-11-10 13:28:02) [GET]
+  [4;35;1mUser Columns (32.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (18.1ms)
+Completed in 91ms (View: 36, DB: 33) | 200 OK [http://0.0.0.0/users/new]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-11-10 13:28:03) [GET]
+  [4;35;1mUser Columns (2.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (13.8ms)
+Completed in 43ms (View: 18, DB: 3) | 200 OK [http://0.0.0.0/users/new]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-11-10 13:28:03) [GET]
+  [4;35;1mUser Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (13.0ms)
+Completed in 38ms (View: 16, DB: 2) | 200 OK [http://0.0.0.0/users/new]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-11-10 13:28:08) [GET]
+  [4;35;1mUser Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (12.6ms)
+Completed in 37ms (View: 15, DB: 2) | 200 OK [http://0.0.0.0/users/new]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2009-11-10 13:28:10) [GET]
+  [4;35;1mUser Columns (2.1ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering user_sessions/new
+
+ActionView::TemplateError (undefined method `password_confirmation' for #<UserSession: no credentials provided>) on line #15 of app/views/user_sessions/new.html.erb:
+12:   </p>
+13:  <p>
+14:     <%= f.label :password_onfirmation %><br />
+15:     <%= f.password_field :password_confirmation %>
+16:   </p>
+17: 
+18:   <p><%= f.submit "Submit" %></p>
+
+    app/views/user_sessions/new.html.erb:15
+    app/views/user_sessions/new.html.erb:3
+
+Rendered rescues/_trace (111.0ms)
+Rendered rescues/_request_and_response (2.7ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-11-10 13:35:34) [GET]
+  [4;35;1mUser Columns (5.7ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (13.8ms)
+Completed in 48ms (View: 17, DB: 6) | 200 OK [http://0.0.0.0/users/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#create (for 127.0.0.1 at 2009-11-10 13:36:01) [POST]
+  Parameters: {"commit"=>"Submit", "authenticity_token"=>"46Hng6c7e6A35kuyZj2tCLjSOCY7yHDoDppeyKzHI0E=", "user"=>{"password_confirmation"=>"test", "username"=>"fenoumtest", "password"=>"test", "email"=>"fenoumtest"}}
+  [4;35;1mUser Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (12.0ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`email` = BINARY 'fenoumtest') LIMIT 1[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`username` = BINARY 'fenoumtest') LIMIT 1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`persistence_token` = BINARY '791048ef8f16e4bdd1da48706fb6cc929ea109452a55ef5665bed392b82585586eed4a593b474158a30eb910bdc4bc3d6dfa1a7f30838a6802a4c5c62d87f460') LIMIT 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mROLLBACK[0m
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (26.1ms)
+Completed in 93ms (View: 29, DB: 15) | 200 OK [http://0.0.0.0/users]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#create (for 127.0.0.1 at 2009-11-10 13:36:24) [POST]
+  Parameters: {"commit"=>"Submit", "authenticity_token"=>"46Hng6c7e6A35kuyZj2tCLjSOCY7yHDoDppeyKzHI0E=", "user"=>{"password_confirmation"=>"test", "username"=>"ainafenoumtest", "password"=>"test", "email"=>"ainafenoumtest@yahoo.fr"}}
+  [4;36;1mUser Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`email` = BINARY 'ainafenoumtest@yahoo.fr') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`username` = BINARY 'ainafenoumtest') LIMIT 1[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`persistence_token` = BINARY 'c2f5ecb78b1fedc0a220934c5e96c16da5dfccc60fc3f675c6ac38410f76f801c024f4791719c594d0a1411dd310516de1c05f072d8b217e5f361d676d2b3404') LIMIT 1[0m
+  [4;35;1mUser Create (0.5ms)[0m   [0mINSERT INTO `users` (`created_at`, `crypted_password`, `updated_at`, `username`, `password_salt`, `persistence_token`, `email`) VALUES('2009-11-10 10:36:24', '161775fc4d0180887cba4026c621ce575f23469970d89a68a7e716621d7aad3663d9de4e5e3b0c01fd530b0ed28ae18cc260cd5825e99acea260e40ce63c42e6', '2009-11-10 10:36:24', 'ainafenoumtest', '7XpIKsknkXmBbNYIpe4R', 'c2f5ecb78b1fedc0a220934c5e96c16da5dfccc60fc3f675c6ac38410f76f801c024f4791719c594d0a1411dd310516de1c05f072d8b217e5f361d676d2b3404', 'ainafenoumtest@yahoo.fr')[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://0.0.0.0:3000/users
+Completed in 50ms (DB: 4) | 302 Found [http://0.0.0.0/users]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-11-10 13:36:24) [GET]
+
+ActionController::UnknownAction (No action responded to index. Actions: create, edit, new, and update):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2009-11-10 13:36:45) [GET]
+  [4;35;1mUser Columns (2.1ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering user_sessions/new
+
+ActionView::TemplateError (undefined method `password_confirmation' for #<UserSession: no credentials provided>) on line #15 of app/views/user_sessions/new.html.erb:
+12:   </p>
+13:  <p>
+14:     <%= f.label :password_onfirmation %><br />
+15:     <%= f.password_field :password_confirmation %>
+16:   </p>
+17: 
+18:   <p><%= f.submit "Submit" %></p>
+
+    app/views/user_sessions/new.html.erb:15
+    app/views/user_sessions/new.html.erb:3
+
+Rendered rescues/_trace (186.1ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OfferingsController#new (for 127.0.0.1 at 2009-11-10 13:36:51) [GET]
+  [4;35;1mOffering Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `offerings`[0m
+Rendering template within layouts/application
+Rendering offerings/new
+Completed in 265ms (View: 251, DB: 2) | 200 OK [http://0.0.0.0/offerings/new]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OfferingsController#create (for 127.0.0.1 at 2009-11-10 13:37:32) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"46Hng6c7e6A35kuyZj2tCLjSOCY7yHDoDppeyKzHI0E=", "offering"=>{"name"=>"offertest", "author"=>"authoroffering", "Date(1i)"=>"2009", "Date(2i)"=>"11", "Date(3i)"=>"10", "Date(4i)"=>"10", "Date(5i)"=>"36", "description"=>"offertestdescription"}}
+  [4;35;1mOffering Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `offerings`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mOffering Create (2.0ms)[0m   [0mINSERT INTO `offerings` (`name`, `created_at`, `author`, `updated_at`, `Date`, `description`) VALUES('offertest', '2009-11-10 10:37:32', 'authoroffering', '2009-11-10 10:37:32', '2009-11-10 10:36:00', 'offertestdescription')[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://0.0.0.0:3000/offerings/1
+Completed in 25ms (DB: 4) | 302 Found [http://0.0.0.0/offerings]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OfferingsController#show (for 127.0.0.1 at 2009-11-10 13:37:32) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mOffering Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `offerings`[0m
+  [4;35;1mOffering Load (0.4ms)[0m   [0mSELECT * FROM `offerings` WHERE (`offerings`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering offerings/show
+Completed in 33ms (View: 15, DB: 3) | 200 OK [http://0.0.0.0/offerings/1]
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-11-10 13:45:08) [GET]
+
+ActionController::UnknownAction (No action responded to index. Actions: create, edit, new, and update):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-11-10 13:45:33) [GET]
+  Parameters: {"id"=>"1"}
+
+ActionController::UnknownAction (No action responded to show. Actions: create, edit, new, and update):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2009-11-10 13:46:12) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mUser Columns (33.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (18.4ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering users/edit
+
+ActionView::TemplateError (undefined method `title' for #<ActionView::Base:0xb73f764c>) on line #1 of app/views/users/edit.html.erb:
+1: <% title "Edit User" %>
+2: 
+3: <%= render :partial => 'form' %>
+
+    app/views/users/edit.html.erb:1
+
+Rendered rescues/_trace (374.1ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2009-11-10 13:47:39) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering users/edit
+Rendered users/_form (14.3ms)
+Completed in 50ms (View: 25, DB: 3) | 200 OK [http://0.0.0.0/users/edit/1]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2009-11-10 13:47:52) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mUser Columns (2.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+Rendering template within layouts/application
+Rendering users/edit
+Rendered users/_form (14.2ms)
+Completed in 42ms (View: 17, DB: 3) | 200 OK [http://0.0.0.0/users/edit/2]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2009-11-10 13:47:58) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mUser Columns (2.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+Rendering template within layouts/application
+Rendering users/edit
+Rendered users/_form (15.6ms)
+Completed in 44ms (View: 19, DB: 3) | 200 OK [http://0.0.0.0/users/edit/3]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2009-11-10 13:48:03) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mUser Columns (2.1ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 4) [0m
+Rendering template within layouts/application
+Rendering users/edit
+Rendered users/_form (14.7ms)
+Completed in 42ms (View: 18, DB: 3) | 200 OK [http://0.0.0.0/users/edit/4]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-11-10 13:50:03) [GET]
+  Parameters: {"id"=>"show"}
+
+ActionController::UnknownAction (No action responded to show. Actions: create, edit, new, and update):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OfferingsController#index (for 127.0.0.1 at 2009-11-10 13:54:00) [GET]
+  [4;35;1mOffering Load (17.0ms)[0m   [0mSELECT * FROM `offerings` [0m
+Rendering template within layouts/application
+Rendering offerings/index
+  [4;36;1mOffering Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `offerings`[0m
+Completed in 49ms (View: 17, DB: 19) | 200 OK [http://0.0.0.0/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-11-10 13:54:06) [GET]
+  [4;36;1mUser Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (13.2ms)
+Completed in 39ms (View: 16, DB: 2) | 200 OK [http://0.0.0.0/users/new]
+  [4;35;1mSQL (15.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#create (for 127.0.0.1 at 2009-11-10 13:54:39) [POST]
+  Parameters: {"commit"=>"Submit", "authenticity_token"=>"46Hng6c7e6A35kuyZj2tCLjSOCY7yHDoDppeyKzHI0E=", "user"=>{"password_confirmation"=>"test1", "username"=>"fenomamytest1", "password"=>"test1", "email"=>"fenomamyteste@yahoo.fr"}}
+  [4;36;1mUser Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`email` = BINARY 'fenomamyteste@yahoo.fr') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`username` = BINARY 'fenomamytest1') LIMIT 1[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`persistence_token` = BINARY 'c382fe1c28eda0c8d458c9d0497addef737960c8d7e61c60aa2e8ac118206be16029a59852645fbaaa2b383ab71aaf61941629bbc9535e812c4acd355dba0fcb') LIMIT 1[0m
+  [4;35;1mUser Load (48.4ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`persistence_token` = 'c2f5ecb78b1fedc0a220934c5e96c16da5dfccc60fc3f675c6ac38410f76f801c024f4791719c594d0a1411dd310516de1c05f072d8b217e5f361d676d2b3404') LIMIT 1[0m
+  [4;36;1mUser Create (0.4ms)[0m   [0;1mINSERT INTO `users` (`created_at`, `crypted_password`, `updated_at`, `username`, `password_salt`, `persistence_token`, `email`) VALUES('2009-11-10 10:54:39', 'd046cd0e903b5347cb69ee8001c343d2213180a4f00a56068efbe2ff0d610e2f54385d340f3a5e87c4fb5590f454a4679451602b919d64fe6b6b969caa5d25b8', '2009-11-10 10:54:39', 'fenomamytest1', 'h25blumdDhdYMUlWt8eI', 'c382fe1c28eda0c8d458c9d0497addef737960c8d7e61c60aa2e8ac118206be16029a59852645fbaaa2b383ab71aaf61941629bbc9535e812c4acd355dba0fcb', 'fenomamyteste@yahoo.fr')[0m
+  [4;35;1mSQL (43.6ms)[0m   [0mCOMMIT[0m
+Redirected to http://0.0.0.0:3000/
+Completed in 246ms (DB: 110) | 302 Found [http://0.0.0.0/users]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OfferingsController#index (for 127.0.0.1 at 2009-11-10 13:54:39) [GET]
+  [4;35;1mOffering Load (0.5ms)[0m   [0mSELECT * FROM `offerings` [0m
+Rendering template within layouts/application
+Rendering offerings/index
+  [4;36;1mOffering Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `offerings`[0m
+Completed in 31ms (View: 17, DB: 2) | 200 OK [http://0.0.0.0/]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2009-11-10 13:54:57) [GET]
+  [4;36;1mUser Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering user_sessions/new
+
+ActionView::TemplateError (undefined method `password_confirmation' for #<UserSession: no credentials provided>) on line #15 of app/views/user_sessions/new.html.erb:
+12:   </p>
+13:  <p>
+14:     <%= f.label :password_onfirmation %><br />
+15:     <%= f.password_field :password_confirmation %>
+16:   </p>
+17: 
+18:   <p><%= f.submit "Submit" %></p>
+
+    app/views/user_sessions/new.html.erb:15
+    app/views/user_sessions/new.html.erb:3
+
+Rendered rescues/_trace (201.8ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2009-11-10 14:09:20) [GET]
+  [4;36;1mUser Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering user_sessions/new
+
+ActionView::TemplateError (undefined method `password_confirmation' for #<UserSession: no credentials provided>) on line #15 of app/views/user_sessions/new.html.erb:
+12:   </p>
+13:  <p>
+14:     <%= f.label :password_onfirmation %><br />
+15:     <%= f.password_field :password_confirmation %>
+16:   </p>
+17: 
+18:   <p><%= f.submit "Submit" %></p>
+
+    app/views/user_sessions/new.html.erb:15
+    app/views/user_sessions/new.html.erb:3
+
+Rendered rescues/_trace (105.2ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2009-11-10 14:09:24) [GET]
+  [4;36;1mUser Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering user_sessions/new
+
+ActionView::TemplateError (undefined method `password_confirmation' for #<UserSession: no credentials provided>) on line #15 of app/views/user_sessions/new.html.erb:
+12:   </p>
+13:  <p>
+14:     <%= f.label :password_onfirmation %><br />
+15:     <%= f.password_field :password_confirmation %>
+16:   </p>
+17: 
+18:   <p><%= f.submit "Submit" %></p>
+
+    app/views/user_sessions/new.html.erb:15
+    app/views/user_sessions/new.html.erb:3
+
+Rendered rescues/_trace (112.7ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2009-11-10 14:10:39) [GET]
+  [4;36;1mUser Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 71ms (View: 45, DB: 2) | 200 OK [http://0.0.0.0/login]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-11-10 14:10:44) [GET]
+  [4;36;1mUser Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (14.5ms)
+Completed in 46ms (View: 24, DB: 2) | 200 OK [http://0.0.0.0/users/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#create (for 127.0.0.1 at 2009-11-10 14:11:09) [POST]
+  Parameters: {"commit"=>"Submit", "authenticity_token"=>"46Hng6c7e6A35kuyZj2tCLjSOCY7yHDoDppeyKzHI0E=", "user"=>{"password_confirmation"=>"adino", "username"=>"adino", "password"=>"adino", "email"=>"adino@mail.fr"}}
+  [4;36;1mUser Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`email` = BINARY 'adino@mail.fr') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`username` = BINARY 'adino') LIMIT 1[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`persistence_token` = BINARY '1129f9258606b83fd0113eb9dbca6211b685a3d1cb58bfbc9882a2c0fc3ec35c9793794dc59c06ebebc78723561bc657fa00bae518d264ef884252324ff56465') LIMIT 1[0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`persistence_token` = 'c2f5ecb78b1fedc0a220934c5e96c16da5dfccc60fc3f675c6ac38410f76f801c024f4791719c594d0a1411dd310516de1c05f072d8b217e5f361d676d2b3404') LIMIT 1[0m
+  [4;36;1mUser Create (0.3ms)[0m   [0;1mINSERT INTO `users` (`created_at`, `crypted_password`, `updated_at`, `username`, `password_salt`, `persistence_token`, `email`) VALUES('2009-11-10 11:11:09', '8caaf6f8244c9fb92663ed9692885322ea4baed2f8ccc19c31356a84cf16bcd90d759e9f53e3c76bfb9e1e49e9352a044613c3f22bf9279d97b53c24bf64a963', '2009-11-10 11:11:09', 'adino', '7YKM8UeILp-M46-uqIVb', '1129f9258606b83fd0113eb9dbca6211b685a3d1cb58bfbc9882a2c0fc3ec35c9793794dc59c06ebebc78723561bc657fa00bae518d264ef884252324ff56465', 'adino@mail.fr')[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mCOMMIT[0m
+Redirected to http://0.0.0.0:3000/
+Completed in 48ms (DB: 5) | 302 Found [http://0.0.0.0/users]
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OfferingsController#index (for 127.0.0.1 at 2009-11-10 14:11:10) [GET]
+  [4;35;1mOffering Load (0.5ms)[0m   [0mSELECT * FROM `offerings` [0m
+Rendering template within layouts/application
+Rendering offerings/index
+  [4;36;1mOffering Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `offerings`[0m
+Completed in 32ms (View: 18, DB: 3) | 200 OK [http://0.0.0.0/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2009-11-10 14:11:30) [GET]
+  [4;36;1mUser Columns (2.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 39ms (View: 10, DB: 2) | 200 OK [http://0.0.0.0/login]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2009-11-10 14:11:37) [POST]
+  Parameters: {"commit"=>"Submit", "user_session"=>{"username"=>"adino", "password"=>"adino"}, "authenticity_token"=>"46Hng6c7e6A35kuyZj2tCLjSOCY7yHDoDppeyKzHI0E="}
+  [4;36;1mUser Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`username` = 'adino') LIMIT 1[0m
+Redirected to http://0.0.0.0:3000/
+Completed in 37ms (DB: 3) | 302 Found [http://0.0.0.0/user_sessions]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OfferingsController#index (for 127.0.0.1 at 2009-11-10 14:11:37) [GET]
+  [4;35;1mOffering Load (0.4ms)[0m   [0mSELECT * FROM `offerings` [0m
+Rendering template within layouts/application
+Rendering offerings/index
+  [4;36;1mOffering Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `offerings`[0m
+Completed in 31ms (View: 17, DB: 2) | 200 OK [http://0.0.0.0/]
+  [4;35;1mSQL (5.8ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2009-11-10 14:11:46) [GET]
+  [4;36;1mUser Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 36ms (View: 10, DB: 8) | 200 OK [http://0.0.0.0/login]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2009-11-10 14:15:33) [GET]
+  [4;36;1mUser Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 47ms (View: 19, DB: 2) | 200 OK [http://0.0.0.0/login]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2009-11-10 14:25:33) [GET]
+  [4;36;1mUser Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering user_sessions/new
+
+ActionView::TemplateError (undefined local variable or method `current_user' for #<ActionView::Base:0xb668d4d4>) on line #13 of app/views/layouts/application.html.erb:
+10: <body>
+11: <div id="container">
+12:   <div id="user_nav">
+13:     <% if current_user %>
+14:       <% link_to "Edit Account", edit_user_path(:current) %>|
+15:       <% link_to "logout", logout_path %>   
+16:     <% else %>  
+
+    app/views/layouts/application.html.erb:13
+
+Rendered rescues/_trace (96.6ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2009-11-10 15:07:49) [GET]
+  [4;36;1mUser Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering user_sessions/new
+
+ActionView::TemplateError (undefined local variable or method `current_user' for #<ActionView::Base:0xb677e280>) on line #13 of app/views/layouts/application.html.erb:
+10: <body>
+11: <div id="container">
+12:   <div id="user_nav">
+13:     <% if current_user %>
+14:       <% link_to "Edit Account", edit_user_path(:current) %>|
+15:       <% link_to "logout", logout_path %>   
+16:     <% else %>  
+
+    app/views/layouts/application.html.erb:13
+
+Rendered rescues/_trace (90.1ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2009-11-10 15:07:53) [GET]
+  [4;36;1mUser Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering user_sessions/new
+
+ActionView::TemplateError (undefined local variable or method `current_user' for #<ActionView::Base:0xb68dbefc>) on line #13 of app/views/layouts/application.html.erb:
+10: <body>
+11: <div id="container">
+12:   <div id="user_nav">
+13:     <% if current_user %>
+14:       <% link_to "Edit Account", edit_user_path(:current) %>|
+15:       <% link_to "logout", logout_path %>   
+16:     <% else %>  
+
+    app/views/layouts/application.html.erb:13
+
+Rendered rescues/_trace (92.5ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2009-11-10 15:07:53) [GET]
+  [4;36;1mUser Columns (3.7ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering user_sessions/new
+
+ActionView::TemplateError (undefined local variable or method `current_user' for #<ActionView::Base:0xb674000c>) on line #13 of app/views/layouts/application.html.erb:
+10: <body>
+11: <div id="container">
+12:   <div id="user_nav">
+13:     <% if current_user %>
+14:       <% link_to "Edit Account", edit_user_path(:current) %>|
+15:       <% link_to "logout", logout_path %>   
+16:     <% else %>  
+
+    app/views/layouts/application.html.erb:13
+
+Rendered rescues/_trace (196.4ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2009-11-10 15:08:29) [GET]
+  [4;36;1mUser Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering user_sessions/new
+
+ActionView::TemplateError (undefined local variable or method `current_user' for #<ActionView::Base:0xb688492c>) on line #13 of app/views/layouts/application.html.erb:
+10: <body>
+11: <div id="container">
+12:   <div id="user_nav">
+13:     <% if current_user %>
+14:       <% link_to "Edit Account", edit_user_path(:current) %>|
+15:       <% link_to "logout", logout_path %>   
+16:     <% else %>  
+
+    app/views/layouts/application.html.erb:13
+
+Rendered rescues/_trace (93.9ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2009-11-10 15:08:29) [GET]
+  [4;36;1mUser Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering user_sessions/new
+
+ActionView::TemplateError (undefined local variable or method `current_user' for #<ActionView::Base:0xb6702ec8>) on line #13 of app/views/layouts/application.html.erb:
+10: <body>
+11: <div id="container">
+12:   <div id="user_nav">
+13:     <% if current_user %>
+14:       <% link_to "Edit Account", edit_user_path(:current) %>|
+15:       <% link_to "logout", logout_path %>   
+16:     <% else %>  
+
+    app/views/layouts/application.html.erb:13
+
+Rendered rescues/_trace (200.7ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2009-11-10 15:08:35) [GET]
+  [4;36;1mUser Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering user_sessions/new
+
+ActionView::TemplateError (undefined local variable or method `current_user' for #<ActionView::Base:0xb6806b1c>) on line #13 of app/views/layouts/application.html.erb:
+10: <body>
+11: <div id="container">
+12:   <div id="user_nav">
+13:     <% if current_user %>
+14:       <% link_to "Edit Account", edit_user_path(:current) %>|
+15:       <% link_to "logout", logout_path %>   
+16:     <% else %>  
+
+    app/views/layouts/application.html.erb:13
+
+Rendered rescues/_trace (90.5ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2009-11-10 15:13:30) [GET]
+  [4;36;1mUser Columns (2.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering user_sessions/new
+  [4;35;1mUser Load (80.5ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`persistence_token` = '1129f9258606b83fd0113eb9dbca6211b685a3d1cb58bfbc9882a2c0fc3ec35c9793794dc59c06ebebc78723561bc657fa00bae518d264ef884252324ff56465') LIMIT 1[0m
+Completed in 127ms (View: 19, DB: 83) | 200 OK [http://0.0.0.0/login]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2009-11-10 15:13:40) [GET]
+  [4;35;1mUser Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering user_sessions/new
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`persistence_token` = '1129f9258606b83fd0113eb9dbca6211b685a3d1cb58bfbc9882a2c0fc3ec35c9793794dc59c06ebebc78723561bc657fa00bae518d264ef884252324ff56465') LIMIT 1[0m
+Completed in 227ms (View: 34, DB: 3) | 200 OK [http://0.0.0.0/login]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2009-11-10 15:13:46) [GET]
+  [4;36;1mUser Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering user_sessions/new
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`persistence_token` = '1129f9258606b83fd0113eb9dbca6211b685a3d1cb58bfbc9882a2c0fc3ec35c9793794dc59c06ebebc78723561bc657fa00bae518d264ef884252324ff56465') LIMIT 1[0m
+Completed in 48ms (View: 20, DB: 3) | 200 OK [http://0.0.0.0/login]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2009-11-10 15:13:46) [GET]
+  [4;35;1mUser Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering user_sessions/new
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`persistence_token` = '1129f9258606b83fd0113eb9dbca6211b685a3d1cb58bfbc9882a2c0fc3ec35c9793794dc59c06ebebc78723561bc657fa00bae518d264ef884252324ff56465') LIMIT 1[0m
+Completed in 46ms (View: 19, DB: 3) | 200 OK [http://0.0.0.0/login]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2009-11-10 15:15:32) [GET]
+  [4;36;1mUser Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering user_sessions/new
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`persistence_token` = '1129f9258606b83fd0113eb9dbca6211b685a3d1cb58bfbc9882a2c0fc3ec35c9793794dc59c06ebebc78723561bc657fa00bae518d264ef884252324ff56465') LIMIT 1[0m
+Completed in 54ms (View: 27, DB: 3) | 200 OK [http://0.0.0.0/login]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#destroy (for 127.0.0.1 at 2009-11-10 15:15:33) [GET]
+  [4;35;1mUser Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`persistence_token` = '1129f9258606b83fd0113eb9dbca6211b685a3d1cb58bfbc9882a2c0fc3ec35c9793794dc59c06ebebc78723561bc657fa00bae518d264ef884252324ff56465') LIMIT 1[0m
+Redirected to http://0.0.0.0:3000/
+Completed in 35ms (DB: 3) | 302 Found [http://0.0.0.0/logout]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OfferingsController#index (for 127.0.0.1 at 2009-11-10 15:15:34) [GET]
+  [4;36;1mOffering Load (0.4ms)[0m   [0;1mSELECT * FROM `offerings` [0m
+Rendering template within layouts/application
+Rendering offerings/index
+  [4;35;1mOffering Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `offerings`[0m
+  [4;36;1mUser Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Completed in 200ms (View: 183, DB: 4) | 200 OK [http://0.0.0.0/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2009-11-10 15:15:41) [GET]
+  [4;36;1mUser Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 42ms (View: 12, DB: 2) | 200 OK [http://0.0.0.0/login]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2009-11-10 15:15:58) [POST]
+  Parameters: {"commit"=>"Submit", "user_session"=>{"username"=>"fenomamy", "password"=>"fenomamy"}, "authenticity_token"=>"46Hng6c7e6A35kuyZj2tCLjSOCY7yHDoDppeyKzHI0E="}
+  [4;36;1mUser Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`username` = 'fenomamy') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 61ms (View: 23, DB: 3) | 200 OK [http://0.0.0.0/user_sessions]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-11-10 15:21:10) [GET]
+  [4;35;1mUser Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (12.7ms)
+Completed in 44ms (View: 22, DB: 2) | 200 OK [http://0.0.0.0/users/new]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#create (for 127.0.0.1 at 2009-11-10 15:21:37) [POST]
+  Parameters: {"commit"=>"Submit", "authenticity_token"=>"46Hng6c7e6A35kuyZj2tCLjSOCY7yHDoDppeyKzHI0E=", "user"=>{"password_confirmation"=>"test78", "username"=>"test78", "password"=>"test78", "email"=>"test78@hotmail.fr"}}
+  [4;35;1mUser Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`email` = BINARY 'test78@hotmail.fr') LIMIT 1[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`username` = BINARY 'test78') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`persistence_token` = BINARY 'fc7fe646ffc3a9d987432d35de9dd0f024caf751536d6ed9945f771afd92e9b1b1eb9dfcf96201d2d6557efdce6e2f666dfa5e63938f86a61a6de0615fc1bf5e') LIMIT 1[0m
+  [4;36;1mUser Create (29.2ms)[0m   [0;1mINSERT INTO `users` (`created_at`, `crypted_password`, `updated_at`, `username`, `password_salt`, `persistence_token`, `email`) VALUES('2009-11-10 12:21:37', 'fba4c8432eafe20aa0dd81a183cabc201cf6f81bf8225e2f4ee017aaf188e5d7558134e148258cf2771ea237c9b6bf11baf5fa19d72178d6def25b13e946f18d', '2009-11-10 12:21:37', 'test78', 'I4YL_s7vKR3NtIozrcSH', 'fc7fe646ffc3a9d987432d35de9dd0f024caf751536d6ed9945f771afd92e9b1b1eb9dfcf96201d2d6557efdce6e2f666dfa5e63938f86a61a6de0615fc1bf5e', 'test78@hotmail.fr')[0m
+  [4;35;1mSQL (2.1ms)[0m   [0mCOMMIT[0m
+Redirected to http://0.0.0.0:3000/
+Completed in 78ms (DB: 35) | 302 Found [http://0.0.0.0/users]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OfferingsController#index (for 127.0.0.1 at 2009-11-10 15:21:37) [GET]
+  [4;35;1mOffering Load (0.4ms)[0m   [0mSELECT * FROM `offerings` [0m
+Rendering template within layouts/application
+Rendering offerings/index
+  [4;36;1mOffering Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `offerings`[0m
+  [4;35;1mUser Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`persistence_token` = 'fc7fe646ffc3a9d987432d35de9dd0f024caf751536d6ed9945f771afd92e9b1b1eb9dfcf96201d2d6557efdce6e2f666dfa5e63938f86a61a6de0615fc1bf5e') LIMIT 1[0m
+Completed in 62ms (View: 45, DB: 5) | 200 OK [http://0.0.0.0/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2009-11-10 15:21:43) [GET]
+  Parameters: {"id"=>"current"}
+  [4;36;1mUser Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`persistence_token` = 'fc7fe646ffc3a9d987432d35de9dd0f024caf751536d6ed9945f771afd92e9b1b1eb9dfcf96201d2d6557efdce6e2f666dfa5e63938f86a61a6de0615fc1bf5e') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/edit
+Rendered users/_form (10.9ms)
+Completed in 69ms (View: 15, DB: 3) | 200 OK [http://0.0.0.0/users/current/edit]
+  [4;36;1mSQL (1.9ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#update (for 127.0.0.1 at 2009-11-10 15:21:56) [PUT]
+  Parameters: {"commit"=>"Submit", "authenticity_token"=>"46Hng6c7e6A35kuyZj2tCLjSOCY7yHDoDppeyKzHI0E=", "id"=>"15", "user"=>{"password_confirmation"=>"newtest", "username"=>"test78", "password"=>"newtest", "email"=>"test78@hotmail.fr"}}
+  [4;35;1mUser Columns (2.1ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (171.8ms)[0m   [0;1mSHOW TABLES[0m
+
+NoMethodError (undefined method `current_user' for #<Class:0xb6821c28>):
+  app/controllers/users_controller.rb:21:in `update'
+
+Rendered rescues/_trace (81.2ms)
+Rendered rescues/_request_and_response (0.8ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#update (for 127.0.0.1 at 2009-11-10 15:26:10) [PUT]
+  Parameters: {"commit"=>"Submit", "authenticity_token"=>"46Hng6c7e6A35kuyZj2tCLjSOCY7yHDoDppeyKzHI0E=", "id"=>"15", "user"=>{"password_confirmation"=>"newtest", "username"=>"test78", "password"=>"newtest", "email"=>"test78@hotmail.fr"}}
+  [4;36;1mUser Columns (3.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`persistence_token` = 'fc7fe646ffc3a9d987432d35de9dd0f024caf751536d6ed9945f771afd92e9b1b1eb9dfcf96201d2d6557efdce6e2f666dfa5e63938f86a61a6de0615fc1bf5e') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (185.1ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`persistence_token` = BINARY 'd199654aaf80af0e766923825764dd47c42c7fd7ea3cc95242f5cc2a7bbfe9db9a37bf92a4601fa97a8f7be255b06a20fb018d02b6347bf034b1514e7116671b' AND `users`.id <> 15) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`persistence_token` = 'fc7fe646ffc3a9d987432d35de9dd0f024caf751536d6ed9945f771afd92e9b1b1eb9dfcf96201d2d6557efdce6e2f666dfa5e63938f86a61a6de0615fc1bf5e') LIMIT 1[0m
+  [4;35;1mUser Update (33.3ms)[0m   [0mUPDATE `users` SET `updated_at` = '2009-11-10 12:26:10', `crypted_password` = '83dc6d64e6c8269bdec33a1dea0de2f3fa20aae54613309523cc2e5dad8b475bc086caeaf52a6f6eb85a418eeb4a75d07cdf94f8f44f0469f39b39e6d4022dff', `password_salt` = 'MWAbfNYqCTtlXtK9pMz-', `persistence_token` = 'd199654aaf80af0e766923825764dd47c42c7fd7ea3cc95242f5cc2a7bbfe9db9a37bf92a4601fa97a8f7be255b06a20fb018d02b6347bf034b1514e7116671b' WHERE `id` = 15[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://0.0.0.0:3000/
+Completed in 467ms (DB: 224) | 302 Found [http://0.0.0.0/users/15]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OfferingsController#index (for 127.0.0.1 at 2009-11-10 15:26:11) [GET]
+  [4;36;1mOffering Load (0.4ms)[0m   [0;1mSELECT * FROM `offerings` [0m
+Rendering template within layouts/application
+Rendering offerings/index
+  [4;35;1mOffering Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `offerings`[0m
+  [4;36;1mUser Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`persistence_token` = 'd199654aaf80af0e766923825764dd47c42c7fd7ea3cc95242f5cc2a7bbfe9db9a37bf92a4601fa97a8f7be255b06a20fb018d02b6347bf034b1514e7116671b') LIMIT 1[0m
+Completed in 62ms (View: 46, DB: 5) | 200 OK [http://0.0.0.0/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#destroy (for 127.0.0.1 at 2009-11-10 15:26:19) [GET]
+  [4;35;1mUser Columns (2.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`persistence_token` = 'd199654aaf80af0e766923825764dd47c42c7fd7ea3cc95242f5cc2a7bbfe9db9a37bf92a4601fa97a8f7be255b06a20fb018d02b6347bf034b1514e7116671b') LIMIT 1[0m
+Redirected to http://0.0.0.0:3000/
+Completed in 135ms (DB: 3) | 302 Found [http://0.0.0.0/logout]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OfferingsController#index (for 127.0.0.1 at 2009-11-10 15:26:19) [GET]
+  [4;36;1mOffering Load (0.4ms)[0m   [0;1mSELECT * FROM `offerings` [0m
+Rendering template within layouts/application
+Rendering offerings/index
+  [4;35;1mOffering Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `offerings`[0m
+  [4;36;1mUser Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Completed in 55ms (View: 39, DB: 4) | 200 OK [http://0.0.0.0/]
