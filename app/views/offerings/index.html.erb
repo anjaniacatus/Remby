@@ -6,6 +6,8 @@
     <th>Description</th>
     <th>Author</th>
     <th>Date</th>
+    <th>Validity</th>
+    
   </tr>
 
 <% @offerings.each do |offering| %>
@@ -13,7 +15,9 @@
     <td><%=h offering.name %></td>
     <td><%=h offering.description %></td>
     <td><%=h offering.author %></td>
-    <td><%=h offering.Date %></td>
+    <td><%=h offering.date_depot %></td>
+    <td><%=h offering.validity %></td>
+    <%#*<td><%=h offering.firm.name %></td>%>
     <td><%= link_to 'Show', offering %></td>
     <td><%= link_to 'Edit', edit_offering_path(offering) %></td>
     <td><%= link_to 'Destroy', offering, :confirm => 'Are you sure?', :method => :delete %></td>

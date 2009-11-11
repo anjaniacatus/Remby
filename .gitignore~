@@ -2,7 +2,6 @@ nbproject
 log/*
 doc/*
 config/database.yml
-test/*
 .DS_Store
 *.swp
 tmp/**

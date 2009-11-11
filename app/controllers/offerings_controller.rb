@@ -24,12 +24,19 @@ class OfferingsController < ApplicationController
   # GET /offerings/new
   # GET /offerings/new.xml
   def new
-    @offering = Offering.new
-
-    respond_to do |format|
-      format.html # new.html.erb
-      format.xml  { render :xml => @offering }
+    if params[:firm_id]
+      @firm = Firm.find(params[:firm_id])
+      @offering = @firm.offerings.new
+    else
+      flash[:error] = "Il y a erreur"
+      redirect_to firms_path
     end
+#    @offering = Offering.new
+#
+#    respond_to do |format|
+#      format.html # new.html.erb
+#      format.xml  { render :xml => @offering }
+#    end
   end
 
   # GET /offerings/1/edit
@@ -40,6 +47,8 @@ class OfferingsController < ApplicationController
   # POST /offerings
   # POST /offerings.xml
   def create
+#    @firm = Firm.find(params[:firm_id])
+#    @offering = @firm.offerings.new(params[:offering])
     @offering = Offering.new(params[:offering])
 
     respond_to do |format|
