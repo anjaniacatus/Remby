@@ -3,7 +3,7 @@ class CreateFurtherInfos < ActiveRecord::Migration
     create_table :further_infos do |t|
       t.string :name
       t.text :description
-
+      t.integer :user_id
       t.timestamps
     end
   end

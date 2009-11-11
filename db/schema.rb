@@ -15,6 +15,7 @@ ActiveRecord::Schema.define(:version => 20091111084127) do
     t.string   "name"
     t.string   "value"
     t.text     "description"
+    t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -22,6 +23,7 @@ ActiveRecord::Schema.define(:version => 20091111084127) do
   create_table "further_infos", :force => true do |t|
     t.string   "name"
     t.text     "description"
+    t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -53,6 +55,7 @@ ActiveRecord::Schema.define(:version => 20091111084127) do
     t.string   "school"
     t.date     "obtain_at"
     t.integer  "study_duration"
+    t.integer  "user_id"
     t.text     "comment"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -62,6 +65,7 @@ ActiveRecord::Schema.define(:version => 20091111084127) do
     t.string   "name"
     t.string   "level"
     t.text     "description"
+    t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
