@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  school: MyString
+  obtain_at: 2009-11-11
+  study_duration: 1
+  comment: MyText
+
+two:
+  name: MyString
+  school: MyString
+  obtain_at: 2009-11-11
+  study_duration: 1
+  comment: MyText
