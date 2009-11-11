@@ -1,0 +1,22 @@
+<h1>Listing further_infos</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+  </tr>
+
+<% @further_infos.each do |further_info| %>
+  <tr>
+    <td><%=h further_info.name %></td>
+    <td><%=h further_info.description %></td>
+    <td><%= link_to 'Show', further_info %></td>
+    <td><%= link_to 'Edit', edit_further_info_path(further_info) %></td>
+    <td><%= link_to 'Destroy', further_info, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New further_info', new_further_info_path %>

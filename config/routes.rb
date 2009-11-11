@@ -1,4 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :further_infos
+
   map.resources :contacts
 
 
