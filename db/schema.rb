@@ -26,6 +26,7 @@ ActiveRecord::Schema.define(:version => 20091110090547) do
     t.string   "name"
     t.string   "town"
     t.string   "sex"
+    t.text     "comment"
     t.date     "birthday"
     t.integer  "user_id"
     t.datetime "created_at"
