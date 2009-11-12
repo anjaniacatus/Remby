@@ -25,6 +25,7 @@ class SkillsController < ApplicationController
   # GET /skills/new.xml
   def new
     @skill = Skill.new
+    @skill.user = current_user
 
     respond_to do |format|
       format.html # new.html.erb

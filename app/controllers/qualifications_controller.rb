@@ -41,7 +41,7 @@ class QualificationsController < ApplicationController
   # POST /qualifications.xml
   def create
     @qualification = Qualification.new(params[:qualification])
-
+    @qualification.user = current_user
     respond_to do |format|
       if @qualification.save
         flash[:notice] = 'Qualification was successfully created.'
