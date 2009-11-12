@@ -2,33 +2,36 @@ class OfferingsController < ApplicationController
   # GET /offerings
   # GET /offerings.xml
   def index
-    @offerings = Offering.all
-
-    respond_to do |format|
-      format.html # index.html.erb
-      format.xml  { render :xml => @offerings }
+    if params[:firm_id]
+      @firm = Firm.find(params[:firm_id])
+      @offerings = @firm.offerings
+    else
+      flash[:error] = "Il y a erreur"
+      redirect_to firms_path
     end
   end
 
   # GET /offerings/1
   # GET /offerings/1.xml
   def show
-    @offering = Offering.find(params[:id])
-
-    respond_to do |format|
-      format.html # show.html.erb
-      format.xml  { render :xml => @offering }
+    if params[:firm_id]
+      @firm = Firm.find(params[:firm_id])
+      @offering = @firm.offerings.find(params[:id])
+    else
+      flash[:error] = "Il y a erreur"
+      redirect_to firms_path
     end
   end
 
   # GET /offerings/new
   # GET /offerings/new.xml
   def new
-    @offering = Offering.new
-
-    respond_to do |format|
-      format.html # new.html.erb
-      format.xml  { render :xml => @offering }
+    if params[:firm_id]
+      @firm = Firm.find(params[:firm_id])
+      @offering = @firm.offerings.new
+    else
+      flash[:error] = "Il y a erreur"
+      redirect_to firms_path
     end
   end
 
@@ -40,7 +43,10 @@ class OfferingsController < ApplicationController
   # POST /offerings
   # POST /offerings.xml
   def create
-    @offering = Offering.new(params[:offering])
+    if params[:firm_id]
+      @firm = Firm.find(params[:firm_id])
+    end
+    @offering = @firm.offerings.new(params[:offering])
 
     respond_to do |format|
       if @offering.save
