@@ -6,7 +6,7 @@ class CreateQualifications < ActiveRecord::Migration
       t.string :school
       t.date :obtain_at
       t.integer :study_duration
-      t.integer :profile_id
+      t.references :profile
       t.text :comment
 
       t.timestamps

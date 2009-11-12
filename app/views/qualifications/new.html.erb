@@ -1,6 +1,6 @@
 <h1>New qualification</h1>
 
-<% form_for(@qualification.profile, @qualification) do |f| %>
+<% form_for([@qualification.profile, @qualification]) do |f| %>
   <%= f.error_messages %>
 
   <p>
@@ -15,10 +15,16 @@
     <%= f.label :obtain_at %><br />
     <%= f.date_select :obtain_at %>
   </p>
-  <p>
+   <p>
     <%= f.label :study_duration %><br />
     <%= f.text_field :study_duration %>
-  </p>
+   </p>
+   <p>
+    <%= f.label :permalink %><br />
+    <%= f.text_field :permalink %>
+   </p>
+
+
   <p>
     <%= f.label :comment %><br />
     <%= f.text_area :comment %>

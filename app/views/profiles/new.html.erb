@@ -24,8 +24,13 @@
     <%= f.date_select :birthday %>
   </p>
   <p>
+    <%= f.label :permalink %><br />
+    <%= f.text_field :permalink %>
+  </p>
+
+  <p>
     <%= f.submit 'Create' %>
   </p>
 <% end %>
 
-<%= link_to 'Back', profiles_path %>
+<% link_to 'Back', profiles_path %>

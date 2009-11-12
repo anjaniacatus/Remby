@@ -21,21 +21,16 @@ class QualificationsController < ApplicationController
     flash[:error] = "error"
     redirect_to profile_path
    end  
-
-    respond_to do |format|
-      format.html # show.html.erb
-      format.xml  { render :xml => @qualification }
-    end
   end
 
   # GET /qualifications/new
   # GET /qualifications/new.xml
   def new
-    if params [:profile_id]
-      @profile = Profile.find(params[:profile_id])
-      @qualification = @profile.qualifications.new
+    if params[:profile_id]
+      @profile = Profile.find(params[:id])
+     @qualification = @profile.qualifications.new
     end
-
+    
     respond_to do |format|
       format.html # new.html.erb
       format.xml  { render :xml => @qualification }

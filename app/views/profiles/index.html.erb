@@ -7,11 +7,13 @@
     <th>Town</th>
     <th>Sex</th>
     <th>Birthday</th>
+     <th>Permalink</th>
   </tr>
 
 <% @profiles.each do |profile| %>
   <tr>
     <td><%=h profile.family_name %></td>
+     <td><%=h profile.permalink %></td>
     <td><%=h profile.name %></td>
     <td><%=h profile.town %></td>
     <td><%=h profile.sex %></td>
