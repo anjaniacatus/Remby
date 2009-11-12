@@ -5,6 +5,7 @@ class CreateProfiles < ActiveRecord::Migration
       t.string :name
       t.string :town
       t.string :sex
+      t.string :permalink
       t.text :comment
       t.date :birthday
       t.integer :user_id

@@ -23,6 +23,11 @@
   <%=h @profile.birthday %>
 </p>
 
+<% content_tag :div, :id => "qualifications" do %>
+  <%= link_to 'New qualification', new_profile_qualification_path(@profile) %>
+  <%= render @profile.qualifications %>
+<% end %>
+
 
 <%= link_to 'Edit', edit_profile_path(@profile) %> |
 <%= link_to 'Back', profiles_path %>

@@ -1,11 +1,11 @@
 ActionController::Routing::Routes.draw do |map|
-  map.resources :offerings
   map.resources :firms, :has_many => :offerings, :dependent => :delete_all
   map.login "login", :controller => "user_sessions", :action => "new"
   map.logout "logout", :controller => "user_sessions", :action => "destroy"
   map.resources :user_sessions
+  map.resources :profiles, :has_many => :contacts, :has_many => :qualifications, :has_many => :skills, :has_many => :further_infos, :dependent => :delete_all
+  map.resources :offerings
   map.resources :users
-  map.resources :profiles
   map.resources :further_infos
   map.resources :qualifications
   map.resources :skills

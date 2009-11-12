@@ -2,18 +2,25 @@ class QualificationsController < ApplicationController
   # GET /qualifications
   # GET /qualifications.xml
   def index
-    @qualifications = Qualification.all
-
-    respond_to do |format|
-      format.html # index.html.erb
-      format.xml  { render :xml => @qualifications }
-    end
+   if params[:profile_id] 
+    @profile = Profile.find(params[:profile_id]) 
+    @qualifications = @profile.qualifications
+   else 
+    flash[:error] = "error"
+    redirect_to profiles_path
+   end  
   end
 
   # GET /qualifications/1
   # GET /qualifications/1.xml
   def show
-    @qualification = Qualification.find(params[:id])
+    if params[:profile_id] 
+      @profile = Profile.find(params[:profile_id])
+      @qualification = @profile.qualifications.find(params[:id])
+    else 
+    flash[:error] = "error"
+    redirect_to profile_path
+   end  
 
     respond_to do |format|
       format.html # show.html.erb
@@ -24,7 +31,10 @@ class QualificationsController < ApplicationController
   # GET /qualifications/new
   # GET /qualifications/new.xml
   def new
-    @qualification = Qualification.new
+    if params [:profile_id]
+      @profile = Profile.find(params[:profile_id])
+      @qualification = @profile.qualifications.new
+    end
 
     respond_to do |format|
       format.html # new.html.erb
@@ -40,8 +50,10 @@ class QualificationsController < ApplicationController
   # POST /qualifications
   # POST /qualifications.xml
   def create
-    @qualification = Qualification.new(params[:qualification])
-    @qualification.user = current_user
+    if params[:profile_id]
+      @profile = Profile.find(params :profile_id)
+    end  
+      @qualification = Qualification.new(params[:qualification])
     respond_to do |format|
       if @qualification.save
         flash[:notice] = 'Qualification was successfully created.'
