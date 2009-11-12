@@ -4043,3 +4043,154 @@ Migrating to CreateQualifications (20091111084127)
   [4;35;1mUser Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `users`[0m
   [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` LIMIT 1[0m
   [4;35;1mContact Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `contacts`[0m
+  [4;36;1mSQL (46.4ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2009-11-11 20:33:24) [GET]
+  [4;35;1mUser Columns (73.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering user_sessions/new
+  [4;36;1mUser Load (13.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`persistence_token` = '1165f6b5abae577a838aee37d90705b249bf98329b0511525ebc42c02048f49b250035ce288309ab7cb4ddb6f219b8b0ef76f26ee68f1187054faad018d187db') LIMIT 1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+Completed in 307ms (View: 151, DB: 133) | 200 OK [http://0.0.0.0/login]
+  [4;36;1mSQL (51.8ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OfferingsController#index (for 127.0.0.1 at 2009-11-11 20:33:29) [GET]
+  [4;35;1mOffering Load (36.8ms)[0m   [0mSELECT * FROM `offerings` [0m
+Rendering template within layouts/application
+Rendering offerings/index
+  [4;36;1mUser Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`persistence_token` = '1165f6b5abae577a838aee37d90705b249bf98329b0511525ebc42c02048f49b250035ce288309ab7cb4ddb6f219b8b0ef76f26ee68f1187054faad018d187db') LIMIT 1[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+Completed in 113ms (View: 61, DB: 92) | 200 OK [http://0.0.0.0/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2009-11-11 20:33:46) [GET]
+  [4;36;1mUser Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering user_sessions/new
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`persistence_token` = '1165f6b5abae577a838aee37d90705b249bf98329b0511525ebc42c02048f49b250035ce288309ab7cb4ddb6f219b8b0ef76f26ee68f1187054faad018d187db') LIMIT 1[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+Completed in 47ms (View: 16, DB: 3) | 200 OK [http://0.0.0.0/login]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-11-11 20:33:55) [GET]
+  [4;36;1mUser Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (16.1ms)
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`persistence_token` = '1165f6b5abae577a838aee37d90705b249bf98329b0511525ebc42c02048f49b250035ce288309ab7cb4ddb6f219b8b0ef76f26ee68f1187054faad018d187db') LIMIT 1[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+Completed in 74ms (View: 46, DB: 3) | 200 OK [http://0.0.0.0/users/new]
+  [4;35;1mSQL (1.8ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#create (for 127.0.0.1 at 2009-11-11 20:34:18) [POST]
+  Parameters: {"commit"=>"Submit", "authenticity_token"=>"R5NmlF7qgT72SHD2cQ/cjQOa/ojmqrnRRNN8VKdCFyg=", "user"=>{"password_confirmation"=>"anja1", "username"=>"anja", "password"=>"anja1", "email"=>"anjacatus@mail.fr"}}
+  [4;36;1mUser Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`email` = BINARY 'anjacatus@mail.fr') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`username` = BINARY 'anja') LIMIT 1[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`persistence_token` = BINARY '87b6900f7dc704ff64b8b494227bf974c78c3844be48664a397545af5708131759309f41820319ed7a4d3dea8b92340bafb5b7c8fa8e3313bda3ec10c6cb6857') LIMIT 1[0m
+  [4;35;1mUser Load (1.8ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`persistence_token` = '1165f6b5abae577a838aee37d90705b249bf98329b0511525ebc42c02048f49b250035ce288309ab7cb4ddb6f219b8b0ef76f26ee68f1187054faad018d187db') LIMIT 1[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+  [4;35;1mUser Create (0.4ms)[0m   [0mINSERT INTO `users` (`created_at`, `crypted_password`, `updated_at`, `username`, `password_salt`, `persistence_token`, `email`) VALUES('2009-11-11 17:34:18', '44bf2ef8d2cc72c3324687b2eb1d589005ce056555a18e007c0c1457422c93539c0f1b7a6e561223ae7d2beb65212b9b40883ca1988b1239def68bfdeae0f5ef', '2009-11-11 17:34:18', 'anja', 'V7PyP72Vt2ZJAFkrko1o', '87b6900f7dc704ff64b8b494227bf974c78c3844be48664a397545af5708131759309f41820319ed7a4d3dea8b92340bafb5b7c8fa8e3313bda3ec10c6cb6857', 'anjacatus@mail.fr')[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://0.0.0.0:3000/
+Completed in 81ms (DB: 8) | 302 Found [http://0.0.0.0/users]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OfferingsController#index (for 127.0.0.1 at 2009-11-11 20:34:18) [GET]
+  [4;36;1mOffering Load (0.4ms)[0m   [0;1mSELECT * FROM `offerings` [0m
+Rendering template within layouts/application
+Rendering offerings/index
+  [4;35;1mUser Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`persistence_token` = '87b6900f7dc704ff64b8b494227bf974c78c3844be48664a397545af5708131759309f41820319ed7a4d3dea8b92340bafb5b7c8fa8e3313bda3ec10c6cb6857') LIMIT 1[0m
+Completed in 52ms (View: 37, DB: 3) | 200 OK [http://0.0.0.0/]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProfilesController#new (for 127.0.0.1 at 2009-11-11 20:34:26) [GET]
+  [4;36;1mProfile Columns (35.5ms)[0m   [0;1mSHOW FIELDS FROM `profiles`[0m
+Rendering template within layouts/application
+Rendering profiles/new
+  [4;35;1mUser Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`persistence_token` = '87b6900f7dc704ff64b8b494227bf974c78c3844be48664a397545af5708131759309f41820319ed7a4d3dea8b92340bafb5b7c8fa8e3313bda3ec10c6cb6857') LIMIT 1[0m
+Completed in 389ms (View: 337, DB: 38) | 200 OK [http://0.0.0.0/profiles/new]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProfilesController#new (for 127.0.0.1 at 2009-11-11 21:58:51) [GET]
+  [4;35;1mProfile Columns (2.5ms)[0m   [0mSHOW FIELDS FROM `profiles`[0m
+  [4;36;1mUser Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`persistence_token` = '87b6900f7dc704ff64b8b494227bf974c78c3844be48664a397545af5708131759309f41820319ed7a4d3dea8b92340bafb5b7c8fa8e3313bda3ec10c6cb6857') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering profiles/new
+Completed in 375ms (View: 193, DB: 5) | 200 OK [http://0.0.0.0/profiles/new]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProfilesController#create (for 127.0.0.1 at 2009-11-11 21:59:19) [POST]
+  Parameters: {"commit"=>"Create", "profile"=>{"name"=>"fenom", "birthday(1i)"=>"2009", "birthday(2i)"=>"11", "birthday(3i)"=>"11", "sex"=>"femme", "family_name"=>"Rakotonjanahary", "town"=>"antsirabe "}, "authenticity_token"=>"R5NmlF7qgT72SHD2cQ/cjQOa/ojmqrnRRNN8VKdCFyg="}
+  [4;35;1mProfile Columns (2.1ms)[0m   [0mSHOW FIELDS FROM `profiles`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mProfile Create (0.4ms)[0m   [0mINSERT INTO `profiles` (`name`, `comment`, `created_at`, `updated_at`, `family_name`, `sex`, `user_id`, `birthday`, `town`) VALUES('fenom', NULL, '2009-11-11 18:59:19', '2009-11-11 18:59:19', 'Rakotonjanahary', 'femme', NULL, '2009-11-11', 'antsirabe ')[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://0.0.0.0:3000/profiles/1
+Completed in 27ms (DB: 3) | 302 Found [http://0.0.0.0/profiles]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProfilesController#show (for 127.0.0.1 at 2009-11-11 21:59:19) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mProfile Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `profiles`[0m
+  [4;35;1mProfile Load (74.8ms)[0m   [0mSELECT * FROM `profiles` WHERE (`profiles`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering profiles/show
+  [4;36;1mUser Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`persistence_token` = '87b6900f7dc704ff64b8b494227bf974c78c3844be48664a397545af5708131759309f41820319ed7a4d3dea8b92340bafb5b7c8fa8e3313bda3ec10c6cb6857') LIMIT 1[0m
+Completed in 145ms (View: 51, DB: 80) | 200 OK [http://0.0.0.0/profiles/1]
+  [4;36;1mSQL (9.7ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProfilesController#new (for 127.0.0.1 at 2009-11-11 21:59:31) [GET]
+  [4;35;1mProfile Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `profiles`[0m
+  [4;36;1mUser Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`persistence_token` = '87b6900f7dc704ff64b8b494227bf974c78c3844be48664a397545af5708131759309f41820319ed7a4d3dea8b92340bafb5b7c8fa8e3313bda3ec10c6cb6857') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering profiles/new
+Completed in 165ms (View: 25, DB: 14) | 200 OK [http://0.0.0.0/profiles/new]
+  [4;36;1mSQL (13.4ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProfilesController#create (for 127.0.0.1 at 2009-11-11 21:59:47) [POST]
+  Parameters: {"commit"=>"Create", "profile"=>{"name"=>"feno", "birthday(1i)"=>"2009", "birthday(2i)"=>"11", "birthday(3i)"=>"11", "sex"=>"male", "family_name"=>"blabla", "town"=>"abe"}, "authenticity_token"=>"R5NmlF7qgT72SHD2cQ/cjQOa/ojmqrnRRNN8VKdCFyg="}
+  [4;35;1mProfile Columns (2.1ms)[0m   [0mSHOW FIELDS FROM `profiles`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mProfile Create (0.3ms)[0m   [0mINSERT INTO `profiles` (`name`, `comment`, `created_at`, `updated_at`, `family_name`, `sex`, `user_id`, `birthday`, `town`) VALUES('feno', NULL, '2009-11-11 18:59:47', '2009-11-11 18:59:47', 'blabla', 'male', NULL, '2009-11-11', 'abe')[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://0.0.0.0:3000/profiles/2
+Completed in 28ms (DB: 17) | 302 Found [http://0.0.0.0/profiles]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProfilesController#show (for 127.0.0.1 at 2009-11-11 21:59:47) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mProfile Columns (2.3ms)[0m   [0;1mSHOW FIELDS FROM `profiles`[0m
+  [4;35;1mProfile Load (0.4ms)[0m   [0mSELECT * FROM `profiles` WHERE (`profiles`.`id` = 2) [0m
+Rendering template within layouts/application
+Rendering profiles/show
+  [4;36;1mUser Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`persistence_token` = '87b6900f7dc704ff64b8b494227bf974c78c3844be48664a397545af5708131759309f41820319ed7a4d3dea8b92340bafb5b7c8fa8e3313bda3ec10c6cb6857') LIMIT 1[0m
+Completed in 61ms (View: 42, DB: 5) | 200 OK [http://0.0.0.0/profiles/2]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (28.0ms)[0m   [0;1mSELECT * FROM `users` ORDER BY users.id DESC LIMIT 1[0m
+  [4;35;1mProfile Load (0.5ms)[0m   [0mSELECT * FROM `profiles` WHERE (`profiles`.user_id = 1) LIMIT 1[0m
+  [4;36;1mProfile Load (0.4ms)[0m   [0;1mSELECT * FROM `profiles` ORDER BY profiles.id DESC LIMIT 1[0m
+  [4;35;1mProfile Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `profiles`[0m
+  [4;36;1mSQL (110.1ms)[0m   [0;1mSHOW TABLES[0m
