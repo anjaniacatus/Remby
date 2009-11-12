@@ -2,22 +2,22 @@
 
 <table>
   <tr>
-    <th>Name</th>
+    <th>Title</th>
+    <th>Permalink</th>
     <th>Description</th>
-    <th>Author</th>
-    <th>Date</th>
-    <th>Validity</th>
-    
+    <th>On line</th>
+    <th>Dead line</th>
+    <th>Firm</th>
   </tr>
 
 <% @offerings.each do |offering| %>
   <tr>
-    <td><%=h offering.name %></td>
+    <td><%=h offering.title %></td>
+    <td><%=h offering.permalink %></td>
     <td><%=h offering.description %></td>
-    <td><%=h offering.author %></td>
-    <td><%=h offering.date_depot %></td>
-    <td><%=h offering.validity %></td>
-    <%#*<td><%=h offering.firm.name %></td>%>
+    <td><%=h offering.on_line %></td>
+    <td><%=h offering.dead_line %></td>
+    <td><%=h offering.firm %></td>
     <td><%= link_to 'Show', offering %></td>
     <td><%= link_to 'Edit', edit_offering_path(offering) %></td>
     <td><%= link_to 'Destroy', offering, :confirm => 'Are you sure?', :method => :delete %></td>

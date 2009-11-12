@@ -1,11 +1,13 @@
 class CreateOfferings < ActiveRecord::Migration
   def self.up
     create_table :offerings do |t|
-      t.string :name
+      t.string :title
+      t.string :permalink
       t.text :description
-      t.string :author
-      t.datetime :date_depot
-      t.datetime :validity
+      t.datetime :on_line
+      t.datetime :dead_line
+      t.references :firm
+
       t.timestamps
     end
   end

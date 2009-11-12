@@ -1,13 +1,17 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
 one:
-  name: MyString
-  description: MyText
-  author: MyString
-  Date: 2009-11-10 12:05:47
+  title: MyString
+  permalink: MyString
+  description: MyString
+  on_line: 2009-11-12 07:10:03
+  dead_line: 2009-11-12 07:10:03
+  firm_id: 
 
 two:
-  name: MyString
-  description: MyText
-  author: MyString
-  Date: 2009-11-10 12:05:47
+  title: MyString
+  permalink: MyString
+  description: MyString
+  on_line: 2009-11-12 07:10:03
+  dead_line: 2009-11-12 07:10:03
+  firm_id: 

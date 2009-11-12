@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20091111075253) do
+ActiveRecord::Schema.define(:version => 20091112151003) do
 
   create_table "firms", :force => true do |t|
     t.string   "name"
@@ -21,14 +21,14 @@ ActiveRecord::Schema.define(:version => 20091111075253) do
   end
 
   create_table "offerings", :force => true do |t|
-    t.string   "name"
+    t.string   "title"
+    t.string   "permalink"
     t.text     "description"
-    t.string   "author"
-    t.datetime "date_depot"
-    t.datetime "validity"
+    t.datetime "on_line"
+    t.datetime "dead_line"
+    t.integer  "firm_id"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "firm_id"
   end
 
   create_table "profiles", :force => true do |t|

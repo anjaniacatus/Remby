@@ -1,29 +1,30 @@
-<% @offering.firm.name %>
+<p class="title">
+  Offer by <%= @offering.firm.name %>
+</p>
 
-<% form_for(@offering) do |f| %>
+<% form_for([@offering.firm, @offering]) do |f| %>
   <%= f.error_messages %>
 
   <p>
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </p>
+  <p>
+    <%= f.label :permalink %><br />
+    <%= f.text_field :permalink %>
   </p>
   <p>
     <%= f.label :description %><br />
     <%= f.text_area :description %>
   </p>
   <p>
-    <%= f.label :author %><br />
-    <%= f.text_field :author %>
+    <%= f.label :on_line %><br />
+    <%= f.datetime_select :on_line %>
   </p>
   <p>
-    <%= f.label :date_depot %><br />
-    <%= f.datetime_select :date_depot %>
+    <%= f.label :dead_line %><br />
+    <%= f.datetime_select :dead_line %>
   </p>
-    <p>
-    <%= f.label :validity %><br />
-    <%= f.datetime_select :validity %>
-  </p>
-  
   <p>
     <%= f.submit 'Create' %>
   </p>
