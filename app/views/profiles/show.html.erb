@@ -1,0 +1,38 @@
+<p>
+  <b>Firstname:</b>
+  <%=h @profile.firstname %>
+</p>
+
+<p>
+  <b>Lastname:</b>
+  <%=h @profile.lastname %>
+</p>
+
+<p>
+  <b>Permalink:</b>
+  <%=h @profile.permalink %>
+</p>
+
+<p>
+  <b>Age:</b>
+  <%=h @profile.age %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%=h @profile.description %>
+</p>
+
+<p>
+  <b>Status:</b>
+  <%=h @profile.status %>
+</p>
+
+<p>
+  <b>Sex:</b>
+  <%=h @profile.sex %>
+</p>
+
+
+<%= link_to 'Edit', edit_profile_path(@profile) %> |
+<%= link_to 'Back', profiles_path %>

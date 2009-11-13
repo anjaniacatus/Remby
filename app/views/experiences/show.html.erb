@@ -1,0 +1,38 @@
+<p>
+  <b>Permalink:</b>
+  <%=h @experience.permalink %>
+</p>
+
+<p>
+  <b>Office name:</b>
+  <%=h @experience.office_name %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%=h @experience.description %>
+</p>
+
+<p>
+  <b>Society name:</b>
+  <%=h @experience.society_name %>
+</p>
+
+<p>
+  <b>Period:</b>
+  <%=h @experience.period %>
+</p>
+
+<p>
+  <b>Begin at:</b>
+  <%=h @experience.begin_at %>
+</p>
+
+<p>
+  <b>Profile:</b>
+  <%=h @experience.profile %>
+</p>
+
+
+<%= link_to 'Edit', edit_experience_path(@experience) %> |
+<%= link_to 'Back', experiences_path %>

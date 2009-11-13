@@ -9,7 +9,19 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20091112151003) do
+ActiveRecord::Schema.define(:version => 20091113085510) do
+
+  create_table "experiences", :force => true do |t|
+    t.string   "permalink"
+    t.string   "office_name"
+    t.text     "description"
+    t.string   "society_name"
+    t.string   "period"
+    t.date     "begin_at"
+    t.integer  "profile_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "firms", :force => true do |t|
     t.string   "name"
@@ -27,6 +39,18 @@ ActiveRecord::Schema.define(:version => 20091112151003) do
     t.datetime "on_line"
     t.datetime "dead_line"
     t.integer  "firm_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "profiles", :force => true do |t|
+    t.string   "firstname"
+    t.string   "lastname"
+    t.string   "permalink"
+    t.integer  "age"
+    t.text     "description"
+    t.string   "status"
+    t.string   "sex"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
