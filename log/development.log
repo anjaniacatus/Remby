@@ -6296,3 +6296,1382 @@ Rendered offerings/_offering (0.8ms)
 Rendered offerings/_offering (0.6ms)
   [4;35;1mUser Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `users`[0m
 Completed in 52ms (View: 36, DB: 4) | 200 OK [http://localhost/firms/2]
+  [4;36;1mSQL (27.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (14.9ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OfferingsController#index (for 127.0.0.1 at 2009-11-13 08:54:44) [GET]
+Redirected to http://localhost:3000/firms
+Completed in 6ms (DB: 42) | 302 Found [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (2.6ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FirmsController#index (for 127.0.0.1 at 2009-11-13 08:54:44) [GET]
+  [4;36;1mFirm Load (46.8ms)[0m   [0;1mSELECT * FROM `firms` [0m
+Rendering template within layouts/application
+Rendering firms/index
+  [4;35;1mFirm Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `firms`[0m
+  [4;36;1mUser Columns (24.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Completed in 401ms (View: 286, DB: 75) | 200 OK [http://localhost/firms]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FirmsController#show (for 127.0.0.1 at 2009-11-13 08:54:49) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mFirm Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `firms`[0m
+  [4;36;1mFirm Load (8.4ms)[0m   [0;1mSELECT * FROM `firms` WHERE (`firms`.`id` = 2) [0m
+Rendering template within layouts/application
+Rendering firms/show
+  [4;35;1mOffering Load (52.9ms)[0m   [0mSELECT * FROM `offerings` WHERE (`offerings`.firm_id = 2) [0m
+  [4;36;1mOffering Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `offerings`[0m
+Rendered offerings/_offering (389.5ms)
+Rendered offerings/_offering (0.7ms)
+  [4;35;1mUser Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Completed in 520ms (View: 442, DB: 65) | 200 OK [http://localhost/firms/2]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (8.7ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (8.5ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateProfiles (20091109105049)
+Migrating to CreateUsers (20091109105426)
+Migrating to CreateFirms (20091111050020)
+Migrating to CreateOfferings (20091112151003)
+Migrating to CreateActivities (20091113173206)
+  [4;36;1mSQL (16.9ms)[0m   [0;1mCREATE TABLE `activities` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `permalink` varchar(255), `offering_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20091113173206')[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSHOW FIELDS FROM `activities`[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mdescribe `activities`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW KEYS FROM `activities`[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSHOW FIELDS FROM `firms`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mdescribe `firms`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `firms`[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mSHOW FIELDS FROM `offerings`[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mdescribe `offerings`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW KEYS FROM `offerings`[0m
+  [4;36;1mSQL (11.7ms)[0m   [0;1mSHOW FIELDS FROM `profiles`[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mdescribe `profiles`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW KEYS FROM `profiles`[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (1.8ms)[0m   [0;1mdescribe `users`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (3.6ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (4.3ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateProfiles (20091109105049)
+  [4;35;1mSQL (2.9ms)[0m   [0mCREATE TABLE `profiles` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `family_name` varchar(255), `name` varchar(255), `town` varchar(255), `sex` varchar(255), `birthday` date, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091109105049')[0m
+Migrating to CreateUsers (20091109105426)
+  [4;35;1mSQL (7.1ms)[0m   [0mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `username` varchar(255), `email` varchar(255), `crypted_password` varchar(255), `password_salt` varchar(255), `persistence_token` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091109105426')[0m
+Migrating to CreateFirms (20091111050020)
+  [4;35;1mSQL (3.2ms)[0m   [0mCREATE TABLE `firms` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `permalink` varchar(255), `baseline` varchar(255), `description` text, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091111050020')[0m
+Migrating to CreateOfferings (20091112151003)
+  [4;35;1mSQL (2.4ms)[0m   [0mCREATE TABLE `offerings` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `title` varchar(255), `permalink` varchar(255), `description` text, `on_line` datetime, `dead_line` datetime, `firm_id` int(11), `activity_id` int(11), `function_id` int(11), `localisation_id` int(11), `contract_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091112151003')[0m
+Migrating to CreateActivities (20091113173206)
+  [4;35;1mSQL (2.8ms)[0m   [0mCREATE TABLE `activities` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `permalink` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091113173206')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mSHOW FIELDS FROM `activities`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mdescribe `activities`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW KEYS FROM `activities`[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mSHOW FIELDS FROM `firms`[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mdescribe `firms`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW KEYS FROM `firms`[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSHOW FIELDS FROM `offerings`[0m
+  [4;35;1mSQL (2.8ms)[0m   [0mdescribe `offerings`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW KEYS FROM `offerings`[0m
+  [4;35;1mSQL (2.4ms)[0m   [0mSHOW FIELDS FROM `profiles`[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mdescribe `profiles`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW KEYS FROM `profiles`[0m
+  [4;36;1mSQL (1.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (2.4ms)[0m   [0mdescribe `users`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateProfiles (20091109105049)
+Migrating to CreateUsers (20091109105426)
+Migrating to CreateFirms (20091111050020)
+Migrating to CreateOfferings (20091112151003)
+Migrating to CreateActivities (20091113173206)
+Migrating to CreateFunctions (20091113181558)
+  [4;36;1mSQL (2.9ms)[0m   [0;1mCREATE TABLE `functions` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `permalink` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20091113181558')[0m
+Migrating to CreateContracts (20091113181640)
+  [4;36;1mSQL (2.4ms)[0m   [0;1mCREATE TABLE `contracts` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `permalink` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20091113181640')[0m
+Migrating to CreateLocalisations (20091113181726)
+  [4;36;1mSQL (2.4ms)[0m   [0;1mCREATE TABLE `localisations` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `permalink` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20091113181726')[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mSHOW FIELDS FROM `activities`[0m
+  [4;36;1mSQL (1.8ms)[0m   [0;1mdescribe `activities`[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mSHOW KEYS FROM `activities`[0m
+  [4;36;1mSQL (1.9ms)[0m   [0;1mSHOW FIELDS FROM `contracts`[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mdescribe `contracts`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW KEYS FROM `contracts`[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mSHOW FIELDS FROM `firms`[0m
+  [4;36;1mSQL (2.2ms)[0m   [0;1mdescribe `firms`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `firms`[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mSHOW FIELDS FROM `functions`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mdescribe `functions`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW KEYS FROM `functions`[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSHOW FIELDS FROM `localisations`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mdescribe `localisations`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `localisations`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW FIELDS FROM `offerings`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mdescribe `offerings`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `offerings`[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSHOW FIELDS FROM `profiles`[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mdescribe `profiles`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW KEYS FROM `profiles`[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mdescribe `users`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ActivitiesController#index (for 127.0.0.1 at 2009-11-13 10:22:27) [GET]
+  [4;36;1mActivity Load (0.4ms)[0m   [0;1mSELECT * FROM `activities` [0m
+Rendering template within layouts/application
+Rendering activities/index
+  [4;35;1mUser Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Completed in 51ms (View: 36, DB: 2) | 200 OK [http://localhost/activities]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ActivitiesController#new (for 127.0.0.1 at 2009-11-13 10:22:30) [GET]
+  [4;36;1mActivity Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `activities`[0m
+Rendering template within layouts/application
+Rendering activities/new
+
+ActionView::TemplateError (undefined method `offering' for #<Activity:0xb7023b4c>) on line #16 of app/views/activities/new.html.erb:
+13:   </p>
+14:   <p>
+15:     <%= f.label :offering %><br />
+16:     <%= f.text_field :offering %>
+17:   </p>
+18:   <p>
+19:     <%= f.submit 'Create' %>
+
+    app/views/activities/new.html.erb:16
+    app/views/activities/new.html.erb:3
+    app/controllers/activities_controller.rb:29:in `new'
+
+Rendered rescues/_trace (210.3ms)
+Rendered rescues/_request_and_response (2.2ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ActivitiesController#new (for 127.0.0.1 at 2009-11-13 10:23:24) [GET]
+  [4;35;1mActivity Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `activities`[0m
+Rendering template within layouts/application
+Rendering activities/new
+  [4;36;1mUser Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Completed in 48ms (View: 35, DB: 2) | 200 OK [http://localhost/activities/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ActivitiesController#create (for 127.0.0.1 at 2009-11-13 10:23:49) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"I8Mb9KQtSg0ETPvZAsJABzq5HpmKIDfW8Ej+yb6jYSU=", "activity"=>{"permalink"=>"ingenierie", "name"=>"Ingenierie"}}
+  [4;35;1mActivity Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `activities`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mActivity Create (0.3ms)[0m   [0mINSERT INTO `activities` (`name`, `permalink`, `created_at`, `updated_at`) VALUES('Ingenierie', 'ingenierie', '2009-11-13 18:23:49', '2009-11-13 18:23:49')[0m
+  [4;36;1mSQL (1.6ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/activities/1
+Completed in 19ms (DB: 3) | 302 Found [http://localhost/activities]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ActivitiesController#show (for 127.0.0.1 at 2009-11-13 10:23:49) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mActivity Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `activities`[0m
+  [4;36;1mActivity Load (0.3ms)[0m   [0;1mSELECT * FROM `activities` WHERE (`activities`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering activities/show
+
+ActionView::TemplateError (undefined method `offering' for #<Activity:0xb6f414b8>) on line #13 of app/views/activities/show.html.erb:
+10: 
+11: <p>
+12:   <b>Offering:</b>
+13:   <%=h @activity.offering %>
+14: </p>
+15: 
+16: 
+
+    app/views/activities/show.html.erb:13
+    app/controllers/activities_controller.rb:18:in `show'
+
+Rendered rescues/_trace (192.5ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ActivitiesController#show (for 127.0.0.1 at 2009-11-13 10:24:07) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mActivity Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `activities`[0m
+  [4;36;1mActivity Load (0.3ms)[0m   [0;1mSELECT * FROM `activities` WHERE (`activities`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering activities/show
+
+ActionView::TemplateError (undefined method `offering' for #<Activity:0xb7062b1c>) on line #13 of app/views/activities/show.html.erb:
+10: 
+11: <p>
+12:   <b>Offering:</b>
+13:   <%=h @activity.offering %>
+14: </p>
+15: 
+16: 
+
+    app/views/activities/show.html.erb:13
+    app/controllers/activities_controller.rb:18:in `show'
+
+Rendered rescues/_trace (102.7ms)
+Rendered rescues/_request_and_response (0.7ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ActivitiesController#show (for 127.0.0.1 at 2009-11-13 10:24:25) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mActivity Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `activities`[0m
+  [4;36;1mActivity Load (0.3ms)[0m   [0;1mSELECT * FROM `activities` WHERE (`activities`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering activities/show
+  [4;35;1mUser Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Completed in 166ms (View: 149, DB: 3) | 200 OK [http://localhost/activities/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ActivitiesController#index (for 127.0.0.1 at 2009-11-13 10:24:27) [GET]
+  [4;36;1mActivity Load (0.4ms)[0m   [0;1mSELECT * FROM `activities` [0m
+Rendering template within layouts/application
+Rendering activities/index
+  [4;35;1mActivity Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `activities`[0m
+  [4;36;1mUser Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Completed in 52ms (View: 39, DB: 3) | 200 OK [http://localhost/activities]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ActivitiesController#show (for 127.0.0.1 at 2009-11-13 10:24:31) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mActivity Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `activities`[0m
+  [4;36;1mActivity Load (0.3ms)[0m   [0;1mSELECT * FROM `activities` WHERE (`activities`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering activities/show
+  [4;35;1mUser Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Completed in 38ms (View: 24, DB: 3) | 200 OK [http://localhost/activities/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ActivitiesController#new (for 127.0.0.1 at 2009-11-13 10:24:35) [GET]
+  [4;36;1mActivity Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `activities`[0m
+Rendering template within layouts/application
+Rendering activities/new
+  [4;35;1mUser Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Completed in 40ms (View: 27, DB: 3) | 200 OK [http://localhost/activities/new]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ActivitiesController#create (for 127.0.0.1 at 2009-11-13 10:24:52) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"I8Mb9KQtSg0ETPvZAsJABzq5HpmKIDfW8Ej+yb6jYSU=", "activity"=>{"permalink"=>"expertise", "name"=>"Expertise"}}
+  [4;36;1mActivity Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `activities`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mActivity Create (0.3ms)[0m   [0;1mINSERT INTO `activities` (`name`, `permalink`, `created_at`, `updated_at`) VALUES('Expertise', 'expertise', '2009-11-13 18:24:52', '2009-11-13 18:24:52')[0m
+  [4;35;1mSQL (1.5ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/activities/2
+Completed in 21ms (DB: 4) | 302 Found [http://localhost/activities]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ActivitiesController#show (for 127.0.0.1 at 2009-11-13 10:24:52) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mActivity Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `activities`[0m
+  [4;35;1mActivity Load (0.3ms)[0m   [0mSELECT * FROM `activities` WHERE (`activities`.`id` = 2) [0m
+Rendering template within layouts/application
+Rendering activities/show
+  [4;36;1mUser Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Completed in 39ms (View: 24, DB: 2) | 200 OK [http://localhost/activities/2]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ActivitiesController#index (for 127.0.0.1 at 2009-11-13 10:24:54) [GET]
+  [4;35;1mActivity Load (0.3ms)[0m   [0mSELECT * FROM `activities` [0m
+Rendering template within layouts/application
+Rendering activities/index
+  [4;36;1mActivity Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `activities`[0m
+  [4;35;1mUser Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Completed in 52ms (View: 39, DB: 2) | 200 OK [http://localhost/activities]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ActivitiesController#show (for 127.0.0.1 at 2009-11-13 10:24:57) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mActivity Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `activities`[0m
+  [4;35;1mActivity Load (0.3ms)[0m   [0mSELECT * FROM `activities` WHERE (`activities`.`id` = 2) [0m
+Rendering template within layouts/application
+Rendering activities/show
+  [4;36;1mUser Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Completed in 37ms (View: 23, DB: 3) | 200 OK [http://localhost/activities/2]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ActivitiesController#index (for 127.0.0.1 at 2009-11-13 10:25:04) [GET]
+  [4;35;1mActivity Load (0.4ms)[0m   [0mSELECT * FROM `activities` [0m
+Rendering template within layouts/application
+Rendering activities/index
+  [4;36;1mActivity Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `activities`[0m
+  [4;35;1mUser Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Completed in 62ms (View: 48, DB: 3) | 200 OK [http://localhost/activities]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ActivitiesController#new (for 127.0.0.1 at 2009-11-13 10:25:05) [GET]
+  [4;36;1mActivity Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `activities`[0m
+Rendering template within layouts/application
+Rendering activities/new
+  [4;35;1mUser Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Completed in 41ms (View: 28, DB: 2) | 200 OK [http://localhost/activities/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ActivitiesController#create (for 127.0.0.1 at 2009-11-13 10:25:22) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"I8Mb9KQtSg0ETPvZAsJABzq5HpmKIDfW8Ej+yb6jYSU=", "activity"=>{"permalink"=>"assurances", "name"=>"Assurances"}}
+  [4;36;1mActivity Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `activities`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mActivity Create (0.3ms)[0m   [0;1mINSERT INTO `activities` (`name`, `permalink`, `created_at`, `updated_at`) VALUES('Assurances', 'assurances', '2009-11-13 18:25:22', '2009-11-13 18:25:22')[0m
+  [4;35;1mSQL (1.5ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/activities/3
+Completed in 19ms (DB: 3) | 302 Found [http://localhost/activities]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ActivitiesController#show (for 127.0.0.1 at 2009-11-13 10:25:22) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mActivity Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `activities`[0m
+  [4;35;1mActivity Load (0.3ms)[0m   [0mSELECT * FROM `activities` WHERE (`activities`.`id` = 3) [0m
+Rendering template within layouts/application
+Rendering activities/show
+  [4;36;1mUser Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Completed in 42ms (View: 23, DB: 3) | 200 OK [http://localhost/activities/3]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ActivitiesController#index (for 127.0.0.1 at 2009-11-13 10:25:24) [GET]
+  [4;35;1mActivity Load (0.4ms)[0m   [0mSELECT * FROM `activities` [0m
+Rendering template within layouts/application
+Rendering activities/index
+  [4;36;1mActivity Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `activities`[0m
+  [4;35;1mUser Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Completed in 164ms (View: 151, DB: 2) | 200 OK [http://localhost/activities]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FirmsController#index (for 127.0.0.1 at 2009-11-13 10:27:42) [GET]
+  [4;36;1mFirm Load (0.4ms)[0m   [0;1mSELECT * FROM `firms` [0m
+Rendering template within layouts/application
+Rendering firms/index
+  [4;35;1mUser Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Completed in 45ms (View: 27, DB: 2) | 200 OK [http://localhost/firms]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FirmsController#new (for 127.0.0.1 at 2009-11-13 10:27:45) [GET]
+  [4;36;1mFirm Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `firms`[0m
+Rendering template within layouts/application
+Rendering firms/new
+  [4;35;1mUser Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Completed in 54ms (View: 36, DB: 3) | 200 OK [http://localhost/firms/new]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FirmsController#create (for 127.0.0.1 at 2009-11-13 10:28:00) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"I8Mb9KQtSg0ETPvZAsJABzq5HpmKIDfW8Ej+yb6jYSU=", "firm"=>{"permalink"=>"sacimem", "name"=>"SACIMEM", "baseline"=>"Le tabac nuit à la santé", "description"=>"qfsdf qsds fsd sd  fsdffsdf  "}}
+  [4;36;1mFirm Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `firms`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mFirm Create (0.3ms)[0m   [0;1mINSERT INTO `firms` (`name`, `permalink`, `created_at`, `updated_at`, `baseline`, `description`) VALUES('SACIMEM', 'sacimem', '2009-11-13 18:28:00', '2009-11-13 18:28:00', 'Le tabac nuit à la santé', 'qfsdf qsds fsd sd fsdffsdf ')[0m
+  [4;35;1mSQL (1.6ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/firms/1
+Completed in 21ms (DB: 3) | 302 Found [http://localhost/firms]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FirmsController#show (for 127.0.0.1 at 2009-11-13 10:28:00) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mFirm Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `firms`[0m
+  [4;35;1mFirm Load (0.3ms)[0m   [0mSELECT * FROM `firms` WHERE (`firms`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering firms/show
+  [4;36;1mOffering Load (0.4ms)[0m   [0;1mSELECT * FROM `offerings` WHERE (`offerings`.firm_id = 1) [0m
+  [4;35;1mUser Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Completed in 163ms (View: 144, DB: 3) | 200 OK [http://localhost/firms/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FirmsController#index (for 127.0.0.1 at 2009-11-13 10:28:02) [GET]
+  [4;36;1mFirm Load (0.4ms)[0m   [0;1mSELECT * FROM `firms` [0m
+Rendering template within layouts/application
+Rendering firms/index
+  [4;35;1mFirm Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `firms`[0m
+  [4;36;1mUser Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Completed in 46ms (View: 31, DB: 3) | 200 OK [http://localhost/firms]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FirmsController#new (for 127.0.0.1 at 2009-11-13 10:28:03) [GET]
+  [4;35;1mFirm Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `firms`[0m
+Rendering template within layouts/application
+Rendering firms/new
+  [4;36;1mUser Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Completed in 45ms (View: 31, DB: 2) | 200 OK [http://localhost/firms/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FirmsController#create (for 127.0.0.1 at 2009-11-13 10:28:18) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"I8Mb9KQtSg0ETPvZAsJABzq5HpmKIDfW8Ej+yb6jYSU=", "firm"=>{"permalink"=>"sacimem", "name"=>"COTONA", "baseline"=>"coton ana", "description"=>"qdfdfq sds sfsfdfsddfsfsd sd f sd sf s s sdfsf  df ffsd"}}
+  [4;35;1mFirm Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `firms`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mFirm Create (0.3ms)[0m   [0mINSERT INTO `firms` (`name`, `permalink`, `created_at`, `updated_at`, `baseline`, `description`) VALUES('COTONA', 'sacimem', '2009-11-13 18:28:18', '2009-11-13 18:28:18', 'coton ana', 'qdfdfq sds sfsfdfsddfsfsd sd f sd sf s s sdfsf df ffsd')[0m
+  [4;36;1mSQL (1.6ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/firms/2
+Completed in 21ms (DB: 3) | 302 Found [http://localhost/firms]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FirmsController#show (for 127.0.0.1 at 2009-11-13 10:28:18) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mFirm Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `firms`[0m
+  [4;36;1mFirm Load (0.3ms)[0m   [0;1mSELECT * FROM `firms` WHERE (`firms`.`id` = 2) [0m
+Rendering template within layouts/application
+Rendering firms/show
+  [4;35;1mOffering Load (0.4ms)[0m   [0mSELECT * FROM `offerings` WHERE (`offerings`.firm_id = 2) [0m
+  [4;36;1mUser Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Completed in 58ms (View: 41, DB: 4) | 200 OK [http://localhost/firms/2]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FirmsController#index (for 127.0.0.1 at 2009-11-13 10:28:20) [GET]
+  [4;35;1mFirm Load (0.4ms)[0m   [0mSELECT * FROM `firms` [0m
+Rendering template within layouts/application
+Rendering firms/index
+  [4;36;1mFirm Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `firms`[0m
+  [4;35;1mUser Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Completed in 54ms (View: 40, DB: 4) | 200 OK [http://localhost/firms]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FirmsController#new (for 127.0.0.1 at 2009-11-13 10:28:22) [GET]
+  [4;36;1mFirm Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `firms`[0m
+Rendering template within layouts/application
+Rendering firms/new
+  [4;35;1mUser Columns (2.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Completed in 45ms (View: 30, DB: 4) | 200 OK [http://localhost/firms/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FirmsController#create (for 127.0.0.1 at 2009-11-13 10:28:40) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"I8Mb9KQtSg0ETPvZAsJABzq5HpmKIDfW8Ej+yb6jYSU=", "firm"=>{"permalink"=>"star", "name"=>"STAR", "baseline"=>"soa ny fiarahantsika", "description"=>"qsdfsfdd sfsdf sdfffsdfsd sfd sdfdfsdf"}}
+  [4;36;1mFirm Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `firms`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mFirm Create (0.3ms)[0m   [0;1mINSERT INTO `firms` (`name`, `permalink`, `created_at`, `updated_at`, `baseline`, `description`) VALUES('STAR', 'star', '2009-11-13 18:28:40', '2009-11-13 18:28:40', 'soa ny fiarahantsika', 'qsdfsfdd sfsdf sdfffsdfsd sfd sdfdfsdf')[0m
+  [4;35;1mSQL (1.6ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/firms/3
+Completed in 21ms (DB: 3) | 302 Found [http://localhost/firms]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FirmsController#show (for 127.0.0.1 at 2009-11-13 10:28:40) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mFirm Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `firms`[0m
+  [4;35;1mFirm Load (0.3ms)[0m   [0mSELECT * FROM `firms` WHERE (`firms`.`id` = 3) [0m
+Rendering template within layouts/application
+Rendering firms/show
+  [4;36;1mOffering Load (0.4ms)[0m   [0;1mSELECT * FROM `offerings` WHERE (`offerings`.firm_id = 3) [0m
+  [4;35;1mUser Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Completed in 58ms (View: 41, DB: 4) | 200 OK [http://localhost/firms/3]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FirmsController#index (for 127.0.0.1 at 2009-11-13 10:28:42) [GET]
+  [4;36;1mFirm Load (0.4ms)[0m   [0;1mSELECT * FROM `firms` [0m
+Rendering template within layouts/application
+Rendering firms/index
+  [4;35;1mFirm Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `firms`[0m
+  [4;36;1mUser Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Completed in 63ms (View: 49, DB: 3) | 200 OK [http://localhost/firms]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FirmsController#show (for 127.0.0.1 at 2009-11-13 10:28:45) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mFirm Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `firms`[0m
+  [4;36;1mFirm Load (0.3ms)[0m   [0;1mSELECT * FROM `firms` WHERE (`firms`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering firms/show
+  [4;35;1mOffering Load (0.4ms)[0m   [0mSELECT * FROM `offerings` WHERE (`offerings`.firm_id = 1) [0m
+  [4;36;1mUser Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Completed in 48ms (View: 34, DB: 3) | 200 OK [http://localhost/firms/1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OfferingsController#new (for 127.0.0.1 at 2009-11-13 10:28:47) [GET]
+  Parameters: {"firm_id"=>"1"}
+  [4;35;1mFirm Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `firms`[0m
+  [4;36;1mFirm Load (0.3ms)[0m   [0;1mSELECT * FROM `firms` WHERE (`firms`.`id` = 1) [0m
+  [4;35;1mOffering Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `offerings`[0m
+Rendering template within layouts/application
+Rendering offerings/new
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `firms` WHERE (`firms`.`id` = 1) [0m
+
+ActionView::TemplateError (undefined local variable or method `activities' for #<Offering:0xb718deec>) on line #22 of app/views/offerings/new.html.erb:
+19:   </p>
+20:   <p>
+21:     <%= f.label :activities_names %><br />
+22:     <%= f.text_field :activities_names %><br />
+23:     <span class="help">
+24:       <%= t(:list_activities_names_separated_with_commas, :default => "Mettre la liste des activités, séparés par une virgule.") %>
+25:     </span>
+
+    app/models/offering.rb:17:in `activities_names'
+    app/views/offerings/new.html.erb:22
+    app/views/offerings/new.html.erb:5
+
+Rendered rescues/_trace (97.5ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OfferingsController#new (for 127.0.0.1 at 2009-11-13 10:29:24) [GET]
+  Parameters: {"firm_id"=>"1"}
+  [4;35;1mFirm Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `firms`[0m
+  [4;36;1mFirm Load (0.4ms)[0m   [0;1mSELECT * FROM `firms` WHERE (`firms`.`id` = 1) [0m
+  [4;35;1mOffering Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `offerings`[0m
+Rendering template within layouts/application
+Rendering offerings/new
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `firms` WHERE (`firms`.`id` = 1) [0m
+
+ActionView::TemplateError (undefined local variable or method `activities' for #<Offering:0xb6f156ec>) on line #22 of app/views/offerings/new.html.erb:
+19:   </p>
+20:   <p>
+21:     <%= f.label :activities_names %><br />
+22:     <%= f.text_field :activities_names %><br />
+23:     <span class="help">
+24:       <%= t(:list_activities_names_separated_with_commas, :default => "Mettre la liste des activités, séparés par une virgule.") %>
+25:     </span>
+
+    app/models/offering.rb:16:in `activities_names'
+    app/views/offerings/new.html.erb:22
+    app/views/offerings/new.html.erb:5
+
+Rendered rescues/_trace (242.6ms)
+Rendered rescues/_request_and_response (0.7ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (2.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OfferingsController#new (for 127.0.0.1 at 2009-11-13 10:30:34) [GET]
+  Parameters: {"firm_id"=>"1"}
+  [4;35;1mFirm Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `firms`[0m
+  [4;36;1mFirm Load (0.4ms)[0m   [0;1mSELECT * FROM `firms` WHERE (`firms`.`id` = 1) [0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mOffering Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `offerings`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mOffering Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `offerings`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mOffering Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `offerings`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mOffering Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `offerings`[0m
+
+NoMethodError (undefined method `has_and_belongs_to' for #<Class:0xb7061f00>):
+  app/models/offering.rb:3
+  app/controllers/offerings_controller.rb:31:in `new'
+
+Rendered rescues/_trace (102.1ms)
+Rendered rescues/_request_and_response (0.7ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OfferingsController#new (for 127.0.0.1 at 2009-11-13 10:30:43) [GET]
+  Parameters: {"firm_id"=>"1"}
+  [4;35;1mFirm Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `firms`[0m
+  [4;36;1mFirm Load (0.3ms)[0m   [0;1mSELECT * FROM `firms` WHERE (`firms`.`id` = 1) [0m
+  [4;35;1mOffering Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `offerings`[0m
+Rendering template within layouts/application
+Rendering offerings/new
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `firms` WHERE (`firms`.`id` = 1) [0m
+
+ActionView::TemplateError (undefined local variable or method `activities' for #<Offering:0xb71ac2fc>) on line #22 of app/views/offerings/new.html.erb:
+19:   </p>
+20:   <p>
+21:     <%= f.label :activities_names %><br />
+22:     <%= f.text_field :activities_names %><br />
+23:     <span class="help">
+24:       <%= t(:list_activities_names_separated_with_commas, :default => "Mettre la liste des activités, séparés par une virgule.") %>
+25:     </span>
+
+    app/models/offering.rb:16:in `activities_names'
+    app/views/offerings/new.html.erb:22
+    app/views/offerings/new.html.erb:5
+
+Rendered rescues/_trace (115.9ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OfferingsController#new (for 127.0.0.1 at 2009-11-13 10:31:13) [GET]
+  Parameters: {"firm_id"=>"1"}
+  [4;35;1mFirm Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `firms`[0m
+  [4;36;1mFirm Load (0.3ms)[0m   [0;1mSELECT * FROM `firms` WHERE (`firms`.`id` = 1) [0m
+
+NameError (uninitialized constant Offering::Asciier):
+  app/models/offering.rb:8
+  app/controllers/offerings_controller.rb:31:in `new'
+
+Rendered rescues/_trace (197.5ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OfferingsController#new (for 127.0.0.1 at 2009-11-13 10:31:57) [GET]
+  Parameters: {"firm_id"=>"1"}
+  [4;35;1mFirm Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `firms`[0m
+  [4;36;1mFirm Load (0.4ms)[0m   [0;1mSELECT * FROM `firms` WHERE (`firms`.`id` = 1) [0m
+
+NameError (uninitialized constant Offering::Asciier):
+  app/models/offering.rb:8
+  app/controllers/offerings_controller.rb:31:in `new'
+
+Rendered rescues/_trace (101.4ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OfferingsController#new (for 127.0.0.1 at 2009-11-13 10:32:00) [GET]
+  Parameters: {"firm_id"=>"1"}
+  [4;35;1mFirm Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `firms`[0m
+  [4;36;1mFirm Load (0.3ms)[0m   [0;1mSELECT * FROM `firms` WHERE (`firms`.`id` = 1) [0m
+
+NameError (uninitialized constant Offering::Asciier):
+  app/models/offering.rb:8
+  app/controllers/offerings_controller.rb:31:in `new'
+
+Rendered rescues/_trace (91.5ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.4ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OfferingsController#new (for 127.0.0.1 at 2009-11-13 10:34:02) [GET]
+  Parameters: {"firm_id"=>"1"}
+  [4;35;1mFirm Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `firms`[0m
+  [4;36;1mFirm Load (2.3ms)[0m   [0;1mSELECT * FROM `firms` WHERE (`firms`.`id` = 1) [0m
+
+ArgumentError (No association found for name `pricings'. Has it been defined yet?):
+  app/models/offering.rb:8
+  app/controllers/offerings_controller.rb:31:in `new'
+
+Rendered rescues/_trace (227.1ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OfferingsController#new (for 127.0.0.1 at 2009-11-13 10:34:15) [GET]
+  Parameters: {"firm_id"=>"1"}
+  [4;35;1mFirm Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `firms`[0m
+  [4;36;1mFirm Load (0.4ms)[0m   [0;1mSELECT * FROM `firms` WHERE (`firms`.`id` = 1) [0m
+
+ArgumentError (No association found for name `activities'. Has it been defined yet?):
+  app/models/offering.rb:8
+  app/controllers/offerings_controller.rb:31:in `new'
+
+Rendered rescues/_trace (105.1ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContractsController#index (for 127.0.0.1 at 2009-11-13 10:35:44) [GET]
+  [4;35;1mContract Load (0.4ms)[0m   [0mSELECT * FROM `contracts` [0m
+Rendering template within layouts/contracts
+Rendering contracts/index
+Completed in 41ms (View: 27, DB: 1) | 200 OK [http://localhost/contracts]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContractsController#new (for 127.0.0.1 at 2009-11-13 10:35:47) [GET]
+  [4;36;1mContract Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `contracts`[0m
+Rendering template within layouts/contracts
+Rendering contracts/new
+Completed in 31ms (View: 18, DB: 2) | 200 OK [http://localhost/contracts/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContractsController#create (for 127.0.0.1 at 2009-11-13 10:35:55) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"I8Mb9KQtSg0ETPvZAsJABzq5HpmKIDfW8Ej+yb6jYSU=", "contract"=>{"permalink"=>"cdd", "name"=>"CDD"}}
+  [4;35;1mContract Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `contracts`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mContract Create (0.3ms)[0m   [0mINSERT INTO `contracts` (`name`, `permalink`, `created_at`, `updated_at`) VALUES('CDD', 'cdd', '2009-11-13 18:35:55', '2009-11-13 18:35:55')[0m
+  [4;36;1mSQL (1.6ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/contracts/1
+Completed in 18ms (DB: 3) | 302 Found [http://localhost/contracts]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContractsController#show (for 127.0.0.1 at 2009-11-13 10:35:55) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mContract Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `contracts`[0m
+  [4;36;1mContract Load (0.3ms)[0m   [0;1mSELECT * FROM `contracts` WHERE (`contracts`.`id` = 1) [0m
+Rendering template within layouts/contracts
+Rendering contracts/show
+Completed in 23ms (View: 11, DB: 1) | 200 OK [http://localhost/contracts/1]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContractsController#index (for 127.0.0.1 at 2009-11-13 10:35:57) [GET]
+  [4;35;1mContract Load (0.4ms)[0m   [0mSELECT * FROM `contracts` [0m
+Rendering template within layouts/contracts
+Rendering contracts/index
+  [4;36;1mContract Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `contracts`[0m
+Completed in 23ms (View: 12, DB: 2) | 200 OK [http://localhost/contracts]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContractsController#new (for 127.0.0.1 at 2009-11-13 10:35:58) [GET]
+  [4;35;1mContract Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `contracts`[0m
+Rendering template within layouts/contracts
+Rendering contracts/new
+Completed in 20ms (View: 9, DB: 1) | 200 OK [http://localhost/contracts/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContractsController#create (for 127.0.0.1 at 2009-11-13 10:36:06) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"I8Mb9KQtSg0ETPvZAsJABzq5HpmKIDfW8Ej+yb6jYSU=", "contract"=>{"permalink"=>"cdi", "name"=>"CDI"}}
+  [4;36;1mContract Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `contracts`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mContract Create (0.3ms)[0m   [0;1mINSERT INTO `contracts` (`name`, `permalink`, `created_at`, `updated_at`) VALUES('CDI', 'cdi', '2009-11-13 18:36:06', '2009-11-13 18:36:06')[0m
+  [4;35;1mSQL (2.2ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/contracts/2
+Completed in 20ms (DB: 4) | 302 Found [http://localhost/contracts]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContractsController#show (for 127.0.0.1 at 2009-11-13 10:36:06) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mContract Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `contracts`[0m
+  [4;35;1mContract Load (0.3ms)[0m   [0mSELECT * FROM `contracts` WHERE (`contracts`.`id` = 2) [0m
+Rendering template within layouts/contracts
+Rendering contracts/show
+Completed in 19ms (View: 5, DB: 1) | 200 OK [http://localhost/contracts/2]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContractsController#index (for 127.0.0.1 at 2009-11-13 10:36:08) [GET]
+  [4;36;1mContract Load (0.4ms)[0m   [0;1mSELECT * FROM `contracts` [0m
+Rendering template within layouts/contracts
+Rendering contracts/index
+  [4;35;1mContract Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `contracts`[0m
+Completed in 30ms (View: 19, DB: 2) | 200 OK [http://localhost/contracts]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContractsController#new (for 127.0.0.1 at 2009-11-13 10:36:09) [GET]
+  [4;36;1mContract Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `contracts`[0m
+Rendering template within layouts/contracts
+Rendering contracts/new
+Completed in 20ms (View: 9, DB: 1) | 200 OK [http://localhost/contracts/new]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContractsController#create (for 127.0.0.1 at 2009-11-13 10:36:20) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"I8Mb9KQtSg0ETPvZAsJABzq5HpmKIDfW8Ej+yb6jYSU=", "contract"=>{"permalink"=>"stage", "name"=>"Stage"}}
+  [4;35;1mContract Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `contracts`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mContract Create (0.3ms)[0m   [0mINSERT INTO `contracts` (`name`, `permalink`, `created_at`, `updated_at`) VALUES('Stage', 'stage', '2009-11-13 18:36:20', '2009-11-13 18:36:20')[0m
+  [4;36;1mSQL (1.7ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/contracts/3
+Completed in 18ms (DB: 3) | 302 Found [http://localhost/contracts]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContractsController#show (for 127.0.0.1 at 2009-11-13 10:36:21) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mContract Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `contracts`[0m
+  [4;36;1mContract Load (0.3ms)[0m   [0;1mSELECT * FROM `contracts` WHERE (`contracts`.`id` = 3) [0m
+Rendering template within layouts/contracts
+Rendering contracts/show
+Completed in 16ms (View: 4, DB: 1) | 200 OK [http://localhost/contracts/3]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContractsController#index (for 127.0.0.1 at 2009-11-13 10:36:22) [GET]
+  [4;35;1mContract Load (0.4ms)[0m   [0mSELECT * FROM `contracts` [0m
+Rendering template within layouts/contracts
+Rendering contracts/index
+  [4;36;1mContract Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `contracts`[0m
+Completed in 45ms (View: 32, DB: 2) | 200 OK [http://localhost/contracts]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContractsController#new (for 127.0.0.1 at 2009-11-13 10:36:23) [GET]
+  [4;35;1mContract Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `contracts`[0m
+Rendering template within layouts/contracts
+Rendering contracts/new
+Completed in 26ms (View: 11, DB: 1) | 200 OK [http://localhost/contracts/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContractsController#create (for 127.0.0.1 at 2009-11-13 10:36:39) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"I8Mb9KQtSg0ETPvZAsJABzq5HpmKIDfW8Ej+yb6jYSU=", "contract"=>{"permalink"=>"interimaire", "name"=>"interimaire"}}
+  [4;36;1mContract Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `contracts`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mContract Create (0.3ms)[0m   [0;1mINSERT INTO `contracts` (`name`, `permalink`, `created_at`, `updated_at`) VALUES('interimaire', 'interimaire', '2009-11-13 18:36:39', '2009-11-13 18:36:39')[0m
+  [4;35;1mSQL (1.7ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/contracts/4
+Completed in 18ms (DB: 3) | 302 Found [http://localhost/contracts]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContractsController#show (for 127.0.0.1 at 2009-11-13 10:36:39) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mContract Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `contracts`[0m
+  [4;35;1mContract Load (0.3ms)[0m   [0mSELECT * FROM `contracts` WHERE (`contracts`.`id` = 4) [0m
+Rendering template within layouts/contracts
+Rendering contracts/show
+Completed in 16ms (View: 4, DB: 2) | 200 OK [http://localhost/contracts/4]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContractsController#index (for 127.0.0.1 at 2009-11-13 10:36:42) [GET]
+  [4;36;1mContract Load (0.4ms)[0m   [0;1mSELECT * FROM `contracts` [0m
+Rendering template within layouts/contracts
+Rendering contracts/index
+  [4;35;1mContract Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `contracts`[0m
+Completed in 43ms (View: 33, DB: 2) | 200 OK [http://localhost/contracts]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LocalisationsController#index (for 127.0.0.1 at 2009-11-13 10:36:49) [GET]
+  [4;36;1mLocalisation Load (0.4ms)[0m   [0;1mSELECT * FROM `localisations` [0m
+Rendering template within layouts/localisations
+Rendering localisations/index
+Completed in 35ms (View: 23, DB: 1) | 200 OK [http://localhost/localisations]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LocalisationsController#new (for 127.0.0.1 at 2009-11-13 10:36:51) [GET]
+  [4;35;1mLocalisation Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `localisations`[0m
+Rendering template within layouts/localisations
+Rendering localisations/new
+Completed in 29ms (View: 17, DB: 1) | 200 OK [http://localhost/localisations/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LocalisationsController#create (for 127.0.0.1 at 2009-11-13 10:37:05) [POST]
+  Parameters: {"localisation"=>{"permalink"=>"antananarivo", "name"=>"Antanananarivo"}, "commit"=>"Create", "authenticity_token"=>"I8Mb9KQtSg0ETPvZAsJABzq5HpmKIDfW8Ej+yb6jYSU="}
+  [4;36;1mLocalisation Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `localisations`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mLocalisation Create (0.3ms)[0m   [0;1mINSERT INTO `localisations` (`name`, `permalink`, `created_at`, `updated_at`) VALUES('Antanananarivo', 'antananarivo', '2009-11-13 18:37:05', '2009-11-13 18:37:05')[0m
+  [4;35;1mSQL (1.6ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/localisations/1
+Completed in 18ms (DB: 3) | 302 Found [http://localhost/localisations]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LocalisationsController#show (for 127.0.0.1 at 2009-11-13 10:37:05) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mLocalisation Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `localisations`[0m
+  [4;35;1mLocalisation Load (0.4ms)[0m   [0mSELECT * FROM `localisations` WHERE (`localisations`.`id` = 1) [0m
+Rendering template within layouts/localisations
+Rendering localisations/show
+Completed in 22ms (View: 10, DB: 1) | 200 OK [http://localhost/localisations/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LocalisationsController#index (for 127.0.0.1 at 2009-11-13 10:37:07) [GET]
+  [4;36;1mLocalisation Load (0.4ms)[0m   [0;1mSELECT * FROM `localisations` [0m
+Rendering template within layouts/localisations
+Rendering localisations/index
+  [4;35;1mLocalisation Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `localisations`[0m
+Completed in 24ms (View: 13, DB: 1) | 200 OK [http://localhost/localisations]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LocalisationsController#new (for 127.0.0.1 at 2009-11-13 10:37:08) [GET]
+  [4;36;1mLocalisation Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `localisations`[0m
+Rendering template within layouts/localisations
+Rendering localisations/new
+Completed in 25ms (View: 11, DB: 1) | 200 OK [http://localhost/localisations/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LocalisationsController#create (for 127.0.0.1 at 2009-11-13 10:37:17) [POST]
+  Parameters: {"localisation"=>{"permalink"=>"antsirabe", "name"=>"Antsirabe"}, "commit"=>"Create", "authenticity_token"=>"I8Mb9KQtSg0ETPvZAsJABzq5HpmKIDfW8Ej+yb6jYSU="}
+  [4;35;1mLocalisation Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `localisations`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mLocalisation Create (0.3ms)[0m   [0mINSERT INTO `localisations` (`name`, `permalink`, `created_at`, `updated_at`) VALUES('Antsirabe', 'antsirabe', '2009-11-13 18:37:17', '2009-11-13 18:37:17')[0m
+  [4;36;1mSQL (1.5ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/localisations/2
+Completed in 20ms (DB: 3) | 302 Found [http://localhost/localisations]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LocalisationsController#show (for 127.0.0.1 at 2009-11-13 10:37:17) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mLocalisation Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `localisations`[0m
+  [4;36;1mLocalisation Load (0.3ms)[0m   [0;1mSELECT * FROM `localisations` WHERE (`localisations`.`id` = 2) [0m
+Rendering template within layouts/localisations
+Rendering localisations/show
+Completed in 20ms (View: 5, DB: 1) | 200 OK [http://localhost/localisations/2]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LocalisationsController#index (for 127.0.0.1 at 2009-11-13 10:37:19) [GET]
+  [4;35;1mLocalisation Load (0.4ms)[0m   [0mSELECT * FROM `localisations` [0m
+Rendering template within layouts/localisations
+Rendering localisations/index
+  [4;36;1mLocalisation Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `localisations`[0m
+Completed in 31ms (View: 20, DB: 1) | 200 OK [http://localhost/localisations]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LocalisationsController#new (for 127.0.0.1 at 2009-11-13 10:37:21) [GET]
+  [4;35;1mLocalisation Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `localisations`[0m
+Rendering template within layouts/localisations
+Rendering localisations/new
+Completed in 20ms (View: 9, DB: 1) | 200 OK [http://localhost/localisations/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LocalisationsController#create (for 127.0.0.1 at 2009-11-13 10:37:30) [POST]
+  Parameters: {"localisation"=>{"permalink"=>"fianarantsoa", "name"=>"Fianarantsoa"}, "commit"=>"Create", "authenticity_token"=>"I8Mb9KQtSg0ETPvZAsJABzq5HpmKIDfW8Ej+yb6jYSU="}
+  [4;36;1mLocalisation Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `localisations`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mLocalisation Create (0.3ms)[0m   [0;1mINSERT INTO `localisations` (`name`, `permalink`, `created_at`, `updated_at`) VALUES('Fianarantsoa', 'fianarantsoa', '2009-11-13 18:37:30', '2009-11-13 18:37:30')[0m
+  [4;35;1mSQL (1.6ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/localisations/3
+Completed in 18ms (DB: 3) | 302 Found [http://localhost/localisations]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LocalisationsController#show (for 127.0.0.1 at 2009-11-13 10:37:31) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mLocalisation Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `localisations`[0m
+  [4;35;1mLocalisation Load (0.3ms)[0m   [0mSELECT * FROM `localisations` WHERE (`localisations`.`id` = 3) [0m
+Rendering template within layouts/localisations
+Rendering localisations/show
+Completed in 16ms (View: 5, DB: 1) | 200 OK [http://localhost/localisations/3]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LocalisationsController#index (for 127.0.0.1 at 2009-11-13 10:37:32) [GET]
+  [4;36;1mLocalisation Load (0.4ms)[0m   [0;1mSELECT * FROM `localisations` [0m
+Rendering template within layouts/localisations
+Rendering localisations/index
+  [4;35;1mLocalisation Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `localisations`[0m
+Completed in 47ms (View: 34, DB: 2) | 200 OK [http://localhost/localisations]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FunctionsController#index (for 127.0.0.1 at 2009-11-13 10:37:43) [GET]
+  [4;36;1mFunction Load (0.5ms)[0m   [0;1mSELECT * FROM `functions` [0m
+Rendering template within layouts/functions
+Rendering functions/index
+Completed in 38ms (View: 25, DB: 1) | 200 OK [http://localhost/functions]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FunctionsController#new (for 127.0.0.1 at 2009-11-13 10:37:46) [GET]
+  [4;35;1mFunction Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `functions`[0m
+Rendering template within layouts/functions
+Rendering functions/new
+Completed in 26ms (View: 16, DB: 1) | 200 OK [http://localhost/functions/new]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FunctionsController#create (for 127.0.0.1 at 2009-11-13 10:38:40) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"I8Mb9KQtSg0ETPvZAsJABzq5HpmKIDfW8Ej+yb6jYSU=", "function"=>{"permalink"=>"comptable", "name"=>"Comptable"}}
+  [4;36;1mFunction Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `functions`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mFunction Create (0.3ms)[0m   [0;1mINSERT INTO `functions` (`name`, `permalink`, `created_at`, `updated_at`) VALUES('Comptable', 'comptable', '2009-11-13 18:38:40', '2009-11-13 18:38:40')[0m
+  [4;35;1mSQL (1.6ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/functions/1
+Completed in 18ms (DB: 3) | 302 Found [http://localhost/functions]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FunctionsController#show (for 127.0.0.1 at 2009-11-13 10:38:40) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mFunction Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `functions`[0m
+  [4;35;1mFunction Load (0.3ms)[0m   [0mSELECT * FROM `functions` WHERE (`functions`.`id` = 1) [0m
+Rendering template within layouts/functions
+Rendering functions/show
+Completed in 21ms (View: 10, DB: 1) | 200 OK [http://localhost/functions/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FunctionsController#index (for 127.0.0.1 at 2009-11-13 10:38:42) [GET]
+  [4;36;1mFunction Load (0.4ms)[0m   [0;1mSELECT * FROM `functions` [0m
+Rendering template within layouts/functions
+Rendering functions/index
+  [4;35;1mFunction Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `functions`[0m
+Completed in 26ms (View: 14, DB: 1) | 200 OK [http://localhost/functions]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FunctionsController#new (for 127.0.0.1 at 2009-11-13 10:38:45) [GET]
+  [4;36;1mFunction Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `functions`[0m
+Rendering template within layouts/functions
+Rendering functions/new
+Completed in 21ms (View: 9, DB: 1) | 200 OK [http://localhost/functions/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FunctionsController#create (for 127.0.0.1 at 2009-11-13 10:39:16) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"I8Mb9KQtSg0ETPvZAsJABzq5HpmKIDfW8Ej+yb6jYSU=", "function"=>{"permalink"=>"dbm", "name"=>"Database administrateur"}}
+  [4;35;1mFunction Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `functions`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mFunction Create (0.3ms)[0m   [0mINSERT INTO `functions` (`name`, `permalink`, `created_at`, `updated_at`) VALUES('Database administrateur', 'dbm', '2009-11-13 18:39:16', '2009-11-13 18:39:16')[0m
+  [4;36;1mSQL (1.6ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/functions/2
+Completed in 19ms (DB: 3) | 302 Found [http://localhost/functions]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FunctionsController#show (for 127.0.0.1 at 2009-11-13 10:39:16) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mFunction Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `functions`[0m
+  [4;36;1mFunction Load (0.3ms)[0m   [0;1mSELECT * FROM `functions` WHERE (`functions`.`id` = 2) [0m
+Rendering template within layouts/functions
+Rendering functions/show
+Completed in 17ms (View: 4, DB: 1) | 200 OK [http://localhost/functions/2]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FunctionsController#index (for 127.0.0.1 at 2009-11-13 10:39:22) [GET]
+  [4;35;1mFunction Load (0.4ms)[0m   [0mSELECT * FROM `functions` [0m
+Rendering template within layouts/functions
+Rendering functions/index
+  [4;36;1mFunction Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `functions`[0m
+Completed in 30ms (View: 19, DB: 2) | 200 OK [http://localhost/functions]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OfferingsController#index (for 127.0.0.1 at 2009-11-13 10:43:21) [GET]
+Redirected to http://localhost:3000/firms
+Completed in 5ms (DB: 0) | 302 Found [http://localhost/offerings]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FirmsController#index (for 127.0.0.1 at 2009-11-13 10:43:21) [GET]
+  [4;35;1mFirm Load (0.4ms)[0m   [0mSELECT * FROM `firms` [0m
+Rendering template within layouts/application
+Rendering firms/index
+  [4;36;1mFirm Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `firms`[0m
+  [4;35;1mUser Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Completed in 59ms (View: 45, DB: 3) | 200 OK [http://localhost/firms]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FirmsController#show (for 127.0.0.1 at 2009-11-13 10:43:25) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mFirm Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `firms`[0m
+  [4;35;1mFirm Load (0.3ms)[0m   [0mSELECT * FROM `firms` WHERE (`firms`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering firms/show
+  [4;36;1mOffering Load (0.4ms)[0m   [0;1mSELECT * FROM `offerings` WHERE (`offerings`.firm_id = 1) [0m
+  [4;35;1mUser Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Completed in 53ms (View: 35, DB: 3) | 200 OK [http://localhost/firms/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OfferingsController#new (for 127.0.0.1 at 2009-11-13 10:43:34) [GET]
+  Parameters: {"firm_id"=>"1"}
+  [4;36;1mFirm Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `firms`[0m
+  [4;35;1mFirm Load (0.3ms)[0m   [0mSELECT * FROM `firms` WHERE (`firms`.`id` = 1) [0m
+  [4;36;1mOffering Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `offerings`[0m
+Rendering template within layouts/application
+Rendering offerings/new
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `firms` WHERE (`firms`.`id` = 1) [0m
+
+ActionView::TemplateError (undefined method `activities_names' for #<Offering:0xb6f92d7c>) on line #22 of app/views/offerings/new.html.erb:
+19:   </p>
+20:   <p>
+21:     <%= f.label :activities_names %><br />
+22:     <%= f.text_field :activities_names %><br />
+23:     <span class="help">
+24:       <%= t(:list_activities_names_separated_with_commas, :default => "Mettre la liste des activités, séparés par une virgule.") %>
+25:     </span>
+
+    app/views/offerings/new.html.erb:22
+    app/views/offerings/new.html.erb:5
+
+Rendered rescues/_trace (88.0ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (3.0ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (3.9ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateProfiles (20091109105049)
+  [4;35;1mSQL (2.4ms)[0m   [0mCREATE TABLE `profiles` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `family_name` varchar(255), `name` varchar(255), `town` varchar(255), `sex` varchar(255), `birthday` date, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091109105049')[0m
+Migrating to CreateUsers (20091109105426)
+  [4;35;1mSQL (3.1ms)[0m   [0mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `username` varchar(255), `email` varchar(255), `crypted_password` varchar(255), `password_salt` varchar(255), `persistence_token` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091109105426')[0m
+Migrating to CreateFirms (20091111050020)
+  [4;35;1mSQL (2.3ms)[0m   [0mCREATE TABLE `firms` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `permalink` varchar(255), `baseline` varchar(255), `description` text, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091111050020')[0m
+Migrating to CreateOfferings (20091112151003)
+  [4;35;1mSQL (3.5ms)[0m   [0mCREATE TABLE `offerings` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `title` varchar(255), `permalink` varchar(255), `description` text, `on_line` datetime, `dead_line` datetime, `firm_id` int(11), `activity_id` int(11), `function_id` int(11), `localisation_id` int(11), `contract_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091112151003')[0m
+Migrating to CreateActivities (20091113173206)
+  [4;35;1mSQL (4.4ms)[0m   [0mCREATE TABLE `activities` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091113173206')[0m
+Migrating to CreateFunctions (20091113181558)
+  [4;35;1mSQL (2.3ms)[0m   [0mCREATE TABLE `functions` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091113181558')[0m
+Migrating to CreateContracts (20091113181640)
+  [4;35;1mSQL (21.8ms)[0m   [0mCREATE TABLE `contracts` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091113181640')[0m
+Migrating to CreateLocalisations (20091113181726)
+  [4;35;1mSQL (3.9ms)[0m   [0mCREATE TABLE `localisations` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091113181726')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSHOW FIELDS FROM `activities`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mdescribe `activities`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `activities`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW FIELDS FROM `contracts`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mdescribe `contracts`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW KEYS FROM `contracts`[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mSHOW FIELDS FROM `firms`[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mdescribe `firms`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW KEYS FROM `firms`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW FIELDS FROM `functions`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mdescribe `functions`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `functions`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW FIELDS FROM `localisations`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mdescribe `localisations`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW KEYS FROM `localisations`[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mSHOW FIELDS FROM `offerings`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mdescribe `offerings`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `offerings`[0m
+  [4;36;1mSQL (1.6ms)[0m   [0;1mSHOW FIELDS FROM `profiles`[0m
+  [4;35;1mSQL (1.5ms)[0m   [0mdescribe `profiles`[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mSHOW KEYS FROM `profiles`[0m
+  [4;35;1mSQL (1.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (1.6ms)[0m   [0;1mdescribe `users`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OfferingsController#new (for 127.0.0.1 at 2009-11-13 11:10:17) [GET]
+  Parameters: {"firm_id"=>"1"}
+  [4;36;1mFirm Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `firms`[0m
+  [4;35;1mFirm Load (0.3ms)[0m   [0mSELECT * FROM `firms` WHERE (`firms`.`id` = 1) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Firm with ID=1):
+  app/controllers/offerings_controller.rb:30:in `new'
+
+Rendered rescues/_trace (73.5ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OfferingsController#index (for 127.0.0.1 at 2009-11-13 11:10:30) [GET]
+Redirected to http://localhost:3000/firms
+Completed in 8ms (DB: 0) | 302 Found [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FirmsController#index (for 127.0.0.1 at 2009-11-13 11:10:31) [GET]
+  [4;36;1mFirm Load (0.5ms)[0m   [0;1mSELECT * FROM `firms` [0m
+Rendering template within layouts/application
+Rendering firms/index
+  [4;35;1mUser Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Completed in 43ms (View: 27, DB: 2) | 200 OK [http://localhost/firms]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FirmsController#new (for 127.0.0.1 at 2009-11-13 11:10:34) [GET]
+  [4;36;1mFirm Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `firms`[0m
+Rendering template within layouts/application
+Rendering firms/new
+  [4;35;1mUser Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Completed in 43ms (View: 29, DB: 3) | 200 OK [http://localhost/firms/new]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (3.5ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (4.8ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateProfiles (20091109105049)
+  [4;35;1mSQL (2.8ms)[0m   [0mCREATE TABLE `profiles` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `family_name` varchar(255), `name` varchar(255), `town` varchar(255), `sex` varchar(255), `birthday` date, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091109105049')[0m
+Migrating to CreateUsers (20091109105426)
+  [4;35;1mSQL (2.7ms)[0m   [0mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `username` varchar(255), `email` varchar(255), `crypted_password` varchar(255), `password_salt` varchar(255), `persistence_token` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091109105426')[0m
+Migrating to CreateFirms (20091111050020)
+  [4;35;1mSQL (21.8ms)[0m   [0mCREATE TABLE `firms` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `permalink` varchar(255), `baseline` varchar(255), `description` text, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091111050020')[0m
+Migrating to CreateOfferings (20091112151003)
+  [4;35;1mSQL (2.8ms)[0m   [0mCREATE TABLE `offerings` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `title` varchar(255), `permalink` varchar(255), `description` text, `on_line` datetime, `dead_line` datetime, `firm_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091112151003')[0m
+Migrating to CreateActivities (20091113173206)
+  [4;35;1mSQL (2.2ms)[0m   [0mCREATE TABLE `activities` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091113173206')[0m
+Migrating to CreateFunctions (20091113181558)
+  [4;35;1mSQL (2.4ms)[0m   [0mCREATE TABLE `functions` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091113181558')[0m
+Migrating to CreateContracts (20091113181640)
+  [4;35;1mSQL (2.7ms)[0m   [0mCREATE TABLE `contracts` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091113181640')[0m
+Migrating to CreateLocalisations (20091113181726)
+  [4;35;1mSQL (4.9ms)[0m   [0mCREATE TABLE `localisations` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091113181726')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mSHOW FIELDS FROM `activities`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mdescribe `activities`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `activities`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW FIELDS FROM `contracts`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mdescribe `contracts`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `contracts`[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mSHOW FIELDS FROM `firms`[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mdescribe `firms`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `firms`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW FIELDS FROM `functions`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mdescribe `functions`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `functions`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW FIELDS FROM `localisations`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mdescribe `localisations`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `localisations`[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mSHOW FIELDS FROM `offerings`[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mdescribe `offerings`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW KEYS FROM `offerings`[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mSHOW FIELDS FROM `profiles`[0m
+  [4;35;1mSQL (2.1ms)[0m   [0mdescribe `profiles`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW KEYS FROM `profiles`[0m
+  [4;35;1mSQL (1.7ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (1.9ms)[0m   [0;1mdescribe `users`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW KEYS FROM `users`[0m

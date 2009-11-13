@@ -1,4 +1,12 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :localisations
+
+  map.resources :contracts
+
+  map.resources :functions
+
+  map.resources :activities
+
   map.resources :offerings
 
   map.resources :firms, :has_many => :offerings, :dependent => :delete_all
