@@ -6,11 +6,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :profiles, :has_many => [:contacts, :qualifications, :skills, :further_infos], :dependent => :delete_all
   map.resources :offerings
   map.resources :users
-  map.resources :further_infos
-  map.resources :qualifications
-  map.resources :skills
-  map.resources :contacts
-
+  map.resources :further_infos 
   # The priority is based upon order of creation: first created -> highest priority.
 
   # Sample of regular route:
