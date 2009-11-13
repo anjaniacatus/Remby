@@ -1,5 +1,19 @@
 ActionController::Routing::Routes.draw do |map|
+<<<<<<< HEAD
   map.resources :experiences
+=======
+  map.resources :localisations
+
+  map.resources :contracts
+
+  map.resources :functions
+
+  map.resources :activities
+
+  map.resources :offerings
+
+  map.resources :firms, :has_many => :offerings, :dependent => :delete_all
+>>>>>>> e5d1afc5342af0e208d6a3d7b2d10b7e22c27b3e
 
   map.resources :profiles
 
