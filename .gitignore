@@ -8,11 +8,6 @@ test/*
 tmp/**
 vimsession
 db/.mysql
-*.log
 config/sphinx.yml
 public/images/uploaded
 db/schema.rb
-<<<<<<< HEAD
-=======
-log/development.log
->>>>>>> e5d1afc5342af0e208d6a3d7b2d10b7e22c27b3e
