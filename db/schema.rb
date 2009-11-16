@@ -49,6 +49,7 @@ ActiveRecord::Schema.define(:version => 20091116080106) do
     t.string   "permalink"
     t.integer  "domain_id"
     t.integer  "school_id"
+    t.integer  "profile_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

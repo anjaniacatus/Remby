@@ -10,6 +10,7 @@ class CreateEducationInformations < ActiveRecord::Migration
       t.string :permalink
       t.references :domain
       t.references :school
+      t.references :profile
 
       t.timestamps
     end
