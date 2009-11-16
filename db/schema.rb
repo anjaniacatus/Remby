@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20091113181726) do
+ActiveRecord::Schema.define(:version => 20091115224225) do
 
   create_table "activities", :force => true do |t|
     t.string   "name"
@@ -46,7 +46,6 @@ ActiveRecord::Schema.define(:version => 20091113181726) do
 
   create_table "offerings", :force => true do |t|
     t.string   "title"
-    t.string   "permalink"
     t.text     "description"
     t.datetime "on_line"
     t.datetime "dead_line"
@@ -63,6 +62,14 @@ ActiveRecord::Schema.define(:version => 20091113181726) do
     t.date     "birthday"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "slugs", :force => true do |t|
+    t.string  "name"
+    t.integer "sluggable_id"
+    t.integer "sequence",                     :default => 1, :null => false
+    t.string  "sluggable_type", :limit => 40
+    t.string  "scope",          :limit => 40
   end
 
   create_table "users", :force => true do |t|

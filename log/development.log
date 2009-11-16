@@ -7675,3 +7675,1399 @@ Migrating to CreateLocalisations (20091113181726)
   [4;35;1mSQL (1.7ms)[0m   [0mSHOW FIELDS FROM `users`[0m
   [4;36;1mSQL (1.9ms)[0m   [0;1mdescribe `users`[0m
   [4;35;1mSQL (0.6ms)[0m   [0mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (15.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (8.1ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (4.6ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateProfiles (20091109105049)
+  [4;35;1mSQL (3.5ms)[0m   [0mCREATE TABLE `profiles` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `family_name` varchar(255), `name` varchar(255), `town` varchar(255), `sex` varchar(255), `birthday` date, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091109105049')[0m
+Migrating to CreateUsers (20091109105426)
+  [4;35;1mSQL (2.7ms)[0m   [0mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `username` varchar(255), `email` varchar(255), `crypted_password` varchar(255), `password_salt` varchar(255), `persistence_token` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091109105426')[0m
+Migrating to CreateFirms (20091111050020)
+  [4;35;1mSQL (2.5ms)[0m   [0mCREATE TABLE `firms` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `permalink` varchar(255), `baseline` varchar(255), `description` text, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091111050020')[0m
+Migrating to CreateOfferings (20091112151003)
+  [4;35;1mSQL (4.5ms)[0m   [0mCREATE TABLE `offerings` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `title` varchar(255), `description` text, `on_line` datetime, `dead_line` datetime, `firm_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (2.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091112151003')[0m
+Migrating to CreateActivities (20091113173206)
+  [4;35;1mSQL (7.6ms)[0m   [0mCREATE TABLE `activities` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091113173206')[0m
+Migrating to CreateFunctions (20091113181558)
+  [4;35;1mSQL (3.0ms)[0m   [0mCREATE TABLE `functions` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091113181558')[0m
+Migrating to CreateContracts (20091113181640)
+  [4;35;1mSQL (3.3ms)[0m   [0mCREATE TABLE `contracts` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091113181640')[0m
+Migrating to CreateLocalisations (20091113181726)
+  [4;35;1mSQL (2.8ms)[0m   [0mCREATE TABLE `localisations` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091113181726')[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW FIELDS FROM `activities`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mdescribe `activities`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `activities`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW FIELDS FROM `contracts`[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mdescribe `contracts`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW KEYS FROM `contracts`[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mSHOW FIELDS FROM `firms`[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mdescribe `firms`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `firms`[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSHOW FIELDS FROM `functions`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mdescribe `functions`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `functions`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW FIELDS FROM `localisations`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mdescribe `localisations`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW KEYS FROM `localisations`[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mSHOW FIELDS FROM `offerings`[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mdescribe `offerings`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `offerings`[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mSHOW FIELDS FROM `profiles`[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mdescribe `profiles`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW KEYS FROM `profiles`[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mdescribe `users`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OfferingsController#index (for 127.0.0.1 at 2009-11-15 14:37:37) [GET]
+Redirected to http://localhost:3000/firms
+Completed in 9ms (DB: 0) | 302 Found [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FirmsController#index (for 127.0.0.1 at 2009-11-15 14:37:37) [GET]
+  [4;36;1mFirm Load (0.6ms)[0m   [0;1mSELECT * FROM `firms` [0m
+Rendering template within layouts/application
+Rendering firms/index
+  [4;35;1mUser Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Completed in 244ms (View: 173, DB: 2) | 200 OK [http://localhost/firms]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContractsController#index (for 127.0.0.1 at 2009-11-15 14:37:52) [GET]
+  [4;36;1mContract Load (0.5ms)[0m   [0;1mSELECT * FROM `contracts` [0m
+Rendering template within layouts/application
+Rendering contracts/index
+  [4;35;1mUser Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Completed in 84ms (View: 50, DB: 2) | 200 OK [http://localhost/contracts]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContractsController#new (for 127.0.0.1 at 2009-11-15 14:37:55) [GET]
+  [4;36;1mContract Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `contracts`[0m
+Rendering template within layouts/application
+Rendering contracts/new
+
+ActionView::TemplateError (undefined method `permalink' for #<Contract id: nil, name: nil, created_at: nil, updated_at: nil>) on line #12 of app/views/contracts/new.html.erb:
+9:   </p>
+10:   <p>
+11:     <%= f.label :permalink %><br />
+12:     <%= f.text_field :permalink %>
+13:   </p>
+14:   <p>
+15:     <%= f.submit 'Create' %>
+
+    app/views/contracts/new.html.erb:12
+    app/views/contracts/new.html.erb:3
+    app/controllers/contracts_controller.rb:29:in `new'
+
+Rendered rescues/_trace (109.7ms)
+Rendered rescues/_request_and_response (1.9ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContractsController#new (for 127.0.0.1 at 2009-11-15 14:38:24) [GET]
+  [4;35;1mContract Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `contracts`[0m
+Rendering template within layouts/application
+Rendering contracts/new
+  [4;36;1mUser Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Completed in 54ms (View: 34, DB: 3) | 200 OK [http://localhost/contracts/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContractsController#create (for 127.0.0.1 at 2009-11-15 14:38:29) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"f0loONE3t/knt2yU1ttySwBrP+ART8ca8AYpV030BFY=", "contract"=>{"name"=>"CDI"}}
+  [4;35;1mContract Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `contracts`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSlug Load (0.0ms)[0m   [0mMysql::Error: Table 'remby_development.slugs' doesn't exist: SELECT * FROM `slugs` WHERE (`slugs`.sluggable_id = NULL AND `slugs`.sluggable_type = 'Contract' AND (`slugs`.`scope` IS NULL AND `slugs`.`name` = 'cdi')) ORDER BY id DESC[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+
+ActiveRecord::StatementInvalid (Mysql::Error: Table 'remby_development.slugs' doesn't exist: SELECT * FROM `slugs` WHERE (`slugs`.sluggable_id = NULL AND `slugs`.sluggable_type = 'Contract' AND (`slugs`.`scope` IS NULL AND `slugs`.`name` = 'cdi'))  ORDER BY id DESC):
+  /usr/lib/ruby/gems/1.8/gems/friendly_id-2.1.4/lib/friendly_id/sluggable_instance_methods.rb:109:in `set_slug'
+  app/controllers/contracts_controller.rb:46:in `create'
+  app/controllers/contracts_controller.rb:45:in `create'
+
+Rendered rescues/_trace (215.8ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContractsController#create (for 127.0.0.1 at 2009-11-15 14:40:00) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"f0loONE3t/knt2yU1ttySwBrP+ART8ca8AYpV030BFY=", "contract"=>{"name"=>"CDI"}}
+  [4;35;1mContract Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `contracts`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSlug Load (0.0ms)[0m   [0mMysql::Error: Table 'remby_development.slugs' doesn't exist: SELECT * FROM `slugs` WHERE (`slugs`.sluggable_id = NULL AND `slugs`.sluggable_type = 'Contract' AND (`slugs`.`scope` IS NULL AND `slugs`.`name` = 'cdi')) ORDER BY id DESC[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+
+ActiveRecord::StatementInvalid (Mysql::Error: Table 'remby_development.slugs' doesn't exist: SELECT * FROM `slugs` WHERE (`slugs`.sluggable_id = NULL AND `slugs`.sluggable_type = 'Contract' AND (`slugs`.`scope` IS NULL AND `slugs`.`name` = 'cdi'))  ORDER BY id DESC):
+  /usr/lib/ruby/gems/1.8/gems/friendly_id-2.1.4/lib/friendly_id/sluggable_instance_methods.rb:109:in `set_slug'
+  app/controllers/contracts_controller.rb:46:in `create'
+  app/controllers/contracts_controller.rb:45:in `create'
+
+Rendered rescues/_trace (113.5ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateProfiles (20091109105049)
+Migrating to CreateUsers (20091109105426)
+Migrating to CreateFirms (20091111050020)
+Migrating to CreateOfferings (20091112151003)
+Migrating to CreateActivities (20091113173206)
+Migrating to CreateFunctions (20091113181558)
+Migrating to CreateContracts (20091113181640)
+Migrating to CreateLocalisations (20091113181726)
+Migrating to AddSlugs (20091115224225)
+  [4;36;1mSQL (3.4ms)[0m   [0;1mCREATE TABLE `slugs` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `sluggable_id` int(11), `sequence` int(11) DEFAULT 1 NOT NULL, `sluggable_type` varchar(40), `scope` varchar(40)) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20091115224225')[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mSHOW FIELDS FROM `activities`[0m
+  [4;36;1mSQL (1.5ms)[0m   [0;1mdescribe `activities`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `activities`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW FIELDS FROM `contracts`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mdescribe `contracts`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW KEYS FROM `contracts`[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSHOW FIELDS FROM `firms`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mdescribe `firms`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `firms`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW FIELDS FROM `functions`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mdescribe `functions`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW KEYS FROM `functions`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW FIELDS FROM `localisations`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mdescribe `localisations`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `localisations`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW FIELDS FROM `offerings`[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mdescribe `offerings`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `offerings`[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSHOW FIELDS FROM `profiles`[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mdescribe `profiles`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW KEYS FROM `profiles`[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mSHOW FIELDS FROM `slugs`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mdescribe `slugs`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW KEYS FROM `slugs`[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mdescribe `users`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW KEYS FROM `users`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContractsController#create (for 127.0.0.1 at 2009-11-15 14:44:05) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"f0loONE3t/knt2yU1ttySwBrP+ART8ca8AYpV030BFY=", "contract"=>{"name"=>"CDI"}}
+  [4;35;1mContract Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `contracts`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSlug Load (0.4ms)[0m   [0mSELECT * FROM `slugs` WHERE (`slugs`.sluggable_id = NULL AND `slugs`.sluggable_type = 'Contract' AND (`slugs`.`scope` IS NULL AND `slugs`.`name` = 'cdi')) ORDER BY id DESC[0m
+  [4;36;1mSlug Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `slugs`[0m
+  [4;35;1mContract Create (0.3ms)[0m   [0mINSERT INTO `contracts` (`name`, `created_at`, `updated_at`) VALUES('CDI', '2009-11-15 22:44:05', '2009-11-15 22:44:05')[0m
+  [4;36;1mSlug Load (0.3ms)[0m   [0;1mSELECT sequence FROM `slugs` WHERE (`slugs`.`scope` IS NULL AND `slugs`.`sluggable_type` = 'Contract' AND `slugs`.`name` = 'cdi') ORDER BY sequence DESC LIMIT 1[0m
+  [4;35;1mSlug Create (0.2ms)[0m   [0mINSERT INTO `slugs` (`name`, `scope`, `sequence`, `sluggable_type`, `sluggable_id`) VALUES('cdi', NULL, 1, 'Contract', 1)[0m
+  [4;36;1mSQL (1.6ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/contracts/cdi
+Completed in 38ms (DB: 5) | 302 Found [http://localhost/contracts]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContractsController#show (for 127.0.0.1 at 2009-11-15 14:44:05) [GET]
+  Parameters: {"id"=>"cdi"}
+  [4;35;1mContract Load (0.5ms)[0m   [0mSELECT contracts.* FROM `contracts` INNER JOIN `slugs` ON `slugs`.sluggable_id = `contracts`.id AND `slugs`.sluggable_type = 'Contract' WHERE (`slugs`.`scope` IS NULL AND `slugs`.`sequence` = '1' AND `slugs`.`name` = 'cdi') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering contracts/show
+  [4;36;1mContract Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `contracts`[0m
+  [4;35;1mSlug Load (0.4ms)[0m   [0mSELECT * FROM `slugs` WHERE (`slugs`.sluggable_id = 1 AND `slugs`.sluggable_type = 'Contract') ORDER BY id DESC LIMIT 1[0m
+  [4;36;1mUser Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Completed in 64ms (View: 39, DB: 3) | 200 OK [http://localhost/contracts/cdi]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContractsController#index (for 127.0.0.1 at 2009-11-15 14:44:07) [GET]
+  [4;35;1mContract Load (0.4ms)[0m   [0mSELECT * FROM `contracts` [0m
+Rendering template within layouts/application
+Rendering contracts/index
+  [4;36;1mContract Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `contracts`[0m
+  [4;35;1mSlug Load (0.4ms)[0m   [0mSELECT * FROM `slugs` WHERE (`slugs`.sluggable_id = 1 AND `slugs`.sluggable_type = 'Contract') ORDER BY id DESC LIMIT 1[0m
+  [4;36;1mUser Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Completed in 59ms (View: 39, DB: 3) | 200 OK [http://localhost/contracts]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContractsController#show (for 127.0.0.1 at 2009-11-15 14:44:13) [GET]
+  Parameters: {"id"=>"cdi"}
+  [4;35;1mContract Load (0.6ms)[0m   [0mSELECT contracts.* FROM `contracts` INNER JOIN `slugs` ON `slugs`.sluggable_id = `contracts`.id AND `slugs`.sluggable_type = 'Contract' WHERE (`slugs`.`scope` IS NULL AND `slugs`.`sequence` = '1' AND `slugs`.`name` = 'cdi') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering contracts/show
+  [4;36;1mContract Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `contracts`[0m
+  [4;35;1mSlug Load (0.4ms)[0m   [0mSELECT * FROM `slugs` WHERE (`slugs`.sluggable_id = 1 AND `slugs`.sluggable_type = 'Contract') ORDER BY id DESC LIMIT 1[0m
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Completed in 46ms (View: 25, DB: 3) | 200 OK [http://localhost/contracts/cdi]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContractsController#index (for 127.0.0.1 at 2009-11-15 14:44:19) [GET]
+  [4;35;1mContract Load (0.4ms)[0m   [0mSELECT * FROM `contracts` [0m
+Rendering template within layouts/application
+Rendering contracts/index
+  [4;36;1mContract Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `contracts`[0m
+  [4;35;1mSlug Load (0.4ms)[0m   [0mSELECT * FROM `slugs` WHERE (`slugs`.sluggable_id = 1 AND `slugs`.sluggable_type = 'Contract') ORDER BY id DESC LIMIT 1[0m
+  [4;36;1mUser Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Completed in 169ms (View: 149, DB: 3) | 200 OK [http://localhost/contracts]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OfferingsController#index (for 127.0.0.1 at 2009-11-15 14:47:19) [GET]
+Redirected to http://localhost:3000/firms
+Completed in 8ms (DB: 0) | 302 Found [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FirmsController#index (for 127.0.0.1 at 2009-11-15 14:47:20) [GET]
+  [4;36;1mFirm Load (0.5ms)[0m   [0;1mSELECT * FROM `firms` [0m
+Rendering template within layouts/application
+Rendering firms/index
+  [4;35;1mUser Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Completed in 113ms (View: 84, DB: 2) | 200 OK [http://localhost/firms]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FirmsController#new (for 127.0.0.1 at 2009-11-15 14:54:03) [GET]
+  [4;36;1mFirm Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `firms`[0m
+Rendering template within layouts/application
+Rendering firms/new
+  [4;35;1mUser Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Completed in 66ms (View: 52, DB: 3) | 200 OK [http://localhost/firms/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FirmsController#create (for 127.0.0.1 at 2009-11-15 14:54:15) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"awTkg9SPFoG5Ey1+BBEgpq9dbjUBYcZR2OJJl7TblBI=", "firm"=>{"permalink"=>"sacimem", "name"=>"SACIMEM", "baseline"=>"Le tabac nuit à la santé", "description"=>"sdfqf sdfds dsd  fsdfsddf fsdfsdfsdfsdsdf s sf f sf dfsddf "}}
+  [4;36;1mFirm Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `firms`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mFirm Create (0.4ms)[0m   [0;1mINSERT INTO `firms` (`name`, `permalink`, `created_at`, `updated_at`, `baseline`, `description`) VALUES('SACIMEM', 'sacimem', '2009-11-15 22:54:15', '2009-11-15 22:54:15', 'Le tabac nuit à la santé', 'sdfqf sdfds dsd fsdfsddf fsdfsdfsdfsdsdf s sf f sf dfsddf ')[0m
+  [4;35;1mSQL (1.7ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/firms/1
+Completed in 23ms (DB: 4) | 302 Found [http://localhost/firms]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FirmsController#show (for 127.0.0.1 at 2009-11-15 14:54:15) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mFirm Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `firms`[0m
+  [4;35;1mFirm Load (0.3ms)[0m   [0mSELECT * FROM `firms` WHERE (`firms`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering firms/show
+  [4;36;1mOffering Load (0.4ms)[0m   [0;1mSELECT * FROM `offerings` WHERE (`offerings`.firm_id = 1) [0m
+  [4;35;1mUser Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Completed in 63ms (View: 46, DB: 3) | 200 OK [http://localhost/firms/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FirmsController#index (for 127.0.0.1 at 2009-11-15 14:54:18) [GET]
+  [4;36;1mFirm Load (0.4ms)[0m   [0;1mSELECT * FROM `firms` [0m
+Rendering template within layouts/application
+Rendering firms/index
+  [4;35;1mFirm Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `firms`[0m
+  [4;36;1mUser Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Completed in 48ms (View: 34, DB: 3) | 200 OK [http://localhost/firms]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FirmsController#show (for 127.0.0.1 at 2009-11-15 14:54:20) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mFirm Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `firms`[0m
+  [4;36;1mFirm Load (0.3ms)[0m   [0;1mSELECT * FROM `firms` WHERE (`firms`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering firms/show
+  [4;35;1mOffering Load (0.4ms)[0m   [0mSELECT * FROM `offerings` WHERE (`offerings`.firm_id = 1) [0m
+  [4;36;1mUser Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Completed in 49ms (View: 33, DB: 3) | 200 OK [http://localhost/firms/1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OfferingsController#new (for 127.0.0.1 at 2009-11-15 14:54:23) [GET]
+  Parameters: {"firm_id"=>"1"}
+  [4;35;1mFirm Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `firms`[0m
+  [4;36;1mFirm Load (0.3ms)[0m   [0;1mSELECT * FROM `firms` WHERE (`firms`.`id` = 1) [0m
+  [4;35;1mOffering Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `offerings`[0m
+Rendering template within layouts/application
+Rendering offerings/new
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `firms` WHERE (`firms`.`id` = 1) [0m
+
+ActionView::TemplateError (undefined method `permalink' for #<Offering:0xb72cf454>) on line #14 of app/views/offerings/new.html.erb:
+11:   </p>
+12:   <p>
+13:     <%= f.label :permalink %><br />
+14:     <%= f.text_field :permalink %>
+15:   </p>
+16:   <p>
+17:     <%= f.label :description %><br />
+
+    app/views/offerings/new.html.erb:14
+    app/views/offerings/new.html.erb:5
+
+Rendered rescues/_trace (93.9ms)
+Rendered rescues/_request_and_response (1.9ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OfferingsController#new (for 127.0.0.1 at 2009-11-15 14:54:40) [GET]
+  Parameters: {"firm_id"=>"1"}
+  [4;35;1mFirm Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `firms`[0m
+  [4;36;1mFirm Load (0.5ms)[0m   [0;1mSELECT * FROM `firms` WHERE (`firms`.`id` = 1) [0m
+  [4;35;1mOffering Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `offerings`[0m
+Rendering template within layouts/application
+Rendering offerings/new
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `firms` WHERE (`firms`.`id` = 1) [0m
+
+ActionView::TemplateError (wrong number of arguments (0 for 1)) on line #24 of app/views/offerings/new.html.erb:
+21:     <%= f.label :dead_line %><br />
+22:     <%= f.datetime_select :dead_line %>
+23:   </p>
+24:   <%= nested_fields_for :activities, form %>
+25:   <p>
+26:     <%= f.submit 'Create' %>
+27:   </p>
+
+    app/views/offerings/new.html.erb:24:in `form'
+    app/views/offerings/new.html.erb:24
+    app/views/offerings/new.html.erb:5
+
+Rendered rescues/_trace (88.6ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OfferingsController#new (for 127.0.0.1 at 2009-11-15 14:55:25) [GET]
+  Parameters: {"firm_id"=>"1"}
+  [4;35;1mFirm Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `firms`[0m
+  [4;36;1mFirm Load (0.4ms)[0m   [0;1mSELECT * FROM `firms` WHERE (`firms`.`id` = 1) [0m
+  [4;35;1mOffering Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `offerings`[0m
+Rendering template within layouts/application
+Rendering offerings/new
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `firms` WHERE (`firms`.`id` = 1) [0m
+
+ActionView::TemplateError (wrong number of arguments (0 for 1)) on line #24 of app/views/offerings/new.html.erb:
+21:     <%= f.label :dead_line %><br />
+22:     <%= f.datetime_select :dead_line %>
+23:   </p>
+24:   <%= nested_fields_for :activities, form %>
+25:   <p>
+26:     <%= f.submit 'Create' %>
+27:   </p>
+
+    app/views/offerings/new.html.erb:24:in `form'
+    app/views/offerings/new.html.erb:24
+    app/views/offerings/new.html.erb:5
+
+Rendered rescues/_trace (210.0ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OfferingsController#new (for 127.0.0.1 at 2009-11-15 14:55:52) [GET]
+  Parameters: {"firm_id"=>"1"}
+  [4;35;1mFirm Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `firms`[0m
+  [4;36;1mFirm Load (0.4ms)[0m   [0;1mSELECT * FROM `firms` WHERE (`firms`.`id` = 1) [0m
+  [4;35;1mOffering Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `offerings`[0m
+Rendering template within layouts/application
+Rendering offerings/new
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `firms` WHERE (`firms`.`id` = 1) [0m
+
+ActionView::TemplateError (wrong number of arguments (0 for 1)) on line #24 of app/views/offerings/new.html.erb:
+21:     <%= f.label :dead_line %><br />
+22:     <%= f.datetime_select :dead_line %>
+23:   </p>
+24:   <%= nested_fields_for :activities, form %>
+25:   <p>
+26:     <%= f.submit 'Create' %>
+27:   </p>
+
+    app/views/offerings/new.html.erb:24:in `form'
+    app/views/offerings/new.html.erb:24
+    app/views/offerings/new.html.erb:5
+
+Rendered rescues/_trace (86.9ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OfferingsController#new (for 127.0.0.1 at 2009-11-15 14:55:55) [GET]
+  Parameters: {"firm_id"=>"1"}
+  [4;35;1mFirm Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `firms`[0m
+  [4;36;1mFirm Load (0.6ms)[0m   [0;1mSELECT * FROM `firms` WHERE (`firms`.`id` = 1) [0m
+  [4;35;1mOffering Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `offerings`[0m
+Rendering template within layouts/application
+Rendering offerings/new
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `firms` WHERE (`firms`.`id` = 1) [0m
+
+ActionView::TemplateError (wrong number of arguments (0 for 1)) on line #24 of app/views/offerings/new.html.erb:
+21:     <%= f.label :dead_line %><br />
+22:     <%= f.datetime_select :dead_line %>
+23:   </p>
+24:   <%= nested_fields_for :activities, form %>
+25:   <p>
+26:     <%= f.submit 'Create' %>
+27:   </p>
+
+    app/views/offerings/new.html.erb:24:in `form'
+    app/views/offerings/new.html.erb:24
+    app/views/offerings/new.html.erb:5
+
+Rendered rescues/_trace (88.9ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OfferingsController#new (for 127.0.0.1 at 2009-11-15 14:56:00) [GET]
+  Parameters: {"firm_id"=>"1"}
+  [4;35;1mFirm Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `firms`[0m
+  [4;36;1mFirm Load (3.3ms)[0m   [0;1mSELECT * FROM `firms` WHERE (`firms`.`id` = 1) [0m
+  [4;35;1mOffering Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `offerings`[0m
+Rendering template within layouts/application
+Rendering offerings/new
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `firms` WHERE (`firms`.`id` = 1) [0m
+  [4;35;1mUser Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Completed in 122ms (View: 85, DB: 7) | 200 OK [http://localhost/firms/1/offerings/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OfferingsController#new (for 127.0.0.1 at 2009-11-15 14:57:32) [GET]
+  Parameters: {"firm_id"=>"1"}
+  [4;36;1mFirm Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `firms`[0m
+  [4;35;1mFirm Load (0.3ms)[0m   [0mSELECT * FROM `firms` WHERE (`firms`.`id` = 1) [0m
+  [4;36;1mOffering Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `offerings`[0m
+Rendering template within layouts/application
+Rendering offerings/new
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `firms` WHERE (`firms`.`id` = 1) [0m
+
+ActionView::TemplateError (wrong number of arguments (0 for 1)) on line #24 of app/views/offerings/new.html.erb:
+21:     <%= f.label :dead_line %><br />
+22:     <%= f.datetime_select :dead_line %>
+23:   </p>
+24:   <%= nested_fields_for :activities, form %>
+25:   <p>
+26:     <%= f.submit 'Create' %>
+27:   </p>
+
+    app/views/offerings/new.html.erb:24:in `form'
+    app/views/offerings/new.html.erb:24
+    app/views/offerings/new.html.erb:5
+
+Rendered rescues/_trace (85.0ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OfferingsController#new (for 127.0.0.1 at 2009-11-15 14:58:00) [GET]
+  Parameters: {"firm_id"=>"1"}
+  [4;36;1mFirm Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `firms`[0m
+  [4;35;1mFirm Load (0.3ms)[0m   [0mSELECT * FROM `firms` WHERE (`firms`.`id` = 1) [0m
+  [4;36;1mOffering Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `offerings`[0m
+Rendering template within layouts/application
+Rendering offerings/new
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `firms` WHERE (`firms`.`id` = 1) [0m
+
+ActionView::TemplateError (wrong number of arguments (1 for 2)) on line #24 of app/views/offerings/new.html.erb:
+21:     <%= f.label :dead_line %><br />
+22:     <%= f.datetime_select :dead_line %>
+23:   </p>
+24:   <%= nested_fields_for :activities %>
+25:   <p>
+26:     <%= f.submit 'Create' %>
+27:   </p>
+
+    app/views/offerings/new.html.erb:24:in `nested_fields_for'
+    app/views/offerings/new.html.erb:24
+    app/views/offerings/new.html.erb:5
+
+Rendered rescues/_trace (94.1ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (2.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OfferingsController#new (for 127.0.0.1 at 2009-11-15 14:58:02) [GET]
+  Parameters: {"firm_id"=>"1"}
+  [4;36;1mFirm Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `firms`[0m
+  [4;35;1mFirm Load (0.3ms)[0m   [0mSELECT * FROM `firms` WHERE (`firms`.`id` = 1) [0m
+  [4;36;1mOffering Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `offerings`[0m
+Rendering template within layouts/application
+Rendering offerings/new
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `firms` WHERE (`firms`.`id` = 1) [0m
+
+ActionView::TemplateError (wrong number of arguments (1 for 2)) on line #24 of app/views/offerings/new.html.erb:
+21:     <%= f.label :dead_line %><br />
+22:     <%= f.datetime_select :dead_line %>
+23:   </p>
+24:   <%= nested_fields_for :activities %>
+25:   <p>
+26:     <%= f.submit 'Create' %>
+27:   </p>
+
+    app/views/offerings/new.html.erb:24:in `nested_fields_for'
+    app/views/offerings/new.html.erb:24
+    app/views/offerings/new.html.erb:5
+
+Rendered rescues/_trace (208.1ms)
+Rendered rescues/_request_and_response (0.7ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OfferingsController#new (for 127.0.0.1 at 2009-11-15 14:58:50) [GET]
+  Parameters: {"firm_id"=>"1"}
+  [4;36;1mFirm Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `firms`[0m
+  [4;35;1mFirm Load (0.4ms)[0m   [0mSELECT * FROM `firms` WHERE (`firms`.`id` = 1) [0m
+  [4;36;1mOffering Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `offerings`[0m
+Rendering template within layouts/application
+Rendering offerings/new
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `firms` WHERE (`firms`.`id` = 1) [0m
+
+ActionView::TemplateError (wrong number of arguments (1 for 2)) on line #24 of app/views/offerings/new.html.erb:
+21:     <%= f.label :dead_line %><br />
+22:     <%= f.datetime_select :dead_line %>
+23:   </p>
+24:   <%= nested_fields_for :activities %>
+25:   <p>
+26:     <%= f.submit 'Create' %>
+27:   </p>
+
+    app/views/offerings/new.html.erb:24:in `nested_fields_for'
+    app/views/offerings/new.html.erb:24
+    app/views/offerings/new.html.erb:5
+
+Rendered rescues/_trace (92.1ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OfferingsController#new (for 127.0.0.1 at 2009-11-15 14:59:30) [GET]
+  Parameters: {"firm_id"=>"1"}
+  [4;36;1mFirm Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `firms`[0m
+  [4;35;1mFirm Load (0.3ms)[0m   [0mSELECT * FROM `firms` WHERE (`firms`.`id` = 1) [0m
+  [4;36;1mOffering Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `offerings`[0m
+Rendering template within layouts/application
+Rendering offerings/new
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `firms` WHERE (`firms`.`id` = 1) [0m
+
+ActionView::TemplateError (wrong number of arguments (1 for 2)) on line #24 of app/views/offerings/new.html.erb:
+21:     <%= f.label :dead_line %><br />
+22:     <%= f.datetime_select :dead_line %>
+23:   </p>
+24:   <%= nested_fields_for :activities %>
+25:   <p>
+26:     <%= f.submit 'Create' %>
+27:   </p>
+
+    app/views/offerings/new.html.erb:24:in `nested_fields_for'
+    app/views/offerings/new.html.erb:24
+    app/views/offerings/new.html.erb:5
+
+Rendered rescues/_trace (88.1ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (1.7ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OfferingsController#new (for 127.0.0.1 at 2009-11-15 14:59:37) [GET]
+  Parameters: {"firm_id"=>"1"}
+  [4;36;1mFirm Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `firms`[0m
+  [4;35;1mFirm Load (0.4ms)[0m   [0mSELECT * FROM `firms` WHERE (`firms`.`id` = 1) [0m
+  [4;36;1mOffering Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `offerings`[0m
+Rendering template within layouts/application
+Rendering offerings/new
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `firms` WHERE (`firms`.`id` = 1) [0m
+  [4;36;1mUser Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Completed in 116ms (View: 82, DB: 8) | 200 OK [http://localhost/firms/1/offerings/new]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OfferingsController#new (for 127.0.0.1 at 2009-11-15 15:04:20) [GET]
+  Parameters: {"firm_id"=>"1"}
+  [4;35;1mFirm Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `firms`[0m
+  [4;36;1mFirm Load (0.4ms)[0m   [0;1mSELECT * FROM `firms` WHERE (`firms`.`id` = 1) [0m
+  [4;35;1mOffering Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `offerings`[0m
+Rendering template within layouts/application
+Rendering offerings/new
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `firms` WHERE (`firms`.`id` = 1) [0m
+Rendered offerings/_form (43.6ms)
+  [4;35;1mUser Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Completed in 133ms (View: 95, DB: 6) | 200 OK [http://localhost/firms/1/offerings/new]
+  [4;36;1mSQL (1.8ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OfferingsController#new (for 127.0.0.1 at 2009-11-15 15:04:59) [GET]
+  Parameters: {"firm_id"=>"1"}
+  [4;36;1mFirm Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `firms`[0m
+  [4;35;1mFirm Load (0.4ms)[0m   [0mSELECT * FROM `firms` WHERE (`firms`.`id` = 1) [0m
+  [4;36;1mOffering Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `offerings`[0m
+Rendering template within layouts/application
+Rendering offerings/new
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `firms` WHERE (`firms`.`id` = 1) [0m
+
+ActionView::TemplateError (Missing template shared/_nested_fields.erb in view path app/views) on line #17 of app/views/offerings/_form.html.erb:
+14:   <%= form.label :dead_line %><br />
+15:   <%= form.datetime_select :dead_line %>
+16: </p>
+17: <%= nested_fields_for :activities, form %>
+18: <%= nested_fields_for :events, form %>
+19: <%= nested_fields_for :contact_informations, form %>
+
+    app/helpers/administration_helper.rb:6:in `nested_fields_for'
+    app/views/offerings/_form.html.erb:17
+    app/views/offerings/new.html.erb:8
+    app/views/offerings/new.html.erb:5
+
+Rendered rescues/_trace (230.3ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OfferingsController#new (for 127.0.0.1 at 2009-11-15 15:05:21) [GET]
+  Parameters: {"firm_id"=>"1"}
+  [4;36;1mFirm Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `firms`[0m
+  [4;35;1mFirm Load (0.4ms)[0m   [0mSELECT * FROM `firms` WHERE (`firms`.`id` = 1) [0m
+  [4;36;1mOffering Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `offerings`[0m
+Rendering template within layouts/application
+Rendering offerings/new
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `firms` WHERE (`firms`.`id` = 1) [0m
+
+ActionView::TemplateError (Missing template shared/_nested_fields.erb in view path app/views) on line #18 of app/views/offerings/_form.html.erb:
+15:   <%= form.datetime_select :dead_line %>
+16: </p>
+17: 
+18: <%= nested_fields_for :activities, form %>
+
+    app/helpers/administration_helper.rb:6:in `nested_fields_for'
+    app/views/offerings/_form.html.erb:18
+    app/views/offerings/new.html.erb:8
+    app/views/offerings/new.html.erb:5
+
+Rendered rescues/_trace (220.7ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OfferingsController#new (for 127.0.0.1 at 2009-11-15 15:06:43) [GET]
+  Parameters: {"firm_id"=>"1"}
+  [4;36;1mFirm Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `firms`[0m
+  [4;35;1mFirm Load (0.3ms)[0m   [0mSELECT * FROM `firms` WHERE (`firms`.`id` = 1) [0m
+  [4;36;1mOffering Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `offerings`[0m
+Rendering template within layouts/application
+Rendering offerings/new
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `firms` WHERE (`firms`.`id` = 1) [0m
+
+ActionView::TemplateError (Missing template shared/_nested_fields.erb in view path app/views) on line #17 of app/views/offerings/_form.html.erb:
+14:   <%= form.label :dead_line %><br />
+15:   <%= form.datetime_select :dead_line %>
+16: </p>
+17: <%= nested_fields_for :activities, form %>
+18: <%= nested_fields_for :events, form %>
+19: <%= nested_fields_for :contact_informations, form %>
+
+    app/helpers/administration_helper.rb:6:in `nested_fields_for'
+    app/views/offerings/_form.html.erb:17
+    app/views/offerings/new.html.erb:8
+    app/views/offerings/new.html.erb:5
+
+Rendered rescues/_trace (107.0ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OfferingsController#new (for 127.0.0.1 at 2009-11-15 15:07:52) [GET]
+  Parameters: {"firm_id"=>"1"}
+  [4;36;1mFirm Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `firms`[0m
+  [4;35;1mFirm Load (0.3ms)[0m   [0mSELECT * FROM `firms` WHERE (`firms`.`id` = 1) [0m
+  [4;36;1mOffering Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `offerings`[0m
+Rendering template within layouts/application
+Rendering offerings/new
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `firms` WHERE (`firms`.`id` = 1) [0m
+
+ActionView::TemplateError (Missing template shared/_nested_fields.erb in view path app/views) on line #18 of app/views/offerings/_form.html.erb:
+15:   <%= form.datetime_select :dead_line %>
+16: </p>
+17: 
+18: <%= nested_fields_for :activities, form %>
+
+    app/helpers/administration_helper.rb:6:in `nested_fields_for'
+    app/views/offerings/_form.html.erb:18
+    app/views/offerings/new.html.erb:8
+    app/views/offerings/new.html.erb:5
+
+Rendered rescues/_trace (111.6ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OfferingsController#new (for 127.0.0.1 at 2009-11-15 15:09:18) [GET]
+  Parameters: {"firm_id"=>"1"}
+  [4;36;1mFirm Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `firms`[0m
+  [4;35;1mFirm Load (0.3ms)[0m   [0mSELECT * FROM `firms` WHERE (`firms`.`id` = 1) [0m
+  [4;36;1mOffering Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `offerings`[0m
+Rendering template within layouts/application
+Rendering offerings/new
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `firms` WHERE (`firms`.`id` = 1) [0m
+  [4;36;1mActivity Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `activities`[0m
+Rendered activities/_form (2.5ms)
+Rendered shared/_nested_fields (39.5ms)
+Rendered offerings/_form (194.3ms)
+  [4;35;1mUser Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Completed in 249ms (View: 220, DB: 5) | 200 OK [http://localhost/firms/1/offerings/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OfferingsController#new (for 127.0.0.1 at 2009-11-15 15:20:03) [GET]
+  Parameters: {"firm_id"=>"1"}
+  [4;36;1mFirm Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `firms`[0m
+  [4;35;1mFirm Load (0.5ms)[0m   [0mSELECT * FROM `firms` WHERE (`firms`.`id` = 1) [0m
+  [4;36;1mOffering Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `offerings`[0m
+Rendering template within layouts/application
+Rendering offerings/new
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `firms` WHERE (`firms`.`id` = 1) [0m
+  [4;36;1mActivity Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `activities`[0m
+Rendered activities/_form (2.4ms)
+Rendered shared/_nested_fields (31.1ms)
+
+ActionView::TemplateError (Cannot create self referential has_and_belongs_to_many association on 'Function#functions'. :association_foreign_key cannot be the same as the :foreign_key.) on line #6 of app/views/shared/_nested_fields.html.erb:
+3:   n = fields_for
+4: -%>
+5: <div id="<%= n %>" class="nested_fields">
+6:   <%- new_item = o.send(n).send(:build) -%>
+7:   <%- o.send(n).each do |item| -%>
+8:     <%-
+9:       index = Time.now.to_i.to_s
+
+    (eval):3:in `has_and_belongs_to_many'
+    app/models/function.rb:2
+    app/views/shared/_nested_fields.html.erb:6:in `send'
+    app/views/shared/_nested_fields.html.erb:6
+    app/helpers/administration_helper.rb:6:in `nested_fields_for'
+    app/views/offerings/_form.html.erb:19
+    app/views/offerings/new.html.erb:8
+    app/views/offerings/new.html.erb:5
+
+Rendered rescues/_trace (347.4ms)
+Rendered rescues/_request_and_response (0.8ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OfferingsController#new (for 127.0.0.1 at 2009-11-15 15:20:26) [GET]
+  Parameters: {"firm_id"=>"1"}
+  [4;35;1mFirm Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `firms`[0m
+  [4;36;1mFirm Load (0.6ms)[0m   [0;1mSELECT * FROM `firms` WHERE (`firms`.`id` = 1) [0m
+  [4;35;1mOffering Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `offerings`[0m
+Rendering template within layouts/application
+Rendering offerings/new
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `firms` WHERE (`firms`.`id` = 1) [0m
+  [4;35;1mActivity Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `activities`[0m
+Rendered activities/_form (2.5ms)
+Rendered shared/_nested_fields (27.7ms)
+  [4;36;1mContract Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `contracts`[0m
+Rendered contracts/_form (2.6ms)
+Rendered shared/_nested_fields (39.8ms)
+  [4;35;1mLocalisation Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `localisations`[0m
+Rendered localisations/_form (3.5ms)
+Rendered shared/_nested_fields (40.3ms)
+Rendered offerings/_form (154.9ms)
+  [4;36;1mUser Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Completed in 393ms (View: 345, DB: 8) | 200 OK [http://localhost/firms/1/offerings/new]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OfferingsController#new (for 127.0.0.1 at 2009-11-15 15:26:43) [GET]
+  Parameters: {"firm_id"=>"1"}
+  [4;35;1mFirm Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `firms`[0m
+  [4;36;1mFirm Load (0.3ms)[0m   [0;1mSELECT * FROM `firms` WHERE (`firms`.`id` = 1) [0m
+  [4;35;1mOffering Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `offerings`[0m
+Rendering template within layouts/application
+Rendering offerings/new
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `firms` WHERE (`firms`.`id` = 1) [0m
+  [4;35;1mActivity Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `activities`[0m
+Rendered activities/_form (1.9ms)
+Rendered shared/_nested_fields (26.9ms)
+  [4;36;1mFunction Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `functions`[0m
+Rendered functions/_form (2.3ms)
+Rendered shared/_nested_fields (30.3ms)
+  [4;35;1mContract Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `contracts`[0m
+Rendered contracts/_form (1.5ms)
+Rendered shared/_nested_fields (23.5ms)
+  [4;36;1mLocalisation Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `localisations`[0m
+Rendered localisations/_form (1.6ms)
+Rendered shared/_nested_fields (22.7ms)
+Rendered offerings/_form (145.8ms)
+  [4;35;1mUser Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Completed in 207ms (View: 173, DB: 8) | 200 OK [http://localhost/firms/1/offerings/new]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OfferingsController#create (for 127.0.0.1 at 2009-11-15 15:30:12) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"awTkg9SPFoG5Ey1+BBEgpq9dbjUBYcZR2OJJl7TblBI=", "firm_id"=>"1", "offering"=>{"on_line(3i)"=>"15", "on_line(4i)"=>"22", "title"=>"Secretaire de direction", "contracts"=>{"name"=>"CDI"}, "on_line(5i)"=>"56", "activities"=>{"name"=>"Ingenierie"}, "dead_line(1i)"=>"2009", "functions"=>{"name"=>"Databasa Administrateur"}, "dead_line(2i)"=>"12", "dead_line(3i)"=>"15", "description"=>"sdqs  sd fd d sdfsd s s", "dead_line(4i)"=>"22", "on_line(1i)"=>"2009", "localisations"=>{"name"=>"Antananrivo"}, "dead_line(5i)"=>"56", "on_line(2i)"=>"4"}}
+  [4;36;1mFirm Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `firms`[0m
+  [4;35;1mFirm Load (0.4ms)[0m   [0mSELECT * FROM `firms` WHERE (`firms`.`id` = 1) [0m
+  [4;36;1mOffering Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `offerings`[0m
+
+ActiveRecord::AssociationTypeMismatch (Contract(#-610981918) expected, got Array(#-605399278)):
+  app/controllers/offerings_controller.rb:49:in `create'
+
+Rendered rescues/_trace (95.3ms)
+Rendered rescues/_request_and_response (1.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OfferingsController#create (for 127.0.0.1 at 2009-11-15 15:35:14) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"awTkg9SPFoG5Ey1+BBEgpq9dbjUBYcZR2OJJl7TblBI=", "firm_id"=>"1", "offering"=>{"on_line(3i)"=>"15", "on_line(4i)"=>"22", "title"=>"Secretaire de direction", "contracts"=>{"name"=>"CDI"}, "on_line(5i)"=>"56", "activities"=>{"name"=>"Ingenierie"}, "dead_line(1i)"=>"2009", "functions"=>{"name"=>"Databasa Administrateur"}, "dead_line(2i)"=>"12", "dead_line(3i)"=>"15", "description"=>"sdqs  sd fd d sdfsd s s", "dead_line(4i)"=>"22", "on_line(1i)"=>"2009", "localisations"=>{"name"=>"Antananrivo"}, "dead_line(5i)"=>"56", "on_line(2i)"=>"4"}}
+  [4;35;1mFirm Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `firms`[0m
+  [4;36;1mFirm Load (0.3ms)[0m   [0;1mSELECT * FROM `firms` WHERE (`firms`.`id` = 1) [0m
+  [4;35;1mOffering Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `offerings`[0m
+
+ActiveRecord::AssociationTypeMismatch (Contract(#-612300128) expected, got Array(#-605399278)):
+  app/controllers/offerings_controller.rb:49:in `create'
+
+Rendered rescues/_trace (206.0ms)
+Rendered rescues/_request_and_response (0.9ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OfferingsController#create (for 127.0.0.1 at 2009-11-15 15:36:34) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"awTkg9SPFoG5Ey1+BBEgpq9dbjUBYcZR2OJJl7TblBI=", "firm_id"=>"1", "offering"=>{"on_line(3i)"=>"15", "on_line(4i)"=>"22", "title"=>"Secretaire de direction", "contracts"=>{"name"=>"CDI"}, "on_line(5i)"=>"56", "activities"=>{"name"=>"Ingenierie"}, "dead_line(1i)"=>"2009", "functions"=>{"name"=>"Databasa Administrateur"}, "dead_line(2i)"=>"12", "dead_line(3i)"=>"15", "description"=>"sdqs  sd fd d sdfsd s s", "dead_line(4i)"=>"22", "on_line(1i)"=>"2009", "localisations"=>{"name"=>"Antananrivo"}, "dead_line(5i)"=>"56", "on_line(2i)"=>"4"}}
+  [4;36;1mFirm Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `firms`[0m
+  [4;35;1mFirm Load (0.3ms)[0m   [0mSELECT * FROM `firms` WHERE (`firms`.`id` = 1) [0m
+  [4;36;1mOffering Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `offerings`[0m
+
+ActiveRecord::AssociationTypeMismatch (Contract(#-611474048) expected, got Array(#-605399278)):
+  app/controllers/offerings_controller.rb:49:in `create'
+
+Rendered rescues/_trace (94.2ms)
+Rendered rescues/_request_and_response (0.8ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OfferingsController#create (for 127.0.0.1 at 2009-11-15 15:39:14) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"awTkg9SPFoG5Ey1+BBEgpq9dbjUBYcZR2OJJl7TblBI=", "firm_id"=>"1", "offering"=>{"on_line(3i)"=>"15", "on_line(4i)"=>"22", "title"=>"Secretaire de direction", "contracts"=>{"name"=>"CDI"}, "on_line(5i)"=>"56", "activities"=>{"name"=>"Ingenierie"}, "dead_line(1i)"=>"2009", "functions"=>{"name"=>"Databasa Administrateur"}, "dead_line(2i)"=>"12", "dead_line(3i)"=>"15", "description"=>"sdqs  sd fd d sdfsd s s", "dead_line(4i)"=>"22", "on_line(1i)"=>"2009", "localisations"=>{"name"=>"Antananrivo"}, "dead_line(5i)"=>"56", "on_line(2i)"=>"4"}}
+  [4;35;1mFirm Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `firms`[0m
+  [4;36;1mFirm Load (0.4ms)[0m   [0;1mSELECT * FROM `firms` WHERE (`firms`.`id` = 1) [0m
+  [4;35;1mOffering Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `offerings`[0m
+  [4;36;1mSQL (21.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mContract Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `contracts`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mContract Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `contracts`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mContract Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `contracts`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mContract Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `contracts`[0m
+
+NoMethodError (undefined method `belongs_to_many' for #<Class:0xb6f74e94>):
+  app/models/contract.rb:2
+  app/controllers/offerings_controller.rb:49:in `create'
+
+Rendered rescues/_trace (229.5ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OfferingsController#create (for 127.0.0.1 at 2009-11-15 15:39:33) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"awTkg9SPFoG5Ey1+BBEgpq9dbjUBYcZR2OJJl7TblBI=", "firm_id"=>"1", "offering"=>{"on_line(3i)"=>"15", "on_line(4i)"=>"22", "title"=>"Secretaire de direction", "contracts"=>{"name"=>"CDI"}, "on_line(5i)"=>"56", "activities"=>{"name"=>"Ingenierie"}, "dead_line(1i)"=>"2009", "functions"=>{"name"=>"Databasa Administrateur"}, "dead_line(2i)"=>"12", "dead_line(3i)"=>"15", "description"=>"sdqs  sd fd d sdfsd s s", "dead_line(4i)"=>"22", "on_line(1i)"=>"2009", "localisations"=>{"name"=>"Antananrivo"}, "dead_line(5i)"=>"56", "on_line(2i)"=>"4"}}
+  [4;36;1mFirm Columns (2.2ms)[0m   [0;1mSHOW FIELDS FROM `firms`[0m
+  [4;35;1mFirm Load (0.3ms)[0m   [0mSELECT * FROM `firms` WHERE (`firms`.`id` = 1) [0m
+  [4;36;1mOffering Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `offerings`[0m
+
+ActiveRecord::AssociationTypeMismatch (Contract(#-612183458) expected, got Array(#-605399278)):
+  app/controllers/offerings_controller.rb:49:in `create'
+
+Rendered rescues/_trace (84.6ms)
+Rendered rescues/_request_and_response (0.8ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.7ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OfferingsController#create (for 127.0.0.1 at 2009-11-15 15:40:09) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"awTkg9SPFoG5Ey1+BBEgpq9dbjUBYcZR2OJJl7TblBI=", "firm_id"=>"1", "offering"=>{"on_line(3i)"=>"15", "on_line(4i)"=>"22", "title"=>"Secretaire de direction", "contracts"=>{"name"=>"CDI"}, "on_line(5i)"=>"56", "activities"=>{"name"=>"Ingenierie"}, "dead_line(1i)"=>"2009", "functions"=>{"name"=>"Databasa Administrateur"}, "dead_line(2i)"=>"12", "dead_line(3i)"=>"15", "description"=>"sdqs  sd fd d sdfsd s s", "dead_line(4i)"=>"22", "on_line(1i)"=>"2009", "localisations"=>{"name"=>"Antananrivo"}, "dead_line(5i)"=>"56", "on_line(2i)"=>"4"}}
+  [4;35;1mFirm Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `firms`[0m
+  [4;36;1mFirm Load (0.3ms)[0m   [0;1mSELECT * FROM `firms` WHERE (`firms`.`id` = 1) [0m
+  [4;35;1mOffering Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `offerings`[0m
+
+ActiveRecord::AssociationTypeMismatch (Contract(#-611268058) expected, got Array(#-605399278)):
+  app/controllers/offerings_controller.rb:49:in `create'
+
+Rendered rescues/_trace (92.1ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OfferingsController#new (for 127.0.0.1 at 2009-11-15 15:45:23) [GET]
+  Parameters: {"firm_id"=>"1"}
+  [4;36;1mFirm Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `firms`[0m
+  [4;35;1mFirm Load (0.4ms)[0m   [0mSELECT * FROM `firms` WHERE (`firms`.`id` = 1) [0m
+  [4;36;1mOffering Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `offerings`[0m
+Rendering template within layouts/application
+Rendering offerings/new
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `firms` WHERE (`firms`.`id` = 1) [0m
+  [4;36;1mActivity Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `activities`[0m
+Rendered activities/_form (2.9ms)
+Rendered shared/_nested_fields (29.3ms)
+  [4;35;1mFunction Columns (32.8ms)[0m   [0mSHOW FIELDS FROM `functions`[0m
+Rendered functions/_form (2.2ms)
+Rendered shared/_nested_fields (142.5ms)
+  [4;36;1mContract Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `contracts`[0m
+Rendered contracts/_form (2.4ms)
+Rendered shared/_nested_fields (26.2ms)
+  [4;35;1mLocalisation Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `localisations`[0m
+Rendered localisations/_form (2.7ms)
+Rendered shared/_nested_fields (26.2ms)
+Rendered offerings/_form (269.6ms)
+  [4;36;1mUser Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Completed in 336ms (View: 263, DB: 41) | 200 OK [http://localhost/firms/1/offerings/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OfferingsController#create (for 127.0.0.1 at 2009-11-15 15:46:02) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"awTkg9SPFoG5Ey1+BBEgpq9dbjUBYcZR2OJJl7TblBI=", "firm_id"=>"1", "offering"=>{"on_line(3i)"=>"15", "contracts_attributes"=>{"new_contract"=>{"name"=>"CDI"}}, "on_line(4i)"=>"22", "title"=>"Secretaire de direction", "on_line(5i)"=>"56", "functions_attributes"=>{"new_function"=>{"name"=>"Databasa Administrator"}}, "dead_line(1i)"=>"2009", "localisations_attributes"=>{"new_localisation"=>{"name"=>"Antananarivo"}}, "dead_line(2i)"=>"12", "dead_line(3i)"=>"15", "description"=>"sdqs  sd fd d sdfsd s s", "activities_attributes"=>{"new_activity"=>{"name"=>"Ingenierie"}}, "dead_line(4i)"=>"22", "on_line(1i)"=>"2009", "dead_line(5i)"=>"56", "on_line(2i)"=>"4"}}
+  [4;35;1mFirm Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `firms`[0m
+  [4;36;1mFirm Load (0.3ms)[0m   [0;1mSELECT * FROM `firms` WHERE (`firms`.`id` = 1) [0m
+  [4;35;1mOffering Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `offerings`[0m
+  [4;36;1mContract Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `contracts`[0m
+  [4;35;1mFunction Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `functions`[0m
+  [4;36;1mLocalisation Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `localisations`[0m
+  [4;35;1mActivity Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `activities`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mOffering Create (0.3ms)[0m   [0mINSERT INTO `offerings` (`on_line`, `created_at`, `title`, `updated_at`, `dead_line`, `description`, `firm_id`) VALUES('2009-04-15 22:56:00', '2009-11-15 23:46:02', 'Secretaire de direction', '2009-11-15 23:46:02', '2009-12-15 22:56:00', 'sdqs sd fd d sdfsd s s', NULL)[0m
+  [4;36;1mSlug Load (0.5ms)[0m   [0;1mSELECT * FROM `slugs` WHERE (`slugs`.sluggable_id = NULL AND `slugs`.sluggable_type = 'Activity' AND (`slugs`.`scope` IS NULL AND `slugs`.`name` = 'ingenierie')) ORDER BY id DESC[0m
+  [4;35;1mSlug Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `slugs`[0m
+  [4;36;1mActivity Create (0.3ms)[0m   [0;1mINSERT INTO `activities` (`name`, `created_at`, `updated_at`) VALUES('Ingenierie', '2009-11-15 23:46:02', '2009-11-15 23:46:02')[0m
+  [4;35;1mSlug Load (0.3ms)[0m   [0mSELECT sequence FROM `slugs` WHERE (`slugs`.`scope` IS NULL AND `slugs`.`sluggable_type` = 'Activity' AND `slugs`.`name` = 'ingenierie') ORDER BY sequence DESC LIMIT 1[0m
+  [4;36;1mSlug Create (0.2ms)[0m   [0;1mINSERT INTO `slugs` (`name`, `scope`, `sequence`, `sluggable_type`, `sluggable_id`) VALUES('ingenierie', NULL, 1, 'Activity', 1)[0m
+  [4;35;1mSlug Load (0.3ms)[0m   [0mSELECT * FROM `slugs` WHERE (`slugs`.sluggable_id = NULL AND `slugs`.sluggable_type = 'Contract' AND (`slugs`.`scope` IS NULL AND `slugs`.`name` = 'cdi')) ORDER BY id DESC[0m
+  [4;36;1mContract Create (0.2ms)[0m   [0;1mINSERT INTO `contracts` (`name`, `created_at`, `updated_at`) VALUES('CDI', '2009-11-15 23:46:02', '2009-11-15 23:46:02')[0m
+  [4;35;1mSlug Load (0.4ms)[0m   [0mSELECT sequence FROM `slugs` WHERE (`slugs`.`scope` IS NULL AND `slugs`.`sluggable_type` = 'Contract' AND `slugs`.`name` = 'cdi') ORDER BY sequence DESC LIMIT 1[0m
+  [4;36;1mSlug Create (0.2ms)[0m   [0;1mINSERT INTO `slugs` (`name`, `scope`, `sequence`, `sluggable_type`, `sluggable_id`) VALUES('cdi', NULL, 2, 'Contract', 2)[0m
+  [4;35;1mSlug Load (0.4ms)[0m   [0mSELECT * FROM `slugs` WHERE (`slugs`.sluggable_id = NULL AND `slugs`.sluggable_type = 'Function' AND (`slugs`.`scope` IS NULL AND `slugs`.`name` = 'databasa-administrator')) ORDER BY id DESC[0m
+  [4;36;1mFunction Create (0.2ms)[0m   [0;1mINSERT INTO `functions` (`name`, `created_at`, `updated_at`) VALUES('Databasa Administrator', '2009-11-15 23:46:02', '2009-11-15 23:46:02')[0m
+  [4;35;1mSlug Load (0.3ms)[0m   [0mSELECT sequence FROM `slugs` WHERE (`slugs`.`scope` IS NULL AND `slugs`.`sluggable_type` = 'Function' AND `slugs`.`name` = 'databasa-administrator') ORDER BY sequence DESC LIMIT 1[0m
+  [4;36;1mSlug Create (0.2ms)[0m   [0;1mINSERT INTO `slugs` (`name`, `scope`, `sequence`, `sluggable_type`, `sluggable_id`) VALUES('databasa-administrator', NULL, 1, 'Function', 1)[0m
+  [4;35;1mSlug Load (0.4ms)[0m   [0mSELECT * FROM `slugs` WHERE (`slugs`.sluggable_id = NULL AND `slugs`.sluggable_type = 'Localisation' AND (`slugs`.`scope` IS NULL AND `slugs`.`name` = 'antananarivo')) ORDER BY id DESC[0m
+  [4;36;1mLocalisation Create (0.2ms)[0m   [0;1mINSERT INTO `localisations` (`name`, `created_at`, `updated_at`) VALUES('Antananarivo', '2009-11-15 23:46:02', '2009-11-15 23:46:02')[0m
+  [4;35;1mSlug Load (0.3ms)[0m   [0mSELECT sequence FROM `slugs` WHERE (`slugs`.`scope` IS NULL AND `slugs`.`sluggable_type` = 'Localisation' AND `slugs`.`name` = 'antananarivo') ORDER BY sequence DESC LIMIT 1[0m
+  [4;36;1mSlug Create (0.2ms)[0m   [0;1mINSERT INTO `slugs` (`name`, `scope`, `sequence`, `sluggable_type`, `sluggable_id`) VALUES('antananarivo', NULL, 1, 'Localisation', 1)[0m
+  [4;35;1mSQL (1.8ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/offerings/1
+Completed in 428ms (DB: 14) | 302 Found [http://localhost/firms/1/offerings]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OfferingsController#show (for 127.0.0.1 at 2009-11-15 15:46:02) [GET]
+  Parameters: {"id"=>"1"}
+Redirected to http://localhost:3000/firms
+Completed in 5ms (DB: 0) | 302 Found [http://localhost/offerings/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FirmsController#index (for 127.0.0.1 at 2009-11-15 15:46:02) [GET]
+  [4;36;1mFirm Load (0.4ms)[0m   [0;1mSELECT * FROM `firms` [0m
+Rendering template within layouts/application
+Rendering firms/index
+  [4;35;1mFirm Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `firms`[0m
+  [4;36;1mUser Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Completed in 46ms (View: 31, DB: 2) | 200 OK [http://localhost/firms]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FirmsController#index (for 127.0.0.1 at 2009-11-15 15:55:08) [GET]
+  [4;35;1mFirm Load (0.4ms)[0m   [0mSELECT * FROM `firms` [0m
+Rendering template within layouts/application
+Rendering firms/index
+  [4;36;1mFirm Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `firms`[0m
+  [4;35;1mUser Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Completed in 59ms (View: 42, DB: 3) | 200 OK [http://localhost/firms]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FirmsController#show (for 127.0.0.1 at 2009-11-15 15:55:34) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mFirm Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `firms`[0m
+  [4;35;1mFirm Load (0.3ms)[0m   [0mSELECT * FROM `firms` WHERE (`firms`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering firms/show
+  [4;36;1mOffering Load (0.4ms)[0m   [0;1mSELECT * FROM `offerings` WHERE (`offerings`.firm_id = 1) [0m
+  [4;35;1mUser Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Completed in 50ms (View: 35, DB: 3) | 200 OK [http://localhost/firms/1]
+  [4;36;1mSQL (1.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FirmsController#show (for 127.0.0.1 at 2009-11-15 16:04:22) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mFirm Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `firms`[0m
+  [4;35;1mFirm Load (0.4ms)[0m   [0mSELECT * FROM `firms` WHERE (`firms`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering firms/show
+  [4;36;1mOffering Load (0.5ms)[0m   [0;1mSELECT * FROM `offerings` WHERE (`offerings`.firm_id = 1) [0m
+  [4;35;1mUser Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Completed in 64ms (View: 45, DB: 5) | 200 OK [http://localhost/firms/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FirmsController#show (for 127.0.0.1 at 2009-11-15 16:08:03) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mFirm Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `firms`[0m
+  [4;35;1mFirm Load (0.4ms)[0m   [0mSELECT * FROM `firms` WHERE (`firms`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering firms/show
+  [4;36;1mOffering Load (0.5ms)[0m   [0;1mSELECT * FROM `offerings` WHERE (`offerings`.firm_id = 1) [0m
+  [4;35;1mUser Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Completed in 68ms (View: 47, DB: 4) | 200 OK [http://localhost/firms/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FirmsController#index (for 127.0.0.1 at 2009-11-15 16:08:09) [GET]
+  [4;36;1mFirm Load (0.4ms)[0m   [0;1mSELECT * FROM `firms` [0m
+Rendering template within layouts/application
+Rendering firms/index
+  [4;35;1mFirm Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `firms`[0m
+  [4;36;1mUser Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Completed in 46ms (View: 33, DB: 3) | 200 OK [http://localhost/firms]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FirmsController#show (for 127.0.0.1 at 2009-11-15 16:08:11) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mFirm Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `firms`[0m
+  [4;36;1mFirm Load (0.3ms)[0m   [0;1mSELECT * FROM `firms` WHERE (`firms`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering firms/show
+  [4;35;1mOffering Load (0.4ms)[0m   [0mSELECT * FROM `offerings` WHERE (`offerings`.firm_id = 1) [0m
+  [4;36;1mUser Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Completed in 50ms (View: 35, DB: 3) | 200 OK [http://localhost/firms/1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OfferingsController#index (for 127.0.0.1 at 2009-11-15 16:08:29) [GET]
+Redirected to http://localhost:3000/firms
+Completed in 7ms (DB: 0) | 302 Found [http://localhost/offerings]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FirmsController#index (for 127.0.0.1 at 2009-11-15 16:08:29) [GET]
+  [4;35;1mFirm Load (0.5ms)[0m   [0mSELECT * FROM `firms` [0m
+Rendering template within layouts/application
+Rendering firms/index
+  [4;36;1mFirm Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `firms`[0m
+  [4;35;1mUser Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Completed in 60ms (View: 36, DB: 3) | 200 OK [http://localhost/firms]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OfferingsController#index (for 127.0.0.1 at 2009-11-15 16:08:43) [GET]
+Redirected to http://localhost:3000/firms
+Completed in 7ms (DB: 0) | 302 Found [http://localhost/offerings]
+  [4;36;1mSQL (6.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FirmsController#index (for 127.0.0.1 at 2009-11-15 16:08:43) [GET]
+  [4;36;1mFirm Load (0.4ms)[0m   [0;1mSELECT * FROM `firms` [0m
+Rendering template within layouts/application
+Rendering firms/index
+  [4;35;1mFirm Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `firms`[0m
+  [4;36;1mUser Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Completed in 56ms (View: 40, DB: 8) | 200 OK [http://localhost/firms]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FirmsController#index (for 127.0.0.1 at 2009-11-15 16:09:38) [GET]
+  [4;35;1mFirm Load (0.4ms)[0m   [0mSELECT * FROM `firms` [0m
+Rendering template within layouts/application
+Rendering firms/index
+  [4;36;1mFirm Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `firms`[0m
+  [4;35;1mUser Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Completed in 46ms (View: 32, DB: 2) | 200 OK [http://localhost/firms]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OfferingsController#index (for 127.0.0.1 at 2009-11-15 16:09:48) [GET]
+Redirected to http://localhost:3000/firms
+Completed in 7ms (DB: 0) | 302 Found [http://localhost/offerings]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FirmsController#index (for 127.0.0.1 at 2009-11-15 16:09:48) [GET]
+  [4;36;1mFirm Load (0.5ms)[0m   [0;1mSELECT * FROM `firms` [0m
+Rendering template within layouts/application
+Rendering firms/index
+  [4;35;1mFirm Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `firms`[0m
+  [4;36;1mUser Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Completed in 199ms (View: 182, DB: 3) | 200 OK [http://localhost/firms]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-11-15 16:11:06) [GET]
+
+ActionController::UnknownAction (No action responded to index. Actions: create, edit, new, and update):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-15 16:11:12) [GET]
+
+ActionController::RoutingError (No route matches "/user" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-11-15 16:11:16) [GET]
+
+ActionController::UnknownAction (No action responded to index. Actions: create, edit, new, and update):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FirmsController#index (for 127.0.0.1 at 2009-11-15 16:15:49) [GET]
+  [4;35;1mFirm Load (0.5ms)[0m   [0mSELECT * FROM `firms` [0m
+Rendering template within layouts/application
+Rendering firms/index
+  [4;36;1mFirm Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `firms`[0m
+  [4;35;1mUser Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Completed in 65ms (View: 43, DB: 3) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FirmsController#show (for 127.0.0.1 at 2009-11-15 16:15:54) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mFirm Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `firms`[0m
+  [4;35;1mFirm Load (0.3ms)[0m   [0mSELECT * FROM `firms` WHERE (`firms`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering firms/show
+  [4;36;1mOffering Load (0.4ms)[0m   [0;1mSELECT * FROM `offerings` WHERE (`offerings`.firm_id = 1) [0m
+  [4;35;1mUser Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Completed in 172ms (View: 41, DB: 3) | 200 OK [http://localhost/firms/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OfferingsController#new (for 127.0.0.1 at 2009-11-15 16:15:56) [GET]
+  Parameters: {"firm_id"=>"1"}
+  [4;36;1mFirm Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `firms`[0m
+  [4;35;1mFirm Load (0.3ms)[0m   [0mSELECT * FROM `firms` WHERE (`firms`.`id` = 1) [0m
+  [4;36;1mOffering Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `offerings`[0m
+Rendering template within layouts/application
+Rendering offerings/new
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `firms` WHERE (`firms`.`id` = 1) [0m
+  [4;36;1mActivity Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `activities`[0m
+Rendered activities/_form (3.7ms)
+Rendered shared/_nested_fields (26.6ms)
+  [4;35;1mFunction Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `functions`[0m
+Rendered functions/_form (2.3ms)
+Rendered shared/_nested_fields (25.7ms)
+  [4;36;1mContract Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `contracts`[0m
+Rendered contracts/_form (2.2ms)
+Rendered shared/_nested_fields (24.8ms)
+  [4;35;1mLocalisation Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `localisations`[0m
+Rendered localisations/_form (2.4ms)
+Rendered shared/_nested_fields (27.9ms)
+Rendered offerings/_form (144.5ms)
+  [4;36;1mUser Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Completed in 202ms (View: 167, DB: 7) | 200 OK [http://localhost/firms/1/offerings/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ActivitiesController#index (for 127.0.0.1 at 2009-11-15 16:25:32) [GET]
+  [4;35;1mActivity Load (0.4ms)[0m   [0mSELECT * FROM `activities` [0m
+Rendering template within layouts/application
+Rendering activities/index
+  [4;36;1mActivity Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `activities`[0m
+  [4;35;1mSlug Load (0.4ms)[0m   [0mSELECT * FROM `slugs` WHERE (`slugs`.sluggable_id = 1 AND `slugs`.sluggable_type = 'Activity') ORDER BY id DESC LIMIT 1[0m
+  [4;36;1mUser Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Completed in 70ms (View: 48, DB: 3) | 200 OK [http://localhost/activities]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ActivitiesController#show (for 127.0.0.1 at 2009-11-15 16:25:35) [GET]
+  Parameters: {"id"=>"ingenierie"}
+  [4;35;1mActivity Load (0.5ms)[0m   [0mSELECT activities.* FROM `activities` INNER JOIN `slugs` ON `slugs`.sluggable_id = `activities`.id AND `slugs`.sluggable_type = 'Activity' WHERE (`slugs`.`scope` IS NULL AND `slugs`.`sequence` = '1' AND `slugs`.`name` = 'ingenierie') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering activities/show
+  [4;36;1mActivity Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `activities`[0m
+  [4;35;1mSlug Load (0.4ms)[0m   [0mSELECT * FROM `slugs` WHERE (`slugs`.sluggable_id = 1 AND `slugs`.sluggable_type = 'Activity') ORDER BY id DESC LIMIT 1[0m
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Completed in 56ms (View: 32, DB: 3) | 200 OK [http://localhost/activities/ingenierie]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FunctionsController#index (for 127.0.0.1 at 2009-11-15 16:25:46) [GET]
+  [4;35;1mFunction Load (0.5ms)[0m   [0mSELECT * FROM `functions` [0m
+Rendering template within layouts/application
+Rendering functions/index
+  [4;36;1mFunction Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `functions`[0m
+  [4;35;1mSlug Load (0.4ms)[0m   [0mSELECT * FROM `slugs` WHERE (`slugs`.sluggable_id = 1 AND `slugs`.sluggable_type = 'Function') ORDER BY id DESC LIMIT 1[0m
+  [4;36;1mUser Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Completed in 79ms (View: 53, DB: 4) | 200 OK [http://localhost/functions]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FunctionsController#show (for 127.0.0.1 at 2009-11-15 16:25:52) [GET]
+  Parameters: {"id"=>"databasa-administrator"}
+  [4;35;1mFunction Load (0.5ms)[0m   [0mSELECT functions.* FROM `functions` INNER JOIN `slugs` ON `slugs`.sluggable_id = `functions`.id AND `slugs`.sluggable_type = 'Function' WHERE (`slugs`.`scope` IS NULL AND `slugs`.`sequence` = '1' AND `slugs`.`name` = 'databasa-administrator') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering functions/show
+  [4;36;1mFunction Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `functions`[0m
+  [4;35;1mSlug Load (0.4ms)[0m   [0mSELECT * FROM `slugs` WHERE (`slugs`.sluggable_id = 1 AND `slugs`.sluggable_type = 'Function') ORDER BY id DESC LIMIT 1[0m
+  [4;36;1mUser Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Completed in 61ms (View: 37, DB: 3) | 200 OK [http://localhost/functions/databasa-administrator]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContractsController#index (for 127.0.0.1 at 2009-11-15 16:26:03) [GET]
+  [4;35;1mContract Load (0.4ms)[0m   [0mSELECT * FROM `contracts` [0m
+Rendering template within layouts/application
+Rendering contracts/index
+  [4;36;1mContract Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `contracts`[0m
+  [4;35;1mSlug Load (0.5ms)[0m   [0mSELECT * FROM `slugs` WHERE (`slugs`.sluggable_id = 1 AND `slugs`.sluggable_type = 'Contract') ORDER BY id DESC LIMIT 1[0m
+  [4;36;1mSlug Load (0.6ms)[0m   [0;1mSELECT * FROM `slugs` WHERE (`slugs`.sluggable_id = 2 AND `slugs`.sluggable_type = 'Contract') ORDER BY id DESC LIMIT 1[0m
+  [4;35;1mUser Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Completed in 91ms (View: 63, DB: 4) | 200 OK [http://localhost/contracts]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContractsController#destroy (for 127.0.0.1 at 2009-11-15 16:26:13) [DELETE]
+  Parameters: {"authenticity_token"=>"awTkg9SPFoG5Ey1+BBEgpq9dbjUBYcZR2OJJl7TblBI=", "id"=>"cdi--2"}
+  [4;36;1mContract Load (0.7ms)[0m   [0;1mSELECT contracts.* FROM `contracts` INNER JOIN `slugs` ON `slugs`.sluggable_id = `contracts`.id AND `slugs`.sluggable_type = 'Contract' WHERE (`slugs`.`scope` IS NULL AND `slugs`.`sequence` = '2' AND `slugs`.`name` = 'cdi') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mContract Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `contracts`[0m
+  [4;35;1mSlug Load (0.4ms)[0m   [0mSELECT * FROM `slugs` WHERE (`slugs`.sluggable_id = 2 AND `slugs`.sluggable_type = 'Contract') ORDER BY id DESC[0m
+  [4;36;1mSlug Destroy (0.3ms)[0m   [0;1mDELETE FROM `slugs` WHERE `id` = 3[0m
+  [4;35;1mcontracts_offerings Columns (0.0ms)[0m   [0mMysql::Error: Table 'remby_development.contracts_offerings' doesn't exist: SHOW FIELDS FROM `contracts_offerings`[0m
+  [4;36;1mSQL (1.5ms)[0m   [0;1mROLLBACK[0m
+
+ActiveRecord::StatementInvalid (Mysql::Error: Table 'remby_development.contracts_offerings' doesn't exist: SHOW FIELDS FROM `contracts_offerings`):
+  (eval):3:in `destroy_without_callbacks'
+  app/controllers/contracts_controller.rb:78:in `destroy'
+
+Rendered rescues/_trace (272.3ms)
+Rendered rescues/_request_and_response (0.8ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FirmsController#index (for 127.0.0.1 at 2009-11-15 16:26:41) [GET]
+  [4;35;1mFirm Load (0.5ms)[0m   [0mSELECT * FROM `firms` [0m
+Rendering template within layouts/application
+Rendering firms/index
+  [4;36;1mFirm Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `firms`[0m
+  [4;35;1mUser Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Completed in 62ms (View: 43, DB: 4) | 200 OK [http://localhost/]

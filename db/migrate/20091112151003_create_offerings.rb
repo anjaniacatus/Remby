@@ -2,7 +2,6 @@ class CreateOfferings < ActiveRecord::Migration
   def self.up
     create_table :offerings do |t|
       t.string :title
-      t.string :permalink
       t.text :description
       t.datetime :on_line
       t.datetime :dead_line

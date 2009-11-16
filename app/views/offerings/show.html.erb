@@ -1,33 +1,52 @@
-<p>
-  <b>Title:</b>
-  <%=h @offering.title %>
-</p>
+<div class="offering">
+  <p>
+    <b>Title:</b>
+    <%=h @offering.title %>
+  </p>
+  <p>
+    <b>Permalink:</b>
+    <%=h @offering.permalink %>
+  </p>
+  <p>
+    <b>Description:</b>
+    <%=h @offering.description %>
+  </p>
+  <p>
+    <b>On line:</b>
+    <%=h @offering.on_line %>
+  </p>
+  <p>
+    <b>Dead line:</b>
+    <%=h @offering.dead_line %>
+  </p>
+  <p>
+    <b>Firm:</b>
+    <%=h @offering.firm %>
+  </p>
+  <%= link_to 'Edit', edit_offering_path(@offering) %> |
+  <%= link_to 'Back', offerings_path %>
+</div>
 
-<p>
-  <b>Permalink:</b>
-  <%=h @offering.permalink %>
-</p>
+<div class="activity">
+  <% content_tag :div, :class => "activities" do %>
+    <%= render @firm.offering.activities %>
+  <% end unless @firm.offering.activities.empty? %>
+</div>
 
-<p>
-  <b>Description:</b>
-  <%=h @offering.description %>
-</p>
+<div class="function">
+  <% content_tag :div, :class => "functions" do %>
+    <%= render @firm.offering.functions %>
+  <% end unless @firm.offering.functions.empty? %>
+</div>
 
-<p>
-  <b>On line:</b>
-  <%=h @offering.on_line %>
-</p>
+<div class="contract">
+  <% content_tag :div, :class => "contracts" do %>
+    <%= render @firm.offering.contracts %>
+  <% end unless @firm.offering.contracts.empty? %>
+</div>
 
-<p>
-  <b>Dead line:</b>
-  <%=h @offering.dead_line %>
-</p>
-
-<p>
-  <b>Firm:</b>
-  <%=h @offering.firm %>
-</p>
-
-
-<%= link_to 'Edit', edit_offering_path(@offering) %> |
-<%= link_to 'Back', offerings_path %>
+<div class="localisation">
+  <% content_tag :div, :class => "localisations" do %>
+    <%= render @firm.offering.localisations %>
+  <% end unless @firm.offering.localisations.empty? %>
+</div>

@@ -5,26 +5,8 @@
 <% form_for([@offering.firm, @offering]) do |f| %>
   <%= f.error_messages %>
 
-  <p>
-    <%= f.label :title %><br />
-    <%= f.text_field :title %>
-  </p>
-  <p>
-    <%= f.label :permalink %><br />
-    <%= f.text_field :permalink %>
-  </p>
-  <p>
-    <%= f.label :description %><br />
-    <%= f.text_area :description %>
-  </p>
-  <p>
-    <%= f.label :on_line %><br />
-    <%= f.datetime_select :on_line %>
-  </p>
-  <p>
-    <%= f.label :dead_line %><br />
-    <%= f.datetime_select :dead_line %>
-  </p>
+  <%= render f %>
+
   <p>
     <%= f.submit 'Create' %>
   </p>
