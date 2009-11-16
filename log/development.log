@@ -5222,3 +5222,74 @@ Migrating to CreateContacts (20091116075052)
   [4;35;1mSQL (1.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
   [4;36;1mSQL (1.8ms)[0m   [0;1mdescribe `users`[0m
   [4;35;1mSQL (0.3ms)[0m   [0mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20091109105426)
+Migrating to CreateFirms (20091111050020)
+Migrating to CreateOfferings (20091112151003)
+Migrating to CreateProfiles (20091113083250)
+Migrating to CreateExperiences (20091113085510)
+Migrating to CreateActivities (20091113173206)
+Migrating to CreateFunctions (20091113181558)
+Migrating to CreateContracts (20091113181640)
+Migrating to CreateLocalisations (20091113181726)
+Migrating to CreateSchools (20091116072324)
+Migrating to CreateDomains (20091116072607)
+Migrating to CreateEducationInformations (20091116073145)
+Migrating to CreateContacts (20091116075052)
+Migrating to CreateOtherInfos (20091116075750)
+  [4;36;1mSQL (44.8ms)[0m   [0;1mCREATE TABLE `other_infos` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `permalink` varchar(255), `description` text, `profile_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20091116075750')[0m
+Migrating to CreateSkills (20091116080106)
+  [4;36;1mSQL (5.8ms)[0m   [0;1mCREATE TABLE `skills` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `title` varchar(255), `name` varchar(255), `level` varchar(255), `description` text, `profile_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20091116080106')[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (1.6ms)[0m   [0mSHOW FIELDS FROM `activities`[0m
+  [4;36;1mSQL (1.5ms)[0m   [0;1mdescribe `activities`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW KEYS FROM `activities`[0m
+  [4;36;1mSQL (1.7ms)[0m   [0;1mSHOW FIELDS FROM `contacts`[0m
+  [4;35;1mSQL (1.6ms)[0m   [0mdescribe `contacts`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `contacts`[0m
+  [4;35;1mSQL (1.5ms)[0m   [0mSHOW FIELDS FROM `contracts`[0m
+  [4;36;1mSQL (1.5ms)[0m   [0;1mdescribe `contracts`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `contracts`[0m
+  [4;36;1mSQL (1.7ms)[0m   [0;1mSHOW FIELDS FROM `domains`[0m
+  [4;35;1mSQL (1.8ms)[0m   [0mdescribe `domains`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `domains`[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSHOW FIELDS FROM `education_informations`[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mdescribe `education_informations`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW KEYS FROM `education_informations`[0m
+  [4;36;1mSQL (2.4ms)[0m   [0;1mSHOW FIELDS FROM `experiences`[0m
+  [4;35;1mSQL (1.9ms)[0m   [0mdescribe `experiences`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `experiences`[0m
+  [4;35;1mSQL (1.8ms)[0m   [0mSHOW FIELDS FROM `firms`[0m
+  [4;36;1mSQL (1.7ms)[0m   [0;1mdescribe `firms`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW KEYS FROM `firms`[0m
+  [4;36;1mSQL (1.5ms)[0m   [0;1mSHOW FIELDS FROM `functions`[0m
+  [4;35;1mSQL (1.5ms)[0m   [0mdescribe `functions`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `functions`[0m
+  [4;35;1mSQL (1.5ms)[0m   [0mSHOW FIELDS FROM `localisations`[0m
+  [4;36;1mSQL (1.5ms)[0m   [0;1mdescribe `localisations`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW KEYS FROM `localisations`[0m
+  [4;36;1mSQL (1.9ms)[0m   [0;1mSHOW FIELDS FROM `offerings`[0m
+  [4;35;1mSQL (1.9ms)[0m   [0mdescribe `offerings`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `offerings`[0m
+  [4;35;1mSQL (2.2ms)[0m   [0mSHOW FIELDS FROM `other_infos`[0m
+  [4;36;1mSQL (1.8ms)[0m   [0;1mdescribe `other_infos`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW KEYS FROM `other_infos`[0m
+  [4;36;1mSQL (1.9ms)[0m   [0;1mSHOW FIELDS FROM `profiles`[0m
+  [4;35;1mSQL (1.9ms)[0m   [0mdescribe `profiles`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `profiles`[0m
+  [4;35;1mSQL (1.7ms)[0m   [0mSHOW FIELDS FROM `schools`[0m
+  [4;36;1mSQL (2.7ms)[0m   [0;1mdescribe `schools`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW KEYS FROM `schools`[0m
+  [4;36;1mSQL (1.9ms)[0m   [0;1mSHOW FIELDS FROM `skills`[0m
+  [4;35;1mSQL (1.8ms)[0m   [0mdescribe `skills`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `skills`[0m
+  [4;35;1mSQL (1.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (1.8ms)[0m   [0;1mdescribe `users`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW KEYS FROM `users`[0m

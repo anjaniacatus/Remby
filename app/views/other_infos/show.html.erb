@@ -1,0 +1,23 @@
+<p>
+  <b>Name:</b>
+  <%=h @other_info.name %>
+</p>
+
+<p>
+  <b>Permalink:</b>
+  <%=h @other_info.permalink %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%=h @other_info.description %>
+</p>
+
+<p>
+  <b>Profile:</b>
+  <%=h @other_info.profile %>
+</p>
+
+
+<%= link_to 'Edit', edit_other_info_path(@other_info) %> |
+<%= link_to 'Back', other_infos_path %>
