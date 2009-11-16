@@ -46,7 +46,7 @@ class OfferingsController < ApplicationController
     if params[:firm_id]
       @firm = Firm.find(params[:firm_id])
     end
-    @offering = @firm.offerings.new(params[:offering])
+    @offering = Offering.new(params[:offering])
 
     respond_to do |format|
       if @offering.save

@@ -138,6 +138,14 @@ ActiveRecord::Schema.define(:version => 20091116080106) do
     t.datetime "updated_at"
   end
 
+  create_table "slugs", :force => true do |t|
+    t.string  "name"
+    t.integer "sluggable_id"
+    t.integer "sequence",                     :default => 1, :null => false
+    t.string  "sluggable_type", :limit => 40
+    t.string  "scope",          :limit => 40
+  end
+
   create_table "users", :force => true do |t|
     t.string   "username"
     t.string   "email",                            :null => false
