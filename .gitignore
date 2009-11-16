@@ -5,8 +5,10 @@ config/database.yml
 test/*
 .DS_Store
 *.swp
+*.swo
 tmp/**
 db/.mysql
 config/sphinx.yml
 public/images/uploaded
 db/schema.rb
+log/development.log
