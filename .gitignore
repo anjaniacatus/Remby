@@ -6,7 +6,6 @@ test/*
 .DS_Store
 *.swp
 tmp/**
-vimsession
 db/.mysql
 config/sphinx.yml
 public/images/uploaded
