@@ -1,30 +1,18 @@
 ActionController::Routing::Routes.draw do |map|
-<<<<<<< HEAD
   map.resources :experiences
-=======
   map.resources :localisations
-
   map.resources :contracts
-
   map.resources :functions
-
   map.resources :activities
-
   map.resources :offerings
-
-  map.resources :firms, :has_many => :offerings, :dependent => :delete_all
->>>>>>> e5d1afc5342af0e208d6a3d7b2d10b7e22c27b3e
-
   map.resources :profiles
-
+ 
   map.resources :firms, :has_many => :offerings, :dependent => :delete_all
+
   map.login "login", :controller => "user_sessions", :action => "new"
   map.logout "logout", :controller => "user_sessions", :action => "destroy"
   map.resources :user_sessions
-  map.resources :profiles, :has_many => [:contacts, :qualifications, :skills, :further_infos], :dependent => :delete_all
-  map.resources :offerings
   map.resources :users
-  map.resources :further_infos 
   # The priority is based upon order of creation: first created -> highest priority.
 
   # Sample of regular route:
