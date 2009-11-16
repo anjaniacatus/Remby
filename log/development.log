@@ -4728,3 +4728,328 @@ Processing ProfilesController#show (for 127.0.0.1 at 2009-11-16 07:34:51) [GET]
 Rendering template within layouts/profiles
 Rendering profiles/show
 Completed in 31ms (View: 15, DB: 3) | 200 OK [http://0.0.0.0/profiles/1]
+  [4;36;1mSQL (1.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProfilesController#create (for 127.0.0.1 at 2009-11-16 07:40:47) [POST]
+  Parameters: {"commit"=>"Create", "profile"=>{"permalink"=>"", "lastname"=>"", "sex"=>"", "firstname"=>"", "description"=>"", "status"=>"", "age"=>""}, "authenticity_token"=>"PoEx8W8tmXH+I5XFeV4U391JXkkYrMQo6uHbX6D/8Bc="}
+  [4;36;1mProfile Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `profiles`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+Rendering template within layouts/profiles
+Rendering profiles/new
+Completed in 179ms (View: 157, DB: 4) | 200 OK [http://0.0.0.0/profiles]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FirmsController#index (for 127.0.0.1 at 2009-11-16 07:41:24) [GET]
+  [4;35;1mFirm Load (0.5ms)[0m   [0mSELECT * FROM `firms` [0m
+Rendering template within layouts/application
+Rendering firms/index
+  [4;36;1mFirm Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `firms`[0m
+  [4;35;1mUser Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Completed in 72ms (View: 50, DB: 5) | 200 OK [http://0.0.0.0/firms]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FirmsController#show (for 127.0.0.1 at 2009-11-16 07:41:28) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mFirm Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `firms`[0m
+  [4;35;1mFirm Load (0.3ms)[0m   [0mSELECT * FROM `firms` WHERE (`firms`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering firms/show
+  [4;36;1mOffering Load (0.4ms)[0m   [0;1mSELECT * FROM `offerings` WHERE (`offerings`.firm_id = 1) [0m
+  [4;35;1mOffering Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `offerings`[0m
+Rendered offerings/_offering (124.9ms)
+  [4;36;1mUser Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Completed in 209ms (View: 187, DB: 7) | 200 OK [http://0.0.0.0/firms/1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OfferingsController#new (for 127.0.0.1 at 2009-11-16 07:41:37) [GET]
+  Parameters: {"firm_id"=>"1"}
+  [4;35;1mFirm Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `firms`[0m
+  [4;36;1mFirm Load (0.3ms)[0m   [0;1mSELECT * FROM `firms` WHERE (`firms`.`id` = 1) [0m
+  [4;35;1mOffering Columns (2.1ms)[0m   [0mSHOW FIELDS FROM `offerings`[0m
+Rendering template within layouts/application
+Rendering offerings/new
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `firms` WHERE (`firms`.`id` = 1) [0m
+  [4;35;1mUser Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Completed in 218ms (View: 89, DB: 7) | 200 OK [http://0.0.0.0/firms/1/offerings/new]
+  [4;36;1mSQL (15.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OfferingsController#create (for 127.0.0.1 at 2009-11-16 07:43:38) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"PoEx8W8tmXH+I5XFeV4U391JXkkYrMQo6uHbX6D/8Bc=", "firm_id"=>"1", "offering"=>{"on_line(3i)"=>"16", "permalink"=>"contrôle qualité", "on_line(4i)"=>"04", "title"=>"contrôleur de qualité tissu", "on_line(5i)"=>"41", "dead_line(1i)"=>"2009", "dead_line(2i)"=>"11", "dead_line(3i)"=>"16", "description"=>"I’ve always known\r\nSince I was a young boy\r\nIn this world, everything’s as good as bad\r\nNow my father told me always speak a true word\r\nAnd I have to say that is the best advice I’ve had\r\nBecause something burns inside of me\r\nIt’s everything I long to be\r\nAnd lies they only stop me from feeling free\r\n", "dead_line(4i)"=>"04", "on_line(1i)"=>"2009", "dead_line(5i)"=>"41", "on_line(2i)"=>"11"}}
+  [4;36;1mFirm Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `firms`[0m
+  [4;35;1mFirm Load (0.4ms)[0m   [0mSELECT * FROM `firms` WHERE (`firms`.`id` = 1) [0m
+  [4;36;1mOffering Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `offerings`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mOffering Create (1.4ms)[0m   [0;1mINSERT INTO `offerings` (`permalink`, `on_line`, `created_at`, `title`, `updated_at`, `dead_line`, `description`, `firm_id`) VALUES('contrôle qualité', '2009-11-16 04:41:00', '2009-11-16 04:43:38', 'contrôleur de qualité tissu', '2009-11-16 04:43:38', '2009-11-16 04:41:00', 'I’ve always known\r\nSince I was a young boy\r\nIn this world, everything’s as good as bad\r\nNow my father told me always speak a true word\r\nAnd I have to say that is the best advice I’ve had\r\nBecause something burns inside of me\r\nIt’s everything I long to be\r\nAnd lies they only stop me from feeling free\r\n', 1)[0m
+  [4;35;1mSQL (4.6ms)[0m   [0mCOMMIT[0m
+Redirected to http://0.0.0.0:3000/offerings/2
+Completed in 58ms (DB: 25) | 302 Found [http://0.0.0.0/firms/1/offerings]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OfferingsController#show (for 127.0.0.1 at 2009-11-16 07:43:38) [GET]
+  Parameters: {"id"=>"2"}
+Redirected to http://0.0.0.0:3000/firms
+Completed in 7ms (DB: 0) | 302 Found [http://0.0.0.0/offerings/2]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FirmsController#index (for 127.0.0.1 at 2009-11-16 07:43:38) [GET]
+  [4;36;1mFirm Load (0.4ms)[0m   [0;1mSELECT * FROM `firms` [0m
+Rendering template within layouts/application
+Rendering firms/index
+  [4;35;1mFirm Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `firms`[0m
+  [4;36;1mUser Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Completed in 57ms (View: 38, DB: 4) | 200 OK [http://0.0.0.0/firms]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FirmsController#show (for 127.0.0.1 at 2009-11-16 07:43:45) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mFirm Columns (2.9ms)[0m   [0mSHOW FIELDS FROM `firms`[0m
+  [4;36;1mFirm Load (0.3ms)[0m   [0;1mSELECT * FROM `firms` WHERE (`firms`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering firms/show
+  [4;35;1mOffering Load (0.5ms)[0m   [0mSELECT * FROM `offerings` WHERE (`offerings`.firm_id = 1) [0m
+  [4;36;1mOffering Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `offerings`[0m
+Rendered offerings/_offering (1.1ms)
+Rendered offerings/_offering (0.9ms)
+  [4;35;1mUser Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Completed in 169ms (View: 50, DB: 9) | 200 OK [http://0.0.0.0/firms/1]
+  [4;36;1mSQL (1.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OfferingsController#new (for 127.0.0.1 at 2009-11-16 07:44:12) [GET]
+  Parameters: {"firm_id"=>"1"}
+  [4;36;1mFirm Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `firms`[0m
+  [4;35;1mFirm Load (0.4ms)[0m   [0mSELECT * FROM `firms` WHERE (`firms`.`id` = 1) [0m
+  [4;36;1mOffering Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `offerings`[0m
+Rendering template within layouts/application
+Rendering offerings/new
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `firms` WHERE (`firms`.`id` = 1) [0m
+  [4;36;1mUser Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Completed in 114ms (View: 79, DB: 8) | 200 OK [http://0.0.0.0/firms/1/offerings/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OfferingsController#create (for 127.0.0.1 at 2009-11-16 07:45:37) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"PoEx8W8tmXH+I5XFeV4U391JXkkYrMQo6uHbX6D/8Bc=", "firm_id"=>"1", "offering"=>{"on_line(3i)"=>"16", "permalink"=>"admin_réseau", "on_line(4i)"=>"04", "title"=>"ingenieur sécurité informatique", "on_line(5i)"=>"44", "dead_line(1i)"=>"2009", "dead_line(2i)"=>"11", "dead_line(3i)"=>"16", "description"=>"I’ve always known\r\nSince I was a young boy\r\nIn this world, everything’s as good as bad\r\nNow my father told me always speak a true word\r\nAnd I have to say that is the best advice I’ve had\r\nBecause something burns inside of me\r\nIt’s everything I long to be\r\nAnd lies they only stop me from feeling free\r\n", "dead_line(4i)"=>"04", "on_line(1i)"=>"2009", "dead_line(5i)"=>"44", "on_line(2i)"=>"11"}}
+  [4;35;1mFirm Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `firms`[0m
+  [4;36;1mFirm Load (0.3ms)[0m   [0;1mSELECT * FROM `firms` WHERE (`firms`.`id` = 1) [0m
+  [4;35;1mOffering Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `offerings`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mOffering Create (0.3ms)[0m   [0mINSERT INTO `offerings` (`permalink`, `on_line`, `created_at`, `title`, `updated_at`, `dead_line`, `description`, `firm_id`) VALUES('admin_réseau', '2009-11-16 04:44:00', '2009-11-16 04:45:37', 'ingenieur sécurité informatique', '2009-11-16 04:45:37', '2009-11-16 04:44:00', 'I’ve always known\r\nSince I was a young boy\r\nIn this world, everything’s as good as bad\r\nNow my father told me always speak a true word\r\nAnd I have to say that is the best advice I’ve had\r\nBecause something burns inside of me\r\nIt’s everything I long to be\r\nAnd lies they only stop me from feeling free\r\n', 1)[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://0.0.0.0:3000/offerings/3
+Completed in 42ms (DB: 5) | 302 Found [http://0.0.0.0/firms/1/offerings]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OfferingsController#show (for 127.0.0.1 at 2009-11-16 07:45:37) [GET]
+  Parameters: {"id"=>"3"}
+Redirected to http://0.0.0.0:3000/firms
+Completed in 7ms (DB: 0) | 302 Found [http://0.0.0.0/offerings/3]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FirmsController#index (for 127.0.0.1 at 2009-11-16 07:45:37) [GET]
+  [4;35;1mFirm Load (0.4ms)[0m   [0mSELECT * FROM `firms` [0m
+Rendering template within layouts/application
+Rendering firms/index
+  [4;36;1mFirm Columns (2.8ms)[0m   [0;1mSHOW FIELDS FROM `firms`[0m
+  [4;35;1mUser Columns (2.1ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Completed in 160ms (View: 42, DB: 6) | 200 OK [http://0.0.0.0/firms]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FirmsController#show (for 127.0.0.1 at 2009-11-16 07:45:48) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mFirm Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `firms`[0m
+  [4;35;1mFirm Load (0.4ms)[0m   [0mSELECT * FROM `firms` WHERE (`firms`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering firms/show
+  [4;36;1mOffering Load (0.4ms)[0m   [0;1mSELECT * FROM `offerings` WHERE (`offerings`.firm_id = 1) [0m
+  [4;35;1mOffering Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `offerings`[0m
+Rendered offerings/_offering (1.0ms)
+Rendered offerings/_offering (0.8ms)
+Rendered offerings/_offering (0.8ms)
+  [4;36;1mUser Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Completed in 70ms (View: 48, DB: 7) | 200 OK [http://0.0.0.0/firms/1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-16 07:46:08) [GET]
+
+ActionController::RoutingError (No route matches "/admin%C3%A7r%C3%A9seau" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-16 07:46:13) [GET]
+
+ActionController::RoutingError (No route matches "/admin_r%C3%A9seau" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FirmsController#index (for 127.0.0.1 at 2009-11-16 07:46:34) [GET]
+  [4;35;1mFirm Load (0.5ms)[0m   [0mSELECT * FROM `firms` [0m
+Rendering template within layouts/application
+Rendering firms/index
+  [4;36;1mFirm Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `firms`[0m
+  [4;35;1mUser Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Completed in 153ms (View: 135, DB: 5) | 200 OK [http://0.0.0.0/firms]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FirmsController#show (for 127.0.0.1 at 2009-11-16 07:46:37) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mFirm Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `firms`[0m
+  [4;35;1mFirm Load (0.4ms)[0m   [0mSELECT * FROM `firms` WHERE (`firms`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering firms/show
+  [4;36;1mOffering Load (0.4ms)[0m   [0;1mSELECT * FROM `offerings` WHERE (`offerings`.firm_id = 1) [0m
+  [4;35;1mOffering Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `offerings`[0m
+Rendered offerings/_offering (1.0ms)
+Rendered offerings/_offering (0.9ms)
+Rendered offerings/_offering (0.8ms)
+  [4;36;1mUser Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Completed in 69ms (View: 47, DB: 7) | 200 OK [http://0.0.0.0/firms/1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FirmsController#1 (for 127.0.0.1 at 2009-11-16 07:46:52) [GET]
+  Parameters: {"id"=>"admin_réseau"}
+
+ActionController::UnknownAction (No action responded to 1. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FirmsController#show (for 127.0.0.1 at 2009-11-16 07:47:04) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mFirm Columns (2.1ms)[0m   [0mSHOW FIELDS FROM `firms`[0m
+  [4;36;1mFirm Load (0.4ms)[0m   [0;1mSELECT * FROM `firms` WHERE (`firms`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering firms/show
+  [4;35;1mOffering Load (0.4ms)[0m   [0mSELECT * FROM `offerings` WHERE (`offerings`.firm_id = 1) [0m
+  [4;36;1mOffering Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `offerings`[0m
+Rendered offerings/_offering (1.0ms)
+Rendered offerings/_offering (0.8ms)
+Rendered offerings/_offering (0.8ms)
+  [4;35;1mUser Columns (6.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Completed in 76ms (View: 48, DB: 12) | 200 OK [http://0.0.0.0/firms/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProfilesController#index (for 127.0.0.1 at 2009-11-16 07:47:33) [GET]
+  [4;36;1mProfile Load (0.4ms)[0m   [0;1mSELECT * FROM `profiles` [0m
+Rendering template within layouts/profiles
+Rendering profiles/index
+  [4;35;1mProfile Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `profiles`[0m
+Completed in 32ms (View: 17, DB: 3) | 200 OK [http://0.0.0.0/profiles]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProfilesController#show (for 127.0.0.1 at 2009-11-16 08:08:13) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mProfile Columns (2.6ms)[0m   [0;1mSHOW FIELDS FROM `profiles`[0m
+  [4;35;1mProfile Load (0.4ms)[0m   [0mSELECT * FROM `profiles` WHERE (`profiles`.`id` = 1) [0m
+Rendering template within layouts/profiles
+Rendering profiles/show
+Completed in 30ms (View: 8, DB: 3) | 200 OK [http://0.0.0.0/profiles/1]
+  [4;36;1mSQL (43.7ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProfilesController#edit (for 127.0.0.1 at 2009-11-16 08:08:18) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mProfile Columns (2.3ms)[0m   [0;1mSHOW FIELDS FROM `profiles`[0m
+  [4;35;1mProfile Load (0.4ms)[0m   [0mSELECT * FROM `profiles` WHERE (`profiles`.`id` = 1) [0m
+Rendering template within layouts/profiles
+Rendering profiles/edit
+Completed in 52ms (View: 31, DB: 47) | 200 OK [http://0.0.0.0/profiles/1/edit]
+  [4;36;1mSQL (39.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProfilesController#destroy (for 127.0.0.1 at 2009-11-16 08:08:27) [DELETE]
+  Parameters: {"authenticity_token"=>"PoEx8W8tmXH+I5XFeV4U391JXkkYrMQo6uHbX6D/8Bc=", "id"=>"1"}
+  [4;36;1mProfile Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `profiles`[0m
+  [4;35;1mProfile Load (0.4ms)[0m   [0mSELECT * FROM `profiles` WHERE (`profiles`.`id` = 1) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mProfile Destroy (71.4ms)[0m   [0mDELETE FROM `profiles` WHERE `id` = 1[0m
+  [4;36;1mSQL (2.6ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://0.0.0.0:3000/profiles
+Completed in 96ms (DB: 116) | 302 Found [http://0.0.0.0/profiles/1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProfilesController#index (for 127.0.0.1 at 2009-11-16 08:08:27) [GET]
+  [4;35;1mProfile Load (0.4ms)[0m   [0mSELECT * FROM `profiles` [0m
+Rendering template within layouts/profiles
+Rendering profiles/index
+Completed in 18ms (View: 4, DB: 1) | 200 OK [http://0.0.0.0/profiles]
+  [4;36;1mSQL (12.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProfilesController#new (for 127.0.0.1 at 2009-11-16 08:08:30) [GET]
+  [4;36;1mProfile Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `profiles`[0m
+Rendering template within layouts/profiles
+Rendering profiles/new
+Completed in 37ms (View: 19, DB: 14) | 200 OK [http://0.0.0.0/profiles/new]
+  [4;35;1mSQL (2.3ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProfilesController#create (for 127.0.0.1 at 2009-11-16 08:08:38) [POST]
+  Parameters: {"commit"=>"Create", "profile"=>{"permalink"=>"", "lastname"=>"", "sex"=>"", "firstname"=>"", "description"=>"", "status"=>"", "age"=>""}, "authenticity_token"=>"PoEx8W8tmXH+I5XFeV4U391JXkkYrMQo6uHbX6D/8Bc="}
+  [4;35;1mProfile Columns (2.1ms)[0m   [0mSHOW FIELDS FROM `profiles`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+Rendering template within layouts/profiles
+Rendering profiles/new
+Completed in 84ms (View: 60, DB: 5) | 200 OK [http://0.0.0.0/profiles]
+  [4;36;1mSQL (78.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProfilesController#index (for 127.0.0.1 at 2009-11-16 08:37:25) [GET]
+  [4;36;1mProfile Load (125.4ms)[0m   [0;1mSELECT * FROM `profiles` [0m
+Rendering template within layouts/profiles
+Rendering profiles/index
+Completed in 473ms (View: 235, DB: 204) | 200 OK [http://0.0.0.0/profiles]
