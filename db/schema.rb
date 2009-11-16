@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20091113181726) do
+ActiveRecord::Schema.define(:version => 20091116075052) do
 
   create_table "activities", :force => true do |t|
     t.string   "name"
@@ -17,8 +17,38 @@ ActiveRecord::Schema.define(:version => 20091113181726) do
     t.datetime "updated_at"
   end
 
+  create_table "contacts", :force => true do |t|
+    t.string   "type"
+    t.string   "value"
+    t.string   "qualification"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "contracts", :force => true do |t|
     t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "domains", :force => true do |t|
+    t.string   "name"
+    t.string   "permalink"
+    t.text     "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "education_informations", :force => true do |t|
+    t.string   "speciality"
+    t.text     "details"
+    t.date     "started_on_year"
+    t.integer  "study_duration"
+    t.string   "graduation"
+    t.text     "comment"
+    t.string   "permalink"
+    t.integer  "domain_id"
+    t.integer  "school_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -75,6 +105,15 @@ ActiveRecord::Schema.define(:version => 20091113181726) do
     t.text     "description"
     t.string   "status"
     t.string   "sex"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "schools", :force => true do |t|
+    t.string   "name"
+    t.string   "permalink"
+    t.text     "description"
+    t.date     "founded_on_year"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

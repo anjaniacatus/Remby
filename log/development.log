@@ -5053,3 +5053,172 @@ Processing ProfilesController#index (for 127.0.0.1 at 2009-11-16 08:37:25) [GET]
 Rendering template within layouts/profiles
 Rendering profiles/index
 Completed in 473ms (View: 235, DB: 204) | 200 OK [http://0.0.0.0/profiles]
+  [4;36;1mSQL (103.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (249.9ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (248.6ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20091109105426)
+Migrating to CreateFirms (20091111050020)
+Migrating to CreateOfferings (20091112151003)
+Migrating to CreateProfiles (20091113083250)
+Migrating to CreateExperiences (20091113085510)
+Migrating to CreateActivities (20091113173206)
+Migrating to CreateFunctions (20091113181558)
+Migrating to CreateContracts (20091113181640)
+Migrating to CreateLocalisations (20091113181726)
+Migrating to CreateSchools (20091116072324)
+  [4;36;1mSQL (759.2ms)[0m   [0;1mCREATE TABLE `schools` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `permalink` varchar(255), `description` text, `founded_on_year` date, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20091116072324')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (200.3ms)[0m   [0mSHOW FIELDS FROM `activities`[0m
+  [4;36;1mSQL (4.6ms)[0m   [0;1mdescribe `activities`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `activities`[0m
+  [4;36;1mSQL (35.3ms)[0m   [0;1mSHOW FIELDS FROM `contracts`[0m
+  [4;35;1mSQL (1.5ms)[0m   [0mdescribe `contracts`[0m
+  [4;36;1mSQL (16.0ms)[0m   [0;1mSHOW KEYS FROM `contracts`[0m
+  [4;35;1mSQL (21.9ms)[0m   [0mSHOW FIELDS FROM `experiences`[0m
+  [4;36;1mSQL (2.2ms)[0m   [0;1mdescribe `experiences`[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSHOW KEYS FROM `experiences`[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mSHOW FIELDS FROM `firms`[0m
+  [4;35;1mSQL (1.8ms)[0m   [0mdescribe `firms`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW KEYS FROM `firms`[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mSHOW FIELDS FROM `functions`[0m
+  [4;36;1mSQL (1.5ms)[0m   [0;1mdescribe `functions`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW KEYS FROM `functions`[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mSHOW FIELDS FROM `localisations`[0m
+  [4;35;1mSQL (1.5ms)[0m   [0mdescribe `localisations`[0m
+  [4;36;1mSQL (2.5ms)[0m   [0;1mSHOW KEYS FROM `localisations`[0m
+  [4;35;1mSQL (1.6ms)[0m   [0mSHOW FIELDS FROM `offerings`[0m
+  [4;36;1mSQL (1.9ms)[0m   [0;1mdescribe `offerings`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW KEYS FROM `offerings`[0m
+  [4;36;1mSQL (1.5ms)[0m   [0;1mSHOW FIELDS FROM `profiles`[0m
+  [4;35;1mSQL (1.9ms)[0m   [0mdescribe `profiles`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW KEYS FROM `profiles`[0m
+  [4;35;1mSQL (3.0ms)[0m   [0mSHOW FIELDS FROM `schools`[0m
+  [4;36;1mSQL (1.8ms)[0m   [0;1mdescribe `schools`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW KEYS FROM `schools`[0m
+  [4;36;1mSQL (2.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (2.1ms)[0m   [0mdescribe `users`[0m
+  [4;36;1mSQL (24.2ms)[0m   [0;1mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (78.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (102.9ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (71.6ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20091109105426)
+Migrating to CreateFirms (20091111050020)
+Migrating to CreateOfferings (20091112151003)
+Migrating to CreateProfiles (20091113083250)
+Migrating to CreateExperiences (20091113085510)
+Migrating to CreateActivities (20091113173206)
+Migrating to CreateFunctions (20091113181558)
+Migrating to CreateContracts (20091113181640)
+Migrating to CreateLocalisations (20091113181726)
+Migrating to CreateSchools (20091116072324)
+Migrating to CreateDomains (20091116072607)
+  [4;36;1mSQL (70.3ms)[0m   [0;1mCREATE TABLE `domains` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `permalink` varchar(255), `description` text, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20091116072607')[0m
+Migrating to CreateEducationInformations (20091116073145)
+  [4;36;1mSQL (71.8ms)[0m   [0;1mCREATE TABLE `education_informations` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `speciality` varchar(255), `details` text, `started_on_year` date, `study_duration` int(11), `graduation` varchar(255), `comment` text, `permalink` varchar(255), `domain_id` int(11), `school_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (19.4ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20091116073145')[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (45.1ms)[0m   [0mSHOW FIELDS FROM `activities`[0m
+  [4;36;1mSQL (1.5ms)[0m   [0;1mdescribe `activities`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `activities`[0m
+  [4;36;1mSQL (1.5ms)[0m   [0;1mSHOW FIELDS FROM `contracts`[0m
+  [4;35;1mSQL (1.5ms)[0m   [0mdescribe `contracts`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `contracts`[0m
+  [4;35;1mSQL (1.8ms)[0m   [0mSHOW FIELDS FROM `domains`[0m
+  [4;36;1mSQL (1.7ms)[0m   [0;1mdescribe `domains`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW KEYS FROM `domains`[0m
+  [4;36;1mSQL (2.3ms)[0m   [0;1mSHOW FIELDS FROM `education_informations`[0m
+  [4;35;1mSQL (2.1ms)[0m   [0mdescribe `education_informations`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `education_informations`[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSHOW FIELDS FROM `experiences`[0m
+  [4;36;1mSQL (1.9ms)[0m   [0;1mdescribe `experiences`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW KEYS FROM `experiences`[0m
+  [4;36;1mSQL (1.7ms)[0m   [0;1mSHOW FIELDS FROM `firms`[0m
+  [4;35;1mSQL (1.7ms)[0m   [0mdescribe `firms`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `firms`[0m
+  [4;35;1mSQL (1.5ms)[0m   [0mSHOW FIELDS FROM `functions`[0m
+  [4;36;1mSQL (1.6ms)[0m   [0;1mdescribe `functions`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `functions`[0m
+  [4;36;1mSQL (1.5ms)[0m   [0;1mSHOW FIELDS FROM `localisations`[0m
+  [4;35;1mSQL (1.6ms)[0m   [0mdescribe `localisations`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `localisations`[0m
+  [4;35;1mSQL (1.8ms)[0m   [0mSHOW FIELDS FROM `offerings`[0m
+  [4;36;1mSQL (1.5ms)[0m   [0;1mdescribe `offerings`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW KEYS FROM `offerings`[0m
+  [4;36;1mSQL (1.9ms)[0m   [0;1mSHOW FIELDS FROM `profiles`[0m
+  [4;35;1mSQL (1.5ms)[0m   [0mdescribe `profiles`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `profiles`[0m
+  [4;35;1mSQL (1.7ms)[0m   [0mSHOW FIELDS FROM `schools`[0m
+  [4;36;1mSQL (1.8ms)[0m   [0;1mdescribe `schools`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW KEYS FROM `schools`[0m
+  [4;36;1mSQL (1.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mdescribe `users`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20091109105426)
+Migrating to CreateFirms (20091111050020)
+Migrating to CreateOfferings (20091112151003)
+Migrating to CreateProfiles (20091113083250)
+Migrating to CreateExperiences (20091113085510)
+Migrating to CreateActivities (20091113173206)
+Migrating to CreateFunctions (20091113181558)
+Migrating to CreateContracts (20091113181640)
+Migrating to CreateLocalisations (20091113181726)
+Migrating to CreateSchools (20091116072324)
+Migrating to CreateDomains (20091116072607)
+Migrating to CreateEducationInformations (20091116073145)
+Migrating to CreateContacts (20091116075052)
+  [4;36;1mSQL (8.5ms)[0m   [0;1mCREATE TABLE `contacts` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `type` varchar(255), `value` varchar(255), `qualification` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (2.3ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20091116075052')[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (1.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (1.6ms)[0m   [0mSHOW FIELDS FROM `activities`[0m
+  [4;36;1mSQL (1.6ms)[0m   [0;1mdescribe `activities`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW KEYS FROM `activities`[0m
+  [4;36;1mSQL (1.8ms)[0m   [0;1mSHOW FIELDS FROM `contacts`[0m
+  [4;35;1mSQL (1.6ms)[0m   [0mdescribe `contacts`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `contacts`[0m
+  [4;35;1mSQL (1.5ms)[0m   [0mSHOW FIELDS FROM `contracts`[0m
+  [4;36;1mSQL (1.5ms)[0m   [0;1mdescribe `contracts`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW KEYS FROM `contracts`[0m
+  [4;36;1mSQL (1.7ms)[0m   [0;1mSHOW FIELDS FROM `domains`[0m
+  [4;35;1mSQL (1.7ms)[0m   [0mdescribe `domains`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `domains`[0m
+  [4;35;1mSQL (2.1ms)[0m   [0mSHOW FIELDS FROM `education_informations`[0m
+  [4;36;1mSQL (2.1ms)[0m   [0;1mdescribe `education_informations`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW KEYS FROM `education_informations`[0m
+  [4;36;1mSQL (1.9ms)[0m   [0;1mSHOW FIELDS FROM `experiences`[0m
+  [4;35;1mSQL (1.9ms)[0m   [0mdescribe `experiences`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `experiences`[0m
+  [4;35;1mSQL (1.7ms)[0m   [0mSHOW FIELDS FROM `firms`[0m
+  [4;36;1mSQL (1.7ms)[0m   [0;1mdescribe `firms`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `firms`[0m
+  [4;36;1mSQL (2.5ms)[0m   [0;1mSHOW FIELDS FROM `functions`[0m
+  [4;35;1mSQL (1.5ms)[0m   [0mdescribe `functions`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `functions`[0m
+  [4;35;1mSQL (1.5ms)[0m   [0mSHOW FIELDS FROM `localisations`[0m
+  [4;36;1mSQL (1.5ms)[0m   [0;1mdescribe `localisations`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW KEYS FROM `localisations`[0m
+  [4;36;1mSQL (1.8ms)[0m   [0;1mSHOW FIELDS FROM `offerings`[0m
+  [4;35;1mSQL (1.8ms)[0m   [0mdescribe `offerings`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `offerings`[0m
+  [4;35;1mSQL (1.9ms)[0m   [0mSHOW FIELDS FROM `profiles`[0m
+  [4;36;1mSQL (1.9ms)[0m   [0;1mdescribe `profiles`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW KEYS FROM `profiles`[0m
+  [4;36;1mSQL (1.8ms)[0m   [0;1mSHOW FIELDS FROM `schools`[0m
+  [4;35;1mSQL (1.7ms)[0m   [0mdescribe `schools`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `schools`[0m
+  [4;35;1mSQL (1.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (1.8ms)[0m   [0;1mdescribe `users`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW KEYS FROM `users`[0m
