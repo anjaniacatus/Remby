@@ -1,0 +1,24 @@
+<h1>Listing domains</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Permalink</th>
+    <th>Description</th>
+  </tr>
+
+<% @domains.each do |domain| %>
+  <tr>
+    <td><%=h domain.name %></td>
+    <td><%=h domain.permalink %></td>
+    <td><%=h domain.description %></td>
+    <td><%= link_to 'Show', domain %></td>
+    <td><%= link_to 'Edit', edit_domain_path(domain) %></td>
+    <td><%= link_to 'Destroy', domain, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New domain', new_domain_path %>

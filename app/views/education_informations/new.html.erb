@@ -1,0 +1,47 @@
+<h1>New education_information</h1>
+
+<% form_for(@education_information) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :speciality %><br />
+    <%= f.text_field :speciality %>
+  </p>
+  <p>
+    <%= f.label :details %><br />
+    <%= f.text_area :details %>
+  </p>
+  <p>
+    <%= f.label :started_on_year %><br />
+    <%= f.date_select :started_on_year %>
+  </p>
+  <p>
+    <%= f.label :study_duration %><br />
+    <%= f.text_field :study_duration %>
+  </p>
+  <p>
+    <%= f.label :graduation %><br />
+    <%= f.text_field :graduation %>
+  </p>
+  <p>
+    <%= f.label :comment %><br />
+    <%= f.text_area :comment %>
+  </p>
+  <p>
+    <%= f.label :permalink %><br />
+    <%= f.text_field :permalink %>
+  </p>
+  <p>
+    <%= f.label :domain %><br />
+    <%= f.text_field :domain %>
+  </p>
+  <p>
+    <%= f.label :school %><br />
+    <%= f.text_field :school %>
+  </p>
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', education_informations_path %>

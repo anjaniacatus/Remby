@@ -1,0 +1,36 @@
+<h1>Listing education_informations</h1>
+
+<table>
+  <tr>
+    <th>Speciality</th>
+    <th>Details</th>
+    <th>Started on year</th>
+    <th>Study duration</th>
+    <th>Graduation</th>
+    <th>Comment</th>
+    <th>Permalink</th>
+    <th>Domain</th>
+    <th>School</th>
+  </tr>
+
+<% @education_informations.each do |education_information| %>
+  <tr>
+    <td><%=h education_information.speciality %></td>
+    <td><%=h education_information.details %></td>
+    <td><%=h education_information.started_on_year %></td>
+    <td><%=h education_information.study_duration %></td>
+    <td><%=h education_information.graduation %></td>
+    <td><%=h education_information.comment %></td>
+    <td><%=h education_information.permalink %></td>
+    <td><%=h education_information.domain %></td>
+    <td><%=h education_information.school %></td>
+    <td><%= link_to 'Show', education_information %></td>
+    <td><%= link_to 'Edit', edit_education_information_path(education_information) %></td>
+    <td><%= link_to 'Destroy', education_information, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New education_information', new_education_information_path %>

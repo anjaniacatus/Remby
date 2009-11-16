@@ -1,0 +1,18 @@
+<p>
+  <b>Name:</b>
+  <%=h @domain.name %>
+</p>
+
+<p>
+  <b>Permalink:</b>
+  <%=h @domain.permalink %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%=h @domain.description %>
+</p>
+
+
+<%= link_to 'Edit', edit_domain_path(@domain) %> |
+<%= link_to 'Back', domains_path %>

@@ -1,0 +1,26 @@
+<h1>Listing schools</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Permalink</th>
+    <th>Description</th>
+    <th>Founded on year</th>
+  </tr>
+
+<% @schools.each do |school| %>
+  <tr>
+    <td><%=h school.name %></td>
+    <td><%=h school.permalink %></td>
+    <td><%=h school.description %></td>
+    <td><%=h school.founded_on_year %></td>
+    <td><%= link_to 'Show', school %></td>
+    <td><%= link_to 'Edit', edit_school_path(school) %></td>
+    <td><%= link_to 'Destroy', school, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New school', new_school_path %>
