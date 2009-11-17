@@ -29,15 +29,11 @@ class EducationInformationsController < ApplicationController
    # if params [:profile_id]
       @profile = Profile.find(params[:profile_id])
       @education_information = @profile.education_informations.new
+   
     #else 
       #flash[:error] = "Il y a erreur"
       #redirect_to profiles_path
     #end
-
-    respond_to do |format|
-      format.html # new.html.erb
-      format.xml  { render :xml => @education_information }
-    end
   end
 
   # GET /education_informations/1/edit
@@ -48,9 +44,9 @@ class EducationInformationsController < ApplicationController
   # POST /education_informations
   # POST /education_informations.xml
   def create
-     if params[:profile_id]
-      @profile = Profile.find(params[:profile_id])
-    end
+     #if params[:profile_id]
+      #@profile = Profile.find(params[:profile_id])
+    #end
     @education_information = EducationInformation.new(params[:education_information])
 
     respond_to do |format|
@@ -59,8 +55,8 @@ class EducationInformationsController < ApplicationController
         format.html { redirect_to(@education_information) }
         format.xml  { render :xml => @education_information, :status => :created, :location => @education_information }
       else
-        format.html { render :action => "new" }
-        format.xml  { render :xml => @education_information.errors, :status => :unprocessable_entity }
+        flash[:notice] = "tsy creer le izi o!!"
+        redirect_to new_profile_education_information_path 
       end
     end
   end
