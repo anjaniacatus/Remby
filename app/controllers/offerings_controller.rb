@@ -27,7 +27,8 @@ class OfferingsController < ApplicationController
   # GET /offerings/new.xml
   def new
     if params[:firm_id]
-      @firm = Firm.find(params[:firm_id])
+      @firm = Firm.find(params[:firm_id]
+)
       @offering = @firm.offerings.new
     else
       flash[:error] = "Il y a erreur"

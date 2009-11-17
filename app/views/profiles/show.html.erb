@@ -33,6 +33,10 @@
   <%=h @profile.sex %>
 </p>
 
+<% content_tag :div, :id => "education_informations" do %>
+  <%= link_to 'New edu_info', new_profile_education_information_path(@profile) %>
+  <%= render @profile.education_informations %>
+<% end %>
 
 <%= link_to 'Edit', edit_profile_path(@profile) %> |
 <%= link_to 'Back', profiles_path %>

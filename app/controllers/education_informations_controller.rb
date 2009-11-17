@@ -2,29 +2,37 @@ class EducationInformationsController < ApplicationController
   # GET /education_informations
   # GET /education_informations.xml
   def index
-    @education_informations = EducationInformation.all
-
-    respond_to do |format|
-      format.html # index.html.erb
-      format.xml  { render :xml => @education_informations }
+    if params[:profile_id]
+      @profile = Profile.find(params[:profile_id])
+      @education_informations = @profile.education_informations
+    else 
+      flash[:error]= "error"
+      redirect_to profiles_path
     end
   end
 
   # GET /education_informations/1
   # GET /education_informations/1.xml
   def show
-    @education_information = EducationInformation.find(params[:id])
-
-    respond_to do |format|
-      format.html # show.html.erb
-      format.xml  { render :xml => @education_information }
+     if params[:profile_id]
+      @profile = Profile.find(params[:profile_id])
+      @education_informations = @profile.education_informations(params[:id])
+    else 
+      flash[:error]= "error"
+      redirect_to profiles_path
     end
   end
 
   # GET /education_informations/new
   # GET /education_informations/new.xml
   def new
-    @education_information = EducationInformation.new
+   # if params [:profile_id]
+      @profile = Profile.find(params[:profile_id])
+      @education_information = @profile.education_informations.new
+    #else 
+      #flash[:error] = "Il y a erreur"
+      #redirect_to profiles_path
+    #end
 
     respond_to do |format|
       format.html # new.html.erb
@@ -40,6 +48,9 @@ class EducationInformationsController < ApplicationController
   # POST /education_informations
   # POST /education_informations.xml
   def create
+     if params[:profile_id]
+      @profile = Profile.find(params[:profile_id])
+    end
     @education_information = EducationInformation.new(params[:education_information])
 
     respond_to do |format|
