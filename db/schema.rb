@@ -89,7 +89,6 @@ ActiveRecord::Schema.define(:version => 20091116080106) do
 
   create_table "offerings", :force => true do |t|
     t.string   "title"
-    t.string   "permalink"
     t.text     "description"
     t.datetime "on_line"
     t.datetime "dead_line"
