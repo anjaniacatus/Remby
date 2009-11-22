@@ -1,39 +1,24 @@
 class EducationInformationsController < ApplicationController
   # GET /education_informations
   # GET /education_informations.xml
-  def index
-    if params[:profile_id]
-      @profile = Profile.find(params[:profile_id])
-      @education_informations = @profile.education_informations
-    else 
-      flash[:error]= "error"
-      redirect_to profiles_path
+    def index
+      @education_informations = EducationInformation.find(:all)
     end
-  end
 
   # GET /education_informations/1
   # GET /education_informations/1.xml
   def show
-     if params[:profile_id]
-      @profile = Profile.find(params[:profile_id])
-      @education_informations = @profile.education_informations(params[:id])
-    else 
-      flash[:error]= "error"
-      redirect_to profiles_path
+      @education_information = EducationInformation.find(params[:id])
+      respond_to do |format|
+      format.html # index.html.erb
+      format.xml  { render :xml => @education_informations }
     end
   end
 
   # GET /education_informations/new
   # GET /education_informations/new.xml
   def new
-   # if params [:profile_id]
-      @profile = Profile.find(params[:profile_id])
-      @education_information = @profile.education_informations.new
-   
-    #else 
-      #flash[:error] = "Il y a erreur"
-      #redirect_to profiles_path
-    #end
+   @education_information = EducationInformation.new 
   end
 
   # GET /education_informations/1/edit
@@ -44,19 +29,13 @@ class EducationInformationsController < ApplicationController
   # POST /education_informations
   # POST /education_informations.xml
   def create
-     #if params[:profile_id]
-      #@profile = Profile.find(params[:profile_id])
-    #end
-    @education_information = EducationInformation.new(params[:education_information])
-
+    @eduinfo = EducationInformation.new(params[:eduinfo]) 
     respond_to do |format|
-      if @education_information.save
-        flash[:notice] = 'EducationInformation was successfully created.'
-        format.html { redirect_to(@education_information) }
-        format.xml  { render :xml => @education_information, :status => :created, :location => @education_information }
+      if @eduinfo.save
+        flash[:notice] = 'Edu info was successfully created.' 
+        redirect_to(@eduinfo) 
       else
-        flash[:notice] = "tsy creer le izi o!!"
-        redirect_to new_profile_education_information_path 
+         render :action => "new"
       end
     end
   end
@@ -65,12 +44,12 @@ class EducationInformationsController < ApplicationController
   # PUT /education_informations/1.xml
   def update
     @education_information = EducationInformation.find(params[:id])
-
+    @education_information.profile_id =(params(:profile)) 
     respond_to do |format|
       if @education_information.update_attributes(params[:education_information])
         flash[:notice] = 'EducationInformation was successfully updated.'
-        format.html { redirect_to(@education_information) }
-        format.xml  { head :ok }
+        format.html { redirect_to @profile_url }
+        format.xml  { render xml => @education_information, :status => :created, :location => profile }
       else
         format.html { render :action => "edit" }
         format.xml  { render :xml => @education_information.errors, :status => :unprocessable_entity }
@@ -83,10 +62,6 @@ class EducationInformationsController < ApplicationController
   def destroy
     @education_information = EducationInformation.find(params[:id])
     @education_information.destroy
-
-    respond_to do |format|
-      format.html { redirect_to(education_informations_url) }
-      format.xml  { head :ok }
-    end
+    redirect_to :back
   end
 end

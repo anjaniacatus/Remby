@@ -17,9 +17,9 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :functions
   map.resources :activities
   map.resources :offerings
-  map.resources :profiles, :has_many => :education_informations, :dependent => :destroy
+  map.resources :profiles, :has_many => :education_informations
  
-  map.resources :firms, :has_many => :offerings, :dependent => :destroy
+  map.resources :firms, :has_many => :offerings
 
   map.login "login", :controller => "user_sessions", :action => "new"
   map.logout "logout", :controller => "user_sessions", :action => "destroy"

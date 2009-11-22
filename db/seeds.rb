@@ -6,6 +6,7 @@
 #   cities = City.create([{ :name => 'Chicago' }, { :name => 'Copenhagen' }])
 #   Major.create(:name => 'Daley', :city => cities.first)
 #user account Creation
+=begin
 puts "Creating account."
 params = {
 :username => "catus",
@@ -25,3 +26,16 @@ params = {
 :description =>"Usine de fabrique de tissu size à Antsirabe"}
 firm = Firm.create(params)
 puts "firm created!!"
+=end
+#creating profile
+params = {
+:firstname => "Rakotobe",
+:lastname => "koto",
+:permalink =>"koto",
+:age => 22,
+:description => "ceci est une description de Rakotobe koto",
+:status => "single",
+:sex => "male"}
+profile = Profile.create(params)
+puts "profile created!!!"
+

@@ -9,8 +9,6 @@
     <th>Graduation</th>
     <th>Comment</th>
     <th>Permalink</th>
-    <th>Domain</th>
-    <th>School</th>
   </tr>
 
 <% @education_informations.each do |education_information| %>
@@ -22,8 +20,6 @@
     <td><%=h education_information.graduation %></td>
     <td><%=h education_information.comment %></td>
     <td><%=h education_information.permalink %></td>
-    <td><%=h education_information.domain %></td>
-    <td><%=h education_information.school %></td>
     <td><%= link_to 'Show', education_information %></td>
     <td><%= link_to 'Edit', edit_education_information_path(education_information) %></td>
     <td><%= link_to 'Destroy', education_information, :confirm => 'Are you sure?', :method => :delete %></td>
