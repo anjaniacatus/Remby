@@ -1,7 +1,7 @@
 <h1>Editing education_information</h1>
 
-<% form_for(@education_information) do |f| %>
-  <%= f.error_messages %>
+  <% form_for([@eduinfo.profile, @eduinfo], :html => {:multipart => true}) do |f| %>
+<%= f.error_messages %>
   <%= render f%>
   <p>
     <%= f.submit 'Update' %>

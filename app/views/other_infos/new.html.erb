@@ -1,25 +1,9 @@
 <h1>New other_info</h1>
 
-<% form_for(@other_info) do |f| %>
+<% form_for([@other_info.profile, @other_info], :hmtl => {:multipart => true}) do |f| %>
   <%= f.error_messages %>
-
-  <p>
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
-  </p>
-  <p>
-    <%= f.label :permalink %><br />
-    <%= f.text_field :permalink %>
-  </p>
-  <p>
-    <%= f.label :description %><br />
-    <%= f.text_area :description %>
-  </p>
-  <p>
-    <%= f.label :profile %><br />
-    <%= f.text_field :profile %>
-  </p>
-  <p>
+  <%= render f%>
+    <p>
     <%= f.submit 'Create' %>
   </p>
 <% end %>
