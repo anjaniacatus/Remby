@@ -1,33 +1,32 @@
-<p class="title">
-  Editing offering by <%= @offering.firm.name %>
-</p>
+<h1>Editing offering</h1>
 
-<% form_for([@offering.firm, @offering]) do |f| %>
+<% form_for(@offering) do |f| %>
   <%= f.error_messages %>
 
   <p>
-    <%= f.label :title %><br />
-    <%= f.text_field :title %>
+    <%= f.label :ref %><br />
+    <%= f.text_field :ref %>
   </p>
   <p>
-    <%= f.label :permalink %><br />
-    <%= f.text_field :permalink %>
+    <%= f.label :object %><br />
+    <%= f.text_field :object %>
   </p>
   <p>
-    <%= f.label :description %><br />
-    <%= f.text_area :description %>
-  </p>
-  <p>
-    <%= f.label :on_line %><br />
-    <%= f.datetime_select :on_line %>
+    <%= f.label :conditions %><br />
+    <%= f.text_area :conditions %>
   </p>
   <p>
     <%= f.label :dead_line %><br />
     <%= f.datetime_select :dead_line %>
   </p>
   <p>
+    <%= f.label :society %><br />
+    <%= f.text_field :society %>
+  </p>
+  <p>
     <%= f.submit 'Update' %>
   </p>
 <% end %>
 
+<%= link_to 'Show', @offering %> |
 <%= link_to 'Back', offerings_path %>

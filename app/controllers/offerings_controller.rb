@@ -2,57 +2,62 @@ class OfferingsController < ApplicationController
   # GET /offerings
   # GET /offerings.xml
   def index
-    if params[:firm_id]
-      @firm = Firm.find(params[:firm_id])
-      @offerings = @firm.offerings
-    else
-      flash[:error] = "Il y a erreur"
-      redirect_to firms_path
+    if params[:society_id]
+      @society = Society.find(params[:society_id])
+      @offerings = @society.offerings
+    end
+    respond_to do |format|
+      format.html # index.html.erb
+      format.xml  { render :xml => @offerings }
     end
   end
 
   # GET /offerings/1
   # GET /offerings/1.xml
   def show
-    if params[:firm_id]
-      @firm = Firm.find(params[:firm_id])
-      @offering = @firm.offerings.find(params[:id])
-    else
-      flash[:error] = "Il y a erreur"
-      redirect_to firms_path
+    if params[:society_id]
+       @society = Society.find(params[:society_id])
+       @offering = @society.offerings.find(params[:id])
+    end
+    respond_to do |format|
+      format.html # show.html.erb
+      format.xml  { render :xml => @offering }
     end
   end
 
   # GET /offerings/new
   # GET /offerings/new.xml
   def new
-    if params[:firm_id]
-      @firm = Firm.find(params[:firm_id]
-)
-      @offering = @firm.offerings.new
+    if params[:society_id]
+      @society = Society.find(params[:society_id])
+      @offering = @society.offerings.new
     else
-      flash[:error] = "Il y a erreur"
-      redirect_to firms_path
+      flash[:error] = t(:cannot_find_offerings, :default => "Misy diso")
+      redirect_to societies_path
     end
   end
 
   # GET /offerings/1/edit
   def edit
-    @offering = Offering.find(params[:id])
+    if params[:society_id]
+      @society = Society.find(params[:society_id])
+      @offering = @society.offerings.find(params[:id])
+    else
+      flash[:error] = t(:cannot_find_offerings, :default => "Misy diso")
+      redirect_to societies_path
+    end
   end
 
   # POST /offerings
   # POST /offerings.xml
   def create
-    if params[:firm_id]
-      @firm = Firm.find(params[:firm_id])
-    end
-    @offering = Offering.new(params[:offering])
+    @society = Society.find(params[:society_id])
+    @offering = @society.offerings.new(params[:offering])
 
     respond_to do |format|
       if @offering.save
-        flash[:notice] = 'Offering was successfully created.'
-        format.html { redirect_to(@offering) }
+        flash[:notice] = 'offering was successfully created.'
+        format.html { redirect_to(@society) }
         format.xml  { render :xml => @offering, :status => :created, :location => @offering }
       else
         format.html { render :action => "new" }
@@ -64,12 +69,12 @@ class OfferingsController < ApplicationController
   # PUT /offerings/1
   # PUT /offerings/1.xml
   def update
-    @offering = Offering.find(params[:id])
+    @offering = offering.find(params[:id])
 
     respond_to do |format|
       if @offering.update_attributes(params[:offering])
-        flash[:notice] = 'Offering was successfully updated.'
-        format.html { redirect_to(@offering) }
+        flash[:notice] = 'offering was successfully updated.'
+        format.html { redirect_to(@society) }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }
@@ -81,11 +86,12 @@ class OfferingsController < ApplicationController
   # DELETE /offerings/1
   # DELETE /offerings/1.xml
   def destroy
-    @offering = Offering.find(params[:id])
+    @offering = offering.find(params[:id], :include => :society)
+    @society = @offering.society
     @offering.destroy
 
     respond_to do |format|
-      format.html { redirect_to(offerings_url) }
+      format.html { redirect_to(@society) }
       format.xml  { head :ok }
     end
   end

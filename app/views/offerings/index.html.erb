@@ -1,14 +1,21 @@
 <h1>Listing offerings</h1>
 
+<table>
+  <tr>
+    <th>Ref</th>
+    <th>Object</th>
+    <th>Conditions</th>
+    <th>Dead line</th>
+    <th>Society</th>
+  </tr>
 
 <% @offerings.each do |offering| %>
   <tr>
-    <td><%=h offering.title %></td>
-    <td><%=h offering.permalink %></td>
-    <td><%=h offering.description %></td>
-    <td><%=h offering.on_line %></td>
+    <td><%=h offering.ref %></td>
+    <td><%=h offering.object %></td>
+    <td><%=h offering.conditions %></td>
     <td><%=h offering.dead_line %></td>
-    <td><%=h offering.firm %></td>
+    <td><%=h offering.society %></td>
     <td><%= link_to 'Show', offering %></td>
     <td><%= link_to 'Edit', edit_offering_path(offering) %></td>
     <td><%= link_to 'Destroy', offering, :confirm => 'Are you sure?', :method => :delete %></td>

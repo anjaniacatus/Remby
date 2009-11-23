@@ -1,0 +1,41 @@
+<p>
+  <b>Name:</b>
+  <%=h @society.name %>
+</p>
+
+<p>
+  <b>Baseline:</b>
+  <%=h @society.baseline %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%=h @society.description %>
+</p>
+
+<p>
+  <b>Category:</b>
+  <%= Society::Categories.invert[@society.category] %>
+</p>
+
+<p>
+  <b>Sector:</b>
+  <%= Society::Sectors.invert[@society.sector] %>
+</p>
+
+<%= link_to 'Edit', edit_society_path(@society) %> |
+<%= link_to 'Back', societies_path %>
+
+<div class="notes">
+  <% content_tag :div, :class => "notes" do %>
+    <%= render @society.notes %>
+  <% end unless @society.notes.empty? %>
+  <%= link_to 'Nouvelles Publications', new_society_note_path(@society) %>
+</div>
+
+<div class="offerings">
+  <% content_tag :div, :class => "offerings" do %>
+    <%= render @society.offerings %>
+  <% end unless @society.offerings.empty? %>
+  <%= link_to "Nouvel Appel d'Offre", new_society_offering_path(@society) %>
+</div>
