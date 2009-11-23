@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20091116080106) do
+ActiveRecord::Schema.define(:version => 20091123193246) do
 
   create_table "activities", :force => true do |t|
     t.string   "name"
@@ -66,15 +66,6 @@ ActiveRecord::Schema.define(:version => 20091116080106) do
     t.datetime "updated_at"
   end
 
-  create_table "firms", :force => true do |t|
-    t.string   "name"
-    t.string   "permalink"
-    t.string   "baseline"
-    t.text     "description"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "functions", :force => true do |t|
     t.string   "name"
     t.datetime "created_at"
@@ -87,12 +78,20 @@ ActiveRecord::Schema.define(:version => 20091116080106) do
     t.datetime "updated_at"
   end
 
-  create_table "offerings", :force => true do |t|
+  create_table "notes", :force => true do |t|
     t.string   "title"
     t.text     "description"
-    t.datetime "on_line"
+    t.integer  "society_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "offerings", :force => true do |t|
+    t.string   "ref"
+    t.string   "object"
+    t.text     "conditions"
     t.datetime "dead_line"
-    t.integer  "firm_id"
+    t.integer  "society_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -143,6 +142,16 @@ ActiveRecord::Schema.define(:version => 20091116080106) do
     t.integer "sequence",                     :default => 1, :null => false
     t.string  "sluggable_type", :limit => 40
     t.string  "scope",          :limit => 40
+  end
+
+  create_table "societies", :force => true do |t|
+    t.string   "name"
+    t.string   "baseline"
+    t.text     "description"
+    t.integer  "category"
+    t.integer  "sector"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "users", :force => true do |t|

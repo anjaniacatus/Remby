@@ -17,16 +17,6 @@ params = {
 }
 user = User.create!(params)
 puts "Done!!!"
-#creating firm
-puts "create firm"
-params = {
-:name => "Cotona",
-:permalink => "Cotona",
-:baseline =>"Mamokatra lamba tsara",
-:description =>"Usine de fabrique de tissu size à Antsirabe"}
-firm = Firm.create(params)
-puts "firm created!!"
-=end
 #creating profile
 params = {
 :firstname => "Rakotobe",

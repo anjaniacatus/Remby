@@ -1,12 +1,28 @@
-<p class="title">
-  Offer by <%= @offering.firm.name %>
-</p>
+<h1>Appel d'offre de <%= @offering.society.name %> </h1>
 
-<% form_for([@offering.firm, @offering]) do |f| %>
+<% form_for([@offering.society, @offering], :html => { :multipart => true }) do |f| %>
   <%= f.error_messages %>
 
-  <%= render f %>
-
+  <p>
+    <%= f.label :ref %><br />
+    <%= f.text_field :ref %>
+  </p>
+  <p>
+    <%= f.label :object %><br />
+    <%= f.text_field :object %>
+  </p>
+  <p>
+    <%= f.label :conditions %><br />
+    <%= f.text_area :conditions %>
+  </p>
+  <p>
+    <%= f.label :dead_line %><br />
+    <%= f.datetime_select :dead_line %>
+  </p>
+  <p>
+    <%= f.label :uploaded_data, 'Charger le dossier' %><br />
+    <%= f.file_field :uploaded_data %>
+  </p>
   <p>
     <%= f.submit 'Create' %>
   </p>

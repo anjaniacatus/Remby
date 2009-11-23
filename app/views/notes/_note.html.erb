@@ -1,0 +1,9 @@
+<%= note.title %>
+<p class="description">
+  <%= truncate(note.description, 200) %><br />
+</p>
+<p class="small text_right">
+  <%= link_to 'En savoir plus', note.society %>
+</p>
+<%= link_to 'Edit', edit_society_note_path(note.society, note) %>
+<%= link_to 'Destroy', note, :confirm => 'Are you sure?', :method => :delete %><br />

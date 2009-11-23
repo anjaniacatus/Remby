@@ -1,0 +1,28 @@
+<h1>Listing societies</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Baseline</th>
+    <th>Description</th>
+    <th>Category</th>
+    <th>Sector</th>
+  </tr>
+
+<% @societies.each do |society| %>
+  <tr>
+    <td><%=h society.name %></td>
+    <td><%=h society.baseline %></td>
+    <td><%=h society.description %></td>
+    <td><%=h Society::Categories.invert[society.category] %></td>
+    <td><%=h Society::Sectors.invert[society.sector] %></td>
+    <td><%= link_to 'Show', society %></td>
+    <td><%= link_to 'Edit', edit_society_path(society) %></td>
+    <td><%= link_to 'Destroy', society, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New society', new_society_path %>
