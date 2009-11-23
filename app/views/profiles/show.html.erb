@@ -34,9 +34,18 @@
 </p>
 
 <% content_tag :div, :id => "education_informations" do %>
-  <%= link_to 'New edu_info', new_profile_education_information_path(@profile) %>
   <%= render @profile.education_informations %>
-<% end %>
+<% end unless @profile.education_informations.empty? %>
+<% content_tag :div, :id => "experiences" do %>
+  <%= render @profile.experiences %>
+<% end unless @profile.experiences.empty? %>
+<% content_tag :div, :id => "skills" do %>
+  <%= render @profile.skills %>
+<% end unless @profile.skills.empty? %>
+<% content_tag :div, :id => "other_infos" do %>
+  <%= render @profile.other_infos %>
+<% end unless @profile.other_infos.empty? %>
+
 
 <%= link_to 'Edit', edit_profile_path(@profile) %> |
 <%= link_to 'Back', profiles_path %>
