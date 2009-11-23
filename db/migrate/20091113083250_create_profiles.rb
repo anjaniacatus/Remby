@@ -3,7 +3,6 @@ class CreateProfiles < ActiveRecord::Migration
     create_table :profiles do |t|
       t.string :firstname
       t.string :lastname
-      t.string :permalink
       t.integer :age
       t.text :description
       t.string :status

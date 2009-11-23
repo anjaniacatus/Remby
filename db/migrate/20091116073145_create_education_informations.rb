@@ -7,7 +7,6 @@ class CreateEducationInformations < ActiveRecord::Migration
       t.integer :study_duration
       t.string :graduation
       t.text :comment
-      t.string :permalink
       t.references :domain
       t.references :school
       t.references :profile

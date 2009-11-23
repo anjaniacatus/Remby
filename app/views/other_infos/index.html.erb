@@ -3,7 +3,6 @@
 <table>
   <tr>
     <th>Name</th>
-    <th>Permalink</th>
     <th>Description</th>
     <th>Profile</th>
   </tr>
@@ -11,7 +10,6 @@
 <% @other_infos.each do |other_info| %>
   <tr>
     <td><%=h other_info.name %></td>
-    <td><%=h other_info.permalink %></td>
     <td><%=h other_info.description %></td>
     <td><%=h other_info.profile %></td>
     <td><%= link_to 'Show', other_info %></td>
