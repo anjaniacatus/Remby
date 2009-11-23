@@ -17,7 +17,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :functions
   map.resources :activities
   map.resources :offerings
-  map.resources :profiles, :has_many => :education_informations
+  map.resources :profiles, :has_many => [:education_informations, :skills, :experiences, :other_infos]
  
   map.resources :firms, :has_many => :offerings
 

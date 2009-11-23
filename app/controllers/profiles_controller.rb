@@ -40,21 +40,34 @@ class ProfilesController < ApplicationController
   # POST /profiles
   # POST /profiles.xml
   def create
-    @profile = Profile.new(params[:profile])
-    @profile.save? redirect_to(profile_path(@profile)) 
-    render (:action => :new)  
+    @profile = Profile.new(params[:profile]) 
+    respond_to do |format|
+      if @profile.save
+        flash[:notice] = 'Profile was successfully created.'
+        format.html { redirect_to(@profile) }
+        format.xml  { render :xml => @profile, :status => :created, :location => @profile }
+      else
+        format.html { render :action => "new" }
+        format.xml  { render :xml => @profile.errors, :status => :unprocessable_entity }
+      end
+    end
+
   end
 
   # PUT /profiles/1
   # PUT /profiles/1.xml
   def update
     @profile = Profile.find(params[:id])
-    @profile.update_attributes(params[:profile]) 
-    redirect_to(profile_path(@profile)) 
-    render(:action => :edit) 
-      
+    respond_to do |format|
+      if @profile.update_attributes(params[:entity])
+        flash[:notice] = 'Profile was successfully updated.'
+        format.html { redirect_to(@profile) }
+        format.xml  { head :ok }
+      else
         format.html { render :action => "edit" }
         format.xml  { render :xml => @profile.errors, :status => :unprocessable_entity }
+      end
+    end
   end
 
   # DELETE /profiles/1
