@@ -39,3 +39,10 @@
   <% end unless @society.offerings.empty? %>
   <%= link_to "Nouvel Appel d'Offre", new_society_offering_path(@society) %>
 </div>
+
+<div class="jobs">
+  <% content_tag :div, :class => "jobs" do %>
+    <%= render @society.jobs %>
+  <% end unless @society.jobs.empty? %>
+  <%= link_to "Nouvel Offre d'emploi", new_society_job_path(@society) %>
+</div>

@@ -2,6 +2,7 @@ class Society < ActiveRecord::Base
   has_friendly_id :name, :use_slug => true, :strip_diacritics => true
   has_many :notes
   has_many :offerings
+  has_many :jobs
   named_scope :ordered, :order => "name ASC"
 
   Categories = { "S.A" => 1, "S.A.R.L" => 2, "S.A.R.L.U." => 3, "S.U." => 4, "Autres" => 5 }

@@ -1,0 +1,48 @@
+<h1>Editing job</h1>
+
+<% form_for(@job) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :ref %><br />
+    <%= f.text_field :ref %>
+  </p>
+  <p>
+    <%= f.label :description %><br />
+    <%= f.text_area :description %>
+  </p>
+  <p>
+    <%= f.label :attribution %><br />
+    <%= f.text_area :attribution %>
+  </p>
+  <p>
+    <%= f.label :profile %><br />
+    <%= f.text_area :profile %>
+  </p>
+  <p>
+    <%= f.label :folder %><br />
+    <%= f.text_area :folder %>
+  </p>
+  <p>
+    <%= f.label :dead_line %><br />
+    <%= f.datetime_select :dead_line %>
+  </p>
+  <p>
+    <%= f.label :society %><br />
+    <%= f.text_field :society %>
+  </p>
+  <p>
+    <%= f.label :function %><br />
+    <%= f.text_field :function %>
+  </p>
+  <p>
+    <%= f.label :localisation %><br />
+    <%= f.text_field :localisation %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @job %> |
+<%= link_to 'Back', jobs_path %>

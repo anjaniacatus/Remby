@@ -86,7 +86,7 @@ class OfferingsController < ApplicationController
   # DELETE /offerings/1
   # DELETE /offerings/1.xml
   def destroy
-    @offering = offering.find(params[:id], :include => :society)
+    @offering = Offering.find(params[:id], :include => :society)
     @society = @offering.society
     @offering.destroy
 

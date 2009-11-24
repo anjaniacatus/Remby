@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20091123193246) do
+ActiveRecord::Schema.define(:version => 20091124185405) do
 
   create_table "activities", :force => true do |t|
     t.string   "name"
@@ -72,6 +72,20 @@ ActiveRecord::Schema.define(:version => 20091123193246) do
     t.datetime "updated_at"
   end
 
+  create_table "jobs", :force => true do |t|
+    t.string   "ref"
+    t.text     "description"
+    t.text     "attribution"
+    t.text     "profile"
+    t.text     "folder"
+    t.datetime "dead_line"
+    t.integer  "society_id"
+    t.integer  "function_id"
+    t.integer  "localisation_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "localisations", :force => true do |t|
     t.string   "name"
     t.datetime "created_at"
@@ -92,6 +106,9 @@ ActiveRecord::Schema.define(:version => 20091123193246) do
     t.text     "conditions"
     t.datetime "dead_line"
     t.integer  "society_id"
+    t.string   "content_type"
+    t.integer  "size"
+    t.string   "filename"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

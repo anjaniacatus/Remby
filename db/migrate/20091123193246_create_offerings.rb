@@ -6,6 +6,9 @@ class CreateOfferings < ActiveRecord::Migration
       t.text :conditions
       t.datetime :dead_line
       t.references :society
+      t.string :content_type
+      t.integer :size
+      t.string :filename
 
       t.timestamps
     end
