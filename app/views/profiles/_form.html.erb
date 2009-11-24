@@ -8,19 +8,23 @@
   </p>
   <p>
     <%= form.label :age %><br />
-    <%= form.text_field :age %>
-  </p>
+        <%= options = [["you have  .... ", ""]] + Profile::AGE 
+        select("profile", "age", options) %>
+    </p>
   <p>
     <%= form.label :description %><br />
     <%= form.text_area :description %>
   </p>
   <p>
     <%= form.label :status %><br />
-    <%= form.text_field :status %>
+    <%= options = [["you are  ...", ""]] + Profile::STATUS 
+        select("profile", "status", options) %>
+
   </p>
   <p>
     <%= form.label :sex %><br />
-    <%= form.text_field :sex %>
+    <%= options = [["you are a ...", ""]] + Profile::SEX 
+        select("profile", "sex", options) %>
   </p>
   
   <%= nested_fields_for :education_informations, form %>
