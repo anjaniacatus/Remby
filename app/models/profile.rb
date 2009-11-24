@@ -11,8 +11,5 @@ class Profile < ActiveRecord::Base
   SEX = [["male", "male"], ["female", "female"]].freeze
   AGE = [[15, 15], [16, 16]].freeze
   validates_presence_of :firstname, :lastname,  :age, :sex
-  def inc_age
-     
-  end
 
 end

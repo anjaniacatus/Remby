@@ -103,9 +103,6 @@ ActiveRecord::Schema.define(:version => 20091124185405) do
     t.text     "conditions"
     t.datetime "dead_line"
     t.integer  "society_id"
-    t.string   "content_type"
-    t.integer  "size"
-    t.string   "filename"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
