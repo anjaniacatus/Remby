@@ -17,7 +17,7 @@
   </p>
   <p>
     <%= f.label :dead_line %><br />
-    <%= f.datetime_select :dead_line %>
+    <%= f.datetime_select :dead_line, :order => [ :day, :month, :year] %>
   </p>
   <p>
     <%= f.label :uploaded_data, 'Charger le dossier' %><br />

@@ -1,0 +1,36 @@
+<p>
+  <%= form.label :ref %><br />
+  <%= form.text_field :ref %>
+</p>
+<div class="functions">
+  <% params = { :f => form, :default => "N/A" } %>
+  <%= render :partial => 'functions/select', :locals => params %>
+</div>
+<div class="contracts">
+  <% params = { :f => form, :default => "N/A" } %>
+  <%= render :partial => 'functions/select', :locals => params %>
+</div>
+<div class="localisations">
+  <% params = { :f => form, :default => "N/A" } %>
+  <%= render :partial => 'functions/select', :locals => params %>
+</div>
+<p>
+  <%= form.label :description %><br />
+  <%= form.text_area :description %>
+</p>
+<p>
+  <%= form.label :attribution %><br />
+  <%= form.text_area :attribution %>
+</p>
+<p>
+  <%= form.label :profile %><br />
+  <%= form.text_area :profile %>
+</p>
+<p>
+  <%= form.label :folder %><br />
+  <%= form.text_area :folder %>
+</p>
+<p>
+  <%= form.label :dead_line %><br />
+  <%= form.datetime_select :dead_line, :order => [ :day, :month, :year] %>
+</p>

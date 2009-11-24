@@ -1,0 +1,16 @@
+<%= offering.object %>
+<p class="condition">
+  <%= truncate(offering.conditions, 200) %><br />
+</p>
+<p class="dead_line">
+  Les offres sont à déposer avant le <%= offering.dead_line  %>
+</p>
+<p>
+  <b>Download</b>
+  <%= link_to offering.object, offering.public_filename %>
+</p>
+<p class="small text_right">
+  <%= link_to 'En savoir plus', offering.society %>
+</p>
+<%= link_to 'Edit', edit_society_offering_path(offering.society, offering) %>
+<%= link_to 'Destroy', offering, :confirm => 'Are you sure?', :method => :delete %><br />

@@ -1,0 +1,48 @@
+<p>
+  <b>Ref:</b>
+  <%=h @job.ref %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%=h @job.description %>
+</p>
+
+<p>
+  <b>Attribution:</b>
+  <%=h @job.attribution %>
+</p>
+
+<p>
+  <b>Profile:</b>
+  <%=h @job.profile %>
+</p>
+
+<p>
+  <b>Folder:</b>
+  <%=h @job.folder %>
+</p>
+
+<p>
+  <b>Dead line:</b>
+  <%=h @job.dead_line %>
+</p>
+
+<p>
+  <b>Society:</b>
+  <%=h @job.society %>
+</p>
+
+<p>
+  <b>Function:</b>
+  <%=h @job.function %>
+</p>
+
+<p>
+  <b>Localisation:</b>
+  <%=h @job.localisation %>
+</p>
+
+
+<%= link_to 'Edit', edit_job_path(@job) %> |
+<%= link_to 'Back', jobs_path %>

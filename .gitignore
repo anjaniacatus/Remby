@@ -12,3 +12,6 @@ config/sphinx.yml
 public/images/uploaded
 db/schema.rb
 log/development.log
+public/offerings
+*~
+

@@ -1,9 +1,11 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :jobs
+
   map.resources :offerings
 
   map.resources :notes
 
-  map.resources :societies, :has_many => [ :notes, :offerings ], :dependent => :destroy
+  map.resources :societies, :has_many => [ :notes, :offerings, :jobs ], :dependent => :destroy
 
   map.resources :skills
 
