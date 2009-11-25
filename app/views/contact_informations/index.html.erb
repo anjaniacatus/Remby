@@ -1,0 +1,26 @@
+<h1>Listing contact_informations</h1>
+
+<table>
+  <tr>
+    <th>Contactable</th>
+    <th>Contactable type</th>
+    <th>Value format</th>
+    <th>Value</th>
+  </tr>
+
+<% @contact_informations.each do |contact_information| %>
+  <tr>
+    <td><%=h contact_information.contactable_id %></td>
+    <td><%=h contact_information.contactable_type %></td>
+    <td><%=h contact_information.value_format %></td>
+    <td><%=h contact_information.value %></td>
+    <td><%= link_to 'Show', contact_information %></td>
+    <td><%= link_to 'Edit', edit_contact_information_path(contact_information) %></td>
+    <td><%= link_to 'Destroy', contact_information, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New contact_information', new_contact_information_path %>

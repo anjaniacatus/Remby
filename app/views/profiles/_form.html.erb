@@ -1,4 +1,5 @@
-  <p>
+<% javascript :defaults, 'jquery'%>
+<p>
     <%= form.label :firstname %><br />
     <%= form.text_field :firstname %>
   </p>
@@ -26,5 +27,8 @@
     <%= options = [["you are a ...", ""]] + Profile::SEX 
         select("profile", "sex", options) %>
   </p>
+  <%= nested_fields_for :education_informations, form %>
+  <%= nested_fields_for :experiences, form %>
+  <%= nested_fields_for :skills, form %>
+  <%= nested_fields_for :other_infos, form %>
   
- 

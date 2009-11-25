@@ -1,28 +1,26 @@
-<p>
-  <b>Ref:</b>
-  <%=h @offering.ref %>
-</p>
+<div id="main" >
+  <p>
+    <b>Society:</b>
+    <%=h @offering.society.name %>
+  </p>
+  <p align="center">
+    <b>Ref:</b>
+    <%=h @offering.ref %>
+  </p>
+  <p align="justify">
+    <b><u>Object:</u></b>&nbsp;<%=h @offering.object %>
+  </p>
+  <p align="justify">
+    <b>Conditions:</b><br />
+    <%=h @offering.conditions %>
+  </p>
+  <p>
+    Les offres seront à déposer avant&nbsp;<%=h @offering.dead_line %>
+  </p>
+  <p>
+    Télécharger le dossier :&nbsp;<%= link_to @offering.object, @offering.public_filename %>
+  </p>
+</div>
 
-<p>
-  <b>Object:</b>
-  <%=h @offering.object %>
-</p>
-
-<p>
-  <b>Conditions:</b>
-  <%=h @offering.conditions %>
-</p>
-
-<p>
-  <b>Dead line:</b>
-  <%=h @offering.dead_line %>
-</p>
-
-<p>
-  <b>Society:</b>
-  <%=h @offering.society %>
-</p>
-
-
-<%= link_to 'Edit', edit_offering_path(@offering) %> |
-<%= link_to 'Back', offerings_path %>
+<%= link_to 'Edit', edit_society_offering_path(@offering.society, @offering) %> |
+<%= link_to 'Destroy', @offering, :confirm => 'Are you sure?', :method => :delete %><br />

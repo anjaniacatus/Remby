@@ -9,10 +9,20 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20091124185405) do
+ActiveRecord::Schema.define(:version => 20091125204714) do
 
   create_table "activities", :force => true do |t|
     t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "contact_informations", :force => true do |t|
+    t.integer  "contactable_id"
+    t.string   "contactable_type"
+    t.integer  "value_format"
+    t.string   "value"
+    t.string   "localisation"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -34,6 +44,7 @@ ActiveRecord::Schema.define(:version => 20091124185405) do
   create_table "domains", :force => true do |t|
     t.string   "ref"
     t.string   "name"
+    t.string   "permalink"
     t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -47,6 +58,7 @@ ActiveRecord::Schema.define(:version => 20091124185405) do
     t.integer  "study_duration"
     t.string   "graduation"
     t.text     "comment"
+    t.string   "permalink"
     t.integer  "domain_id"
     t.integer  "school_id"
     t.integer  "profile_id"
@@ -82,6 +94,7 @@ ActiveRecord::Schema.define(:version => 20091124185405) do
     t.integer  "society_id"
     t.integer  "function_id"
     t.integer  "localisation_id"
+    t.integer  "contract_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -116,6 +129,7 @@ ActiveRecord::Schema.define(:version => 20091124185405) do
   create_table "other_infos", :force => true do |t|
     t.string   "ref"
     t.string   "name"
+    t.string   "permalink"
     t.text     "description"
     t.integer  "profile_id"
     t.datetime "created_at"
@@ -126,6 +140,7 @@ ActiveRecord::Schema.define(:version => 20091124185405) do
     t.string   "ref"
     t.string   "firstname"
     t.string   "lastname"
+    t.string   "permalink"
     t.integer  "age"
     t.text     "description"
     t.string   "status"
@@ -137,6 +152,7 @@ ActiveRecord::Schema.define(:version => 20091124185405) do
   create_table "schools", :force => true do |t|
     t.string   "ref"
     t.string   "name"
+    t.string   "permalink"
     t.text     "description"
     t.date     "founded_on_year"
     t.datetime "created_at"

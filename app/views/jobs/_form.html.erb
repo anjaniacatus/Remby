@@ -8,11 +8,11 @@
 </div>
 <div class="contracts">
   <% params = { :f => form, :default => "N/A" } %>
-  <%= render :partial => 'functions/select', :locals => params %>
+  <%= render :partial => 'contracts/select', :locals => params %>
 </div>
 <div class="localisations">
   <% params = { :f => form, :default => "N/A" } %>
-  <%= render :partial => 'functions/select', :locals => params %>
+  <%= render :partial => 'localisations/select', :locals => params %>
 </div>
 <p>
   <%= form.label :description %><br />

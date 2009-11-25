@@ -15,10 +15,7 @@ class JobsController < ApplicationController
   # GET /jobs/1
   # GET /jobs/1.xml
   def show
-    if params[:society_id]
-       @society = Society.find(params[:society_id])
-       @job = @society.jobs.find(params[:id])
-    end
+    @job = Job.find(params[:id])
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @job }
@@ -74,7 +71,7 @@ class JobsController < ApplicationController
     respond_to do |format|
       if @job.update_attributes(params[:job])
         flash[:notice] = 'job was successfully updated.'
-        format.html { redirect_to(@society) }
+        format.html { redirect_to(@job) }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }

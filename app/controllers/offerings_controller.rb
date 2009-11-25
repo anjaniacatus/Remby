@@ -15,10 +15,8 @@ class OfferingsController < ApplicationController
   # GET /offerings/1
   # GET /offerings/1.xml
   def show
-    if params[:society_id]
-       @society = Society.find(params[:society_id])
-       @offering = @society.offerings.find(params[:id])
-    end
+    @offering = Offering.find(params[:id])
+    
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @offering }
