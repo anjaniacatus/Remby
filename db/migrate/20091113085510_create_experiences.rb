@@ -1,6 +1,7 @@
 class CreateExperiences < ActiveRecord::Migration
   def self.up
     create_table :experiences do |t|
+      t.string :ref
       t.string :office_name
       t.text :description
       t.string :society_name

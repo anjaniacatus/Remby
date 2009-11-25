@@ -32,6 +32,7 @@ ActiveRecord::Schema.define(:version => 20091124185405) do
   end
 
   create_table "domains", :force => true do |t|
+    t.string   "ref"
     t.string   "name"
     t.text     "description"
     t.datetime "created_at"
@@ -39,6 +40,7 @@ ActiveRecord::Schema.define(:version => 20091124185405) do
   end
 
   create_table "education_informations", :force => true do |t|
+    t.string   "ref"
     t.string   "speciality"
     t.text     "details"
     t.date     "started_on_year"
@@ -53,6 +55,7 @@ ActiveRecord::Schema.define(:version => 20091124185405) do
   end
 
   create_table "experiences", :force => true do |t|
+    t.string   "ref"
     t.string   "office_name"
     t.text     "description"
     t.string   "society_name"
@@ -103,11 +106,15 @@ ActiveRecord::Schema.define(:version => 20091124185405) do
     t.text     "conditions"
     t.datetime "dead_line"
     t.integer  "society_id"
+    t.string   "content_type"
+    t.integer  "size"
+    t.string   "filename"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "other_infos", :force => true do |t|
+    t.string   "ref"
     t.string   "name"
     t.text     "description"
     t.integer  "profile_id"
@@ -116,6 +123,7 @@ ActiveRecord::Schema.define(:version => 20091124185405) do
   end
 
   create_table "profiles", :force => true do |t|
+    t.string   "ref"
     t.string   "firstname"
     t.string   "lastname"
     t.integer  "age"
@@ -127,6 +135,7 @@ ActiveRecord::Schema.define(:version => 20091124185405) do
   end
 
   create_table "schools", :force => true do |t|
+    t.string   "ref"
     t.string   "name"
     t.text     "description"
     t.date     "founded_on_year"
@@ -135,6 +144,7 @@ ActiveRecord::Schema.define(:version => 20091124185405) do
   end
 
   create_table "skills", :force => true do |t|
+    t.string   "ref"
     t.string   "title"
     t.string   "name"
     t.string   "level"

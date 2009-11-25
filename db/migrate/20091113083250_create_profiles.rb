@@ -1,6 +1,7 @@
 class CreateProfiles < ActiveRecord::Migration
   def self.up
     create_table :profiles do |t|
+      t.string :ref
       t.string :firstname
       t.string :lastname
       t.integer :age

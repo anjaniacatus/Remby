@@ -17,7 +17,7 @@ params = {
 }
 user = User.create!(params)
 puts "Account created"
-
+=end
 puts "Creating localisation's job"
 antananarivo = Localisation.create :name => "Antananarivo"
 antsirabe = Localisation.create :name => "Antsirabe"
@@ -45,17 +45,14 @@ stage_1 = Contract.create :name => "Stage de 3 mois"
 formation = Contract.create :name => "Formation en Entreprise"
 interim = Contract.create :name => "Intérimaire"
 puts "Contract's job created"
-
 puts "Done!!!"
 #creating profile
 params = {
 :firstname => "Rakotobe",
 :lastname => "koto",
-:permalink =>"koto",
 :age => 22,
 :description => "ceci est une description de Rakotobe koto",
 :status => "single",
 :sex => "male"}
 profile = Profile.create(params)
 puts "profile created!!!"
-

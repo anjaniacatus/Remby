@@ -1,4 +1,6 @@
 class EducationInformation < ActiveRecord::Base
+   has_friendly_id :ref, :use_slug => true, :strip_diacritics => true
+
   #belongs_to :domain
   #belongs_to :school
   belongs_to :profile

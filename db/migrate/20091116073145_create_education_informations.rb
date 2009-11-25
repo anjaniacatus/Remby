@@ -1,6 +1,7 @@
 class CreateEducationInformations < ActiveRecord::Migration
   def self.up
     create_table :education_informations do |t|
+      t.string :ref    
       t.string :speciality
       t.text :details
       t.date :started_on_year

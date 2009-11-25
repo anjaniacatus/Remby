@@ -25,6 +25,12 @@ class ProfilesController < ApplicationController
   # GET /profiles/new.xml
   def new
     @profile = Profile.new
+    @profile.education_informations.build
+    @profile.experiences.build
+    @profile.skills.build
+    @profile.other_infos.build
+
+
 
     respond_to do |format|
       format.html # new.html.erb
@@ -58,15 +64,12 @@ class ProfilesController < ApplicationController
   # PUT /profiles/1.xml
   def update
     @profile = Profile.find(params[:id])
-    respond_to do |format|
-      if @profile.update_attributes(params[:entity])
-        flash[:notice] = 'Profile was successfully updated.'
-        format.html { redirect_to(@profile) }
-        format.xml  { head :ok }
+    @profile.update_attributes(params[:profile])
+     if @profile.save   
+       flash[:notice] = 'Profile was successfully updated.'
+        redirect_to(@profile) 
       else
-        format.html { render :action => "edit" }
-        format.xml  { render :xml => @profile.errors, :status => :unprocessable_entity }
-      end
+         render :action => "edit" 
     end
   end
 
