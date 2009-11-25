@@ -1,4 +1,4 @@
-<%= f.label :place_id, "Choisir le type de contrat" %><br />
+<%= f.label :contract_id, "Choisir le type de contrat" %><br />
 <% params = (defined?(optional) ? { :include_blank => optional } : { :include_blank => "n/a" }) %>
 
 <%= f.collection_select(:contract_id, Contract.ordered, :id, :name, params) %>

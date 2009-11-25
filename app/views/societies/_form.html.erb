@@ -1,0 +1,22 @@
+<p>
+  <%= form.label :name %><br />
+  <%= form.text_field :name %>
+</p>
+<p>
+  <%= form.label :baseline %><br />
+  <%= form.text_field :baseline %>
+</p>
+<p>
+  <%= form.label :description %><br />
+  <%= form.text_area :description %>
+</p>
+<p>
+  <%= form.label :category, "Dénomination" %><br />
+  <%= form.select :category, Society::Categories %>
+</p>
+<p>
+  <%= form.label :sector , "Secteur d'Activité"%><br />
+  <%= form.select :sector, Society::Sectors %>
+</p>
+
+<%= nested_fields_for :contact_informations, form %>

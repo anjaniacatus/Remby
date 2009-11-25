@@ -1,13 +1,7 @@
-<p>
-  <b>Title:</b>
-  <%=h @society.note.title %>
-</p>
+<div align="justify">
+  <h1><%= @note.title %></h1>
+  <%= textilize @note.description %>
+</div>
 
-<p>
-  <b>Description:</b>
-  <%=h @society.note.description %>
-</p>
-
-
-<%= link_to 'Edit', edit_note_path(@note) %> |
-<%= link_to 'Back', notes_path %>
+<%= link_to 'Edit', edit_society_note_path(@note.society, @note) %> |
+<%= link_to 'Destroy', @note, :confirm => 'Are you sure?', :method => :delete %><br />

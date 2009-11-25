@@ -1,0 +1,23 @@
+<p>
+  <b>Contactable:</b>
+  <%=h @contact_information.contactable_id %>
+</p>
+
+<p>
+  <b>Contactable type:</b>
+  <%=h @contact_information.contactable_type %>
+</p>
+
+<p>
+  <b>Value format:</b>
+  <%=h @contact_information.value_format %>
+</p>
+
+<p>
+  <b>Value:</b>
+  <%=h @contact_information.value %>
+</p>
+
+
+<%= link_to 'Edit', edit_contact_information_path(@contact_information) %> |
+<%= link_to 'Back', contact_informations_path %>
