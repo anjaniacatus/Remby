@@ -9,8 +9,35 @@
        <%= "var experience='#{generate_template(profile_form, :other_infos)}'" %>
   <% end -%>
 
-  <div id="profile">
-    </div> 
+<p>
+    <%= profile_form.label :firstname %><br />
+    <%= profile_form.text_field :firstname %>
+  </p>
+  <p>
+    <%= profile_form.label :lastname %><br />
+    <%= profile_form.text_field :lastname %>
+  </p>
+  <p>
+    <%= profile_form.label :age %><br />
+        <%= options = [["you have  .... ", ""]] + Profile::AGE 
+        select("profile", "age", options) %>
+    </p>
+  <p>
+    <%= profile_form .label :description %><br />
+    <%= profile_form.text_area :description %>
+  </p>
+  <p>
+    <%= profile_form.label :status %><br />
+    <%= options = [["you are  ...", ""]] + Profile::STATUS 
+        select("profile", "status", options) %>
+
+  </p>
+  <p>
+    <%= profile_form.label :sex %><br />
+    <%= options = [["you are a ...", ""]] + Profile::SEX 
+        select("profile", "sex", options) %>
+  </p>
+   
   
   <div id="education_information">
     <% profile_form.fields_for :education_informations do |edu_form| %>
