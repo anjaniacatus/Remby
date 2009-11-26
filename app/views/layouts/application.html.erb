@@ -11,11 +11,10 @@
     <%- else -%>
       <link href="/stylesheets/scaffold.css" media="scaffold" rel="stylesheet" type="text/css" />
     <%- end -%>
-    <%= stylesheet_link_tag 'scaffold' %>
-    <%= javascript_include_tag 'jquery' %>
-    <%= javascript_include_tag "scaffold" %>
-    <%= render :partial => 'shared/javascript' %>
-    <%= yield :stylesheet %>
+   <% javascript_tag do %>
+      <%= yield(:jstemplates) %>
+    <% end -%>
+ 
   </head>
   <body>
     <div id="pagewrapper">

@@ -27,19 +27,22 @@
   <%=h @profile.sex %>
 </p>
 
-<% content_tag :div, :id => "education_informations" do %>
+<% content_tag :div, :id => "education_information" do %>
   <%= render @profile.education_informations %>
 <% end unless @profile.education_informations.empty? %>
-<% content_tag :div, :id => "experiences" do %>
+<% content_tag :div, :id => "experience" do %>
   <%= render @profile.experiences %>
 <% end unless @profile.experiences.empty? %>
-<% content_tag :div, :id => "skills" do %>
+<% content_tag :div, :id => "skill" do %>
   <%= render @profile.skills %>
 <% end unless @profile.skills.empty? %>
-<% content_tag :div, :id => "other_infos" do %>
+<% content_tag :div, :id => "other_info" do %>
   <%= render @profile.other_infos %>
 <% end unless @profile.other_infos.empty? %>
 
 
-<%= link_to 'Edit', edit_profile_path(@profile) %> |
-<%= link_to 'Back', profiles_path %>
+<p>
+  <%= link_to "Edit", edit_profile_path(@profile) %> |
+  <%= link_to "Destroy", @profile, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", profiles_path %>
+</p>
