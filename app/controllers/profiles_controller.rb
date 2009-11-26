@@ -29,13 +29,6 @@ class ProfilesController < ApplicationController
     @profile.experiences.build
     @profile.skills.build
     @profile.other_infos.build
-
-
-
-    respond_to do |format|
-      format.html # new.html.erb
-      format.xml  { render :xml => @profile }
-    end
   end
 
   # GET /profiles/1/edit
@@ -47,16 +40,12 @@ class ProfilesController < ApplicationController
   # POST /profiles.xml
   def create
     @profile = Profile.new(params[:profile]) 
-    respond_to do |format|
       if @profile.save
         flash[:notice] = 'Profile was successfully created.'
-        format.html { redirect_to(@profile) }
-        format.xml  { render :xml => @profile, :status => :created, :location => @profile }
+         redirect_to @profile 
       else
-        format.html { render :action => "new" }
-        format.xml  { render :xml => @profile.errors, :status => :unprocessable_entity }
+        render :action => "new" 
       end
-    end
 
   end
 
@@ -67,7 +56,7 @@ class ProfilesController < ApplicationController
     @profile.update_attributes(params[:profile])
      if @profile.save   
        flash[:notice] = 'Profile was successfully updated.'
-        redirect_to(@profile) 
+        redirect_to @profile 
       else
          render :action => "edit" 
     end
@@ -78,10 +67,7 @@ class ProfilesController < ApplicationController
   def destroy
     @profile = Profile.find(params[:id])
     @profile.destroy
-
-    respond_to do |format|
-      format.html { redirect_to(profiles_url) }
-      format.xml  { head :ok }
-    end
+    flash[:notice] = 'Profile was successfully deleted.'
+    redirect_to profiles_url
   end
 end

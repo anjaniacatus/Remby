@@ -1,34 +1,61 @@
-<% javascript :defaults, 'jquery'%>
-<p>
-    <%= form.label :firstname %><br />
-    <%= form.text_field :firstname %>
-  </p>
-  <p>
-    <%= form.label :lastname %><br />
-    <%= form.text_field :lastname %>
-  </p>
-  <p>
-    <%= form.label :age %><br />
-        <%= options = [["you have  .... ", ""]] + Profile::AGE 
-        select("profile", "age", options) %>
-    </p>
-  <p>
-    <%= form.label :description %><br />
-    <%= form.text_area :description %>
-  </p>
-  <p>
-    <%= form.label :status %><br />
-    <%= options = [["you are  ...", ""]] + Profile::STATUS 
-        select("profile", "status", options) %>
+<% javascript :defaults, 'delegate' %>
+<%= error_messages_for :profile %>
 
+<% form_for @profile do |profile_form| -%>
+   <% content_for :jstemplates do -%>
+      <%= "var education_information='#{generate_template(profile_form, :education_informations)}'" %>
+       <%= "var experience='#{generate_template(profile_form, :experiences)}'" %>
+       <%= "var experience='#{generate_template(profile_form, :skills)}'" %>
+       <%= "var experience='#{generate_template(profile_form, :other_infos)}'" %>
+  <% end -%>
+
+  <div id="profile">
+    <% profile_form.fields_for :profiles do |pro_form| %>
+      <%= render :partial => 'profile', :locals => { :f => pro_form } %>
+    <% end -%>
+  </div> 
+  
+  <div id="education_information">
+    <% profile_form.fields_for :education_informations do |edu_form| %>
+       <%= render :partial => 'education_information', :locals => { :f => edu_form } %>
+    <% end %>
+  </div>
+  <p>
+  <%= link_to 'Add a new edu', '#education_information', :class => "add_nested_item", :rel => "education_informations" %>
+  </p>
+   
+  <div id="experience">
+   <% profile_form.fields_for :experiences do |exp_form| %>
+      <%= render :partial => 'experience', :locals => { :f => exp_form } %>
+   <% end %>
+  </div>  
+   <p>
+     <%= link_to 'Add a new experience', '#experience', :class => "add_nested_item", :rel => "experiences" %>
+   </p>
+
+  
+ 
+  <div id="skills">
+     <% profile_form.fields_for :skills do |skill_form| %>
+      <%= render :partial => 'skill', :locals => { :f =>skill_form } %>
+   <% end %>
+ 
+  </div>  
+  <p>
+  <%= link_to 'Add a new skill', '#skill', :class => "add_nested_item", :rel => "skills" %>
+  </p>
+ 
+  <div id="other_info">
+    <% profile_form.fields_for :other_infos do |other_form| %>
+      <%= render :partial => 'other_info', :locals => { :f => other_form } %>
+   <% end %>
+
+  </div>  
+ <p>
+  <%= link_to 'Add an other_info', '#other_info', :class => "add_nested_item", :rel => "other_infos" %>
   </p>
   <p>
-    <%= form.label :sex %><br />
-    <%= options = [["you are a ...", ""]] + Profile::SEX 
-        select("profile", "sex", options) %>
+   <%= profile_form.submit "Submit "%>
   </p>
-  <%= nested_fields_for :education_informations, form %>
-  <%= nested_fields_for :experiences, form %>
-  <%= nested_fields_for :skills, form %>
-  <%= nested_fields_for :other_infos, form %>
-  
+
+<% end -%>  

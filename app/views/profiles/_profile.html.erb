@@ -1,6 +1,35 @@
-<% div_for profiles do %>
-   <%= nested_fields_for :education_informations, form %>
-  <%= nested_fields_for :experiences, form %>
-  <%= nested_fields_for :skills, form %>
-  <%= nested_fields_for :other_infos, form %>
-<% end %>
+<div class ="profile">
+<p>
+    <%= f.label :firstname %><br />
+    <%= f.text_field :firstname %>
+  </p>
+  <p>
+    <%= f.label :lastname %><br />
+    <%= f.text_field :lastname %>
+  </p>
+  <p>
+    <%= f.label :age %><br />
+        <%= options = [["you have  .... ", ""]] + Profile::AGE 
+        select("profile", "age", options) %>
+    </p>
+  <p>
+    <%= f.label :description %><br />
+    <%= f.text_area :description %>
+  </p>
+  <p>
+    <%= f.label :status %><br />
+    <%= options = [["you are  ...", ""]] + Profile::STATUS 
+        select("profile", "status", options) %>
+
+  </p>
+  <p>
+    <%= f.label :sex %><br />
+    <%= options = [["you are a ...", ""]] + Profile::SEX 
+        select("profile", "sex", options) %>
+  </p>
+ <% unless f.object.new_record? %>
+      <!-- For existing records we add a checkbox to be able to delete records. -->
+      <%= f.label :_delete, "Remove:" %>
+      <%= f.check_box :_delete %>
+    <% end %>
+</div>  

@@ -1,0 +1,27 @@
+<div class="education_information">
+  <p>
+  <p>
+    <%= f.label :speciality %><br />
+    <%= f.text_field :speciality %>
+  </p>
+  <p>
+    <%= f.label :details %><br />
+    <%= f.text_area :details %>
+  </p>
+  <p>
+    <%= f.label :started_on_year %><br />
+    <%= f.date_select :started_on_year %>
+  </p>
+  <p>
+    <%= f.label :study_duration %><br />
+    <%= f.text_field :study_duration %>
+  </p>
+  <p>
+    <%= f.label :graduation %><br />
+    <%= f.text_field :graduation %>
+    <% unless f.object.new_record? %>
+      <!-- For existing records we add a checkbox to be able to delete records. -->
+      <%= f.label :_delete, "Remove:" %>
+      <%= f.check_box :_delete %>
+    <% end %>
+</div>
