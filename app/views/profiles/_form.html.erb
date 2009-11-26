@@ -10,10 +10,7 @@
   <% end -%>
 
   <div id="profile">
-    <% profile_form.fields_for :profiles do |pro_form| %>
-      <%= render :partial => 'profile', :locals => { :f => pro_form } %>
-    <% end -%>
-  </div> 
+    </div> 
   
   <div id="education_information">
     <% profile_form.fields_for :education_informations do |edu_form| %>
