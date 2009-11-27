@@ -1,5 +1,5 @@
 class Profile < ActiveRecord::Base
-  has_friendly_id :ref, :use_slug => true, :strip_diacritics => true
+  has_friendly_id :firstname, :use_slug => true, :strip_diacritics => true
   has_many :education_informations, :dependent => :destroy
   accepts_nested_attributes_for :education_informations, :allow_destroy => true
   has_many :experiences, :dependent => :destroy

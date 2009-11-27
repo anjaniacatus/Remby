@@ -40,12 +40,18 @@ class ProfilesController < ApplicationController
   # POST /profiles.xml
   def create
     @profile = Profile.new(params[:profile]) 
-      if @profile.save
+    
+    respond_to do |format| 
+     if @profile.save
         flash[:notice] = 'Profile was successfully created.'
-         redirect_to @profile 
+         format.html {redirect_to @profile}
+         format.xml  { render :xml => @profile, :status => :created, :location => @profile }
+
       else
-        render :action => "new" 
+       format.html {render :action => "new"} 
+       format.xml{ render :xml => @profile, :status => :unprocessable_profile}
       end
+     end
 
   end
 

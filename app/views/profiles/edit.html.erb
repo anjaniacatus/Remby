@@ -1,13 +1,11 @@
 <h1>Editing profile</h1>
   <% form_for(@profile, :html => { :multipart => true }) do |f| %>
-  <%= f.error_messages %>
-
-  <%= render f %>
-
-  <p>
-    <%= f.submit t(:update) %>
-  </p>
-
+    <%= f.error_messages %>
+    <%= render f %>
+    <p>
+      <%= f.submit t(:update) %>
+    </p>
+   <% end -%>
 <p>
   <%= link_to "Show", @profile %> |
   <%= link_to "View All", profiles_path %>
