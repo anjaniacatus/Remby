@@ -1,76 +1,70 @@
 <script type="text/javascript">
   //<![CDATA[
-  $(document).ready( function () {
-    /**
-      $("#q_input").toggle();
-      $("#search label").click( function () {
-      $("#q_input").toggle();
-      });
-     **/
+$(document).ready( function () {
     $(".j_hide").hide();
     $(".j_unhide").show();
     $("table.calendar").hide();
     $("#laterdude_link").hover( function () {
       $("table.calendar").show();
-    }, function () {
+      }, function () {
       $("table.calendar").hide();
-    });
+      });
     $("table.calendar").hover( function () {
       $(this).show();
-    }, function () {
+      }, function () {
       $(this).hide();
-    });
-
-    $(".button-to").each( function () {
-      var link_text = $(this).find("input:submit").val();
-      var link = $('<a href="#">' + link_text + "</a>");
-      var form = $(this);
-      $(this).hide();
-      $(link).click( function() {
-        $(form).find("input:submit").click();
       });
-      $(this).before(link);
-    });
-    var bind_delete_link = function () {
-      $(".delete_new_record_links").click( function () {
-        $($(this).attr("href")).remove();
+        $(".button-to").each( function () {
+            var link_text = $(this).find("input:submit").val();
+            var link = $('<a href="#">' + link_text + "</a>");
+            var form = $(this);
+            $(this).hide();
+            $(link).click( function() {
+              $(form).find("input:submit").click();
+              });
+            $(this).before(link);
+            });
+var bind_delete_link = function () {
+  $(".delete_new_record_links").click( function () {
+      $($(this).attr("href")).remove();
       });
-    };
-    $(".delete_links").click( function () {
-      $(this).parent("p").prev("p._delete_check_boxes").find("input:checkbox").remove();
-      $(this).parent("p").prev("p._delete_check_boxes").find("input:hidden").val("1");
-      $($(this).attr("href")).hide();
+};
+$(".delete_links").click( function () {
+    $(this).parent("p").prev("p._delete_check_boxes").find("input:checkbox").remove();
+    $(this).parent("p").prev("p._delete_check_boxes").find("input:hidden").val("1");
+    $($(this).attr("href")).hide();
     });
-    bind_delete_link();
-    var prepare_nested_fields = function (where) {
-      $(where).find(".nested_fields > .new_item").each( function () {
-        var container = $(this);
-        var item = container.attr("id").replace(new RegExp("new_(.*)", "g"), "$1");
-        var my_link = $(this).parent("div").find(".new_nested_fields_links");
-        my_link.show();
-        my_link.click( function () {
-          index = "" + new Date().getTime();
-          dom_id = item + "_" + index;
-          n_container = $(container).clone();
-          n_container.toggleClass("new_item");
-          n_container.attr("id", dom_id);
-          n_container.html((n_container.html()).replace(new RegExp(container.attr("id"), "g"), index));
-          $(n_container).find("input").removeAttr("disabled");
-          $(n_container).find("select").removeAttr("disabled");
-          $(n_container).find("textarea").removeAttr("disabled");
-          $(this).before(n_container);
-          prepare_nested_fields(n_container);
-          n_container.show();
-          bind_delete_link();
-          $('#' + dom_id + ' select.autocomplete').select_autocomplete();
+bind_delete_link();
+var prepare_nested_fields = function (where) {
+  $(where).find(".nested_fields > .new_item").each( function () {
+      var container = $(this);
+      var item = container.attr("id").replace(new RegExp("new_(.*)", "g"), "$1");
+      var my_link = $(this).parent("div").find(".new_nested_fields_links");
+      my_link.show();
+      my_link.click( function () {
+        index = "" + new Date().getTime();
+        dom_id = item + "_" + index;
+        n_container = $(container).clone();
+        n_container.toggleClass("new_item");
+        n_container.attr("id", dom_id);
+        n_container.html((n_container.html()).replace(new RegExp(container.attr("id"), "g"), index));
+        $(n_container).find("input").removeAttr("disabled");
+        $(n_container).find("select").removeAttr("disabled");
+        $(n_container).find("textarea").removeAttr("disabled");
+        $(this).before(n_container);
+        prepare_nested_fields(n_container);
+        n_container.show();
+        bind_delete_link();
+        $('#' + dom_id + ' select.autocomplete').select_autocomplete();
         });
-        $(this).find("input").attr("disabled", "disabled");
-        $(this).find("textarea").attr("disabled", "disabled");
-        $(this).find("select").attr("disabled", "disabled");
-        $(this).hide();
-      });
-    };
-    prepare_nested_fields(document);
-    $('select:enabled.autocomplete').select_autocomplete();
-    //]]>
+      $(this).find("input").attr("disabled", "disabled");
+      $(this).find("textarea").attr("disabled", "disabled");
+      $(this).find("select").attr("disabled", "disabled");
+      $(this).hide();
+  });
+};
+prepare_nested_fields(document);
+$('select:enabled.autocomplete').select_autocomplete();
+});
+//]]>
 </script>
