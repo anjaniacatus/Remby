@@ -23,7 +23,7 @@
 </p>
 
 <p>
-  <b>Sex:</b>
+  <b>Gender:</b>
   <%=h @profile.sex %>
 </p>
 <div class="Education_informations">
@@ -31,7 +31,8 @@
  <% content_tag :div, :id => "education_informations" do %>
   <%= render @profile.education_informations %>
   <% end unless @profile.education_informations.empty? %>
- <%= link_to "Nouvel formation", new_profile_education_information_path(@profile) %>
+ <%= link_to 'Nouvelle formation suivie', new_profile_education_information_path(@profile) %>
+
 </div>
 
 <div>
@@ -39,15 +40,16 @@
   <% content_tag :div, :id => "experiences" do %>
     <%= render @profile.experiences %>
     <% end unless @profile.experiences.empty? %>
-    <%= link_to "Nouvel experience", new_profile_experience_path(@profile) %>
+    <%= link_to 'Nouvelle experience', new_profile_experience_path(@profile) %>
+
 </div>
 
 <div>
-  <h2> Autres Connaissances </h2>
+  <h2> Connaissances </h2>
   <% content_tag :div, :id => "skills" do %>
     <%= render @profile.skills %>
-  <% end unless @profile.skills.empty? %>
-   <%= link_to " Nouvel autre connaissance  ", new_profile_skill_path(@profile) %>
+    <% end unless @profile.skills.empty? %>
+    <%= link_to 'Nouvelle connaissance', new_profile_skill_path(@profile) %>
 
 </div>
 
@@ -56,12 +58,10 @@
   <% content_tag :div, :id => "other_infos" do %>
     <%= render @profile.other_infos %>
     <% end unless @profile.other_infos.empty? %>
- <%= link_to "Nouvel autre detail", new_profile_other_info_path(@profile) %>
-
-</div>  
+    <%= link_to 'Nouveau info', new_profile_other_info_path(@profile) %>
+ 
+ </div>  
 </p>
-<p>
-   <td> <%= link_to 'Edit', edit_profile_path(@profile) %></td>
-
+<p> 
+ <td> <%= link_to 'Edit', edit_profile_path(@profile) %></td>
 </p>
-

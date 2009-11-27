@@ -2,6 +2,11 @@
 <% form_for(@eduinfo, :html => { :multipart => true }) do |f| %>
   <%= f.error_messages %>
   <%= render f %>
+   <p>
+    <%= f.submit 'Create' %>
+  </p>
+
+
 <% end %>
 
 <%= link_to 'Back', education_informations_path %>

@@ -2,8 +2,10 @@ class SkillsController < ApplicationController
   # GET /skills
   # GET /skills.xml
   def index
-    @skills = Skill.all
-
+    if params [:profile_id] 
+      @profile = Profile.find(params[:profile_id])
+      @skills = @profile.skills
+    end
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @skills }
@@ -24,28 +26,36 @@ class SkillsController < ApplicationController
   # GET /skills/new
   # GET /skills/new.xml
   def new
-    @skill = Skill.new
-
-    respond_to do |format|
-      format.html # new.html.erb
-      format.xml  { render :xml => @skill }
-    end
+    if params [:profile_id] 
+      @profile = Profile.find(params[:profile_id])
+      @skill = @profile.skills.new
+   else  
+      flash[:error] = t(:cannot_find_skills, :default => "Misy diso")
+      redirect_to profiles_path
+   end
   end
 
   # GET /skills/1/edit
   def edit
-    @skill = Skill.find(params[:id])
-  end
+     if params [:profile_id] 
+      @profile = Profile.find(params[:profile_id])
+      @skill = Skill.find(params[:id])
+    else
+      flash[:error] = t(:cannot_find_notes, :default => "Misy diso")
+      redirect_to skills_path
+
+    end
+   end
 
   # POST /skills
   # POST /skills.xml
   def create
-    @skill = Skill.new(params[:skill])
-
+      @profile = Profile.find(params[:profile_id])
+      @skill = @profile.skills.new(params[:skill])
     respond_to do |format|
       if @skill.save
         flash[:notice] = 'Skill was successfully created.'
-        format.html { redirect_to(@skill) }
+        format.html { redirect_to(@profile) }
         format.xml  { render :xml => @skill, :status => :created, :location => @skill }
       else
         format.html { render :action => "new" }
@@ -62,7 +72,7 @@ class SkillsController < ApplicationController
     respond_to do |format|
       if @skill.update_attributes(params[:skill])
         flash[:notice] = 'Skill was successfully updated.'
-        format.html { redirect_to(@skill) }
+        format.html { redirect_to(@profile) }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }
@@ -78,7 +88,7 @@ class SkillsController < ApplicationController
     @skill.destroy
 
     respond_to do |format|
-      format.html { redirect_to(skills_url) }
+      format.html { redirect_to(@profile) }
       format.xml  { head :ok }
     end
   end
