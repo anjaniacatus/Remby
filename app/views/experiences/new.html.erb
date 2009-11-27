@@ -1,5 +1,5 @@
-<h1>New experience</h1>
-<% form_for([@experience.profile, @experince], :html => {:multipart => true}) do |f| %>
+<h1><%= @experience.profile.firstname  %> </h1>
+<% form_for([@experience.profile, @experience]) do |f| %>
   <%= f.error_messages %>
   <%= render f%>
 <% end %>

@@ -26,21 +26,42 @@
   <b>Sex:</b>
   <%=h @profile.sex %>
 </p>
-
-<% content_tag :div, :id => "education_informations" do %>
+<div class="Education_informations">
+ <h2> Formation </h2>  
+ <% content_tag :div, :id => "education_informations" do %>
   <%= render @profile.education_informations %>
-<% end unless @profile.education_informations.empty? %>
+  <% end unless @profile.education_informations.empty? %>
+ <%= link_to "Nouvel formation", new_profile_education_information_path(@profile) %>
+</div>
 
-<% content_tag :div, :id => "experiences" do %>
-  <%= render @profile.experiences %>
-<% end unless @profile.experiences.empty? %>
+<div>
+  <h2> Experiences </h2>  
+  <% content_tag :div, :id => "experiences" do %>
+    <%= render @profile.experiences %>
+    <% end unless @profile.experiences.empty? %>
+    <%= link_to "Nouvel experience", new_profile_experience_path(@profile) %>
+</div>
 
-<% content_tag :div, :id => "skills" do %>
-  <%= render @profile.skills %>
-<% end unless @profile.skills.empty? %>
+<div>
+  <h2> Autres Connaissances </h2>
+  <% content_tag :div, :id => "skills" do %>
+    <%= render @profile.skills %>
+  <% end unless @profile.skills.empty? %>
+   <%= link_to " Nouvel autre connaissance  ", new_profile_skill_path(@profile) %>
 
-<% content_tag :div, :id => "other_infos" do %>
-  <%= render @profile.other_infos %>
-<% end unless @profile.other_infos.empty? %>
+</div>
+
+<div>
+  <h2> Divers </h2>
+  <% content_tag :div, :id => "other_infos" do %>
+    <%= render @profile.other_infos %>
+    <% end unless @profile.other_infos.empty? %>
+ <%= link_to "Nouvel autre detail", new_profile_other_info_path(@profile) %>
+
+</div>  
+</p>
+<p>
+   <td> <%= link_to 'Edit', edit_profile_path(@profile) %></td>
 
 </p>
+
