@@ -1,6 +1,5 @@
 <div class ="profile">
   <% div_for profile do %>
-  <h2><%= public_link_to profile.name, profile -%></h2>
   <%- content_tag :div, :class => "education_informations" do -%>
     <%= render profile.education_informations %>
   <%- end unless profile.education_informations.empty? -%>
@@ -20,6 +19,8 @@
   <%- content_tag :div, :class => "editors links" do -%>
     <%= link_to t(:edit), edit_profile_path(profile) %>
     <%= delete_link profile %>
-<% end %>
+  <% end -%>
+ <% end-%>
+
 </div> 
 
