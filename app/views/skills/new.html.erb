@@ -1,5 +1,5 @@
 <h1>New skill</h1>
-<% form_for([@skill.profile, @skill], :html => {:multipart => true}) do |f| %>
+<% form_for([@skill.profile, @skill]) do |f| %>
   <%= f.error_messages %>
   <%= render f%>
    <p>

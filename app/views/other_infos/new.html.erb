@@ -1,6 +1,6 @@
 <h1>New other_info</h1>
 
-<% form_for([@other_info.profile, @other_info], :hmtl => {:multipart => true}) do |f| %>
+<% form_for([@other_info.profile, @other_info]) do |f| %>
   <%= f.error_messages %>
   <%= render f%>
    <p>

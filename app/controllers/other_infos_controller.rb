@@ -2,8 +2,10 @@ class OtherInfosController < ApplicationController
   # GET /other_infos
   # GET /other_infos.xml
   def index
-    @other_infos = OtherInfo.all
-
+   if params[:profile_id] 
+    @profile = Profile.find(params[:profile_id])
+    @other_infos = profile.other_infos
+  end
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @other_infos }
@@ -24,12 +26,14 @@ class OtherInfosController < ApplicationController
   # GET /other_infos/new
   # GET /other_infos/new.xml
   def new
-    @other_info = OtherInfo.new
+     if params[:profile_id] 
+      @profile = Profile.find(params[:profile_id])
+      @other_info = @profile.other_infos.new
+     else 
+             flash[:error] = t(:cannot_find_other_infos, :default => "Misy diso")
+      redirect_to profiles_path
 
-    respond_to do |format|
-      format.html # new.html.erb
-      format.xml  { render :xml => @other_info }
-    end
+     end
   end
 
   # GET /other_infos/1/edit
@@ -40,12 +44,13 @@ class OtherInfosController < ApplicationController
   # POST /other_infos
   # POST /other_infos.xml
   def create
-    @other_info = OtherInfo.new(params[:other_info])
+    @profile = Profile.find(params[:profile_id])
+    @other_info = @profile.other_infos.new(params[:other_info])
 
     respond_to do |format|
       if @other_info.save
         flash[:notice] = 'OtherInfo was successfully created.'
-        format.html { redirect_to(@other_info) }
+        format.html { redirect_to(@profile) }
         format.xml  { render :xml => @other_info, :status => :created, :location => @other_info }
       else
         format.html { render :action => "new" }
@@ -62,7 +67,7 @@ class OtherInfosController < ApplicationController
     respond_to do |format|
       if @other_info.update_attributes(params[:other_info])
         flash[:notice] = 'OtherInfo was successfully updated.'
-        format.html { redirect_to(@other_info) }
+        format.html { redirect_to(@profile) }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }
@@ -78,7 +83,7 @@ class OtherInfosController < ApplicationController
     @other_info.destroy
 
     respond_to do |format|
-      format.html { redirect_to(other_infos_url) }
+      format.html { redirect_to(@profile) }
       format.xml  { head :ok }
     end
   end

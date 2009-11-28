@@ -26,7 +26,7 @@ class SkillsController < ApplicationController
   # GET /skills/new
   # GET /skills/new.xml
   def new
-    if params [:profile_id] 
+    if params[:profile_id] 
       @profile = Profile.find(params[:profile_id])
       @skill = @profile.skills.new
    else  
@@ -52,6 +52,7 @@ class SkillsController < ApplicationController
   def create
       @profile = Profile.find(params[:profile_id])
       @skill = @profile.skills.new(params[:skill])
+  
     respond_to do |format|
       if @skill.save
         flash[:notice] = 'Skill was successfully created.'
