@@ -16,7 +16,7 @@ class ExperiencesController < ApplicationController
   # GET /experiences/1.xml
   def show
     @experience = Experience.find(params[:id])
-
+ 
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @experience }
@@ -38,8 +38,8 @@ class ExperiencesController < ApplicationController
   # GET /experiences/1/edit
   def edit
      if params[:profile_id]
-      @profile = Profile.find(params[:profile_id])
-      @experience = @profile.experiences.find(params[:id])
+       @experience = Experience.find(params[:id], :include => :profile)
+      @profile = @experience.profile
      else
        redirect_to experiences_path    
      end  
@@ -83,12 +83,12 @@ end
   # DELETE /experiences/1
   # DELETE /experiences/1.xml
   def destroy
-    @experience = Experience.find(params[:id], include => :profile)
-    @experience = @experience.profile
+    @experience = Experience.find(params[:id], :include => :profile)
+    @profile = @experience.profile
     @experience.destroy
 
     respond_to do |format|
-      format.html { redirect_to(experiences_url) }
+      format.html { redirect_to(@profile) }
       format.xml  { head :ok }
     end
   end

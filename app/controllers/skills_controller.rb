@@ -85,7 +85,8 @@ class SkillsController < ApplicationController
   # DELETE /skills/1
   # DELETE /skills/1.xml
   def destroy
-    @skill = Skill.find(params[:id])
+   @skill= Skill.find(params[:id], :include => :profile)
+    @profile = @skill.profile
     @skill.destroy
 
     respond_to do |format|

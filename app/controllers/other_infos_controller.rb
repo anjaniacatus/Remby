@@ -79,7 +79,8 @@ class OtherInfosController < ApplicationController
   # DELETE /other_infos/1
   # DELETE /other_infos/1.xml
   def destroy
-    @other_info = OtherInfo.find(params[:id])
+   @other_info= OtherInfo.find(params[:id], :include => :profile)
+    @profile = @other_info.profile
     @other_info.destroy
 
     respond_to do |format|

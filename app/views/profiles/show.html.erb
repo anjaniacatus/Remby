@@ -26,7 +26,7 @@
   <b>Gender:</b>
   <%=h @profile.sex %>
 </p>
-<h2> Contacts</h2>
+<h3></h>Contacts</h3>
 <p>
 <% @profile.contact_informations.each do |contact| %>
     <li><%=h contact.localisation %> </li>
@@ -34,9 +34,8 @@
 <% end %>
 </p>
 
-
 <div class="Education_informations">
- <h2> Formation </h2>  
+ <h3> Formation </h3>  
  <% content_tag :div, :id => "education_informations" do %>
   <%= render @profile.education_informations %>
   <% end unless @profile.education_informations.empty? %>
@@ -45,7 +44,7 @@
 </div>
 
 <div>
-  <h2> Experiences </h2>  
+  <h3> Experiences </h3>  
   <% content_tag :div, :id => "experiences" do %>
     <%= render @profile.experiences %>
     <% end unless @profile.experiences.empty? %>
@@ -54,7 +53,7 @@
 </div>
 
 <div>
-  <h2> Connaissances </h2>
+  <h3> Connaissances </h3>
   <% content_tag :div, :id => "skills" do %>
     <%= render @profile.skills %>
     <% end unless @profile.skills.empty? %>
@@ -70,7 +69,8 @@
     <%= link_to 'Nouveau info', new_profile_other_info_path(@profile) %>
  
  </div>  
-</p>
-<p> 
+ </p>
+ <p> 
  <td> <%= link_to 'Edit', edit_profile_path(@profile) %></td>
 </p>
+

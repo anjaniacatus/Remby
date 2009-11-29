@@ -7,7 +7,7 @@ class SocietiesController < ApplicationController
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @societies }
-    e 
+    end 
   end
 
   # GET /societies/1
