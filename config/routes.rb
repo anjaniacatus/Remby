@@ -1,5 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
-  map.resources :contact_informations
+  map.resources :contact_informations, :only => [ :new, :create, :destroy ]
+
 
   map.resources :jobs
 
@@ -13,7 +14,7 @@ ActionController::Routing::Routes.draw do |map|
 
   map.resources :other_infos
 
-  map.resources :education_informations
+  map.resources :education_informations 
 
   map.resources :schools
 
@@ -22,6 +23,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :contracts
   map.resources :functions
   map.resources :profiles, :has_many => [:education_informations, :skills, :experiences, :other_infos]
+
 
   map.login "login", :controller => "user_sessions", :action => "new"
   map.logout "logout", :controller => "user_sessions", :action => "destroy"

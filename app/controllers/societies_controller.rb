@@ -7,14 +7,13 @@ class SocietiesController < ApplicationController
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @societies }
-    end
+    e 
   end
 
   # GET /societies/1
   # GET /societies/1.xml
   def show
     @society = Society.find(params[:id])
-
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @society }

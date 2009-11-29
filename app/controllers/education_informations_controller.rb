@@ -83,11 +83,9 @@ class EducationInformationsController < ApplicationController
   # DELETE /education_informations/1
   # DELETE /education_informations/1.xml
   def destroy
-    @education_information = EducationInformation.find(params[:id])
+    @profile = Profile.find(params[:profile_id]) 
+    @education_information = @profile.education_informations.find(params[:education_information])
     @education_information.destroy
-     respond_to do |format|
-      format.html { redirect_to(@profile) }
-      format.xml  { head :ok }
-    end
-  end    
+    redirect_to @profile
+end    
   end

@@ -29,7 +29,8 @@ class ProfilesController < ApplicationController
     @profile.experiences.build
     @profile.skills.build
     @profile.other_infos.build
-  end
+    @profile.contact_informations.build
+end
 
   # GET /profiles/1/edit
   def edit

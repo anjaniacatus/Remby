@@ -26,6 +26,15 @@
   <b>Gender:</b>
   <%=h @profile.sex %>
 </p>
+<h2> Contacts</h2>
+<p>
+<% @profile.contact_informations.each do |contact| %>
+    <li><%=h contact.localisation %> </li>
+    <li><%=h contact.value %> </li>
+<% end %>
+</p>
+
+
 <div class="Education_informations">
  <h2> Formation </h2>  
  <% content_tag :div, :id => "education_informations" do %>
