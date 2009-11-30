@@ -9,13 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20091125204714) do
-
-  create_table "activities", :force => true do |t|
-    t.string   "name"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
+ActiveRecord::Schema.define(:version => 20091130110011) do
 
   create_table "contact_informations", :force => true do |t|
     t.integer  "contactable_id"
@@ -23,14 +17,6 @@ ActiveRecord::Schema.define(:version => 20091125204714) do
     t.integer  "value_format"
     t.string   "value"
     t.string   "localisation"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "contacts", :force => true do |t|
-    t.string   "type"
-    t.string   "value"
-    t.string   "qualification"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -92,6 +78,16 @@ ActiveRecord::Schema.define(:version => 20091125204714) do
     t.integer  "society_id"
     t.integer  "function_id"
     t.integer  "localisation_id"
+    t.integer  "contract_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "languages", :force => true do |t|
+    t.string   "name"
+    t.string   "level"
+    t.text     "comment"
+    t.integer  "profile_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

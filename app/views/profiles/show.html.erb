@@ -68,8 +68,15 @@
     <% end unless @profile.other_infos.empty? %>
     <%= link_to 'Nouveau info', new_profile_other_info_path(@profile) %>
  
- </div>  
+  </div> 
+
  </p>
+ <h2> Language </h2>
+   <% content_tag :div, :id => "languages" do %>
+    <%= render @profile.languages %>
+    <% end unless @profile.languages.empty? %>
+    <%= link_to 'Nouvelle langue', new_profile_language_path(@profile) %>
+
  <p> 
  <td> <%= link_to 'Edit', edit_profile_path(@profile) %></td>
 </p>

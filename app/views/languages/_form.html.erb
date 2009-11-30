@@ -1,0 +1,17 @@
+ <p>
+    <%= form.label :name %><br />
+     <%= options = [["language  .... ", ""]] + Language::NAME 
+        select("language", "name", options) %>
+ </p>
+  <p>
+    <%= form.label :level %><br />
+     <%= options = [["level  .... ", ""]] + Language::LEVEL 
+        select("language", "level", options) %> 
+    </p>
+  <p>
+    <%= form.label :comment %><br />
+    <%= form.text_field :comment%>
+ </p>
+
+ 
+

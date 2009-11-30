@@ -1,4 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :languages
+
   map.resources :contact_informations, :only => [ :new, :create, :destroy ]
 
 
@@ -22,7 +24,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :localisations
   map.resources :contracts
   map.resources :functions
-  map.resources :profiles, :has_many => [:education_informations, :skills, :experiences, :other_infos]
+  map.resources :profiles, :has_many => [:languages ,:education_informations, :skills, :experiences, :other_infos]
 
 
   map.login "login", :controller => "user_sessions", :action => "new"

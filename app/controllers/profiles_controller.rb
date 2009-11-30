@@ -30,7 +30,8 @@ class ProfilesController < ApplicationController
     @profile.skills.build
     @profile.other_infos.build
     @profile.contact_informations.build
-end
+    @profile.languages.build
+  end
 
   # GET /profiles/1/edit
   def edit

@@ -1,0 +1,7 @@
+<% content_tag :div, :class => "language" do %>
+  <%= language.name %></ br>
+  <%= language.level %></ br>
+  <%= language.comment %></ br>
+  <%= link_to 'Delete',language,:confirm => 'Are you sure?', :method => :delete %>
+
+<% end %>

@@ -10,7 +10,10 @@ class Profile < ActiveRecord::Base
   accepts_nested_attributes_for :skills, :allow_destroy => true
   has_many :other_infos, :dependent => :destroy
   accepts_nested_attributes_for :other_infos, :allow_destroy => true
-   STATUS = [["single", "single"], ["married", "married"]].freeze
+  has_many :languages, :dependent => :destroy
+  accepts_nested_attributes_for :languages, :allow_destroy => true
+ 
+  STATUS = [["single", "single"], ["married", "married"]].freeze
   SEX = [["male", "male"], ["female", "female"]].freeze
   AGE = [[15, 15], [16, 16]].freeze
   validates_presence_of :firstname, :lastname,  :age, :sex
