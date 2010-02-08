@@ -10,3 +10,4 @@ db/.mysql
 *.log
 config/sphinx.yml
 public/images/uploaded
+rerun.txt

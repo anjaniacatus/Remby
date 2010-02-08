@@ -13,6 +13,9 @@ module NavigationHelpers
     when /the new compagny page/
       new_compagny_path
 
+    when /the new compagny page/
+      new_compagny_path
+
     
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:

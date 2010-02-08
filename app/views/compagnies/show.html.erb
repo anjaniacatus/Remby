@@ -1,0 +1,33 @@
+<p>
+  <b>Name:</b>
+  <%=h @compagny.name %>
+</p>
+
+<p>
+  <b>Headquaters:</b>
+  <%=h @compagny.headquaters %>
+</p>
+
+<p>
+  <b>Registration number:</b>
+  <%=h @compagny.registration_number %>
+</p>
+
+<p>
+  <b>Legal form:</b>
+  <%=h @compagny.legal_form %>
+</p>
+
+<p>
+  <b>Activity:</b>
+  <%=h @compagny.activity %>
+</p>
+
+<p>
+  <b>Sector:</b>
+  <%=h @compagny.sector %>
+</p>
+
+
+<%= link_to 'Edit', edit_compagny_path(@compagny) %> |
+<%= link_to 'Back', compagnies_path %>

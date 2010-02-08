@@ -5,7 +5,7 @@ one:
   headquaters: MyString
   registration_number: 1
   legal_form: MyString
-  activity: 
+  activity: MyString
   sector: MyString
 
 two:
@@ -13,5 +13,5 @@ two:
   headquaters: MyString
   registration_number: 1
   legal_form: MyString
-  activity: 
+  activity: MyString
   sector: MyString
