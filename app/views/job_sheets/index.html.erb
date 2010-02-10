@@ -1,0 +1,32 @@
+<h1>Listing job_sheets</h1>
+
+<table>
+  <tr>
+    <th>Position</th>
+    <th>Fields</th>
+    <th>Mission</th>
+    <th>Competence</th>
+    <th>Experience</th>
+    <th>Task</th>
+    <th>Degree</th>
+  </tr>
+
+<% @job_sheets.each do |job_sheet| %>
+  <tr>
+    <td><%=h job_sheet.position %></td>
+    <td><%=h job_sheet.fields %></td>
+    <td><%=h job_sheet.mission %></td>
+    <td><%=h job_sheet.competence %></td>
+    <td><%=h job_sheet.experience %></td>
+    <td><%=h job_sheet.task %></td>
+    <td><%=h job_sheet.degree %></td>
+    <td><%= link_to 'Show', job_sheet %></td>
+    <td><%= link_to 'Edit', edit_job_sheet_path(job_sheet) %></td>
+    <td><%= link_to 'Destroy', job_sheet, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New job_sheet', new_job_sheet_path %>

@@ -1,0 +1,19 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  position: MyString
+  fields: MyString
+  mission: MyString
+  competence: MyString
+  experience: MyString
+  task: MyString
+  degree: MyString
+
+two:
+  position: MyString
+  fields: MyString
+  mission: MyString
+  competence: MyString
+  experience: MyString
+  task: MyString
+  degree: MyString

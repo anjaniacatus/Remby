@@ -19,7 +19,12 @@ Feature: Manage compagnies
     And I should see "activity 1"
     And I should see "sector 1" 
  
-  Scenario: Register new invalid compagny
+  Scenario: to add a new job_sheets to a compagny
+    Given I am on the compagny page 
+    When  I follow "add_sheets"
+    Then I should be on the new job_sheet page
+ 
+  Scenario: Register new  job_sheets for a compagny
     Given I am on the new compagny page
     When I fill in "Name" with ""
     And I fill in "Headquaters" with ""
@@ -34,6 +39,8 @@ Feature: Manage compagnies
     And I should see ""
     And I should see ""
     And I should see ""
+
+
 
   
   Scenario: Delete compagny

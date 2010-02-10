@@ -334,3 +334,754 @@ Processing CompagniesController#show (for 127.0.0.1 at 2010-02-08 14:40:54) [GET
 Rendering template within layouts/compagnies
 Rendering compagnies/show
 Completed in 24ms (View: 17, DB: 2) | 200 OK [http://0.0.0.0/compagnies/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CompagniesController#show (for 127.0.0.1 at 2010-02-08 15:12:47) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCompagny Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `compagnies`[0m
+  [4;35;1mCompagny Load (0.3ms)[0m   [0mSELECT * FROM `compagnies` WHERE (`compagnies`.`id` = 1) [0m
+Rendering compagnies/show
+Completed in 33ms (View: 25, DB: 2) | 200 OK [http://0.0.0.0/compagnies/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CompagniesController#new (for 127.0.0.1 at 2010-02-08 15:13:18) [GET]
+  [4;36;1mCompagny Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `compagnies`[0m
+Rendering compagnies/new
+Completed in 23ms (View: 16, DB: 1) | 200 OK [http://0.0.0.0/compagnies/new]
+  [4;36;1mSQL (114.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (94.9ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (393.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateCompagnies (20100208091251)
+Migrating to CreateJobSheets (20100209105655)
+  [4;36;1mSQL (43.3ms)[0m   [0;1mCREATE TABLE `job_sheets` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `position` varchar(255), `fields` varchar(255), `mission` varchar(255), `competence` varchar(255), `experience` varchar(255), `task` varchar(255), `degree` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100209105655')[0m
+  [4;36;1mSQL (12.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (134.3ms)[0m   [0mSHOW FIELDS FROM `compagnies`[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mdescribe `compagnies`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `compagnies`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW FIELDS FROM `job_sheets`[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mdescribe `job_sheets`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW KEYS FROM `job_sheets`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (308.8ms)[0m   [0;1mDROP DATABASE IF EXISTS `remby_test`[0m
+  [4;35;1mSQL (14.6ms)[0m   [0mCREATE DATABASE `remby_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (22.5ms)[0m   [0mCREATE TABLE `compagnies` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `headquaters` varchar(255), `registration_number` int(11), `legal_form` varchar(255), `activity` varchar(255), `sector` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (20.4ms)[0m   [0mCREATE TABLE `job_sheets` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `position` varchar(255), `fields` varchar(255), `mission` varchar(255), `competence` varchar(255), `experience` varchar(255), `task` varchar(255), `degree` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (4.0ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (25.7ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM `schema_migrations`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20100209105655')[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20100208091251')[0m
+  [4;36;1mSQL (126.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (11.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (128.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (431.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (429.0ms)[0m   [0;1mDROP DATABASE IF EXISTS `remby_test`[0m
+  [4;35;1mSQL (55.4ms)[0m   [0mCREATE DATABASE `remby_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (38.2ms)[0m   [0mCREATE TABLE `compagnies` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `headquaters` varchar(255), `registration_number` int(11), `legal_form` varchar(255), `activity` varchar(255), `sector` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (8.1ms)[0m   [0mCREATE TABLE `job_sheets` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `position` varchar(255), `fields` varchar(255), `mission` varchar(255), `competence` varchar(255), `experience` varchar(255), `task` varchar(255), `degree` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (4.3ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (19.6ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM `schema_migrations`[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20100209105655')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20100208091251')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-10 11:09:21) [GET]
+
+ActionController::RoutingError (No route matches "/" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-10 11:09:21) [GET]
+
+ActionController::RoutingError (No route matches "/" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-10 11:09:28) [GET]
+
+ActionController::RoutingError (No route matches "/" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-10 11:09:28) [GET]
+
+ActionController::RoutingError (No route matches "/" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CompagniesController#index (for 127.0.0.1 at 2010-02-10 11:10:40) [GET]
+  [4;36;1mCompagny Load (36.5ms)[0m   [0;1mSELECT * FROM `compagnies` [0m
+Rendering compagnies/index
+  [4;35;1mCompagny Columns (21.2ms)[0m   [0mSHOW FIELDS FROM `compagnies`[0m
+Completed in 101ms (View: 36, DB: 58) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobSheetsController#index (for 127.0.0.1 at 2010-02-10 11:10:58) [GET]
+  [4;36;1mJobSheet Load (35.1ms)[0m   [0;1mSELECT * FROM `job_sheets` [0m
+Rendering template within layouts/job_sheets
+Rendering job_sheets/index
+Completed in 59ms (View: 16, DB: 35) | 200 OK [http://localhost/job_sheets]
+  [4;35;1mSQL (0.3ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobSheetsController#new (for 127.0.0.1 at 2010-02-10 11:11:01) [GET]
+  [4;35;1mJobSheet Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `job_sheets`[0m
+Rendering template within layouts/job_sheets
+Rendering job_sheets/new
+Completed in 25ms (View: 17, DB: 2) | 200 OK [http://localhost/job_sheets/new]
+  [4;36;1mSQL (89.5ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (158.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (48.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (127.4ms)[0m   [0;1mDROP DATABASE IF EXISTS `remby_test`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCREATE DATABASE `remby_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (30.0ms)[0m   [0mCREATE TABLE `compagnies` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `headquaters` varchar(255), `registration_number` int(11), `legal_form` varchar(255), `activity` varchar(255), `sector` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (5.0ms)[0m   [0mCREATE TABLE `job_sheets` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `position` varchar(255), `fields` varchar(255), `mission` varchar(255), `competence` varchar(255), `experience` varchar(255), `task` varchar(255), `degree` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (4.0ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (8.7ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM `schema_migrations`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20100209105655')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20100208091251')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (3.2ms)[0m   [0;1mDROP DATABASE IF EXISTS `remby_test`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCREATE DATABASE `remby_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (30.0ms)[0m   [0mCREATE TABLE `compagnies` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `headquaters` varchar(255), `registration_number` int(11), `legal_form` varchar(255), `activity` varchar(255), `sector` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (5.1ms)[0m   [0mCREATE TABLE `job_sheets` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `position` varchar(255), `fields` varchar(255), `mission` varchar(255), `competence` varchar(255), `experience` varchar(255), `task` varchar(255), `degree` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (6.4ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (8.1ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM `schema_migrations`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20100209105655')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20100208091251')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (58.4ms)[0m   [0;1mDROP DATABASE IF EXISTS `remby_test`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCREATE DATABASE `remby_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (6.2ms)[0m   [0mCREATE TABLE `compagnies` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `headquaters` varchar(255), `registration_number` int(11), `legal_form` varchar(255), `activity` varchar(255), `sector` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (7.5ms)[0m   [0mCREATE TABLE `job_sheets` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `position` varchar(255), `fields` varchar(255), `mission` varchar(255), `competence` varchar(255), `experience` varchar(255), `task` varchar(255), `degree` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (4.8ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (8.1ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM `schema_migrations`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20100209105655')[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20100208091251')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (51.0ms)[0m   [0;1mDROP DATABASE IF EXISTS `remby_test`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCREATE DATABASE `remby_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (9.0ms)[0m   [0mCREATE TABLE `compagnies` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `headquaters` varchar(255), `registration_number` int(11), `legal_form` varchar(255), `activity` varchar(255), `sector` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (5.4ms)[0m   [0mCREATE TABLE `job_sheets` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `position` varchar(255), `fields` varchar(255), `mission` varchar(255), `competence` varchar(255), `experience` varchar(255), `task` varchar(255), `degree` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (7.2ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (36.1ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM `schema_migrations`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20100209105655')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20100208091251')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (49.3ms)[0m   [0;1mDROP DATABASE IF EXISTS `remby_test`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCREATE DATABASE `remby_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (5.6ms)[0m   [0mCREATE TABLE `compagnies` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `headquaters` varchar(255), `registration_number` int(11), `legal_form` varchar(255), `activity` varchar(255), `sector` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (10.4ms)[0m   [0mCREATE TABLE `job_sheets` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `position` varchar(255), `fields` varchar(255), `mission` varchar(255), `competence` varchar(255), `experience` varchar(255), `task` varchar(255), `degree` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (5.8ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (8.1ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM `schema_migrations`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20100209105655')[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20100208091251')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (50.5ms)[0m   [0;1mDROP DATABASE IF EXISTS `remby_test`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCREATE DATABASE `remby_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (8.3ms)[0m   [0mCREATE TABLE `compagnies` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `headquaters` varchar(255), `registration_number` int(11), `legal_form` varchar(255), `activity` varchar(255), `sector` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (7.8ms)[0m   [0mCREATE TABLE `job_sheets` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `position` varchar(255), `fields` varchar(255), `mission` varchar(255), `competence` varchar(255), `experience` varchar(255), `task` varchar(255), `degree` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (5.7ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (29.2ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM `schema_migrations`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20100209105655')[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20100208091251')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CompagniesController#index (for 127.0.0.1 at 2010-02-10 15:58:10) [GET]
+  [4;36;1mCompagny Load (0.3ms)[0m   [0;1mSELECT * FROM `compagnies` [0m
+Rendering compagnies/index
+  [4;35;1mCompagny Columns (18.9ms)[0m   [0mSHOW FIELDS FROM `compagnies`[0m
+Completed in 55ms (View: 11, DB: 19) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CompagniesController#show (for 127.0.0.1 at 2010-02-10 15:58:19) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCompagny Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `compagnies`[0m
+  [4;35;1mCompagny Load (0.2ms)[0m   [0mSELECT * FROM `compagnies` WHERE (`compagnies`.`id` = 1) [0m
+Rendering compagnies/show
+Completed in 17ms (View: 8, DB: 2) | 200 OK [http://localhost/compagnies/1]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CompagniesController#show (for 127.0.0.1 at 2010-02-10 15:58:25) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCompagny Columns (3.6ms)[0m   [0;1mSHOW FIELDS FROM `compagnies`[0m
+  [4;35;1mCompagny Load (0.3ms)[0m   [0mSELECT * FROM `compagnies` WHERE (`compagnies`.`id` = 1) [0m
+Rendering compagnies/show
+Completed in 15ms (View: 4, DB: 4) | 200 OK [http://localhost/compagnies/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CompagniesController#show (for 127.0.0.1 at 2010-02-10 15:58:27) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCompagny Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `compagnies`[0m
+  [4;35;1mCompagny Load (0.3ms)[0m   [0mSELECT * FROM `compagnies` WHERE (`compagnies`.`id` = 1) [0m
+Rendering compagnies/show
+Completed in 17ms (View: 4, DB: 2) | 200 OK [http://localhost/compagnies/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CompagniesController#show (for 127.0.0.1 at 2010-02-10 15:58:27) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCompagny Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `compagnies`[0m
+  [4;35;1mCompagny Load (0.2ms)[0m   [0mSELECT * FROM `compagnies` WHERE (`compagnies`.`id` = 1) [0m
+Rendering compagnies/show
+Completed in 13ms (View: 3, DB: 2) | 200 OK [http://localhost/compagnies/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CompagniesController#show (for 127.0.0.1 at 2010-02-10 15:58:28) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCompagny Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `compagnies`[0m
+  [4;35;1mCompagny Load (0.3ms)[0m   [0mSELECT * FROM `compagnies` WHERE (`compagnies`.`id` = 1) [0m
+Rendering compagnies/show
+Completed in 12ms (View: 3, DB: 2) | 200 OK [http://localhost/compagnies/1]
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CompagniesController#show (for 127.0.0.1 at 2010-02-10 15:58:29) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCompagny Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `compagnies`[0m
+  [4;35;1mCompagny Load (0.5ms)[0m   [0mSELECT * FROM `compagnies` WHERE (`compagnies`.`id` = 1) [0m
+Rendering compagnies/show
+Completed in 13ms (View: 4, DB: 2) | 200 OK [http://localhost/compagnies/1]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CompagniesController#show (for 127.0.0.1 at 2010-02-10 15:58:30) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCompagny Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `compagnies`[0m
+  [4;35;1mCompagny Load (0.6ms)[0m   [0mSELECT * FROM `compagnies` WHERE (`compagnies`.`id` = 1) [0m
+Rendering compagnies/show
+Completed in 12ms (View: 3, DB: 2) | 200 OK [http://localhost/compagnies/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (3.6ms)[0m   [0;1mDROP DATABASE IF EXISTS `remby_test`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCREATE DATABASE `remby_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (21.3ms)[0m   [0mCREATE TABLE `compagnies` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `headquaters` varchar(255), `registration_number` int(11), `legal_form` varchar(255), `activity` varchar(255), `sector` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (16.9ms)[0m   [0mCREATE TABLE `job_sheets` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `position` varchar(255), `fields` varchar(255), `mission` varchar(255), `competence` varchar(255), `experience` varchar(255), `task` varchar(255), `degree` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (4.2ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (41.4ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM `schema_migrations`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20100209105655')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20100208091251')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CompagniesController#show (for 127.0.0.1 at 2010-02-10 16:21:59) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCompagny Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `compagnies`[0m
+  [4;35;1mCompagny Load (0.5ms)[0m   [0mSELECT * FROM `compagnies` WHERE (`compagnies`.`id` = 1) [0m
+Rendering compagnies/show
+
+ActionView::TemplateError (undefined local variable or method `new_job_sheets_path' for #<ActionView::Base:0xb74edc40>) on line #31 of app/views/compagnies/show.html.erb:
+28:   <%=h @compagny.sector %>
+29: </p>
+30: 
+31: <%= link_to 'add_sheets', new_job_sheets_path%>
+32: <%= link_to 'Edit', edit_compagny_path(@compagny) %> |
+33: <%= link_to 'Back', compagnies_path %>
+
+    app/views/compagnies/show.html.erb:31
+    app/controllers/compagnies_controller.rb:18:in `show'
+
+Rendered rescues/_trace (109.6ms)
+Rendered rescues/_request_and_response (26.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (28.7ms)[0m   [0;1mDROP DATABASE IF EXISTS `remby_test`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCREATE DATABASE `remby_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (6.6ms)[0m   [0mCREATE TABLE `compagnies` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `headquaters` varchar(255), `registration_number` int(11), `legal_form` varchar(255), `activity` varchar(255), `sector` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (5.7ms)[0m   [0mCREATE TABLE `job_sheets` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `position` varchar(255), `fields` varchar(255), `mission` varchar(255), `competence` varchar(255), `experience` varchar(255), `task` varchar(255), `degree` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (5.8ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (7.6ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM `schema_migrations`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20100209105655')[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20100208091251')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (52.3ms)[0m   [0;1mDROP DATABASE IF EXISTS `remby_test`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCREATE DATABASE `remby_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (7.8ms)[0m   [0mCREATE TABLE `compagnies` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `headquaters` varchar(255), `registration_number` int(11), `legal_form` varchar(255), `activity` varchar(255), `sector` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (3.5ms)[0m   [0mCREATE TABLE `job_sheets` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `position` varchar(255), `fields` varchar(255), `mission` varchar(255), `competence` varchar(255), `experience` varchar(255), `task` varchar(255), `degree` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (7.1ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (8.4ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM `schema_migrations`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20100209105655')[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20100208091251')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (2.5ms)[0m   [0;1mDROP DATABASE IF EXISTS `remby_test`[0m
+  [4;35;1mSQL (58.5ms)[0m   [0mCREATE DATABASE `remby_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (31.1ms)[0m   [0mCREATE TABLE `compagnies` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `headquaters` varchar(255), `registration_number` int(11), `legal_form` varchar(255), `activity` varchar(255), `sector` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (6.5ms)[0m   [0mCREATE TABLE `job_sheets` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `position` varchar(255), `fields` varchar(255), `mission` varchar(255), `competence` varchar(255), `experience` varchar(255), `task` varchar(255), `degree` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (6.1ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (9.4ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM `schema_migrations`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20100209105655')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20100208091251')[0m
+  [4;36;1mSQL (4.7ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CompagniesController#index (for 127.0.0.1 at 2010-02-10 16:26:30) [GET]
+  [4;36;1mCompagny Load (0.3ms)[0m   [0;1mSELECT * FROM `compagnies` [0m
+Rendering compagnies/index
+  [4;35;1mCompagny Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `compagnies`[0m
+Completed in 16ms (View: 9, DB: 6) | 200 OK [http://localhost/]
+  [4;36;1mSQL (3.9ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CompagniesController#new (for 127.0.0.1 at 2010-02-10 16:26:32) [GET]
+  [4;36;1mCompagny Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `compagnies`[0m
+Rendering compagnies/new
+Completed in 24ms (View: 17, DB: 5) | 200 OK [http://localhost/compagnies/new]
+  [4;35;1mSQL (1.3ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobSheetsController#new (for 127.0.0.1 at 2010-02-10 16:26:36) [GET]
+  [4;35;1mJobSheet Columns (11.6ms)[0m   [0mSHOW FIELDS FROM `job_sheets`[0m
+Rendering template within layouts/job_sheets
+Rendering job_sheets/new
+Completed in 28ms (View: 10, DB: 13) | 200 OK [http://localhost/job_sheets/new]
+  [4;36;1mSQL (1.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CompagniesController#show (for 127.0.0.1 at 2010-02-10 16:27:05) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCompagny Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `compagnies`[0m
+  [4;35;1mCompagny Load (0.3ms)[0m   [0mSELECT * FROM `compagnies` WHERE (`compagnies`.`id` = 1) [0m
+Rendering compagnies/show
+Completed in 16ms (View: 8, DB: 3) | 200 OK [http://localhost/compagnies/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobSheetsController#new (for 127.0.0.1 at 2010-02-10 16:27:07) [GET]
+  [4;36;1mJobSheet Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `job_sheets`[0m
+Rendering template within layouts/job_sheets
+Rendering job_sheets/new
+Completed in 19ms (View: 10, DB: 1) | 200 OK [http://localhost/job_sheets/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobSheetsController#new (for 127.0.0.1 at 2010-02-10 16:28:12) [GET]
+  [4;35;1mJobSheet Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `job_sheets`[0m
+Rendering template within layouts/job_sheets
+Rendering job_sheets/new
+Completed in 19ms (View: 11, DB: 1) | 200 OK [http://localhost/job_sheets/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (49.5ms)[0m   [0;1mDROP DATABASE IF EXISTS `remby_test`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCREATE DATABASE `remby_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (8.1ms)[0m   [0mCREATE TABLE `compagnies` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `headquaters` varchar(255), `registration_number` int(11), `legal_form` varchar(255), `activity` varchar(255), `sector` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (7.4ms)[0m   [0mCREATE TABLE `job_sheets` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `position` varchar(255), `fields` varchar(255), `mission` varchar(255), `competence` varchar(255), `experience` varchar(255), `task` varchar(255), `degree` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (5.3ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (8.5ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM `schema_migrations`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20100209105655')[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20100208091251')[0m
+  [4;36;1mSQL (4.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobSheetsController#new (for 127.0.0.1 at 2010-02-10 16:39:36) [GET]
+  [4;36;1mJobSheet Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `job_sheets`[0m
+Rendering template within layouts/job_sheets
+Rendering job_sheets/new
+Completed in 18ms (View: 11, DB: 5) | 200 OK [http://localhost/job_sheets/new]
+  [4;35;1mSQL (3.9ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CompagniesController#new (for 127.0.0.1 at 2010-02-10 16:39:42) [GET]
+  [4;35;1mCompagny Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `compagnies`[0m
+Rendering compagnies/new
+Completed in 17ms (View: 9, DB: 5) | 200 OK [http://localhost/compagnies/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobSheetsController#new (for 127.0.0.1 at 2010-02-10 16:39:44) [GET]
+  [4;36;1mJobSheet Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `job_sheets`[0m
+Rendering template within layouts/job_sheets
+Rendering job_sheets/new
+Completed in 18ms (View: 10, DB: 1) | 200 OK [http://localhost/job_sheets/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (51.4ms)[0m   [0;1mDROP DATABASE IF EXISTS `remby_test`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCREATE DATABASE `remby_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (6.8ms)[0m   [0mCREATE TABLE `compagnies` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `headquaters` varchar(255), `registration_number` int(11), `legal_form` varchar(255), `activity` varchar(255), `sector` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (4.4ms)[0m   [0mCREATE TABLE `job_sheets` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `position` varchar(255), `fields` varchar(255), `mission` varchar(255), `competence` varchar(255), `experience` varchar(255), `task` varchar(255), `degree` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (5.7ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (9.6ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM `schema_migrations`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20100209105655')[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20100208091251')[0m
+  [4;36;1mSQL (137.8ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (147.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (48.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (99.4ms)[0m   [0;1mDROP DATABASE IF EXISTS `remby_test`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCREATE DATABASE `remby_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (29.7ms)[0m   [0mCREATE TABLE `compagnies` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `headquaters` varchar(255), `registration_number` int(11), `legal_form` varchar(255), `activity` varchar(255), `sector` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (7.7ms)[0m   [0mCREATE TABLE `job_sheets` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `position` varchar(255), `fields` varchar(255), `mission` varchar(255), `competence` varchar(255), `experience` varchar(255), `task` varchar(255), `degree` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (4.5ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (7.6ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM `schema_migrations`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20100209105655')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20100208091251')[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CompagniesController#edit (for 127.0.0.1 at 2010-02-10 17:25:37) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mCompagny Columns (30.3ms)[0m   [0mSHOW FIELDS FROM `compagnies`[0m
+  [4;36;1mCompagny Load (0.5ms)[0m   [0;1mSELECT * FROM `compagnies` WHERE (`compagnies`.`id` = 1) [0m
+Rendering compagnies/edit
+Completed in 105ms (View: 63, DB: 31) | 200 OK [http://localhost/compagnies/1/edit]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CompagniesController#update (for 127.0.0.1 at 2010-02-10 17:26:00) [PUT]
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"bZ9LeSQ6DdLAwNnSMDOvudNYaW6CkuldhP264Jv0Zag=", "compagny"=>{"name"=>"COTONA1", "activity"=>"producteur de textile", "headquaters"=>"Antsirabe", "registration_number"=>"12345", "sector"=>"textile /industrie", "legal_form"=>"SA"}, "id"=>"1"}
+  [4;35;1mCompagny Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `compagnies`[0m
+  [4;36;1mCompagny Load (0.5ms)[0m   [0;1mSELECT * FROM `compagnies` WHERE (`compagnies`.`id` = 1) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mCompagny Update (19.1ms)[0m   [0;1mUPDATE `compagnies` SET `updated_at` = '2010-02-10 14:26:01', `name` = 'COTONA1' WHERE `id` = 1[0m
+  [4;35;1mSQL (3.4ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/compagnies/1
+Completed in 271ms (DB: 25) | 302 Found [http://localhost/compagnies/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CompagniesController#show (for 127.0.0.1 at 2010-02-10 17:26:01) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCompagny Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `compagnies`[0m
+  [4;35;1mCompagny Load (0.2ms)[0m   [0mSELECT * FROM `compagnies` WHERE (`compagnies`.`id` = 1) [0m
+Rendering compagnies/show
+Completed in 12ms (View: 4, DB: 2) | 200 OK [http://localhost/compagnies/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobSheetsController#new (for 127.0.0.1 at 2010-02-10 17:26:09) [GET]
+  [4;36;1mJobSheet Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `job_sheets`[0m
+Rendering template within layouts/job_sheets
+Rendering job_sheets/new
+Completed in 18ms (View: 10, DB: 2) | 200 OK [http://localhost/job_sheets/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (117.1ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (406.4ms)[0m   [0;1mDROP DATABASE IF EXISTS `remby_test`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCREATE DATABASE `remby_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (111.6ms)[0m   [0mCREATE TABLE `compagnies` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `headquaters` varchar(255), `registration_number` int(11), `legal_form` varchar(255), `activity` varchar(255), `sector` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (30.0ms)[0m   [0mCREATE TABLE `job_sheets` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `position` varchar(255), `fields` varchar(255), `mission` varchar(255), `competence` varchar(255), `experience` varchar(255), `task` varchar(255), `degree` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (5.5ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (7.9ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSELECT version FROM `schema_migrations`[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20100209105655')[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20100208091251')[0m
+  [4;36;1mSQL (122.8ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (158.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (48.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (188.1ms)[0m   [0;1mDROP DATABASE IF EXISTS `remby_test`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCREATE DATABASE `remby_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (39.7ms)[0m   [0mCREATE TABLE `compagnies` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `headquaters` varchar(255), `registration_number` int(11), `legal_form` varchar(255), `activity` varchar(255), `sector` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (8.7ms)[0m   [0mCREATE TABLE `job_sheets` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `position` varchar(255), `fields` varchar(255), `mission` varchar(255), `competence` varchar(255), `experience` varchar(255), `task` varchar(255), `degree` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (3.4ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (5.9ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM `schema_migrations`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20100209105655')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20100208091251')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (89.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (37.8ms)[0m   [0;1mDROP DATABASE IF EXISTS `remby_test`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCREATE DATABASE `remby_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (8.4ms)[0m   [0mCREATE TABLE `compagnies` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `headquaters` varchar(255), `registration_number` int(11), `legal_form` varchar(255), `activity` varchar(255), `sector` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (18.6ms)[0m   [0mCREATE TABLE `job_sheets` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `position` varchar(255), `fields` varchar(255), `mission` varchar(255), `competence` varchar(255), `experience` varchar(255), `task` varchar(255), `degree` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (4.3ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (9.9ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM `schema_migrations`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20100209105655')[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20100208091251')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (20.8ms)[0m   [0;1mDROP DATABASE IF EXISTS `remby_test`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCREATE DATABASE `remby_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (7.4ms)[0m   [0mCREATE TABLE `compagnies` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `headquaters` varchar(255), `registration_number` int(11), `legal_form` varchar(255), `activity` varchar(255), `sector` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (9.8ms)[0m   [0mCREATE TABLE `job_sheets` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `position` varchar(255), `fields` varchar(255), `mission` varchar(255), `competence` varchar(255), `experience` varchar(255), `task` varchar(255), `degree` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (3.0ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (5.7ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM `schema_migrations`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20100209105655')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20100208091251')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mCompagny Load (44.6ms)[0m   [0;1mSELECT * FROM `compagnies` ORDER BY compagnies.id DESC LIMIT 1[0m
+  [4;35;1mCompagny Columns (19.7ms)[0m   [0mSHOW FIELDS FROM `compagnies`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (48.1ms)[0m   [0;1mDROP DATABASE IF EXISTS `remby_test`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCREATE DATABASE `remby_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (5.7ms)[0m   [0mCREATE TABLE `compagnies` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `headquaters` varchar(255), `registration_number` int(11), `legal_form` varchar(255), `activity` varchar(255), `sector` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (4.8ms)[0m   [0mCREATE TABLE `job_sheets` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `position` varchar(255), `fields` varchar(255), `mission` varchar(255), `competence` varchar(255), `experience` varchar(255), `task` varchar(255), `degree` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (5.9ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (9.6ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM `schema_migrations`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20100209105655')[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20100208091251')[0m
