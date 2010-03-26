@@ -18,20 +18,28 @@ development:
   adapter: mysql
   encoding: utf8
   reconnect: false
-  database: remby1_development
-  pool: 5
+  database: remb_development
   username: root
   password:
-  socket: /tmp/mysql.sock
+  host: localhost
+
+dev_w_cache:
+  adapter: mysql
+  encoding: utf8
+  reconnect: false
+  database: remb_development
+  username: root
+  password:
+  host: localhost
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
-test: &TEST
+test::
   adapter: mysql
   encoding: utf8
   reconnect: false
-  database: remby1_test
+  database: remb_test
   pool: 5
   username: root
   password:
@@ -40,12 +48,7 @@ test: &TEST
 production:
   adapter: mysql
   encoding: utf8
-  reconnect: false
-  database: remby1_production
-  pool: 5
-  username: root
-  password: 
-  socket: /tmp/mysql.sock
-
-cucumber:
-  <<: *TEST
+  database: jojopil_tnnlf
+  username: jojopil_tnnlf
+  password: Tan4naL!f3.
+  host: localhost

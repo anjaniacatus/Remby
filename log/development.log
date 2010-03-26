@@ -1155,3 +1155,825 @@ Processing JobSheetsController#new (for 127.0.0.1 at 2010-03-01 10:22:09) [GET]
 Rendering template within layouts/job_sheets
 Rendering job_sheets/new
 Completed in 102ms (View: 52, DB: 37) | 200 OK [http://0.0.0.0/job_sheets/new]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (168.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (731.4ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (559.9ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (12.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (16.9ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateCompagnies (20100208091251)
+  [4;35;1mSQL (131.5ms)[0m   [0mCREATE TABLE `compagnies` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `headquaters` varchar(255), `registration_number` int(11), `legal_form` varchar(255), `activity` varchar(255), `sector` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (46.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100208091251')[0m
+Migrating to CreateJobSheets (20100209105655)
+  [4;35;1mSQL (129.2ms)[0m   [0mCREATE TABLE `job_sheets` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `position` varchar(255), `fields` varchar(255), `mission` varchar(255), `competence` varchar(255), `experience` varchar(255), `task` varchar(255), `degree` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (66.4ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100209105655')[0m
+  [4;35;1mSQL (31.8ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (9.9ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (266.7ms)[0m   [0;1mSHOW FIELDS FROM `compagnies`[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mdescribe `compagnies`[0m
+  [4;36;1mSQL (11.8ms)[0m   [0;1mSHOW KEYS FROM `compagnies`[0m
+  [4;35;1mSQL (40.7ms)[0m   [0mSHOW FIELDS FROM `job_sheets`[0m
+  [4;36;1mSQL (16.4ms)[0m   [0;1mdescribe `job_sheets`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW KEYS FROM `job_sheets`[0m
+  [4;36;1mSQL (57.5ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CompagniesController#index (for 127.0.0.1 at 2010-03-26 16:23:45) [GET]
+  [4;36;1mCompagny Load (98.8ms)[0m   [0;1mSELECT * FROM `compagnies` [0m
+Rendering compagnies/index
+Completed in 369ms (View: 206, DB: 156) | 200 OK [http://0.0.0.0/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CompagniesController#new (for 127.0.0.1 at 2010-03-26 16:24:03) [GET]
+  [4;35;1mCompagny Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `compagnies`[0m
+Rendering compagnies/new
+Completed in 90ms (View: 81, DB: 1) | 200 OK [http://0.0.0.0/compagnies/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobSheetsController#new (for 127.0.0.1 at 2010-03-26 16:24:33) [GET]
+  [4;36;1mJobSheet Columns (12.1ms)[0m   [0;1mSHOW FIELDS FROM `job_sheets`[0m
+Rendering template within layouts/job_sheets
+Rendering job_sheets/new
+Completed in 101ms (View: 49, DB: 12) | 200 OK [http://0.0.0.0/job_sheets/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobSheetsController#new (for 127.0.0.1 at 2010-03-26 16:38:54) [GET]
+  [4;35;1mJobSheet Columns (5.1ms)[0m   [0mSHOW FIELDS FROM `job_sheets`[0m
+Rendering template within layouts/job_sheets
+Rendering job_sheets/new
+Completed in 47ms (View: 24, DB: 5) | 200 OK [http://0.0.0.0/job_sheets/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobSheetsController#new (for 127.0.0.1 at 2010-03-26 16:38:54) [GET]
+  [4;36;1mJobSheet Columns (2.8ms)[0m   [0;1mSHOW FIELDS FROM `job_sheets`[0m
+Rendering template within layouts/job_sheets
+Rendering job_sheets/new
+Completed in 22ms (View: 11, DB: 3) | 200 OK [http://0.0.0.0/job_sheets/new]
+  [4;35;1mSQL (9.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CivilStatusesController#index (for 127.0.0.1 at 2010-03-26 16:39:07) [GET]
+  [4;35;1mCivilStatus Load (0.0ms)[0m   [0mMysql::Error: Table 'remb_development.civil_statuses' doesn't exist: SELECT * FROM `civil_statuses` [0m
+
+ActiveRecord::StatementInvalid (Mysql::Error: Table 'remb_development.civil_statuses' doesn't exist: SELECT * FROM `civil_statuses` ):
+  app/controllers/civil_statuses_controller.rb:5:in `index'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (136.6ms)
+Rendered rescues/_request_and_response (12.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (52.9ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (16.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateCompagnies (20100208091251)
+Migrating to CreateJobSheets (20100209105655)
+Migrating to CreateCivilStatuses (20100326133802)
+  [4;36;1mSQL (379.6ms)[0m   [0;1mCREATE TABLE `civil_statuses` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `family_name` varchar(255), `name` varchar(255), `age` int(11), `birthday` date, `hometown` varchar(255), `current_city` varchar(255), `gender` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (111.3ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100326133802')[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (25.4ms)[0m   [0mSHOW FIELDS FROM `civil_statuses`[0m
+  [4;36;1mSQL (3.7ms)[0m   [0;1mdescribe `civil_statuses`[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mSHOW KEYS FROM `civil_statuses`[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mSHOW FIELDS FROM `compagnies`[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mdescribe `compagnies`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `compagnies`[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mSHOW FIELDS FROM `job_sheets`[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mdescribe `job_sheets`[0m
+  [4;35;1mSQL (15.0ms)[0m   [0mSHOW KEYS FROM `job_sheets`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CivilStatusesController#index (for 127.0.0.1 at 2010-03-26 16:39:31) [GET]
+  [4;36;1mCivilStatus Load (0.4ms)[0m   [0;1mSELECT * FROM `civil_statuses` [0m
+Rendering template within layouts/civil_statuses
+Rendering civil_statuses/index
+Completed in 29ms (View: 15, DB: 1) | 200 OK [http://0.0.0.0/civil_statuses]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CivilStatusesController#new (for 127.0.0.1 at 2010-03-26 16:39:47) [GET]
+  [4;35;1mCivilStatus Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `civil_statuses`[0m
+Rendering template within layouts/civil_statuses
+Rendering civil_statuses/new
+Completed in 295ms (View: 287, DB: 1) | 200 OK [http://0.0.0.0/civil_statuses/new]
+  [4;36;1mSQL (33.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (16.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CivilStatusesController#new (for 127.0.0.1 at 2010-03-26 16:53:48) [GET]
+  [4;36;1mCivilStatus Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `civil_statuses`[0m
+Rendering template within layouts/civil_statuses
+Rendering civil_statuses/new
+
+ActionView::TemplateError (Expected /home/catus/workspace/rembyvotany/app/models/civil_status.rb to define Civil_Status) on line #32 of app/views/civil_statuses/new.html.erb:
+29:   </p>
+30:   <p>
+31:     <%= f.label :gender %><br />
+32:     <%= f.select :gender, Civil_Status::Genders %>
+33:   </p>
+34:   <p>
+35:     <%= f.submit 'Create' %>
+
+    app/views/civil_statuses/new.html.erb:32
+    app/views/civil_statuses/new.html.erb:3
+    app/controllers/civil_statuses_controller.rb:29:in `new'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (64.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CivilStatusesController#new (for 127.0.0.1 at 2010-03-26 16:56:13) [GET]
+  [4;35;1mCivilStatus Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `civil_statuses`[0m
+Rendering template within layouts/civil_statuses
+Rendering civil_statuses/new
+
+ActionView::TemplateError (Expected /home/catus/workspace/rembyvotany/app/models/civil_status.rb to define Civil_Status) on line #32 of app/views/civil_statuses/new.html.erb:
+29:   </p>
+30:   <p>
+31:     <%= f.label :gender %><br />
+32:     <%= f.select :gender, Civil_Status::Genders %>
+33:   </p>
+34:   <p>
+35:     <%= f.submit 'Create' %>
+
+    app/views/civil_statuses/new.html.erb:32
+    app/views/civil_statuses/new.html.erb:3
+    app/controllers/civil_statuses_controller.rb:29:in `new'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (141.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (9.9ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CivilStatusesController#new (for 127.0.0.1 at 2010-03-26 16:56:18) [GET]
+  [4;36;1mCivilStatus Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `civil_statuses`[0m
+Rendering template within layouts/civil_statuses
+Rendering civil_statuses/new
+
+ActionView::TemplateError (Expected /home/catus/workspace/rembyvotany/app/models/civil_status.rb to define Civil_Status) on line #32 of app/views/civil_statuses/new.html.erb:
+29:   </p>
+30:   <p>
+31:     <%= f.label :gender %><br />
+32:     <%= f.select :gender, Civil_Status::Genders %>
+33:   </p>
+34:   <p>
+35:     <%= f.submit 'Create' %>
+
+    app/views/civil_statuses/new.html.erb:32
+    app/views/civil_statuses/new.html.erb:3
+    app/controllers/civil_statuses_controller.rb:29:in `new'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (60.3ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CivilStatusesController#new (for 127.0.0.1 at 2010-03-26 16:56:20) [GET]
+  [4;35;1mCivilStatus Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `civil_statuses`[0m
+Rendering template within layouts/civil_statuses
+Rendering civil_statuses/new
+
+ActionView::TemplateError (Expected /home/catus/workspace/rembyvotany/app/models/civil_status.rb to define Civil_Status) on line #32 of app/views/civil_statuses/new.html.erb:
+29:   </p>
+30:   <p>
+31:     <%= f.label :gender %><br />
+32:     <%= f.select :gender, Civil_Status::Genders %>
+33:   </p>
+34:   <p>
+35:     <%= f.submit 'Create' %>
+
+    app/views/civil_statuses/new.html.erb:32
+    app/views/civil_statuses/new.html.erb:3
+    app/controllers/civil_statuses_controller.rb:29:in `new'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (134.4ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CivilStatusesController#new (for 127.0.0.1 at 2010-03-26 16:58:06) [GET]
+  [4;36;1mCivilStatus Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `civil_statuses`[0m
+Rendering template within layouts/civil_statuses
+Rendering civil_statuses/new
+Completed in 101ms (View: 91, DB: 2) | 200 OK [http://0.0.0.0/civil_statuses/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CivilStatusesController#create (for 127.0.0.1 at 2010-03-26 16:58:30) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"jpEdKBG/aFClf9Au/QNHWOomzPyt3eDWkRvEW22AhK0=", "civil_status"=>{"name"=>"", "birthday(1i)"=>"2005", "birthday(2i)"=>"3", "birthday(3i)"=>"26", "gender"=>"1", "family_name"=>"", "current_city"=>"", "hometown"=>"", "age"=>""}}
+  [4;35;1mCivilStatus Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `civil_statuses`[0m
+  [4;36;1mSQL (12.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mCivilStatus Create (110.7ms)[0m   [0mINSERT INTO `civil_statuses` (`name`, `created_at`, `updated_at`, `gender`, `family_name`, `birthday`, `hometown`, `current_city`, `age`) VALUES('', '2010-03-26 13:58:30', '2010-03-26 13:58:30', '1', '', '2005-03-26', '', '', NULL)[0m
+  [4;36;1mSQL (88.9ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://0.0.0.0:3000/civil_statuses/1
+Completed in 266ms (DB: 213) | 302 Found [http://0.0.0.0/civil_statuses]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CivilStatusesController#show (for 127.0.0.1 at 2010-03-26 16:58:31) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mCivilStatus Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `civil_statuses`[0m
+  [4;36;1mCivilStatus Load (194.7ms)[0m   [0;1mSELECT * FROM `civil_statuses` WHERE (`civil_statuses`.`id` = 1) [0m
+Rendering template within layouts/civil_statuses
+Rendering civil_statuses/show
+Completed in 229ms (View: 25, DB: 196) | 200 OK [http://0.0.0.0/civil_statuses/1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CivilStatusesController#show (for 127.0.0.1 at 2010-03-26 16:58:59) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mCivilStatus Columns (38.2ms)[0m   [0mSHOW FIELDS FROM `civil_statuses`[0m
+  [4;36;1mCivilStatus Load (0.2ms)[0m   [0;1mSELECT * FROM `civil_statuses` WHERE (`civil_statuses`.`id` = 1) [0m
+Rendering template within layouts/civil_statuses
+Rendering civil_statuses/show
+Completed in 55ms (View: 8, DB: 39) | 200 OK [http://0.0.0.0/civil_statuses/1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CivilStatusesController#new (for 127.0.0.1 at 2010-03-26 16:59:05) [GET]
+  [4;35;1mCivilStatus Columns (4.7ms)[0m   [0mSHOW FIELDS FROM `civil_statuses`[0m
+Rendering template within layouts/civil_statuses
+Rendering civil_statuses/new
+Completed in 30ms (View: 18, DB: 5) | 200 OK [http://0.0.0.0/civil_statuses/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CivilStatusesController#new (for 127.0.0.1 at 2010-03-26 17:00:00) [GET]
+  [4;36;1mCivilStatus Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `civil_statuses`[0m
+Rendering template within layouts/civil_statuses
+Rendering civil_statuses/new
+Completed in 29ms (View: 20, DB: 1) | 200 OK [http://0.0.0.0/civil_statuses/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CivilStatusesController#create (for 127.0.0.1 at 2010-03-26 17:00:11) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"jpEdKBG/aFClf9Au/QNHWOomzPyt3eDWkRvEW22AhK0=", "civil_status"=>{"name"=>"", "birthday(1i)"=>"2005", "birthday(2i)"=>"3", "birthday(3i)"=>"26", "gender"=>"femme", "family_name"=>"", "current_city"=>"", "hometown"=>"", "age"=>""}}
+  [4;35;1mCivilStatus Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `civil_statuses`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mCivilStatus Create (0.3ms)[0m   [0mINSERT INTO `civil_statuses` (`name`, `created_at`, `updated_at`, `gender`, `family_name`, `birthday`, `hometown`, `current_city`, `age`) VALUES('', '2010-03-26 14:00:11', '2010-03-26 14:00:11', 'femme', '', '2005-03-26', '', '', NULL)[0m
+  [4;36;1mSQL (73.5ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://0.0.0.0:3000/civil_statuses/2
+Completed in 90ms (DB: 75) | 302 Found [http://0.0.0.0/civil_statuses]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CivilStatusesController#show (for 127.0.0.1 at 2010-03-26 17:00:11) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mCivilStatus Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `civil_statuses`[0m
+  [4;36;1mCivilStatus Load (0.3ms)[0m   [0;1mSELECT * FROM `civil_statuses` WHERE (`civil_statuses`.`id` = 2) [0m
+Rendering template within layouts/civil_statuses
+Rendering civil_statuses/show
+Completed in 14ms (View: 4, DB: 1) | 200 OK [http://0.0.0.0/civil_statuses/2]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CivilStatusesController#create (for 127.0.0.1 at 2010-03-26 17:00:20) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"jpEdKBG/aFClf9Au/QNHWOomzPyt3eDWkRvEW22AhK0=", "civil_status"=>{"name"=>"", "birthday(1i)"=>"2005", "birthday(2i)"=>"3", "birthday(3i)"=>"26", "gender"=>"homme", "family_name"=>"", "current_city"=>"", "hometown"=>"", "age"=>""}}
+  [4;35;1mCivilStatus Columns (3.2ms)[0m   [0mSHOW FIELDS FROM `civil_statuses`[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mCivilStatus Create (0.3ms)[0m   [0mINSERT INTO `civil_statuses` (`name`, `created_at`, `updated_at`, `gender`, `family_name`, `birthday`, `hometown`, `current_city`, `age`) VALUES('', '2010-03-26 14:00:20', '2010-03-26 14:00:20', 'homme', '', '2005-03-26', '', '', NULL)[0m
+  [4;36;1mSQL (70.6ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://0.0.0.0:3000/civil_statuses/3
+Completed in 90ms (DB: 76) | 302 Found [http://0.0.0.0/civil_statuses]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CivilStatusesController#show (for 127.0.0.1 at 2010-03-26 17:00:20) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mCivilStatus Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `civil_statuses`[0m
+  [4;36;1mCivilStatus Load (0.3ms)[0m   [0;1mSELECT * FROM `civil_statuses` WHERE (`civil_statuses`.`id` = 3) [0m
+Rendering template within layouts/civil_statuses
+Rendering civil_statuses/show
+Completed in 13ms (View: 4, DB: 1) | 200 OK [http://0.0.0.0/civil_statuses/3]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CivilStatusesController#new (for 127.0.0.1 at 2010-03-26 17:03:04) [GET]
+  [4;35;1mCivilStatus Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `civil_statuses`[0m
+Rendering template within layouts/civil_statuses
+Rendering civil_statuses/new
+Completed in 27ms (View: 18, DB: 1) | 200 OK [http://0.0.0.0/civil_statuses/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CivilStatusesController#create (for 127.0.0.1 at 2010-03-26 17:03:08) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"jpEdKBG/aFClf9Au/QNHWOomzPyt3eDWkRvEW22AhK0=", "civil_status"=>{"name"=>"", "birthday(1i)"=>"2005", "birthday(2i)"=>"3", "birthday(3i)"=>"26", "gender"=>"homme", "family_name"=>"", "current_city"=>"", "hometown"=>"", "age"=>""}}
+  [4;36;1mCivilStatus Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `civil_statuses`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+Rendering template within layouts/civil_statuses
+Rendering civil_statuses/new
+Completed in 43ms (View: 30, DB: 1) | 200 OK [http://0.0.0.0/civil_statuses]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CivilStatusesController#create (for 127.0.0.1 at 2010-03-26 17:04:10) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"jpEdKBG/aFClf9Au/QNHWOomzPyt3eDWkRvEW22AhK0=", "civil_status"=>{"name"=>"fenoum", "birthday(1i)"=>"2000", "birthday(2i)"=>"3", "birthday(3i)"=>"26", "gender"=>"femme", "family_name"=>"RAkoto", "current_city"=>"", "hometown"=>"", "age"=>"24"}}
+  [4;35;1mCivilStatus Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `civil_statuses`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mCivilStatus Create (0.3ms)[0m   [0mINSERT INTO `civil_statuses` (`name`, `created_at`, `updated_at`, `gender`, `family_name`, `birthday`, `hometown`, `current_city`, `age`) VALUES('fenoum', '2010-03-26 14:04:10', '2010-03-26 14:04:10', 'femme', 'RAkoto', '2000-03-26', '', '', 24)[0m
+  [4;36;1mSQL (56.9ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://0.0.0.0:3000/civil_statuses/4
+Completed in 73ms (DB: 58) | 302 Found [http://0.0.0.0/civil_statuses]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CivilStatusesController#show (for 127.0.0.1 at 2010-03-26 17:04:10) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mCivilStatus Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `civil_statuses`[0m
+  [4;36;1mCivilStatus Load (0.3ms)[0m   [0;1mSELECT * FROM `civil_statuses` WHERE (`civil_statuses`.`id` = 4) [0m
+Rendering template within layouts/civil_statuses
+Rendering civil_statuses/show
+Completed in 13ms (View: 4, DB: 1) | 200 OK [http://0.0.0.0/civil_statuses/4]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CivilStatusesController#index (for 127.0.0.1 at 2010-03-26 17:04:28) [GET]
+  [4;35;1mCivilStatus Load (0.4ms)[0m   [0mSELECT * FROM `civil_statuses` [0m
+Rendering template within layouts/civil_statuses
+Rendering civil_statuses/index
+  [4;36;1mCivilStatus Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `civil_statuses`[0m
+Completed in 36ms (View: 28, DB: 1) | 200 OK [http://0.0.0.0/civil_statuses]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CivilStatusesController#destroy (for 127.0.0.1 at 2010-03-26 17:04:34) [DELETE]
+  Parameters: {"authenticity_token"=>"jpEdKBG/aFClf9Au/QNHWOomzPyt3eDWkRvEW22AhK0=", "id"=>"1"}
+  [4;35;1mCivilStatus Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `civil_statuses`[0m
+  [4;36;1mCivilStatus Load (0.5ms)[0m   [0;1mSELECT * FROM `civil_statuses` WHERE (`civil_statuses`.`id` = 1) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mCivilStatus Destroy (57.9ms)[0m   [0;1mDELETE FROM `civil_statuses` WHERE `id` = 1[0m
+  [4;35;1mSQL (52.2ms)[0m   [0mCOMMIT[0m
+Redirected to http://0.0.0.0:3000/civil_statuses
+Completed in 146ms (DB: 112) | 302 Found [http://0.0.0.0/civil_statuses/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CivilStatusesController#index (for 127.0.0.1 at 2010-03-26 17:04:35) [GET]
+  [4;36;1mCivilStatus Load (0.3ms)[0m   [0;1mSELECT * FROM `civil_statuses` [0m
+Rendering template within layouts/civil_statuses
+Rendering civil_statuses/index
+  [4;35;1mCivilStatus Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `civil_statuses`[0m
+Completed in 30ms (View: 22, DB: 1) | 200 OK [http://0.0.0.0/civil_statuses]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CivilStatusesController#destroy (for 127.0.0.1 at 2010-03-26 17:04:39) [DELETE]
+  Parameters: {"authenticity_token"=>"jpEdKBG/aFClf9Au/QNHWOomzPyt3eDWkRvEW22AhK0=", "id"=>"2"}
+  [4;36;1mCivilStatus Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `civil_statuses`[0m
+  [4;35;1mCivilStatus Load (0.3ms)[0m   [0mSELECT * FROM `civil_statuses` WHERE (`civil_statuses`.`id` = 2) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mCivilStatus Destroy (0.2ms)[0m   [0mDELETE FROM `civil_statuses` WHERE `id` = 2[0m
+  [4;36;1mSQL (83.3ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://0.0.0.0:3000/civil_statuses
+Completed in 95ms (DB: 85) | 302 Found [http://0.0.0.0/civil_statuses/2]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CivilStatusesController#index (for 127.0.0.1 at 2010-03-26 17:04:39) [GET]
+  [4;35;1mCivilStatus Load (0.3ms)[0m   [0mSELECT * FROM `civil_statuses` [0m
+Rendering template within layouts/civil_statuses
+Rendering civil_statuses/index
+  [4;36;1mCivilStatus Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `civil_statuses`[0m
+Completed in 24ms (View: 16, DB: 1) | 200 OK [http://0.0.0.0/civil_statuses]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CivilStatusesController#destroy (for 127.0.0.1 at 2010-03-26 17:04:43) [DELETE]
+  Parameters: {"authenticity_token"=>"jpEdKBG/aFClf9Au/QNHWOomzPyt3eDWkRvEW22AhK0=", "id"=>"3"}
+  [4;35;1mCivilStatus Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `civil_statuses`[0m
+  [4;36;1mCivilStatus Load (0.3ms)[0m   [0;1mSELECT * FROM `civil_statuses` WHERE (`civil_statuses`.`id` = 3) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mCivilStatus Destroy (0.3ms)[0m   [0;1mDELETE FROM `civil_statuses` WHERE `id` = 3[0m
+  [4;35;1mSQL (57.0ms)[0m   [0mCOMMIT[0m
+Redirected to http://0.0.0.0:3000/civil_statuses
+Completed in 69ms (DB: 59) | 302 Found [http://0.0.0.0/civil_statuses/3]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CivilStatusesController#index (for 127.0.0.1 at 2010-03-26 17:04:43) [GET]
+  [4;36;1mCivilStatus Load (0.4ms)[0m   [0;1mSELECT * FROM `civil_statuses` [0m
+Rendering template within layouts/civil_statuses
+Rendering civil_statuses/index
+  [4;35;1mCivilStatus Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `civil_statuses`[0m
+Completed in 81ms (View: 73, DB: 1) | 200 OK [http://0.0.0.0/civil_statuses]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CivilStatusesController#new (for 127.0.0.1 at 2010-03-26 17:05:05) [GET]
+  [4;36;1mCivilStatus Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `civil_statuses`[0m
+Rendering template within layouts/civil_statuses
+Rendering civil_statuses/new
+Completed in 29ms (View: 20, DB: 1) | 200 OK [http://0.0.0.0/civil_statuses/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CivilStatusesController#create (for 127.0.0.1 at 2010-03-26 17:05:25) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"jpEdKBG/aFClf9Au/QNHWOomzPyt3eDWkRvEW22AhK0=", "civil_status"=>{"name"=>"Sade", "birthday(1i)"=>"2010", "birthday(2i)"=>"3", "birthday(3i)"=>"26", "gender"=>"homme", "family_name"=>"RAbe", "current_city"=>"", "hometown"=>"", "age"=>"34"}}
+  [4;35;1mCivilStatus Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `civil_statuses`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mCivilStatus Create (0.3ms)[0m   [0mINSERT INTO `civil_statuses` (`name`, `created_at`, `updated_at`, `gender`, `family_name`, `birthday`, `hometown`, `current_city`, `age`) VALUES('Sade', '2010-03-26 14:05:25', '2010-03-26 14:05:25', 'homme', 'RAbe', '2010-03-26', '', '', 34)[0m
+  [4;36;1mSQL (51.0ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://0.0.0.0:3000/civil_statuses/5
+Completed in 67ms (DB: 53) | 302 Found [http://0.0.0.0/civil_statuses]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CivilStatusesController#show (for 127.0.0.1 at 2010-03-26 17:05:25) [GET]
+  Parameters: {"id"=>"5"}
+  [4;35;1mCivilStatus Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `civil_statuses`[0m
+  [4;36;1mCivilStatus Load (0.3ms)[0m   [0;1mSELECT * FROM `civil_statuses` WHERE (`civil_statuses`.`id` = 5) [0m
+Rendering template within layouts/civil_statuses
+Rendering civil_statuses/show
+Completed in 13ms (View: 4, DB: 1) | 200 OK [http://0.0.0.0/civil_statuses/5]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CivilStatusesController#index (for 127.0.0.1 at 2010-03-26 17:05:31) [GET]
+  [4;35;1mCivilStatus Load (0.3ms)[0m   [0mSELECT * FROM `civil_statuses` [0m
+Rendering template within layouts/civil_statuses
+Rendering civil_statuses/index
+  [4;36;1mCivilStatus Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `civil_statuses`[0m
+Completed in 24ms (View: 16, DB: 1) | 200 OK [http://0.0.0.0/civil_statuses]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CivilStatusesController#new (for 127.0.0.1 at 2010-03-26 17:05:45) [GET]
+  [4;35;1mCivilStatus Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `civil_statuses`[0m
+Rendering template within layouts/civil_statuses
+Rendering civil_statuses/new
+Completed in 27ms (View: 18, DB: 1) | 200 OK [http://0.0.0.0/civil_statuses/new]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (12.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (41.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateCompagnies (20100208091251)
+Migrating to CreateJobSheets (20100209105655)
+Migrating to CreateCivilStatuses (20100326133802)
+Migrating to AddStatusToCivilStatus (20100326141326)
+  [4;36;1mSQL (642.1ms)[0m   [0;1mALTER TABLE `civil_statuses` ADD `status` varchar(255)[0m
+  [4;35;1mSQL (106.9ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100326141326')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (54.8ms)[0m   [0mSHOW FIELDS FROM `civil_statuses`[0m
+  [4;36;1mSQL (24.3ms)[0m   [0;1mdescribe `civil_statuses`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `civil_statuses`[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mSHOW FIELDS FROM `compagnies`[0m
+  [4;35;1mSQL (4.0ms)[0m   [0mdescribe `compagnies`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW KEYS FROM `compagnies`[0m
+  [4;35;1mSQL (2.5ms)[0m   [0mSHOW FIELDS FROM `job_sheets`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mdescribe `job_sheets`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `job_sheets`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CivilStatusesController#new (for 127.0.0.1 at 2010-03-26 17:13:50) [GET]
+  [4;36;1mCivilStatus Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `civil_statuses`[0m
+Rendering template within layouts/civil_statuses
+Rendering civil_statuses/new
+Completed in 69ms (View: 61, DB: 1) | 200 OK [http://0.0.0.0/civil_statuses/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CivilStatusesController#new (for 127.0.0.1 at 2010-03-26 17:13:52) [GET]
+  [4;35;1mCivilStatus Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `civil_statuses`[0m
+Rendering template within layouts/civil_statuses
+Rendering civil_statuses/new
+Completed in 56ms (View: 18, DB: 3) | 200 OK [http://0.0.0.0/civil_statuses/new]
+  [4;36;1mSQL (3.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CivilStatusesController#new (for 127.0.0.1 at 2010-03-26 17:16:02) [GET]
+  [4;36;1mCivilStatus Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `civil_statuses`[0m
+Rendering template within layouts/civil_statuses
+Rendering civil_statuses/new
+Completed in 39ms (View: 26, DB: 4) | 200 OK [http://0.0.0.0/civil_statuses/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CivilStatusesController#edit (for 127.0.0.1 at 2010-03-26 17:16:49) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mCivilStatus Columns (50.1ms)[0m   [0mSHOW FIELDS FROM `civil_statuses`[0m
+  [4;36;1mCivilStatus Load (0.5ms)[0m   [0;1mSELECT * FROM `civil_statuses` WHERE (`civil_statuses`.`id` = 4) [0m
+Rendering template within layouts/civil_statuses
+Rendering civil_statuses/edit
+Completed in 117ms (View: 58, DB: 51) | 200 OK [http://0.0.0.0/civil_statuses/4/edit]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CivilStatusesController#edit (for 127.0.0.1 at 2010-03-26 17:29:17) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mCivilStatus Columns (37.2ms)[0m   [0mSHOW FIELDS FROM `civil_statuses`[0m
+  [4;36;1mCivilStatus Load (0.2ms)[0m   [0;1mSELECT * FROM `civil_statuses` WHERE (`civil_statuses`.`id` = 4) [0m
+Rendering template within layouts/civil_statuses
+Rendering civil_statuses/edit
+Completed in 78ms (View: 32, DB: 38) | 200 OK [http://0.0.0.0/civil_statuses/4/edit]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CivilStatusesController#new (for 127.0.0.1 at 2010-03-26 17:29:27) [GET]
+  [4;35;1mCivilStatus Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `civil_statuses`[0m
+Rendering template within layouts/civil_statuses
+Rendering civil_statuses/new
+Rendered civil_statuses/_form (14.6ms)
+Completed in 41ms (View: 29, DB: 1) | 200 OK [http://0.0.0.0/civil_statuses/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CivilStatusesController#new (for 127.0.0.1 at 2010-03-26 17:32:09) [GET]
+  [4;36;1mCivilStatus Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `civil_statuses`[0m
+Rendering template within layouts/civil_statuses
+Rendering civil_statuses/new
+Rendered civil_statuses/_form (13.1ms)
+Completed in 27ms (View: 19, DB: 1) | 200 OK [http://0.0.0.0/civil_statuses/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CivilStatusesController#index (for 127.0.0.1 at 2010-03-26 17:32:12) [GET]
+  [4;35;1mCivilStatus Load (0.4ms)[0m   [0mSELECT * FROM `civil_statuses` [0m
+Rendering template within layouts/civil_statuses
+Rendering civil_statuses/index
+  [4;36;1mCivilStatus Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `civil_statuses`[0m
+Completed in 24ms (View: 16, DB: 1) | 200 OK [http://0.0.0.0/civil_statuses]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CivilStatusesController#edit (for 127.0.0.1 at 2010-03-26 17:32:23) [GET]
+  Parameters: {"id"=>"5"}
+  [4;35;1mCivilStatus Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `civil_statuses`[0m
+  [4;36;1mCivilStatus Load (0.3ms)[0m   [0;1mSELECT * FROM `civil_statuses` WHERE (`civil_statuses`.`id` = 5) [0m
+Rendering template within layouts/civil_statuses
+Rendering civil_statuses/edit
+Rendered civil_statuses/_form (17.1ms)
+Completed in 39ms (View: 30, DB: 1) | 200 OK [http://0.0.0.0/civil_statuses/5/edit]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CivilStatusesController#update (for 127.0.0.1 at 2010-03-26 17:32:35) [PUT]
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"jpEdKBG/aFClf9Au/QNHWOomzPyt3eDWkRvEW22AhK0=", "id"=>"5", "civil_status"=>{"name"=>"Sade", "birthday(1i)"=>"2010", "birthday(2i)"=>"3", "birthday(3i)"=>"26", "gender"=>"homme", "family_name"=>"RAbe", "current_city"=>"", "hometown"=>"", "status"=>"celibataire", "age"=>"34"}}
+  [4;35;1mCivilStatus Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `civil_statuses`[0m
+  [4;36;1mCivilStatus Load (0.1ms)[0m   [0;1mSELECT * FROM `civil_statuses` WHERE (`civil_statuses`.`id` = 5) [0m
+  [4;35;1mSQL (1.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mCivilStatus Update (85.8ms)[0m   [0;1mUPDATE `civil_statuses` SET `updated_at` = '2010-03-26 14:32:35', `status` = 'celibataire' WHERE `id` = 5[0m
+  [4;35;1mSQL (52.3ms)[0m   [0mCOMMIT[0m
+Redirected to http://0.0.0.0:3000/civil_statuses/5
+Completed in 158ms (DB: 141) | 302 Found [http://0.0.0.0/civil_statuses/5]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CivilStatusesController#show (for 127.0.0.1 at 2010-03-26 17:32:36) [GET]
+  Parameters: {"id"=>"5"}
+  [4;36;1mCivilStatus Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `civil_statuses`[0m
+  [4;35;1mCivilStatus Load (0.3ms)[0m   [0mSELECT * FROM `civil_statuses` WHERE (`civil_statuses`.`id` = 5) [0m
+Rendering template within layouts/civil_statuses
+Rendering civil_statuses/show
+Completed in 15ms (View: 4, DB: 1) | 200 OK [http://0.0.0.0/civil_statuses/5]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (28.5ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CivilStatusesController#show (for 127.0.0.1 at 2010-03-26 17:34:42) [GET]
+  Parameters: {"id"=>"5"}
+  [4;36;1mCivilStatus Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `civil_statuses`[0m
+  [4;35;1mCivilStatus Load (0.1ms)[0m   [0mSELECT * FROM `civil_statuses` WHERE (`civil_statuses`.`id` = 5) [0m
+Rendering template within layouts/civil_statuses
+Rendering civil_statuses/show
+Completed in 19ms (View: 9, DB: 30) | 200 OK [http://0.0.0.0/civil_statuses/5]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CivilStatusesController#index (for 127.0.0.1 at 2010-03-26 17:34:49) [GET]
+  [4;36;1mCivilStatus Load (0.3ms)[0m   [0;1mSELECT * FROM `civil_statuses` [0m
+Rendering template within layouts/civil_statuses
+Rendering civil_statuses/index
+  [4;35;1mCivilStatus Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `civil_statuses`[0m
+Completed in 25ms (View: 16, DB: 1) | 200 OK [http://0.0.0.0/civil_statuses]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CivilStatusesController#show (for 127.0.0.1 at 2010-03-26 17:34:52) [GET]
+  Parameters: {"id"=>"5"}
+  [4;36;1mCivilStatus Columns (2.3ms)[0m   [0;1mSHOW FIELDS FROM `civil_statuses`[0m
+  [4;35;1mCivilStatus Load (0.1ms)[0m   [0mSELECT * FROM `civil_statuses` WHERE (`civil_statuses`.`id` = 5) [0m
+Rendering template within layouts/civil_statuses
+Rendering civil_statuses/show
+Completed in 17ms (View: 7, DB: 3) | 200 OK [http://0.0.0.0/civil_statuses/5]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CivilStatusesController#edit (for 127.0.0.1 at 2010-03-26 17:34:56) [GET]
+  Parameters: {"id"=>"5"}
+  [4;36;1mCivilStatus Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `civil_statuses`[0m
+  [4;35;1mCivilStatus Load (0.1ms)[0m   [0mSELECT * FROM `civil_statuses` WHERE (`civil_statuses`.`id` = 5) [0m
+Rendering template within layouts/civil_statuses
+Rendering civil_statuses/edit
+Rendered civil_statuses/_form (15.1ms)
+Completed in 31ms (View: 23, DB: 1) | 200 OK [http://0.0.0.0/civil_statuses/5/edit]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CivilStatusesController#edit (for 127.0.0.1 at 2010-03-26 17:47:58) [GET]
+  Parameters: {"id"=>"5"}
+  [4;36;1mCivilStatus Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `civil_statuses`[0m
+  [4;35;1mCivilStatus Load (0.1ms)[0m   [0mSELECT * FROM `civil_statuses` WHERE (`civil_statuses`.`id` = 5) [0m
+Rendering template within layouts/civil_statuses
+Rendering civil_statuses/edit
+Rendered civil_statuses/_form (14.4ms)
+Completed in 97ms (View: 23, DB: 1) | 200 OK [http://0.0.0.0/civil_statuses/5/edit]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CivilStatusesController#edit (for 127.0.0.1 at 2010-03-26 17:48:01) [GET]
+  Parameters: {"id"=>"5"}
+  [4;36;1mCivilStatus Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `civil_statuses`[0m
+  [4;35;1mCivilStatus Load (0.1ms)[0m   [0mSELECT * FROM `civil_statuses` WHERE (`civil_statuses`.`id` = 5) [0m
+Rendering template within layouts/civil_statuses
+Rendering civil_statuses/edit
+Rendered civil_statuses/_form (14.1ms)
+Completed in 31ms (View: 22, DB: 1) | 200 OK [http://0.0.0.0/civil_statuses/5/edit]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CivilStatusesController#index (for 127.0.0.1 at 2010-03-26 17:48:18) [GET]
+  [4;36;1mCivilStatus Load (0.1ms)[0m   [0;1mSELECT * FROM `civil_statuses` [0m
+Rendering template within layouts/civil_statuses
+Rendering civil_statuses/index
+  [4;35;1mCivilStatus Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `civil_statuses`[0m
+Completed in 25ms (View: 17, DB: 1) | 200 OK [http://0.0.0.0/civil_statuses]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CivilStatusesController#new (for 127.0.0.1 at 2010-03-26 17:48:21) [GET]
+  [4;36;1mCivilStatus Columns (2.3ms)[0m   [0;1mSHOW FIELDS FROM `civil_statuses`[0m
+Rendering template within layouts/civil_statuses
+Rendering civil_statuses/new
+Rendered civil_statuses/_form (14.0ms)
+Completed in 30ms (View: 21, DB: 3) | 200 OK [http://0.0.0.0/civil_statuses/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CivilStatusesController#create (for 127.0.0.1 at 2010-03-26 17:48:59) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"jpEdKBG/aFClf9Au/QNHWOomzPyt3eDWkRvEW22AhK0=", "civil_status"=>{"name"=>"tiavina", "birthday(1i)"=>"2010", "birthday(2i)"=>"3", "birthday(3i)"=>"26", "gender"=>"", "family_name"=>"Rakotobe", "current_city"=>"", "hometown"=>"", "status"=>"", "age"=>"45"}}
+  [4;35;1mCivilStatus Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `civil_statuses`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+Rendering template within layouts/civil_statuses
+Rendering civil_statuses/new
+Rendered civil_statuses/_form (13.2ms)
+Completed in 35ms (View: 23, DB: 1) | 200 OK [http://0.0.0.0/civil_statuses]
+  [4;36;1mSQL (12.9ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CivilStatusesController#create (for 127.0.0.1 at 2010-03-26 17:49:16) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"jpEdKBG/aFClf9Au/QNHWOomzPyt3eDWkRvEW22AhK0=", "civil_status"=>{"name"=>"tiavina", "birthday(1i)"=>"2010", "birthday(2i)"=>"3", "birthday(3i)"=>"26", "gender"=>"femme", "family_name"=>"Rakotobe", "current_city"=>"", "hometown"=>"", "status"=>"", "age"=>"45"}}
+  [4;36;1mCivilStatus Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `civil_statuses`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mCivilStatus Create (0.3ms)[0m   [0;1mINSERT INTO `civil_statuses` (`name`, `created_at`, `updated_at`, `gender`, `family_name`, `birthday`, `hometown`, `current_city`, `age`, `status`) VALUES('tiavina', '2010-03-26 14:49:16', '2010-03-26 14:49:16', 'femme', 'Rakotobe', '2010-03-26', '', '', 45, '')[0m
+  [4;35;1mSQL (54.2ms)[0m   [0mCOMMIT[0m
+Redirected to http://0.0.0.0:3000/civil_statuses/6
+Completed in 70ms (DB: 69) | 302 Found [http://0.0.0.0/civil_statuses]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CivilStatusesController#show (for 127.0.0.1 at 2010-03-26 17:49:16) [GET]
+  Parameters: {"id"=>"6"}
+  [4;36;1mCivilStatus Columns (32.0ms)[0m   [0;1mSHOW FIELDS FROM `civil_statuses`[0m
+  [4;35;1mCivilStatus Load (4.9ms)[0m   [0mSELECT * FROM `civil_statuses` WHERE (`civil_statuses`.`id` = 6) [0m
+Rendering template within layouts/civil_statuses
+Rendering civil_statuses/show
+Completed in 55ms (View: 9, DB: 37) | 200 OK [http://0.0.0.0/civil_statuses/6]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CivilStatusesController#create (for 127.0.0.1 at 2010-03-26 17:50:24) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"jpEdKBG/aFClf9Au/QNHWOomzPyt3eDWkRvEW22AhK0=", "civil_status"=>{"name"=>"tiavina", "birthday(1i)"=>"2010", "birthday(2i)"=>"3", "birthday(3i)"=>"26", "gender"=>"", "family_name"=>"Rakotobe", "current_city"=>"", "hometown"=>"", "status"=>"", "age"=>"45"}}
+  [4;36;1mCivilStatus Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `civil_statuses`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+Rendering template within layouts/civil_statuses
+Rendering civil_statuses/new
+Rendered civil_statuses/_form (15.8ms)
+Completed in 147ms (View: 29, DB: 1) | 200 OK [http://0.0.0.0/civil_statuses]

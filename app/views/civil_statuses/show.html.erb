@@ -1,0 +1,40 @@
+<p>
+  <b>Family name:</b>
+  <%=h @civil_status.family_name %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%=h @civil_status.name %>
+</p>
+
+<p>
+  <b>Age:</b>
+  <%=h @civil_status.age %>
+</p>
+
+<p>
+  <b>Birthday:</b>
+  <%=h @civil_status.birthday %>
+</p>
+
+<p>
+  <b>Hometown:</b>
+  <%=h @civil_status.hometown %>
+</p>
+
+<p>
+  <b>Current city:</b>
+  <%=h @civil_status.current_city %>
+</p>
+
+<p>
+  <b>Gender:</b>
+  <%=h @civil_status.gender %>
+</p>
+<p>
+  <b>Status:</b>
+  <%=h @civil_status.status %>
+</p>
+<%= link_to 'Edit', edit_civil_status_path(@civil_status) %> |
+<%= link_to 'Back', civil_statuses_path %>
