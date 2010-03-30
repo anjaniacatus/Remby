@@ -3977,3 +3977,58 @@ Rendering template within layouts/civil_statuses
 Rendering civil_statuses/show
   [4;36;1mSlug Load (0.1ms)[0m   [0;1mSELECT * FROM `slugs` WHERE (`slugs`.sluggable_id = 3 AND `slugs`.sluggable_type = 'CivilStatus') ORDER BY id DESC, id DESC LIMIT 1[0m
 Completed in 27ms (View: 10, DB: 2) | 200 OK [http://0.0.0.0/civil_statuses/rakotonjanahary--3]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CompagniesController#index (for 127.0.0.1 at 2010-03-30 10:22:28) [GET]
+  [4;35;1mCompagny Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `compagnies`[0m
+  [4;36;1mCompagny Load (0.3ms)[0m   [0;1mSELECT * FROM `compagnies` [0m
+Rendering compagnies/index
+Completed in 32ms (View: 17, DB: 1) | 200 OK [http://0.0.0.0/compagnies]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CompagniesController#new (for 127.0.0.1 at 2010-03-30 10:22:33) [GET]
+  [4;35;1mCompagny Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `compagnies`[0m
+Rendering compagnies/new
+Completed in 71ms (View: 57, DB: 1) | 200 OK [http://0.0.0.0/compagnies/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CompagniesController#create (for 127.0.0.1 at 2010-03-30 10:23:12) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"0hwKudi6c4o6pHjmak6ewT28MSQZxABYvLBz/gZazyQ=", "compagny"=>{"name"=>"Cotona", "activity"=>"textil", "headquaters"=>"Antsirabe", "registration_number"=>"123456", "sector"=>"tertiaire", "legal_form"=>"SARL"}}
+  [4;36;1mCompagny Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `compagnies`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSlug Load (0.3ms)[0m   [0;1mSELECT * FROM `slugs` WHERE (`slugs`.sluggable_id = NULL AND `slugs`.sluggable_type = 'Compagny') ORDER BY id DESC, id DESC LIMIT 1[0m
+  [4;35;1mSlug Load (1.5ms)[0m   [0mSELECT * FROM `slugs` WHERE (`slugs`.sluggable_id = NULL AND `slugs`.sluggable_type = 'Compagny' AND (`slugs`.`name` = 'cotona' AND `slugs`.`scope` IS NULL)) ORDER BY id DESC[0m
+  [4;36;1mCompagny Create (0.2ms)[0m   [0;1mINSERT INTO `compagnies` (`name`, `created_at`, `updated_at`, `headquaters`, `activity`, `registration_number`, `legal_form`, `sector`) VALUES('Cotona', '2010-03-30 07:23:13', '2010-03-30 07:23:13', 'Antsirabe', 'textil', 123456, 'SARL', 'tertiaire')[0m
+  [4;35;1mSlug Load (0.2ms)[0m   [0mSELECT * FROM `slugs` WHERE (`slugs`.sluggable_id = NULL AND `slugs`.sluggable_type = 'Compagny') ORDER BY id DESC[0m
+  [4;36;1mSlug Load (0.2ms)[0m   [0;1mSELECT sequence FROM `slugs` WHERE (`slugs`.`name` = 'cotona' AND `slugs`.`scope` IS NULL AND `slugs`.`sluggable_type` = 'Compagny') ORDER BY sequence DESC LIMIT 1[0m
+  [4;35;1mSlug Create (0.2ms)[0m   [0mINSERT INTO `slugs` (`name`, `scope`, `sequence`, `sluggable_type`, `sluggable_id`) VALUES('cotona', NULL, 1, 'Compagny', 1)[0m
+  [4;36;1mSQL (48.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSlug Load (0.4ms)[0m   [0mSELECT * FROM `slugs` WHERE (`slugs`.sluggable_id = 1 AND `slugs`.sluggable_type = 'Compagny') ORDER BY id DESC, id DESC LIMIT 1[0m
+Redirected to http://0.0.0.0:3000/compagnies/cotona
+Completed in 164ms (DB: 53) | 302 Found [http://0.0.0.0/compagnies]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CompagniesController#show (for 127.0.0.1 at 2010-03-30 10:23:13) [GET]
+  Parameters: {"id"=>"cotona"}
+  [4;36;1mCompagny Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `compagnies`[0m
+  [4;35;1mCompagny Load (0.5ms)[0m   [0mSELECT compagnies.* FROM `compagnies` INNER JOIN `slugs` ON `slugs`.sluggable_id = `compagnies`.id AND `slugs`.sluggable_type = 'Compagny' WHERE (`slugs`.`scope` IS NULL AND `slugs`.`sequence` = '1' AND `slugs`.`name` = 'cotona') LIMIT 1[0m
+Rendering compagnies/show
+  [4;36;1mSlug Load (0.1ms)[0m   [0;1mSELECT * FROM `slugs` WHERE (`slugs`.sluggable_id = 1 AND `slugs`.sluggable_type = 'Compagny') ORDER BY id DESC, id DESC LIMIT 1[0m
+Completed in 38ms (View: 21, DB: 2) | 200 OK [http://0.0.0.0/compagnies/cotona]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobSheetsController#new (for 127.0.0.1 at 2010-03-30 10:23:27) [GET]
+  [4;35;1mJobSheet Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `job_sheets`[0m
+Rendering template within layouts/job_sheets
+Rendering job_sheets/new
+Completed in 88ms (View: 51, DB: 2) | 200 OK [http://0.0.0.0/job_sheets/new]
