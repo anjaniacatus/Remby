@@ -1,4 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :contact_infos
+
   map.resources :civil_statuses
 
   map.resources :job_sheets

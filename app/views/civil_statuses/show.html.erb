@@ -10,7 +10,7 @@
 
 <p>
   <b>Age:</b>
-  <%=h @civil_status.age %>
+  <%=h @civil_status.age %> ans
 </p>
 
 <p>
@@ -36,5 +36,6 @@
   <b>Status:</b>
   <%=h @civil_status.status %>
 </p>
+
 <%= link_to 'Edit', edit_civil_status_path(@civil_status) %> |
 <%= link_to 'Back', civil_statuses_path %>

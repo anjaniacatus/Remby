@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100326141326) do
+ActiveRecord::Schema.define(:version => 20100330070713) do
 
   create_table "civil_statuses", :force => true do |t|
     t.string   "family_name"
@@ -35,6 +35,16 @@ ActiveRecord::Schema.define(:version => 20100326141326) do
     t.datetime "updated_at"
   end
 
+  create_table "contact_infos", :force => true do |t|
+    t.integer  "contactable_id"
+    t.string   "contactable_type"
+    t.integer  "value_format"
+    t.string   "value"
+    t.string   "localisation"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "job_sheets", :force => true do |t|
     t.string   "position"
     t.string   "fields"
@@ -45,6 +55,14 @@ ActiveRecord::Schema.define(:version => 20100326141326) do
     t.string   "degree"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "slugs", :force => true do |t|
+    t.string  "name"
+    t.integer "sluggable_id"
+    t.integer "sequence",                     :default => 1, :null => false
+    t.string  "sluggable_type", :limit => 40
+    t.string  "scope",          :limit => 40
   end
 
 end

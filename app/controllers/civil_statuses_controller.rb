@@ -14,7 +14,7 @@ class CivilStatusesController < ApplicationController
   # GET /civil_statuses/1.xml
   def show
     @civil_status = CivilStatus.find(params[:id])
-
+   
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @civil_status }
@@ -25,11 +25,7 @@ class CivilStatusesController < ApplicationController
   # GET /civil_statuses/new.xml
   def new
     @civil_status = CivilStatus.new
-
-    respond_to do |format|
-      format.html # new.html.erb
-      format.xml  { render :xml => @civil_status }
-    end
+    @civil_status.contact_infos.build
   end
 
   # GET /civil_statuses/1/edit

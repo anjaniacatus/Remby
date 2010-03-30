@@ -1977,3 +1977,2003 @@ Rendering template within layouts/civil_statuses
 Rendering civil_statuses/new
 Rendered civil_statuses/_form (15.8ms)
 Completed in 147ms (View: 29, DB: 1) | 200 OK [http://0.0.0.0/civil_statuses]
+  [4;35;1mSQL (75.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CivilStatusesController#index (for 127.0.0.1 at 2010-03-26 20:47:27) [GET]
+  [4;35;1mCivilStatus Load (17.7ms)[0m   [0mSELECT * FROM `civil_statuses` [0m
+Rendering template within layouts/civil_statuses
+Rendering civil_statuses/index
+  [4;36;1mCivilStatus Columns (13.3ms)[0m   [0;1mSHOW FIELDS FROM `civil_statuses`[0m
+Completed in 241ms (View: 114, DB: 106) | 200 OK [http://0.0.0.0/civil_statuses]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CivilStatusesController#index (for 127.0.0.1 at 2010-03-26 20:47:30) [GET]
+  [4;35;1mCivilStatus Load (0.2ms)[0m   [0mSELECT * FROM `civil_statuses` [0m
+Rendering template within layouts/civil_statuses
+Rendering civil_statuses/index
+  [4;36;1mCivilStatus Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `civil_statuses`[0m
+Completed in 35ms (View: 26, DB: 2) | 200 OK [http://0.0.0.0/civil_statuses]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CivilStatusesController#show (for 127.0.0.1 at 2010-03-26 20:47:37) [GET]
+  Parameters: {"id"=>"6"}
+  [4;35;1mCivilStatus Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `civil_statuses`[0m
+  [4;36;1mCivilStatus Load (0.2ms)[0m   [0;1mSELECT * FROM `civil_statuses` WHERE (`civil_statuses`.`id` = 6) [0m
+Rendering template within layouts/civil_statuses
+Rendering civil_statuses/show
+
+ActionView::TemplateError (String can't be coerced into Fixnum) on line #13 of app/views/civil_statuses/show.html.erb:
+10: 
+11: <p>
+12:   <b>Age:</b>
+13:   <%=h @civil_status.age + "  ans" %>
+14: </p>
+15: 
+16: <p>
+
+    app/views/civil_statuses/show.html.erb:13:in `+'
+    app/views/civil_statuses/show.html.erb:13
+    app/controllers/civil_statuses_controller.rb:18:in `show'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (54.3ms)
+Rendered rescues/_request_and_response (23.2ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CivilStatusesController#show (for 127.0.0.1 at 2010-03-26 20:48:39) [GET]
+  Parameters: {"id"=>"6"}
+  [4;35;1mCivilStatus Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `civil_statuses`[0m
+  [4;36;1mCivilStatus Load (0.1ms)[0m   [0;1mSELECT * FROM `civil_statuses` WHERE (`civil_statuses`.`id` = 6) [0m
+Rendering template within layouts/civil_statuses
+Rendering civil_statuses/show
+Completed in 19ms (View: 10, DB: 1) | 200 OK [http://0.0.0.0/civil_statuses/6]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CivilStatusesController#show (for 127.0.0.1 at 2010-03-26 20:48:58) [GET]
+  Parameters: {"id"=>"6"}
+  [4;35;1mCivilStatus Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `civil_statuses`[0m
+  [4;36;1mCivilStatus Load (0.1ms)[0m   [0;1mSELECT * FROM `civil_statuses` WHERE (`civil_statuses`.`id` = 6) [0m
+Rendering template within layouts/civil_statuses
+Rendering civil_statuses/show
+Completed in 19ms (View: 10, DB: 1) | 200 OK [http://0.0.0.0/civil_statuses/6]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CivilStatusesController#show (for 127.0.0.1 at 2010-03-26 21:24:19) [GET]
+  Parameters: {"id"=>"6"}
+  [4;35;1mCivilStatus Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `civil_statuses`[0m
+  [4;36;1mCivilStatus Load (0.1ms)[0m   [0;1mSELECT * FROM `civil_statuses` WHERE (`civil_statuses`.`id` = 6) [0m
+Rendering template within layouts/civil_statuses
+Rendering civil_statuses/show
+Completed in 17ms (View: 7, DB: 1) | 200 OK [http://0.0.0.0/civil_statuses/6]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CivilStatusesController#show (for 127.0.0.1 at 2010-03-26 21:24:19) [GET]
+  Parameters: {"id"=>"6"}
+  [4;35;1mCivilStatus Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `civil_statuses`[0m
+  [4;36;1mCivilStatus Load (0.1ms)[0m   [0;1mSELECT * FROM `civil_statuses` WHERE (`civil_statuses`.`id` = 6) [0m
+Rendering template within layouts/civil_statuses
+Rendering civil_statuses/show
+Completed in 15ms (View: 5, DB: 2) | 200 OK [http://0.0.0.0/civil_statuses/6]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContactInfosController#index (for 127.0.0.1 at 2010-03-26 21:24:39) [GET]
+  [4;35;1mContactInfo Load (0.0ms)[0m   [0mMysql::Error: Table 'remb_development.contact_infos' doesn't exist: SELECT * FROM `contact_infos` [0m
+
+ActiveRecord::StatementInvalid (Mysql::Error: Table 'remb_development.contact_infos' doesn't exist: SELECT * FROM `contact_infos` ):
+  app/controllers/contact_infos_controller.rb:5:in `index'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (119.2ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (64.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateCompagnies (20100208091251)
+Migrating to CreateJobSheets (20100209105655)
+Migrating to CreateCivilStatuses (20100326133802)
+Migrating to AddStatusToCivilStatus (20100326141326)
+Migrating to CreateContactInfos (20100326181219)
+  [4;36;1mSQL (274.4ms)[0m   [0;1mCREATE TABLE `contact_infos` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `contactable_id` int(11), `contactable_type` varchar(255), `value_format` int(11), `value` varchar(255), `localisation` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (100.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100326181219')[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (31.6ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mSHOW FIELDS FROM `civil_statuses`[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mdescribe `civil_statuses`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `civil_statuses`[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mSHOW FIELDS FROM `compagnies`[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mdescribe `compagnies`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `compagnies`[0m
+  [4;35;1mSQL (14.3ms)[0m   [0mSHOW FIELDS FROM `contact_infos`[0m
+  [4;36;1mSQL (34.4ms)[0m   [0;1mdescribe `contact_infos`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW KEYS FROM `contact_infos`[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mSHOW FIELDS FROM `job_sheets`[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mdescribe `job_sheets`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `job_sheets`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContactInfosController#index (for 127.0.0.1 at 2010-03-26 21:24:59) [GET]
+  [4;36;1mContactInfo Load (0.3ms)[0m   [0;1mSELECT * FROM `contact_infos` [0m
+Rendering template within layouts/contact_infos
+Rendering contact_infos/index
+Completed in 22ms (View: 14, DB: 0) | 200 OK [http://0.0.0.0/contact_infos]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContactInfosController#new (for 127.0.0.1 at 2010-03-26 21:25:03) [GET]
+  [4;35;1mContactInfo Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `contact_infos`[0m
+Rendering template within layouts/contact_infos
+Rendering contact_infos/new
+
+ActionView::TemplateError (uninitialized constant ActionView::Base::CompiledTemplates::ContactInformation) on line #7 of app/views/contact_infos/_form.html.erb:
+4: </p>
+5: <p>
+6:   <%= form.label :value_format %><br />
+7:   <%= form.select :value_format, ContactInformation::ValueFormats.map { |t| [ t[0], ContactInformation::ValueFormats.index(t) ] } %>
+8: </p>
+9: <p>
+10:   <%= form.label :value %><br />
+
+    app/views/contact_infos/_form.html.erb:7
+    app/views/contact_infos/new.html.erb:5
+    app/views/contact_infos/new.html.erb:3
+    app/controllers/contact_infos_controller.rb:29:in `new'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (194.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContactInfosController#new (for 127.0.0.1 at 2010-03-26 21:25:52) [GET]
+  [4;36;1mContactInfo Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `contact_infos`[0m
+Rendering template within layouts/contact_infos
+Rendering contact_infos/new
+
+ActionView::TemplateError (uninitialized constant ActionView::Base::CompiledTemplates::ContactInfos) on line #7 of app/views/contact_infos/_form.html.erb:
+4: </p>
+5: <p>
+6:   <%= form.label :value_format %><br />
+7:   <%= form.select :value_format, ContactInfos::ValueFormats.map { |t| [ t[0], ContactInfo::ValueFormats.index(t) ] } %>
+8: </p>
+9: <p>
+10:   <%= form.label :value %><br />
+
+    app/views/contact_infos/_form.html.erb:7
+    app/views/contact_infos/new.html.erb:5
+    app/views/contact_infos/new.html.erb:3
+    app/controllers/contact_infos_controller.rb:29:in `new'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (65.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContactInfosController#new (for 127.0.0.1 at 2010-03-26 21:26:25) [GET]
+  [4;35;1mContactInfo Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `contact_infos`[0m
+Rendering template within layouts/contact_infos
+Rendering contact_infos/new
+Rendered contact_infos/_form (3.6ms)
+Completed in 22ms (View: 13, DB: 1) | 200 OK [http://0.0.0.0/contact_infos/new]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContactInfosController#create (for 127.0.0.1 at 2010-03-26 21:26:52) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"jpEdKBG/aFClf9Au/QNHWOomzPyt3eDWkRvEW22AhK0=", "contact_info"=>{"localisation"=>"test", "value_format"=>"1", "value"=>"anja@fen"}}
+  [4;36;1mContactInfo Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `contact_infos`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+Rendering template within layouts/contact_infos
+Rendering contact_infos/new
+Rendered contact_infos/_form (5.6ms)
+Completed in 29ms (View: 16, DB: 1) | 200 OK [http://0.0.0.0/contact_infos]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContactInfosController#create (for 127.0.0.1 at 2010-03-26 21:26:59) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"jpEdKBG/aFClf9Au/QNHWOomzPyt3eDWkRvEW22AhK0=", "contact_info"=>{"localisation"=>"test", "value_format"=>"1", "value"=>"anja@fen.com"}}
+  [4;35;1mContactInfo Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `contact_infos`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mContactInfo Create (12.7ms)[0m   [0mINSERT INTO `contact_infos` (`contactable_type`, `localisation`, `created_at`, `contactable_id`, `updated_at`, `value_format`, `value`) VALUES(NULL, 'test', '2010-03-26 18:26:59', NULL, '2010-03-26 18:26:59', 1, 'anja@fen.com')[0m
+  [4;36;1mSQL (49.6ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://0.0.0.0:3000/contact_infos/1
+Completed in 78ms (DB: 63) | 302 Found [http://0.0.0.0/contact_infos]
+  [4;35;1mSQL (0.3ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContactInfosController#show (for 127.0.0.1 at 2010-03-26 21:26:59) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mContactInfo Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `contact_infos`[0m
+  [4;36;1mContactInfo Load (18.0ms)[0m   [0;1mSELECT * FROM `contact_infos` WHERE (`contact_infos`.`id` = 1) [0m
+Rendering template within layouts/contact_infos
+Rendering contact_infos/show
+Completed in 45ms (View: 17, DB: 19) | 200 OK [http://0.0.0.0/contact_infos/1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContactInfosController#show (for 127.0.0.1 at 2010-03-26 21:31:54) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mContactInfo Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `contact_infos`[0m
+  [4;36;1mContactInfo Load (0.1ms)[0m   [0;1mSELECT * FROM `contact_infos` WHERE (`contact_infos`.`id` = 1) [0m
+Rendering template within layouts/contact_infos
+Rendering contact_infos/show
+Completed in 14ms (View: 4, DB: 1) | 200 OK [http://0.0.0.0/contact_infos/1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContactInfosController#edit (for 127.0.0.1 at 2010-03-26 21:32:00) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mContactInfo Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `contact_infos`[0m
+  [4;36;1mContactInfo Load (0.1ms)[0m   [0;1mSELECT * FROM `contact_infos` WHERE (`contact_infos`.`id` = 1) [0m
+Rendering template within layouts/contact_infos
+Rendering contact_infos/edit
+Rendered contact_infos/_form (3.0ms)
+Completed in 24ms (View: 15, DB: 1) | 200 OK [http://0.0.0.0/contact_infos/1/edit]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateCompagnies (20100208091251)
+Migrating to CreateJobSheets (20100209105655)
+Migrating to CreateCivilStatuses (20100326133802)
+Migrating to AddStatusToCivilStatus (20100326141326)
+Migrating to CreateContactInfos (20100326181219)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW FIELDS FROM `civil_statuses`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mdescribe `civil_statuses`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `civil_statuses`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW FIELDS FROM `compagnies`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mdescribe `compagnies`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW KEYS FROM `compagnies`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW FIELDS FROM `contact_infos`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mdescribe `contact_infos`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `contact_infos`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW FIELDS FROM `job_sheets`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mdescribe `job_sheets`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW KEYS FROM `job_sheets`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mCivilStatus Load (29.8ms)[0m   [0;1mSELECT * FROM `civil_statuses` ORDER BY civil_statuses.id DESC LIMIT 1[0m
+  [4;35;1mCivilStatus Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `civil_statuses`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mCivilStatus Load (0.1ms)[0m   [0;1mSELECT * FROM `civil_statuses` [0m
+  [4;35;1mCivilStatus Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `civil_statuses`[0m
+  [4;36;1mCivilStatus Load (0.2ms)[0m   [0;1mSELECT * FROM `civil_statuses` ORDER BY civil_statuses.id DESC LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mCivilStatus Load (0.1ms)[0m   [0;1mSELECT * FROM `civil_statuses` ORDER BY civil_statuses.id DESC LIMIT 1[0m
+  [4;35;1mCivilStatus Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `civil_statuses`[0m
+  [4;36;1mContactInfo Load (19.5ms)[0m   [0;1mSELECT * FROM `contact_infos` WHERE (`contact_infos`.contactable_id = 6 AND `contact_infos`.contactable_type = 'CivilStatus') [0m
+  [4;36;1mSQL (31.8ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CompagniesController#index (for 127.0.0.1 at 2010-03-30 07:24:15) [GET]
+  [4;36;1mCompagny Load (91.9ms)[0m   [0;1mSELECT * FROM `compagnies` [0m
+Rendering compagnies/index
+Completed in 408ms (View: 150, DB: 124) | 200 OK [http://0.0.0.0/]
+  [4;35;1mSQL (7.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CivilStatusesController#index (for 127.0.0.1 at 2010-03-30 07:24:42) [GET]
+  [4;35;1mCivilStatus Load (0.5ms)[0m   [0mSELECT * FROM `civil_statuses` [0m
+Rendering template within layouts/civil_statuses
+Rendering civil_statuses/index
+  [4;36;1mCivilStatus Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `civil_statuses`[0m
+Completed in 141ms (View: 121, DB: 9) | 200 OK [http://0.0.0.0/civil_statuses]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CivilStatusesController#show (for 127.0.0.1 at 2010-03-30 07:24:50) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mCivilStatus Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `civil_statuses`[0m
+  [4;36;1mCivilStatus Load (22.1ms)[0m   [0;1mSELECT * FROM `civil_statuses` WHERE (`civil_statuses`.`id` = 4) [0m
+Rendering template within layouts/civil_statuses
+Rendering civil_statuses/show
+Completed in 58ms (View: 24, DB: 23) | 200 OK [http://0.0.0.0/civil_statuses/4]
+  [4;36;1mSQL (33.7ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (18.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mCivilStatus Load (82.7ms)[0m   [0;1mSELECT * FROM `civil_statuses` ORDER BY civil_statuses.id DESC LIMIT 1[0m
+  [4;35;1mCivilStatus Columns (38.9ms)[0m   [0mSHOW FIELDS FROM `civil_statuses`[0m
+  [4;36;1mContactInfo Load (158.8ms)[0m   [0;1mSELECT * FROM `contact_infos` WHERE (`contact_infos`.contactable_id = 6 AND `contact_infos`.contactable_type = 'CivilStatus') [0m
+  [4;35;1mSQL (200.6ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mContactInfo Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `contact_infos`[0m
+  [4;35;1mSQL (5.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CivilStatusesController#show (for 127.0.0.1 at 2010-03-30 08:09:02) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mCivilStatus Columns (121.4ms)[0m   [0mSHOW FIELDS FROM `civil_statuses`[0m
+  [4;36;1mCivilStatus Load (35.4ms)[0m   [0;1mSELECT * FROM `civil_statuses` WHERE (`civil_statuses`.`id` = 4) [0m
+Rendering template within layouts/civil_statuses
+Rendering civil_statuses/show
+Completed in 177ms (View: 9, DB: 162) | 200 OK [http://0.0.0.0/civil_statuses/4]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CivilStatusesController#index (for 127.0.0.1 at 2010-03-30 08:14:04) [GET]
+  [4;35;1mCivilStatus Load (0.2ms)[0m   [0mSELECT * FROM `civil_statuses` [0m
+Rendering template within layouts/civil_statuses
+Rendering civil_statuses/index
+  [4;36;1mCivilStatus Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `civil_statuses`[0m
+Completed in 28ms (View: 18, DB: 1) | 200 OK [http://0.0.0.0/civil_statuses]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CivilStatusesController#new (for 127.0.0.1 at 2010-03-30 08:14:07) [GET]
+  [4;35;1mCivilStatus Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `civil_statuses`[0m
+Rendering template within layouts/civil_statuses
+Rendering civil_statuses/new
+
+ActionView::TemplateError (undefined method `nested_fields_for' for #<ActionView::Base:0xb6691110>) on line #33 of app/views/civil_statuses/_form.html.erb:
+30:     <%= form.label :status %><br />
+31:     <%= form.select :status, CivilStatus::Statuses %>
+32:   </p>
+33:    <%= nested_fields_for :contact_infos, form %>
+
+    app/views/civil_statuses/_form.html.erb:33
+    app/views/civil_statuses/new.html.erb:4
+    app/views/civil_statuses/new.html.erb:2
+    app/controllers/civil_statuses_controller.rb:28:in `new'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (67.1ms)
+Rendered rescues/_request_and_response (1.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CivilStatusesController#new (for 127.0.0.1 at 2010-03-30 08:21:59) [GET]
+  [4;36;1mCivilStatus Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `civil_statuses`[0m
+  [4;35;1mContactInfo Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `contact_infos`[0m
+Rendering template within layouts/civil_statuses
+Rendering civil_statuses/new
+
+ActionView::TemplateError (undefined method `nested_fields_for' for #<ActionView::Base:0xb65d9bc8>) on line #34 of app/views/civil_statuses/_form.html.erb:
+31:     <%= form.select :status, CivilStatus::Statuses %>
+32:   </p>
+33:   <p>
+34:     <%= nested_fields_for :contact_infos, form %>
+35:   </p>
+
+    app/views/civil_statuses/_form.html.erb:34
+    app/views/civil_statuses/new.html.erb:4
+    app/views/civil_statuses/new.html.erb:2
+    app/controllers/civil_statuses_controller.rb:30:in `new'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (67.2ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CivilStatusesController#new (for 127.0.0.1 at 2010-03-30 08:22:30) [GET]
+  [4;36;1mCivilStatus Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `civil_statuses`[0m
+  [4;35;1mContactInfo Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `contact_infos`[0m
+Rendering template within layouts/civil_statuses
+Rendering civil_statuses/new
+
+ActionView::TemplateError (undefined method `nested_fields_for' for #<ActionView::Base:0xb66bcd4c>) on line #34 of app/views/civil_statuses/_form.html.erb:
+31:     <%= form.select :status, CivilStatus::Statuses %>
+32:   </p>
+33:   <p>
+34:     <%= nested_fields_for :contact_infos, form %>
+35:   </p>
+
+    app/views/civil_statuses/_form.html.erb:34
+    app/views/civil_statuses/new.html.erb:4
+    app/views/civil_statuses/new.html.erb:2
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (171.2ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CivilStatusesController#new (for 127.0.0.1 at 2010-03-30 08:25:19) [GET]
+  [4;36;1mCivilStatus Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `civil_statuses`[0m
+  [4;35;1mContactInfo Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `contact_infos`[0m
+Rendering template within layouts/civil_statuses
+Rendering civil_statuses/new
+
+ActionView::TemplateError (undefined method `nested_fields_for' for #<ActionView::Base:0xb67a2194>) on line #34 of app/views/civil_statuses/_form.html.erb:
+31:     <%= form.select :status, CivilStatus::Statuses %>
+32:   </p>
+33:   <p>
+34:     <%= nested_fields_for :contact_infos, form %>
+35:   </p>
+
+    app/views/civil_statuses/_form.html.erb:34
+    app/views/civil_statuses/new.html.erb:4
+    app/views/civil_statuses/new.html.erb:2
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (60.6ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CivilStatusesController#new (for 127.0.0.1 at 2010-03-30 08:26:01) [GET]
+  [4;36;1mCivilStatus Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `civil_statuses`[0m
+  [4;35;1mContactInfo Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `contact_infos`[0m
+Rendering template within layouts/civil_statuses
+Rendering civil_statuses/new
+
+ActionView::TemplateError (undefined method `nested_fields_for' for #<ActionView::Base:0xb7791780>) on line #34 of app/views/civil_statuses/_form.html.erb:
+31:     <%= form.select :status, CivilStatus::Statuses %>
+32:   </p>
+33:   <p>
+34:     <%= nested_fields_for :contact_infos, form %>
+35:   </p>
+
+    app/views/civil_statuses/_form.html.erb:34
+    app/views/civil_statuses/new.html.erb:4
+    app/views/civil_statuses/new.html.erb:2
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (61.0ms)
+Rendered rescues/_request_and_response (1.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CivilStatusesController#new (for 127.0.0.1 at 2010-03-30 08:26:07) [GET]
+  [4;36;1mCivilStatus Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `civil_statuses`[0m
+  [4;35;1mContactInfo Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `contact_infos`[0m
+Rendering template within layouts/civil_statuses
+Rendering civil_statuses/new
+
+ActionView::TemplateError (undefined method `nested_fields_for' for #<ActionView::Base:0xb6791420>) on line #34 of app/views/civil_statuses/_form.html.erb:
+31:     <%= form.select :status, CivilStatus::Statuses %>
+32:   </p>
+33:   <p>
+34:     <%= nested_fields_for :contact_infos, form %>
+35:   </p>
+
+    app/views/civil_statuses/_form.html.erb:34
+    app/views/civil_statuses/new.html.erb:4
+    app/views/civil_statuses/new.html.erb:2
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (60.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CivilStatusesController#new (for 127.0.0.1 at 2010-03-30 08:26:08) [GET]
+  [4;36;1mCivilStatus Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `civil_statuses`[0m
+  [4;35;1mContactInfo Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `contact_infos`[0m
+Rendering template within layouts/civil_statuses
+Rendering civil_statuses/new
+
+ActionView::TemplateError (undefined method `nested_fields_for' for #<ActionView::Base:0xb65b2488>) on line #34 of app/views/civil_statuses/_form.html.erb:
+31:     <%= form.select :status, CivilStatus::Statuses %>
+32:   </p>
+33:   <p>
+34:     <%= nested_fields_for :contact_infos, form %>
+35:   </p>
+
+    app/views/civil_statuses/_form.html.erb:34
+    app/views/civil_statuses/new.html.erb:4
+    app/views/civil_statuses/new.html.erb:2
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (134.4ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (5.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CivilStatusesController#new (for 127.0.0.1 at 2010-03-30 08:30:16) [GET]
+  [4;36;1mCivilStatus Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `civil_statuses`[0m
+  [4;35;1mContactInfo Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `contact_infos`[0m
+Rendering template within layouts/civil_statuses
+Rendering civil_statuses/new
+
+ActionView::TemplateError (undefined method `nested_fields_for' for #<ActionView::Base:0xb66c206c>) on line #34 of app/views/civil_statuses/_form.html.erb:
+31:     <%= form.select :status, CivilStatus::Statuses %>
+32:   </p>
+33:   <p>
+34:     <%= nested_fields_for :contact_infos, form %>
+35:   </p>
+
+    app/views/civil_statuses/_form.html.erb:34
+    app/views/civil_statuses/new.html.erb:4
+    app/views/civil_statuses/new.html.erb:2
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (58.5ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CivilStatusesController#new (for 127.0.0.1 at 2010-03-30 08:34:13) [GET]
+  [4;36;1mCivilStatus Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `civil_statuses`[0m
+  [4;35;1mContactInfo Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `contact_infos`[0m
+Rendering template within layouts/civil_statuses
+Rendering civil_statuses/new
+
+ActionView::TemplateError (undefined method `nested_fields_for' for #<ActionView::Base:0xb6785ea4>) on line #34 of app/views/civil_statuses/_form.html.erb:
+31:     <%= form.select :status, CivilStatus::Statuses %>
+32:   </p>
+33:   <p>
+34:     <%= nested_fields_for :contact_infos, form %>
+35:   </p>
+
+    app/views/civil_statuses/_form.html.erb:34
+    app/views/civil_statuses/new.html.erb:4
+    app/views/civil_statuses/new.html.erb:2
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (58.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CivilStatusesController#new (for 127.0.0.1 at 2010-03-30 08:34:13) [GET]
+  [4;36;1mCivilStatus Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `civil_statuses`[0m
+  [4;35;1mContactInfo Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `contact_infos`[0m
+Rendering template within layouts/civil_statuses
+Rendering civil_statuses/new
+
+ActionView::TemplateError (undefined method `nested_fields_for' for #<ActionView::Base:0xb65aa9e0>) on line #34 of app/views/civil_statuses/_form.html.erb:
+31:     <%= form.select :status, CivilStatus::Statuses %>
+32:   </p>
+33:   <p>
+34:     <%= nested_fields_for :contact_infos, form %>
+35:   </p>
+
+    app/views/civil_statuses/_form.html.erb:34
+    app/views/civil_statuses/new.html.erb:4
+    app/views/civil_statuses/new.html.erb:2
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (134.4ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CivilStatusesController#new (for 127.0.0.1 at 2010-03-30 08:34:15) [GET]
+  [4;36;1mCivilStatus Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `civil_statuses`[0m
+  [4;35;1mContactInfo Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `contact_infos`[0m
+Rendering template within layouts/civil_statuses
+Rendering civil_statuses/new
+
+ActionView::TemplateError (undefined method `nested_fields_for' for #<ActionView::Base:0xb66c0b54>) on line #34 of app/views/civil_statuses/_form.html.erb:
+31:     <%= form.select :status, CivilStatus::Statuses %>
+32:   </p>
+33:   <p>
+34:     <%= nested_fields_for :contact_infos, form %>
+35:   </p>
+
+    app/views/civil_statuses/_form.html.erb:34
+    app/views/civil_statuses/new.html.erb:4
+    app/views/civil_statuses/new.html.erb:2
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (58.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (5.5ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.7ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CivilStatusesController#new (for 127.0.0.1 at 2010-03-30 08:36:34) [GET]
+  [4;36;1mCivilStatus Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `civil_statuses`[0m
+  [4;35;1mContactInfo Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `contact_infos`[0m
+Rendering template within layouts/civil_statuses
+Rendering civil_statuses/new
+
+ActionView::TemplateError (undefined method `nested_fields_for' for #<ActionView::Base:0xb67a0150>) on line #34 of app/views/civil_statuses/_form.html.erb:
+31:     <%= form.select :status, CivilStatus::Statuses %>
+32:   </p>
+33:   
+34:   <%= nested_fields_for :contact_infos, form %>
+35:   
+
+    app/views/civil_statuses/_form.html.erb:34
+    app/views/civil_statuses/new.html.erb:4
+    app/views/civil_statuses/new.html.erb:2
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (58.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CivilStatusesController#new (for 127.0.0.1 at 2010-03-30 08:44:40) [GET]
+  [4;36;1mCivilStatus Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `civil_statuses`[0m
+  [4;35;1mContactInfo Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `contact_infos`[0m
+Rendering template within layouts/civil_statuses
+Rendering civil_statuses/new
+
+ActionView::TemplateError (undefined method `nested_fields_for' for #<ActionView::Base:0xb65a6494>) on line #34 of app/views/civil_statuses/_form.html.erb:
+31:     <%= form.select :status, CivilStatus::Statuses %>
+32:   </p>
+33:   
+34:   <%= nested_fields_for :contact_infos, form %>
+35:   
+
+    app/views/civil_statuses/_form.html.erb:34
+    app/views/civil_statuses/new.html.erb:4
+    app/views/civil_statuses/new.html.erb:2
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (139.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CivilStatusesController#new (for 127.0.0.1 at 2010-03-30 08:47:46) [GET]
+  [4;36;1mCivilStatus Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `civil_statuses`[0m
+  [4;35;1mContactInfo Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `contact_infos`[0m
+Rendering template within layouts/civil_statuses
+Rendering civil_statuses/new
+
+ActionView::TemplateError (undefined method `nested_fields_for' for #<ActionView::Base:0xb66be048>) on line #34 of app/views/civil_statuses/_form.html.erb:
+31:     <%= form.select :status, CivilStatus::Statuses %>
+32:   </p>
+33:   
+34:   <%= nested_fields_for :contact_infos, form %>
+35:   
+
+    app/views/civil_statuses/_form.html.erb:34
+    app/views/civil_statuses/new.html.erb:4
+    app/views/civil_statuses/new.html.erb:2
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (58.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CivilStatusesController#new (for 127.0.0.1 at 2010-03-30 08:48:19) [GET]
+  [4;36;1mCivilStatus Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `civil_statuses`[0m
+  [4;35;1mContactInfo Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `contact_infos`[0m
+Rendering template within layouts/civil_statuses
+Rendering civil_statuses/new
+
+ActionView::TemplateError (undefined method `nested_fields_for' for #<ActionView::Base:0xb777d780>) on line #34 of app/views/civil_statuses/_form.html.erb:
+31:     <%= form.select :status, CivilStatus::Statuses %>
+32:   </p>
+33:   
+34:   <%= nested_fields_for :contact_infos, form %>
+35:   
+
+    app/views/civil_statuses/_form.html.erb:34
+    app/views/civil_statuses/new.html.erb:4
+    app/views/civil_statuses/new.html.erb:2
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (60.7ms)
+Rendered rescues/_request_and_response (1.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CivilStatusesController#new (for 127.0.0.1 at 2010-03-30 08:54:03) [GET]
+  [4;36;1mCivilStatus Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `civil_statuses`[0m
+  [4;35;1mContactInfo Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `contact_infos`[0m
+Rendering template within layouts/civil_statuses
+Rendering civil_statuses/new
+
+ActionView::TemplateError (undefined method `nested_fields_for' for #<ActionView::Base:0xb6777f5c>) on line #34 of app/views/civil_statuses/_form.html.erb:
+31:     <%= form.select :status, CivilStatus::Statuses %>
+32:   </p>
+33:   
+34:   <%= nested_fields_for :contact_infos, form %>
+35:   
+
+    app/views/civil_statuses/_form.html.erb:34
+    app/views/civil_statuses/new.html.erb:4
+    app/views/civil_statuses/new.html.erb:2
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (58.4ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CivilStatusesController#new (for 127.0.0.1 at 2010-03-30 08:54:05) [GET]
+  [4;36;1mCivilStatus Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `civil_statuses`[0m
+  [4;35;1mContactInfo Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `contact_infos`[0m
+Rendering template within layouts/civil_statuses
+Rendering civil_statuses/new
+
+ActionView::TemplateError (undefined method `nested_fields_for' for #<ActionView::Base:0xb659bb48>) on line #34 of app/views/civil_statuses/_form.html.erb:
+31:     <%= form.select :status, CivilStatus::Statuses %>
+32:   </p>
+33:   
+34:   <%= nested_fields_for :contact_infos, form %>
+35:   
+
+    app/views/civil_statuses/_form.html.erb:34
+    app/views/civil_statuses/new.html.erb:4
+    app/views/civil_statuses/new.html.erb:2
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (136.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CivilStatusesController#new (for 127.0.0.1 at 2010-03-30 08:54:16) [GET]
+  [4;36;1mCivilStatus Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `civil_statuses`[0m
+  [4;35;1mContactInfo Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `contact_infos`[0m
+Rendering template within layouts/civil_statuses
+Rendering civil_statuses/new
+
+ActionView::TemplateError (undefined method `nested_fields_for' for #<ActionView::Base:0xb66ae760>) on line #34 of app/views/civil_statuses/_form.html.erb:
+31:     <%= form.select :status, CivilStatus::Statuses %>
+32:   </p>
+33:   
+34:   <%= nested_fields_for :contact_infos, form %>
+35:   
+
+    app/views/civil_statuses/_form.html.erb:34
+    app/views/civil_statuses/new.html.erb:4
+    app/views/civil_statuses/new.html.erb:2
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (58.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CivilStatusesController#new (for 127.0.0.1 at 2010-03-30 08:59:11) [GET]
+  [4;36;1mCivilStatus Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `civil_statuses`[0m
+  [4;35;1mContactInfo Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `contact_infos`[0m
+Rendering template within layouts/civil_statuses
+Rendering civil_statuses/new
+Rendered civil_statuses/_form (15.0ms)
+Completed in 51ms (View: 34, DB: 2) | 200 OK [http://0.0.0.0/civil_statuses/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CivilStatusesController#index (for 127.0.0.1 at 2010-03-30 08:59:21) [GET]
+  [4;36;1mCivilStatus Load (0.1ms)[0m   [0;1mSELECT * FROM `civil_statuses` [0m
+Rendering template within layouts/civil_statuses
+Rendering civil_statuses/index
+  [4;35;1mCivilStatus Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `civil_statuses`[0m
+Completed in 75ms (View: 65, DB: 2) | 200 OK [http://0.0.0.0/civil_statuses]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CivilStatusesController#new (for 127.0.0.1 at 2010-03-30 08:59:24) [GET]
+  [4;36;1mCivilStatus Columns (2.2ms)[0m   [0;1mSHOW FIELDS FROM `civil_statuses`[0m
+  [4;35;1mContactInfo Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `contact_infos`[0m
+Rendering template within layouts/civil_statuses
+Rendering civil_statuses/new
+Rendered civil_statuses/_form (13.3ms)
+Completed in 37ms (View: 20, DB: 3) | 200 OK [http://0.0.0.0/civil_statuses/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CivilStatusesController#new (for 127.0.0.1 at 2010-03-30 09:42:34) [GET]
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mCivilStatus Columns (33.8ms)[0m   [0mSHOW FIELDS FROM `civil_statuses`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mCivilStatus Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `civil_statuses`[0m
+
+NoMethodError (undefined method `has_friendly_id' for #<Class:0xb6580cbc>):
+  app/models/civil_status.rb:3
+  app/controllers/civil_statuses_controller.rb:28:in `new'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (44.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CivilStatusesController#new (for 127.0.0.1 at 2010-03-30 09:45:46) [GET]
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mCivilStatus Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `civil_statuses`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mCivilStatus Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `civil_statuses`[0m
+
+NoMethodError (undefined method `has_friendly_id' for #<Class:0xb681b2b0>):
+  app/models/civil_status.rb:3
+  app/controllers/civil_statuses_controller.rb:28:in `new'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (48.5ms)
+Rendered rescues/_request_and_response (1.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CivilStatusesController#new (for 127.0.0.1 at 2010-03-30 09:45:49) [GET]
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mCivilStatus Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `civil_statuses`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mCivilStatus Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `civil_statuses`[0m
+
+NoMethodError (undefined method `has_friendly_id' for #<Class:0xb67256d0>):
+  app/models/civil_status.rb:3
+  app/controllers/civil_statuses_controller.rb:28:in `new'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (44.3ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CivilStatusesController#new (for 127.0.0.1 at 2010-03-30 09:45:49) [GET]
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mCivilStatus Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `civil_statuses`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mCivilStatus Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `civil_statuses`[0m
+
+NoMethodError (undefined method `has_friendly_id' for #<Class:0xb6645008>):
+  app/models/civil_status.rb:3
+  app/controllers/civil_statuses_controller.rb:28:in `new'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (117.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (86.8ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateCompagnies (20100208091251)
+Migrating to CreateJobSheets (20100209105655)
+Migrating to CreateCivilStatuses (20100326133802)
+Migrating to AddStatusToCivilStatus (20100326141326)
+Migrating to CreateContactInfos (20100326181219)
+Migrating to Slug (20100330065026)
+  [4;36;1mSQL (313.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100330065026')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW FIELDS FROM `civil_statuses`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mdescribe `civil_statuses`[0m
+  [4;36;1mSQL (37.3ms)[0m   [0;1mSHOW KEYS FROM `civil_statuses`[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mSHOW FIELDS FROM `compagnies`[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mdescribe `compagnies`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW KEYS FROM `compagnies`[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mSHOW FIELDS FROM `contact_infos`[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mdescribe `contact_infos`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `contact_infos`[0m
+  [4;35;1mSQL (22.8ms)[0m   [0mSHOW FIELDS FROM `job_sheets`[0m
+  [4;36;1mSQL (12.4ms)[0m   [0;1mdescribe `job_sheets`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW KEYS FROM `job_sheets`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CivilStatusesController#new (for 127.0.0.1 at 2010-03-30 09:55:50) [GET]
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mCivilStatus Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `civil_statuses`[0m
+  [4;36;1mSQL (1.8ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mCivilStatus Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `civil_statuses`[0m
+
+NoMethodError (undefined method `has_friendly_id' for #<Class:0xb679c578>):
+  app/models/civil_status.rb:3
+  app/controllers/civil_statuses_controller.rb:28:in `new'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (45.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CivilStatusesController#new (for 127.0.0.1 at 2010-03-30 09:55:51) [GET]
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mCivilStatus Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `civil_statuses`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mCivilStatus Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `civil_statuses`[0m
+
+NoMethodError (undefined method `has_friendly_id' for #<Class:0xb66b5060>):
+  app/models/civil_status.rb:3
+  app/controllers/civil_statuses_controller.rb:28:in `new'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (43.9ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CivilStatusesController#new (for 127.0.0.1 at 2010-03-30 09:55:52) [GET]
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mCivilStatus Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `civil_statuses`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mCivilStatus Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `civil_statuses`[0m
+
+NoMethodError (undefined method `has_friendly_id' for #<Class:0xb6803afc>):
+  app/models/civil_status.rb:3
+  app/controllers/civil_statuses_controller.rb:28:in `new'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (47.1ms)
+Rendered rescues/_request_and_response (1.7ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CivilStatusesController#new (for 127.0.0.1 at 2010-03-30 09:55:54) [GET]
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mCivilStatus Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `civil_statuses`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mCivilStatus Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `civil_statuses`[0m
+
+NoMethodError (undefined method `has_friendly_id' for #<Class:0xb671b220>):
+  app/models/civil_status.rb:3
+  app/controllers/civil_statuses_controller.rb:28:in `new'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (44.4ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CivilStatusesController#new (for 127.0.0.1 at 2010-03-30 09:55:56) [GET]
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mCivilStatus Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `civil_statuses`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mCivilStatus Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `civil_statuses`[0m
+
+NoMethodError (undefined method `has_friendly_id' for #<Class:0xb6633bb4>):
+  app/models/civil_status.rb:3
+  app/controllers/civil_statuses_controller.rb:28:in `new'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (122.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CivilStatusesController#new (for 127.0.0.1 at 2010-03-30 09:55:57) [GET]
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mCivilStatus Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `civil_statuses`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mCivilStatus Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `civil_statuses`[0m
+
+NoMethodError (undefined method `has_friendly_id' for #<Class:0xb6791df8>):
+  app/models/civil_status.rb:3
+  app/controllers/civil_statuses_controller.rb:28:in `new'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (44.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (4.7ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CivilStatusesController#new (for 127.0.0.1 at 2010-03-30 09:57:15) [GET]
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mCivilStatus Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `civil_statuses`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mCivilStatus Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `civil_statuses`[0m
+
+NoMethodError (undefined method `has_friendly_id' for #<Class:0xb66a6d6c>):
+  app/models/civil_status.rb:3
+  app/controllers/civil_statuses_controller.rb:28:in `new'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (43.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CivilStatusesController#new (for 127.0.0.1 at 2010-03-30 09:57:15) [GET]
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mCivilStatus Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `civil_statuses`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mCivilStatus Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `civil_statuses`[0m
+
+NoMethodError (undefined method `has_friendly_id' for #<Class:0xb67fa808>):
+  app/models/civil_status.rb:3
+  app/controllers/civil_statuses_controller.rb:28:in `new'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (46.1ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CivilStatusesController#new (for 127.0.0.1 at 2010-03-30 10:02:11) [GET]
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mCivilStatus Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `civil_statuses`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mCivilStatus Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `civil_statuses`[0m
+
+NoMethodError (undefined method `has_friendly_id' for #<Class:0xb670f204>):
+  app/models/civil_status.rb:3
+  app/controllers/civil_statuses_controller.rb:28:in `new'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (43.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CivilStatusesController#new (for 127.0.0.1 at 2010-03-30 10:02:12) [GET]
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mCivilStatus Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `civil_statuses`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mCivilStatus Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `civil_statuses`[0m
+
+NoMethodError (undefined method `has_friendly_id' for #<Class:0xb6624d6c>):
+  app/models/civil_status.rb:3
+  app/controllers/civil_statuses_controller.rb:28:in `new'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (119.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CivilStatusesController#new (for 127.0.0.1 at 2010-03-30 10:02:14) [GET]
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mCivilStatus Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `civil_statuses`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mCivilStatus Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `civil_statuses`[0m
+
+NoMethodError (undefined method `has_friendly_id' for #<Class:0xb678614c>):
+  app/models/civil_status.rb:3
+  app/controllers/civil_statuses_controller.rb:28:in `new'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (44.7ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CivilStatusesController#new (for 127.0.0.1 at 2010-03-30 10:02:47) [GET]
+  [4;36;1mCivilStatus Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `civil_statuses`[0m
+  [4;35;1mContactInfo Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `contact_infos`[0m
+Rendering template within layouts/civil_statuses
+Rendering civil_statuses/new
+Rendered civil_statuses/_form (197.0ms)
+Completed in 330ms (View: 259, DB: 2) | 200 OK [http://0.0.0.0/civil_statuses/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CivilStatusesController#show (for 127.0.0.1 at 2010-03-30 10:02:57) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mCivilStatus Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `civil_statuses`[0m
+  [4;35;1mCivilStatus Load (0.0ms)[0m   [0mMysql::Error: Table 'remb_development.slugs' doesn't exist: SELECT civil_statuses.* FROM `civil_statuses` INNER JOIN `slugs` ON `slugs`.sluggable_id = `civil_statuses`.id AND `slugs`.sluggable_type = 'CivilStatus' WHERE (`slugs`.`scope` IS NULL AND `slugs`.`sequence` = '1' AND `slugs`.`name` = '4') LIMIT 1[0m
+
+ActiveRecord::StatementInvalid (Mysql::Error: Table 'remb_development.slugs' doesn't exist: SELECT civil_statuses.* FROM `civil_statuses`   INNER JOIN `slugs` ON `slugs`.sluggable_id = `civil_statuses`.id AND `slugs`.sluggable_type = 'CivilStatus' WHERE (`slugs`.`scope` IS NULL AND `slugs`.`sequence` = '1' AND `slugs`.`name` = '4')  LIMIT 1):
+  /usr/lib/ruby/gems/1.8/gems/friendly_id-2.2.2/lib/friendly_id/sluggable_class_methods.rb:24:in `find_one'
+  /usr/lib/ruby/gems/1.8/gems/friendly_id-2.2.2/lib/friendly_id/sluggable_class_methods.rb:24:in `find_one'
+  app/controllers/civil_statuses_controller.rb:16:in `show'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (52.9ms)
+Rendered rescues/_request_and_response (1.7ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CivilStatusesController#show (for 127.0.0.1 at 2010-03-30 10:02:57) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mCivilStatus Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `civil_statuses`[0m
+  [4;35;1mCivilStatus Load (0.0ms)[0m   [0mMysql::Error: Table 'remb_development.slugs' doesn't exist: SELECT civil_statuses.* FROM `civil_statuses` INNER JOIN `slugs` ON `slugs`.sluggable_id = `civil_statuses`.id AND `slugs`.sluggable_type = 'CivilStatus' WHERE (`slugs`.`scope` IS NULL AND `slugs`.`sequence` = '1' AND `slugs`.`name` = '4') LIMIT 1[0m
+
+ActiveRecord::StatementInvalid (Mysql::Error: Table 'remb_development.slugs' doesn't exist: SELECT civil_statuses.* FROM `civil_statuses`   INNER JOIN `slugs` ON `slugs`.sluggable_id = `civil_statuses`.id AND `slugs`.sluggable_type = 'CivilStatus' WHERE (`slugs`.`scope` IS NULL AND `slugs`.`sequence` = '1' AND `slugs`.`name` = '4')  LIMIT 1):
+  /usr/lib/ruby/gems/1.8/gems/friendly_id-2.2.2/lib/friendly_id/sluggable_class_methods.rb:24:in `find_one'
+  /usr/lib/ruby/gems/1.8/gems/friendly_id-2.2.2/lib/friendly_id/sluggable_class_methods.rb:24:in `find_one'
+  app/controllers/civil_statuses_controller.rb:16:in `show'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (49.1ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateCompagnies (20100208091251)
+Migrating to CreateJobSheets (20100209105655)
+Migrating to CreateCivilStatuses (20100326133802)
+Migrating to AddStatusToCivilStatus (20100326141326)
+Migrating to CreateContactInfos (20100326181219)
+Migrating to Slug (20100330065026)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW FIELDS FROM `civil_statuses`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mdescribe `civil_statuses`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `civil_statuses`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW FIELDS FROM `compagnies`[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mdescribe `compagnies`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `compagnies`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW FIELDS FROM `contact_infos`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mdescribe `contact_infos`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `contact_infos`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW FIELDS FROM `job_sheets`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mdescribe `job_sheets`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW KEYS FROM `job_sheets`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CivilStatusesController#show (for 127.0.0.1 at 2010-03-30 10:03:34) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mCivilStatus Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `civil_statuses`[0m
+  [4;35;1mCivilStatus Load (0.0ms)[0m   [0mMysql::Error: Table 'remb_development.slugs' doesn't exist: SELECT civil_statuses.* FROM `civil_statuses` INNER JOIN `slugs` ON `slugs`.sluggable_id = `civil_statuses`.id AND `slugs`.sluggable_type = 'CivilStatus' WHERE (`slugs`.`scope` IS NULL AND `slugs`.`sequence` = '1' AND `slugs`.`name` = '4') LIMIT 1[0m
+
+ActiveRecord::StatementInvalid (Mysql::Error: Table 'remb_development.slugs' doesn't exist: SELECT civil_statuses.* FROM `civil_statuses`   INNER JOIN `slugs` ON `slugs`.sluggable_id = `civil_statuses`.id AND `slugs`.sluggable_type = 'CivilStatus' WHERE (`slugs`.`scope` IS NULL AND `slugs`.`sequence` = '1' AND `slugs`.`name` = '4')  LIMIT 1):
+  /usr/lib/ruby/gems/1.8/gems/friendly_id-2.2.2/lib/friendly_id/sluggable_class_methods.rb:24:in `find_one'
+  /usr/lib/ruby/gems/1.8/gems/friendly_id-2.2.2/lib/friendly_id/sluggable_class_methods.rb:24:in `find_one'
+  app/controllers/civil_statuses_controller.rb:16:in `show'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (49.8ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CivilStatusesController#show (for 127.0.0.1 at 2010-03-30 10:03:36) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mCivilStatus Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `civil_statuses`[0m
+  [4;35;1mCivilStatus Load (0.0ms)[0m   [0mMysql::Error: Table 'remb_development.slugs' doesn't exist: SELECT civil_statuses.* FROM `civil_statuses` INNER JOIN `slugs` ON `slugs`.sluggable_id = `civil_statuses`.id AND `slugs`.sluggable_type = 'CivilStatus' WHERE (`slugs`.`scope` IS NULL AND `slugs`.`sequence` = '1' AND `slugs`.`name` = '4') LIMIT 1[0m
+
+ActiveRecord::StatementInvalid (Mysql::Error: Table 'remb_development.slugs' doesn't exist: SELECT civil_statuses.* FROM `civil_statuses`   INNER JOIN `slugs` ON `slugs`.sluggable_id = `civil_statuses`.id AND `slugs`.sluggable_type = 'CivilStatus' WHERE (`slugs`.`scope` IS NULL AND `slugs`.`sequence` = '1' AND `slugs`.`name` = '4')  LIMIT 1):
+  /usr/lib/ruby/gems/1.8/gems/friendly_id-2.2.2/lib/friendly_id/sluggable_class_methods.rb:24:in `find_one'
+  /usr/lib/ruby/gems/1.8/gems/friendly_id-2.2.2/lib/friendly_id/sluggable_class_methods.rb:24:in `find_one'
+  app/controllers/civil_statuses_controller.rb:16:in `show'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (48.1ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (1.5ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateCompagnies (20100208091251)
+Migrating to CreateJobSheets (20100209105655)
+Migrating to CreateCivilStatuses (20100326133802)
+Migrating to AddStatusToCivilStatus (20100326141326)
+Migrating to CreateContactInfos (20100326181219)
+Migrating to AddSlug (20100330070713)
+  [4;36;1mSQL (116.2ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100330070713')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mSHOW FIELDS FROM `civil_statuses`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mdescribe `civil_statuses`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW KEYS FROM `civil_statuses`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW FIELDS FROM `compagnies`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mdescribe `compagnies`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `compagnies`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW FIELDS FROM `contact_infos`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mdescribe `contact_infos`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW KEYS FROM `contact_infos`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW FIELDS FROM `job_sheets`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mdescribe `job_sheets`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `job_sheets`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CivilStatusesController#show (for 127.0.0.1 at 2010-03-30 10:08:15) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mCivilStatus Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `civil_statuses`[0m
+  [4;35;1mCivilStatus Load (0.0ms)[0m   [0mMysql::Error: Table 'remb_development.slugs' doesn't exist: SELECT civil_statuses.* FROM `civil_statuses` INNER JOIN `slugs` ON `slugs`.sluggable_id = `civil_statuses`.id AND `slugs`.sluggable_type = 'CivilStatus' WHERE (`slugs`.`scope` IS NULL AND `slugs`.`sequence` = '1' AND `slugs`.`name` = '4') LIMIT 1[0m
+
+ActiveRecord::StatementInvalid (Mysql::Error: Table 'remb_development.slugs' doesn't exist: SELECT civil_statuses.* FROM `civil_statuses`   INNER JOIN `slugs` ON `slugs`.sluggable_id = `civil_statuses`.id AND `slugs`.sluggable_type = 'CivilStatus' WHERE (`slugs`.`scope` IS NULL AND `slugs`.`sequence` = '1' AND `slugs`.`name` = '4')  LIMIT 1):
+  /usr/lib/ruby/gems/1.8/gems/friendly_id-2.2.2/lib/friendly_id/sluggable_class_methods.rb:24:in `find_one'
+  /usr/lib/ruby/gems/1.8/gems/friendly_id-2.2.2/lib/friendly_id/sluggable_class_methods.rb:24:in `find_one'
+  app/controllers/civil_statuses_controller.rb:16:in `show'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (50.1ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CivilStatusesController#show (for 127.0.0.1 at 2010-03-30 10:08:17) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mCivilStatus Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `civil_statuses`[0m
+  [4;35;1mCivilStatus Load (0.0ms)[0m   [0mMysql::Error: Table 'remb_development.slugs' doesn't exist: SELECT civil_statuses.* FROM `civil_statuses` INNER JOIN `slugs` ON `slugs`.sluggable_id = `civil_statuses`.id AND `slugs`.sluggable_type = 'CivilStatus' WHERE (`slugs`.`scope` IS NULL AND `slugs`.`sequence` = '1' AND `slugs`.`name` = '4') LIMIT 1[0m
+
+ActiveRecord::StatementInvalid (Mysql::Error: Table 'remb_development.slugs' doesn't exist: SELECT civil_statuses.* FROM `civil_statuses`   INNER JOIN `slugs` ON `slugs`.sluggable_id = `civil_statuses`.id AND `slugs`.sluggable_type = 'CivilStatus' WHERE (`slugs`.`scope` IS NULL AND `slugs`.`sequence` = '1' AND `slugs`.`name` = '4')  LIMIT 1):
+  /usr/lib/ruby/gems/1.8/gems/friendly_id-2.2.2/lib/friendly_id/sluggable_class_methods.rb:24:in `find_one'
+  /usr/lib/ruby/gems/1.8/gems/friendly_id-2.2.2/lib/friendly_id/sluggable_class_methods.rb:24:in `find_one'
+  app/controllers/civil_statuses_controller.rb:16:in `show'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (48.1ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (200.2ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (283.3ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateCompagnies (20100208091251)
+  [4;35;1mSQL (146.5ms)[0m   [0mCREATE TABLE `compagnies` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `headquaters` varchar(255), `registration_number` int(11), `legal_form` varchar(255), `activity` varchar(255), `sector` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (45.9ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100208091251')[0m
+Migrating to CreateJobSheets (20100209105655)
+  [4;35;1mSQL (116.9ms)[0m   [0mCREATE TABLE `job_sheets` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `position` varchar(255), `fields` varchar(255), `mission` varchar(255), `competence` varchar(255), `experience` varchar(255), `task` varchar(255), `degree` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (44.3ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100209105655')[0m
+Migrating to CreateCivilStatuses (20100326133802)
+  [4;35;1mSQL (154.1ms)[0m   [0mCREATE TABLE `civil_statuses` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `family_name` varchar(255), `name` varchar(255), `age` int(11), `birthday` date, `hometown` varchar(255), `current_city` varchar(255), `gender` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (44.4ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100326133802')[0m
+Migrating to AddStatusToCivilStatus (20100326141326)
+  [4;35;1mSQL (214.4ms)[0m   [0mALTER TABLE `civil_statuses` ADD `status` varchar(255)[0m
+  [4;36;1mSQL (33.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100326141326')[0m
+Migrating to CreateContactInfos (20100326181219)
+  [4;35;1mSQL (140.0ms)[0m   [0mCREATE TABLE `contact_infos` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `contactable_id` int(11), `contactable_type` varchar(255), `value_format` int(11), `value` varchar(255), `localisation` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (66.8ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100326181219')[0m
+Migrating to AddSlug (20100330070713)
+  [4;35;1mSQL (30.8ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100330070713')[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSHOW FIELDS FROM `civil_statuses`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mdescribe `civil_statuses`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `civil_statuses`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW FIELDS FROM `compagnies`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mdescribe `compagnies`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW KEYS FROM `compagnies`[0m
+  [4;35;1mSQL (9.5ms)[0m   [0mSHOW FIELDS FROM `contact_infos`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mdescribe `contact_infos`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `contact_infos`[0m
+  [4;36;1mSQL (7.7ms)[0m   [0;1mSHOW FIELDS FROM `job_sheets`[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mdescribe `job_sheets`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `job_sheets`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (1.6ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateCompagnies (20100208091251)
+Migrating to CreateJobSheets (20100209105655)
+Migrating to CreateCivilStatuses (20100326133802)
+Migrating to AddStatusToCivilStatus (20100326141326)
+Migrating to CreateContactInfos (20100326181219)
+Migrating to AddSlug (20100330070713)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSHOW FIELDS FROM `civil_statuses`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mdescribe `civil_statuses`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `civil_statuses`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW FIELDS FROM `compagnies`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mdescribe `compagnies`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW KEYS FROM `compagnies`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW FIELDS FROM `contact_infos`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mdescribe `contact_infos`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `contact_infos`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW FIELDS FROM `job_sheets`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mdescribe `job_sheets`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW KEYS FROM `job_sheets`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (129.6ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (196.1ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateCompagnies (20100208091251)
+  [4;35;1mSQL (135.2ms)[0m   [0mCREATE TABLE `compagnies` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `headquaters` varchar(255), `registration_number` int(11), `legal_form` varchar(255), `activity` varchar(255), `sector` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (33.2ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100208091251')[0m
+Migrating to CreateJobSheets (20100209105655)
+  [4;35;1mSQL (117.0ms)[0m   [0mCREATE TABLE `job_sheets` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `position` varchar(255), `fields` varchar(255), `mission` varchar(255), `competence` varchar(255), `experience` varchar(255), `task` varchar(255), `degree` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (33.2ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100209105655')[0m
+Migrating to CreateCivilStatuses (20100326133802)
+  [4;35;1mSQL (117.0ms)[0m   [0mCREATE TABLE `civil_statuses` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `family_name` varchar(255), `name` varchar(255), `age` int(11), `birthday` date, `hometown` varchar(255), `current_city` varchar(255), `gender` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (34.9ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100326133802')[0m
+Migrating to AddStatusToCivilStatus (20100326141326)
+  [4;35;1mSQL (244.5ms)[0m   [0mALTER TABLE `civil_statuses` ADD `status` varchar(255)[0m
+  [4;36;1mSQL (33.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100326141326')[0m
+Migrating to CreateContactInfos (20100326181219)
+  [4;35;1mSQL (103.1ms)[0m   [0mCREATE TABLE `contact_infos` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `contactable_id` int(11), `contactable_type` varchar(255), `value_format` int(11), `value` varchar(255), `localisation` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (33.3ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100326181219')[0m
+Migrating to AddSlug (20100330070713)
+  [4;35;1mSQL (93.3ms)[0m   [0mCREATE TABLE `slugs` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `sluggable_id` int(11), `sequence` int(11) DEFAULT 1 NOT NULL, `sluggable_type` varchar(40), `scope` varchar(40)) ENGINE=InnoDB[0m
+  [4;36;1mSQL (44.3ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100330070713')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSHOW FIELDS FROM `civil_statuses`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mdescribe `civil_statuses`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW KEYS FROM `civil_statuses`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW FIELDS FROM `compagnies`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mdescribe `compagnies`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `compagnies`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW FIELDS FROM `contact_infos`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mdescribe `contact_infos`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW KEYS FROM `contact_infos`[0m
+  [4;35;1mSQL (10.8ms)[0m   [0mSHOW FIELDS FROM `job_sheets`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mdescribe `job_sheets`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `job_sheets`[0m
+  [4;36;1mSQL (17.3ms)[0m   [0;1mSHOW FIELDS FROM `slugs`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mdescribe `slugs`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `slugs`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CivilStatusesController#show (for 127.0.0.1 at 2010-03-30 10:15:52) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mCivilStatus Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `civil_statuses`[0m
+  [4;35;1mCivilStatus Load (34.6ms)[0m   [0mSELECT civil_statuses.* FROM `civil_statuses` INNER JOIN `slugs` ON `slugs`.sluggable_id = `civil_statuses`.id AND `slugs`.sluggable_type = 'CivilStatus' WHERE (`slugs`.`scope` IS NULL AND `slugs`.`sequence` = '1' AND `slugs`.`name` = '4') LIMIT 1[0m
+  [4;36;1mCivilStatus Load (0.3ms)[0m   [0;1mSELECT * FROM `civil_statuses` WHERE (`civil_statuses`.`id` = 4) LIMIT 1[0m
+
+ActiveRecord::RecordNotFound (Couldn't find CivilStatus with ID=4):
+  /usr/lib/ruby/gems/1.8/gems/friendly_id-2.2.2/lib/friendly_id/sluggable_class_methods.rb:31:in `find_one'
+  app/controllers/civil_statuses_controller.rb:16:in `show'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (45.9ms)
+Rendered rescues/_request_and_response (1.7ms)
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (7.5ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CivilStatusesController#new (for 127.0.0.1 at 2010-03-30 10:15:58) [GET]
+  [4;35;1mCivilStatus Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `civil_statuses`[0m
+  [4;36;1mContactInfo Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `contact_infos`[0m
+Rendering template within layouts/civil_statuses
+Rendering civil_statuses/new
+Rendered civil_statuses/_form (125.8ms)
+Completed in 175ms (View: 150, DB: 9) | 200 OK [http://0.0.0.0/civil_statuses/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CivilStatusesController#create (for 127.0.0.1 at 2010-03-30 10:16:34) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"0hwKudi6c4o6pHjmak6ewT28MSQZxABYvLBz/gZazyQ=", "civil_status"=>{"name"=>"RAkotonjanahary", "birthday(1i)"=>"2010", "birthday(2i)"=>"3", "birthday(3i)"=>"30", "gender"=>"femme", "family_name"=>"fenoum", "current_city"=>"Anatananarivo", "hometown"=>"Antsirabe", "status"=>"celibataire", "age"=>"23"}}
+  [4;35;1mCivilStatus Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `civil_statuses`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSlug Load (0.4ms)[0m   [0mSELECT * FROM `slugs` WHERE (`slugs`.sluggable_id = NULL AND `slugs`.sluggable_type = 'CivilStatus') ORDER BY id DESC, id DESC LIMIT 1[0m
+  [4;36;1mSQL (14.7ms)[0m   [0;1mROLLBACK[0m
+
+NoMethodError (undefined method `firstname' for #<CivilStatus:0xb6e33f08>):
+  /usr/lib/ruby/gems/1.8/gems/friendly_id-2.2.2/lib/friendly_id/sluggable_instance_methods.rb:71:in `send'
+  /usr/lib/ruby/gems/1.8/gems/friendly_id-2.2.2/lib/friendly_id/sluggable_instance_methods.rb:71:in `slug_text'
+  /usr/lib/ruby/gems/1.8/gems/friendly_id-2.2.2/lib/friendly_id/sluggable_instance_methods.rb:113:in `set_slug'
+  app/controllers/civil_statuses_controller.rb:43:in `create'
+  app/controllers/civil_statuses_controller.rb:42:in `create'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (116.0ms)
+Rendered rescues/_request_and_response (0.8ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CivilStatusesController#create (for 127.0.0.1 at 2010-03-30 10:17:17) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"0hwKudi6c4o6pHjmak6ewT28MSQZxABYvLBz/gZazyQ=", "civil_status"=>{"name"=>"RAkotonjanahary", "birthday(1i)"=>"2010", "birthday(2i)"=>"3", "birthday(3i)"=>"30", "gender"=>"femme", "family_name"=>"fenoum", "current_city"=>"Anatananarivo", "hometown"=>"Antsirabe", "status"=>"celibataire", "age"=>"23"}}
+  [4;35;1mCivilStatus Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `civil_statuses`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSlug Load (0.1ms)[0m   [0mSELECT * FROM `slugs` WHERE (`slugs`.sluggable_id = NULL AND `slugs`.sluggable_type = 'CivilStatus') ORDER BY id DESC, id DESC LIMIT 1[0m
+  [4;36;1mSlug Load (0.4ms)[0m   [0;1mSELECT * FROM `slugs` WHERE (`slugs`.sluggable_id = NULL AND `slugs`.sluggable_type = 'CivilStatus' AND (`slugs`.`name` = 'rakotonjanahary' AND `slugs`.`scope` IS NULL)) ORDER BY id DESC[0m
+  [4;35;1mSlug Columns (3.1ms)[0m   [0mSHOW FIELDS FROM `slugs`[0m
+  [4;36;1mCivilStatus Create (0.3ms)[0m   [0;1mINSERT INTO `civil_statuses` (`name`, `created_at`, `updated_at`, `gender`, `family_name`, `birthday`, `hometown`, `current_city`, `age`, `status`) VALUES('RAkotonjanahary', '2010-03-30 07:17:18', '2010-03-30 07:17:18', 'femme', 'fenoum', '2010-03-30', 'Antsirabe', 'Anatananarivo', 23, 'celibataire')[0m
+  [4;35;1mSlug Load (0.2ms)[0m   [0mSELECT * FROM `slugs` WHERE (`slugs`.sluggable_id = NULL AND `slugs`.sluggable_type = 'CivilStatus') ORDER BY id DESC[0m
+  [4;36;1mSlug Load (54.1ms)[0m   [0;1mSELECT sequence FROM `slugs` WHERE (`slugs`.`name` = 'rakotonjanahary' AND `slugs`.`scope` IS NULL AND `slugs`.`sluggable_type` = 'CivilStatus') ORDER BY sequence DESC LIMIT 1[0m
+  [4;35;1mSlug Create (1.2ms)[0m   [0mINSERT INTO `slugs` (`name`, `scope`, `sequence`, `sluggable_type`, `sluggable_id`) VALUES('rakotonjanahary', NULL, 1, 'CivilStatus', 1)[0m
+  [4;36;1mSQL (56.9ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSlug Load (0.4ms)[0m   [0mSELECT * FROM `slugs` WHERE (`slugs`.sluggable_id = 1 AND `slugs`.sluggable_type = 'CivilStatus') ORDER BY id DESC, id DESC LIMIT 1[0m
+Redirected to http://0.0.0.0:3000/civil_statuses/rakotonjanahary
+Completed in 316ms (DB: 118) | 302 Found [http://0.0.0.0/civil_statuses]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CivilStatusesController#show (for 127.0.0.1 at 2010-03-30 10:17:18) [GET]
+  Parameters: {"id"=>"rakotonjanahary"}
+  [4;36;1mCivilStatus Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `civil_statuses`[0m
+  [4;35;1mCivilStatus Load (18.4ms)[0m   [0mSELECT civil_statuses.* FROM `civil_statuses` INNER JOIN `slugs` ON `slugs`.sluggable_id = `civil_statuses`.id AND `slugs`.sluggable_type = 'CivilStatus' WHERE (`slugs`.`scope` IS NULL AND `slugs`.`sequence` = '1' AND `slugs`.`name` = 'rakotonjanahary') LIMIT 1[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mContactInfo Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `contact_infos`[0m
+
+NoMethodError (undefined method `respond_to' for #<Class:0xb709d258>):
+  app/controllers/civil_statuses_controller.rb:17:in `show'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (41.9ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CivilStatusesController#create (for 127.0.0.1 at 2010-03-30 10:18:24) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"0hwKudi6c4o6pHjmak6ewT28MSQZxABYvLBz/gZazyQ=", "civil_status"=>{"name"=>"RAkotonjanahary", "birthday(1i)"=>"2010", "birthday(2i)"=>"3", "birthday(3i)"=>"30", "gender"=>"femme", "family_name"=>"fenoum", "current_city"=>"Anatananarivo", "hometown"=>"Antsirabe", "status"=>"celibataire", "age"=>"23"}}
+  [4;36;1mCivilStatus Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `civil_statuses`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSlug Load (0.3ms)[0m   [0;1mSELECT * FROM `slugs` WHERE (`slugs`.sluggable_id = NULL AND `slugs`.sluggable_type = 'CivilStatus') ORDER BY id DESC, id DESC LIMIT 1[0m
+  [4;35;1mSlug Load (0.2ms)[0m   [0mSELECT * FROM `slugs` WHERE (`slugs`.sluggable_id = NULL AND `slugs`.sluggable_type = 'CivilStatus' AND (`slugs`.`name` = 'rakotonjanahary' AND `slugs`.`scope` IS NULL)) ORDER BY id DESC[0m
+  [4;36;1mCivilStatus Create (0.3ms)[0m   [0;1mINSERT INTO `civil_statuses` (`name`, `created_at`, `updated_at`, `gender`, `family_name`, `birthday`, `hometown`, `current_city`, `age`, `status`) VALUES('RAkotonjanahary', '2010-03-30 07:18:24', '2010-03-30 07:18:24', 'femme', 'fenoum', '2010-03-30', 'Antsirabe', 'Anatananarivo', 23, 'celibataire')[0m
+  [4;35;1mSlug Load (0.2ms)[0m   [0mSELECT * FROM `slugs` WHERE (`slugs`.sluggable_id = NULL AND `slugs`.sluggable_type = 'CivilStatus') ORDER BY id DESC[0m
+  [4;36;1mSlug Load (0.3ms)[0m   [0;1mSELECT sequence FROM `slugs` WHERE (`slugs`.`name` = 'rakotonjanahary' AND `slugs`.`scope` IS NULL AND `slugs`.`sluggable_type` = 'CivilStatus') ORDER BY sequence DESC LIMIT 1[0m
+  [4;35;1mSlug Create (0.1ms)[0m   [0mINSERT INTO `slugs` (`name`, `scope`, `sequence`, `sluggable_type`, `sluggable_id`) VALUES('rakotonjanahary', NULL, 2, 'CivilStatus', 2)[0m
+  [4;36;1mSQL (36.6ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSlug Load (0.4ms)[0m   [0mSELECT * FROM `slugs` WHERE (`slugs`.sluggable_id = 2 AND `slugs`.sluggable_type = 'CivilStatus') ORDER BY id DESC, id DESC LIMIT 1[0m
+Redirected to http://0.0.0.0:3000/civil_statuses/rakotonjanahary--2
+Completed in 74ms (DB: 40) | 302 Found [http://0.0.0.0/civil_statuses]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CivilStatusesController#show (for 127.0.0.1 at 2010-03-30 10:18:24) [GET]
+  Parameters: {"id"=>"rakotonjanahary--2"}
+  [4;36;1mCivilStatus Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `civil_statuses`[0m
+  [4;35;1mCivilStatus Load (0.4ms)[0m   [0mSELECT civil_statuses.* FROM `civil_statuses` INNER JOIN `slugs` ON `slugs`.sluggable_id = `civil_statuses`.id AND `slugs`.sluggable_type = 'CivilStatus' WHERE (`slugs`.`scope` IS NULL AND `slugs`.`sequence` = '2' AND `slugs`.`name` = 'rakotonjanahary') LIMIT 1[0m
+Rendering template within layouts/civil_statuses
+Rendering civil_statuses/show
+
+ActionView::TemplateError (undefined method `contact_infos' for nil:NilClass) on line #42 of app/views/civil_statuses/show.html.erb:
+39: 
+40: <h3>Contacts</h3>
+41: <p>
+42: <% @profile.contact_infos.each do |contact| %>
+43:     <li><%=h contact.localisation %> </li>
+44:     <li><%=h contact.value %> </li>
+45: <% end %>
+
+    app/views/civil_statuses/show.html.erb:42
+    app/controllers/civil_statuses_controller.rb:18:in `show'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (147.5ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CivilStatusesController#create (for 127.0.0.1 at 2010-03-30 10:19:17) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"0hwKudi6c4o6pHjmak6ewT28MSQZxABYvLBz/gZazyQ=", "civil_status"=>{"name"=>"RAkotonjanahary", "birthday(1i)"=>"2010", "birthday(2i)"=>"3", "birthday(3i)"=>"30", "gender"=>"femme", "family_name"=>"fenoum", "current_city"=>"Anatananarivo", "hometown"=>"Antsirabe", "status"=>"celibataire", "age"=>"23"}}
+  [4;36;1mCivilStatus Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `civil_statuses`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSlug Load (1.0ms)[0m   [0;1mSELECT * FROM `slugs` WHERE (`slugs`.sluggable_id = NULL AND `slugs`.sluggable_type = 'CivilStatus') ORDER BY id DESC, id DESC LIMIT 1[0m
+  [4;35;1mSlug Load (0.3ms)[0m   [0mSELECT * FROM `slugs` WHERE (`slugs`.sluggable_id = NULL AND `slugs`.sluggable_type = 'CivilStatus' AND (`slugs`.`name` = 'rakotonjanahary' AND `slugs`.`scope` IS NULL)) ORDER BY id DESC[0m
+  [4;36;1mCivilStatus Create (0.5ms)[0m   [0;1mINSERT INTO `civil_statuses` (`name`, `created_at`, `updated_at`, `gender`, `family_name`, `birthday`, `hometown`, `current_city`, `age`, `status`) VALUES('RAkotonjanahary', '2010-03-30 07:19:17', '2010-03-30 07:19:17', 'femme', 'fenoum', '2010-03-30', 'Antsirabe', 'Anatananarivo', 23, 'celibataire')[0m
+  [4;35;1mSlug Load (0.6ms)[0m   [0mSELECT * FROM `slugs` WHERE (`slugs`.sluggable_id = NULL AND `slugs`.sluggable_type = 'CivilStatus') ORDER BY id DESC[0m
+  [4;36;1mSlug Load (0.7ms)[0m   [0;1mSELECT sequence FROM `slugs` WHERE (`slugs`.`name` = 'rakotonjanahary' AND `slugs`.`scope` IS NULL AND `slugs`.`sluggable_type` = 'CivilStatus') ORDER BY sequence DESC LIMIT 1[0m
+  [4;35;1mSlug Create (0.4ms)[0m   [0mINSERT INTO `slugs` (`name`, `scope`, `sequence`, `sluggable_type`, `sluggable_id`) VALUES('rakotonjanahary', NULL, 3, 'CivilStatus', 3)[0m
+  [4;36;1mSQL (54.6ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSlug Load (0.3ms)[0m   [0mSELECT * FROM `slugs` WHERE (`slugs`.sluggable_id = 3 AND `slugs`.sluggable_type = 'CivilStatus') ORDER BY id DESC, id DESC LIMIT 1[0m
+Redirected to http://0.0.0.0:3000/civil_statuses/rakotonjanahary--3
+Completed in 109ms (DB: 60) | 302 Found [http://0.0.0.0/civil_statuses]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CivilStatusesController#show (for 127.0.0.1 at 2010-03-30 10:19:17) [GET]
+  Parameters: {"id"=>"rakotonjanahary--3"}
+  [4;36;1mCivilStatus Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `civil_statuses`[0m
+  [4;35;1mCivilStatus Load (0.4ms)[0m   [0mSELECT civil_statuses.* FROM `civil_statuses` INNER JOIN `slugs` ON `slugs`.sluggable_id = `civil_statuses`.id AND `slugs`.sluggable_type = 'CivilStatus' WHERE (`slugs`.`scope` IS NULL AND `slugs`.`sequence` = '3' AND `slugs`.`name` = 'rakotonjanahary') LIMIT 1[0m
+Rendering template within layouts/civil_statuses
+Rendering civil_statuses/show
+  [4;36;1mSlug Load (0.1ms)[0m   [0;1mSELECT * FROM `slugs` WHERE (`slugs`.sluggable_id = 3 AND `slugs`.sluggable_type = 'CivilStatus') ORDER BY id DESC, id DESC LIMIT 1[0m
+Completed in 27ms (View: 10, DB: 2) | 200 OK [http://0.0.0.0/civil_statuses/rakotonjanahary--3]
