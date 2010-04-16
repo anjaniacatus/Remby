@@ -1,0 +1,5 @@
+<% if email.description.blank? %>
+  <%= mail_to email.value, nil, :replace_at => "NOSPAM@", :encode => "hex", :class => "email" %>
+<% else %>
+  <%= mail_to email.value, email.description, :replace_at => "NOSPAM@", :encode => "hex", :class => "email" %> 
+<% end %>

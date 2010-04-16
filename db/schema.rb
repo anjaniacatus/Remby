@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100330070713) do
+ActiveRecord::Schema.define(:version => 20100416081658) do
 
   create_table "civil_statuses", :force => true do |t|
     t.string   "family_name"
@@ -43,6 +43,12 @@ ActiveRecord::Schema.define(:version => 20100330070713) do
     t.string   "localisation"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "type"
+  end
+
+  create_table "emails", :force => true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "job_sheets", :force => true do |t|
@@ -57,12 +63,55 @@ ActiveRecord::Schema.define(:version => 20100330070713) do
     t.datetime "updated_at"
   end
 
+  create_table "phone_numbers", :force => true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "postal_boxes", :force => true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "sessions", :force => true do |t|
+    t.string   "session_id", :null => false
+    t.text     "data"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "sessions", ["session_id"], :name => "index_sessions_on_session_id"
+  add_index "sessions", ["updated_at"], :name => "index_sessions_on_updated_at"
+
   create_table "slugs", :force => true do |t|
     t.string  "name"
     t.integer "sluggable_id"
     t.integer "sequence",                     :default => 1, :null => false
     t.string  "sluggable_type", :limit => 40
     t.string  "scope",          :limit => 40
+  end
+
+  create_table "street_addresses", :force => true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "urls", :force => true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "users", :force => true do |t|
+    t.string   "firstname"
+    t.string   "lastname"
+    t.string   "login"
+    t.string   "e_mail"
+    t.integer  "role",              :default => 3
+    t.string   "crypted_password",                 :null => false
+    t.string   "password_salt",                    :null => false
+    t.string   "persistence_token",                :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
 end

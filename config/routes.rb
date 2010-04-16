@@ -1,5 +1,5 @@
 ActionController::Routing::Routes.draw do |map|
-  map.resources :contact_infos
+  map.resources :contact_infos, :only => [:new, :create, :destroy]
 
   map.resources :civil_statuses
 

@@ -1,6 +1,6 @@
 class ContactInfosController < ApplicationController
   def new
-    @contact_information = ContactInformation.new
+    @contact_information = ContactInfo.new
     @contactable = CivilStatus.all 
   end
 
