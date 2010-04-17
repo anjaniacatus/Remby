@@ -1,7 +1,6 @@
 nbproject
 log/development.log
-log/*
-*.log
+/*.log
 doc/*
 config/database.yml
 .DS_Store
