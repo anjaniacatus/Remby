@@ -1,4 +1,5 @@
 nbproject
+log/development.log
 log/*
 *.log
 doc/*
