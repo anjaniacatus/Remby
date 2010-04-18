@@ -25,7 +25,6 @@ class CivilStatusesController < ApplicationController
   # GET /civil_statuses/new.xml
   def new
     @civil_status = CivilStatus.new
-    @civil_status.contact_infos.build
   end
 
   # GET /civil_statuses/1/edit

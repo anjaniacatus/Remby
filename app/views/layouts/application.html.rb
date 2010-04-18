@@ -5,7 +5,27 @@
 <head>
   <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
   <title> remby: <%= title %></title>
-  <%= stylesheet_link_tag 'scaffold' %>
+  <%- if Rails.env.production? -%>
+      <%= stylesheet_link_tag 'screen', :media => "screen" -%>
+      <%= stylesheet_link_tag 'jquerycssmenu', :media => "screen" -%>
+      <%= stylesheet_link_tag 'autocomplete', :media => "screen" -%>
+    <%- else -%>
+      <link href="/stylesheets/screen.css" media="screen" rel="stylesheet" type="text/css" />
+      <link href="/stylesheets/jquerycssmenu.css" media="screen" rel="stylesheet" type="text/css" />
+      <link href="/stylesheets/autocomplete.css" media="screen" rel="stylesheet" type="text/css" />
+   <%- end -%>
+  
+  <%= javascript_include_tag 'jquery' %>
+  <%= javascript_include_tag 'jquerycssmenu' %>
+  <%= javascript_include_tag "swapselect" %>
+  <%= javascript_include_tag "jquery.autocomplete.js" %>
+  <%= javascript_include_tag "jquery.select-autocomplete.js" %>
+  <%= yield :javascript %>
+  <%= render :partial => 'shared/javascript' %>
+  <%= yield(:head) %> 
+  <% javascript_tag do %>
+    <%= yield(:jstemplates) %>
+  <% end -%>
 </head>
 <body>
   <div id = "page wrapper">
