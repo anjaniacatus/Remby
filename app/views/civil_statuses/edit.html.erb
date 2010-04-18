@@ -1,0 +1,12 @@
+<h1>Editing civil_status</h1>
+
+<% form_for(@civil_status) do |f| %>
+  <%= f.error_messages %>
+  <%= render f%>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @civil_status %> |
+<%= link_to 'Back', civil_statuses_path %>

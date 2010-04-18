@@ -1,0 +1,12 @@
+<p>
+  <%= form.label :localisation %><br />
+  <%= form.text_field :localisation %>
+</p>
+<p>
+  <%= form.label :value_format %><br />
+  <%= form.select :value_format, ContactInfo::ValueFormats.map { |t| [ t[0], ContactInfo::ValueFormats.index(t) ] } %>
+</p>
+<p>
+  <%= form.label :value %><br />
+  <%= form.text_field :value %>
+</p>

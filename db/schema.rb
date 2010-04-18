@@ -65,6 +65,28 @@ ActiveRecord::Schema.define(:version => 20091124185405) do
 
   create_table "functions", :force => true do |t|
     t.string   "name"
+ActiveRecord::Schema.define(:version => 20100416081658) do
+
+  create_table "civil_statuses", :force => true do |t|
+    t.string   "family_name"
+    t.string   "name"
+    t.integer  "age"
+    t.date     "birthday"
+    t.string   "hometown"
+    t.string   "current_city"
+    t.string   "gender"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "status"
+  end
+
+  create_table "compagnies", :force => true do |t|
+    t.string   "name"
+    t.string   "headquaters"
+    t.integer  "registration_number"
+    t.string   "legal_form"
+    t.string   "activity"
+    t.string   "sector"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -85,6 +107,18 @@ ActiveRecord::Schema.define(:version => 20091124185405) do
 
   create_table "localisations", :force => true do |t|
     t.string   "name"
+  create_table "contact_infos", :force => true do |t|
+    t.integer  "contactable_id"
+    t.string   "contactable_type"
+    t.integer  "value_format"
+    t.string   "value"
+    t.string   "localisation"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "type"
+  end
+
+  create_table "emails", :force => true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -93,6 +127,14 @@ ActiveRecord::Schema.define(:version => 20091124185405) do
     t.string   "title"
     t.text     "description"
     t.integer  "society_id"
+  create_table "job_sheets", :force => true do |t|
+    t.string   "position"
+    t.string   "fields"
+    t.string   "mission"
+    t.string   "competence"
+    t.string   "experience"
+    t.string   "task"
+    t.string   "degree"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -103,6 +145,7 @@ ActiveRecord::Schema.define(:version => 20091124185405) do
     t.text     "conditions"
     t.datetime "dead_line"
     t.integer  "society_id"
+  create_table "phone_numbers", :force => true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -111,6 +154,7 @@ ActiveRecord::Schema.define(:version => 20091124185405) do
     t.string   "name"
     t.text     "description"
     t.integer  "profile_id"
+  create_table "postal_boxes", :force => true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -122,6 +166,9 @@ ActiveRecord::Schema.define(:version => 20091124185405) do
     t.text     "description"
     t.string   "status"
     t.string   "sex"
+  create_table "sessions", :force => true do |t|
+    t.string   "session_id", :null => false
+    t.text     "data"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -143,6 +190,8 @@ ActiveRecord::Schema.define(:version => 20091124185405) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+  add_index "sessions", ["session_id"], :name => "index_sessions_on_session_id"
+  add_index "sessions", ["updated_at"], :name => "index_sessions_on_updated_at"
 
   create_table "slugs", :force => true do |t|
     t.string  "name"
@@ -158,6 +207,12 @@ ActiveRecord::Schema.define(:version => 20091124185405) do
     t.text     "description"
     t.integer  "category"
     t.integer  "sector"
+  create_table "street_addresses", :force => true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "urls", :force => true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -165,6 +220,10 @@ ActiveRecord::Schema.define(:version => 20091124185405) do
   create_table "users", :force => true do |t|
     t.string   "username"
     t.string   "email",                            :null => false
+    t.string   "firstname"
+    t.string   "lastname"
+    t.string   "login"
+    t.string   "e_mail"
     t.integer  "role",              :default => 3
     t.string   "crypted_password",                 :null => false
     t.string   "password_salt",                    :null => false

@@ -1,0 +1,17 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  headquaters: MyString
+  registration_number: 1
+  legal_form: MyString
+  activity: MyString
+  sector: MyString
+
+two:
+  name: MyString
+  headquaters: MyString
+  registration_number: 1
+  legal_form: MyString
+  activity: MyString
+  sector: MyString

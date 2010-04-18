@@ -1,5 +1,6 @@
 nbproject
-log/*
+log/development.log
+/*.log
 doc/*
 config/database.yml
 test/*
@@ -14,4 +15,4 @@ db/schema.rb
 log/development.log
 public/offerings
 *~
-
+rerun.txt

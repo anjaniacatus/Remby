@@ -1,0 +1,2 @@
+class PhoneNumber < ContactInfo
+end

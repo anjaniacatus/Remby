@@ -1,0 +1,35 @@
+<h1>New compagny</h1>
+
+<% form_for(@compagny) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :headquaters %><br />
+    <%= f.text_field :headquaters %>
+  </p>
+  <p>
+    <%= f.label :registration_number %><br />
+    <%= f.text_field :registration_number %>
+  </p>
+  <p>
+    <%= f.label :legal_form %><br />
+    <%= f.text_field :legal_form %>
+  </p>
+  <p>
+    <%= f.label :activity %><br />
+    <%= f.text_field :activity %>
+  </p>
+  <p>
+    <%= f.label :sector %><br />
+    <%= f.text_field :sector %>
+  </p>
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
+<% end %>
+<%= link_to 'add_sheets', new_job_sheet_path%>
+<%= link_to 'Back', compagnies_path %>

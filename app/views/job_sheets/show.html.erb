@@ -1,0 +1,38 @@
+<p>
+  <b>Position:</b>
+  <%=h @job_sheet.position %>
+</p>
+
+<p>
+  <b>Fields:</b>
+  <%=h @job_sheet.fields %>
+</p>
+
+<p>
+  <b>Mission:</b>
+  <%=h @job_sheet.mission %>
+</p>
+
+<p>
+  <b>Competence:</b>
+  <%=h @job_sheet.competence %>
+</p>
+
+<p>
+  <b>Experience:</b>
+  <%=h @job_sheet.experience %>
+</p>
+
+<p>
+  <b>Task:</b>
+  <%=h @job_sheet.task %>
+</p>
+
+<p>
+  <b>Degree:</b>
+  <%=h @job_sheet.degree %>
+</p>
+
+
+<%= link_to 'Edit', edit_job_sheet_path(@job_sheet) %> |
+<%= link_to 'Back', job_sheets_path %>
