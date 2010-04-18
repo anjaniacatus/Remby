@@ -25,9 +25,9 @@
         <p class="j_unhide">
         <%- # because we replace new_item (the dom id) with a new index with javascript so we put dom_class before -%>
         <%= link_to t(:delete), (really_new ? "##{dom_class(item)}_#{dom_id(item)}" : "##{my_dom_id}"), :class => "delete_#{item.new_record? ? "new_record_" : ""}links" %>
-        </p>
+   </p>
       <% end %>
     <% end %>
   <% end %>
   <%= link_to t(:new_item, :item => new_item.class.human_name), "#new_#{dom_class(new_item)}", :class => "new_nested_fields_links" %>
-</div>
+</div> 
