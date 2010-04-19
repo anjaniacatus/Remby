@@ -7,6 +7,9 @@ module Remby
 
       module ActMethods
         def acts_as_qualifiable
+          has_many :qualifications, :as => :qualifiable, :dependent => :destroy 
+          accepts_nested_attributes_for :qualifications, :allow_destroy => true, :reject_if => Proc.new { |attributes| attributes['value'].blank? }
+
           has_many :education_infos, :as => :qualifiable, :dependent => :destroy
           accepts_nested_attributes_for :education_infos, :allow_destroy => true, :reject_if => Proc.new { |attributes| attributes['value'].blank? }
           has_many :experiences, :as => :qualifiable, :dependent => :destroy

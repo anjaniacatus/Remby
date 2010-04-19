@@ -36,6 +36,13 @@
   <b>Status:</b>
   <%=h @civil_status.status %>
 </p>
+<%- unless @civil_status.contact_infos.empty? %>
+  <%= render @civil_status.contact_infos %>
+<% end %>
+
+<%- unless @civil_status.qualifications.empty? %>
+  <%= render @civil_status.qualifications %>
+<% end %>  
 
 <%= link_to 'Edit', edit_civil_status_path(@civil_status) %> |
 <%= link_to 'Back', civil_statuses_path %>
