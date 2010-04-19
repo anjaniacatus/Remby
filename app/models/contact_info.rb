@@ -1,5 +1,5 @@
 class ContactInfo < ActiveRecord::Base
-  translates :description
+  #translates :description
   belongs_to :contactable, :polymorphic => true, :touch => true
   validates_presence_of :value
 
