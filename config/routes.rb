@@ -1,4 +1,8 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :interests
+
+  map.resources :qualifications
+
   map.resources :jobs
 
   map.resources :offerings
@@ -6,8 +10,6 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :notes
 
   map.resources :societies, :has_many => [ :notes, :offerings, :jobs ], :dependent => :destroy
-
-  map.resources :skills
 
   map.resources :other_infos
 
@@ -18,8 +20,6 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :domains
 
   map.resources :schools
-
-  map.resources :experiences
   map.resources :localisations
   map.resources :contracts
   map.resources :functions

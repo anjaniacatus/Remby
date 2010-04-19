@@ -1,0 +1,12 @@
+<h1>Editing interest</h1>
+
+<% form_for(@interest) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @interest %> |
+<%= link_to 'Back', interests_path %>

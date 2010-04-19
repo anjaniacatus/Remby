@@ -1,3 +1,2 @@
-class Skill < ActiveRecord::Base
-  belongs_to :profile
+class Skill < qualification
 end
