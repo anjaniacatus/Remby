@@ -1,0 +1,7 @@
+en:
+ destroy: "Supprimer"
+ delete: "Supprimer"
+ new_item: "Nouveau : {{item}}"
+ edit_item: "Modifier : {{item}}"
+ items_index: "Index : {{items}}"
+
