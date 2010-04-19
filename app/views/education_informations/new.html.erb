@@ -1,7 +1,0 @@
-<h1>New education_information</h1>
-<% form_for([@eduinfo.profile, @eduinfo], :html => { :multipart => true }) do |f| %>
-  <%= f.error_messages %>
-  <%= render f %>
-<% end %>
-
-<%= link_to 'Back', education_informations_path %>

@@ -1,2 +1,2 @@
-class Experience < ActiveRecord::Base
+class Experience < Qualification
 end

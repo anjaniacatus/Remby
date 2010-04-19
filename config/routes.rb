@@ -15,8 +15,6 @@ ActionController::Routing::Routes.draw do |map|
 
   map.resources :contacts
 
-  map.resources :education_informations
-
   map.resources :domains
 
   map.resources :schools
