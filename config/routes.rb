@@ -1,4 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :qualifications
+
   map.resources :interests
 
   map.resources :jobs
