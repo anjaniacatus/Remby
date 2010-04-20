@@ -20,11 +20,11 @@ def contact_infos_fields(form)
     concat nested_fields_for(:postal_box, form)
     concat nested_fields_for(:street_address, form)
 end
-def qualification_fields(form)
-   # concat nested_fields_for(:education_infos, form)
-    #concat nested_fields_for(:experiences, form)
-    #concat nested_fields_for(:languages, form)
-    #concat nested_fields_for(:skills, form)
+def qualifications_fields(form)
+    concat nested_fields_for(:education_infos, form)
+    concat nested_fields_for(:experiences, form)
+    concat nested_fields_for(:languages, form)
+    concat nested_fields_for(:skills, form)
 end
 
 end
