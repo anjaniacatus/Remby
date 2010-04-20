@@ -1,6 +1,8 @@
 ActionController::Routing::Routes.draw do |map|
   map.resources :cvs
 
+  map.resources :cvs
+
   map.resources :qualifications
 
   map.resources :jobs

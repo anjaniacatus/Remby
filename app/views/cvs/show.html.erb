@@ -8,6 +8,34 @@
   <%=h @cv.summary %>
 </p>
 
+<% @cv.qualifications.each do |qualification| %>
+  <div class="child">
+    <p>
+      <b>Qualification Title:</b>
+      <%=h qualification.title %>
+    </p>
+    <p>
+      <b>Qualification Description:</b>
+      <%=h qualification.description %>
+    </p>
+    <p>
+      <b>Qualification Institute:</b>
+      <%=h qualification.institute %>
+    </p>
+    <p>
+      <b>Qualification Duration:</b>
+      <%=h qualification.duration %>
+    </p>
+    <p>
+      <b>Qualification Start on:</b>
+      <%=h qualification.start_on %>
+    </p>
+    <p>
+      <b>Qualification End on:</b>
+      <%=h qualification.end_on %>
+    </p>
+  </div>
+<% end %>
 
 <%= link_to 'Edit', edit_cv_path(@cv) %> |
 <%= link_to 'Back', cvs_path %>
