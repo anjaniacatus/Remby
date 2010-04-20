@@ -1,0 +1,33 @@
+<p>
+  <b>Title:</b>
+  <%=h @qualification.title %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%=h @qualification.description %>
+</p>
+
+<p>
+  <b>Institute:</b>
+  <%=h @qualification.institute %>
+</p>
+
+<p>
+  <b>Duration:</b>
+  <%=h @qualification.duration %>
+</p>
+
+<p>
+  <b>Start on:</b>
+  <%=h @qualification.start_on %>
+</p>
+
+<p>
+  <b>End on:</b>
+  <%=h @qualification.end_on %>
+</p>
+
+
+<%= link_to 'Edit', edit_qualification_path(@qualification) %> |
+<%= link_to 'Back', qualifications_path %>
