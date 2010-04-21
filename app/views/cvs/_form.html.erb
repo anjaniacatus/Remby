@@ -19,3 +19,16 @@
 <p>
   <%= add_child_link 'Add Qualification', 'qualification', f %>
 </p>
+
+<div id='language_children'>
+  <% f.fields_for :languages do |language_form| %>
+    <%= render :partial => 'language', :locals => { :f => language_form } %>
+  <% end %>
+</div>
+
+
+<p>
+  <%= add_child_link 'Add Language', 'language', f %>
+</p>
+
+

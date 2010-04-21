@@ -11,6 +11,11 @@
 <% @cv.qualifications.each do |qualification| %>
   <div class="child">
     <p>
+      <b>Qualification Type:</b>
+      <%=h qualification.type %>
+    </p>
+
+    <p>
       <b>Qualification Title:</b>
       <%=h qualification.title %>
     </p>
@@ -36,6 +41,32 @@
     </p>
   </div>
 <% end %>
+
+<%  @cv.languages.each do |language|%>
+<p>
+  <b>Title:</b>
+  <%=h language.title %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%=h language.description %>
+</p>
+
+<p>
+  <b>Level:</b>
+  <%=h language.level %>
+</p>
+
+<p>
+  <b>Location:</b>
+  <%=h language.location %>
+</p>
+<% end %>
+
+
+
+
 
 <%= link_to 'Edit', edit_cv_path(@cv) %> |
 <%= link_to 'Back', cvs_path %>
