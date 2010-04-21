@@ -64,6 +64,31 @@
 </p>
 <% end %>
 
+<% @cv.interests.each do |interest|%> 
+  <p>
+    <b>Title:</b>
+    <%=h interest.title %>
+  </p>
+
+  <p>
+    <b>Description:</b>
+    <%=h interest.description %>
+  </p>
+  
+<% end %>
+
+<% @cv.other_skills.each do |skill|%> 
+  <p>
+    <b>Title:</b>
+    <%=h skill.title %>
+  </p>
+
+  <p>
+    <b>Description:</b>
+    <%=h skill.description %>
+  </p>
+  
+<% end %>
 
 
 

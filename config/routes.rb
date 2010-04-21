@@ -1,4 +1,8 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :other_skills
+
+  map.resources :interests
+
 
   map.resources :cvs
 
