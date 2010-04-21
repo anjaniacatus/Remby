@@ -1,7 +1,4 @@
 ActionController::Routing::Routes.draw do |map|
-  map.resources :languages
-
-  map.resources :cvs
 
   map.resources :cvs
 
@@ -19,9 +16,6 @@ ActionController::Routing::Routes.draw do |map|
 
   map.resources :other_infos
 
-  map.resources :contacts
-
-  map.resources :education_informations
 
   map.resources :domains
 
@@ -78,7 +72,7 @@ ActionController::Routing::Routes.draw do |map|
   #   end
 
   # You can have the root of your site routed with map.root -- just remember to delete public/index.html.
-   map.root :controller => "compagnies"
+   map.root :controller => "cvs"
 
   # See how all your routes lay out with "rake routes"
 
