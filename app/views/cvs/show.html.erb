@@ -1,0 +1,97 @@
+<p>
+  <b>Title:</b>
+  <%=h @cv.title %>
+</p>
+
+<p>
+  <b>Summary:</b>
+  <%=h @cv.summary %>
+</p>
+
+<% @cv.qualifications.each do |qualification| %>
+  <div class="child">
+    <p>
+      <b>Qualification Category:</b>
+      <%=h qualification.category %>
+    </p>
+
+    <p>
+      <b>Qualification Title:</b>
+      <%=h qualification.title %>
+    </p>
+    <p>
+      <b>Qualification Description:</b>
+      <%=h qualification.description %>
+    </p>
+    <p>
+      <b>Qualification Institute:</b>
+      <%=h qualification.institute %>
+    </p>
+    <p>
+      <b>Qualification Duration:</b>
+      <%=h qualification.duration %>
+    </p>
+    <p>
+      <b>Qualification Start on:</b>
+      <%=h qualification.start_on %>
+    </p>
+    <p>
+      <b>Qualification End on:</b>
+      <%=h qualification.end_on %>
+    </p>
+  </div>
+<% end %>
+
+<%  @cv.languages.each do |language|%>
+<p>
+  <b>Title:</b>
+  <%=h language.title %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%=h language.description %>
+</p>
+
+<p>
+  <b>Level:</b>
+  <%=h language.level %>
+</p>
+
+<p>
+  <b>Location:</b>
+  <%=h language.location %>
+</p>
+<% end %>
+
+<% @cv.interests.each do |interest|%> 
+  <p>
+    <b>Title:</b>
+    <%=h interest.title %>
+  </p>
+
+  <p>
+    <b>Description:</b>
+    <%=h interest.description %>
+  </p>
+  
+<% end %>
+
+<% @cv.other_skills.each do |skill|%> 
+  <p>
+    <b>Title:</b>
+    <%=h skill.title %>
+  </p>
+
+  <p>
+    <b>Description:</b>
+    <%=h skill.description %>
+  </p>
+  
+<% end %>
+
+
+
+
+<%= link_to 'Edit', edit_cv_path(@cv) %> |
+<%= link_to 'Back', cvs_path %>

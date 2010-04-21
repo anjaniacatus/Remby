@@ -9,7 +9,11 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
+<<<<<<< HEAD:db/schema.rb
 ActiveRecord::Schema.define(:version => 20100419065836) do
+=======
+ActiveRecord::Schema.define(:version => 20100421081612) do
+>>>>>>> nested:db/schema.rb
 
   create_table "activities", :force => true do |t|
     t.string   "name"
@@ -41,6 +45,7 @@ ActiveRecord::Schema.define(:version => 20100419065836) do
     t.datetime "updated_at"
   end
 
+<<<<<<< HEAD:db/schema.rb
   create_table "contact_info_translations", :force => true do |t|
     t.integer  "contact_info_id"
     t.string   "locale"
@@ -51,6 +56,8 @@ ActiveRecord::Schema.define(:version => 20100419065836) do
 
   add_index "contact_info_translations", ["contact_info_id"], :name => "index_88fd46a3c8cae216322847972fce037d5f23489a"
 
+=======
+>>>>>>> nested:db/schema.rb
   create_table "contact_infos", :force => true do |t|
     t.integer  "contactable_id"
     t.string   "contactable_type"
@@ -60,7 +67,10 @@ ActiveRecord::Schema.define(:version => 20100419065836) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "type"
+<<<<<<< HEAD:db/schema.rb
     t.text     "description"
+=======
+>>>>>>> nested:db/schema.rb
   end
 
   create_table "contacts", :force => true do |t|
@@ -77,6 +87,13 @@ ActiveRecord::Schema.define(:version => 20100419065836) do
     t.datetime "updated_at"
   end
 
+  create_table "cvs", :force => true do |t|
+    t.string   "title"
+    t.text     "summary"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "domains", :force => true do |t|
     t.string   "name"
     t.text     "description"
@@ -85,6 +102,11 @@ ActiveRecord::Schema.define(:version => 20100419065836) do
   end
 
   create_table "education_infos", :force => true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "emails", :force => true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -108,6 +130,10 @@ ActiveRecord::Schema.define(:version => 20100419065836) do
   create_table "interests", :force => true do |t|
     t.string   "title"
     t.text     "description"
+<<<<<<< HEAD:db/schema.rb
+=======
+    t.integer  "cv_id"
+>>>>>>> nested:db/schema.rb
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -139,8 +165,18 @@ ActiveRecord::Schema.define(:version => 20100419065836) do
   end
 
   create_table "languages", :force => true do |t|
+<<<<<<< HEAD:db/schema.rb
     t.datetime "created_at"
     t.datetime "updated_at"
+=======
+    t.string   "title"
+    t.text     "description"
+    t.string   "level"
+    t.string   "location"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "cv_id"
+>>>>>>> nested:db/schema.rb
   end
 
   create_table "localisations", :force => true do |t|
@@ -178,6 +214,17 @@ ActiveRecord::Schema.define(:version => 20100419065836) do
     t.datetime "updated_at"
   end
 
+<<<<<<< HEAD:db/schema.rb
+=======
+  create_table "other_skills", :force => true do |t|
+    t.string   "title"
+    t.text     "description"
+    t.integer  "cv_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+>>>>>>> nested:db/schema.rb
   create_table "phone_numbers", :force => true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -195,6 +242,7 @@ ActiveRecord::Schema.define(:version => 20100419065836) do
     t.text     "description"
     t.string   "status"
     t.string   "sex"
+<<<<<<< HEAD:db/schema.rb
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -208,8 +256,23 @@ ActiveRecord::Schema.define(:version => 20100419065836) do
     t.string   "location"
     t.date     "start_at"
     t.date     "end_at"
+=======
+>>>>>>> nested:db/schema.rb
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "qualifications", :force => true do |t|
+    t.string   "title"
+    t.text     "description"
+    t.string   "institute"
+    t.string   "duration"
+    t.date     "start_on"
+    t.date     "end_on"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "cv_id"
+    t.string   "category"
   end
 
   create_table "schools", :force => true do |t|

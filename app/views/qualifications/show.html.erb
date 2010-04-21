@@ -1,26 +1,16 @@
 <p>
-  <b>Contactable:</b>
-  <%=h @qualification.qualifiable_id %>
-</p>
-
-<p>
-  <b>Contactable type:</b>
-  <%=h @qualification.qualifiable_type %>
-</p>
-
-<p>
-  <b>Value format:</b>
+  <b>Title:</b>
   <%=h @qualification.title %>
 </p>
 
 <p>
-  <b>Value:</b>
+  <b>Description:</b>
   <%=h @qualification.description %>
 </p>
 
 <p>
-  <b>Location:</b>
-  <%=h @qualification.location %>
+  <b>Institute:</b>
+  <%=h @qualification.institute %>
 </p>
 
 <p>
@@ -29,15 +19,14 @@
 </p>
 
 <p>
-  <b>Started_at:</b>
-  <%=h @qualification.started_at %>
+  <b>Start on:</b>
+  <%=h @qualification.start_on %>
 </p>
 
 <p>
-  <b>Ends_at:</b>
-  <%=h @qualification.ended_at %>
+  <b>End on:</b>
+  <%=h @qualification.end_on %>
 </p>
-
 
 
 <%= link_to 'Edit', edit_qualification_path(@qualification) %> |

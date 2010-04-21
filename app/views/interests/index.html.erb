@@ -2,10 +2,14 @@
 
 <table>
   <tr>
+    <th>Title</th>
+    <th>Description</th>
   </tr>
 
 <% @interests.each do |interest| %>
   <tr>
+    <td><%=h interest.title %></td>
+    <td><%=h interest.description %></td>
     <td><%= link_to 'Show', interest %></td>
     <td><%= link_to 'Edit', edit_interest_path(interest) %></td>
     <td><%= link_to 'Destroy', interest, :confirm => 'Are you sure?', :method => :delete %></td>
