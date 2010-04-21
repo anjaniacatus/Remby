@@ -1,3 +1,3 @@
-class Email < ContactInfo
-  validates_format_of :value, :with => /.+@.+\..+/
+class Email < ActiveRecord::Base
+  belongs_to :contact_info
 end

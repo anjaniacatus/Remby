@@ -9,11 +9,9 @@ class CreateContactInfos < ActiveRecord::Migration
 
       t.timestamps
     end
-    ContactInfo.create_translation_table! :description => :string
- end
+   end
 
   def self.down
-    ContactInfo.drop_translation_table!
-    drop_table :contact_infos
+      drop_table :contact_infos
   end
 end

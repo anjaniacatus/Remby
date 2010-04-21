@@ -2,20 +2,22 @@
 
 <table>
   <tr>
-    <th>Contactable</th>
     <th>Contactable type</th>
     <th>Value format</th>
     <th>Value</th>
     <th>Localisation</th>
+    <th>Type</th>
+    <th>Description</th>
   </tr>
 
 <% @contact_infos.each do |contact_info| %>
   <tr>
-    <td><%=h contact_info.contactable_id %></td>
     <td><%=h contact_info.contactable_type %></td>
     <td><%=h contact_info.value_format %></td>
     <td><%=h contact_info.value %></td>
     <td><%=h contact_info.localisation %></td>
+    <td><%=h contact_info.type %></td>
+    <td><%=h contact_info.description %></td>
     <td><%= link_to 'Show', contact_info %></td>
     <td><%= link_to 'Edit', edit_contact_info_path(contact_info) %></td>
     <td><%= link_to 'Destroy', contact_info, :confirm => 'Are you sure?', :method => :delete %></td>
