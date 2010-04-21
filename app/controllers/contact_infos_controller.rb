@@ -25,6 +25,7 @@ class ContactInfosController < ApplicationController
   # GET /contact_infos/new.xml
   def new
     @contact_info = ContactInfo.new
+    @contactable = CivilStatus.all
 
     respond_to do |format|
       format.html # new.html.erb

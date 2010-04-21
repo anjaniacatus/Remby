@@ -1,34 +1,4 @@
-<%= f.error_messages %>
 
-<p>
-  <%= f.label :contactable_type %><br />
-  <%= f.text_field :contactable_type %>
-</p>
-
-<p>
-  <%= f.label :value_format %><br />
-  <%= f.text_field :value_format %>
-</p>
-
-<p>
-  <%= f.label :value %><br />
-  <%= f.text_field :value %>
-</p>
-
-<p>
-  <%= f.label :localisation %><br />
-  <%= f.text_field :localisation %>
-</p>
-
-<p>
-  <%= f.label :type %><br />
-  <%= f.text_field :type %>
-</p>
-
-<p>
-  <%= f.label :description %><br />
-  <%= f.text_area :description %>
-</p>
 
 <div id='email_children'>
   <% f.fields_for :emails do |email_form| %>
@@ -39,3 +9,26 @@
 <p>
   <%= add_child_link 'Add Email', 'email', f %>
 </p>
+
+<div id='phone_number_children'>
+  <% f.fields_for :phone_numbers do |phone_number_form| %>
+    <%= render :partial => 'phone_number', :locals => { :f => phone_number_form } %>
+  <% end %>
+</div>
+
+<p>
+  <%= add_child_link 'Add Phone_Number', 'phone_number', f %>
+</p>
+
+
+<div id='url_children'>
+  <% f.fields_for :urls do |url_form| %>
+    <%= render :partial => 'url', :locals => { :f => url_form } %>
+  <% end %>
+</div>
+
+<p>
+  <%= add_child_link 'Add Url', 'url', f %>
+</p>
+
+

@@ -3,31 +3,6 @@
   <%=h @contact_info.contactable_type %>
 </p>
 
-<p>
-  <b>Value format:</b>
-  <%=h @contact_info.value_format %>
-</p>
-
-<p>
-  <b>Value:</b>
-  <%=h @contact_info.value %>
-</p>
-
-<p>
-  <b>Localisation:</b>
-  <%=h @contact_info.localisation %>
-</p>
-
-<p>
-  <b>Type:</b>
-  <%=h @contact_info.type %>
-</p>
-
-<p>
-  <b>Description:</b>
-  <%=h @contact_info.description %>
-</p>
-
 <% @contact_info.emails.each do |email| %>
   <div class="child">
     <p>
@@ -37,10 +12,6 @@
     <p>
       <b>Email Description:</b>
       <%=h email.description %>
-    </p>
-    <p>
-      <b>Email Contact:</b>
-      <%=h email.contact_id %>
     </p>
   </div>
 <% end %>

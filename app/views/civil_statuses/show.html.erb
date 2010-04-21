@@ -39,10 +39,6 @@
 <%- unless @civil_status.contact_infos.empty? %>
   <%= render @civil_status.contact_infos %>
 <% end %>
-
-<%- unless @civil_status.qualifications.empty? %>
-  <%= render @civil_status.qualifications %>
-<% end %>  
-
+<%= link_to 'Add Contact_infos', new_contact_info_path(@civil_status) %>
 <%= link_to 'Edit', edit_civil_status_path(@civil_status) %> |
 <%= link_to 'Back', civil_statuses_path %>

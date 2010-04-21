@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100421103804) do
+ActiveRecord::Schema.define(:version => 20100421105655) do
 
   create_table "activities", :force => true do |t|
     t.string   "name"
@@ -44,13 +44,8 @@ ActiveRecord::Schema.define(:version => 20100421103804) do
   create_table "contact_infos", :force => true do |t|
     t.integer  "contactable_id"
     t.string   "contactable_type"
-    t.integer  "value_format"
-    t.string   "value"
-    t.string   "localisation"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "type"
-    t.text     "description"
   end
 
   create_table "contracts", :force => true do |t|
@@ -83,7 +78,6 @@ ActiveRecord::Schema.define(:version => 20100421103804) do
     t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "contact_id"
     t.integer  "contact_info_id"
   end
 
@@ -188,11 +182,15 @@ ActiveRecord::Schema.define(:version => 20100421103804) do
   create_table "phone_numbers", :force => true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "value"
+    t.text     "description"
   end
 
   create_table "postal_boxes", :force => true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "value"
+    t.text     "description"
   end
 
   create_table "profiles", :force => true do |t|
@@ -253,11 +251,15 @@ ActiveRecord::Schema.define(:version => 20100421103804) do
   create_table "street_addresses", :force => true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "value"
+    t.text     "description"
   end
 
   create_table "urls", :force => true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "value"
+    t.text     "description"
   end
 
   create_table "users", :force => true do |t|

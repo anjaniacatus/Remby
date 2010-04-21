@@ -1,4 +1,5 @@
-class StreetAddress < ContactInfo
+class StreetAddress < ActiveRecord::Base
+  belongs_to :contact_info
   after_save :set_contactable_area
 
   private
