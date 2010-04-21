@@ -8,5 +8,9 @@ class Cv < ActiveRecord::Base
   accepts_nested_attributes_for :languages, :allow_destroy => true
   accepts_nested_attributes_for :interests, :allow_destroy => true
   accepts_nested_attributes_for :other_skills, :allow_destroy => true
+  
+  def self.search(search, page)
+    paginate :per_page => 4, :page => page
+  end
 
 end

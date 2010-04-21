@@ -2,7 +2,9 @@ class CvsController < ApplicationController
   # GET /cvs
   # GET /cvs.xml
   def index
-    @cvs = Cv.all
+    @cvs = Cv.find(:all)
+    @cv_paginates = Cv.search(params[:search], params[:page])
+
 
     respond_to do |format|
       format.html # index.html.erb
