@@ -4,8 +4,8 @@
   <%= f.error_messages %>
 
   <p>
-    <%= f.label :title %><br />
-    <%= f.text_field :title %>
+    <%= f.label :category %><br />
+    <%= f.select :category, Qualification::Categories %>
   </p>
   <p>
     <%= f.label :description %><br />
