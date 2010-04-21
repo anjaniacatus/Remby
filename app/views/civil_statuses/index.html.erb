@@ -9,6 +9,7 @@
     <th>Hometown</th>
     <th>Current city</th>
     <th>Gender</th>
+    <th>Status</th>
   </tr>
 
 <% @civil_statuses.each do |civil_status| %>
@@ -20,6 +21,7 @@
     <td><%=h civil_status.hometown %></td>
     <td><%=h civil_status.current_city %></td>
     <td><%=h civil_status.gender %></td>
+    <td><%=h civil_status.status %></td>
     <td><%= link_to 'Show', civil_status %></td>
     <td><%= link_to 'Edit', edit_civil_status_path(civil_status) %></td>
     <td><%= link_to 'Destroy', civil_status, :confirm => 'Are you sure?', :method => :delete %></td>

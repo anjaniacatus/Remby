@@ -3,7 +3,8 @@ class CreateCvs < ActiveRecord::Migration
     create_table :cvs do |t|
       t.string :title
       t.text :summary
-
+      t.integer :civil_status_id
+  
       t.timestamps
     end
   end

@@ -1,35 +1,51 @@
+<%= f.error_messages %>
+
 <p>
-  <%= form.label :family_name %><br />
-  <%= form.text_field :family_name %>
-</p>
-<p>
-  <%= form.label :name %><br />
-  <%= form.text_field :name %>
-</p>
-<p>
-  <%= form.label :age %><br />
-  <%= form.text_field :age %>
-</p>
-<p>
-  <%= form.label :birthday %><br />
-  <%= form.date_select :birthday %>
-</p>
-<p>
-  <%= form.label :hometown %><br />
-  <%= form.text_field :hometown %>
-</p>
-<p>
-  <%= form.label :current_city %><br />
-  <%= form.text_field :current_city %>
-</p>
-<p>
-  <%= form.label :gender %><br />
-  <%= form.select :gender, CivilStatus::Genders %>
-</p>
-<p>
-  <%= form.label :status %><br />
-  <%= form.select :status, CivilStatus::Statuses %>
+  <%= f.label :family_name %><br />
+  <%= f.text_field :family_name %>
 </p>
 
-  
-  
+<p>
+  <%= f.label :name %><br />
+  <%= f.text_field :name %>
+</p>
+
+<p>
+  <%= f.label :age %><br />
+  <%= f.text_field :age %>
+</p>
+
+<p>
+  <%= f.label :birthday %><br />
+  <%= f.date_select :birthday %>
+</p>
+
+<p>
+  <%= f.label :hometown %><br />
+  <%= f.text_field :hometown %>
+</p>
+
+<p>
+  <%= f.label :current_city %><br />
+  <%= f.text_field :current_city %>
+</p>
+
+<p>
+  <%= f.label :gender %><br />
+  <%= f.text_field :gender %>
+</p>
+
+<p>
+  <%= f.label :status %><br />
+  <%= f.text_field :status %>
+</p>
+
+<div id='cv_children'>
+  <% f.fields_for :cvs do |cv_form| %>
+    <%= render :partial => 'cv', :locals => { :f => cv_form } %>
+  <% end %>
+</div>
+
+<p>
+  <%= add_child_link 'Add Cv', 'cv', f %>
+</p>

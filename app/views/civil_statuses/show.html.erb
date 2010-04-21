@@ -10,7 +10,7 @@
 
 <p>
   <b>Age:</b>
-  <%=h @civil_status.age %> ans
+  <%=h @civil_status.age %>
 </p>
 
 <p>
@@ -32,13 +32,28 @@
   <b>Gender:</b>
   <%=h @civil_status.gender %>
 </p>
+
 <p>
   <b>Status:</b>
   <%=h @civil_status.status %>
 </p>
-<%- unless @civil_status.contact_infos.empty? %>
-  <%= render @civil_status.contact_infos %>
+
+<% @civil_status.cvs.each do |cv| %>
+  <div class="child">
+    <p>
+      <b>Cv Title:</b>
+      <%=h cv.title %>
+    </p>
+    <p>
+      <b>Cv Summary:</b>
+      <%=h cv.summary %>
+    </p>
+    <p>
+      <b>Cv Status civil:</b>
+      <%=h cv.status_civil_id %>
+    </p>
+  </div>
 <% end %>
-<%= link_to 'Add Contact_infos', new_contact_info_path(@civil_status) %>
+<%= link_to 'Create_CV', new_civil_status_cv_path(@civil_status)%>
 <%= link_to 'Edit', edit_civil_status_path(@civil_status) %> |
 <%= link_to 'Back', civil_statuses_path %>

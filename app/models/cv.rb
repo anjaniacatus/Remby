@@ -1,4 +1,5 @@
 class Cv < ActiveRecord::Base
+  belongs_to :civil_status
   has_many :qualifications
   has_many :languages
   has_many :interests
