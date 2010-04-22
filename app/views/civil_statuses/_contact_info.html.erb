@@ -1,0 +1,14 @@
+<div class='child'>
+<p>
+  <%= f.label :value_format %><br />
+  <%= f.select :value_format, ContactInfo::ValueFormats.map { |t| [ t[0], ContactInfo::ValueFormats.index(t) ] } %>
+</p>
+<p>
+  <%= f.label :value %><br />
+  <%= f.text_field :value %>
+</p>
+<p>
+    <%= f.hidden_field :_destroy, :class => 'delete' %>
+    <%= remove_child_link 'remove', f %>
+</p>
+</div>

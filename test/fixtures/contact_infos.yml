@@ -1,15 +1,11 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
 one:
-  contactable_id: 1
-  contactable_type: MyString
-  value_format: 1
   value: MyString
-  localisation: MyString
+  value_format: MyString
+  description: MyText
 
 two:
-  contactable_id: 1
-  contactable_type: MyString
-  value_format: 1
   value: MyString
-  localisation: MyString
+  value_format: MyString
+  description: MyText

@@ -37,22 +37,21 @@
   <b>Status:</b>
   <%=h @civil_status.status %>
 </p>
-<% @civil_status.cvs.each do |cv| %>
+  <% @civil_status.contact_infos.each do |contact| %>
   <div class="child">
     <p>
-      <b>Cv Title:</b>
-      <%=h cv.title %>
+      <b> value_format:</b>
+      <%=h contact.value_format %>
     </p>
     <p>
-      <b>Cv Summary:</b>
-      <%=h cv.summary %>
-    </p>
-    <p>
-      <b>Cv Status civil:</b>
-      <%=h cv.status_civil_id %>
+      <b> value:</b>
+      <%=h contact.value %>
     </p>
   </div>
+
+<p>
+</p>
 <% end %>
+<%= link_to 'CV disponible', civil_status_cvs_path(@civil_status) %>
 <%= link_to 'Create_CV', new_civil_status_cv_path(@civil_status)%>
-<%= link_to 'Edit', edit_civil_status_path(@civil_status) %> |
-<%= link_to 'Back', civil_statuses_path %>
+<%= link_to 'Edit', edit_civil_status_path(@civil_status) %> | <%= link_to 'Back', civil_statuses_path %>

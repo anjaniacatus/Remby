@@ -26,7 +26,6 @@ class ContactInfosController < ApplicationController
   def new
     @contact_info = ContactInfo.new
     @contactable = CivilStatus.all
-
     respond_to do |format|
       format.html # new.html.erb
       format.xml  { render :xml => @contact_info }

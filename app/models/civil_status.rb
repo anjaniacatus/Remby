@@ -5,5 +5,5 @@ class CivilStatus < ActiveRecord::Base
   has_friendly_id :name, :use_slug => true, :strip_diacritics => true
   Genders = ["","femme", "homme"]
   Statuses = ["","marié(e)","celibataire"]
-  accepts_nested_attributes_for :cvs, :allow_destroy => true
+  accepts_nested_attributes_for :contact_infos, :allow_destroy => true
 end

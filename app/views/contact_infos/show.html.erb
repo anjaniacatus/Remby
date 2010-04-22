@@ -1,20 +1,18 @@
 <p>
-  <b>Contactable type:</b>
-  <%=h @contact_info.contactable_type %>
+  <b>Value:</b>
+  <%=h @contact_info.value %>
 </p>
 
-<% @contact_info.emails.each do |email| %>
-  <div class="child">
-    <p>
-      <b>Email Title:</b>
-      <%=h email.title %>
-    </p>
-    <p>
-      <b>Email Description:</b>
-      <%=h email.description %>
-    </p>
-  </div>
-<% end %>
+<p>
+  <b>Value format:</b>
+  <%=h @contact_info.value_format %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%=h @contact_info.description %>
+</p>
+
 
 <%= link_to 'Edit', edit_contact_info_path(@contact_info) %> |
 <%= link_to 'Back', contact_infos_path %>

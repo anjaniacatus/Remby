@@ -1,4 +1,3 @@
-<%= f.error_messages %>
 
 <p>
   <%= f.label :family_name %><br />
@@ -32,20 +31,22 @@
 
 <p>
   <%= f.label :gender %><br />
-  <%= f.text_field :gender %>
+  <%= f.select :gender, CivilStatus::Genders %>
 </p>
 
 <p>
   <%= f.label :status %><br />
-  <%= f.text_field :status %>
+  <%= f.select :status, CivilStatus::Statuses %>
 </p>
 
-<div id='cv_children'>
-  <% f.fields_for :cvs do |cv_form| %>
-    <%= render :partial => 'cv', :locals => { :f => cv_form } %>
+<div id='contact_info_children'>
+  <% f.fields_for :contact_infos do |contact_info_form| %>
+    <%= render :partial => 'contact_info', :locals => { :f => contact_info_form } %>
   <% end %>
 </div>
-
 <p>
-  <%= add_child_link 'Add Cv', 'cv', f %>
+  <%= add_child_link 'Add Contacts', 'contact_info', f %>
 </p>
+
+
+

@@ -3,7 +3,7 @@ class CvsController < ApplicationController
   # GET /cvs.xml
   def index
     @cvs = Cv.find(:all)
-    @cv_paginates = Cv.search(params[:search], params[:page])
+    #@cv_paginates = Cv.search(params[:search], params[:page])
 
 
     respond_to do |format|

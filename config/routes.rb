@@ -1,10 +1,10 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :contact_infos
+
   map.resources :civil_statuses
   map.resources :civil_statuses do |civil_status|
     civil_status.resources :cvs
   end  
-  map.resources :contact_infos
-
   map.resources :qualifications
 
   map.resources :other_skills

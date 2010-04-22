@@ -1,11 +1,24 @@
 class ContactInfo < ActiveRecord::Base
-  #translates :description
-  has_many :emails
-  has_many :phone_numbers
-  has_many :urls
-  belongs_to :contactable, :polymorphic => true, :touch => true
-  accepts_nested_attributes_for :emails, :allow_destroy => true
-  accepts_nested_attributes_for :phone_numbers, :allow_destroy => true
-  accepts_nested_attributes_for :urls, :allow_destroy => true
+   belongs_to :contactable, :polymorphic => true, :touch => true
+  validates_presence_of :value
+  ValueFormats = [
+    # [ value format symbol, [ format_for_jquery, error message, validation regex ], localisation required ]
+    [ :postal_box, [ :digit, :not_a_number, /\d+/ ], true],
+    [ :email, [ :email, :invalid, /.+@.+\..+/ ], nil],
+    [ :website, [ :url, :invalid, /https?:\/\/.+/ ], nil],
+    [ :phone_number, nil, nil ],
+    [ :street_address, nil, true ]
+  ].freeze
 
+  named_scope :links, :conditions => { :value_format => 2 }, :order => "updated_at DESC", :limit => 10
+
+  def value_format_sym
+    ContactInfo::ValueFormats[value_format][0]
+  end
+
+  protected
+  def validate
+    validate_with = ValueFormats[3]
+    errors.add(:value, validate_with[1][1]) if validate_with[1] and !(self.value =~ validate_with[1][2])
+  end
 end
