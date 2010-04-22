@@ -18,7 +18,7 @@ class ContactInfo < ActiveRecord::Base
 
   protected
   def validate
-    validate_with = ValueFormats[3]
+    validate_with = ValueFormats[value_format.to_i]
     errors.add(:value, validate_with[1][1]) if validate_with[1] and !(self.value =~ validate_with[1][2])
   end
 end

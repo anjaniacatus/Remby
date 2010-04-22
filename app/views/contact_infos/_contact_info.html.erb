@@ -1,2 +1,12 @@
-<%== #{contact_info.class.human_name}#{contact_info.description.blank? ? "" : " (#{contact_info.description})" }: %>
-<%== #{contact_info.value} %>
+<% content_tag_for :span, contact_info do
+  concat "#{(contact_info.value_format)}&nbsp;:&nbsp;"
+  case contact_info.value_format
+  when :email
+    concat mail_to(contact_info.value)
+  when :website
+    concat link_to(contact_info.value, contact_info.value)
+  else
+    concat contact_info.value
+  end
+end %>
+
