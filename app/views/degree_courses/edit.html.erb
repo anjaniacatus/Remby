@@ -1,0 +1,12 @@
+<h1>Editing degree_course</h1>
+
+<% form_for(@degree_course) do |f| %>
+  <%= f.error_messages %>
+  <%= render :partial => 'form', :locals => {:f => f}%>
+   <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @degree_course %> |
+<%= link_to 'Back', degree_courses_path %>

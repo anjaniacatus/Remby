@@ -4,7 +4,7 @@ class CreateLanguages < ActiveRecord::Migration
       t.string :title
       t.text :description
       t.string :level
-      t.string :location
+      
 
       t.timestamps
     end

@@ -1,0 +1,33 @@
+<p>
+  <b>School:</b>
+  <%=h @degree_course.school_id %>
+</p>
+
+<p>
+  <b>Degree name:</b>
+  <%=h @degree_course.degree_name %>
+</p>
+
+<p>
+  <b>Domain:</b>
+  <%=h @degree_course.domain_id %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%=h @degree_course.description %>
+</p>
+
+<p>
+  <b>Start on:</b>
+  <%=h @degree_course.start_on %>
+</p>
+
+<p>
+  <b>End on:</b>
+  <%=h @degree_course.end_on %>
+</p>
+
+
+<%= link_to 'Edit', edit_degree_course_path(@degree_course) %> |
+<%= link_to 'Back', degree_courses_path %>

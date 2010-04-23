@@ -1,0 +1,30 @@
+<h1>Listing degree_courses</h1>
+
+<table>
+  <tr>
+    <th>School</th>
+    <th>Degree name</th>
+    <th>Domain</th>
+    <th>Description</th>
+    <th>Start on</th>
+    <th>End on</th>
+  </tr>
+
+<% @degree_courses.each do |degree_course| %>
+  <tr>
+    <td><%=h degree_course.school_id %></td>
+    <td><%=h degree_course.degree_name %></td>
+    <td><%=h degree_course.domain_id %></td>
+    <td><%=h degree_course.description %></td>
+    <td><%=h degree_course.start_on %></td>
+    <td><%=h degree_course.end_on %></td>
+    <td><%= link_to 'Show', degree_course %></td>
+    <td><%= link_to 'Edit', edit_degree_course_path(degree_course) %></td>
+    <td><%= link_to 'Destroy', degree_course, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New degree_course', new_degree_course_path %>

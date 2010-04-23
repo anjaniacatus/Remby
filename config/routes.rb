@@ -1,4 +1,8 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :experiences
+
+  map.resources :degree_courses
+
   map.resources :contact_infos
 
   map.resources :civil_statuses

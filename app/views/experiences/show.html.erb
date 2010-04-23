@@ -1,0 +1,33 @@
+<p>
+  <b>Compagny:</b>
+  <%=h @experience.compagny_id %>
+</p>
+
+<p>
+  <b>Cv:</b>
+  <%=h @experience.cv_id %>
+</p>
+
+<p>
+  <b>Jobtitle:</b>
+  <%=h @experience.jobtitle %>
+</p>
+
+<p>
+  <b>Job:</b>
+  <%=h @experience.job_id %>
+</p>
+
+<p>
+  <b>Duration:</b>
+  <%=h @experience.duration %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%=h @experience.description %>
+</p>
+
+
+<%= link_to 'Edit', edit_experience_path(@experience) %> |
+<%= link_to 'Back', experiences_path %>
