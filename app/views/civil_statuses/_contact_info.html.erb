@@ -1,6 +1,5 @@
 <div class='child'>
 <p>
-<%= debug f.object %>
   <%= f.label :value_format %><br />
   <%= f.select :value_format, ContactInfo::ValueFormats.map { |t| [ t[0], ContactInfo::ValueFormats.index(t) ] }, :selected => f.object.value_format.to_i %>
 </p>
