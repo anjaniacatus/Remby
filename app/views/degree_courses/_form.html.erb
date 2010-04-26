@@ -5,7 +5,7 @@
   </p>
   <p>
     <%= f.label :degree_name %><br />
-    <%= f.text_field :degree_name %>
+    <%= f.select :degree_name, DegreeCourse::Degree_Names %>
   </p>
    <p>
     <%= f.label :description %><br />
@@ -19,11 +19,6 @@
     <%= f.label :end_on %><br />
     <%= f.date_select :end_on %>
   </p>
-  
-  <p>
-    <%= f.hidden_field :_destroy, :class => 'delete' %>
-    <%= remove_child_link 'remove', f %>
-  </p>
-</div>
+ </div>
 
 

@@ -1,4 +1,6 @@
 class Experience < ActiveRecord::Base
   belongs_to :cv
   validates_presence_of :jobtitle, :duration
+  Durations = ["moins d'un ans","1 à 2 ans", "moins de 5ans", "5 ans et plus" ]
+
 end

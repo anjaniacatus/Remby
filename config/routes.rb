@@ -9,8 +9,6 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :civil_statuses do |civil_status|
     civil_status.resources :cvs
   end  
-  map.resources :qualifications
-
   map.resources :other_skills
 
   map.resources :interests

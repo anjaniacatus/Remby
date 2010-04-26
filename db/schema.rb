@@ -63,7 +63,6 @@ ActiveRecord::Schema.define(:version => 20100423093419) do
     t.integer  "civil_status_id"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "status_civil_id"
   end
 
   create_table "degree_courses", :force => true do |t|
@@ -193,19 +192,6 @@ ActiveRecord::Schema.define(:version => 20100423093419) do
     t.string   "sex"
     t.datetime "created_at"
     t.datetime "updated_at"
-  end
-
-  create_table "qualifications", :force => true do |t|
-    t.string   "title"
-    t.text     "description"
-    t.string   "institute"
-    t.string   "duration"
-    t.date     "start_on"
-    t.date     "end_on"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.integer  "cv_id"
-    t.string   "category"
   end
 
   create_table "schools", :force => true do |t|
