@@ -1,22 +1,10 @@
 <h1>Listing cvs</h1>
 
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Summary</th>
-  </tr>
-
 <% @cvs.each do |cv| %>
-  <tr>
-    <td><%=h cv.title %></td>
-    <td><%=h cv.summary %></td>
-    <td><%= link_to 'Show', cv %></td>
-    <td><%= link_to 'Edit', edit_cv_path(cv) %></td>
-    <td><%= link_to 'Destroy', cv, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
-  <td><%= link_to 'back', cvs_path %>
- <%#<% end <]%>
-    <%#<%= will_paginate @cv_paginates%>
-<%#</table>%>
-
+  <%=h cv.title %>
+  <%=h cv.summary %>
+  <%= link_to 'Show', cv %> |<%= link_to 'Edit', edit_cv_path(cv) %> |
+  <%= link_to 'Destroy', cv, :confirm => 'Are you sure?', :method => :delete %>
+  </br>
 <% end %>
+

@@ -17,22 +17,21 @@ body {
 }
 
 #main {
-  width: 75%;
-  margin: 0 auto;
-  background-color: #FFF;
+   width: 75%;
+   background-color: #FFF;
   padding: 20px 40px;
   border: solid 1px black;
   margin-top: 20px;
+  margin: 0 auto;
 }
 #side{
   width: 75%;
-  background-color: #FFF;
+  background-color: #FFF; 
 }
 #banner{
   background-color: #FFF;
   width: 75%;
-  padding: 20px 40px;
-  margin :0 auto;
+   margin :0 auto;
 }
 #navigation{
   background-color: #FFF;
@@ -41,11 +40,12 @@ body {
 }
 
 #footer{
-  background-color: #FFF;
-  padding: 20px 40px;
-  margin :0 auto;
   width: 75%;
-  margin-top: 40px;
+   background-color: #FFF;
+  padding: 20px 40px;
+  border: solid 1px black;
+  margin-top: 20px;
+  margin: 0 auto;
 }
 #content_info{
   background-color: #FFF;
