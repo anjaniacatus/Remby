@@ -10,15 +10,6 @@
   <%= f.text_area :summary %>
 </p>
 
-<div id='qualification_children'>
-  <% f.fields_for :qualifications do |qualification_form| %>
-    <%= render :partial => 'qualification', :locals => { :f => qualification_form } %>
-  <% end %>
-</div>
-
-<p>
-  <%= add_child_link 'Add Qualification', 'qualification', f %>
-</p>
 
 <div id='language_children'>
   <% f.fields_for :languages do |language_form| %>
@@ -47,10 +38,17 @@
     <%= render :partial => 'other_skill', :locals => { :f => other_skill_form } %>
   <% end %>
 </div>
-
-
 <p>
 <%= add_child_link 'Add Other_Skill', 'other_skill', f %>
+</p>
+
+<div id='degree_course'>
+  <% f.fields_for :degree_courses do |degree_course_form| %>
+    <%= render :partial => 'degree_course', :locals => { :f => degree_course_form } %>
+  <% end %>
+</div>
+<p>
+<%= add_child_link 'Add Degree_Course', 'degree_course', f %>
 </p>
 
 
