@@ -1,75 +1,36 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="I18n.locale.to_s" lang="I18n.locale.to_s">
-   <head>
-    <title><%= h(yield(:title) || "Remby | online CV & Jobs") %></title>
-    <meta http-equiv="content-type" content="text/html;charset=utf-8" />
-        <%- if Rails.env.production? -%>
-      <%= stylesheet_link_tag 'screen', :media => "screen" -%>
-      <%= stylesheet_link_tag 'jquerycssmenu', :media => "screen" -%>
-      <%= stylesheet_link_tag 'autocomplete', :media => "screen" -%>
-    <%- else -%>
-      <link href="/stylesheets/screen.css" media="screen" rel="stylesheet" type="text/css" />
-      <link href="/stylesheets/jquerycssmenu.css" media="screen" rel="stylesheet" type="text/css" />
-      <link href="/stylesheets/autocomplete.css" media="screen" rel="stylesheet" type="text/css" />
-   <%- end -%>
-     <%= javascript_include_tag 'jquery' %>
-    <%= javascript_include_tag 'jquerycssmenu' %>
-    <%= javascript_include_tag "swapselect" %>
-    <%= javascript_include_tag "jquery.autocomplete.js" %>
-    <%= javascript_include_tag "jquery.select-autocomplete.js" %>
-    <%= yield :javascript %>
-    <%= render :partial => 'shared/javascript' %>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <title> <%= h(yield(:title) || "Remby | online CV & jobs")%></title>
+  <%= stylesheet_link_tag 'application' %>
+  <%= javascript_include_tag 'prototype.js' %>
+  <%= javascript_include_tag 'nested_attributes.js' %>
+</head>
+<body>
+  <div id="banner">
+  </div>
+  <div id="main">
+    <div id="navigation">
+      <%= render :partial => 'shared/navigation'%>
+    </div>
+    
+    <div id = "side">
+      <p style="color: green"><%= flash[:notice] %></p>
+      <%= yield %>
+    </div>
+  </div>
+    
+    <div id="footer">    
+      footer goes here!!!
+      <div id="contentinfo">
+        &copy; 2009 remby.com &mdash; engineered by <a href="http://jojopil.com">jojopil! Innovations.</a>
 
-    <%= yield(:head) %> 
-    <% javascript_tag do %>
-      <%= yield(:jstemplates) %>
-    <% end -%>
- 
-  </head>
-  <body>
-    <div id="pagewrapper">
-      <div id="header">
-        <div id="user_nav">
-          <% if current_user %>
-            <%= link_to "Edit Account", edit_user_path(:current) %>|
-            <%= link_to "logout", logout_path %>
-            <%= link_to "Edit Profile", new_profile_path %>
-          <% else %>
-            <%= link_to "Register", new_user_path %> |
-            <%= link_to "Login", login_path %>
-          <% end %>
-        </div>
-      </div>
-      <div id="content_wrapper">
-        <div id="content">
-          <p style="color: green"><%= flash[:notice] %></p>
-        </div>
-        <div id="related">
-          <%= yield -%>
-        </div>
-      </div>
-      <div id="footer">
-        <div id="utils">
-          <ul>
-            <li>
-              <a href=""><%= :contact -%></a>
-            </li>
-            <li>
-              <a href=""><%= :about -%></a>
-            </li>
-            <li>
-              <a href=""><%= :sitemap -%></a>
-            </li>
-          </ul>
-        </div>
-        <div id="contentinfo">
-          <p>
-            &copy; 2009 remby.com &mdash; engineered by <a href="http://jojopil.com">jojopil! Innovations.</a>
-          </p>
-        </div>
       </div>
     </div>
-  </body>
+
+
+</body>
 </html>
