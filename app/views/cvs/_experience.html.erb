@@ -1,0 +1,20 @@
+<div class='child'>  
+  <p>
+    <%= f.label :jobtitle %><br />
+    <%= f.text_field :jobtitle %>
+  </p>
+  <p>
+    <%= f.label :description %><br />
+    <%= f.text_field :description %>
+  </p>
+  
+  <p>
+    <%= f.label :duration %><br />
+    <%= f.select :duration, Experience::Durations %>
+  </p>
+
+  <p>
+    <%= f.hidden_field :_destroy, :class => 'delete' %>
+    <%= remove_child_link 'remove', f %>
+  </p>
+</div>
