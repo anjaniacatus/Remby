@@ -1,5 +1,3 @@
-<%= f.error_messages %>
-
 <p>
   <%= f.label :title %><br />
   <%= f.text_field :title %>
@@ -11,13 +9,22 @@
 </p>
 
 
+<div id='degree_course_children'>
+  <% f.fields_for :degree_courses do |degree_course_form| %>
+    <%= render :partial => 'degree_course', :locals => { :f => degree_course_form } %>
+  <% end %>
+</div>
+
+<p>
+  <%= add_child_link 'Add Degree_course', 'degree_course', f %>
+</p>
+
+
 <div id='language_children'>
   <% f.fields_for :languages do |language_form| %>
     <%= render :partial => 'language', :locals => { :f => language_form } %>
   <% end %>
 </div>
-
-
 <p>
   <%= add_child_link 'Add Language', 'language', f %>
 </p>
@@ -27,8 +34,6 @@
     <%= render :partial => 'interest', :locals => { :f => interest_form } %>
   <% end %>
 </div>
-
-
 <p>
 <%= add_child_link 'Add Interest', 'interest', f %>
 </p>
@@ -42,13 +47,13 @@
 <%= add_child_link 'Add Other_Skill', 'other_skill', f %>
 </p>
 
-<div id='degree_course'>
-  <% f.fields_for :degree_courses do |degree_course_form| %>
-    <%= render :partial => 'degree_course', :locals => { :f => degree_course_form } %>
+<div id='experience_children'>
+  <% f.fields_for :experiences do |experience_form| %>
+    <%= render :partial => 'experience', :locals => { :f => experience_form } %>
   <% end %>
 </div>
 <p>
-<%= add_child_link 'Add Degree_Course', 'degree_course', f %>
+<%= add_child_link 'Add experience', 'experience', f %>
 </p>
 
 

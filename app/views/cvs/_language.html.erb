@@ -1,19 +1,20 @@
 <div class="child">
   <p>
     <%= f.label :title %><br />
-    <%= f.text_field :title %>
+    <%= f.select :title, Language::Titles %>
   </p>
+   
+  <p>
+    <%= f.label :level %><br />
+    <%= f.select :level, Language::Levels %>
+  </p>
+  
   <p>
     <%= f.label :description %><br />
     <%= f.text_area :description %>
   </p>
  
-  <p>
-    <%= f.label :level %><br />
-    <%= f.text_field :level %>
-  </p>
-  
-  
+   
   <p>
     <%= f.hidden_field :_destroy, :class => 'delete' %>
     <%= remove_child_link 'remove', f %>

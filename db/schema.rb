@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100421194239) do
+ActiveRecord::Schema.define(:version => 20100423093419) do
 
   create_table "activities", :force => true do |t|
     t.string   "name"
@@ -32,7 +32,7 @@ ActiveRecord::Schema.define(:version => 20100421194239) do
 
   create_table "compagnies", :force => true do |t|
     t.string   "name"
-    t.string   "headquaters"
+    t.string   "headquarters"
     t.integer  "registration_number"
     t.string   "legal_form"
     t.string   "activity"
@@ -63,7 +63,18 @@ ActiveRecord::Schema.define(:version => 20100421194239) do
     t.integer  "civil_status_id"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "status_civil_id"
+  end
+
+  create_table "degree_courses", :force => true do |t|
+    t.integer  "school_id"
+    t.string   "degree_name"
+    t.integer  "domain_id"
+    t.text     "description"
+    t.integer  "cv_id"
+    t.date     "start_on"
+    t.date     "end_on"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "domains", :force => true do |t|
@@ -79,6 +90,12 @@ ActiveRecord::Schema.define(:version => 20100421194239) do
   end
 
   create_table "experiences", :force => true do |t|
+    t.integer  "compagny_id"
+    t.integer  "cv_id"
+    t.string   "jobtitle"
+    t.integer  "job_id"
+    t.string   "duration"
+    t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -90,7 +107,6 @@ ActiveRecord::Schema.define(:version => 20100421194239) do
   end
 
   create_table "interests", :force => true do |t|
-    t.string   "title"
     t.text     "description"
     t.integer  "cv_id"
     t.datetime "created_at"
@@ -127,7 +143,6 @@ ActiveRecord::Schema.define(:version => 20100421194239) do
     t.string   "title"
     t.text     "description"
     t.string   "level"
-    t.string   "location"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "cv_id"
@@ -160,23 +175,10 @@ ActiveRecord::Schema.define(:version => 20100421194239) do
     t.datetime "updated_at"
   end
 
-  create_table "other_infos", :force => true do |t|
-    t.string   "name"
-    t.text     "description"
-    t.integer  "profile_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "other_skills", :force => true do |t|
     t.string   "title"
     t.text     "description"
     t.integer  "cv_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "postal_boxes", :force => true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -190,19 +192,6 @@ ActiveRecord::Schema.define(:version => 20100421194239) do
     t.string   "sex"
     t.datetime "created_at"
     t.datetime "updated_at"
-  end
-
-  create_table "qualifications", :force => true do |t|
-    t.string   "title"
-    t.text     "description"
-    t.string   "institute"
-    t.string   "duration"
-    t.date     "start_on"
-    t.date     "end_on"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.integer  "cv_id"
-    t.string   "category"
   end
 
   create_table "schools", :force => true do |t|

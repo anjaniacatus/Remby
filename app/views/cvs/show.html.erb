@@ -8,6 +8,22 @@
   <%=h @cv.summary %>
 </p>
 
+<div class="civil_status">
+  <%- if @cv.civil_status_id.nil? %>
+    <%= "civil status vide"%>
+  <%- else %>
+     <%= @cv.civil_status.age %>
+  <% end %>
+</div>
+
+<div class="degree_course" > 
+  <%= render  @cv.degree_courses%>
+</div>
+
+<div class="experience" > 
+  <%= render  @cv.experiences%>
+</div>
+
 
 <div class= "languages">
   <%= render @cv.languages%>

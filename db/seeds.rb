@@ -47,15 +47,16 @@ interim = Contract.create :name => "Intérimaire"
 puts "Contract's job created"
 
 puts "Done!!!"
-#creating profile
+#creating civil_status
 params = {
-:firstname => "Rakotobe",
-:lastname => "koto",
-:permalink =>"koto",
-:age => 22,
-:description => "ceci est une description de Rakotobe koto",
-:status => "single",
-:sex => "male"}
-profile = Profile.create(params)
-puts "profile created!!!"
+:name => "Rakotonjanahary",
+:lastname => "Aina Anjary Fenomamy",
+:age => 23,
+:status => "celibataire",
+:sex => "femme"
+:hometown => "Antsirabe"
+:current_city => "Antanarivo"}
+civil_status = CivilStatus.create(params)
+puts "civil status created!!!"
 
+=end
