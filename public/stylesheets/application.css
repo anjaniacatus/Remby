@@ -28,11 +28,16 @@ body {
   width: 75%;
   background-color: #FFF;
 }
-
+#banner{
+  background-color: #FFF;
+  width: 75%;
+  padding: 20px 40px;
+  margin :0 auto;
+}
 #navigation{
   background-color: #FFF;
   width: 25%;
-  margin-top: 10px; 
+  margin-top: 20px; 
 }
 
 #footer{
