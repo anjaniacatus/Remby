@@ -2,7 +2,7 @@ class CvsController < ApplicationController
   # GET /cvs
   # GET /cvs.xml
   def index
-    @cvs = Cv.find(:all)
+     @cvs = Cv.find(:all)
     #@cv_paginates = Cv.search(params[:search], params[:page])
 
 
@@ -42,12 +42,13 @@ class CvsController < ApplicationController
   # POST /cvs
   # POST /cvs.xml
   def create
-    @cv = Cv.new(params[:cv])
+    @civil_status = CivilStatus.find(params[:civil_status_id])
+    @cv = @civil_status.cvs.create!(params[:cv])
 
     respond_to do |format|
       if @cv.save
         flash[:notice] = 'Cv was successfully created.'
-        format.html { redirect_to(@cv) }
+        format.html { redirect_to @civil_status }
         format.xml  { render :xml => @cv, :status => :created, :location => @cv }
       else
         format.html { render :action => "new" }
