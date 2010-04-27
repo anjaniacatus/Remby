@@ -1,11 +1,15 @@
 ActionController::Routing::Routes.draw do |map|
+
+  map.resources :posts do |post|
+     post.resources :comments
+  end
+
   map.resources :experiences
 
   map.resources :degree_courses
 
   map.resources :contact_infos
 
-  map.resources :civil_statuses
   map.resources :civil_statuses do |civil_status|
     civil_status.resources :cvs
   end  
