@@ -1,10 +1,11 @@
 <h1>Listing cvs</h1>
 
 <% @cvs.each do |cv| %>
-  <%=h cv.title %>
-  <%=h cv.summary %>
-  <%= link_to 'Show', cv %> |<%= link_to 'Edit', edit_cv_path(cv) %> |
-  <%= link_to 'Destroy', cv, :confirm => 'Are you sure?', :method => :delete %>
-  </br>
+  <p>
+    <%=h cv.title %>
+    <%=h cv.summary %>
+    <%= link_to 'Show', cv %> |<%= link_to 'Edit', edit_cv_path(cv) %> |
+    <%= link_to 'Destroy', cv, :confirm => 'Are you sure?', :method => :delete %>
+  </p>
 <% end %>
 

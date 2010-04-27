@@ -1,9 +1,7 @@
 <p>
   <b>Title:</b>
   <%=h @cv.title %>
-</p>
 
-<p>
   <b>Summary:</b>
   <%=h @cv.summary %>
 </p>
@@ -14,7 +12,9 @@
   <%- else %>
      <%= @cv.civil_status.family_name %>
      <%= @cv.civil_status.name %>
-     <%= @cv.civil_status.age %> ans
+     <p>
+       <%= @cv.civil_status.age %> ans
+     </p>  
   <% end %>
 </div>
 

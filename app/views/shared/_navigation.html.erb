@@ -1,3 +1,7 @@
+<div id="link home">
+  <%= link_to "home", root_path %>
+</div>
+<div id="link_authenticate">
 <% if current_user %>
   <%= link_to "Edit Account", edit_user_path(:current) %>|
   <%= link_to "logout", logout_path %>
@@ -5,4 +9,5 @@
   <%= link_to "Register", new_user_path %> |
   <%= link_to "Login", login_path %>
 <% end %>
-<%= link_to "civil-status", civil_statuses_path %> | <%= link_to "cvs", cvs_path %> 
+</div>
+  <%= link_to "civil-status", civil_statuses_path %> | <%= link_to "cvs", cvs_path %> 

@@ -3,8 +3,8 @@ class CvsController < ApplicationController
   # GET /cvs.xml
   def index
     if params[:civil_status_id] 
-      @civil_status = CivilStatus.find(:all)
-      @cvs = Cv.find(:all)
+      @civil_status = CivilStatus.find(params[:civil_status_id])
+      @cvs = @civil_status.cvs
     else
       @cvs = Cv.find(:all)
     #@cv_paginates = Cv.search(params[:search], params[:page])
