@@ -6,5 +6,5 @@ class CivilStatus < ActiveRecord::Base
   Genders = ["","femme", "homme"]
   Statuses = ["","marié(e)","celibataire"]
   accepts_nested_attributes_for :contact_infos, :allow_destroy => true
-
+   accepts_nested_attributes_for :cvs, :allow_destroy => true
 end

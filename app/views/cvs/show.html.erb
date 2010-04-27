@@ -12,7 +12,9 @@
   <%- if @cv.civil_status_id.nil? %>
     <%= "civil status vide"%>
   <%- else %>
-     <%= @cv.civil_status.age %>
+     <%= @cv.civil_status.family_name %>
+     <%= @cv.civil_status.name %>
+     <%= @cv.civil_status.age %> ans
   <% end %>
 </div>
 

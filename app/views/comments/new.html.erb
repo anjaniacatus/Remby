@@ -1,6 +1,5 @@
 <h1>New comment</h1>
-
-<% form_for(@comment) do |f| %>
+<%form_for ([@comment.post, @comment], :html => { :multipart => true }) do |f| %>
   <%= f.error_messages %>
 
   <p>
@@ -11,5 +10,3 @@
     <%= f.submit 'Create' %>
   </p>
 <% end %>
-
-<%= link_to 'Back', comments_path %>

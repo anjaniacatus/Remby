@@ -1,9 +1,9 @@
 ActionController::Routing::Routes.draw do |map|
-
   map.resources :posts do |post|
      post.resources :comments
   end
-
+  
+  map.resources :cvs
   map.resources :experiences
 
   map.resources :degree_courses
@@ -17,10 +17,6 @@ ActionController::Routing::Routes.draw do |map|
 
   map.resources :interests
 
-
-  map.resources :cvs
-
-
   map.resources :jobs
 
   map.resources :offerings
@@ -28,9 +24,6 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :notes
 
   map.resources :societies, :has_many => [ :notes, :offerings, :jobs ], :dependent => :destroy
-
-  map.resources :other_infos
-
 
   map.resources :domains
 
@@ -45,8 +38,6 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :user_sessions
   map.resources :users
   map.resources :contact_infos, :only => [:new, :create, :destroy]
-
-  map.resources :civil_statuses
 
   map.resources :job_sheets
 

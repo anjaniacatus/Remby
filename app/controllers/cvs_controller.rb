@@ -2,14 +2,17 @@ class CvsController < ApplicationController
   # GET /cvs
   # GET /cvs.xml
   def index
-     @cvs = Cv.find(:all)
+    if params[:civil_status_id] 
+      @civil_status = CivilStatus.find(:all)
+      @cvs = Cv.find(:all)
+    else
+      @cvs = Cv.find(:all)
     #@cv_paginates = Cv.search(params[:search], params[:page])
-
-
-    respond_to do |format|
+    end
+     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @cvs }
-    end
+    end   
   end
 
   # GET /cvs/1
@@ -26,11 +29,12 @@ class CvsController < ApplicationController
   # GET /cvs/new
   # GET /cvs/new.xml
   def new
-    @cv = Cv.new
+    @civil_status = CivilStatus.find(params[:civil_status_id])
+    @cv = @civil_status.cvs.new
 
     respond_to do |format|
       format.html # new.html.erb
-      format.xml  { render :xml => @cv }
+      format.xml  { render :xml => @civil_status }
     end
   end
 
