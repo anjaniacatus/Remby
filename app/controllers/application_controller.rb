@@ -7,7 +7,7 @@ class ApplicationController < ActionController::Base
 
   # Scrub sensitive parameters from your log
   # filter_parameter_logging :password
- helper_method :current_user
+ helper_method :current_user, :is_admin?
  private
   def current_user_session
     return @current_user_session if defined?(@current_user_session) 
@@ -22,5 +22,8 @@ class ApplicationController < ActionController::Base
   def context_object
     return @context_object if defined?(@context_object)
     @context_objext = eval("@#{self.controller_name}") || eval("@#{self.controller_name.singularize}")
+  end
+  
+  def is_admin?
   end
 end

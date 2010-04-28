@@ -3,7 +3,7 @@ class CvsController < ApplicationController
   # GET /cvs.xml
   def index
     if params[:civil_status_id] 
-      @civil_status = CivilStatus.find(params[:civil_status_id])
+      @civil_status = CivilStatus.find(params[:civil_status_id])    
       @cvs = @civil_status.cvs
     else
       @cvs = Cv.find(:all)
@@ -29,13 +29,17 @@ class CvsController < ApplicationController
   # GET /cvs/new
   # GET /cvs/new.xml
   def new
-    @civil_status = CivilStatus.find(params[:civil_status_id])
-    @cv = @civil_status.cvs.new
-
-    respond_to do |format|
+    if params[:civil_status_id]
+      @civil_status = CivilStatus.find(params[:civil_status_id])
+      @cv = @civil_status.cvs.new
+      respond_to do |format|
       format.html # new.html.erb
       format.xml  { render :xml => @civil_status }
-    end
+      end
+    else
+      flash[:notice] = 'impossible sans avoir créer un profile'
+      redirect_to root_path 
+     end
   end
 
   # GET /cvs/1/edit

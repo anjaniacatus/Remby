@@ -1,5 +1,6 @@
-<h1>Editing civil_status</h1>
-
+<div id="title">
+  <%= @title = "Edit civil status " %>
+</div>
 <% form_for(@civil_status) do |f| %>
   <%= render :partial => 'form', :locals => { :f => f } %>
   <p>

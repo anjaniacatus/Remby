@@ -9,7 +9,12 @@ class ContactInfo < ActiveRecord::Base
     [ :phone_number, nil, nil ],
     [ :street_address, nil, true ]
   ].freeze
-
+  
+  def value_test
+    ValueFormats.each do |number, value|
+      #{value}
+    end  
+  end
   named_scope :links, :conditions => { :value_format => 2 }, :order => "updated_at DESC", :limit => 10
 
   def value_format_sym

@@ -1,19 +1,12 @@
 # Methods added to this helper will be available to all templates in the application.
 module ApplicationHelper
-  def title(title = nil, rdfa_options = nil)
-    if is_editor? and context_object
-      @title = "#{t(controller.action_name.to_sym)}/#{controller.controller_name.singularize.camelcase.constantize.human_name}"
-      @title << "&nbsp;: #{context_object.name}" if context_object.respond_to?(:new_record?) and !context_object.new_record?
-      @title
+  def title
+    base_title = "Remby: online CV and jobs"
+    if @title.nil?
+      base_title
     else
-      @rdfa_options = rdfa_options
-      @title ||= ""
-      if title
-        @title << title
-      else
-        @title
-      end
-    end
+      " #{base_title} | #{ @title }"
+    end    
   end
     def keywords(content = nil)
     if content

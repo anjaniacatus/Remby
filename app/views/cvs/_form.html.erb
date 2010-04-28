@@ -19,7 +19,6 @@
   <%= add_child_link 'Add Degree_course', 'degree_course', f %>
 </p>
 
-
 <div id='language_children'>
   <% f.fields_for :languages do |language_form| %>
     <%= render :partial => 'language', :locals => { :f => language_form } %>
