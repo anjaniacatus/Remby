@@ -1,4 +1,4 @@
-<%- @title =  "edit" + @cv.title %>
+<% title   "Edit " + @cv.title %>
 <% form_for(@cv) do |f| %>
   <%= render :partial => 'form', :locals => { :f => f } %>
   <p>

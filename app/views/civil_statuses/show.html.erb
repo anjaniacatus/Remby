@@ -1,7 +1,5 @@
-<div id="title">
-  <%= @title = "Civil status of " + @civil_status.name %>
-</div>
-<p>
+  <%- title  @civil_status.name %>
+<p
   <b>Family name:</b>
   <%=h @civil_status.family_name %>
 </p>
