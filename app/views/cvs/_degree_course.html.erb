@@ -7,7 +7,13 @@
     <%= f.label :degree_name %><br />
     <%= f.select :degree_name, DegreeCourse::Degree_Names %>
   </p>
-  <p>
+  
+   <p>
+     <%= f.label :field %><br />
+     <%= text_field_with_auto_complete :degree_course, :field, {}, { :method => :get } %>
+   </p> 
+ 
+    <p>
     <%= f.label :description %><br />
     <%= f.text_area :description %>
   </p>
@@ -26,7 +32,6 @@
     <%= f.hidden_field :_destroy, :class => 'delete' %>
     <%= remove_child_link 'remove', f %>
   </p>
-
  </div>
 
 

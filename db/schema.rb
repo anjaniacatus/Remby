@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100429064818) do
+ActiveRecord::Schema.define(:version => 20100428153322) do
 
   create_table "activities", :force => true do |t|
     t.string   "name"
@@ -28,13 +28,6 @@ ActiveRecord::Schema.define(:version => 20100429064818) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "status"
-  end
-
-  create_table "comments", :force => true do |t|
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.integer  "post_id"
-    t.text     "body"
   end
 
   create_table "compagnies", :force => true do |t|
@@ -75,7 +68,7 @@ ActiveRecord::Schema.define(:version => 20100429064818) do
   create_table "degree_courses", :force => true do |t|
     t.integer  "school_id"
     t.string   "degree_name"
-    t.integer  "domain_id"
+    t.string   "field"
     t.text     "description"
     t.integer  "cv_id"
     t.date     "start_on"
@@ -102,13 +95,6 @@ ActiveRecord::Schema.define(:version => 20100429064818) do
     t.string   "jobtitle"
     t.integer  "job_id"
     t.string   "duration"
-    t.text     "description"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "fields", :force => true do |t|
-    t.string   "field_name"
     t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -193,24 +179,6 @@ ActiveRecord::Schema.define(:version => 20100429064818) do
     t.string   "title"
     t.text     "description"
     t.integer  "cv_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "posts", :force => true do |t|
-    t.string   "title"
-    t.text     "description"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "profiles", :force => true do |t|
-    t.string   "firstname"
-    t.string   "lastname"
-    t.integer  "age"
-    t.text     "description"
-    t.string   "status"
-    t.string   "sex"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
