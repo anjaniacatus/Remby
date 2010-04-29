@@ -30,13 +30,6 @@ ActiveRecord::Schema.define(:version => 20100428153322) do
     t.string   "status"
   end
 
-  create_table "comments", :force => true do |t|
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.integer  "post_id"
-    t.text     "body"
-  end
-
   create_table "compagnies", :force => true do |t|
     t.string   "name"
     t.string   "headquarters"
@@ -72,7 +65,7 @@ ActiveRecord::Schema.define(:version => 20100428153322) do
   create_table "degree_courses", :force => true do |t|
     t.integer  "school_id"
     t.string   "degree_name"
-    t.integer  "domain_id"
+    t.string   "field"
     t.text     "description"
     t.integer  "cv_id"
     t.date     "start_on"
@@ -208,7 +201,6 @@ ActiveRecord::Schema.define(:version => 20100428153322) do
     t.datetime "updated_at"
   end
 
-  
   create_table "roles", :force => true do |t|
     t.string   "name"
     t.datetime "created_at"

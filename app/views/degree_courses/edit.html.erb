@@ -2,8 +2,27 @@
 
 <% form_for(@degree_course) do |f| %>
   <%= f.error_messages %>
-  <%= render :partial => 'form', :locals => {:f => f}%>
-   <p>
+  <p>
+    <%= f.label :degree_name %><br />
+    <%= f.text_field :degree_name %>
+  </p>
+  <p>
+    <%= f.label :field %><br />
+    <%= text_field_with_auto_complete :degree_course, :field, {}, { :method => :get } %>
+  </p>
+  <p>
+    <%= f.label :description %><br />
+    <%= f.text_area :description %>
+  </p>
+  <p>
+    <%= f.label :start_on %><br />
+    <%= f.date_select :start_on %>
+  </p>
+  <p>
+    <%= f.label :end_on %><br />
+    <%= f.date_select :end_on %>
+  </p>
+  <p>
     <%= f.submit 'Update' %>
   </p>
 <% end %>
