@@ -1,9 +1,5 @@
 <% title @cv.title %>
 <p>
-  <b>Title:</b>
-  <%=h @cv.title %>
-
-  <b>Summary:</b>
   <%=h @cv.summary %>
 </p>
 
@@ -39,7 +35,6 @@
 <div class= "other_skill">
   <%= render @cv.other_skills%>
 </div>
-
 
 <%= link_to 'Edit', edit_cv_path(@cv) %> |
 <%= link_to 'Back', cvs_path %>

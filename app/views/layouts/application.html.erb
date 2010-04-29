@@ -19,7 +19,8 @@
     
     <div id = "side">
       <p style="color: green"><%= flash[:notice] %></p>
-       <%= yield %>
+      <%= yield :title %>
+      <%= yield %>
     </div>
   </div>
     
@@ -29,7 +30,5 @@
       &copy; 2009 remby.com &mdash; engineered by <a href="http://jojopil.com">jojopil! Innovations.</a>
     </div>
   </div>
-
-
 </body>
 </html>

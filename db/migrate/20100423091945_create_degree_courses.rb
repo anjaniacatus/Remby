@@ -3,7 +3,7 @@ class CreateDegreeCourses < ActiveRecord::Migration
     create_table :degree_courses do |t|
       t.integer :school_id
       t.string :degree_name
-      t.integer :domain_id
+      t.integer :field_id
       t.text :description
       t.integer :cv_id
       t.date :start_on
