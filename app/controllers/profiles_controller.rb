@@ -25,11 +25,12 @@ class ProfilesController < ApplicationController
   # GET /profiles/new.xml
   def new
     @profile = Profile.new
-
-    respond_to do |format|
-      format.html # new.html.erb
-      format.xml  { render :xml => @profile }
-    end
+    @profile.education_informations.build
+    @profile.experiences.build
+    @profile.skills.build
+    @profile.other_infos.build
+    @profile.contact_informations.build
+    @profile.languages.build
   end
 
   # GET /profiles/1/edit
@@ -41,16 +42,18 @@ class ProfilesController < ApplicationController
   # POST /profiles.xml
   def create
     @profile = Profile.new(params[:profile]) 
-    respond_to do |format|
-      if @profile.save
+    
+    respond_to do |format| 
+     if @profile.save
         flash[:notice] = 'Profile was successfully created.'
-        format.html { redirect_to(@profile) }
-        format.xml  { render :xml => @profile, :status => :created, :location => @profile }
+         format.html {redirect_to @profile}
+         format.xml  { render :xml => @profile, :status => :created, :location => @profile }
+
       else
-        format.html { render :action => "new" }
-        format.xml  { render :xml => @profile.errors, :status => :unprocessable_entity }
+       format.html {render :action => "new"} 
+       format.xml{ render :xml => @profile, :status => :unprocessable_profile}
       end
-    end
+     end
 
   end
 
@@ -58,15 +61,12 @@ class ProfilesController < ApplicationController
   # PUT /profiles/1.xml
   def update
     @profile = Profile.find(params[:id])
-    respond_to do |format|
-      if @profile.update_attributes(params[:entity])
-        flash[:notice] = 'Profile was successfully updated.'
-        format.html { redirect_to(@profile) }
-        format.xml  { head :ok }
+    @profile.update_attributes(params[:profile])
+     if @profile.save   
+       flash[:notice] = 'Profile was successfully updated.'
+        redirect_to @profile 
       else
-        format.html { render :action => "edit" }
-        format.xml  { render :xml => @profile.errors, :status => :unprocessable_entity }
-      end
+         render :action => "edit" 
     end
   end
 
@@ -75,10 +75,7 @@ class ProfilesController < ApplicationController
   def destroy
     @profile = Profile.find(params[:id])
     @profile.destroy
-
-    respond_to do |format|
-      format.html { redirect_to(profiles_url) }
-      format.xml  { head :ok }
-    end
+    flash[:notice] = 'Profile was successfully deleted.'
+    redirect_to profiles_url
   end
 end

@@ -1,29 +1,17 @@
 ActionController::Routing::Routes.draw do |map|
-  map.resources :posts do |post|
-     post.resources :comments
-  end
   
-  map.resources :cvs
   map.resources :experiences
-
+  map.resources :languages
+  map.resources :jobs
   map.resources :degree_courses
-
-  map.resources :contact_infos
-
   map.resources :civil_statuses do |civil_status|
     civil_status.resources :cvs
   end  
-  map.resources :other_skills
-
   map.resources :interests
-
   map.resources :jobs
-
   map.resources :offerings
 
   map.resources :notes
-
-  map.resources :societies, :has_many => [ :notes, :offerings, :jobs ], :dependent => :destroy
 
   map.resources :domains
 
@@ -31,7 +19,6 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :localisations
   map.resources :contracts
   map.resources :functions
-  map.resources :activities
 
   map.login "login", :controller => "user_sessions", :action => "new"
   map.logout "logout", :controller => "user_sessions", :action => "destroy"
@@ -78,10 +65,6 @@ ActionController::Routing::Routes.draw do |map|
    map.root :controller => "cvs"
 
   # See how all your routes lay out with "rake routes"
-
-  # Install the default routes as the lowest priority.
-  # Note: These default routes make all actions in every controller accessible via GET requests. You should
-  # consider removing or commenting them out if you're using named routes and resources.
   map.connect ':controller/:action/:id'
   map.connect ':controller/:action/:id.:format'
 end

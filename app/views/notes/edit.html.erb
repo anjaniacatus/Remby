@@ -2,7 +2,6 @@
 
 <% form_for([@note.society, @note]) do |f| %>
   <%= f.error_messages %>
-
   <p>
     <%= f.label :title %><br />
     <%= f.text_field :title %>
@@ -12,8 +11,9 @@
     <%= f.text_area :description %>
   </p>
   <p>
-    <%= f.submit 'Update' %>
+    <%= f.submit 'Create' %>
   </p>
+<% end %>
 
 <%= link_to 'Show', @note %> |
 <%= link_to 'Back', notes_path %>

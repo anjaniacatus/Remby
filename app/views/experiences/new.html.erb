@@ -1,3 +1,4 @@
+<<<<<<< HEAD:app/views/experiences/new.html.erb
 <h1>New experience</h1>
 
 <% form_for(@experience) do |f| %>
@@ -22,6 +23,16 @@
   <p>
     <%= f.submit 'Create' %>
   </p>
+=======
+<h1><%= @experience.office_name  %> </h1>
+<% form_for ([@experience.profile,@experience]) do |f| %>
+  <%= f.error_messages %>
+  <%= render f%>
+   <p>
+    <%= f.submit 'Create' %>
+  </p>
+
+>>>>>>> 384249c41a83507830f7fd1993df3c6be450e0da:app/views/experiences/new.html.erb
 <% end %>
 
 <%= link_to 'Back', experiences_path %>

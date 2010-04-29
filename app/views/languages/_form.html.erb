@@ -1,18 +1,19 @@
+<<<<<<< HEAD:app/views/languages/_form.html.erb
 <p>
   <%= form.label :title %><br />
   <%= form.text_field :title %>
 </p>
-<p>
-  <%= form.label :description %><br />
-  <%= form.text_field :description %>
-</p>
-<p>
-  <%= form.label :location %><br />
-  <%= form.text_field :location %>
-</p>
-<p>
-  <%= form.label :duration %><br />
-  <%= form.text_field :duration %>
-</p>
 
-  
+  <p>
+    <%= form.label :level %><br />
+     <%= options = [["level  .... ", ""]] + Language::LEVEL 
+        select("language", "level", options) %> 
+    </p>
+   
+  <p>
+    <%= form.label :comment %><br />
+    <%= form.text_field :comment%>
+ </p>
+
+ 
+

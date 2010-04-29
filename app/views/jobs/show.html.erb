@@ -1,48 +1,38 @@
-<p>
-  <b>Ref:</b>
-  <%=h @job.ref %>
-</p>
+<div class ="main">
+  <p align = "center">
+    <b>Ref:</b><%=h @job.ref %>
+  </p>
+  <p align ="center">
+    <%= @job.society.name %>&nbsp;recrute un(e)&nbsp;<%=  @job.function.name %>, un poste basé à&nbsp;<%= @job.localisation.name %>
+  </p>
+  <% if @job.contract == "" %>
+    <p>Le type de contrat sera à déterminer lors de l'entretien</p>
+  <% else %>
+    <p>
+      <b>Contract:</b>
+      <%= @job.contract.name %>
+    </p>
+  <% end %>
+  <p align="justify">
+    <strong><u>Description du poste:</u></strong><br />
+    <%= @job.description %>
+  </p>
+  <p align="justify">
+    <strong><u>Attribution:</u></strong><br />
+    <%= @job.attribution %>
+  </p>
+  <p align="justify">
+    <strong><u>Profil requis:</u></strong><br />
+    <%= @job.profile %>
+  </p>
+  <p align="justify">
+    <b>Les dossiers sont à addresser à:</b><br/>
+    <%= @job.folder %>
+  </p>
+  <p align="center">
+    Tous les dossiers devront être reçus avant le:&nbsp;<%= @job.dead_line %>
+  </p>
+</div>
 
-<p>
-  <b>Description:</b>
-  <%=h @job.description %>
-</p>
-
-<p>
-  <b>Attribution:</b>
-  <%=h @job.attribution %>
-</p>
-
-<p>
-  <b>Profile:</b>
-  <%=h @job.profile %>
-</p>
-
-<p>
-  <b>Folder:</b>
-  <%=h @job.folder %>
-</p>
-
-<p>
-  <b>Dead line:</b>
-  <%=h @job.dead_line %>
-</p>
-
-<p>
-  <b>Society:</b>
-  <%=h @job.society %>
-</p>
-
-<p>
-  <b>Function:</b>
-  <%=h @job.function %>
-</p>
-
-<p>
-  <b>Localisation:</b>
-  <%=h @job.localisation %>
-</p>
-
-
-<%= link_to 'Edit', edit_job_path(@job) %> |
-<%= link_to 'Back', jobs_path %>
+<%= link_to 'Edit', edit_society_job_path(@job) %> |
+<%= link_to 'Back', society_path %>

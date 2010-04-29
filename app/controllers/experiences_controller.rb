@@ -2,8 +2,10 @@ class ExperiencesController < ApplicationController
   # GET /experiences
   # GET /experiences.xml
   def index
-    @experiences = Experience.all
-
+   if params[:profile_id]
+    @profile = Profile.find(params[profile_id])
+    @experiences = @profile.experiences
+   end
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @experiences }
@@ -14,7 +16,7 @@ class ExperiencesController < ApplicationController
   # GET /experiences/1.xml
   def show
     @experience = Experience.find(params[:id])
-
+ 
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @experience }
@@ -24,28 +26,35 @@ class ExperiencesController < ApplicationController
   # GET /experiences/new
   # GET /experiences/new.xml
   def new
-    @experience = Experience.new
-
-    respond_to do |format|
-      format.html # new.html.erb
-      format.xml  { render :xml => @experience }
-    end
+   if params[:profile_id]
+    @profile = Profile.find(params[:profile_id])
+    @experience = @profile.experiences.new
+   else
+      flash[:error] = 
+      redirect_to profiles_path
+   end
   end
 
   # GET /experiences/1/edit
   def edit
-    @experience = Experience.find(params[:id])
-  end
+     if params[:profile_id]
+       @experience = Experience.find(params[:id], :include => :profile)
+      @profile = @experience.profile
+     else
+       redirect_to experiences_path    
+     end  
+end
 
   # POST /experiences
   # POST /experiences.xml
   def create
-    @experience = Experience.new(params[:experience])
+    @profile = Profile.find(params[:profile_id])
+    @experience = @profile.experiences.new(params[:experience])
 
     respond_to do |format|
       if @experience.save
         flash[:notice] = 'Experience was successfully created.'
-        format.html { redirect_to(@experience) }
+        format.html { redirect_to(@profile) }
         format.xml  { render :xml => @experience, :status => :created, :location => @experience }
       else
         format.html { render :action => "new" }
@@ -74,11 +83,12 @@ class ExperiencesController < ApplicationController
   # DELETE /experiences/1
   # DELETE /experiences/1.xml
   def destroy
-    @experience = Experience.find(params[:id])
+    @experience = Experience.find(params[:id], :include => :profile)
+    @profile = @experience.profile
     @experience.destroy
 
     respond_to do |format|
-      format.html { redirect_to(experiences_url) }
+      format.html { redirect_to(@profile) }
       format.xml  { head :ok }
     end
   end

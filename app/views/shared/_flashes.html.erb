@@ -1,10 +1,9 @@
-/[if lte IE 7]
-<p> <%= t(:something_wrong_may_occur) %> </p>
-  <%- if !flash.empty? and (is_editor? or [ "search", "messages" ].include?(controller.controller_name)) -%>
+<%- if !flash.empty? and (current_user or [ "search", "messages" ].include?(controller.controller_name)) -%>
   <%- [:notice, :error].each do |key| -%>
-  <%- if flash[key] -%>
-    <div id="<%=  #{key.to_s}_flash %>" class="flash">
-  <% end %>  
-  <%= flash[key] %>
-<% end %>
-     
+    <%- if flash[key] -%>
+      <div id="<%= key.to_s -%>_flash" class="flash">
+        <%= flash[key] -%>
+      </div>
+    <%- end -%>
+  <%- end -%>
+<%- end -%>

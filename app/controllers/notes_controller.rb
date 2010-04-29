@@ -16,10 +16,8 @@ class NotesController < ApplicationController
   # GET /notes/1
   # GET /notes/1.xml
   def show
-    if params[:society_id]
-       @society = Society.find(params[:society_id])
-       @note = @society.notes.find(params[:id])
-    end
+    @note = Note.find(params[:id])
+       
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @note }

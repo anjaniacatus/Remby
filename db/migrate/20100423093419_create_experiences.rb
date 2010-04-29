@@ -5,7 +5,6 @@ class CreateExperiences < ActiveRecord::Migration
       t.integer :cv_id
       t.string :jobtitle
       t.integer :job_id
-      t.string :duration
       t.text :description
 
       t.timestamps

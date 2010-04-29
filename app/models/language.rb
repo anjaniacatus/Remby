@@ -5,3 +5,4 @@ class Language < ActiveRecord::Base
   Titles = ["anglais", "malgache", "allemand","espagnol", "italien", "japonais", "chinois", "français", "mandarin"]
 end
 
+>>>>>>> 384249c41a83507830f7fd1993df3c6be450e0da:app/models/language.rb

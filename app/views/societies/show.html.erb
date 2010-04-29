@@ -26,7 +26,14 @@
 <%= link_to 'Edit', edit_society_path(@society) %> |
 <%= link_to 'Back', societies_path %>
 
+<div class="contact">
+  <% content_tag :div, :id => "contact_informations" do %>
+    <%= render @society.contact_informations %>
+  <% end unless @society.contact_informations.empty? %>
+</div>
+
 <div class="notes">
+  <h2>Toutes les publications</h2>
   <% content_tag :div, :class => "notes" do %>
     <%= render @society.notes %>
   <% end unless @society.notes.empty? %>
@@ -34,6 +41,7 @@
 </div>
 
 <div class="offerings">
+  <h2>Tous les appels d'offres</h2>
   <% content_tag :div, :class => "offerings" do %>
     <%= render @society.offerings %>
   <% end unless @society.offerings.empty? %>
@@ -41,6 +49,7 @@
 </div>
 
 <div class="jobs">
+  <h2>Tous les offres d'emploi</h2>
   <% content_tag :div, :class => "jobs" do %>
     <%= render @society.jobs %>
   <% end unless @society.jobs.empty? %>

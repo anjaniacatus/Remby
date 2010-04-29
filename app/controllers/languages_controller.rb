@@ -35,7 +35,11 @@ class LanguagesController < ApplicationController
   # GET /languages/1/edit
   def edit
     @language = Language.find(params[:id])
-  end
+    flash[:error] = t(:cannot_find_, language, :default => "Misy diso")
+    @language = Language.find(params[:id])
+    redirect_to languages_path
+ 
+ end
 
   # POST /languages
   # POST /languages.xml
@@ -52,6 +56,7 @@ class LanguagesController < ApplicationController
         format.xml  { render :xml => @language.errors, :status => :unprocessable_entity }
       end
     end
+
   end
 
   # PUT /languages/1
@@ -79,6 +84,7 @@ class LanguagesController < ApplicationController
 
     respond_to do |format|
       format.html { redirect_to(languages_url) }
+      @language.destroy
       format.xml  { head :ok }
     end
   end

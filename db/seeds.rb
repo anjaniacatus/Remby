@@ -17,7 +17,7 @@ params = {
 }
 user = User.create!(params)
 puts "Account created"
-
+=end
 puts "Creating localisation's job"
 antananarivo = Localisation.create :name => "Antananarivo"
 antsirabe = Localisation.create :name => "Antsirabe"
@@ -45,7 +45,6 @@ stage_1 = Contract.create :name => "Stage de 3 mois"
 formation = Contract.create :name => "Formation en Entreprise"
 interim = Contract.create :name => "Intérimaire"
 puts "Contract's job created"
-
 puts "Done!!!"
 #creating civil_status
 params = {
@@ -58,5 +57,5 @@ params = {
 :current_city => "Antanarivo"}
 civil_status = CivilStatus.create(params)
 puts "civil status created!!!"
-
 =end
+

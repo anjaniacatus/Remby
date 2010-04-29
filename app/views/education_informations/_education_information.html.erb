@@ -1,9 +1,11 @@
 <% content_tag :div, :class => "education_information" do %>
   <%= education_information.speciality %><br />
-  <%= education_information.details %><br />
-  <%= education_information.started_on_year %><br />
+  <br />
   <%= education_information.study_duration %><br />
   <%= education_information.graduation %><br />
+  <%= education_information.details %><br />
+  <%= education_information.started_on_year %>
   <%= education_information.comment %><br />
+  <%= link_to 'Delete', education_information, :confirm => 'Are you sure?', :method => :delete %>
 <% end %>
 

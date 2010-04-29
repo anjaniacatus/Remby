@@ -3,6 +3,8 @@ class Society < ActiveRecord::Base
   has_many :notes
   has_many :offerings
   has_many :jobs
+  has_many :contact_informations, :as => :contactable, :dependent => :destroy
+  accepts_nested_attributes_for :contact_informations, :allow_destroy => true, :reject_if => Proc.new { |attributes| attributes['value'].blank? }
   named_scope :ordered, :order => "name ASC"
 
   Categories = { "S.A" => 1, "S.A.R.L" => 2, "S.A.R.L.U." => 3, "S.U." => 4, "Autres" => 5 }

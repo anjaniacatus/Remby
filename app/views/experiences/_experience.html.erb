@@ -1,3 +1,4 @@
+<<<<<<< HEAD:app/views/experiences/_experience.html.erb
 <div class"experience">
   
   <%= experience.jobtitle %>
@@ -6,3 +7,14 @@
   <%= experience.duration %>
 
 </div>
+=======
+<% content_tag div, :class => "experience" do %>
+   <%= experience.begin_at %><br />
+  <%= experience.office_name %><br />
+  <%= experience.description %><br />
+  <%= experience.society_name %><br />
+  <%= experience.period %><br />
+  <%= link_to 'Delete',experience , :confirm => 'Are you sure?', :method => :delete %>
+ <% end %>
+
+>>>>>>> 384249c41a83507830f7fd1993df3c6be450e0da:app/views/experiences/_experience.html.erb

@@ -12,8 +12,12 @@
     <td><%=h language.title %></td>
     <td><%=h language.description %></td>
     <td><%=h language.level %></td>
+    <td><%= link_to 'Show', language %></td>
+    <td><%= link_to 'Edit', edit_language_path(language) %></td>
+    <td><%= link_to 'Destroy', language, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
+<%= link_to 'New language', new_language_path %>

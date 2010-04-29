@@ -1,4 +1,5 @@
-  <p>
+
+<p>
     <%= form.label :firstname %><br />
     <%= form.text_field :firstname %>
   </p>
@@ -12,7 +13,7 @@
         select("profile", "age", options) %>
     </p>
   <p>
-    <%= form.label :description %><br />
+    <%= form .label :description %><br />
     <%= form.text_area :description %>
   </p>
   <p>
@@ -26,9 +27,10 @@
     <%= options = [["you are a ...", ""]] + Profile::SEX 
         select("profile", "sex", options) %>
   </p>
-  
-  <%= nested_fields_for :education_informations, form %>
-  <%= nested_fields_for :experiences, form %>
-  <%= nested_fields_for :skills, form %>
-  <%= nested_fields_for :other_infos, form %>
- 
+<%= nested_fields_for :education_informations, form %>
+<%= nested_fields_for :experiences, form %>
+<%= nested_fields_for :skills, form %>
+<%= nested_fields_for :other_infos, form %>
+<%= nested_fields_for :contact_informations, form %>
+<%= nested_fields_for :languages, form %>
+

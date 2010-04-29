@@ -10,6 +10,7 @@ class CreateJobs < ActiveRecord::Migration
       t.references :society
       t.references :function
       t.references :localisation
+      t.references :contract
 
       t.timestamps
     end
