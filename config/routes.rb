@@ -1,33 +1,30 @@
 ActionController::Routing::Routes.draw do |map|
   
+  map.resources :cvs
   map.resources :experiences
-  map.resources :languages
-  map.resources :jobs
   map.resources :degree_courses
+
+  map.resources :contact_infos
+
   map.resources :civil_statuses do |civil_status|
     civil_status.resources :cvs
   end  
+  map.resources :other_skills
   map.resources :interests
-  map.resources :jobs
   map.resources :offerings
-
   map.resources :notes
-
   map.resources :domains
-
-  map.resources :schools
   map.resources :localisations
   map.resources :contracts
   map.resources :functions
+
 
   map.login "login", :controller => "user_sessions", :action => "new"
   map.logout "logout", :controller => "user_sessions", :action => "destroy"
   map.resources :user_sessions
   map.resources :users
   map.resources :contact_infos, :only => [:new, :create, :destroy]
-
   map.resources :job_sheets
-
   map.resources :compagnies
 
   # The priority is based upon order of creation: first created -> highest priority.
@@ -65,6 +62,7 @@ ActionController::Routing::Routes.draw do |map|
    map.root :controller => "cvs"
 
   # See how all your routes lay out with "rake routes"
+
   map.connect ':controller/:action/:id'
   map.connect ':controller/:action/:id.:format'
 end
