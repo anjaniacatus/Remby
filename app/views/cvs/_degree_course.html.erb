@@ -1,37 +1,26 @@
-<div class='child'>
+<div class="child">
   <p>
-    <%= f.label :school_id %><br />
-    <%= f.text_field :school_id %>
+    DegreeCourse <%= f.label :degree_name %><br />
+    <%= f.text_field :degree_name %>
   </p>
   <p>
-    <%= f.label :degree_name %><br />
-    <%= f.select :degree_name, DegreeCourse::Degree_Names %>
+    DegreeCourse <%= f.label :field %><br />
+    <%= text_field_with_auto_complete :field, {}, {:method => :get, :skip_style => false} %>
   </p>
-  
-   <p>
-     <%= f.label :field %><br />
-     <%= text_field_with_auto_complete :degree_course, :field, {}, { :method => :get } %>
-   </p> 
- 
-    <p>
-    <%= f.label :description %><br />
+  <p>
+    DegreeCourse <%= f.label :description %><br />
     <%= f.text_area :description %>
   </p>
-  
   <p>
-    <%= f.label :start_on %><br />
+    DegreeCourse <%= f.label :start_on %><br />
     <%= f.date_select :start_on %>
   </p>
-  
   <p>
-    <%= f.label :end_on %><br />
+    DegreeCourse <%= f.label :end_on %><br />
     <%= f.date_select :end_on %>
   </p>
- 
   <p>
-    <%= f.hidden_field :_destroy, :class => 'delete' %>
+    <%= f.hidden_field :_delete, :class => 'delete' %>
     <%= remove_child_link 'remove', f %>
   </p>
- </div>
-
-
+</div>

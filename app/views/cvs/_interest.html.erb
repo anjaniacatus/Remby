@@ -1,12 +1,10 @@
 <div class="child">
   <p>
-    <%= f.label :description %><br />
+    Interest <%= f.label :description %><br />
     <%= f.text_area :description %>
   </p>
-
   <p>
-    <%= f.hidden_field :_destroy, :class => 'delete' %>
+    <%= f.hidden_field :_delete, :class => 'delete' %>
     <%= remove_child_link 'remove', f %>
   </p>
-</p>
 </div>

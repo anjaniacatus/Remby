@@ -9,13 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100428153322) do
-
-  create_table "activities", :force => true do |t|
-    t.string   "name"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
+ActiveRecord::Schema.define(:version => 20100503044204) do
 
   create_table "civil_statuses", :force => true do |t|
     t.string   "family_name"
@@ -47,7 +41,10 @@ ActiveRecord::Schema.define(:version => 20100428153322) do
     t.text     "description"
     t.string   "contactable_type"
     t.integer  "contactable_id"
- 
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "contracts", :force => true do |t|
     t.string   "name"
     t.datetime "created_at"
@@ -97,13 +94,20 @@ ActiveRecord::Schema.define(:version => 20100428153322) do
     t.datetime "updated_at"
   end
 
+  create_table "education_infos", :force => true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "experiences", :force => true do |t|
     t.integer  "compagny_id"
     t.integer  "cv_id"
     t.string   "jobtitle"
+    t.integer  "job_id"
     t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "duration"
   end
 
   create_table "functions", :force => true do |t|
@@ -146,7 +150,6 @@ ActiveRecord::Schema.define(:version => 20100428153322) do
     t.datetime "updated_at"
   end
 
-
   create_table "languages", :force => true do |t|
     t.string   "title"
     t.text     "description"
@@ -183,20 +186,19 @@ ActiveRecord::Schema.define(:version => 20100428153322) do
     t.datetime "updated_at"
   end
 
-  create_table "other_skills", :force => true do |t|
-    t.string   "title"
-    t.text     "description"
-    t.integer  "cv_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "posts", :force => true do |t|
-    t.string   "title"
   create_table "other_infos", :force => true do |t|
     t.string   "ref"
     t.string   "name"
     t.text     "description"
+    t.integer  "profile_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "other_skills", :force => true do |t|
+    t.string   "title"
+    t.text     "description"
+    t.integer  "cv_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -216,7 +218,7 @@ ActiveRecord::Schema.define(:version => 20100428153322) do
     t.datetime "updated_at"
   end
 
-    create_table "slugs", :force => true do |t|
+  create_table "slugs", :force => true do |t|
     t.string  "name"
     t.integer "sluggable_id"
     t.integer "sequence",                     :default => 1, :null => false

@@ -1,9 +1,10 @@
-<% title " New cv " %>
-<% form_for([@cv.civil_status,@cv]) do |f| %>
+<h1>New cv</h1>
+
+<% form_for(@cv) do |f| %>
   <%= render :partial => 'form', :locals => { :f => f } %>
   <p>
     <%= f.submit 'Create' %>
   </p>
 <% end %>
 
-<%= link_to 'Back', civil_statuses_path %>
+<%= link_to 'Back', cvs_path %>
