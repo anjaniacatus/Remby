@@ -1,11 +1,25 @@
 ActionController::Routing::Routes.draw do |map|
-  map.connect 'auto_complete_for_degree_course_field', :controller => 'degree_courses', :action => 'auto_complete_for_degree_course_field'
 
-  map.resources :degree_courses
+  map.connect 'auto_complete_for_language_level', :controller => 'cvs', :action => 'auto_complete_for_language_level'
+
+  map.connect 'auto_complete_for_language_title', :controller => 'cvs', :action => 'auto_complete_for_language_title'
+
+  map.connect 'auto_complete_for_experience_duration', :controller => 'cvs', :action => 'auto_complete_for_experience_duration'
+
+  map.connect 'auto_complete_for_experience_job_id', :controller => 'cvs', :action => 'auto_complete_for_experience_job_id'
+
+  map.connect 'auto_complete_for_experience_jobtitle', :controller => 'cvs', :action => 'auto_complete_for_experience_jobtitle'
+
+  map.connect 'auto_complete_for_degree_course_field', :controller => 'cvs', :action => 'auto_complete_for_degree_course_field'
+
+  map.connect 'auto_complete_for_degree_course_degree_name', :controller => 'cvs', :action => 'auto_complete_for_degree_course_degree_name'
+
+  map.connect 'auto_complete_for_cv_title', :controller => 'cvs', :action => 'auto_complete_for_cv_title'
+
+  map.resources :cvs
+
   map.resources :cvs
   map.resources :experiences
-  map.resources :degree_courses
-
   map.resources :contact_infos
 
   map.resources :civil_statuses do |civil_status|

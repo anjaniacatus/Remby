@@ -1,22 +1,22 @@
-<% title  "All CVS" %>
-<%- if @cvs.blank? %>
-  <%= @notice = "No CV" %>
-<%- else %>
-  <% @cvs.each do |cv| %>
-    <p>
-      <%=h cv.title %>
-      <%=h cv.summary %>
-      <%= link_to 'Show', cv %> 
-      <%- if is_admin? %>
-        <%= link_to 'Edit', edit_cv_path(cv) %> | <%= link_to 'Destroy', cv, :confirm => 'Are you sure?', :method => :delete %>
-      <%- end %>     
-  </p>
- 
-  <% end %>
+<h1>Listing cvs</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Summary</th>
+  </tr>
+
+<% @cvs.each do |cv| %>
+  <tr>
+    <td><%=h cv.title %></td>
+    <td><%=h cv.summary %></td>
+    <td><%= link_to 'Show', cv %></td>
+    <td><%= link_to 'Edit', edit_cv_path(cv) %></td>
+    <td><%= link_to 'Destroy', cv, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
 <% end %>
-<%- if current_user %>
-  <%= link_to 'create a civil status', new_civil_status_path%>
-<%- end %>
-<%- unless @civil_status.blank? %>
-  <%= link_to 'add a CV', new_civil_status_cv_path(@civil_status)%>
-<%end %>
+</table>
+
+<br />
+
+<%= link_to 'New cv', new_cv_path %>

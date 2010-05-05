@@ -1,4 +1,5 @@
-<% title   "Edit " + @cv.title %>
+<h1>Editing cv</h1>
+
 <% form_for(@cv) do |f| %>
   <%= render :partial => 'form', :locals => { :f => f } %>
   <p>

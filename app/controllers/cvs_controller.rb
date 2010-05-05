@@ -1,18 +1,25 @@
 class CvsController < ApplicationController
+
+  auto_complete_for :cv, :title
+  auto_complete_for :degree_course, :degree_name
+  auto_complete_for :degree_course, :field
+  auto_complete_for :experience, :compagny_id
+  auto_complete_for :experience, :jobtitle
+  auto_complete_for :experience, :job_id
+  auto_complete_for :experience, :duration
+  auto_complete_for :language, :title
+  auto_complete_for :language, :level
+  auto_complete_for :other_skill, :title
+
   # GET /cvs
   # GET /cvs.xml
   def index
-    if params[:civil_status_id] 
-      @civil_status = CivilStatus.find(params[:civil_status_id])    
-      @cvs = @civil_status.cvs
-    else
-      @cvs = Cv.find(:all)
-    #@cv_paginates = Cv.search(params[:search], params[:page])
-    end
-     respond_to do |format|
+    @cvs = Cv.all
+
+    respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @cvs }
-    end   
+    end
   end
 
   # GET /cvs/1
@@ -29,17 +36,12 @@ class CvsController < ApplicationController
   # GET /cvs/new
   # GET /cvs/new.xml
   def new
-    if params[:civil_status_id]
-      @civil_status = CivilStatus.find(params[:civil_status_id])
-      @cv = @civil_status.cvs.new
-      respond_to do |format|
+    @cv = Cv.new
+
+    respond_to do |format|
       format.html # new.html.erb
-      format.xml  { render :xml => @civil_status }
-      end
-    else
-      flash[:notice] = 'impossible sans avoir créer un profile'
-      redirect_to root_path 
-     end
+      format.xml  { render :xml => @cv }
+    end
   end
 
   # GET /cvs/1/edit
@@ -50,13 +52,12 @@ class CvsController < ApplicationController
   # POST /cvs
   # POST /cvs.xml
   def create
-    @civil_status = CivilStatus.find(params[:civil_status_id])
-    @cv = @civil_status.cvs.create!(params[:cv])
+    @cv = Cv.new(params[:cv])
 
     respond_to do |format|
       if @cv.save
         flash[:notice] = 'Cv was successfully created.'
-        format.html { redirect_to @civil_status }
+        format.html { redirect_to(@cv) }
         format.xml  { render :xml => @cv, :status => :created, :location => @cv }
       else
         format.html { render :action => "new" }

@@ -1,40 +1,101 @@
-<% title @cv.title %>
 <p>
+  <b>Title:</b>
+  <%=h @cv.title %>
+</p>
+
+<p>
+  <b>Summary:</b>
   <%=h @cv.summary %>
 </p>
 
-<div class="civil_status">
-  <%- if @cv.civil_status_id.nil? %>
-    <%= "civil status vide"%>
-  <%- else %>
-     <%= @cv.civil_status.family_name %>
-     <%= @cv.civil_status.name %>
-     <p>
-       <%= @cv.civil_status.age %> ans
-     </p>  
-  <% end %>
-</div>
+<% @cv.degree_courses.each do |degree_course| %>
+  <div class="child">
+    <p>
+      <b>DegreeCourse Degree name:</b>
+      <%=h degree_course.degree_name %>
+    </p>
+    <p>
+      <b>DegreeCourse Field:</b>
+      <%=h degree_course.field %>
+    </p>
+    <p>
+      <b>DegreeCourse Description:</b>
+      <%=h degree_course.description %>
+    </p>
+    <p>
+      <b>DegreeCourse Start on:</b>
+      <%=h degree_course.start_on %>
+    </p>
+    <p>
+      <b>DegreeCourse End on:</b>
+      <%=h degree_course.end_on %>
+    </p>
+  </div>
+<% end %>
 
-<div class="degree_course" > 
-  <%= render  @cv.degree_courses%>
-</div>
+<% @cv.experiences.each do |experience| %>
+  <div class="child">
+    <p>
+      <b>Experience Compagny:</b>
+      <%=h experience.compagny_id %>
+    </p>
+    <p>
+      <b>Experience Jobtitle:</b>
+      <%=h experience.jobtitle %>
+    </p>
+    <p>
+      <b>Experience Job:</b>
+      <%=h experience.job_id %>
+    </p>
+    <p>
+      <b>Experience Description:</b>
+      <%=h experience.description %>
+    </p>
+    <p>
+      <b>Experience Duration:</b>
+      <%=h experience.duration %>
+    </p>
+  </div>
+<% end %>
 
-<div class="experience" > 
-  <%= render  @cv.experiences%>
-</div>
+<% @cv.interests.each do |interest| %>
+  <div class="child">
+    <p>
+      <b>Interest Description:</b>
+      <%=h interest.description %>
+    </p>
+  </div>
+<% end %>
 
+<% @cv.languages.each do |language| %>
+  <div class="child">
+    <p>
+      <b>Language Title:</b>
+      <%=h language.title %>
+    </p>
+    <p>
+      <b>Language Description:</b>
+      <%=h language.description %>
+    </p>
+    <p>
+      <b>Language Level:</b>
+      <%=h language.level %>
+    </p>
+  </div>
+<% end %>
 
-<div class= "languages">
-  <%= render @cv.languages%>
-</div>
-
-<div class= "interest">
-  <%= render @cv.interests%>
-</div>
-
-<div class= "other_skill">
-  <%= render @cv.other_skills%>
-</div>
+<% @cv.other_skills.each do |other_skill| %>
+  <div class="child">
+    <p>
+      <b>OtherSkill Title:</b>
+      <%=h other_skill.title %>
+    </p>
+    <p>
+      <b>OtherSkill Description:</b>
+      <%=h other_skill.description %>
+    </p>
+  </div>
+<% end %>
 
 <%= link_to 'Edit', edit_cv_path(@cv) %> |
 <%= link_to 'Back', cvs_path %>
