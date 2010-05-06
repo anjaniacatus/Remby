@@ -5,7 +5,7 @@
   </p>
   <p>
     DegreeCourse <%= f.label :field %><br />
-    <%= f.text_field :field %>
+     <%= f.text_field_with_auto_complete :field, {}, { :method => :get, :skip_style => true } %>
   </p>
   <p>
     DegreeCourse <%= f.label :description %><br />
