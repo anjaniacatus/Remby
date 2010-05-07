@@ -1,5 +1,5 @@
 <% content_tag_for :span, contact_information do
-  concat "#{(contact_information.value_format_sym)}&nbsp;:&nbsp;"
+  concat "#{(contact_information.value)}"
   case contact_information.value_format_sym
   when :email
     concat mail_to(contact_information.value)
