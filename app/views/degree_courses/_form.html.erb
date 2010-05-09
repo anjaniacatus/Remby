@@ -3,22 +3,27 @@
     <%= f.label :school_id %><br />
     <%= f.text_field :school_id %>
   </p>
+  
   <p>
     <%= f.label :degree_name %><br />
     <%= f.select :degree_name, DegreeCourse::Degree_Names %>
   </p>
-   <p>
+  
+  <p>
     <%= f.label :description %><br />
     <%= f.text_area :description %>
   </p>
+  
   <p>
     <%= f.label :start_on %><br />
     <%= f.date_select :start_on %>
   </p>
+  
   <p>
     <%= f.label :end_on %><br />
     <%= f.date_select :end_on %>
   </p>
- </div>
+
+</div>
 
 

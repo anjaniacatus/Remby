@@ -1,6 +1,5 @@
 class CvsController < ApplicationController
 
-  auto_complete_for :cv, :title
   auto_complete_for :degree_course, :field
   auto_complete_for :experience, :compagny_id
   auto_complete_for :experience, :jobtitle

@@ -1,4 +1,0 @@
-<% content_tag :div :class => "other_infos" do%>
-  <%= other_info.name %> <br />
-  <%= other_info.description %> <br />
-<% end -%>
