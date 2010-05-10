@@ -1,21 +1,22 @@
 <div class="child">
   <p>
-    DegreeCourse <%= f.label :degree_name %><br />
+    DegreeCourse <%= f.label :degree_name %>
     <%= f.text_field :degree_name %>
   </p>
   <p>
-     <%= f.text_field_with_auto_complete :field, {}, { :method => :get, :skip_style => true } %>
+    DegreeCourse_field <%= f.text_field_with_auto_complete :field, {}, { :method => :get, :skip_style => true } %>
+  </p>
+  
+  <p>
+  DegreeCourse <%= f.label :description %>
+  <br /><%= f.text_area :description %>
   </p>
   <p>
-    DegreeCourse <%= f.label :description %><br />
-    <%= f.text_area :description %>
-  </p>
-  <p>
-    DegreeCourse <%= f.label :start_on %><br />
+    DegreeCourse <%= f.label :start_on %>
     <%= f.date_select :start_on %>
   </p>
   <p>
-    DegreeCourse <%= f.label :end_on %><br />
+    DegreeCourse <%= f.label :end_on %>
     <%= f.date_select :end_on %>
   </p>
   <p>

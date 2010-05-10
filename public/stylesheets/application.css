@@ -1,5 +1,5 @@
 body {
-  background-color: #FFF;
+  background-color: blue;
   font-family: Verdana, Helvetica, Arial;
   font-size: 14px;
 }
@@ -13,7 +13,7 @@ a {
 }
 
 body {
-  background-color: black;
+  background-color: #4B7399;
 }
 
 #main {
@@ -36,10 +36,10 @@ body {
 
 #side{
   width: 75%;
-  background-color: #FFF; 
+  background-color: #EEE; 
   padding: 20px 40px;
   margin:0 auto;
-  border: solid 1px pink;
+  border: solid 1px grey;
   margin-top: 2px;
   margin-bottom: 2px;
 }
@@ -51,18 +51,18 @@ body {
 }
 #navigation{
   width: 75%;
-  background-color: pink;
+  background-color: white;
   padding: 20px 40px;
-  border: solid 1px black;
+  border: solid 1px grey;
   margin-top: 20px;
   margin: 0 auto;
 }
 
 #footer{
   width: 75%;
-  background-color: pink;
+  background-color: white;
   padding: 20px 40px;
-  border: solid 1px black;
+  border: solid 1px grey;
   margin-top: 20px;
   margin: 0 auto;
 }
@@ -90,6 +90,9 @@ body {
   clear: both;
 }
 
+#child{
+  background-color: yellow; 
+}
 
 
 .fieldWithErrors {
