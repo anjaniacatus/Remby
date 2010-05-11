@@ -5,26 +5,33 @@ class CvsController < ApplicationController
   auto_complete_for :experience, :jobtitle
   auto_complete_for :experience, :job_id
   auto_complete_for :experience, :duration
-  auto_complete_for :language, :title
   auto_complete_for :language, :level
-  auto_complete_for :other_skill, :title
 
   # GET /cvs
   # GET /cvs.xml
-  def index
-    @cvs = Cv.all
-
-    respond_to do |format|
+   def index
+    if params[:civil_status_id] 
+      @civil_status = CivilStatus.find(params[:civil_status_id])    
+      @cvs = @civil_status.cvs
+    else
+      @cvs = Cv.find(:all)
+    #@cv_paginates = Cv.search(params[:search], params[:page])
+    end
+     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @cvs }
-    end
+    end   
   end
 
   # GET /cvs/1
   # GET /cvs/1.xml
   def show
+   if params[:civil_status_id] 
+    @civil_status = CivilStatus.find(params[:civil_status_id])
+    @cv = @civil_status.cv.find(params[:id])
+  else
     @cv = Cv.find(params[:id])
-
+  end
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @cv }
@@ -34,12 +41,17 @@ class CvsController < ApplicationController
   # GET /cvs/new
   # GET /cvs/new.xml
   def new
-    @cv = Cv.new
-
-    respond_to do |format|
+    if params[:civil_status_id]
+      @civil_status = CivilStatus.find(params[:civil_status_id])
+      @cv = @civil_status.cvs.new
+      respond_to do |format|
       format.html # new.html.erb
-      format.xml  { render :xml => @cv }
-    end
+      format.xml  { render :xml => @civil_status }
+      end
+    else
+      flash[:notice] = 'impossible sans avoir créer un profile'
+      redirect_to root_path 
+     end
   end
 
   # GET /cvs/1/edit
@@ -50,12 +62,12 @@ class CvsController < ApplicationController
   # POST /cvs
   # POST /cvs.xml
   def create
-    @cv = Cv.new(params[:cv])
+    @cv = Cv.create!(params[:cv])
 
     respond_to do |format|
       if @cv.save
         flash[:notice] = 'Cv was successfully created.'
-        format.html { redirect_to(@cv) }
+        format.html { redirect_to @cv }
         format.xml  { render :xml => @cv, :status => :created, :location => @cv }
       else
         format.html { render :action => "new" }
@@ -92,4 +104,5 @@ class CvsController < ApplicationController
       format.xml  { head :ok }
     end
   end
+
 end

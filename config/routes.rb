@@ -27,7 +27,6 @@ ActionController::Routing::Routes.draw do |map|
 
   map.connect 'auto_complete_for_experience_duration', :controller => 'cvs', :action => 'auto_complete_for_experience_duration'
 
-  map.connect 'auto_complete_for_experience_job_id', :controller => 'cvs', :action => 'auto_complete_for_experience_job_id'
 
   map.connect 'auto_complete_for_experience_jobtitle', :controller => 'cvs', :action => 'auto_complete_for_experience_jobtitle'
 
@@ -35,10 +34,9 @@ ActionController::Routing::Routes.draw do |map|
 
   map.connect 'auto_complete_for_degree_course_degree_name', :controller => 'cvs', :action => 'auto_complete_for_degree_course_degree_name'
 
-  map.connect 'auto_complete_for_cv_title', :controller => 'cvs', :action => 'auto_complete_for_cv_title'
 
   map.resources :cvs
-
+  map.resources :degree_courses
   map.resources :experiences
   map.resources :contact_infos
 
@@ -62,7 +60,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :contact_infos, :only => [:new, :create, :destroy]
   map.resources :job_sheets
   map.resources :compagnies
-
+  map.resources :schools
   # The priority is based upon order of creation: first created -> highest priority.
 
   # Sample of regular route:

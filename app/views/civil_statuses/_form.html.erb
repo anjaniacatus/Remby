@@ -16,7 +16,7 @@
 
 <p>
   <%= f.label :birthday %>
-  <%= f.date_select :birthday %>
+  <%= f.date_select :birthday, :start_year => 1930, :use_month_numbers => true, :order => [:day, :month, :year] %>
 </p>
 
 <p>
