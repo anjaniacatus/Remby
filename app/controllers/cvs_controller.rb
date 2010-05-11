@@ -1,5 +1,5 @@
 class CvsController < ApplicationController
-
+  before_filter :nested_in => :civil_statuses
   auto_complete_for :degree_course, :field
   auto_complete_for :experience, :compagny_id
   auto_complete_for :experience, :jobtitle
@@ -28,7 +28,7 @@ class CvsController < ApplicationController
   def show
    if params[:civil_status_id] 
     @civil_status = CivilStatus.find(params[:civil_status_id])
-    @cv = @civil_status.cv.find(params[:id])
+    @cv = @civil_status.cvs.find(params[:id])
   else
     @cv = Cv.find(params[:id])
   end
@@ -48,7 +48,7 @@ class CvsController < ApplicationController
       format.html # new.html.erb
       format.xml  { render :xml => @civil_status }
       end
-    else
+    else 
       flash[:notice] = 'impossible sans avoir créer un profile'
       redirect_to root_path 
      end
@@ -61,19 +61,18 @@ class CvsController < ApplicationController
 
   # POST /cvs
   # POST /cvs.xml
-  def create
-    @cv = Cv.create!(params[:cv])
-
-    respond_to do |format|
-      if @cv.save
-        flash[:notice] = 'Cv was successfully created.'
-        format.html { redirect_to @cv }
-        format.xml  { render :xml => @cv, :status => :created, :location => @cv }
-      else
-        format.html { render :action => "new" }
-        format.xml  { render :xml => @cv.errors, :status => :unprocessable_entity }
-      end
-    end
+   def create
+     @cv = Cv.create!(params[:cv])
+     respond_to do |format|
+       if @cv.save
+         flash[:notice] = 'Cv was successfully created.'
+         format.html { redirect_to ([@cv.civil_status, @cv]) }
+         format.xml  { render :xml => @cv, :status => :created, :location => @cv }
+       else
+         format.html { render :action => "new" }
+         format.xml  { render :xml => @cv.errors, :status => :unprocessable_entity }
+       end
+     end
   end
 
   # PUT /cvs/1
@@ -84,7 +83,7 @@ class CvsController < ApplicationController
     respond_to do |format|
       if @cv.update_attributes(params[:cv])
         flash[:notice] = 'Cv was successfully updated.'
-        format.html { redirect_to(@cv) }
+        format.html { redirect_to([@cv.civil_status, @cv]) }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }

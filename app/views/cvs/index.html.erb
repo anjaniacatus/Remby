@@ -1,5 +1,4 @@
-<h1>Listing cvs</h1>
-
+<% title " All CVS " %>
 <table>
   <tr>
     <th>Title</th>
@@ -10,13 +9,10 @@
   <tr>
     <td><%=h cv.title %></td>
     <td><%=h cv.summary %></td>
-    <%- unless @civil_status.blank?%>
       <td><%= link_to 'Show', civil_status_cv_path(@civil_status, cv) %></td>
-    <%- else %>
-      <%= link_to 'show', cv %>
-    <%end%>
-    <td><%= link_to 'Edit', edit_cv_path(cv) %></td>
-    <td><%= link_to 'Destroy', cv, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to 'Destroy', civil_status_cvs_path(cv), :confirm => 'Are you sure?', :method => :delete %></td>
+     <td><%= link_to 'Edit', edit_civil_status_cv_path(@civil_status, cv) %></td>
+
   </tr>
 <% end %>
 </table>

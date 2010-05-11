@@ -1,11 +1,11 @@
 <h1>Editing cv</h1>
 
-<% form_for(@cv) do |f| %>
+<% form_for([@cv.civil_status, @cv]) do |f| %>
   <%= render :partial => 'form', :locals => { :f => f } %>
   <p>
     <%= f.submit 'Update' %>
   </p>
 <% end %>
 
-<%= link_to 'Show', @cv %> |
-<%= link_to 'Back', cvs_path %>
+<%= link_to 'Show', civil_status_cvs_path(@cv) %> |
+<%= link_to 'Back', civil_status_cvs_path %>

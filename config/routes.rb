@@ -1,50 +1,16 @@
 ActionController::Routing::Routes.draw do |map|
-  map.connect 'auto_complete_for_other_skill_title', :controller => 'cvs', :action => 'auto_complete_for_other_skill_title'
-
-  map.connect 'auto_complete_for_language_level', :controller => 'cvs', :action => 'auto_complete_for_language_level'
-
-
-  map.connect 'auto_complete_for_experience_duration', :controller => 'cvs', :action => 'auto_complete_for_experience_duration'
-
-  map.connect 'auto_complete_for_experience_job_id', :controller => 'cvs', :action => 'auto_complete_for_experience_job_id'
-
-  map.connect 'auto_complete_for_experience_jobtitle', :controller => 'cvs', :action => 'auto_complete_for_experience_jobtitle'
-
-  map.connect 'auto_complete_for_experience_compagny_id', :controller => 'cvs', :action => 'auto_complete_for_experience_compagny_id'
 
   map.connect 'auto_complete_for_degree_course_field', :controller => 'cvs', :action => 'auto_complete_for_degree_course_field'
-
-  map.connect 'auto_complete_for_degree_course_degree_name', :controller => 'cvs', :action => 'auto_complete_for_degree_course_degree_name'
-
-  map.connect 'auto_complete_for_cv_title', :controller => 'cvs', :action => 'auto_complete_for_cv_title'
-
-  map.resources :cvs
-
-
-  map.connect 'auto_complete_for_language_level', :controller => 'cvs', :action => 'auto_complete_for_language_level'
-
-  map.connect 'auto_complete_for_language_title', :controller => 'cvs', :action => 'auto_complete_for_language_title'
-
-  map.connect 'auto_complete_for_experience_duration', :controller => 'cvs', :action => 'auto_complete_for_experience_duration'
-
-
-  map.connect 'auto_complete_for_experience_jobtitle', :controller => 'cvs', :action => 'auto_complete_for_experience_jobtitle'
-
-  map.connect 'auto_complete_for_degree_course_field', :controller => 'cvs', :action => 'auto_complete_for_degree_course_field'
-
-  map.connect 'auto_complete_for_degree_course_degree_name', :controller => 'cvs', :action => 'auto_complete_for_degree_course_degree_name'
-
-
-  map.resources :cvs
-  map.resources :degree_courses
-  map.resources :experiences
-  map.resources :contact_infos
 
   map.resources :civil_statuses do |civil_status|
-    civil_status.resources :cvs
+    civil_status.resources :cvs do |cv|
+      cv.resources :degree_courses
+      cv.resources :experiences
+      cv.resources :contact_infos
+      cv.resources :interests
+      cv.resources :other_skills
+    end
   end  
-  map.resources :other_skills
-  map.resources :interests
   map.resources :offerings
   map.resources :notes
   map.resources :domains
