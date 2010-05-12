@@ -16,3 +16,4 @@ log/development.log
 public/offerings
 *~
 rerun.txt
+config/initializers/site_keys.rb
