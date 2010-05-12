@@ -21,7 +21,10 @@
   <b>Summary:</b>
   <%=h @cv.summary %>
 </p>
-
+<p>
+  <b>published??:</b>
+  <%=h @cv.published%>  
+</p>
 <div class="child">
    <%- unless @cv.degree_courses.blank? %>
       <h3> Degree_courses </h3> 

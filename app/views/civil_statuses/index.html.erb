@@ -1,6 +1,4 @@
-<div id ="title">
-  <%= @title = "Listing Users"%>
-</div>  
+  <% title  "Listes des membres"%>
 <% @civil_statuses.each do |civil_status| %>
   <div id="civil_status">
     <%=h civil_status.family_name %>
@@ -21,11 +19,13 @@
   <%= "Toutes les CVs"%>
 </h4>  
   <% @cv_all.each do |cv| %>
+   <%- if cv.published %>
     <p>
       <%=h cv.title %>
       <%=h cv.summary %>
       <%= link_to 'Show', cv %>
     </p>
+  <% end %>
   <% end %>
 </div> 
 
