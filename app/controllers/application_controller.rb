@@ -7,8 +7,8 @@ class ApplicationController < ActionController::Base
 
   # Scrub sensitive parameters from your log
   # filter_parameter_logging :password
- helper_method :current_user, :is_admin?
- private
+  helper_method :current_user, :is_admin?
+  private
   def current_user_session
     return @current_user_session if defined?(@current_user_session) 
     @current_user_session = UserSession.find
@@ -26,4 +26,10 @@ class ApplicationController < ActionController::Base
   
   def is_admin?
   end
+  
+  hide_action :breadcrumb
+  def breadcrumbs
+    []
+  end
+
 end

@@ -1,5 +1,6 @@
 class CvsController < ApplicationController
   before_filter :nested_in => :civil_statuses
+  before_filter :new_cv_from_params
   auto_complete_for :degree_course, :field
   auto_complete_for :experience, :compagny_id
   auto_complete_for :experience, :jobtitle
@@ -10,7 +11,6 @@ class CvsController < ApplicationController
   # GET /cvs
   # GET /cvs.xml
    def index
-     @allcv = Cv.find(:all)
      if params[:civil_status_id] 
       @civil_status = CivilStatus.find(params[:civil_status_id])    
       @cvs = @civil_status.cvs
@@ -41,20 +41,7 @@ class CvsController < ApplicationController
 
   # GET /cvs/new
   # GET /cvs/new.xml
-  def new
-    if params[:civil_status_id]
-      @civil_status = CivilStatus.find(params[:civil_status_id])
-      @cv = @civil_status.cvs.new
-      respond_to do |format|
-      format.html # new.html.erb
-      format.xml  { render :xml => @civil_status }
-      end
-    else 
-      flash[:notice] = 'impossible sans avoir créer un profile'
-      redirect_to root_path 
-     end
-  end
-
+ 
   # GET /cvs/1/edit
   def edit
     @cv = Cv.find(params[:id])
@@ -63,14 +50,13 @@ class CvsController < ApplicationController
   # POST /cvs
   # POST /cvs.xml
    def create
-     @cv = Cv.create!(params[:cv])
      respond_to do |format|
        if @cv.save
          flash[:notice] = 'Cv was successfully created.'
-         format.html { redirect_to  }
+         format.html { redirect_to civil_statuses_url  }
          format.xml  { render :xml => @cv, :status => :created, :location => @cv }
        else
-         format.html { render :action => "new" }
+         format.html { redirect_to civil_statuses_url }
          format.xml  { render :xml => @cv.errors, :status => :unprocessable_entity }
        end
      end
@@ -96,7 +82,6 @@ class CvsController < ApplicationController
   # DELETE /cvs/1
   # DELETE /cvs/1.xml
   def destroy
-    @cv = Cv.find(params[:id])
     @cv.destroy
 
     respond_to do |format|
@@ -104,5 +89,13 @@ class CvsController < ApplicationController
       format.xml  { head :ok }
     end
   end
-
+  protected
+    
+  def new_cv_from_params
+  unless (params[:civil_status_id ] == nil)
+    @civil_status = CivilStatus.find(params[:civil_status_id])
+    @cv = @civil_status.cvs.new(params[:cv])
+  end
+  end
+ 
 end

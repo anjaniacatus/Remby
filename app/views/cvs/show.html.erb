@@ -56,6 +56,10 @@
     <%= render @cv.other_skills%>
   <% end %>
 </div>
+<% if is_admin? %>
+  <%= link_to 'Edit', edit_civil_status_cv_path(@civil_status, @cv) %> |
+  <%= link_to 'Back', civil_status_cvs_path(@civil_status) %>
+<% end %>
 
-<%= link_to 'Edit', edit_civil_status_cv_path(@civil_status, @cv) %> |
-<%= link_to 'Back', civil_status_cvs_path(@civil_status) %>
+<%= link_to 'Back', root_path%>
+
