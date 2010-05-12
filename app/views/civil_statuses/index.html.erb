@@ -16,12 +16,18 @@
     <%= link_to 'Destroy', civil_status, :confirm => 'Are you sure?', :method => :delete %>
   </div>
 <% end %>
-<% @cv_all.each do |cv| %>
-  <%=h cv.title %>
-  <%=h cv.summary %>
-  <%= link_to 'Show', cv %>
-<% end %>
-
+<div id="cvs"> 
+<h4>  
+  <%= "Toutes les CVs"%>
+</h4>  
+  <% @cv_all.each do |cv| %>
+    <p>
+      <%=h cv.title %>
+      <%=h cv.summary %>
+      <%= link_to 'Show', cv %>
+    </p>
+  <% end %>
+</div> 
 
 
 <%= link_to 'New civil_status', new_civil_status_path %>

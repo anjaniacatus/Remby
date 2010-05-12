@@ -25,8 +25,10 @@
 </p>
 
 <div class="child">
-   <h3> Degree Courses </h3> 
-  <%= render @cv.degree_courses%>
+   <%- unless @cv.degree_courses.blank? %>
+      <h3> Degree_courses </h3> 
+     <%= render @cv.degree_courses%>
+   <% end %>  
 </div>
 
 <div class="child">
