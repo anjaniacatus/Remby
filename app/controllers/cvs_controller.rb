@@ -10,7 +10,8 @@ class CvsController < ApplicationController
   # GET /cvs
   # GET /cvs.xml
    def index
-    if params[:civil_status_id] 
+     @allcv = Cv.find(:all)
+     if params[:civil_status_id] 
       @civil_status = CivilStatus.find(params[:civil_status_id])    
       @cvs = @civil_status.cvs
     else
@@ -66,7 +67,7 @@ class CvsController < ApplicationController
      respond_to do |format|
        if @cv.save
          flash[:notice] = 'Cv was successfully created.'
-         format.html { redirect_to ([@cv.civil_status, @cv]) }
+         format.html { redirect_to  }
          format.xml  { render :xml => @cv, :status => :created, :location => @cv }
        else
          format.html { render :action => "new" }

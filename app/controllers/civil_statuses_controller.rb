@@ -82,4 +82,15 @@ class CivilStatusesController < ApplicationController
       format.xml  { head :ok }
     end
   end
+  
+  def breadcrumbs
+    self.class.breadcrumbs(@civil_status)
+  end
+  
+  def self.breadcrumbs (civil_status)
+    [["Civil_Statuses", CivilStatus.new]] +
+      (civil_status && !civil_status.new_record? ? 
+        [[civil_status.name, conference]] : [])
+  end
+
 end
