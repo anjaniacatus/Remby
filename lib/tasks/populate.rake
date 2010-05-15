@@ -3,7 +3,7 @@ namespace.db do
   task :populate => :environment do
     require 'populator'
     require 'faker'
-    [CivilStatus, CV].each (&:delete_all)
+    [CivilStatus, CV].each(&:delete_all)
 
     CivilStaus.populate 40 do |civil|
      civil.family_name = Faker::Name.lastname
