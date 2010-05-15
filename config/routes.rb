@@ -2,6 +2,7 @@ ActionController::Routing::Routes.draw do |map|
 
   map.connect 'auto_complete_for_degree_course_field', :controller => 'cvs', :action => 'auto_complete_for_degree_course_field'
 
+  map.resources :cvs
   map.resources :civil_statuses do |civil_status|
     civil_status.resources :cvs do |cv|
       cv.resources :degree_courses
@@ -11,7 +12,7 @@ ActionController::Routing::Routes.draw do |map|
       cv.resources :other_skills
     end
   end  
-  map.resources :cvs
+ 
   map.resources :offerings
   map.resources :notes
   map.resources :domains

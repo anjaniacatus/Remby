@@ -3,12 +3,17 @@
   <p>
     <%=h cv.title %>
     <%=h cv.summary %>
-    <%= link_to 'Show', civil_status_cv_path(@civil_status, cv) %>
-    <%= link_to 'Destroy', civil_status_cvs_path(cv), :confirm => 'Are you sure?', :method => :delete %>
-    <%= link_to 'Edit', edit_civil_status_cv_path(@civil_status, cv) %>
+    <%- unless @civil_status.blank? %>
+      <%= link_to 'Show', civil_status_cv_path(@civil_status, cv) %>
+      <%= link_to 'Destroy', civil_status_cvs_path(cv), :confirm => 'Are you sure?', :method => :delete %>
+      <%= link_to 'Edit', edit_civil_status_cv_path(@civil_status, cv) %>
   </p>
+  <%- else %>
+    <%= link_to 'show', cv_path(cv) %>
   <% end %>
-
-<br />
-<%= link_to 'Back', civil_status_path(@civil_status)%>
-<%= link_to 'New cv', new_civil_status_cv_path(@civil_status) %>
+  <% end %>
+  <%- unless @civil_status.blank? %>
+  <br />
+    <%= link_to 'Back', civil_status_path(@civil_status)%>
+    <%= link_to 'New cv', new_civil_status_cv_path(@civil_status) %>
+  <% end %>
