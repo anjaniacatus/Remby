@@ -53,7 +53,7 @@ class CvsController < ApplicationController
      respond_to do |format|
        if @cv.save
          flash[:notice] = 'Cv was successfully created.'
-         format.html { redirect_to civil_statuses_url  }
+         format.html { redirect_to civil_status_cv_path(@civil_status, @cv)  }
          format.xml  { render :xml => @cv, :status => :created, :location => @cv }
        else
          format.html { redirect_to civil_statuses_url }
