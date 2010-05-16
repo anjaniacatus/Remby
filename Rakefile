@@ -7,4 +7,5 @@ require 'rake'
 require 'rake/testtask'
 require 'rake/rdoctask'
 
+require 'lib/tasks/populate.rake'
 require 'tasks/rails'
