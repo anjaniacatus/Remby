@@ -6,7 +6,15 @@ authorization do
   end
   
   role :member do
-  
+   has_permission_on :civil_statuses, :to => :manage do
+     if_attribute :user => is {user}
+   end
+   has_permission_on :cvs, :to => :read do
+     if_attribute :published => :true
+   end
+   has_permission_on :cvs, :to => :manage do
+     if_attribute :cv_user =>  is {user}
+   end
   end
 
   role :guest do

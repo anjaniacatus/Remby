@@ -11,6 +11,9 @@ class Cv < ActiveRecord::Base
   accepts_nested_attributes_for :interests, :allow_destroy => true
   accepts_nested_attributes_for :other_skills, :allow_destroy => true
   
+  def cv_user
+    self.civil_status.user
+  end
   #def self.search(search, page)
     #paginate :per_page => 2, :page => page
   #end

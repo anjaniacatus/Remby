@@ -18,7 +18,7 @@
   
   <p>
     <%= f.label :role %>
-    <%= f.select :role, (controller.authorization_engine.roles %>
+    <%= f.select :role, (controller.authorization_engine.roles) %>
   </p>
   <p><%= f.submit "Submit" %></p>
 <% end %>
