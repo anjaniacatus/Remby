@@ -15,6 +15,10 @@
     <%= f.label :password_confirmation %><br />
     <%= f.password_field :password_confirmation %>
   </p>
-
+  
+  <p>
+    <%= f.label :role %>
+    <%= f.select :role, (controller.authorization_engine.roles %>
+  </p>
   <p><%= f.submit "Submit" %></p>
 <% end %>

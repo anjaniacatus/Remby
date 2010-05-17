@@ -1,6 +1,7 @@
 class CivilStatusesController < ApplicationController
   # GET /civil_statuses
   # GET /civil_statuses.xml
+  filter_resource_access 
   before_filter :new_civil_status
   def index
     @civil_statuses = CivilStatus.all

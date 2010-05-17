@@ -10,5 +10,11 @@
   <%= link_to "Login", login_path %>
 <% end %>
 </div>
+<div id ="user">
+  <%- unless current_user.blank? %> 
+    <%= "login as: " + current_user.username %>
+    <%= "role: " + current_user.role %>
+  <% end %>
+</div>
 <%= link_to "civil-status", civil_statuses_path %>
  <%= link_to "compagnies", compagnies_path %>
