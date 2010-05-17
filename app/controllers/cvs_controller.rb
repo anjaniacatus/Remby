@@ -11,11 +11,12 @@ class CvsController < ApplicationController
   # GET /cvs
   # GET /cvs.xml
    def index
-     if params[:civil_status_id] 
+    unless params[:civil_status_id].blank?  
       @civil_status = CivilStatus.find(params[:civil_status_id])    
       @cvs = @civil_status.cvs
     else
-      @cvs = Cv.find(:all)
+      @cvs = Cv.all
+      @fenoum = "zzzzzzzzzzz"
     #@cv_paginates = Cv.search(params[:search], params[:page])
     end
      respond_to do |format|
