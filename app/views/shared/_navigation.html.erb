@@ -3,7 +3,7 @@
 </div>
 <div id="link_authenticate">
 <% if current_user %>
-  <%= link_to "Edit Account", edit_user_path(:current) %>|
+  <%= link_to "Edit Account", edit_user_path(:current_user) %>|
   <%= link_to "logout", logout_path %>
 <% else %>
   <%= link_to "Register", new_user_path %> |
@@ -16,8 +16,5 @@
     <%= "role: " + current_user.role %>
   <% end %>
 </div>
-<%= link_to "civil-status", civil_statuses_path %>
-=======
-<%= link_to "civil-status", civil_statuses_path %> | <%= link_to "cvs", cvs_path %> 
->>>>>>> master:app/views/shared/_navigation.html.erb
+ <%= link_to "cvs", cvs_path %> 
  <%= link_to "compagnies", compagnies_path %>
