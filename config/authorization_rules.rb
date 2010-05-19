@@ -18,6 +18,10 @@ authorization do
   end
 
   role :guest do
+    #has_permission_on :cvs, :to => :read
+    #has_permission_on :users :to => :manage do
+      #if_attribute :user => is {user}
+    #end
   end
 
   role :compagny do

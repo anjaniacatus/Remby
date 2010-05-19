@@ -2,9 +2,11 @@ class CivilStatusesController < ApplicationController
   # GET /civil_statuses
   # GET /civil_statuses.xml
   filter_resource_access 
-  before_filter :new_civil_status
   def index
     @civil_statuses = CivilStatus.all
+    if current_user
+      @civil_status = current_user.civil_status
+    end
     @cv_all = Cv.all
     respond_to do |format|
       format.html # index.html.erb
@@ -44,6 +46,7 @@ class CivilStatusesController < ApplicationController
    @civil_status = CivilStatus.create!(params[:civil_status]) 
     respond_to do |format|
       if @civil_status.save
+        @current_user.civil_status = @civil_status
         flash[:notice] = 'CivilStatus was successfully created.'
         format.html { redirect_to(@civil_status) }
         format.xml  { render :xml => @civil_status, :status => :created, :location => @civil_status }

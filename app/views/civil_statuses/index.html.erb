@@ -1,19 +1,32 @@
-<% title  "Listes des membres"%>
-<% @civil_statuses.each do |civil_status| %>
-  <div id="civil_status">
-    <%=h civil_status.family_name %>
-    <%=h civil_status.name %>
-    <%=h civil_status.age %>
-    <%=h civil_status.birthday %>
-    <%=h civil_status.hometown %>
-    <%=h civil_status.current_city %>
-    <%=h civil_status.gender %>
-    <%=h civil_status.status %>
-    <%= link_to 'Show', civil_status %>
-    <%= link_to 'Edit', edit_civil_status_path(civil_status) %>
-    <%= link_to 'Destroy', civil_status, :confirm => 'Are you sure?', :method => :delete %>
+<% title "Home" %>
+<%- if current_user && is_admin?  %>
+ <% title  "liste des membres"%>
+ <% @civil_statuses.each do |civil_status| %>
+    <div id="civil_status">
+      <%=h civil_status.family_name %>
+      <%=h civil_status.name %>
+      <%=h civil_status.age %>
+      <%=h civil_status.birthday %>
+      <%=h civil_status.hometown %>
+      <%=h civil_status.current_city %>
+      <%=h civil_status.gender %>
+      <%=h civil_status.status %>
+      <%= link_to 'Show', civil_status %>
+      <%= link_to 'Edit', edit_civil_status_path(civil_status) %>
+      <%= link_to 'Destroy', civil_status, :confirm => 'Are you sure?', :method => :delete %>
   </div>
+  <% end %>
 <% end %>
+
+<%- if current_user %>
+  <% title  "Mon compte"%>
+  <%- unless current_user.civil_status.blank? %>
+    <%= render @civil_status %>
+  <% else %>
+   <%= link_to 'New civil_status', new_civil_status_path %>
+  <% end %>
+<% end %>
+
 <div id="cvs"> 
 <h4>  
   <%= "Toutes les CVs"%>
@@ -28,7 +41,3 @@
   <% end %>
   <% end %>
 </div> 
-
-<%-if current_user %>
-  <%= link_to 'New civil_status', new_civil_status_path %>
-<% end %>
