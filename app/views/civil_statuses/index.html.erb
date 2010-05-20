@@ -1,7 +1,7 @@
 <% title "Home" %>
 <%- if current_user && is_admin?  %>
- <% title  "liste des membres"%>
- <% @civil_statuses.each do |civil_status| %>
+  <% title  "liste des membres"%>
+  <% @civil_statuses.each do |civil_status| %>
     <div id="civil_status">
       <%=h civil_status.family_name %>
       <%=h civil_status.name %>

@@ -28,10 +28,15 @@ class CivilStatusesController < ApplicationController
   # GET /civil_statuses/new
   # GET /civil_statuses/new.xml
   def new
-    @civil_status = CivilStatus.new
-    respond_to do |format|
-      format.html # new.html.erb
-      format.xml  { render :xml => @civil_status }
+    unless current_user.blank?
+      @civil_status = CivilStatus.new
+      respond_to do |format|
+        format.html # new.html.erb
+        format.xml  { render :xml => @civil_status }
+      end
+    else
+       flash[:notice] = 'impossible, il faut être membre et à la fois connecté '
+       redirect_to root_path
     end
   end
 
