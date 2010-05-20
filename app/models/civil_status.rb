@@ -1,5 +1,5 @@
 class CivilStatus < ActiveRecord::Base
-  validates_presence_of :family_name, :name, :gender, :age, :current_city
+  validates_presence_of :family_name, :name, :gender, :birthday, :current_city
   has_many :contact_infos, :as => :contactable, :dependent => :destroy
   has_many :cvs
   belongs_to :user
