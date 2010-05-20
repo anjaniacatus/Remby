@@ -15,17 +15,11 @@ authorization do
    has_permission_on :cvs, :to => :manage do
      if_attribute :cv_user =>  is {user}
    end
+   has_permission_on :authorization_rules, :to => :read
+   has_permission_on :authorization_usages, :to => :read
+
   end
 
-  role :guest do
-    #has_permission_on :cvs, :to => :read
-    #has_permission_on :users :to => :manage do
-      #if_attribute :user => is {user}
-    #end
-  end
-
-  role :compagny do
-  end 
 end  
   privileges do
     privilege :manage, :includes => [:create, :read, :update, :delete]

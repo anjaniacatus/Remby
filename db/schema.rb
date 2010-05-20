@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100517055054) do
+ActiveRecord::Schema.define(:version => 20100520062311) do
 
   create_table "civil_statuses", :force => true do |t|
     t.string   "family_name"
@@ -234,13 +234,13 @@ ActiveRecord::Schema.define(:version => 20100517055054) do
 
   create_table "users", :force => true do |t|
     t.string   "username"
-    t.string   "email",             :null => false
-    t.string   "crypted_password",  :null => false
-    t.string   "password_salt",     :null => false
-    t.string   "persistence_token", :null => false
+    t.string   "email",                                   :null => false
+    t.string   "crypted_password",                        :null => false
+    t.string   "password_salt",                           :null => false
+    t.string   "persistence_token",                       :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "role"
+    t.string   "roles",             :default => "member"
   end
 
 end

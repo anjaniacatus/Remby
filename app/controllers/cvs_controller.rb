@@ -16,7 +16,6 @@ class CvsController < ApplicationController
       @cvs = @civil_status.cvs
     else
       @cvs = Cv.all
-      @fenoum = "zzzzzzzzzzz"
     #@cv_paginates = Cv.search(params[:search], params[:page])
     end
      respond_to do |format|

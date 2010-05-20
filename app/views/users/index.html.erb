@@ -8,7 +8,7 @@
 <% for user in @users %>
   <tr>
     <td><b><%= h user.username %></b></td>
-    <td><%= h user.role %></td>
+    <td><%= h user.roles %></td>
     <td>
       <%= link_to 'Edit', edit_user_path(user)  %>
       <%= link_to 'Destroy', user, :confirm => 'Are you sure?', :method => :delete  %>
