@@ -31,15 +31,7 @@
 <h4>  
   <%= "Toutes les CVs"%>
 </h4>  
-  <% @cv_all.each do |cv| %>
-   <%- unless belongs_to_user?(cv) %>
-     <%- if cv.published %>
-     <p>
-      <%=h cv.title %>
-      <%=h cv.summary %>
-      <%= link_to 'Show', cv %>
-      </p>
-    <% end %>
-  <% end %>
-  <% end %>
+<p>
+  <%= render @cv_all %>
+</p>
 </div> 
