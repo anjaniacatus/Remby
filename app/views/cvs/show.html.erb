@@ -46,12 +46,10 @@
     <%= render @cv.other_skills%>
   <% end %>
 </div>
-<% if permitted_to? :update %>
+<% if current_user == @cv.civil_status.user %>
    <% @civil_status = current_user.civil_status %> 
-   <%= link_to 'Edit', edit_civil_status_cv_path(@civil_status, @cv) %> 
-<% end %>
-<%- unless @civil_status.blank? %>
-  <%= link_to 'Back', civil_status_cvs_path(@civil_status)%>
-<%- else %>
+   <%= link_to 'Edit', edit_civil_status_cv_path(@civil_status, @cv) %>
+   <%= link_to 'Back', civil_status_cvs_path(@civil_status)%>
+ <% else %>
   <%= link_to 'Back', root_path %>
 <% end %>

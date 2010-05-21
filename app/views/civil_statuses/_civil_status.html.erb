@@ -1,19 +1,25 @@
 <div id="civil_status">
+  <% user = civil_status.user %>
+  <% @civil_status = user.civil_status %>
   <%= civil_status.family_name %>
   <%= civil_status.name %>
   <%= civil_status.birthday %>
+  <%= check_age %>
   <%= civil_status.hometown %>
   <%= civil_status.current_city %>
   <%= civil_status.gender %>
   <%= civil_status.status %>
-  <%= check_age  %>
-  <%= mail_to current_user.email %>
-  <%= render civil_status.contact_infos %>
-  <%= link_to 'Edit', edit_civil_status_path(civil_status) %>
-  <%= link_to 'Destroy', civil_status, :confirm => 'Are you sure?', :method => :delete %>
+  
+  <div id="Contact">
+    <%= mail_to civil_status.user.email %>
+    <%= render civil_status.contact_infos %>
   </div>
+  
+  <%- if user == current_user %>
+    <%= link_to 'Edit', edit_civil_status_path(civil_status) %>
+    <%= link_to 'Destroy', civil_status, :confirm => 'Are you sure?', :method => :delete %>
+    <%= link_to 'CV disponible', civil_status_cvs_path(@civil_status) %>
+    <%= link_to 'Create_CV', new_civil_status_cv_path(@civil_status)%>
+  <% end %>
 
-<div id="cv_manage">  
-  <%= link_to 'CV disponible', civil_status_cvs_path(@civil_status) %>
-  <%= link_to 'Create_CV', new_civil_status_cv_path(@civil_status)%>
 </div>
