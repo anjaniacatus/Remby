@@ -13,7 +13,6 @@
   <% end %>
   <% end %>
   <%- unless @civil_status.blank? %>
-  <br />
     <%= link_to 'Back', civil_status_path(@civil_status)%>
     <%= link_to 'New cv', new_civil_status_cv_path(@civil_status) %>
   <% end %>

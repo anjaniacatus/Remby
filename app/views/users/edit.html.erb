@@ -1,5 +1,4 @@
 <h1>Editing user: <%= h @userp.username%></h1>
-
 <% form_for(@userp) do |f| %>
   <%= f.error_messages %>
 
@@ -19,12 +18,11 @@
   </p>
 
   <p>
-  <%- if is_admin? %>
+  <%- if current_user && is_admin? %>
     <%= f.label :roles %><br />
     <%= f.select :roles, (controller.authorization_engine.roles) %>
   <% end %>  
   </p>
-  
   <p>
     <%= f.submit "Update" %>
   </p>

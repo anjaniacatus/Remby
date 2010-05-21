@@ -1,7 +1,7 @@
 class CivilStatusesController < ApplicationController
   # GET /civil_statuses
   # GET /civil_statuses.xml
-  filter_resource_access 
+  #filter_resource_access 
   def index
     @civil_statuses = CivilStatus.all
     if current_user

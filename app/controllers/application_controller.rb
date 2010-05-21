@@ -7,7 +7,7 @@ class ApplicationController < ActionController::Base
   before_filter :set_current_user
   # Scrub sensitive parameters from your log
   # filter_parameter_logging :password
-  helper_method :current_user, :is_admin? 
+  helper_method :current_user, :is_admin?, :belongs_to_user? 
   
   def current_user_session
     return @current_user_session if defined?(@current_user_session) 
@@ -30,6 +30,16 @@ class ApplicationController < ActionController::Base
     else
       false
     end
+  end
+  
+  def belongs_to_user?(cv)
+     unless current_user.blank?
+       if current_user.civil_status == cv.civil_status
+         true
+       else
+         false
+       end
+     end
   end
   
   protected

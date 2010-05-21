@@ -1,6 +1,7 @@
 authorization do 
   role :admin do
-    has_permission_on [:civil_statuses, :users, :cvs, :compagnies], :to => :manage
+    has_permission_on [ :users, :cvs, :compagnies], :to => :manage
+    has_permission_on [:civil_statuses], :to => :read
     has_permission_on :authorization_rules, :to => :read
     has_permission_on :authorization_usages, :to => :read
   end

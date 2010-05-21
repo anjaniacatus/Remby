@@ -23,7 +23,7 @@
   <%- unless current_user.civil_status.blank? %>
     <%= render @civil_status %>
   <% else %>
-   <%= link_to 'New civil_status', new_civil_status_path %>
+   <%= link_to 'New civil_status', new_civil_status_path if permitted_to? :create %>
   <% end %>
 <% end %>
 
@@ -32,12 +32,14 @@
   <%= "Toutes les CVs"%>
 </h4>  
   <% @cv_all.each do |cv| %>
-   <%- if cv.published %>
-    <p>
+   <%- unless belongs_to_user?(cv) %>
+     <%- if cv.published %>
+     <p>
       <%=h cv.title %>
       <%=h cv.summary %>
       <%= link_to 'Show', cv %>
-    </p>
+      </p>
+    <% end %>
   <% end %>
   <% end %>
 </div> 
