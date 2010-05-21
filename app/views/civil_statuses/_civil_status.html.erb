@@ -1,12 +1,14 @@
 <div id="civil_status">
   <%= civil_status.family_name %>
   <%= civil_status.name %>
-  <% #civil_status.age %>
   <%= civil_status.birthday %>
   <%= civil_status.hometown %>
   <%= civil_status.current_city %>
   <%= civil_status.gender %>
   <%= civil_status.status %>
+  <%= check_age  %>
+  <%= mail_to current_user.email %>
+  <%= render civil_status.contact_infos %>
   <%= link_to 'Edit', edit_civil_status_path(civil_status) %>
   <%= link_to 'Destroy', civil_status, :confirm => 'Are you sure?', :method => :delete %>
   </div>

@@ -1,19 +1,9 @@
 <p>
 <%- unless @cv.civil_status.blank? %> 
-  <%= @cv.civil_status.family_name%>
-  <%= @cv.civil_status.name%>
-  <p>
-    <%= @cv.civil_status.age %> ans
-    <%= @cv.civil_status.status%>
-  </p>
-  <p>
-    <%= render @cv.civil_status.contact_infos %>
-  </p>
+  <%= render @cv.civil_status %>
 <% end %>
-<p>
 
-<p>
-  <b>Title:</b>
+<b>Title:</b>
   <%=h @cv.title %>
 </p>
 

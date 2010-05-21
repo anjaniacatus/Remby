@@ -14,5 +14,14 @@ module CivilStatusesHelper
       render(:partial => child.underscore, :locals => { :f => f })
     end
   end
-
+#to calculate age automaticly from "birthday"
+  def check_age
+    birth = @civil_status.birthday.year 
+    t = Time.now
+    a = t.to_a
+    @civil_status.age = a[5] - birth
+    age = @civil_status.age.to_s
+    age += " ans"
+  end
+  
 end
