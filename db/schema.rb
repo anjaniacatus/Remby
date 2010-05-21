@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100520062311) do
+ActiveRecord::Schema.define(:version => 20100521110046) do
 
   create_table "civil_statuses", :force => true do |t|
     t.string   "family_name"
@@ -59,6 +59,7 @@ ActiveRecord::Schema.define(:version => 20100520062311) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.boolean  "published"
+    t.string   "field"
   end
 
   create_table "degree_courses", :force => true do |t|

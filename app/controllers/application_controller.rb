@@ -32,6 +32,7 @@ class ApplicationController < ActionController::Base
     end
   end
   
+   
   def belongs_to_user?(cv)
      unless current_user.blank?
        if current_user.civil_status == cv.civil_status

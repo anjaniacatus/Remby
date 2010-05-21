@@ -1,13 +1,11 @@
 <div class="child">
-    <%= f.text_field_with_auto_complete :title, {}, { :method => :get, :skip_style => true } %>
-  </p>
   <p>
-  Language <%= f.label :description %><br />
-    <%= f.text_area :description %>
+    <%= f.label :title %>
+    <%= f.select :title, Language::Titles %>
   </p>
-  <p>
+    <p>
     Language <%= f.label :level %>
-    <%= f.text_field_with_auto_complete :level, {}, { :method => :get, :skip_style => true } %>
+    <%= f.select :level, Language::Levels %>
   </p>
   <p>
     <%= f.hidden_field :_delete, :class => 'delete' %>

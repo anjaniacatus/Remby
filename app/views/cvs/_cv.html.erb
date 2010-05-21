@@ -1,9 +1,7 @@
-<%-if cv.published %>
-  <%- unless belongs_to_user?(cv) %>
-    <p>
-      <%=h cv.title %>
-      <%=h cv.summary %>
-      <%= link_to 'Show', cv %>
-    </p>
-    <% end %>
-<% end %>
+<p>
+<%if cv.published == true %>
+  <%=h cv.title %>
+  <%=h cv.summary %>
+  <%= link_to 'Show', cv %>
+<% end %>  
+</p>
