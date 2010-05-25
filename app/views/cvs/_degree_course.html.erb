@@ -1,11 +1,11 @@
 <div class="child">
   <p>
     DegreeCourse <%= f.label :degree_name %>
-    <%= f.text_field :degree_name %>
+    <%= f.select :degree_name, DegreeCourse::Degree_Names %>
   </p>
   <p>
-    DegreeCourse_field <%= f.text_field_with_auto_complete :field, {}, { :method => :get, :skip_style => true } %>
-  </p>
+    DegreeCourse_field <%= f.select :field,  (DegreeCourse::Field ), {:multiple => true} %>
+    </p>
     
   <p>
   DegreeCourse <%= f.label :description %>

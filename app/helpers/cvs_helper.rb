@@ -15,6 +15,7 @@ module CvsHelper
     end
   end
   
+  
   def published?(cv)
      cv.published == "true"
      true  
