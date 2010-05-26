@@ -1,37 +1,31 @@
 
 <p>
-  <%= f.label :family_name %>
-  <%= f.text_field :family_name %>
+  <%= f.input:family_name  , :label => "Votre Nom ici...", :hint => "Votre nom ici."
+ %>
 </p>
 
 <p>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
+<%= f.input :name , :label => "Votre prenom test....", :hint => "blabla"%>
 </p>
 
 <p>
-  <%= f.label :birthday %>
-  <%= f.date_select :birthday, :start_year => 1930, :use_month_numbers => true, :order => [:day, :month, :year] %>
+<%= f.input :birthday, :label => "Date de naissance",:start_year => 1930, :use_month_numbers => true, :order => [:day, :month, :year] %>
 </p>
 
 <p>
-  <%= f.label :hometown %>
-  <%= f.text_field :hometown %>
+<%= f.input :hometown, :label => "Lieu de naissance" %>
 </p>
 
 <p>
-  <%= f.label :current_city %>
-  <%= f.text_field :current_city %>
+<%= f.input :current_city, :label => "Ville" %>
 </p>
 
 <p>
-  <%= f.label :gender %>
-  <%= f.select :gender, CivilStatus::Genders %>
+<%= f.input :gender, :collection => ["female", "male"] %>
 </p>
 
 <p>
-  <%= f.label :status %>
-  <%= f.select :status, CivilStatus::Statuses %>
+  <%= f.input :status, :collection => ["married", "single"] %>
 </p>
 
 <div id='contact_info_children'>
