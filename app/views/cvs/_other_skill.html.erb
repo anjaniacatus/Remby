@@ -1,11 +1,9 @@
 <div class="child">
   <p>
-    OtherSkill <%= f.label :title %>
-    <%= f.text_field :title %>
+    <%= f.input :title %>
   </p>
   <p>
-    OtherSkill <%= f.label :description %><br />
-    <%= f.text_area :description, :cols => "50", :rows => "3" %>
+  <%= f.input :description, :input_html => {:cols => 50, :rows => '3'} %>
   </p>
   <p>
     <%= f.hidden_field :_delete, :class => 'delete' %>

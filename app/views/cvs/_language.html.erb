@@ -1,11 +1,9 @@
 <div class="child">
   <p>
-    <%= f.label :title %>
-    <%= f.select :title, Language::Titles %>
+  <%= f.input :title, :collection => ["english", "malagasy", "français", "japonais", "italien", "espagnol", "chinois", "allemand", "russe", "arabe"]  %>
   </p>
     <p>
-    Language <%= f.label :level %>
-    <%= f.select :level, Language::Levels %>
+    <%= f.input :level, :collection => ["maternelle", "avancé", "moyen", "débutant"] %>
   </p>
   <p>
     <%= f.hidden_field :_delete, :class => 'delete' %>

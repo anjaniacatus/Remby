@@ -3,22 +3,26 @@
     DegreeCourse <%= f.label :degree_name %>
     <%= f.select :degree_name, DegreeCourse::Degree_Names %>
   </p>
+  
+  <p>
+    <%= f.input :school %>
+  </p>
   <p>
     DegreeCourse_field <%= f.select :field,  (DegreeCourse::Field ), {:multiple => true} %>
-    </p>
-    
-  <p>
-  DegreeCourse <%= f.label :description %>
-  <br /><%= f.text_area :description, :cols => "50", :rows => "3" %>
   </p>
+  
   <p>
-    DegreeCourse <%= f.label :start_on %>
-    <%= f.date_select :start_on %>
+    <%= f.input :description, :input_html => {:cols => 50, :rows => '3'} %>
   </p>
+  
   <p>
-    DegreeCourse <%= f.label :end_on %>
-    <%= f.date_select :end_on %>
+    <%= f.input :start_on, :start_year => 1960%>
   </p>
+  
+  <p>
+    <%= f.input :end_on, :start_year => 1960 %>
+  </p>
+  
   <p>
     <%= f.hidden_field :_delete, :class => 'delete' %>
     <%= remove_child_link 'remove', f %>

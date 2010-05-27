@@ -1,7 +1,6 @@
 <div class="child">
   <p>
-    Interest <%= f.label :description %><br />
-    <%= f.text_area :description, :cols => "50", :rows => "3" %>
+  <%= f.input :description, :input_html => {:cols => 50, :rows => '3'}, :label => "centre d'interet" %>
   </p>
   <p>
     <%= f.hidden_field :_delete, :class => 'delete' %>

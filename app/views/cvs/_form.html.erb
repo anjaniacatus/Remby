@@ -1,8 +1,7 @@
 <%= f.error_messages %>
 
 <p>
-  <%= f.label :title %><br />
-  <%= f.text_field_with_auto_complete :title, {}, { :method => :get, :skip_style => true } %>
+  <%= f.input :title %>
 </p>
 
 <p>
@@ -62,7 +61,7 @@
 
 <p>
   <%= f.label :published %><br />
-  <%= f.check_box :published %>
+  <%= f.input :published, :as => :radio %>
 </p>
 
 

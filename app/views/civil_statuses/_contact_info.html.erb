@@ -4,8 +4,7 @@
   <%= f.select :value_format, ContactInfo::ValueFormats.map { |t| [ t[0], ContactInfo::ValueFormats.index(t) ] }, :selected => f.object.value_format.to_i %>
 </p>
 <p>
-  <%= f.label :value %><br />
-  <%= f.text_field :value %>
+  <%= f.input :value %>
 </p>
 <p>
     <%= f.hidden_field :_destroy, :class => 'delete' %>
