@@ -1,4 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :images
+
 
   map.connect 'auto_complete_for_degree_course_field', :controller => 'cvs', :action => 'auto_complete_for_degree_course_field'
 

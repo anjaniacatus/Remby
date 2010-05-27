@@ -1,0 +1,22 @@
+<p>
+  <b>Title:</b>
+  <%=h @image.title %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%=h @image.description %>
+</p>
+
+<p>
+  <b>Url:</b>
+  <%=h @image.url %>
+</p>
+
+<p>
+<%= image_tag fleximage_path(@image) %>
+
+</p>
+
+<%= link_to 'Edit', edit_image_path(@image) %> |
+<%= link_to 'Back', images_path %>

@@ -6,4 +6,5 @@ class CivilStatus < ActiveRecord::Base
   has_friendly_id :name, :use_slug => true, :strip_diacritics => true
   accepts_nested_attributes_for :contact_infos, :allow_destroy => true
   accepts_nested_attributes_for :cvs, :allow_destroy => true
+   acts_as_illustrated
 end

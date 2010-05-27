@@ -29,4 +29,13 @@ module ApplicationHelper
       @typeof
     end
   end
+  
+  def fleximage_path(record, size = nil)
+    if size
+      polymorphic_url(record, :format => :jpg, :fleximage_sizes => size, :role => nil, :locale => :img, :fleximage_date => record.updated_at.t("%y%m%d"))
+    else
+      polymorphic_url(record, :format => :jpg, :role => nil, :locale => :img, :fleximage_date => record.updated_at.t("%y%m%d"))
+    end
+  end
+
 end

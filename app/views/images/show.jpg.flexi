@@ -1,0 +1,15 @@
+ @image.operate do |image|
+  if params[:fleximage_sizes] == "tiny"
+    image.resize '32x30', :crop => true
+  elsif params[:fleximage_sizes] == "thumb"
+    image.resize '118x110', :crop => true
+  elsif params[:fleximage_sizes] =~ /(\d+)_w/
+    image.resize $1 + "x" + $1
+  elsif params[:fleximage_sizes] =~ /(\d+)_h/
+    image.resize $1 + "x" + $1
+  elsif params[:fleximage_sizes] =~ /\d+x\d+/
+    image.resize params[:fleximage_sizes], :crop => true
+  else
+    image
+  end
+end
