@@ -10,7 +10,9 @@ class Cv < ActiveRecord::Base
   accepts_nested_attributes_for :languages, :allow_destroy => true
   accepts_nested_attributes_for :interests, :allow_destroy => true
   accepts_nested_attributes_for :other_skills, :allow_destroy => true
-  
+
+   has_friendly_id :title, :use_slug => true, :strip_diacritics => true
+
   def cv_user
     self.civil_status.user
   end

@@ -1,7 +1,6 @@
 <div class="child">
   <p>
-    DegreeCourse <%= f.label :degree_name %>
-    <%= f.select :degree_name, DegreeCourse::Degree_Names %>
+    <%= f.input :degree_name, :collection => ["bac scientifique", "bac literaire","bac technique","formation", "bac + 1", "bac + 2", "license", "master M1", "master M2","DEA", "Phd" ] %>
   </p>
   
   <p>
