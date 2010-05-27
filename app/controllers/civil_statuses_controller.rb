@@ -1,7 +1,8 @@
 class CivilStatusesController < ApplicationController
   # GET /civil_statuses
   # GET /civil_statuses.xml
-  #filter_resource_access 
+  #filter_resource_access
+  caches_page :show, :if => Proc.new { |c| c.request.format.jpg? }
   def index
     @civil_statuses = CivilStatus.all
     if current_user
@@ -20,6 +21,7 @@ class CivilStatusesController < ApplicationController
     @civil_status = CivilStatus.find(params[:id])
 
     respond_to do |format|
+      format.jpg
       format.html # show.html.erb
       format.xml  { render :xml => @civil_status }
     end
