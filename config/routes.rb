@@ -2,7 +2,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :images
 
 
-  map.connect 'auto_complete_for_degree_course_field', :controller => 'cvs', :action => 'auto_complete_for_degree_course_field'
+  map.connect 'auto_complete_for_degree_course_field', :controller => 'degree_courses', :action => 'auto_complete_for_degree_course_field'
 
   map.resources :cvs
   map.resources :civil_statuses do |civil_status|

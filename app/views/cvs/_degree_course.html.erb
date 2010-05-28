@@ -6,8 +6,10 @@
   <p>
     <%= f.input :school %>
   </p>
+  <%= f.label :field %>
+  <%= text_field_with_auto_complete :field, :field_name, {}, :method => :get %>
   <p>
-    DegreeCourse_field <%= f.select :field,  (DegreeCourse::Field ), {:multiple => true} %>
+ 
   </p>
   
   <p>

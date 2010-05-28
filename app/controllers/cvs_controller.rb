@@ -1,7 +1,7 @@
 class CvsController < ApplicationController
   before_filter :nested_in => :civil_statuses
   before_filter :new_cv_from_params
-  auto_complete_for :degree_course, :field
+  auto_complete_for :degree_course, :field_name
   auto_complete_for :experience, :compagny_id
   auto_complete_for :experience, :jobtitle
   auto_complete_for :experience, :job_id

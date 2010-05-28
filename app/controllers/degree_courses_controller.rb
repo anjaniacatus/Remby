@@ -1,5 +1,5 @@
 class DegreeCoursesController < ApplicationController
-
+  auto_complete_for :field, :field_name
 
   # GET /degree_courses
   # GET /degree_courses.xml
