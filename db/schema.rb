@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100527233843) do
+ActiveRecord::Schema.define(:version => 20100530131128) do
 
   create_table "civil_statuses", :force => true do |t|
     t.string   "family_name"
@@ -60,13 +60,11 @@ ActiveRecord::Schema.define(:version => 20100527233843) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.boolean  "published"
-    t.string   "field"
   end
 
   create_table "degree_courses", :force => true do |t|
     t.integer  "school_id"
     t.string   "degree_name"
-    t.string   "field"
     t.text     "description"
     t.integer  "cv_id"
     t.date     "start_on"
@@ -74,6 +72,7 @@ ActiveRecord::Schema.define(:version => 20100527233843) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "field_id"
+    t.integer  "domain_id"
   end
 
   create_table "domains", :force => true do |t|

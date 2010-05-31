@@ -9,6 +9,7 @@
   <% if belongs_to_user?(cv) || cv.published == true %>
     <%=h cv.title %>
     <%=h cv.summary %>
+
     <%= link_to 'Show', cv %>
   <% end %> 
  <% end %>

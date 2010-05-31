@@ -1,7 +1,11 @@
 <div class 'degree_course'>
   <%= degree_course.school_id %>
   <%= degree_course.degree_name %>
-  <%= degree_course.field_name %>
+  <%- unless degree_course.domain.blank? %>
+    <%= degree_course.domain.name %>
+  <% else %>  
+    <%= "no field !!"%>
+  <% end %> 
   <%= degree_course.description %>
   <%= degree_course.start_on %>
   <%= degree_course.end_on %>

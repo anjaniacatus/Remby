@@ -6,10 +6,11 @@
   <p>
     <%= f.input :school %>
   </p>
-  <%= f.label :field %>
-  <%= text_field_with_auto_complete :field, :field_name, {}, :method => :get %>
+  
   <p>
- 
+  <%- f.fields_for :domain  do |domain| %>
+    <%= domain.text_field_with_auto_complete :name, {}, {:method => :get, :skip_style => :true} %>
+  <% end %>
   </p>
   
   <p>

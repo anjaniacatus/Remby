@@ -7,10 +7,11 @@ authorization do
   end
   
   role :member do
-   has_permission_on :civil_statuses, :to => :manage do
+   has_permission_on :civil_statuses, :images, :to => :manage do
      if_attribute :user => is {user}
    end
-   has_permission_on :cvs, :to => :read do
+
+   has_permission_on :cvs, :images, :to => :read do
      if_attribute :published => :true
    end
    has_permission_on :cvs, :to => :manage do
