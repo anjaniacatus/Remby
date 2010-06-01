@@ -8,8 +8,8 @@
   </p>
   
   <p>
-  <%- f.fields_for :domain  do |domain| %>
-    <%= domain.text_field_with_auto_complete :name, {}, {:method => :get, :skip_style => :true} %>
+  <%- fields_for @field  do |fi| %>
+    <%= fi.text_field :field_name  %>
   <% end %>
   </p>
   
