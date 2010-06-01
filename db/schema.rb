@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100531081119) do
+ActiveRecord::Schema.define(:version => 20100601120336) do
 
   create_table "civil_statuses", :force => true do |t|
     t.string   "family_name"
@@ -243,6 +243,15 @@ ActiveRecord::Schema.define(:version => 20100531081119) do
     t.string   "name"
     t.text     "description"
     t.date     "founded_on_year"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "searches", :force => true do |t|
+    t.integer  "field_id"
+    t.string   "keywords"
+    t.date     "after"
+    t.date     "before"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
