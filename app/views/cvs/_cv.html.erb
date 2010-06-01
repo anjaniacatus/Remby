@@ -3,6 +3,19 @@
 <%- if cv.published == true %>
   <%=h cv.title %>
   <%=h cv.summary %>
+  <div id="photo">
+    <%= image_tag fleximage_path(cv.civil_status)%>
+  </div>
+  
+  <div id = "field" >
+  <%=h"Etude effectué "%>
+  <%- cv.degree_courses.each do |dc| %>
+    <p>
+      <%= dc.field.field_name %>
+    </p> 
+  <% end %>
+  </div>
+  </p>
   <%= link_to 'Show', cv %>
 <% end %> 
 <% else %>

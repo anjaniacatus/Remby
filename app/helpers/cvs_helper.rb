@@ -20,5 +20,16 @@ module CvsHelper
      cv.published == "true"
      true  
   end
-
+  
+  def degrees(cv)
+    @d = nil
+    i = 0
+    unless cv.blank?
+      cv.degree_courses.each do |dc| 
+        @d[i] = dc.field.field_name
+        i = i + 1
+      end
+      @d
+    end
+  end
 end

@@ -12,7 +12,12 @@
   <%=h @cv.summary %>
 </p>
 
-<div class="child">
+<%= "Etude effectué: "%>
+<% @degrees.each do |f|  %>
+  <%= f.field.field_name %> 
+<% end %>
+<div class="child"
+  >
    <%- unless @cv.degree_courses.blank? %>
       <h3> Degree_courses </h3> 
      <%= render @cv.degree_courses%>

@@ -15,7 +15,7 @@ class CvsController < ApplicationController
       @cvs = @civil_status.cvs
     else
       @cvs = Cv.all
-    #@cv_paginates = Cv.search(params[:search], params[:page])
+         #@cv_paginates = Cv.search(params[:search], params[:page])
     end
      respond_to do |format|
       format.html # index.html.erb
@@ -27,11 +27,13 @@ class CvsController < ApplicationController
   # GET /cvs/1.xml
   def show
    if params[:civil_status_id] 
-    @civil_status = CivilStatus.find(params[:civil_status_id])
-    @cv = @civil_status.cvs.find(params[:id])
-  else
-    @cv = Cv.find(params[:id])
-  end
+      @civil_status = CivilStatus.find(params[:civil_status_id])
+      @cv = @civil_status.cvs.find(params[:id])
+      @degrees  = @cv.degree_courses(:all)
+    else
+      @cv = Cv.find(params[:id])
+       @degrees  = @cv.degree_courses(:all)
+    end
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @cv }
