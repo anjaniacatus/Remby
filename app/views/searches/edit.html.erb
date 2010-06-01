@@ -1,0 +1,28 @@
+<h1>Editing search</h1>
+
+<% form_for(@search) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :field_id %><br />
+    <%= f.text_field :field_id %>
+  </p>
+  <p>
+    <%= f.label :keywords %><br />
+    <%= f.text_field :keywords %>
+  </p>
+  <p>
+    <%= f.label :after %><br />
+    <%= f.date_select :after %>
+  </p>
+  <p>
+    <%= f.label :before %><br />
+    <%= f.date_select :before %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @search %> |
+<%= link_to 'Back', searches_path %>

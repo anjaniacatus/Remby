@@ -1,0 +1,23 @@
+<p>
+  <b>Field:</b>
+  <%=h @search.field_id %>
+</p>
+
+<p>
+  <b>Keywords:</b>
+  <%=h @search.keywords %>
+</p>
+
+<p>
+  <b>After:</b>
+  <%=h @search.after %>
+</p>
+
+<p>
+  <b>Before:</b>
+  <%=h @search.before %>
+</p>
+
+
+<%= link_to 'Edit', edit_search_path(@search) %> |
+<%= link_to 'Back', searches_path %>
