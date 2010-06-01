@@ -1,11 +1,10 @@
 class DegreeCoursesController < ApplicationController
-  auto_complete_for :domain, :name
 
   # GET /degree_courses
   # GET /degree_courses.xml
   def index
     @degree_courses = DegreeCourse.all
-
+    
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @degree_courses }
@@ -16,7 +15,7 @@ class DegreeCoursesController < ApplicationController
   # GET /degree_courses/1.xml
   def show
     @degree_course = DegreeCourse.find(params[:id])
-    @degree_course.domain.find(params[:id])
+    @degree_course.field.find(params[:id])
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @degree_course }
@@ -27,7 +26,6 @@ class DegreeCoursesController < ApplicationController
   # GET /degree_courses/new.xml
   def new
     @degree_course = DegreeCourse.new
-    @degree_course.domain.new
 
     respond_to do |format|
       format.html # new.html.erb
@@ -44,7 +42,7 @@ class DegreeCoursesController < ApplicationController
   # POST /degree_courses.xml
   def create
     @degree_course = DegreeCourse.new(params[:degree_course])
-    @degree_course.domain.new(params[:domain])
+    @degree_course.field.new(params[:field])
     respond_to do |format|
       if @degree_course.save
         flash[:notice] = 'DegreeCourse was successfully created.'
@@ -86,4 +84,6 @@ class DegreeCoursesController < ApplicationController
       format.xml  { head :ok }
     end
   end
+
+   
 end
