@@ -10,14 +10,12 @@ class Cv < ActiveRecord::Base
   accepts_nested_attributes_for :languages, :allow_destroy => true
   accepts_nested_attributes_for :interests, :allow_destroy => true
   accepts_nested_attributes_for :other_skills, :allow_destroy => true
+  named_scope :titled ,:conditions => {:title => "test" } 
 
-   has_friendly_id :title, :use_slug => true, :strip_diacritics => true
+  has_friendly_id :title, :use_slug => true, :strip_diacritics => true
 
   def cv_user
     self.civil_status.user
   end
-  #def self.search(search, page)
-    #paginate :per_page => 2, :page => page
-  #end
 
 end

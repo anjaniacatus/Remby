@@ -3,8 +3,9 @@ class JobsController < ApplicationController
   # GET /jobs.xml
   def index
     if params[:society_id]
-      @society = Society.find(params[:society_id])
-      @jobs = @society.jobs
+      #@compagny = Compagny.find(params[:society_id])
+      #@jobs = @compagny.jobs
+      @jobs = Job.find(:all)
     end
     respond_to do |format|
       format.html # index.html.erb
@@ -25,20 +26,20 @@ class JobsController < ApplicationController
   # GET /jobs/new
   # GET /jobs/new.xml
   def new
-    if params[:society_id]
-      @society = Society.find(params[:society_id])
-      @job = @society.jobs.new
-    else
-      flash[:error] = t(:cannot_find_jobs, :default => "Misy diso")
-      redirect_to societies_path
-    end
+    #if params[:society_id]
+      #@compagny = Society.find(params[:society_id])
+      #@job = @compagny.jobs.new
+    #else
+    @job = Job.new  
+    flash[:error] = t(:cannot_find_jobs, :default => "Misy diso")
+    #end
   end
 
   # GET /jobs/1/edit
   def edit
     if params[:society_id]
-      @society = Society.find(params[:society_id])
-      @job = @society.jobs.find(params[:id])
+      #@compagny = Compagny.find(params[:society_id])
+      @job = @compagny.jobs.find(params[:id])
     else
       flash[:error] = t(:cannot_find_jobs, :default => "Misy diso")
       redirect_to jobs_path
@@ -48,13 +49,13 @@ class JobsController < ApplicationController
   # POST /jobs
   # POST /jobs.xml
   def create
-    @society = Society.find(params[:society_id])
-    @job = @society.jobs.new(params[:job])
+    #@compagny = Society.find(params[:society_id])
+    @job = Job.new(params[:job])
 
     respond_to do |format|
       if @job.save
         flash[:notice] = 'job was successfully created.'
-        format.html { redirect_to(@society) }
+        format.html { redirect_to(@compagny) }
         format.xml  { render :xml => @job, :status => :created, :location => @job }
       else
         format.html { render :action => "new" }
@@ -83,12 +84,13 @@ class JobsController < ApplicationController
   # DELETE /jobs/1
   # DELETE /jobs/1.xml
   def destroy
-    @job = Job.find(params[:id], :include => :society)
-    @society = @job.society
+    @job = Job.find(params[:id])
+    #@job = Job.find(params[:id], :include => :compagny)
+    #@compagny = @job.compagny
     @job.destroy
 
     respond_to do |format|
-      format.html { redirect_to(@society) }
+      format.html { redirect_to(@compagny) }
       format.xml  { head :ok }
     end
   end

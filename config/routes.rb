@@ -20,7 +20,7 @@ ActionController::Routing::Routes.draw do |map|
     end
   end  
  
-  map.resources :offerings
+  map.resources :jobs
   map.resources :notes
   map.resources :domains
   map.resources :localisations
