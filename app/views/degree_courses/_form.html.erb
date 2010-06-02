@@ -1,25 +1,9 @@
 <div class='child'>
-  <p>
-    <%= f.input :school %>
-  </p>
   
-  <p>
-    <%= f.select :degree_name, DegreeCourse::Degree_Names %>
-  </p>
-  
-  <p>
-    <%= f.label :description %><br />
-    <%= f.text_area :description %>
-  </p>
-  
-  <p>
-    <%= f.input :start_on %>
-  </p>
-  
-  <p>
-    <%= f.input :end_on %>
-  </p>
-
+<div class="localisations">
+  <% params = { :f => form, :default => "N/A" } %>
+  <%= render :partial => 'fields/select', :locals => params %>
 </div>
 
 
+ 

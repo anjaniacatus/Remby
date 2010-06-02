@@ -15,7 +15,6 @@ class DegreeCoursesController < ApplicationController
   # GET /degree_courses/1.xml
   def show
     @degree_course = DegreeCourse.find(params[:id])
-    @degree_course.field.find(params[:id])
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @degree_course }
@@ -26,7 +25,7 @@ class DegreeCoursesController < ApplicationController
   # GET /degree_courses/new.xml
   def new
     @degree_course = DegreeCourse.new
-
+    @field = Field.new
     respond_to do |format|
       format.html # new.html.erb
       format.xml  { render :xml => @degree_course }
@@ -42,7 +41,6 @@ class DegreeCoursesController < ApplicationController
   # POST /degree_courses.xml
   def create
     @degree_course = DegreeCourse.new(params[:degree_course])
-    @degree_course.field.new(params[:field])
     respond_to do |format|
       if @degree_course.save
         flash[:notice] = 'DegreeCourse was successfully created.'

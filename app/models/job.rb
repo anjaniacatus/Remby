@@ -14,7 +14,9 @@ class Job < ActiveRecord::Base
   end
 
   def my_function
-    "[#{function.name}]" unless new_record?
+    unless function.blank?
+      "#{function.name}" unless new_record?
+    end
   end
 
   def my_localisation=(my) # "[localisation]"
@@ -25,17 +27,22 @@ class Job < ActiveRecord::Base
   end
 
   def my_localisation
-    "[#{localisation.name}]" unless new_record?
+    unless localisation.blank?
+      "#{localisation.name}" unless new_record?
+    end
   end
 
   def my_contract=(my) # "[contract]"
     if my and !my.blank?
       contract_name = my.scan(/(\[([^\]]*)\])/)[0]
       self.contract = Contract.find_or_create_by_name(my.titleize)
+    else
     end
   end
 
   def my_contract
-    "[#{contract.name}]" unless new_record?
+    unless contract.blank?
+      "#{contract.name}" unless new_record?    
+    end
   end
 end

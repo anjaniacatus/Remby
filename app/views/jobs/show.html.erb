@@ -4,8 +4,12 @@
   </p>
   <p align ="center">
   <%= "la societe...." %>
-  <%= @job.function.name  %>   " un poste basé à: "
-  <%= @job.localisation.name %>
+  <% unless @job.function.blank? %>
+    <%= @job.function.name  %>   " un poste basé à: "
+  <% end %>
+  <% unless @job.localisation.blank? %>
+    <%= @job.localisation.name %> 
+  <% end %>  
   </p>
   <% if @job.contract.blank? %>
     <p>Le type de contrat sera à déterminer lors de l'entretien</p>
@@ -37,4 +41,4 @@
 </div>
 
 <%= link_to 'Edit', edit_job_path(@job) %> |
-<%= link_to 'Back', compagny_path %>
+<%= link_to 'Back', jobs_path %>
