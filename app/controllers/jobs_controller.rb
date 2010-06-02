@@ -2,9 +2,11 @@ class JobsController < ApplicationController
   # GET /jobs
   # GET /jobs.xml
   def index
-    if params[:society_id]
+    if params[:compagny_id]
       #@compagny = Compagny.find(params[:society_id])
       #@jobs = @compagny.jobs
+      @jobs = Job.find(:all)
+    else
       @jobs = Job.find(:all)
     end
     respond_to do |format|
@@ -30,19 +32,23 @@ class JobsController < ApplicationController
       #@compagny = Society.find(params[:society_id])
       #@job = @compagny.jobs.new
     #else
-    @job = Job.new  
+    @job = Job.new
+    @function = Function.new
+    @localisation = Localisation.new
+    @contract = Contract.new
+    
     flash[:error] = t(:cannot_find_jobs, :default => "Misy diso")
     #end
   end
 
   # GET /jobs/1/edit
   def edit
-    if params[:society_id]
+    if params[:compagny_id]
       #@compagny = Compagny.find(params[:society_id])
       @job = @compagny.jobs.find(params[:id])
     else
+      @job = Job.find(params[:id])
       flash[:error] = t(:cannot_find_jobs, :default => "Misy diso")
-      redirect_to jobs_path
     end
   end
 
@@ -55,7 +61,7 @@ class JobsController < ApplicationController
     respond_to do |format|
       if @job.save
         flash[:notice] = 'job was successfully created.'
-        format.html { redirect_to(@compagny) }
+        format.html { redirect_to(@job) }
         format.xml  { render :xml => @job, :status => :created, :location => @job }
       else
         format.html { render :action => "new" }

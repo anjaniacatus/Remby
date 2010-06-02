@@ -7,16 +7,6 @@
 #   Major.create(:name => 'Daley', :city => cities.first)
 #user account Creation
 =begin
-puts "Creating account."
-params = {
-  :username => "catus",
-  :email => "catus@yahoo.fr",
-  :role => 1,
-  :password => "catus",
-  :password_confirmation => "catus",
-}
-user = User.create!(params)
-puts "Account created"
 =end
 puts "Creating localisation's job"
 antananarivo = Localisation.create :name => "Antananarivo"
@@ -47,15 +37,4 @@ interim = Contract.create :name => "Intérimaire"
 puts "Contract's job created"
 puts "Done!!!"
 #creating civil_status
-params = {
-:name => "Rakotonjanahary",
-:lastname => "Aina Anjary Fenomamy",
-:age => 23,
-:status => "celibataire",
-:sex => "femme"
-:hometown => "Antsirabe"
-:current_city => "Antanarivo"}
-civil_status = CivilStatus.create(params)
-puts "civil status created!!!"
-=end
 

@@ -3,9 +3,11 @@
     <b>Ref:</b><%=h @job.ref %>
   </p>
   <p align ="center">
-    <%= @job.society.name %>&nbsp;recrute un(e)&nbsp;<%=  @job.function.name %>, un poste basé à&nbsp;<%= @job.localisation.name %>
+  <%= "la societe...." %>
+  <%= @job.function.name  %>   " un poste basé à: "
+  <%= @job.localisation.name %>
   </p>
-  <% if @job.contract == "" %>
+  <% if @job.contract.blank? %>
     <p>Le type de contrat sera à déterminer lors de l'entretien</p>
   <% else %>
     <p>
@@ -34,5 +36,5 @@
   </p>
 </div>
 
-<%= link_to 'Edit', edit_society_job_path(@job) %> |
-<%= link_to 'Back', society_path %>
+<%= link_to 'Edit', edit_job_path(@job) %> |
+<%= link_to 'Back', compagny_path %>
