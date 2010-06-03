@@ -1,4 +1,4 @@
-<%- if is_admin? %>
+<%- if !current_user.blank? && is_admin? %>
   <% @compagnies.each do |compagny| %>
     <%=h compagny.name %>
     <%=h compagny.headquarters %>

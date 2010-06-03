@@ -18,7 +18,7 @@
   <% end %>
 <% end %>
 
-<%- if current_user %>
+<%- if current_user && current_user.roles == "member" %>
   <% title  "Mon compte"%>
   <%- unless current_user.civil_status.blank? %>
     <%= render @civil_status %>
@@ -32,6 +32,6 @@
     <%= "Toutes les CVs"%>
   </h4>  
   <p>
-    <%= render @cv_all %>
+    <%= render @cvs %>
   </p>
 </div> 

@@ -1,29 +1,28 @@
-<p>
-<%- unless current_user %>
-<%- if cv.published == true %>
-  <%=h cv.title %>
-  <%=h cv.summary %>
-  <div id="photo">
-    <%= image_tag fleximage_path(cv.civil_status)%>
+<%- unless current_user && current_user.roles == "member" %>
+  <%- if cv.published == true %>
+    <%=h cv.title %>
+    <%=h cv.summary %>
+    <div id="photo">
+      <%= image_tag fleximage_path(cv.civil_status)%>
   </div>
   
-  <div id = "field" >
-  <%=h"Etude effectué "%>
-  <%- cv.degree_courses.each do |dc| %>
-    <p>
-      <%= dc.field.field_name %>
-    </p> 
-  <% end %>
-  </div>
-  </p>
-  <%= link_to 'Show', cv %>
-<% end %> 
+    <div id = "field" >
+      <%=h"Etude effectué "%>
+      <%- cv.degree_courses.each do |dc| %>
+      <p>
+        <%= dc.field.field_name %>
+      </p> 
+     <% end %>
+   </div>   
+    <% @civil_status = cv.civil_status %>
+    <%= link_to 'Show', civil_status_cv_path(@civil_status, cv) %>
+ <% end %> 
+
 <% else %>
   <% if belongs_to_user?(cv) || cv.published == true %>
     <%=h cv.title %>
     <%=h cv.summary %>
-
-    <%= link_to 'Show', cv %>
+    <% @civil_status = current_user.civil_status %>
+    <%= link_to 'Show', civil_status_cv_path(@civil_status, cv) %>
   <% end %> 
  <% end %>
-</p>

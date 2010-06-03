@@ -5,10 +5,10 @@ class CivilStatusesController < ApplicationController
   caches_page :show, :if => Proc.new { |c| c.request.format.jpg? }
   def index
     @civil_statuses = CivilStatus.all
-    if current_user
+    if current_user && current_user.roles == "member"
       @civil_status = current_user.civil_status
     end
-    @cv_all = Cv.all
+    @cvs = Cv.all
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @civil_statuses }
