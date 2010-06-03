@@ -1,30 +1,31 @@
-<h1>Listing compagnies</h1>
-
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Headquaters</th>
-    <th>Registration number</th>
-    <th>Legal form</th>
-    <th>Activity</th>
-    <th>Sector</th>
-  </tr>
-
-<% @compagnies.each do |compagny| %>
-  <tr>
-    <td><%=h compagny.name %></td>
-    <td><%=h compagny.headquarters %></td>
-    <td><%=h compagny.registration_number %></td>
-    <td><%=h compagny.legal_form %></td>
-    <td><%=h compagny.activity %></td>
-    <td><%=h compagny.sector %></td>
-    <td><%= link_to 'Show', compagny %></td>
-    <td><%= link_to 'Edit', edit_compagny_path(compagny) %></td>
-    <td><%= link_to 'Destroy', compagny, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
+<%- if is_admin? %>
+  <% @compagnies.each do |compagny| %>
+    <%=h compagny.name %>
+    <%=h compagny.headquarters %>
+    <%=h compagny.registration_number %>
+    <%=h compagny.legal_form %>
+    <%=h compagny.activity %>
+    <%=h compagny.sector %>
+    <%= link_to 'Show', compagny %>
+    <%= link_to 'Edit', edit_compagny_path(compagny) %>
+    <%= link_to 'Destroy', compagny, :confirm => 'Are you sure?', :method => :delete %>
+  <% end %>
 <% end %>
-</table>
 
-<br />
-
-<%= link_to 'New compagny', new_compagny_path %>
+<%- if current_user   && current_user.roles == "compagny"%>
+  <% title  "Compte société " %>
+  <%- unless current_user.compagny.blank? %>
+    <%= render @compagny %>
+  <% else %>
+   <%= link_to 'Create a profil for compagny', new_compagny_path if permitted_to? :create %>
+ <% end %>
+<% else %>
+  <% title "All Compagny referenced" %>
+  <% @compagnies.each do |compagny|  %>
+    <p>
+      <%= compagny.name %>
+      <%= compagny.headquarters %>  
+      <%= link_to " voir ses offres ", compagny_jobs_path(compagny)%>  
+    </p>  
+  <% end %>
+<% end %>

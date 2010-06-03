@@ -1,6 +1,7 @@
 class User < ActiveRecord::Base
   acts_as_authentic 
   has_one :civil_status
+  has_one :compagny
   def role_symbols
     @role_symbols ||= (roles || []).map {|r| r.to_sym}
   end
