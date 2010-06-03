@@ -1,5 +1,5 @@
 <h1>Editing user: <%= h @userp.username%></h1>
-<% form_for(@userp) do |f| %>
+<% semantic_form_for(@userp) do |f| %>
   <%= f.error_messages %>
 
   <p>
@@ -13,10 +13,17 @@
   </p>
   
   <p>
-   <%= f.label :password_confirmation, "new password" %><br />
+    <%= f.label :password_confirmation, "new password" %><br />
     <%= f.password_field :password_confirmation %>
   </p>
-
+  
+  <p>
+    <%-if current_user && !is_admin? %>
+      <%= f.label :roles %>
+      <%= f.input :roles, :collection => ["member", "compagny"] %>   
+    <% end %>
+  </p>
+ 
   <p>
   <%- if current_user && is_admin? %>
     <%= f.label :roles %><br />
