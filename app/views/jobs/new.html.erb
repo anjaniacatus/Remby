@@ -1,8 +1,8 @@
 <h1>New job</h1>
-<% form_for @job do |f| %>
+<% semantic_form_for ([@job.compagny,@job]) do |f| %>
   <%= f.error_messages %>
-
-  <%= render f %>
+  
+  <%= render :partial => 'form', :locals => {:f => f} %>
 
   <p>
     <%= f.submit 'Create' %>

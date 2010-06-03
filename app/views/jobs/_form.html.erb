@@ -1,36 +1,32 @@
 <p>
-  <%= form.label :ref %><br />
-  <%= form.text_field :ref %>
+  <%= f.label :ref %><br />
+  <%= f.text_field :ref %>
 </p>
 <div class="functions">
-  <% params = { :f => form, :default => "N/A" } %>
+  <% params = { :f => f, :default => "N/A" } %>
   <%= render :partial => 'functions/select', :locals => params %>
 </div>
 <div class="contracts">
-  <% params = { :f => form, :default => "N/A" } %>
+  <% params = { :f => f, :default => "N/A" } %>
   <%= render :partial => 'contracts/select', :locals => params %>
 </div>
 <div class="localisations">
-  <% params = { :f => form, :default => "N/A" } %>
+  <% params = { :f => f, :default => "N/A" } %>
   <%= render :partial => 'localisations/select', :locals => params %>
 </div>
 <p>
-  <%= form.label :description %><br />
-  <%= form.text_area :description %>
+  <%= f.input :description %>
 </p>
 <p>
-  <%= form.label :attribution %><br />
-  <%= form.text_area :attribution %>
+  <%= f.input :attribution %>
 </p>
 <p>
-  <%= form.label :profile %><br />
-  <%= form.text_area :profile %>
+  <%= f.input :profile %>
 </p>
 <p>
-  <%= form.label :folder %><br />
-  <%= form.text_area :folder %>
+  <%= f.input :folder %>
 </p>
 <p>
-  <%= form.label :dead_line %><br />
-  <%= form.datetime_select :dead_line, :order => [ :day, :month, :year] %>
+  <%= f.label :dead_line %><br />
+  <%= f.datetime_select :dead_line, :order => [ :day, :month, :year] %>
 </p>

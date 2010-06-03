@@ -93,10 +93,15 @@ class CvsController < ApplicationController
   protected
     
   def new_cv_from_params
-  unless (params[:civil_status_id ] == nil)
-    @civil_status = CivilStatus.find(params[:civil_status_id])
-    @cv = @civil_status.cvs.new(params[:cv])
-  end
+    unless (params[:civil_status_id ] == nil)
+      @civil_status = CivilStatus.find(params[:civil_status_id])
+      @cv = @civil_status.cvs.new(params[:cv])
+    else
+      flash[:notice] = "Connectez-Vous d'abord !!!"  
+      respond_to do |format|
+        format.html { redirect_to(root_path)}
+      end
+    end
   end
  
 end

@@ -1,14 +1,8 @@
 ActionController::Routing::Routes.draw do |map|
   map.resources :searches
-
   map.resources :fields
   map.resources :images
-
-
-  map.connect 'auto_complete_for_degree_course_field', :controller => 'degree_courses', :action => 'auto_complete_for_degree_course_field'
-
   map.resources :degree_courses
-  map.resources :fields
   map.resources  :cvs
 
   map.resources :civil_statuses do |civil_status|
@@ -19,8 +13,8 @@ ActionController::Routing::Routes.draw do |map|
       cv.resources :interests
       cv.resources :other_skills
     end
-  end  
- 
+  end   
+  
   map.resources :jobs
   map.resources :notes
   map.resources :domains
@@ -35,7 +29,9 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :users
   map.resources :contact_infos, :only => [:new, :create, :destroy]
   map.resources :job_sheets
-  map.resources :compagnies
+  map.resources :compagnies do |compagny|
+    compagny.resources :jobs
+  end
   map.resources :schools
   # The priority is based upon order of creation: first created -> highest priority.
 

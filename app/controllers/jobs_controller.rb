@@ -3,9 +3,8 @@ class JobsController < ApplicationController
   # GET /jobs.xml
   def index
     if params[:compagny_id]
-      #@compagny = Compagny.find(params[:society_id])
-      #@jobs = @compagny.jobs
-      @jobs = Job.find(:all)
+      @compagny = Compagny.find(params[:compagny_id])
+      @jobs = @compagny.jobs
     else
       @jobs = Job.find(:all)
     end
@@ -18,7 +17,12 @@ class JobsController < ApplicationController
   # GET /jobs/1
   # GET /jobs/1.xml
   def show
-    @job = Job.find(params[:id])
+    if params[:compagny_id] 
+      @comapgny = Compagny.find(params[:compagny_id])
+      @job = @comapgny.jobs.find(params[:id])
+    else
+      @job = Job.find(params[:id])
+    end
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @job }
@@ -28,15 +32,18 @@ class JobsController < ApplicationController
   # GET /jobs/new
   # GET /jobs/new.xml
   def new
-    #if params[:society_id]
-      #@compagny = Society.find(params[:society_id])
-      #@job = @compagny.jobs.new
-    #else
-    @job = Job.new
-    @function = Function.new
-    @localisation = Localisation.new
-    @contract = Contract.new
-    
+    unless (params[:compagny_id ] == nil)
+      @compagny = Compagny.find(params[:compagny_id])
+      @job = @compagny.jobs.new(params[:job])
+      @function = Function.new
+      @localisation = Localisation.new
+      @contract = Contract.new
+    else
+      flash[:notice] = "Connectez-Vous d'abord !!!"  
+      respond_to do |format|
+        format.html { redirect_to(compagnies_path)}
+      end
+    end 
     flash[:error] = t(:cannot_find_jobs, :default => "Misy diso")
     #end
   end
@@ -55,13 +62,12 @@ class JobsController < ApplicationController
   # POST /jobs
   # POST /jobs.xml
   def create
-    #@compagny = Society.find(params[:society_id])
-    @job = Job.new(params[:job])
-
+    @compagny = Compagny.find(params[:compagny_id])
+    @job = @compagny.jobs.new(params[:job])
     respond_to do |format|
       if @job.save
         flash[:notice] = 'job was successfully created.'
-        format.html { redirect_to(@job) }
+        format.html { redirect_to( compagny_job_path(@compagny, @job) ) }
         format.xml  { render :xml => @job, :status => :created, :location => @job }
       else
         format.html { render :action => "new" }
@@ -78,7 +84,7 @@ class JobsController < ApplicationController
     respond_to do |format|
       if @job.update_attributes(params[:job])
         flash[:notice] = 'job was successfully updated.'
-        format.html { redirect_to(@job) }
+        format.html { redirect_to([@job.compagny,@job]) }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }
@@ -90,8 +96,8 @@ class JobsController < ApplicationController
   # DELETE /jobs/1
   # DELETE /jobs/1.xml
   def destroy
-    @job = Job.find(params[:id])
-    #@job = Job.find(params[:id], :include => :compagny)
+    #@job = Job.find(params[:id])
+    @job = Job.find(params[:id], :include => :compagny)
     #@compagny = @job.compagny
     @job.destroy
 

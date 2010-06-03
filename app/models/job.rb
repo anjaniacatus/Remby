@@ -1,6 +1,6 @@
 class Job < ActiveRecord::Base
   has_friendly_id :ref, :use_slug => true, :strip_diacritics => true
-  belongs_to :society
+  belongs_to :compagny
   belongs_to :function
   belongs_to :localisation
   belongs_to :contract

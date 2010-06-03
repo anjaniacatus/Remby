@@ -1,0 +1,38 @@
+<p>
+  <b>Name:</b>
+  <%=h compagny.name %>
+</p>
+
+<p>
+  <b>Headquaters:</b>
+  <%=h compagny.headquarters %>
+</p>
+
+<p>
+  <b>Registration number:</b>
+  <%=h compagny.registration_number %>
+</p>
+
+<p>
+  <b>Legal form:</b>
+  <%=h compagny.legal_form %>
+</p>
+
+<p>
+  <b>Activity:</b>
+  <%=h compagny.activity %>
+</p>
+
+<p>
+  <b>Sector:</b>
+  <%=h compagny.sector %>
+</p>
+
+<%-# if user == current_user %>
+    <%= link_to 'Edit', edit_compagny_path(compagny) %>
+    <%= link_to 'Destroy', compagny, :confirm => 'Are you sure?', :method => :delete %>
+    <%= link_to 'Jobs', compagny_jobs_path(@compagny) %>
+    <%= link_to 'Create_Job', new_compagny_job_path(@compagny)%>
+<% #end %>
+
+
