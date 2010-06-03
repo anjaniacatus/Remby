@@ -39,7 +39,7 @@ class JobsController < ApplicationController
       @localisation = Localisation.new
       @contract = Contract.new
     else
-      flash[:notice] = "Connectez-Vous d'abord !!!"  
+      flash[:notice] = "Vous devez d'abord créer un profil pour votre société!!!"  
       respond_to do |format|
         format.html { redirect_to(compagnies_path)}
       end
@@ -51,7 +51,7 @@ class JobsController < ApplicationController
   # GET /jobs/1/edit
   def edit
     if params[:compagny_id]
-      #@compagny = Compagny.find(params[:society_id])
+      @compagny = Compagny.find(params[:compagny_id])
       @job = @compagny.jobs.find(params[:id])
     else
       @job = Job.find(params[:id])

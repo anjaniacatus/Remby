@@ -3,8 +3,10 @@
   <p>
     <%= job.function.name %>
     <%= link_to 'show', job_path(job)  %>
-    <%= link_to 'Edit', edit_job_path(job) if permitted_to?:update %>
-    <%= link_to 'Destroy', job, :confirm => 'Are you sure?', :method => :delete if permitted_to?:delete %>
- </p>  
+    <%- if belongs_to_compagny?(job)%>
+      <%= link_to 'Edit', edit_job_path(job) if permitted_to?:update %>
+      <%= link_to 'Destroy', job, :confirm => 'Are you sure?', :method => :delete if permitted_to?:delete %>
+    <% end %>    
+  </p>  
 <% end %>
 <%= link_to 'New job', new_job_path if permitted_to?:create %>

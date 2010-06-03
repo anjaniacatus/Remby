@@ -39,6 +39,8 @@
     Tous les dossiers devront être reçus avant le:&nbsp;<%= @job.dead_line %>
   </p>
 </div>
-
-<%= link_to 'Edit', edit_job_path(@job) %> |
+<% @compagny = @job.compagny %>
+<%- if belongs_to_compagny?(@job) %>
+  <%= link_to 'Edit', edit_compagny_job_path(@compagny,@job) if permitted_to?:update  %> 
+<% end %>  
 <%= link_to 'Back', jobs_path %>

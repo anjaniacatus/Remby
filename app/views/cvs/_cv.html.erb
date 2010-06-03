@@ -22,7 +22,7 @@
   <% if belongs_to_user?(cv) || cv.published == true %>
     <%=h cv.title %>
     <%=h cv.summary %>
-    <% @civil_status = current_user.civil_status %>
+    <% @civil_status = cv.civil_status %>
     <%= link_to 'Show', civil_status_cv_path(@civil_status, cv) %>
   <% end %> 
  <% end %>

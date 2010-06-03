@@ -3,10 +3,13 @@ class CompagniesController < ApplicationController
   # GET /compagnies.xml
   def index
     @compagnies = Compagny.all
-
+    if current_user && current_user.roles == "compagny"
+      @compagny = current_user.compagny
+    end
+    @compagnies = Compagny.all
     respond_to do |format|
       format.html # index.html.erb
-      format.xml  { render :xml => @compagnies }
+      format.xml  { render :xml => @civil_statuses }
     end
   end
 
@@ -24,11 +27,15 @@ class CompagniesController < ApplicationController
   # GET /compagnies/new
   # GET /compagnies/new.xml
   def new
-    @compagny = Compagny.new
-
-    respond_to do |format|
-      format.html # new.html.erb
-      format.xml  { render :xml => @compagny }
+    unless current_user.blank?
+      @compagny = Compagny.new
+      respond_to do |format|
+        format.html # new.html.erb
+        format.xml  { render :xml => @compagny }
+      end
+    else
+       flash[:notice] = 'impossible, il faut être membre et à la fois connecté '
+       redirect_to root_path
     end
   end
 
@@ -40,10 +47,11 @@ class CompagniesController < ApplicationController
   # POST /compagnies
   # POST /compagnies.xml
   def create
-    @compagny = Compagny.new(params[:compagny])
+    @compagny = Compagny.create!(params[:compagny])
 
     respond_to do |format|
       if @compagny.save
+        @current_user.compagny = @compagny
         flash[:notice] = 'Compagny was successfully created.'
         format.html { redirect_to(@compagny) }
         format.xml  { render :xml => @compagny, :status => :created, :location => @compagny }

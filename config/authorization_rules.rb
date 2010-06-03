@@ -31,8 +31,8 @@ authorization do
       if_attribute :job_compagny => is {compagny}
     end
 
-    has_permission_on :compagnies,  :to => :manage do
-      if_attribute :compagny_user =>  is {user}
+    has_permission_on :compagny²,  :to => :manage do
+      if_attribute :compagny => is {user.compagny}
     end
     
     has_permission_on :authorization_rules, :to => :read
