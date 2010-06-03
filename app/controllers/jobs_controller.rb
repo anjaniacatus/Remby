@@ -96,13 +96,13 @@ class JobsController < ApplicationController
   # DELETE /jobs/1
   # DELETE /jobs/1.xml
   def destroy
-    #@job = Job.find(params[:id])
-    @job = Job.find(params[:id], :include => :compagny)
-    #@compagny = @job.compagny
+    @job = Job.find(params[:id])
+    #@compagny = Compagny.find(params[:compagny_id])
+    #@job = @compagny.job
     @job.destroy
 
     respond_to do |format|
-      format.html { redirect_to(@compagny) }
+      format.html { redirect_to(jobs_path) }
       format.xml  { head :ok }
     end
   end

@@ -1,6 +1,10 @@
 <h1>Listing jobs</h1>
 <% @jobs.each do |job|%>
-  <%= job.function.name %>
-  <%= link_to 'show', job_path(job) %>
+  <p>
+    <%= job.function.name %>
+    <%= link_to 'show', job_path(job) %>
+    <%= link_to 'Edit', edit_job_path(job) %>
+    <%= link_to 'Destroy', job, :confirm => 'Are you sure?', :method => :delete %>
+    </p>  
 <% end %>
 <%= link_to 'New job', new_job_path %>
