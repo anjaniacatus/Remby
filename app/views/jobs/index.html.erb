@@ -6,7 +6,10 @@
     <%- if current_user && belongs_to_compagny?(job)%>
       <%= link_to 'Edit', edit_job_path(job) if permitted_to?:update %>
       <%= link_to 'Destroy', job, :confirm => 'Are you sure?', :method => :delete if permitted_to?:delete %>
+      <% @compagny = job.compagny%>
+      <%= link_to 'Back', compagny_path(@compagny) %>
     <% end %>    
   </p>  
 <% end %>
-<%= link_to 'New job', new_job_path if permitted_to?:create %>
+<%= link_to 'New job', new_compagny_job_path(current_user.compagny) if permitted_to?:create %>
+

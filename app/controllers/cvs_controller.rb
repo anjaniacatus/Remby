@@ -68,7 +68,20 @@ class CvsController < ApplicationController
 
   # PUT /cvs/1
   # PUT /cvs/1.xml
-  def update
+  def new
+    unless (params[:civil_status_id ] == nil)
+      @civil_status = CivilStatus.find(params[:civil_status_id])
+      @cv = @civil_status.cvs.new(params[:cv])
+    else
+      respond_to do |format|
+         flash[:notice] = "Vous devez d'abord créer un profil pour votre compte ou connectez vous d'abord!"  
+
+        format.html { redirect_to(cvs_path)}
+      end
+    end
+  end
+
+   def update
     @cv = Cv.find(params[:id])
 
     respond_to do |format|
@@ -95,17 +108,4 @@ class CvsController < ApplicationController
   end
   protected
     
-  def new
-    unless (params[:civil_status_id ] == nil)
-      @civil_status = CivilStatus.find(params[:civil_status_id])
-      @cv = @civil_status.cvs.new(params[:cv])
-    else
-      respond_to do |format|
-         flash[:notice] = "Vous devez d'abord créer un profil pour votre compte ou connectez vous d'abord!"  
-
-        format.html { redirect_to(cvs_path)}
-      end
-    end
-  end
- 
 end
