@@ -12,6 +12,11 @@
   <% params = { :f => f, :default => "N/A" } %>
   <%= render :partial => 'fields/select', :locals => params %>
 </div>
+
+   <p>
+    <%= f.input :option %>
+  </p>
+
   <p>
     <%= f.input :description, :input_html => {:cols => 50, :rows => '3'} %>
   </p>
