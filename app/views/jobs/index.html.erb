@@ -12,4 +12,5 @@
   </p>  
 <% end %>
 <%= link_to 'New job', new_compagny_job_path(current_user.compagny) if permitted_to?:create %>
+<%= link_to 'Back', compagnies_path %>
 

@@ -43,4 +43,4 @@
 <%- if current_user && belongs_to_compagny?(@job) %>
   <%= link_to 'Edit', edit_compagny_job_path(@compagny,@job) if permitted_to?:update  %> 
 <% end %>  
-<%= link_to 'Back', jobs_path %>
+<%= link_to 'Back', compagny_jobs_path(@compagny) %>
