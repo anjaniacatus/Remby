@@ -1,6 +1,5 @@
 class CvsController < ApplicationController
   before_filter :nested_in => :civil_statuses
-  before_filter :new_cv_from_params
 #  auto_complete_for :experience, :compagny_id
   #auto_complete_for :experience, :jobtitle
   #auto_complete_for :experience, :job_id
@@ -11,8 +10,9 @@ class CvsController < ApplicationController
   # GET /cvs.xml
    def index
     unless params[:civil_status_id].blank?  
-      @civil_status = CivilStatus.find(params[:civil_status_id])    
+      @civil_status = CivilStatus.find(params[:civil_status_id])
       @cvs = @civil_status.cvs
+      @cv_all = Cv.all
     else
       @cvs = Cv.all
          #@cv_paginates = Cv.search(params[:search], params[:page])
@@ -31,7 +31,7 @@ class CvsController < ApplicationController
       @cv = @civil_status.cvs.find(params[:id])
       @degrees  = @cv.degree_courses(:all)
     else
-      @cv = Cv.find(params[:id])
+       @cv = Cv.find(params[:id])
        @degrees  = @cv.degree_courses(:all)
     end
     respond_to do |format|
@@ -51,6 +51,9 @@ class CvsController < ApplicationController
   # POST /cvs
   # POST /cvs.xml
    def create
+     @civil_status = CivilStatus.find(params[:compagny_id])
+     @cv = @civil_status.cvs.new(params[:job])
+
      respond_to do |format|
        if @cv.save
          flash[:notice] = 'Cv was successfully created.'
@@ -92,14 +95,15 @@ class CvsController < ApplicationController
   end
   protected
     
-  def new_cv_from_params
+  def new
     unless (params[:civil_status_id ] == nil)
       @civil_status = CivilStatus.find(params[:civil_status_id])
       @cv = @civil_status.cvs.new(params[:cv])
     else
-      flash[:notice] = "Connectez-Vous d'abord !!!"  
       respond_to do |format|
-        format.html { redirect_to(root_path)}
+         flash[:notice] = "Vous devez d'abord créer un profil pour votre compte ou connectez vous d'abord!"  
+
+        format.html { redirect_to(cvs_path)}
       end
     end
   end

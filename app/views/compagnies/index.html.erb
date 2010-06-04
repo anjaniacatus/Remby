@@ -12,15 +12,7 @@
   <% end %>
 <% end %>
 
-<%- if current_user   && current_user.roles == "compagny"%>
-  <% title  "Compte société " %>
-  <%- unless current_user.compagny.blank? %>
-    <%= render @compagny %>
-  <% else %>
-   <%= link_to 'Create a profil for compagny', new_compagny_path if permitted_to? :create %>
- <% end %>
-<% else %>
-  <% title "All Compagny referenced" %>
+ <% title "All Compagny referenced" %>
   <% @compagnies.each do |compagny|  %>
     <p>
       <%= compagny.name %>
@@ -28,4 +20,10 @@
       <%= link_to " voir ses offres ", compagny_jobs_path(compagny)%>  
     </p>  
   <% end %>
+
+<%- if current_user   && current_user.roles == "compagny"%>
+  <% @compagny = current_user.compagny %>
+  <%= link_to "compagny profil", compagny_path(@compagny)%>
 <% end %>
+ 
+ 

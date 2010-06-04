@@ -1,3 +1,6 @@
-<% title  @compagny.name  %>
+<% title  "Compte société " %>
+<%- unless current_user.compagny.blank? %>
   <%= render @compagny %>
-<%= link_to 'Back', compagnies_path %>
+<% else %>
+  <%= link_to 'Create a profil for compagny', new_compagny_path if permitted_to? :create %>
+ <% end %>

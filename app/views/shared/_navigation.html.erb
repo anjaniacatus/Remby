@@ -1,7 +1,7 @@
 <div id="link home">
   <%= link_to "home", root_path %>
 </div>
-<div id="link_authenticate">
+<div class="link_authenticate" align="left">
 <% if current_user %>
   <%= link_to "Edit Account", edit_user_path(current_user) %>|
   <%= link_to "logout", logout_path %>
@@ -17,7 +17,8 @@
     <%=  current_user.email %>
   <% end %>
 </div>
- <%= link_to "cvs", cvs_path %> 
- <%= link_to "compagnies", compagnies_path %>
- <%= link_to "jobs", jobs_path %> 
-
+<div class="menu" align="right">
+   <%= link_to "cvs", cvs_path %> 
+   <%= link_to "compagnies", compagnies_path %>
+   <%= link_to "jobs", jobs_path %> 
+</div>

@@ -26,7 +26,7 @@ ActionController::Routing::Routes.draw do |map|
   map.login "login", :controller => "user_sessions", :action => "new"
   map.logout "logout", :controller => "user_sessions", :action => "destroy"
   map.resources :user_sessions
-  map.resources :users
+  map.resources :users, :has_one => [:compagny, :civil_status ]
   map.resources :contact_infos, :only => [:new, :create, :destroy]
   map.resources :job_sheets
   map.resources :compagnies do |compagny|
@@ -65,7 +65,7 @@ ActionController::Routing::Routes.draw do |map|
   #   end
 
   # You can have the root of your site routed with map.root -- just remember to delete public/index.html.
-   map.root :controller => "civil_statuses"
+   map.root :controller => "cvs"
 
   # See how all your routes lay out with "rake routes"
 

@@ -21,7 +21,7 @@
     <%= image_tag fleximage_path(@civil_status)%>
   </div>
    
-  <%- if user == current_user %>
+  <%- if current_user %>
     <%= link_to 'Edit', edit_civil_status_path(civil_status) %>
     <%= link_to 'Destroy', civil_status, :confirm => 'Are you sure?', :method => :delete %>
     <%= link_to 'CV disponible', civil_status_cvs_path(@civil_status) %>
