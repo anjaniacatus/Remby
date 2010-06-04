@@ -5,6 +5,7 @@ class Cv < ActiveRecord::Base
   has_many :languages
   has_many :interests
   has_many :other_skills
+  belongs_to :field
   accepts_nested_attributes_for :degree_courses, :allow_destroy => true
   accepts_nested_attributes_for :experiences, :allow_destroy => true
   accepts_nested_attributes_for :languages, :allow_destroy => true

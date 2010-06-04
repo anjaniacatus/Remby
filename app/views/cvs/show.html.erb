@@ -11,15 +11,17 @@
   <b>Summary:</b>
   <%=h @cv.summary %>
 </p>
-
-<%= "Etude effectué: "%>
-<% @degrees.each do |f|  %>
-  <%= f.field.field_name %> 
-<% end %>
 <div class="child"
   >
    <%- unless @cv.degree_courses.blank? %>
-      <h3> Degree_courses </h3> 
+     <%= "Etude effectué: "%>
+       <% @cv.degree_courses.each do |f|  %>
+         <% unless f.field.blank? %>
+           <%= f.field.field_name %> 
+         <% end %>
+      <% end %>
+
+     <h3> Degree_courses </h3> 
      <%= render @cv.degree_courses%>
    <% end %>  
 </div>
@@ -56,5 +58,5 @@
    <%= link_to 'Edit', edit_civil_status_cv_path(@civil_status, @cv) %>
    <%= link_to 'Back', civil_status_cvs_path(@civil_status)%>
  <% else %>
-  <%= link_to 'Back', root_path %>
+  <%= link_to 'Back', cvs_path %>
 <% end %>

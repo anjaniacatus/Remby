@@ -1,6 +1,6 @@
 class DegreeCourse < ActiveRecord::Base
   belongs_to :cv
-  validates_presence_of :degree_name
+ # validates_presence_of :degree_name
   belongs_to :school 
   belongs_to :field
 
@@ -13,7 +13,21 @@ class DegreeCourse < ActiveRecord::Base
 
   def my_field
     unless field.blank?
-      "#{function.name}" unless new_record?
+      "#{field.field_name}" unless new_record?
+    end
+  end
+  
+  
+  def my_school=(my)  
+    if my and !my.blank?
+      school_name = my.scan(/(\[([^\]]*)\])/)[0]
+      self.school = School.find_or_create_by_name(my.titleize)
+    end
+  end
+
+  def my_school
+    unless school.blank?
+      "#{school.name}" unless new_record?
     end
   end
 

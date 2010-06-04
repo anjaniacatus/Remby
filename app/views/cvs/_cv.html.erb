@@ -7,14 +7,6 @@
        <%=h cv.summary %>
     </div>
   
-    <div id = "field" >
-      <%=h"Etude effectué "%>
-      <%- cv.degree_courses.each do |dc| %>
-      <p>
-        <%= dc.field.field_name %>
-      </p> 
-     <% end %>
-   </div>   
     <% @civil_status = cv.civil_status %>
     <%= link_to 'Show', civil_status_cv_path(@civil_status, cv) %>
 

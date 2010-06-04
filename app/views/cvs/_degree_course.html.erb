@@ -3,13 +3,15 @@
     <%= f.input :degree_name, :collection => ["bac scientifique", "bac literaire","bac technique","formation", "bac + 1", "bac + 2", "license", "master M1", "master M2","DEA", "Phd" ] %>
   </p>
   
-  <p>
-    <%= f.input :school %>
-  </p>
+ <div class="school">
+  <% params = { :f => f, :default => "N/A" } %>
+  <%= render :partial => 'schools/select', :locals => params %>
+</div>
   
-  <%= f.collection_select :field_id , Field.find(:all), :id ,:field_name %>
-  <%= link_to 'add_field', new_field_path(@degree_course) %>
- 
+<div class="field">
+  <% params = { :f => f, :default => "N/A" } %>
+  <%= render :partial => 'fields/select', :locals => params %>
+</div>
   <p>
     <%= f.input :description, :input_html => {:cols => 50, :rows => '3'} %>
   </p>

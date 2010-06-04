@@ -1,5 +1,5 @@
 <div class 'degree_course'>
-  <%= degree_course.school_id %>
+  <%= degree_course.school.name %>
   <%= degree_course.degree_name %>
   <%- unless degree_course.field.blank? %>
     <%= degree_course.field.field_name %>

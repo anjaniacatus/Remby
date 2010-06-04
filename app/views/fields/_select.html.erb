@@ -4,7 +4,7 @@
 
 <%= f.collection_select(:field_id, Field.ordered, :id, :field_name, params) %>
 <br />
-<span class="help">Si la fonction n'est pas encore référencé, remplir le champ ci-dessous.</span><br />
+<span class="help">Si le filière n'est pas encore référencé, remplir le champ ci-dessous.</span><br />
 <span class="help">exemple: [Assistant de direction]</span><br />
-<%= f.label :my_field, "Nouvelle Fonction" %><br />
+<%= f.label :my_field, "nouveau filiere" %><br />
 <%= f.text_field :my_field %>
