@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100605101906) do
+ActiveRecord::Schema.define(:version => 20100605170927) do
 
   create_table "civil_statuses", :force => true do |t|
     t.string   "family_name"
@@ -23,12 +23,11 @@ ActiveRecord::Schema.define(:version => 20100605101906) do
     t.datetime "updated_at"
     t.string   "status"
     t.integer  "user_id"
-    t.integer  "photo_id"
   end
 
   create_table "compagnies", :force => true do |t|
     t.string   "name"
-    t.string   "headquarters"
+    t.string   "headquarters",        :default => "default address"
     t.integer  "registration_number"
     t.string   "legal_form"
     t.string   "activity"
@@ -36,6 +35,7 @@ ActiveRecord::Schema.define(:version => 20100605101906) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "user_id"
+    t.boolean  "validated"
   end
 
   create_table "contact_infos", :force => true do |t|
@@ -61,7 +61,6 @@ ActiveRecord::Schema.define(:version => 20100605101906) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.boolean  "published"
-    t.string   "field"
     t.integer  "field_id"
   end
 
@@ -75,7 +74,6 @@ ActiveRecord::Schema.define(:version => 20100605101906) do
     t.date     "end_on"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "domain_id"
     t.integer  "field_id"
     t.string   "option"
   end
@@ -84,26 +82,6 @@ ActiveRecord::Schema.define(:version => 20100605101906) do
     t.string   "ref"
     t.string   "name"
     t.text     "description"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "education_informations", :force => true do |t|
-    t.string   "ref"
-    t.string   "speciality"
-    t.text     "details"
-    t.date     "started_on_year"
-    t.integer  "study_duration"
-    t.string   "graduation"
-    t.text     "comment"
-    t.integer  "domain_id"
-    t.integer  "school_id"
-    t.integer  "profile_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "education_infos", :force => true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -117,32 +95,17 @@ ActiveRecord::Schema.define(:version => 20100605101906) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "duration"
+    t.string   "compagny_name"
   end
 
   create_table "fields", :force => true do |t|
     t.string   "field_name"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "option"
   end
 
   create_table "functions", :force => true do |t|
     t.string   "name"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "groups", :force => true do |t|
-    t.string   "name"
-    t.integer  "domain_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "illustrations", :force => true do |t|
-    t.string   "illustrated_type"
-    t.integer  "illustrated_id"
-    t.integer  "image_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

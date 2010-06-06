@@ -1,8 +1,20 @@
 class Experience < ActiveRecord::Base
   belongs_to :cv
-  has_one :compagny
+  belongs_to :compagny
   validates_presence_of :jobtitle 
-  Durations = ["moins d'un ans","1 à 2 ans", "moins de 5ans", "5 ans et plus" ]
+  Durations = ["3 mois","6 mois", "1 ans" ]
   has_friendly_id :jobtitle, :use_slug => true, :strip_diacritics => true
+  
+  def my_compagny=(my) 
+    if my and !my.blank?
+      self.compagny = Compagny.find_or_create_by_name(my.titleize)
+    end
+  end
+
+  def my_compagny
+    unless compagny.blank?
+      "#{compagny.name}" unless new_record?
+    end
+  end
 
 end

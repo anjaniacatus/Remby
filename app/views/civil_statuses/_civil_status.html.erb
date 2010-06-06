@@ -1,3 +1,4 @@
+<% unless civil_status.blank? %>
 <div id="civil_status">
   <% user = civil_status.user %>
   <% @civil_status = user.civil_status %>
@@ -20,6 +21,9 @@
    <div class="photo" align="">
     <%= image_tag fleximage_path(@civil_status)%>
   </div>
+<% else %>
+  <%= link_to 'New civil_status', new_civil_status_path  %>
+<% end %>
    
   <%- if current_user && current_user.civil_status == civil_status%>
     <%= link_to 'Edit', edit_civil_status_path(civil_status) %>

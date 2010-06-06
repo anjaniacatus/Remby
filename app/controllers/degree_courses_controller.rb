@@ -57,8 +57,6 @@ class DegreeCoursesController < ApplicationController
   # PUT /degree_courses/1.xml
   def update
     @degree_course = DegreeCourse.find(params[:id])
-    @degree_course.domain.find(params[:id])
-
     respond_to do |format|
       if @degree_course.update_attributes(params[:degree_course])
         flash[:notice] = 'DegreeCourse was successfully updated.'

@@ -1,8 +1,10 @@
 <div class="child">
-  <p>
-    <%= f.input :compagny  %>
-  </p>
-  
+
+  <div class="compagny">
+    <% params = { :f => f, :default => "N/A" } %>
+    <%= render :partial => 'compagnies/select', :locals => params %>
+  </div>
+
   <p>
     <%= f.input :jobtitle %>
   </p>
@@ -12,7 +14,7 @@
   </p>
   
   <p>
-    <%= f.input :duration %>
+  <%= f.input :duration, :collection => Experience::Durations %>
   </p>
  
   <p>

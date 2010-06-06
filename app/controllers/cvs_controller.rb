@@ -51,8 +51,8 @@ class CvsController < ApplicationController
   # POST /cvs
   # POST /cvs.xml
    def create
-     @civil_status = CivilStatus.find(params[:compagny_id])
-     @cv = @civil_status.cvs.new(params[:job])
+     @civil_status = CivilStatus.find(params[:civil_status_id])
+     @cv = @civil_status.cvs.new(params[:cv])
 
      respond_to do |format|
        if @cv.save

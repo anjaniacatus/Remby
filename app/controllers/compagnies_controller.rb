@@ -27,14 +27,14 @@ class CompagniesController < ApplicationController
   # GET /compagnies/new
   # GET /compagnies/new.xml
   def new
-    unless current_user.blank?
+    if current_user && current_user.roles == "compagny"
       @compagny = Compagny.new
       respond_to do |format|
         format.html # new.html.erb
         format.xml  { render :xml => @compagny }
       end
     else
-       flash[:notice] = 'impossible, il faut être membre et à la fois connecté '
+       flash[:notice] = 'Permission denied!!'
        redirect_to root_path
     end
   end

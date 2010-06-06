@@ -8,12 +8,16 @@ class UserSessionsController < ApplicationController
     if @user_session.save
       @user = @user_session.user
       flash[:notice] = "Bienvenue!" + @user.username
-      unless @user.compagny.blank?
-        @compagny = @user.compagny 
-        redirect_to compagny_path( @compagny)
-      else
-        @civil_status = @user.civil_status
-        redirect_to civil_status_path(@civil_status)
+      unless @user.roles == "admin"
+        if @user.roles == "member"
+        redirect_to civil_statuses_path
+        end
+        if @user.roles == "compagny"
+         @compagny = @user.compagny 
+         redirect_to compagnies_path
+        end
+        else
+         redirect_to root_path
       end
     else
       render :action => 'new'
