@@ -1,14 +1,16 @@
 <h1>Listing jobs</h1>
 <% @jobs.each do |job|%>
   <p>
-  <% unless !job.published %>
+  <% unless !job.published  %>
     <%= job.function.name %>
     <%= link_to 'show', job_path(job)  %>
-    <%- if current_user && current_user.roles == "company"|| "admin" && belongs_to_compagny?(job)%>
+    <%- unless current_user.blank? %>
+    <%- if current_user.roles == "company"|| "admin" && belongs_to_compagny?(job)%>
       <%= link_to 'Edit', edit_job_path(job) if permitted_to?:update %>
       <%= link_to 'Destroy', job, :confirm => 'Are you sure?', :method => :delete if permitted_to?:delete %>
       <%= link_to 'Back', compagny_path(job.compagny) %>
     <% end %>     
+  <% end %>
   <% end %>
     </p>  
 <% end %>

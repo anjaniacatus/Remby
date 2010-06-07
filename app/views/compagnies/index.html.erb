@@ -1,3 +1,14 @@
+<% title "All Compagny referenced" %>
+  <% @compagnies.each do |compagny|  %>
+    <%- if compagny.validated == true %>
+    <p>
+      <%= compagny.name %>
+      <%= compagny.headquarters %>  
+      <%= link_to " voir ses offres ", compagny_jobs_path(compagny)%>  
+    </p>  
+    <% end %>
+<% end %>
+
 <%- if !current_user.blank? && current_user.roles == "admin" %>
   <% @compagnies.each do |compagny| %>
     <%=h compagny.name %>
@@ -12,18 +23,6 @@
   <% end %>
 <% end %>
 
- <% title "All Compagny referenced" %>
-  <% @compagnies.each do |compagny|  %>
-    <% if compagny.validated == "true"%>
-    <p>
-      <%= compagny.name %>
-      <%= compagny.headquarters %>  
-      <%= link_to " voir ses offres ", compagny_jobs_path(compagny)%>  
-    </p>  
-    <% end %>
-  <% end %>
-
-
 <%- if current_user   && current_user.roles == "compagny"%>
   <% @compagny = current_user.compagny %>
   <% unless @compagny.blank? %>
@@ -34,3 +33,6 @@
 <% end %>
  
  
+
+
+
