@@ -1,0 +1,23 @@
+<h1>Editing application</h1>
+
+<% semantic_form_for(@application) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+  <%= f.collection_select(:job_id, Job.ordered, :id, :ref, params) %><br />
+  </p>
+  <p>
+  <%= f.collection_select (:cv_id, Cv.ordered,:id, :title, params) %>
+<br />
+  </p>
+  <p>
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @application %> |
+<%= link_to 'Back', applications_path %>

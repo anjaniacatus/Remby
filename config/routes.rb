@@ -1,4 +1,8 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :jobs do |job|
+   job.resources :applications
+  end
+
   map.resources :searches
   map.resources :fields
   map.resources :images
@@ -15,7 +19,7 @@ ActionController::Routing::Routes.draw do |map|
     end
   end   
   
-  map.resources :jobs
+  
   map.resources :notes
   map.resources :domains
   map.resources :localisations

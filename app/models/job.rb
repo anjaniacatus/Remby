@@ -4,6 +4,9 @@ class Job < ActiveRecord::Base
   belongs_to :function
   belongs_to :localisation
   belongs_to :contract
+  has_many :applications
+  has_many :cvs, :through => :applications
+  named_scope :ordered, :order => "ref ASC"
 
 
   def my_function=(my) # "[function]"

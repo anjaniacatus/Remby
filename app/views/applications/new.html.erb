@@ -1,0 +1,16 @@
+<h1>New application</h1>
+
+<% semantic_form_for([@application.job, @application]) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+  <%= f.input :cv_id, :collection => ("caca keli") %><br />
+  </p>
+  <p>
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </p>
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
+<% end %>
