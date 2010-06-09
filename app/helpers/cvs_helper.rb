@@ -14,8 +14,7 @@ module CvsHelper
       render(:partial => child.underscore, :locals => { :f => f })
     end
   end
-  
-  
+    
   def published?(test)
      test.published == "true"
      true  

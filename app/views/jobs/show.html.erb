@@ -47,6 +47,11 @@
 <%= link_to 'Back_to_jobs', jobs_path %>
 <% if current_user && current_user.roles == "member" %>
   <div class="test" align="right">
-    <%= link_to 'candidature', new_job_application_path(@job) %>
+    <%= link_to 'Apply to job ', new_job_application_path(@job) %>
+  </div>
+<% else %>  
+  <div class="test" align="right">
+    <%= link_to "Apply to Job"%>
+    <%= "Identifiez vous!!"%>
   </div>
 <% end %>

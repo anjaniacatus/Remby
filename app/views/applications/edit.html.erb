@@ -1,6 +1,6 @@
 <h1>Editing application</h1>
 
-<% semantic_form_for(@application) do |f| %>
+<% semantic_form_for([@application.job, @application]) do |f| %>
   <%= f.error_messages %>
 
   <p>
@@ -19,5 +19,5 @@
   </p>
 <% end %>
 
-<%= link_to 'Show', @application %> |
-<%= link_to 'Back', applications_path %>
+<%= link_to 'Show', job_application_path %> |
+<%= link_to 'Back', job_applications_path %>

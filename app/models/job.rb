@@ -7,7 +7,7 @@ class Job < ActiveRecord::Base
   has_many :applications
   has_many :cvs, :through => :applications
   named_scope :ordered, :order => "ref ASC"
-
+  named_scope :published, :conditions => {:published => true }
 
   def my_function=(my) # "[function]"
     if my and !my.blank?

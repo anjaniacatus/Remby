@@ -4,8 +4,10 @@
   <%= f.error_messages %>
 
   <p>
-  <%= f.input :cv_id, :collection => ("caca keli") %><br />
+  <% unless current_user.civil_status.blank? %>
+    <%= f.collection_select(:cv_id, @cvs, :id, :title, params  ) %><br />  
   </p>
+  
   <p>
     <%= f.label :title %><br />
     <%= f.text_field :title %>
@@ -13,4 +15,8 @@
   <p>
     <%= f.submit 'Create' %>
   </p>
+  <% end %>
+  
+  <%= link_to "Back to job", job_path(@application.job)%>
 <% end %>
+

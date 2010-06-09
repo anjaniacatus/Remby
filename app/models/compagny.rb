@@ -5,5 +5,6 @@ class Compagny < ActiveRecord::Base
   has_many :jobs
   belongs_to :user
   named_scope :ordered, :order => "name ASC"
+  named_scope :valide, :conditions => {:validated => true}
   has_many :experiences
 end

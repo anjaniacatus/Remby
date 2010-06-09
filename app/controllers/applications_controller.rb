@@ -5,7 +5,7 @@ class ApplicationsController < ApplicationController
     @applications = Application.all
     @applications = Cv.all
     @jobs = Job.all
-    respond_to do |format|
+       respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @applications }
     end
@@ -32,6 +32,16 @@ class ApplicationsController < ApplicationController
     unless (params[:job_id ] == nil)
       @job = Job.find(params[:job_id])
       @application = @job.applications.new(params[:application])
+      unless current_user.civil_status.blank?
+        @cvs = current_user.civil_status.cvs
+        if @cvs.blank?
+          flash[:notice] = "Mbola tsi manana cv ooo"
+        end
+      else
+        @cvs = Cv.all
+        flash[:notice] = "Mbola tsy manana cv enao!! ndana mamorona"
+      end
+
     else
         respond_to do |format|
          flash[:notice] = "Vous devez d'abord créer un profil pour votre compte ou connectez vous d'abord!"  
@@ -55,7 +65,7 @@ class ApplicationsController < ApplicationController
 
     respond_to do |format|
       if @application.save
-        flash[:notice] = 'Application was successfully created.'
+        flash[:notice] = 'job apply succesfull.'
         format.html { redirect_to job_application_path(@application, @job) }
         format.xml  { render :xml => @application, :status => :created, :location => @application }
       else
