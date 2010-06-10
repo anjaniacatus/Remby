@@ -42,6 +42,7 @@
 <% @compagny = @job.compagny %>
 <%- if current_user && belongs_to_compagny?(@job) %>
   <%= link_to 'Edit', edit_compagny_job_path(@compagny,@job) if permitted_to?:update  %> 
+  <%= link_to 'Apply result', job_applications_path(@job)%>
 <% end %>  
 <%= link_to 'Back_to_compagny', compagny_jobs_path(@compagny) %>
 <%= link_to 'Back_to_jobs', jobs_path %>
