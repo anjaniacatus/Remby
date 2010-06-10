@@ -14,12 +14,8 @@ class ApplicationsController < ApplicationController
   # GET /applications/1
   # GET /applications/1.xml
   def show
-     if params[:job_id] 
-      @job = Job.find(params[:job_id])
-      @application = @job.applications.find(params[:id])
-     else
-       @application = Application.find(params[:id])
-     end
+    @job = Job.find(params[:job_id]) 
+    @application = @job.applications.find(params[:id])
      respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @application }
@@ -66,7 +62,7 @@ class ApplicationsController < ApplicationController
     respond_to do |format|
       if @application.save
         flash[:notice] = 'job apply succesfull.'
-        format.html { redirect_to job_application_path(@application, @job) }
+        format.html { redirect_to job_application_path(@job, @application) }
         format.xml  { render :xml => @application, :status => :created, :location => @application }
       else
         format.html { render :action => "new" }
