@@ -12,15 +12,19 @@ class UsersController < ApplicationController
     @user = User.new
   end
   
-  def show
-  
-  end
-
   def create
     @user = User.new(params[:user])
-    if @user.save
+    if @user.save 
       flash[:notice] = "Thanks for signing up!!."
-      redirect_to root_url 
+      if @user.roles == "member"
+        redirect_to civil_statuses_path  
+      end
+      if  @user.roles == "compagny"
+         redirect_to compagnies_path  
+      end
+      if @user.roles == "admin"
+        redirect_to cvs_path  
+      end
     else
       render :action => 'new'
     end

@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100608102935) do
+ActiveRecord::Schema.define(:version => 20100608132612) do
 
   create_table "applications", :force => true do |t|
     t.integer  "job_id"
@@ -71,6 +71,7 @@ ActiveRecord::Schema.define(:version => 20100608102935) do
     t.boolean  "published"
     t.integer  "field_id"
     t.integer  "job_id"
+    t.integer  "application_id"
   end
 
   create_table "degree_courses", :force => true do |t|
@@ -161,6 +162,7 @@ ActiveRecord::Schema.define(:version => 20100608102935) do
     t.datetime "updated_at"
     t.integer  "compagny_id"
     t.boolean  "published"
+    t.integer  "application_id"
   end
 
   create_table "languages", :force => true do |t|
