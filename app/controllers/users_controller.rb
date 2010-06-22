@@ -18,12 +18,8 @@ class UsersController < ApplicationController
       flash[:notice] = "Thanks for signing up!!."
       if @user.roles == "member"
         redirect_to civil_statuses_path  
-      end
-      if  @user.roles == "compagny"
+      else  
          redirect_to compagnies_path  
-      end
-      if @user.roles == "admin"
-        redirect_to cvs_path  
       end
     else
       render :action => 'new'
