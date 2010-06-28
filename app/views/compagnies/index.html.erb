@@ -1,12 +1,12 @@
 <% title "All Compagny referenced" %>
-  <% @compagnies.each do |compagny|  %>
-    <%- if compagny.validated == true %>
+<% @compagnies.each do |compagny|  %>
+  <%- if compagny.validated == true %>
     <p>
       <%= compagny.name %>
       <%= compagny.headquarters %>  
       <%= link_to " voir ses offres ", compagny_jobs_path(compagny)%>  
     </p>  
-    <% end %>
+  <% end %>
 <% end %>
 
 <%- if !current_user.blank? && current_user.roles == "admin" %>

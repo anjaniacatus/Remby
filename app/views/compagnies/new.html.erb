@@ -3,9 +3,11 @@
 <% semantic_form_for(@compagny) do |f| %>
   <%= f.error_messages %>
   <%= render :partial => 'form', :locals => { :f => f } %> 
-<p>
-  <%= f.submit 'Create' %>
-</p>
+  
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
 <% end %>
+
 <%= link_to 'add_sheets', new_job_sheet_path%>
 <%= link_to 'Back', compagnies_path %>
