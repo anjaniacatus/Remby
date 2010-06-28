@@ -2,39 +2,10 @@
 
 <% semantic_form_for(@compagny) do |f| %>
   <%= f.error_messages %>
-
-  <p>
-    <%= f.label  "Dénomination" %><br />
-    <%= f.input :name  %>
-  </p>
-  <p>
-    <%= f.label :headquarters %><br />
-    <%= f.text_field :headquarters %>
-  </p>
-  <p>
-    <%= f.label :registration_number %><br />
-    <%= f.text_field :registration_number %>
-  </p>
-  <p>
-    <%= f.label :legal_form %><br />
-    <%= f.text_field :legal_form %>
-  </p>
-  <p>
-    <%= f.label :activity %><br />
-    <%= f.text_field :activity %>
-  </p>
-  <p>
-    <%= f.label :sector %><br />
-    <%= f.text_field :sector %>
-  </p>
-  <p>
-    <%= f.label  :validated %><br />
-    <%= f.input :validated, :as => :radio %>
-  </p>
- 
-  <p>
-    <%= f.submit 'Create' %>
-  </p>
+  <%= render :partial => 'form', :locals => { :f => f } %> 
+<p>
+  <%= f.submit 'Create' %>
+</p>
 <% end %>
 <%= link_to 'add_sheets', new_job_sheet_path%>
 <%= link_to 'Back', compagnies_path %>

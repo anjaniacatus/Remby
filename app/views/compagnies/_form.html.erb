@@ -1,0 +1,29 @@
+<p>
+<%= f.input :name, :label => "Dénomination" %>
+</p>
+
+<p>
+    <%= f.input :headquarters, :label => "Siège" %>
+</p>
+
+<p>
+    <%= f.input:registration_number, :label => "Nif" %><br />
+</p>
+
+<p>
+    <%= f.input :legal_form, :label => "Statut" %><br />
+</p>
+
+<p>
+    <%= f.input :activity, :label => "Activité" %>
+</p>
+
+<p>
+    <%= f.input :sector, :label => "Secteur" %>
+</p>
+
+<%- if current_user.roles == "admin" %>
+<p>
+  <%= f.input :validated, :as => :radio, :label => "Validation" %>
+</p>
+<% end %>
