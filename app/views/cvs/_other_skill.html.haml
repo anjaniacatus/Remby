@@ -1,0 +1,8 @@
+.child
+  %p
+    = f.input :title
+  %p
+    = f.input :description, :input_html => {:cols => 50, :rows => '3'}
+  %p
+    = f.hidden_field :_delete, :class => 'delete'
+    = remove_child_link 'remove', f

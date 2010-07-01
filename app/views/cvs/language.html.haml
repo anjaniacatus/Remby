@@ -1,0 +1,8 @@
+.child
+  %p
+    = f.input :title, :collection => ["english", "malagasy", "français", "japonais", "italien", "espagnol", "chinois", "allemand", "russe", "arabe"]
+  %p
+    = f.input :level, :collection => ["maternelle", "avancé", "moyen", "débutant"]
+  %p
+    = f.hidden_field :_delete, :class => 'delete'
+    = remove_child_link 'remove', f
