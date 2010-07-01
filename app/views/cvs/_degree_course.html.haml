@@ -1,0 +1,20 @@
+.child
+  %p
+    = f.input :degree_name, :collection => ["bac scientifique", "bac literaire","bac technique","formation", "bac + 1", "bac + 2", "license", "master M1", "master M2","DEA", "Phd" ]
+  .school
+    - params = { :f => f, :default => "N/A" }
+    = render :partial => 'schools/select', :locals => params
+  .field
+    - params = { :f => f, :default => "N/A" }
+    = render :partial => 'fields/select', :locals => params
+  %p
+    = f.input :option
+  %p
+    = f.input :description, :input_html => {:cols => 50, :rows => '3'}
+  %p
+    = f.input :start_on, :start_year => 1960, :end_year => 2010
+  %p
+    = f.input :end_on, :start_year => 1960, :end_year => 2010
+  %p
+    = f.hidden_field :_delete, :class => 'delete'
+    = remove_child_link 'remove', f

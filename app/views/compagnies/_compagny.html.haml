@@ -1,0 +1,22 @@
+%p
+  %b Name:
+  = h compagny.name
+%p
+  %b Headquaters:
+  = h compagny.headquarters
+%p
+  %b Registration number:
+  = h compagny.registration_number
+%p
+  %b Legal form:
+  = h compagny.legal_form
+%p
+  %b Activity:
+  = h compagny.activity
+%p
+  %b Sector:
+  = h compagny.sector
+= link_to 'Edit', edit_compagny_path(compagny)
+= link_to 'Destroy', compagny, :confirm => 'Are you sure?', :method => :delete
+= link_to 'Jobs', compagny_jobs_path(@compagny)
+= link_to 'Create_Job', new_compagny_job_path(@compagny)

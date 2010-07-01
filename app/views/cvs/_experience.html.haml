@@ -1,0 +1,13 @@
+.child
+  .compagny
+    - params = { :f => f, :default => "N/A" }
+    = render :partial => 'compagnies/select', :locals => params
+  %p
+    = f.input :jobtitle
+  %p
+    = f.input :description, :input_html => {:cols => 50, :rows => '3'}
+  %p
+    = f.input :duration, :collection => Experience::Durations
+  %p
+    = f.hidden_field :_delete, :class => 'delete'
+    = remove_child_link 'remove', f

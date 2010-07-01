@@ -1,0 +1,12 @@
+= f.label :compagny_id, "Choisir entreprise"
+%br/
+- params = (defined?(optional) ? { :include_blank => optional } : { :include_blank => "n/a" })
+= f.collection_select(:compagny_id, Compagny.ordered, :id, :name, params)
+%br/
+%span.help Si l'entreprise n'est pas encore référencé, remplir le champ ci-dessous.
+%br/
+%span.help exemple: [Compagny]
+%br/
+= f.label :my_compagny, "Nouvelle entreprise"
+%br/
+= f.text_field :my_compagny
