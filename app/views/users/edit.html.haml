@@ -1,0 +1,28 @@
+%h1
+  Editing user: #{h @userp.username}
+- semantic_form_for(@userp) do |f|
+  = f.error_messages
+  %p
+    = f.label :username
+    %br/
+    = f.text_field :username
+  %p
+    = f.label :password, "new password"
+    %br/
+    = f.password_field :password
+  %p
+    = f.label :password_confirmation, "new password"
+    %br/
+    = f.password_field :password_confirmation
+  %p
+    - if current_user && !is_admin?
+      = f.label :roles
+      = f.input :roles, :collection => ["member", "compagny"]
+  %p
+    - if current_user && is_admin?
+      = f.label :roles
+    %br/
+    = f.select :roles, (controller.authorization_engine.roles)
+  %p
+    = f.submit "Update"
+= link_to 'Back', root_path

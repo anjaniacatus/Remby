@@ -1,0 +1,13 @@
+%h1 Users
+%table
+  %tr
+    %th Login
+    %th Roles
+  - for user in @users
+  %tr
+    %td
+      %b= h user.username
+    %td= h user.roles
+    %td
+      = link_to 'Edit', edit_user_path(user)
+      = link_to 'Destroy', user, :confirm => 'Are you sure?', :method => :delete
