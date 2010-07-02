@@ -1,0 +1,5 @@
+- if !flash.empty? and (current_user or [ "search", "messages" ].include?(controller.controller_name))
+  - [:notice, :error].each do |key|
+    - if flash[key]
+      .flash{:id => "#{key.to_s}_flash"}
+        = flash[key]

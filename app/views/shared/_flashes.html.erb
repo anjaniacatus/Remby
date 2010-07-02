@@ -1,9 +1,0 @@
-<%- if !flash.empty? and (current_user or [ "search", "messages" ].include?(controller.controller_name)) -%>
-  <%- [:notice, :error].each do |key| -%>
-    <%- if flash[key] -%>
-      <div id="<%= key.to_s -%>_flash" class="flash">
-        <%= flash[key] -%>
-      </div>
-    <%- end -%>
-  <%- end -%>
-<%- end -%>
