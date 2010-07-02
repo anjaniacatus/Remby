@@ -1,35 +1,40 @@
-%p
-  - unless @cv.civil_status.blank?
-    = render @cv.civil_status
+- unless @cv.civil_status.blank?
+  = render @cv.civil_status
   %b Title:
   = h @cv.title
 %p
   %b Summary:
   = h @cv.summary
+
 .child
-  - unless @cv.degree_courses.blank?
-    = "Etude effectué: "
-    - @cv.degree_courses.each do |f|
-      - unless f.field.blank?
-        = f.field.field_name
+- unless @cv.degree_courses.blank?
+  = "Etude effectué: "
+  - @cv.degree_courses.each do |f|
+    - unless f.field.blank?
+      = f.field.field_name
   %h3 Degree_courses
   = render @cv.degree_courses
+
 .child
-  - unless @cv.experiences.blank?
+- unless @cv.experiences.blank?
   %h3 Experiences
   = render @cv.experiences
+
 .child
-  - unless @cv.languages.blank?
+- unless @cv.languages.blank?
   %h3 Languages
   = render @cv.languages
+
 .child
-  - unless @cv.interests.blank?
+- unless @cv.interests.blank?
   %h3 Interests
   = render @cv.interests
-.child
-  - unless @cv.other_skills.blank?
+
+.child  
+- unless @cv.other_skills.blank?
   %h3 Other Skills
   = render @cv.other_skills
+
 - if current_user == @cv.civil_status.user
   - @civil_status = current_user.civil_status
   = link_to 'Edit', edit_civil_status_cv_path(@civil_status, @cv)
