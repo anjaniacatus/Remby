@@ -1,0 +1,22 @@
+!!!
+%html{:lang => "en", "xml:lang" => "en", :xmlns => "http://www.w3.org/1999/xhtml"}
+  %head
+    %meta{:content => "text/html;charset=UTF-8", "http-equiv" => "content-type"}/
+    %title
+      Remby - #{yield(:title) || "Remby: Online Cv and Jobs"}
+    = stylesheet_link_tag 'application'
+    = javascript_include_tag 'prototype.js'
+    = javascript_include_tag 'nested_attributes.js'
+  %body
+    #banner
+    #navigation
+      = render :partial => 'shared/navigation'
+    #side
+      %p{:style => "color: green"}= flash[:notice]
+      = yield :title
+      = yield
+    #footer
+      footer goes here!!!
+      #contentinfo
+        \&copy; 2010 remby.com &mdash; engineered by
+        %a{:href => "http://jojopil.com"} jojopil! Innovations.

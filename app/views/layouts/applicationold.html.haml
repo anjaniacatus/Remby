@@ -1,0 +1,46 @@
+!!!
+%html{:lang => "I18n.locale.to_s", "xml:lang" => "I18n.locale.to_s", :xmlns => "http://www.w3.org/1999/xhtml"}
+  %head
+    %title= h(yield(:title) || "Remby | online CV & Jobs")
+    %meta{:content => "text/html;charset=utf-8", "http-equiv" => "content-type"}/
+    - if Rails.env.production?
+      = stylesheet_link_tag 'screen', :media => "screen"
+      = stylesheet_link_tag 'jquerycssmenu', :media => "screen"
+      = stylesheet_link_tag 'autocomplete', :media => "screen"
+    - else
+      %link{:href => "/stylesheets/screen.css", :media => "screen", :rel => "stylesheet", :type => "text/css"}/
+      %link{:href => "/stylesheets/jquerycssmenu.css", :media => "screen", :rel => "stylesheet", :type => "text/css"}/
+      %link{:href => "/stylesheets/autocomplete.css", :media => "screen", :rel => "stylesheet", :type => "text/css"}/
+    = javascript_include_tag 'jquery'
+    = javascript_include_tag 'jquerycssmenu'
+    = javascript_include_tag "swapselect"
+    = javascript_include_tag "jquery.autocomplete.js"
+    = javascript_include_tag "jquery.select-autocomplete.js"
+    = yield :javascript
+    = render :partial => 'shared/javascript'
+    = yield(:head)
+    - javascript_tag do
+      = yield(:jstemplates)
+  %body
+    #pagewrapper
+      #header
+        #user_nav
+          = render :partial => 'shared/navigation'
+      #content_wrapper
+        #content
+          %p{:style => "color: green"}= flash[:notice]
+        #related
+          = yield
+      #footer
+        #utils
+          %ul
+            %li
+              %a{:href => ""}= :contact
+            %li
+              %a{:href => ""}= :about
+            %li
+              %a{:href => ""}= :sitemap
+        #contentinfo
+          %p
+            \&copy; 2009 remby.com &mdash; engineered by
+            %a{:href => "http://jojopil.com"} jojopil! Innovations.
