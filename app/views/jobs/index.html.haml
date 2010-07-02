@@ -1,0 +1,13 @@
+%h1 Listing jobs
+- @jobs.each do |job|
+  %p
+    - unless !job.published
+      = job.function.name
+      = link_to 'show', job_path(job)
+      - unless current_user.blank?
+        - if current_user.roles == "company"|| "admin" && belongs_to_compagny?(job)
+          = link_to 'Edit', edit_job_path(job) if permitted_to?:update
+          = link_to 'Destroy', job, :confirm => 'Are you sure?', :method => :delete if permitted_to?:delete
+          = link_to 'Back', compagny_path(job.compagny)
+= link_to 'New job', new_compagny_job_path(current_user.compagny) if permitted_to?:create
+= link_to 'Back to compagny', compagnies_path

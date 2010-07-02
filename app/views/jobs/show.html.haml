@@ -1,0 +1,51 @@
+.main
+  %p{:align => "center"}
+    %b Ref:
+    = h @job.ref
+  %p{:align => "center"}
+    = "la societe...."
+    - unless @job.function.blank?
+      = @job.function.name
+      " un poste basé à: "
+    - unless @job.localisation.blank?
+      = @job.localisation.name
+  - if @job.contract.blank?
+  %p Le type de contrat sera à déterminer lors de l'entretien
+  - else
+  %p
+    %b Contract:
+    = @job.contract.name
+  %p{:align => "justify"}
+    %strong
+      %u Description du poste:
+    %br/
+    = @job.description
+  %p{:align => "justify"}
+    %strong
+      %u Attribution:
+    %br/
+    = @job.attribution
+  %p{:align => "justify"}
+    %strong
+      %u Profil requis:
+    %br/
+    = @job.profile
+  %p{:align => "justify"}
+    %b Les dossiers sont à addresser à:
+    %br/
+    = @job.folder
+  %p{:align => "center"}
+    Tous les dossiers devront être reçus avant le:&nbsp;#{@job.dead_line}
+- @compagny = @job.compagny
+- if current_user && belongs_to_compagny?(@job)
+  = link_to 'Edit', edit_compagny_job_path(@compagny,@job) if permitted_to?:update
+  = link_to 'Apply result', job_applications_path(@job)
+= link_to 'Back_to_compagny', compagny_jobs_path(@compagny)
+= link_to 'Back_to_jobs', jobs_path
+- if current_user && current_user.roles == "member"
+  .test{:align => "right"}
+    = link_to 'Apply to job ', new_job_application_path(@job)
+- else
+  .test{:align => "right"}
+    = link_to "Apply to Job"
+    = "Identifiez vous!!"

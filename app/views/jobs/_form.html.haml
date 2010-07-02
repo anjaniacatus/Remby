@@ -1,0 +1,27 @@
+%p
+  = f.label :ref
+  %br/
+  = f.text_field :ref
+.functions
+  - params = { :f => f, :default => "N/A" }
+  = render :partial => 'functions/select', :locals => params
+.contracts
+  - params = { :f => f, :default => "N/A" }
+  = render :partial => 'contracts/select', :locals => params
+.localisations
+  - params = { :f => f, :default => "N/A" }
+  = render :partial => 'localisations/select', :locals => params
+%p
+  = f.input :description
+%p
+  = f.input :attribution
+%p
+  = f.input :profile
+%p
+  = f.input :folder
+%p
+  = f.label :dead_line
+  %br/
+  = f.datetime_select :dead_line, :order => [ :day, :month, :year]
+%p
+  = f.input :published, :as => :radio

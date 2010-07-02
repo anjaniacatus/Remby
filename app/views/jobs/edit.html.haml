@@ -1,0 +1,9 @@
+%h1 Editing job
+- semantic_form_for (@job), :html => { :multipart => true } do |f|
+  = f.error_messages
+  = render :partial => 'form', :locals => {:f => f}
+  %p
+    = f.submit 'Update'
+= link_to 'Show', @job
+|
+\#{link_to 'Back', jobs_path}

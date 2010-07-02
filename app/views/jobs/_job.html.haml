@@ -1,0 +1,10 @@
+%h3= job.function.name
+.extract
+  %p
+    %b> Ref:
+    \&nbsp;#{h job.ref}
+  %p.description
+    = truncate(job.description, 200)
+    %br/
+  %p.small.text_right{:align => "right"}
+    = link_to 'En savoir plus', job
