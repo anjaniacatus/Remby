@@ -1,0 +1,10 @@
+.child
+  %p
+    = f.label :value_format
+    %br/
+    = f.select :value_format, ContactInfo::ValueFormats.map { |t| [ t[0], ContactInfo::ValueFormats.index(t) ] }, :selected => f.object.value_format.to_i
+  %p
+    = f.input :value
+  %p
+    = f.hidden_field :_destroy, :class => 'delete'
+    = remove_child_link 'remove', f
