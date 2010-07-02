@@ -1,0 +1,12 @@
+%p
+  %b Job:
+  = h @application.job.ref
+%p
+  %b Cv:
+  = h @application.cv.title
+%p
+  %b Title:
+  = h @application.title
+= link_to 'Edit', edit_job_application_path(@job, @application)
+|
+\#{link_to 'Back', jobs_path}

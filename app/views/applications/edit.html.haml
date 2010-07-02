@@ -1,0 +1,18 @@
+%h1 Editing application
+- semantic_form_for([@application.job, @application]) do |f|
+  = f.error_messages
+  %p
+    = f.collection_select(:job_id, Job.ordered, :id, :ref, params)
+    %br/
+  %p
+    = f.collection_select (:cv_id, Cv.ordered,:id, :title, params)
+    %br/
+  %p
+    = f.label :title
+    %br/
+    = f.text_field :title
+  %p
+    = f.submit 'Update'
+= link_to 'Show', job_application_path
+|
+\#{link_to 'Back', job_applications_path}
