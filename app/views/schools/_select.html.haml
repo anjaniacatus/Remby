@@ -1,0 +1,12 @@
+= f.label :school_id, "Choisisses votre école"
+%br/
+- params = (defined?(optional) ? { :include_blank => optional } : { :include_blank => "n/a" })
+= f.collection_select(:school_id, School.ordered, :id, :name, params)
+%br/
+%span.help Si votre ecole n'est pas encore référencé, remplir le champ ci-dessous.
+%br/
+%span.help exemple: [Université D'Antananarivo']
+%br/
+= f.label :my_school, "Nouvelle Ecole"
+%br/
+= f.text_field :my_school

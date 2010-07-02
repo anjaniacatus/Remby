@@ -1,0 +1,12 @@
+%h1 Listing localisations
+%table
+  %tr
+    %th Name
+  - @localisations.each do |localisation|
+  %tr
+    %td= h localisation.name
+    %td= link_to 'Show', localisation
+    %td= link_to 'Edit', edit_localisation_path(localisation)
+    %td= link_to 'Destroy', localisation, :confirm => 'Are you sure?', :method => :delete
+%br/
+= link_to 'New localisation', new_localisation_path

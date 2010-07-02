@@ -1,0 +1,12 @@
+= f.label :contract_id, "Choisir le type de contrat"
+%br/
+- params = (defined?(optional) ? { :include_blank => optional } : { :include_blank => "n/a" })
+= f.collection_select(:contract_id, Contract.ordered, :id, :name, params)
+%br/
+%span.help Si le type de contrat n'est pas encore référencé, remplir le champ ci-dessous.
+%br/
+%span.help exemple: [Stage de 6 mois]
+%br/
+= f.label :my_contract, "Nouveau contrat"
+%br/
+= f.text_field :my_contract
