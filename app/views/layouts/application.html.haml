@@ -7,16 +7,41 @@
     = stylesheet_link_tag 'application'
     = javascript_include_tag 'prototype.js'
     = javascript_include_tag 'nested_attributes.js'
-  %body
+  %body    
     #banner
-    #navigation
-      = render :partial => 'shared/navigation'
-    #side
-      %p{:style => "color: green"}= flash[:notice]
-      = yield :title
-      = yield
+      #banner1
+        %img.flex{ :title => "Où aller ?", :src => "/images/tananalife.png?1252593908", :alt => "Aiza no aleha ?* par http://tananalife.com", :width => "250" }/
+        %p
+          #{yield(:title) || "Remby: Online Cv and Jobs"}
+      #banner2
+        Search goes here
+    #contenu
+      #navigation
+        = render :partial => 'shared/navigation'
+      #contenu2
+        = yield :title
+        = yield
+      #tag
+        nuage tag   
     #footer
-      footer goes here!!!
-      #contentinfo
-        \&copy; 2010 remby.com &mdash; engineered by
-        %a{:href => "http://jojopil.com"} jojopil! Innovations.
+      #about
+        %h4 About:
+        Lorem ipsum dolor sit amet, 
+        consetetur sadipscing elitr, 
+        sed diam nonumyeirmod tempor 
+        invidunt ut labore et dolore 
+      #new
+        %h4 Activité récente:
+        Lorem ipsum dolor sit amet, 
+        consetetur sadipscing elitr, 
+        sed diam nonumyeirmod tempor 
+        invidunt ut labore et dolore 
+      #contact_us
+        %h4 Nous Contactez:
+        Lorem ipsum dolor sit amet, 
+        consetetur sadipscing elitr, 
+        sed diam nonumyeirmod tempor 
+        invidunt ut labore et dolore 
+    #contentinfo
+      \&copy;2010 remby.com &mdash; engineered by
+      %a{:href => "http://jojopil.com"} jojopil! Innovations.
