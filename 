@@ -9,7 +9,7 @@ a img {
 }
 
 a {
-  color: olive;
+  color: navy;
 }
 #banner{
   margin-top:2em; 
@@ -90,19 +90,18 @@ a {
   position: block;
   line-height: 1.6em;
   padding-left: 0px;
+  text-decoration: none;
   margin-left: 3px;
-  float:right;
   margin-bottom: 5px;
-  width: 100px;
-}
-#form_cv{
-  width: 300px;
+  background-color: #7A7475;
+  width: 15%;
+  color: white;
 }
 
 #admin_link{
  }
 #link{
-  background-color:#c0c0c0;
+  background-color:#008080;
   width:250px;
   float: right; 
   margin-left:1em;

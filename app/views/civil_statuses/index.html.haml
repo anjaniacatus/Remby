@@ -1,4 +1,3 @@
-- title "Home"
 - if current_user && is_admin?
   - title  "liste des membres"
   - @civil_statuses.each do |civil_status|
@@ -15,7 +14,6 @@
       = link_to 'Edit', edit_civil_status_path(civil_status)
       = link_to 'Destroy', civil_status, :confirm => 'Are you sure?', :method => :delete
 - if current_user && current_user.roles == "member"
-  - title  "Mon compte"
   - unless current_user.civil_status.blank?
     = render @civil_status
   - else

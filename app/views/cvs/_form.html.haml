@@ -1,6 +1,6 @@
 = f.error_messages
 %p
-  #form
+  #form_cv
     = f.input :title, :label => "Titre" 
     %br
     = f.input :summary, :input_html => {:cols => 50, :rows => '3'}, :label => "description"
@@ -43,6 +43,7 @@
 %p
   .link_cv
     = add_child_link 'Add a OtherSkill', 'other_skill', f
-#publish
+
+%p
   = f.input :published, :as => :radio
  
