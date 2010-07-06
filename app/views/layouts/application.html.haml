@@ -16,11 +16,11 @@
       #banner2
         Search goes here
     #contenu
-      #navigation
-        = render :partial => 'shared/navigation'
       #contenu2
         = yield :title
         = yield
+      #navigation
+        = render :partial => 'shared/navigation'
     #footer
       #about
         %h4 About:
