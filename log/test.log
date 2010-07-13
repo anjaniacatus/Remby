@@ -1,0 +1,573 @@
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (284.1ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (215.8ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20091109105426)
+  [4;35;1mSQL (382.0ms)[0m   [0mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `username` varchar(255), `email` varchar(255) NOT NULL, `crypted_password` varchar(255) NOT NULL, `password_salt` varchar(255) NOT NULL, `persistence_token` varchar(255) NOT NULL, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (44.3ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091109105426')[0m
+Migrating to CreateFunctions (20091113181558)
+  [4;35;1mSQL (126.1ms)[0m   [0mCREATE TABLE `functions` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (44.4ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091113181558')[0m
+Migrating to CreateContracts (20091113181640)
+  [4;35;1mSQL (133.2ms)[0m   [0mCREATE TABLE `contracts` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (44.3ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091113181640')[0m
+Migrating to CreateLocalisations (20091113181726)
+  [4;35;1mSQL (112.1ms)[0m   [0mCREATE TABLE `localisations` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (44.3ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091113181726')[0m
+Migrating to AddSlugs (20091115224225)
+  [4;35;1mSQL (135.5ms)[0m   [0mCREATE TABLE `slugs` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `sluggable_id` int(11), `sequence` int(11) DEFAULT 1 NOT NULL, `sluggable_type` varchar(40), `scope` varchar(40)) ENGINE=InnoDB[0m
+  [4;36;1mSQL (44.4ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091115224225')[0m
+Migrating to CreateSchools (20091116072324)
+  [4;35;1mSQL (204.5ms)[0m   [0mCREATE TABLE `schools` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `ref` varchar(255), `name` varchar(255), `description` text, `founded_on_year` date, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (44.4ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091116072324')[0m
+Migrating to CreateDomains (20091116072607)
+  [4;35;1mSQL (134.3ms)[0m   [0mCREATE TABLE `domains` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `ref` varchar(255), `name` varchar(255), `description` text, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (44.4ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091116072607')[0m
+Migrating to CreateOtherInfos (20091116075750)
+  [4;35;1mSQL (156.9ms)[0m   [0mCREATE TABLE `other_infos` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `ref` varchar(255), `name` varchar(255), `description` text, `profile_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (44.4ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091116075750')[0m
+Migrating to CreateSocieties (20091123032039)
+  [4;35;1mSQL (143.8ms)[0m   [0mCREATE TABLE `societies` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `baseline` varchar(255), `description` text, `category` int(11), `sector` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (44.4ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091123032039')[0m
+Migrating to CreateNotes (20091123040304)
+  [4;35;1mSQL (156.9ms)[0m   [0mCREATE TABLE `notes` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `title` varchar(255), `description` text, `society_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (33.3ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091123040304')[0m
+Migrating to CreateOfferings (20091123193246)
+  [4;35;1mSQL (154.5ms)[0m   [0mCREATE TABLE `offerings` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `ref` varchar(255), `object` varchar(255), `conditions` text, `dead_line` datetime, `society_id` int(11), `content_type` varchar(255), `size` int(11), `filename` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (33.3ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091123193246')[0m
+Migrating to CreateJobs (20091124185405)
+  [4;35;1mSQL (143.0ms)[0m   [0mCREATE TABLE `jobs` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `ref` varchar(255), `description` text, `attribution` text, `profile` text, `folder` text, `dead_line` datetime, `society_id` int(11), `function_id` int(11), `localisation_id` int(11), `contract_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (33.3ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091124185405')[0m
+Migrating to CreateCompagnies (20100208091251)
+  [4;35;1mSQL (139.2ms)[0m   [0mCREATE TABLE `compagnies` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `headquarters` varchar(255) DEFAULT 'default address', `registration_number` int(11), `legal_form` varchar(255), `activity` varchar(255), `sector` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (33.3ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100208091251')[0m
+Migrating to CreateJobSheets (20100209105655)
+  [4;35;1mSQL (113.9ms)[0m   [0mCREATE TABLE `job_sheets` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `position` varchar(255), `fields` varchar(255), `mission` varchar(255), `competence` varchar(255), `experience` varchar(255), `task` varchar(255), `degree` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (33.3ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100209105655')[0m
+Migrating to CreateCivilStatuses (20100326133802)
+  [4;35;1mSQL (127.4ms)[0m   [0mCREATE TABLE `civil_statuses` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `family_name` varchar(255), `name` varchar(255), `age` int(11), `birthday` date, `hometown` varchar(255), `current_city` varchar(255), `gender` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (33.3ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100326133802')[0m
+Migrating to AddStatusToCivilStatus (20100326141326)
+  [4;35;1mSQL (250.3ms)[0m   [0mALTER TABLE `civil_statuses` ADD `status` varchar(255)[0m
+  [4;36;1mSQL (33.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100326141326')[0m
+Migrating to RemoveValueFormatFromContactInfo (20100416081603)
+  [4;35;1mSQL (54.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100416081603')[0m
+Migrating to CreateCvs (20100420132319)
+  [4;36;1mSQL (116.6ms)[0m   [0;1mCREATE TABLE `cvs` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `title` varchar(255), `summary` text, `civil_status_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (34.9ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100420132319')[0m
+Migrating to CreateLanguages (20100421012235)
+  [4;36;1mSQL (112.3ms)[0m   [0;1mCREATE TABLE `languages` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `title` varchar(255), `description` text, `level` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (33.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100421012235')[0m
+Migrating to AddCvIdToLanguage (20100421013836)
+  [4;36;1mSQL (215.0ms)[0m   [0;1mALTER TABLE `languages` ADD `cv_id` int(11)[0m
+  [4;35;1mSQL (34.7ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100421013836')[0m
+Migrating to CreateInterests (20100421021124)
+  [4;36;1mSQL (111.0ms)[0m   [0;1mCREATE TABLE `interests` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `description` text, `cv_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (44.4ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100421021124')[0m
+Migrating to CreateOtherSkills (20100421021214)
+  [4;36;1mSQL (114.1ms)[0m   [0;1mCREATE TABLE `other_skills` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `title` varchar(255), `description` text, `cv_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (33.3ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100421021214')[0m
+Migrating to CreateContactInfos (20100421194239)
+  [4;36;1mSQL (118.8ms)[0m   [0;1mCREATE TABLE `contact_infos` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `value` varchar(255), `value_format` varchar(255), `description` text, `contactable_type` varchar(255), `contactable_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (33.3ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100421194239')[0m
+Migrating to CreateDegreeCourses (20100423091945)
+  [4;36;1mSQL (106.6ms)[0m   [0;1mCREATE TABLE `degree_courses` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `school_id` int(11), `degree_name` varchar(255), `field` varchar(255), `description` text, `cv_id` int(11), `start_on` date, `end_on` date, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (33.3ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100423091945')[0m
+Migrating to CreateExperiences (20100423093419)
+  [4;36;1mSQL (116.5ms)[0m   [0;1mCREATE TABLE `experiences` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `compagny_id` int(11), `cv_id` int(11), `jobtitle` varchar(255), `job_id` int(11), `description` text, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (33.3ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100423093419')[0m
+Migrating to AddDurationToExperience (20100503044204)
+  [4;36;1mSQL (239.1ms)[0m   [0;1mALTER TABLE `experiences` ADD `duration` varchar(255)[0m
+  [4;35;1mSQL (33.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100503044204')[0m
+Migrating to AddPublishedToCv (20100512114552)
+  [4;36;1mSQL (194.8ms)[0m   [0;1mALTER TABLE `cvs` ADD `published` tinyint(1)[0m
+  [4;35;1mSQL (33.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100512114552')[0m
+Migrating to AddUserIdToCivilStatus (20100516180338)
+  [4;36;1mSQL (212.4ms)[0m   [0;1mALTER TABLE `civil_statuses` ADD `user_id` int(11)[0m
+  [4;35;1mSQL (33.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100516180338')[0m
+Migrating to AddRolesToUser (20100519181115)
+  [4;36;1mSQL (220.8ms)[0m   [0;1mALTER TABLE `users` ADD `roles` varchar(255) DEFAULT 'member'[0m
+  [4;35;1mSQL (33.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100519181115')[0m
+Migrating to AddFirstUser (20100520062311)
+  [4;36;1mUser Columns (44.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (18.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (283.3ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'admin@gmail.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`username`) = BINARY 'admin') LIMIT 1[0m
+  [4;36;1mUser Load (9.9ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`persistence_token` = BINARY '08bd16df96115a2bf58354f1a1c4601823ff39b9609768dcdd36170418076a29d4797d7534482f640f9147b1d21923f62f576ca6c76b200df955099cde718902') LIMIT 1[0m
+  [4;35;1mUser Create (24.7ms)[0m   [0mINSERT INTO `users` (`created_at`, `crypted_password`, `updated_at`, `username`, `password_salt`, `persistence_token`, `roles`, `email`) VALUES('2010-07-13 06:20:07', 'ee098599eb4b2af2f455615c8b95f49e895ac4ce6ec2b3f0e6336b17b126bd2a896f8b03295b8b2f5b0d9cda48a4ae78b2b1dad02af3010a199d7942ffbb35bb', '2010-07-13 06:20:07', 'admin', 'wokp6GF-LRQ1myATx6UC', '08bd16df96115a2bf58354f1a1c4601823ff39b9609768dcdd36170418076a29d4797d7534482f640f9147b1d21923f62f576ca6c76b200df955099cde718902', 'admin', 'admin@gmail.com')[0m
+  [4;36;1mSQL (45.4ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (40.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100520062311')[0m
+Migrating to CreateImages (20100527125837)
+  [4;36;1mSQL (109.0ms)[0m   [0;1mCREATE TABLE `images` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `title` varchar(255), `description` text, `url` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (33.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100527125837')[0m
+Migrating to CreateFields (20100527233101)
+  [4;36;1mSQL (88.7ms)[0m   [0;1mCREATE TABLE `fields` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `field_name` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (33.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100527233101')[0m
+Migrating to AddFieldIdToDegreeCourse (20100527233843)
+  [4;36;1mSQL (205.5ms)[0m   [0;1mALTER TABLE `degree_courses` ADD `field_id` int(11)[0m
+  [4;35;1mSQL (33.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100527233843')[0m
+Migrating to CreateSearches (20100601120336)
+  [4;36;1mSQL (90.2ms)[0m   [0;1mCREATE TABLE `searches` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `field_id` int(11), `keywords` varchar(255), `after` date, `before` date, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (33.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100601120336')[0m
+Migrating to AddCompagnyIdToJob (20100603072051)
+  [4;36;1mSQL (206.2ms)[0m   [0;1mALTER TABLE `jobs` ADD `compagny_id` int(11)[0m
+  [4;35;1mSQL (33.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100603072051')[0m
+Migrating to AddUserIdToCompagny (20100603083821)
+  [4;36;1mSQL (222.0ms)[0m   [0;1mALTER TABLE `compagnies` ADD `user_id` int(11)[0m
+  [4;35;1mSQL (44.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100603083821')[0m
+Migrating to AddFieldIdToCv (20100604080402)
+  [4;36;1mSQL (203.6ms)[0m   [0;1mALTER TABLE `cvs` ADD `field_id` int(11)[0m
+  [4;35;1mSQL (33.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100604080402')[0m
+Migrating to AddOptionToDegreeCourse (20100604124648)
+  [4;36;1mSQL (204.4ms)[0m   [0;1mALTER TABLE `degree_courses` ADD `option` varchar(255)[0m
+  [4;35;1mSQL (33.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100604124648')[0m
+Migrating to AddPublishedToJob (20100605101906)
+  [4;36;1mSQL (219.0ms)[0m   [0;1mALTER TABLE `jobs` ADD `published` tinyint(1)[0m
+  [4;35;1mSQL (33.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100605101906')[0m
+Migrating to AddCompagnyNameToExperience (20100605165211)
+  [4;36;1mSQL (210.6ms)[0m   [0;1mALTER TABLE `experiences` ADD `compagny_name` varchar(255)[0m
+  [4;35;1mSQL (44.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100605165211')[0m
+Migrating to AddValidatedToCompagny (20100605170927)
+  [4;36;1mSQL (250.6ms)[0m   [0;1mALTER TABLE `compagnies` ADD `validated` tinyint(1)[0m
+  [4;35;1mSQL (33.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100605170927')[0m
+Migrating to CreateApplications (20100608102935)
+  [4;36;1mSQL (141.7ms)[0m   [0;1mCREATE TABLE `applications` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `job_id` int(11), `cv_id` int(11), `title` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (33.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100608102935')[0m
+Migrating to AddApplicationIdToJob (20100608132535)
+  [4;36;1mSQL (205.7ms)[0m   [0;1mALTER TABLE `jobs` ADD `application_id` int(11)[0m
+  [4;35;1mSQL (345.5ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100608132535')[0m
+Migrating to AddApplicationIdToCv (20100608132612)
+  [4;36;1mSQL (473.5ms)[0m   [0;1mALTER TABLE `cvs` ADD `application_id` int(11)[0m
+  [4;35;1mSQL (44.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100608132612')[0m
+  [4;36;1mSQL (35.7ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (68.6ms)[0m   [0mSHOW FIELDS FROM `applications`[0m
+  [4;36;1mSQL (2.1ms)[0m   [0;1mdescribe `applications`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW KEYS FROM `applications`[0m
+  [4;36;1mSQL (1.6ms)[0m   [0;1mSHOW FIELDS FROM `civil_statuses`[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mdescribe `civil_statuses`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `civil_statuses`[0m
+  [4;35;1mSQL (21.3ms)[0m   [0mSHOW FIELDS FROM `compagnies`[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mdescribe `compagnies`[0m
+  [4;35;1mSQL (20.9ms)[0m   [0mSHOW KEYS FROM `compagnies`[0m
+  [4;36;1mSQL (7.9ms)[0m   [0;1mSHOW FIELDS FROM `contact_infos`[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mdescribe `contact_infos`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `contact_infos`[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mSHOW FIELDS FROM `contracts`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mdescribe `contracts`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW KEYS FROM `contracts`[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mSHOW FIELDS FROM `cvs`[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mdescribe `cvs`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `cvs`[0m
+  [4;35;1mSQL (1.5ms)[0m   [0mSHOW FIELDS FROM `degree_courses`[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mdescribe `degree_courses`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW KEYS FROM `degree_courses`[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mSHOW FIELDS FROM `domains`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mdescribe `domains`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `domains`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW FIELDS FROM `experiences`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mdescribe `experiences`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `experiences`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW FIELDS FROM `fields`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mdescribe `fields`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW KEYS FROM `fields`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW FIELDS FROM `functions`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mdescribe `functions`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `functions`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW FIELDS FROM `images`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mdescribe `images`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW KEYS FROM `images`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW FIELDS FROM `interests`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mdescribe `interests`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `interests`[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mSHOW FIELDS FROM `job_sheets`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mdescribe `job_sheets`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `job_sheets`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSHOW FIELDS FROM `jobs`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mdescribe `jobs`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `jobs`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW FIELDS FROM `languages`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mdescribe `languages`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW KEYS FROM `languages`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW FIELDS FROM `localisations`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mdescribe `localisations`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `localisations`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW FIELDS FROM `notes`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mdescribe `notes`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW KEYS FROM `notes`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW FIELDS FROM `offerings`[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mdescribe `offerings`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `offerings`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW FIELDS FROM `other_infos`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mdescribe `other_infos`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW KEYS FROM `other_infos`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW FIELDS FROM `other_skills`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mdescribe `other_skills`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `other_skills`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW FIELDS FROM `schools`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mdescribe `schools`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW KEYS FROM `schools`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW FIELDS FROM `searches`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mdescribe `searches`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `searches`[0m
+  [4;36;1mSQL (11.3ms)[0m   [0;1mSHOW FIELDS FROM `slugs`[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mdescribe `slugs`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `slugs`[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mSHOW FIELDS FROM `societies`[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mdescribe `societies`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW KEYS FROM `societies`[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mdescribe `users`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (123.9ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (207.1ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20091109105426)
+  [4;35;1mSQL (108.4ms)[0m   [0mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `username` varchar(255), `email` varchar(255) NOT NULL, `crypted_password` varchar(255) NOT NULL, `password_salt` varchar(255) NOT NULL, `persistence_token` varchar(255) NOT NULL, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (44.3ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091109105426')[0m
+Migrating to CreateFunctions (20091113181558)
+  [4;35;1mSQL (130.1ms)[0m   [0mCREATE TABLE `functions` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (44.4ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091113181558')[0m
+Migrating to CreateContracts (20091113181640)
+  [4;35;1mSQL (123.7ms)[0m   [0mCREATE TABLE `contracts` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (44.3ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091113181640')[0m
+Migrating to CreateLocalisations (20091113181726)
+  [4;35;1mSQL (122.1ms)[0m   [0mCREATE TABLE `localisations` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (44.3ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091113181726')[0m
+Migrating to AddSlugs (20091115224225)
+  [4;35;1mSQL (107.3ms)[0m   [0mCREATE TABLE `slugs` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `sluggable_id` int(11), `sequence` int(11) DEFAULT 1 NOT NULL, `sluggable_type` varchar(40), `scope` varchar(40)) ENGINE=InnoDB[0m
+  [4;36;1mSQL (44.3ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091115224225')[0m
+Migrating to CreateSchools (20091116072324)
+  [4;35;1mSQL (121.6ms)[0m   [0mCREATE TABLE `schools` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `ref` varchar(255), `name` varchar(255), `description` text, `founded_on_year` date, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (33.3ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091116072324')[0m
+Migrating to CreateDomains (20091116072607)
+  [4;35;1mSQL (121.9ms)[0m   [0mCREATE TABLE `domains` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `ref` varchar(255), `name` varchar(255), `description` text, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (33.3ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091116072607')[0m
+Migrating to CreateOtherInfos (20091116075750)
+  [4;35;1mSQL (116.8ms)[0m   [0mCREATE TABLE `other_infos` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `ref` varchar(255), `name` varchar(255), `description` text, `profile_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (33.3ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091116075750')[0m
+Migrating to CreateNotes (20091123040304)
+  [4;35;1mSQL (112.3ms)[0m   [0mCREATE TABLE `notes` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `title` varchar(255), `description` text, `society_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (33.3ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091123040304')[0m
+Migrating to CreateOfferings (20091123193246)
+  [4;35;1mSQL (121.1ms)[0m   [0mCREATE TABLE `offerings` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `ref` varchar(255), `object` varchar(255), `conditions` text, `dead_line` datetime, `society_id` int(11), `content_type` varchar(255), `size` int(11), `filename` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (33.3ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091123193246')[0m
+Migrating to CreateJobs (20091124185405)
+  [4;35;1mSQL (98.6ms)[0m   [0mCREATE TABLE `jobs` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `ref` varchar(255), `description` text, `attribution` text, `profile` text, `folder` text, `dead_line` datetime, `society_id` int(11), `function_id` int(11), `localisation_id` int(11), `contract_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (34.9ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091124185405')[0m
+Migrating to CreateCompagnies (20100208091251)
+  [4;35;1mSQL (105.5ms)[0m   [0mCREATE TABLE `compagnies` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `headquarters` varchar(255) DEFAULT 'default address', `registration_number` int(11), `legal_form` varchar(255), `activity` varchar(255), `sector` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (33.3ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100208091251')[0m
+Migrating to CreateJobSheets (20100209105655)
+  [4;35;1mSQL (91.8ms)[0m   [0mCREATE TABLE `job_sheets` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `position` varchar(255), `fields` varchar(255), `mission` varchar(255), `competence` varchar(255), `experience` varchar(255), `task` varchar(255), `degree` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (33.3ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100209105655')[0m
+Migrating to CreateCivilStatuses (20100326133802)
+  [4;35;1mSQL (105.3ms)[0m   [0mCREATE TABLE `civil_statuses` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `family_name` varchar(255), `name` varchar(255), `age` int(11), `birthday` date, `hometown` varchar(255), `current_city` varchar(255), `gender` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (34.9ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100326133802')[0m
+Migrating to AddStatusToCivilStatus (20100326141326)
+  [4;35;1mSQL (199.3ms)[0m   [0mALTER TABLE `civil_statuses` ADD `status` varchar(255)[0m
+  [4;36;1mSQL (38.4ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100326141326')[0m
+Migrating to RemoveValueFormatFromContactInfo (20100416081603)
+  [4;35;1mSQL (43.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100416081603')[0m
+Migrating to CreateCvs (20100420132319)
+  [4;36;1mSQL (95.8ms)[0m   [0;1mCREATE TABLE `cvs` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `title` varchar(255), `summary` text, `civil_status_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (33.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100420132319')[0m
+Migrating to CreateLanguages (20100421012235)
+  [4;36;1mSQL (89.8ms)[0m   [0;1mCREATE TABLE `languages` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `title` varchar(255), `description` text, `level` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (33.3ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100421012235')[0m
+Migrating to AddCvIdToLanguage (20100421013836)
+  [4;36;1mSQL (227.4ms)[0m   [0;1mALTER TABLE `languages` ADD `cv_id` int(11)[0m
+  [4;35;1mSQL (33.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100421013836')[0m
+Migrating to CreateInterests (20100421021124)
+  [4;36;1mSQL (99.6ms)[0m   [0;1mCREATE TABLE `interests` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `description` text, `cv_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (33.3ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100421021124')[0m
+Migrating to CreateOtherSkills (20100421021214)
+  [4;36;1mSQL (91.2ms)[0m   [0;1mCREATE TABLE `other_skills` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `title` varchar(255), `description` text, `cv_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (33.3ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100421021214')[0m
+Migrating to CreateContactInfos (20100421194239)
+  [4;36;1mSQL (95.7ms)[0m   [0;1mCREATE TABLE `contact_infos` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `value` varchar(255), `value_format` varchar(255), `description` text, `contactable_type` varchar(255), `contactable_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (33.3ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100421194239')[0m
+Migrating to CreateDegreeCourses (20100423091945)
+  [4;36;1mSQL (104.4ms)[0m   [0;1mCREATE TABLE `degree_courses` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `school_id` int(11), `degree_name` varchar(255), `field` varchar(255), `description` text, `cv_id` int(11), `start_on` date, `end_on` date, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (44.4ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100423091945')[0m
+Migrating to CreateExperiences (20100423093419)
+  [4;36;1mSQL (110.5ms)[0m   [0;1mCREATE TABLE `experiences` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `compagny_id` int(11), `cv_id` int(11), `jobtitle` varchar(255), `job_id` int(11), `description` text, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (33.3ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100423093419')[0m
+Migrating to AddDurationToExperience (20100503044204)
+  [4;36;1mSQL (194.5ms)[0m   [0;1mALTER TABLE `experiences` ADD `duration` varchar(255)[0m
+  [4;35;1mSQL (33.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100503044204')[0m
+Migrating to AddPublishedToCv (20100512114552)
+  [4;36;1mSQL (216.5ms)[0m   [0;1mALTER TABLE `cvs` ADD `published` tinyint(1)[0m
+  [4;35;1mSQL (33.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100512114552')[0m
+Migrating to AddUserIdToCivilStatus (20100516180338)
+  [4;36;1mSQL (198.5ms)[0m   [0;1mALTER TABLE `civil_statuses` ADD `user_id` int(11)[0m
+  [4;35;1mSQL (33.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100516180338')[0m
+Migrating to AddRolesToUser (20100519181115)
+  [4;36;1mSQL (206.9ms)[0m   [0;1mALTER TABLE `users` ADD `roles` varchar(255) DEFAULT 'member'[0m
+  [4;35;1mSQL (33.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100519181115')[0m
+Migrating to AddFirstUser (20100520062311)
+  [4;36;1mUser Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'admin@gmail.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`username`) = BINARY 'admin') LIMIT 1[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`persistence_token` = BINARY '45e7485f86523e816e37dd16e31d9c86f63a2f61b6d9ac36d90ab3727b91cce056db464e8d0a02f17fc48e8dfa30fa32429b217faab3e7704328aea354fecb23') LIMIT 1[0m
+  [4;35;1mUser Create (0.2ms)[0m   [0mINSERT INTO `users` (`created_at`, `crypted_password`, `updated_at`, `username`, `password_salt`, `persistence_token`, `roles`, `email`) VALUES('2010-07-13 06:36:16', '6288700161e4b1131948466add322c035c20045c3ebb53c13def6985670342179a5b7b52893b54b45b241343664d247d5d18b9cec1cef46419f0d9a54892ed99', '2010-07-13 06:36:16', 'admin', 'zNK4NZWadsokibJi2tPa', '45e7485f86523e816e37dd16e31d9c86f63a2f61b6d9ac36d90ab3727b91cce056db464e8d0a02f17fc48e8dfa30fa32429b217faab3e7704328aea354fecb23', 'admin', 'admin@gmail.com')[0m
+  [4;36;1mSQL (30.8ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (29.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100520062311')[0m
+Migrating to CreateImages (20100527125837)
+  [4;36;1mSQL (99.6ms)[0m   [0;1mCREATE TABLE `images` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `title` varchar(255), `description` text, `url` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (34.7ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100527125837')[0m
+Migrating to CreateFields (20100527233101)
+  [4;36;1mSQL (89.0ms)[0m   [0;1mCREATE TABLE `fields` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `field_name` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (33.5ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100527233101')[0m
+Migrating to AddFieldIdToDegreeCourse (20100527233843)
+  [4;36;1mSQL (192.8ms)[0m   [0;1mALTER TABLE `degree_courses` ADD `field_id` int(11)[0m
+  [4;35;1mSQL (33.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100527233843')[0m
+Migrating to CreateSearches (20100601120336)
+  [4;36;1mSQL (90.2ms)[0m   [0;1mCREATE TABLE `searches` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `field_id` int(11), `keywords` varchar(255), `after` date, `before` date, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (33.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100601120336')[0m
+Migrating to AddCompagnyIdToJob (20100603072051)
+  [4;36;1mSQL (204.4ms)[0m   [0;1mALTER TABLE `jobs` ADD `compagny_id` int(11)[0m
+  [4;35;1mSQL (44.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100603072051')[0m
+Migrating to AddUserIdToCompagny (20100603083821)
+  [4;36;1mSQL (205.8ms)[0m   [0;1mALTER TABLE `compagnies` ADD `user_id` int(11)[0m
+  [4;35;1mSQL (33.4ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100603083821')[0m
+Migrating to AddFieldIdToCv (20100604080402)
+  [4;36;1mSQL (205.8ms)[0m   [0;1mALTER TABLE `cvs` ADD `field_id` int(11)[0m
+  [4;35;1mSQL (33.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100604080402')[0m
+Migrating to AddOptionToDegreeCourse (20100604124648)
+  [4;36;1mSQL (204.2ms)[0m   [0;1mALTER TABLE `degree_courses` ADD `option` varchar(255)[0m
+  [4;35;1mSQL (33.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100604124648')[0m
+Migrating to AddPublishedToJob (20100605101906)
+  [4;36;1mSQL (205.8ms)[0m   [0;1mALTER TABLE `jobs` ADD `published` tinyint(1)[0m
+  [4;35;1mSQL (44.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100605101906')[0m
+Migrating to AddCompagnyNameToExperience (20100605165211)
+  [4;36;1mSQL (216.9ms)[0m   [0;1mALTER TABLE `experiences` ADD `compagny_name` varchar(255)[0m
+  [4;35;1mSQL (33.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100605165211')[0m
+Migrating to AddValidatedToCompagny (20100605170927)
+  [4;36;1mSQL (204.5ms)[0m   [0;1mALTER TABLE `compagnies` ADD `validated` tinyint(1)[0m
+  [4;35;1mSQL (33.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100605170927')[0m
+Migrating to CreateApplications (20100608102935)
+  [4;36;1mSQL (101.4ms)[0m   [0;1mCREATE TABLE `applications` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `job_id` int(11), `cv_id` int(11), `title` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (33.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100608102935')[0m
+Migrating to AddApplicationIdToJob (20100608132535)
+  [4;36;1mSQL (215.8ms)[0m   [0;1mALTER TABLE `jobs` ADD `application_id` int(11)[0m
+  [4;35;1mSQL (33.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100608132535')[0m
+Migrating to AddApplicationIdToCv (20100608132612)
+  [4;36;1mSQL (195.0ms)[0m   [0;1mALTER TABLE `cvs` ADD `application_id` int(11)[0m
+  [4;35;1mSQL (33.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100608132612')[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mSHOW FIELDS FROM `applications`[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mdescribe `applications`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `applications`[0m
+  [4;36;1mSQL (1.5ms)[0m   [0;1mSHOW FIELDS FROM `civil_statuses`[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mdescribe `civil_statuses`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW KEYS FROM `civil_statuses`[0m
+  [4;35;1mSQL (16.9ms)[0m   [0mSHOW FIELDS FROM `compagnies`[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mdescribe `compagnies`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `compagnies`[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mSHOW FIELDS FROM `contact_infos`[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mdescribe `contact_infos`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `contact_infos`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSHOW FIELDS FROM `contracts`[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mdescribe `contracts`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW KEYS FROM `contracts`[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mSHOW FIELDS FROM `cvs`[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mdescribe `cvs`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `cvs`[0m
+  [4;35;1mSQL (1.5ms)[0m   [0mSHOW FIELDS FROM `degree_courses`[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mdescribe `degree_courses`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW KEYS FROM `degree_courses`[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSHOW FIELDS FROM `domains`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mdescribe `domains`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW KEYS FROM `domains`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW FIELDS FROM `experiences`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mdescribe `experiences`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `experiences`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW FIELDS FROM `fields`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mdescribe `fields`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW KEYS FROM `fields`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW FIELDS FROM `functions`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mdescribe `functions`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `functions`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW FIELDS FROM `images`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mdescribe `images`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW KEYS FROM `images`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW FIELDS FROM `interests`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mdescribe `interests`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `interests`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW FIELDS FROM `job_sheets`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mdescribe `job_sheets`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW KEYS FROM `job_sheets`[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mSHOW FIELDS FROM `jobs`[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mdescribe `jobs`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `jobs`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW FIELDS FROM `languages`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mdescribe `languages`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW KEYS FROM `languages`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW FIELDS FROM `localisations`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mdescribe `localisations`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `localisations`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW FIELDS FROM `notes`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mdescribe `notes`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW KEYS FROM `notes`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW FIELDS FROM `offerings`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mdescribe `offerings`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `offerings`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW FIELDS FROM `other_infos`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mdescribe `other_infos`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW KEYS FROM `other_infos`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW FIELDS FROM `other_skills`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mdescribe `other_skills`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `other_skills`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW FIELDS FROM `schools`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mdescribe `schools`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW KEYS FROM `schools`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW FIELDS FROM `searches`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mdescribe `searches`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `searches`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW FIELDS FROM `slugs`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mdescribe `slugs`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW KEYS FROM `slugs`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mdescribe `users`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20091109105426)
+Migrating to CreateFunctions (20091113181558)
+Migrating to CreateContracts (20091113181640)
+Migrating to CreateLocalisations (20091113181726)
+Migrating to AddSlugs (20091115224225)
+Migrating to CreateSchools (20091116072324)
+Migrating to CreateDomains (20091116072607)
+Migrating to CreateOtherInfos (20091116075750)
+Migrating to CreateNotes (20091123040304)
+Migrating to CreateOfferings (20091123193246)
+Migrating to CreateJobs (20091124185405)
+Migrating to CreateCompagnies (20100208091251)
+Migrating to CreateJobSheets (20100209105655)
+Migrating to CreateCivilStatuses (20100326133802)
+Migrating to AddStatusToCivilStatus (20100326141326)
+Migrating to RemoveValueFormatFromContactInfo (20100416081603)
+Migrating to CreateCvs (20100420132319)
+Migrating to CreateLanguages (20100421012235)
+Migrating to AddCvIdToLanguage (20100421013836)
+Migrating to CreateInterests (20100421021124)
+Migrating to CreateOtherSkills (20100421021214)
+Migrating to CreateContactInfos (20100421194239)
+Migrating to CreateDegreeCourses (20100423091945)
+Migrating to CreateExperiences (20100423093419)
+Migrating to AddDurationToExperience (20100503044204)
+Migrating to AddPublishedToCv (20100512114552)
+Migrating to AddUserIdToCivilStatus (20100516180338)
+Migrating to AddRolesToUser (20100519181115)
+Migrating to AddFirstUser (20100520062311)
+Migrating to CreateImages (20100527125837)
+Migrating to CreateFields (20100527233101)
+Migrating to AddFieldIdToDegreeCourse (20100527233843)
+Migrating to CreateSearches (20100601120336)
+Migrating to AddCompagnyIdToJob (20100603072051)
+Migrating to AddUserIdToCompagny (20100603083821)
+Migrating to AddFieldIdToCv (20100604080402)
+Migrating to AddOptionToDegreeCourse (20100604124648)
+Migrating to AddPublishedToJob (20100605101906)
+Migrating to AddCompagnyNameToExperience (20100605165211)
+Migrating to AddValidatedToCompagny (20100605170927)
+Migrating to CreateApplications (20100608102935)
+Migrating to AddApplicationIdToJob (20100608132535)
+Migrating to AddApplicationIdToCv (20100608132612)
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW FIELDS FROM `applications`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mdescribe `applications`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `applications`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW FIELDS FROM `civil_statuses`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mdescribe `civil_statuses`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW KEYS FROM `civil_statuses`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW FIELDS FROM `compagnies`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mdescribe `compagnies`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `compagnies`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW FIELDS FROM `contact_infos`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mdescribe `contact_infos`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW KEYS FROM `contact_infos`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW FIELDS FROM `contracts`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mdescribe `contracts`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `contracts`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW FIELDS FROM `cvs`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mdescribe `cvs`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW KEYS FROM `cvs`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW FIELDS FROM `degree_courses`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mdescribe `degree_courses`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `degree_courses`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW FIELDS FROM `domains`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mdescribe `domains`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW KEYS FROM `domains`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW FIELDS FROM `experiences`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mdescribe `experiences`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `experiences`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW FIELDS FROM `fields`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mdescribe `fields`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW KEYS FROM `fields`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW FIELDS FROM `functions`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mdescribe `functions`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `functions`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW FIELDS FROM `images`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mdescribe `images`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW KEYS FROM `images`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW FIELDS FROM `interests`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mdescribe `interests`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `interests`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW FIELDS FROM `job_sheets`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mdescribe `job_sheets`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW KEYS FROM `job_sheets`[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSHOW FIELDS FROM `jobs`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mdescribe `jobs`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `jobs`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW FIELDS FROM `languages`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mdescribe `languages`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW KEYS FROM `languages`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW FIELDS FROM `localisations`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mdescribe `localisations`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `localisations`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW FIELDS FROM `notes`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mdescribe `notes`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW KEYS FROM `notes`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW FIELDS FROM `offerings`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mdescribe `offerings`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `offerings`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW FIELDS FROM `other_infos`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mdescribe `other_infos`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW KEYS FROM `other_infos`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW FIELDS FROM `other_skills`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mdescribe `other_skills`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `other_skills`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW FIELDS FROM `schools`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mdescribe `schools`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW KEYS FROM `schools`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW FIELDS FROM `searches`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mdescribe `searches`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `searches`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW FIELDS FROM `slugs`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mdescribe `slugs`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW KEYS FROM `slugs`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mdescribe `users`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `users`[0m

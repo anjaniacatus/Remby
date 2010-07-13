@@ -4,6 +4,11 @@
 # test suite.  You never need to work with it otherwise.  Remember that
 # your test database is "scratch space" for the test suite and is wiped
 # and recreated between test runs.  Don't rely on the data there!
+config.gem "cucumber", :lib => false, :version => ">=0.8.3"
+config.gem "rspec", :lib => false, :version => ">=1.3.0"
+config.gem "rspec-rails", :lib => false, :version => ">=1.3.2"
+config.gem "webrat", :lib => false, :version => ">=0.7.0" 
+
 config.cache_classes = true
 
 # Log error messages when you accidentally call methods on nil.

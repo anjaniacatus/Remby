@@ -1,2 +1,0 @@
-class EducationInfo < Qualification
-end

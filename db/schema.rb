@@ -70,7 +70,6 @@ ActiveRecord::Schema.define(:version => 20100608132612) do
     t.datetime "updated_at"
     t.boolean  "published"
     t.integer  "field_id"
-    t.integer  "job_id"
     t.integer  "application_id"
   end
 
@@ -242,16 +241,6 @@ ActiveRecord::Schema.define(:version => 20100608132612) do
     t.integer "sequence",                     :default => 1, :null => false
     t.string  "sluggable_type", :limit => 40
     t.string  "scope",          :limit => 40
-  end
-
-  create_table "societies", :force => true do |t|
-    t.string   "name"
-    t.string   "baseline"
-    t.text     "description"
-    t.integer  "category"
-    t.integer  "sector"
-    t.datetime "created_at"
-    t.datetime "updated_at"
   end
 
   create_table "users", :force => true do |t|

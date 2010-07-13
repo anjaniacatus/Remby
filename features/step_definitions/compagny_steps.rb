@@ -3,7 +3,7 @@ Given /^the following compagnies:$/ do |compagnies|
 end
 
 When /^I delete the (\d+)(?:st|nd|rd|th) compagny$/ do |pos|
-  visit compagnies_url
+  visit compagnies_path
   within("table tr:nth-child(#{pos.to_i+1})") do
     click_link "Destroy"
   end

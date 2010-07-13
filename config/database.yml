@@ -35,7 +35,7 @@ dev_w_cache:
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
-test::
+test: &TEST
   adapter: mysql
   encoding: utf8
   reconnect: false
@@ -43,7 +43,6 @@ test::
   pool: 5
   username: root
   password:
-  socket: /tmp/mysql.sock
 
 production:
   adapter: mysql
@@ -52,3 +51,6 @@ production:
   username: jojopil_tnnlf
   password: Tan4naL!f3.
   host: localhost
+
+cucumber:
+  <<: *TEST
