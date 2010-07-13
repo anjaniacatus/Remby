@@ -1,5 +1,6 @@
 nbproject
 log/development.log
+log/cucumber.log
 /*.log
 doc/*
 config/database.yml
@@ -12,7 +13,6 @@ db/.mysql
 config/sphinx.yml
 public/images/uploaded
 db/schema.rb
-log/development.log
 public/offerings
 *~
 rerun.txt
