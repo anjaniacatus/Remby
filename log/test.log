@@ -571,3 +571,663 @@ Migrating to AddApplicationIdToCv (20100608132612)
   [4;35;1mSQL (0.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
   [4;36;1mSQL (0.6ms)[0m   [0;1mdescribe `users`[0m
   [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20091109105426)
+Migrating to CreateFunctions (20091113181558)
+Migrating to CreateContracts (20091113181640)
+Migrating to CreateLocalisations (20091113181726)
+Migrating to AddSlugs (20091115224225)
+Migrating to CreateSchools (20091116072324)
+Migrating to CreateDomains (20091116072607)
+Migrating to CreateOtherInfos (20091116075750)
+Migrating to CreateNotes (20091123040304)
+Migrating to CreateOfferings (20091123193246)
+Migrating to CreateJobs (20091124185405)
+Migrating to CreateCompagnies (20100208091251)
+Migrating to CreateJobSheets (20100209105655)
+Migrating to CreateCivilStatuses (20100326133802)
+Migrating to AddStatusToCivilStatus (20100326141326)
+Migrating to RemoveValueFormatFromContactInfo (20100416081603)
+Migrating to CreateCvs (20100420132319)
+Migrating to CreateLanguages (20100421012235)
+Migrating to AddCvIdToLanguage (20100421013836)
+Migrating to CreateInterests (20100421021124)
+Migrating to CreateOtherSkills (20100421021214)
+Migrating to CreateContactInfos (20100421194239)
+Migrating to CreateDegreeCourses (20100423091945)
+Migrating to CreateExperiences (20100423093419)
+Migrating to AddDurationToExperience (20100503044204)
+Migrating to AddPublishedToCv (20100512114552)
+Migrating to AddUserIdToCivilStatus (20100516180338)
+Migrating to AddRolesToUser (20100519181115)
+Migrating to AddFirstUser (20100520062311)
+Migrating to CreateImages (20100527125837)
+Migrating to CreateFields (20100527233101)
+Migrating to AddFieldIdToDegreeCourse (20100527233843)
+Migrating to CreateSearches (20100601120336)
+Migrating to AddCompagnyIdToJob (20100603072051)
+Migrating to AddUserIdToCompagny (20100603083821)
+Migrating to AddFieldIdToCv (20100604080402)
+Migrating to AddOptionToDegreeCourse (20100604124648)
+Migrating to AddPublishedToJob (20100605101906)
+Migrating to AddCompagnyNameToExperience (20100605165211)
+Migrating to AddValidatedToCompagny (20100605170927)
+Migrating to CreateApplications (20100608102935)
+Migrating to AddApplicationIdToJob (20100608132535)
+Migrating to AddApplicationIdToCv (20100608132612)
+Migrating to CreatePresentations (20100713065342)
+  [4;36;1mSQL (146.0ms)[0m   [0;1mCREATE TABLE `presentations` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `title` varchar(255), `description` text, `compagny_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (35.4ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100713065342')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW FIELDS FROM `applications`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mdescribe `applications`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW KEYS FROM `applications`[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSHOW FIELDS FROM `civil_statuses`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mdescribe `civil_statuses`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW KEYS FROM `civil_statuses`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW FIELDS FROM `compagnies`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mdescribe `compagnies`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `compagnies`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW FIELDS FROM `contact_infos`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mdescribe `contact_infos`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW KEYS FROM `contact_infos`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW FIELDS FROM `contracts`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mdescribe `contracts`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `contracts`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW FIELDS FROM `cvs`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mdescribe `cvs`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW KEYS FROM `cvs`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW FIELDS FROM `degree_courses`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mdescribe `degree_courses`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `degree_courses`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW FIELDS FROM `domains`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mdescribe `domains`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW KEYS FROM `domains`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW FIELDS FROM `experiences`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mdescribe `experiences`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `experiences`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW FIELDS FROM `fields`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mdescribe `fields`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW KEYS FROM `fields`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW FIELDS FROM `functions`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mdescribe `functions`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `functions`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW FIELDS FROM `images`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mdescribe `images`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW KEYS FROM `images`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW FIELDS FROM `interests`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mdescribe `interests`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `interests`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW FIELDS FROM `job_sheets`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mdescribe `job_sheets`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW KEYS FROM `job_sheets`[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSHOW FIELDS FROM `jobs`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mdescribe `jobs`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `jobs`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW FIELDS FROM `languages`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mdescribe `languages`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW KEYS FROM `languages`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW FIELDS FROM `localisations`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mdescribe `localisations`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `localisations`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW FIELDS FROM `notes`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mdescribe `notes`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW KEYS FROM `notes`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW FIELDS FROM `offerings`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mdescribe `offerings`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `offerings`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW FIELDS FROM `other_infos`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mdescribe `other_infos`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW KEYS FROM `other_infos`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW FIELDS FROM `other_skills`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mdescribe `other_skills`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `other_skills`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW FIELDS FROM `presentations`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mdescribe `presentations`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW KEYS FROM `presentations`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW FIELDS FROM `schools`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mdescribe `schools`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `schools`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW FIELDS FROM `searches`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mdescribe `searches`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW KEYS FROM `searches`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW FIELDS FROM `slugs`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mdescribe `slugs`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `slugs`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mdescribe `users`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (239.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (65.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mCivilStatus Columns (693.8ms)[0m   [0;1mSHOW FIELDS FROM `civil_statuses`[0m
+  [4;35;1mCompagny Columns (118.7ms)[0m   [0mSHOW FIELDS FROM `compagnies`[0m
+  [4;36;1mContract Columns (131.6ms)[0m   [0;1mSHOW FIELDS FROM `contracts`[0m
+  [4;35;1mCv Columns (79.7ms)[0m   [0mSHOW FIELDS FROM `cvs`[0m
+  [4;36;1mExperience Columns (76.2ms)[0m   [0;1mSHOW FIELDS FROM `experiences`[0m
+  [4;35;1mFunction Columns (105.8ms)[0m   [0mSHOW FIELDS FROM `functions`[0m
+  [4;36;1mJob Columns (130.8ms)[0m   [0;1mSHOW FIELDS FROM `jobs`[0m
+  [4;35;1mLocalisation Columns (77.3ms)[0m   [0mSHOW FIELDS FROM `localisations`[0m
+  [4;36;1mOtherInfo Columns (59.5ms)[0m   [0;1mSHOW FIELDS FROM `other_infos`[0m
+  [4;35;1mUser Columns (136.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Unable to load offering, underlying cause no such file to load -- offering 
+
+ /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:158:in `require'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:265:in `require_or_load'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:224:in `depend_on'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:136:in `require_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/fixtures.rb:853:in `try_to_load_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/fixtures.rb:868:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/fixtures.rb:865:in `each'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/fixtures.rb:865:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/fixtures.rb:848:in `fixtures'
+./test/test_helper.rb:35
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+./test/unit/illustration_test.rb:1
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+-e:1
+-e:1:in `each'
+-e:1
+Unable to load group, underlying cause no such file to load -- group 
+
+ /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:158:in `require'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:265:in `require_or_load'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:224:in `depend_on'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:136:in `require_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/fixtures.rb:853:in `try_to_load_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/fixtures.rb:868:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/fixtures.rb:865:in `each'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/fixtures.rb:865:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/fixtures.rb:848:in `fixtures'
+./test/test_helper.rb:35
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+./test/unit/illustration_test.rb:1
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+-e:1
+-e:1:in `each'
+-e:1
+Unable to load photo, underlying cause no such file to load -- photo 
+
+ /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:158:in `require'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:265:in `require_or_load'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:224:in `depend_on'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:136:in `require_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/fixtures.rb:853:in `try_to_load_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/fixtures.rb:868:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/fixtures.rb:865:in `each'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/fixtures.rb:865:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/fixtures.rb:848:in `fixtures'
+./test/test_helper.rb:35
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+./test/unit/illustration_test.rb:1
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+-e:1
+-e:1:in `each'
+-e:1
+Unable to load skill, underlying cause no such file to load -- skill 
+
+ /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:158:in `require'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:265:in `require_or_load'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:224:in `depend_on'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:136:in `require_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/fixtures.rb:853:in `try_to_load_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/fixtures.rb:868:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/fixtures.rb:865:in `each'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/fixtures.rb:865:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/fixtures.rb:848:in `fixtures'
+./test/test_helper.rb:35
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+./test/unit/illustration_test.rb:1
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+-e:1
+-e:1:in `each'
+-e:1
+Unable to load education_info, underlying cause no such file to load -- education_info 
+
+ /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:158:in `require'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:265:in `require_or_load'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:224:in `depend_on'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:136:in `require_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/fixtures.rb:853:in `try_to_load_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/fixtures.rb:868:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/fixtures.rb:865:in `each'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/fixtures.rb:865:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/fixtures.rb:848:in `fixtures'
+./test/test_helper.rb:35
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+./test/unit/illustration_test.rb:1
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+-e:1
+-e:1:in `each'
+-e:1
+Unable to load domain, underlying cause no such file to load -- domain 
+
+ /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:158:in `require'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:265:in `require_or_load'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:224:in `depend_on'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:136:in `require_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/fixtures.rb:853:in `try_to_load_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/fixtures.rb:868:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/fixtures.rb:865:in `each'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/fixtures.rb:865:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/fixtures.rb:848:in `fixtures'
+./test/test_helper.rb:35
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+./test/unit/illustration_test.rb:1
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+-e:1
+-e:1:in `each'
+-e:1
+Unable to load postal_box, underlying cause no such file to load -- postal_box 
+
+ /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:158:in `require'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:265:in `require_or_load'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:224:in `depend_on'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:136:in `require_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/fixtures.rb:853:in `try_to_load_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/fixtures.rb:868:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/fixtures.rb:865:in `each'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/fixtures.rb:865:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/fixtures.rb:848:in `fixtures'
+./test/test_helper.rb:35
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+./test/unit/illustration_test.rb:1
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+-e:1
+-e:1:in `each'
+-e:1
+  [4;36;1mSQL (30.9ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mCivilStatus Columns (33.2ms)[0m   [0;1mSHOW FIELDS FROM `civil_statuses`[0m
+  [4;35;1mCompagny Columns (35.1ms)[0m   [0mSHOW FIELDS FROM `compagnies`[0m
+  [4;36;1mContract Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `contracts`[0m
+  [4;35;1mCv Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `cvs`[0m
+  [4;36;1mExperience Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `experiences`[0m
+  [4;35;1mFunction Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `functions`[0m
+  [4;36;1mJob Columns (23.4ms)[0m   [0;1mSHOW FIELDS FROM `jobs`[0m
+  [4;35;1mLocalisation Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `localisations`[0m
+  [4;36;1mOtherInfo Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `other_infos`[0m
+  [4;35;1mUser Columns (11.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Unable to load offering, underlying cause no such file to load -- offering 
+
+ /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:158:in `require'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:265:in `require_or_load'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:224:in `depend_on'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:136:in `require_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/fixtures.rb:853:in `try_to_load_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/fixtures.rb:868:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/fixtures.rb:865:in `each'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/fixtures.rb:865:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/fixtures.rb:848:in `fixtures'
+./test/test_helper.rb:35
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+./test/unit/interest_test.rb:1
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+-e:1
+-e:1:in `each'
+-e:1
+Unable to load group, underlying cause no such file to load -- group 
+
+ /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:158:in `require'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:265:in `require_or_load'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:224:in `depend_on'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:136:in `require_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/fixtures.rb:853:in `try_to_load_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/fixtures.rb:868:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/fixtures.rb:865:in `each'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/fixtures.rb:865:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/fixtures.rb:848:in `fixtures'
+./test/test_helper.rb:35
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+./test/unit/interest_test.rb:1
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+-e:1
+-e:1:in `each'
+-e:1
+Unable to load photo, underlying cause no such file to load -- photo 
+
+ /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:158:in `require'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:265:in `require_or_load'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:224:in `depend_on'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:136:in `require_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/fixtures.rb:853:in `try_to_load_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/fixtures.rb:868:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/fixtures.rb:865:in `each'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/fixtures.rb:865:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/fixtures.rb:848:in `fixtures'
+./test/test_helper.rb:35
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+./test/unit/interest_test.rb:1
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+-e:1
+-e:1:in `each'
+-e:1
+Unable to load skill, underlying cause no such file to load -- skill 
+
+ /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:158:in `require'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:265:in `require_or_load'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:224:in `depend_on'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:136:in `require_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/fixtures.rb:853:in `try_to_load_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/fixtures.rb:868:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/fixtures.rb:865:in `each'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/fixtures.rb:865:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/fixtures.rb:848:in `fixtures'
+./test/test_helper.rb:35
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+./test/unit/interest_test.rb:1
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+-e:1
+-e:1:in `each'
+-e:1
+Unable to load education_info, underlying cause no such file to load -- education_info 
+
+ /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:158:in `require'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:265:in `require_or_load'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:224:in `depend_on'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:136:in `require_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/fixtures.rb:853:in `try_to_load_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/fixtures.rb:868:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/fixtures.rb:865:in `each'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/fixtures.rb:865:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/fixtures.rb:848:in `fixtures'
+./test/test_helper.rb:35
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+./test/unit/interest_test.rb:1
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+-e:1
+-e:1:in `each'
+-e:1
+Unable to load domain, underlying cause no such file to load -- domain 
+
+ /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:158:in `require'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:265:in `require_or_load'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:224:in `depend_on'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:136:in `require_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/fixtures.rb:853:in `try_to_load_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/fixtures.rb:868:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/fixtures.rb:865:in `each'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/fixtures.rb:865:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/fixtures.rb:848:in `fixtures'
+./test/test_helper.rb:35
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+./test/unit/interest_test.rb:1
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+-e:1
+-e:1:in `each'
+-e:1
+Unable to load postal_box, underlying cause no such file to load -- postal_box 
+
+ /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:158:in `require'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:265:in `require_or_load'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:224:in `depend_on'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:136:in `require_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/fixtures.rb:853:in `try_to_load_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/fixtures.rb:868:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/fixtures.rb:865:in `each'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/fixtures.rb:865:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/fixtures.rb:848:in `fixtures'
+./test/test_helper.rb:35
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+./test/unit/interest_test.rb:1
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+-e:1
+-e:1:in `each'
+-e:1
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mCivilStatus Columns (86.3ms)[0m   [0;1mSHOW FIELDS FROM `civil_statuses`[0m
+  [4;35;1mCompagny Columns (56.4ms)[0m   [0mSHOW FIELDS FROM `compagnies`[0m
+  [4;36;1mContract Columns (20.3ms)[0m   [0;1mSHOW FIELDS FROM `contracts`[0m
+  [4;35;1mCv Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `cvs`[0m
+  [4;36;1mExperience Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `experiences`[0m
+  [4;35;1mFunction Columns (17.4ms)[0m   [0mSHOW FIELDS FROM `functions`[0m
+  [4;36;1mJob Columns (16.1ms)[0m   [0;1mSHOW FIELDS FROM `jobs`[0m
+  [4;35;1mLocalisation Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `localisations`[0m
+  [4;36;1mOtherInfo Columns (16.4ms)[0m   [0;1mSHOW FIELDS FROM `other_infos`[0m
+  [4;35;1mUser Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Unable to load offering, underlying cause no such file to load -- offering 
+
+ /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:158:in `require'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:265:in `require_or_load'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:224:in `depend_on'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:136:in `require_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/fixtures.rb:853:in `try_to_load_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/fixtures.rb:868:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/fixtures.rb:865:in `each'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/fixtures.rb:865:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/fixtures.rb:848:in `fixtures'
+./test/test_helper.rb:35
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+./test/functional/fields_controller_test.rb:1
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+-e:1
+-e:1:in `each'
+-e:1
+Unable to load group, underlying cause no such file to load -- group 
+
+ /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:158:in `require'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:265:in `require_or_load'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:224:in `depend_on'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:136:in `require_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/fixtures.rb:853:in `try_to_load_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/fixtures.rb:868:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/fixtures.rb:865:in `each'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/fixtures.rb:865:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/fixtures.rb:848:in `fixtures'
+./test/test_helper.rb:35
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+./test/functional/fields_controller_test.rb:1
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+-e:1
+-e:1:in `each'
+-e:1
+Unable to load photo, underlying cause no such file to load -- photo 
+
+ /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:158:in `require'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:265:in `require_or_load'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:224:in `depend_on'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:136:in `require_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/fixtures.rb:853:in `try_to_load_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/fixtures.rb:868:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/fixtures.rb:865:in `each'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/fixtures.rb:865:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/fixtures.rb:848:in `fixtures'
+./test/test_helper.rb:35
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+./test/functional/fields_controller_test.rb:1
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+-e:1
+-e:1:in `each'
+-e:1
+Unable to load skill, underlying cause no such file to load -- skill 
+
+ /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:158:in `require'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:265:in `require_or_load'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:224:in `depend_on'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:136:in `require_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/fixtures.rb:853:in `try_to_load_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/fixtures.rb:868:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/fixtures.rb:865:in `each'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/fixtures.rb:865:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/fixtures.rb:848:in `fixtures'
+./test/test_helper.rb:35
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+./test/functional/fields_controller_test.rb:1
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+-e:1
+-e:1:in `each'
+-e:1
+Unable to load education_info, underlying cause no such file to load -- education_info 
+
+ /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:158:in `require'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:265:in `require_or_load'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:224:in `depend_on'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:136:in `require_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/fixtures.rb:853:in `try_to_load_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/fixtures.rb:868:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/fixtures.rb:865:in `each'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/fixtures.rb:865:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/fixtures.rb:848:in `fixtures'
+./test/test_helper.rb:35
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+./test/functional/fields_controller_test.rb:1
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+-e:1
+-e:1:in `each'
+-e:1
+Unable to load domain, underlying cause no such file to load -- domain 
+
+ /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:158:in `require'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:265:in `require_or_load'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:224:in `depend_on'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:136:in `require_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/fixtures.rb:853:in `try_to_load_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/fixtures.rb:868:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/fixtures.rb:865:in `each'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/fixtures.rb:865:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/fixtures.rb:848:in `fixtures'
+./test/test_helper.rb:35
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+./test/functional/fields_controller_test.rb:1
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+-e:1
+-e:1:in `each'
+-e:1
+Unable to load postal_box, underlying cause no such file to load -- postal_box 
+
+ /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:158:in `require'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:265:in `require_or_load'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:224:in `depend_on'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:136:in `require_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/fixtures.rb:853:in `try_to_load_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/fixtures.rb:868:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/fixtures.rb:865:in `each'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/fixtures.rb:865:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/fixtures.rb:848:in `fixtures'
+./test/test_helper.rb:35
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+./test/functional/fields_controller_test.rb:1
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+-e:1
+-e:1:in `each'
+-e:1
+  [4;36;1mSQL (238.9ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (307.4ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mCivilStatus Columns (1493.0ms)[0m   [0;1mSHOW FIELDS FROM `civil_statuses`[0m
+  [4;35;1mCompagny Columns (229.3ms)[0m   [0mSHOW FIELDS FROM `compagnies`[0m
+  [4;36;1mContract Columns (704.4ms)[0m   [0;1mSHOW FIELDS FROM `contracts`[0m
+  [4;35;1mCv Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `cvs`[0m
+  [4;36;1mExperience Columns (51.1ms)[0m   [0;1mSHOW FIELDS FROM `experiences`[0m
+  [4;35;1mFunction Columns (24.1ms)[0m   [0mSHOW FIELDS FROM `functions`[0m
+  [4;36;1mJob Columns (473.6ms)[0m   [0;1mSHOW FIELDS FROM `jobs`[0m
+  [4;35;1mLocalisation Columns (27.8ms)[0m   [0mSHOW FIELDS FROM `localisations`[0m
+  [4;36;1mOtherInfo Columns (20.4ms)[0m   [0;1mSHOW FIELDS FROM `other_infos`[0m
+  [4;35;1mUser Columns (24.7ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (46.8ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (19.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CivilStatusesController#index (for 127.0.0.1 at 2010-07-14 10:14:27) [GET]
+  [4;36;1mCivilStatus Load (474.2ms)[0m   [0;1mSELECT * FROM `civil_statuses` [0m
+  [4;35;1mCv Load (108.5ms)[0m   [0mSELECT * FROM `cvs` [0m
+Rendering template within layouts/application
+Rendering civil_statuses/index
+Rendered shared/_navigation (8.7ms)
+Completed in 931ms (View: 90, DB: 649) | 200 OK [http://0.0.0.0/civil_statuses]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-14 10:20:25) [GET]
+
+ActionController::RoutingError (No route matches "/selenium" with {:method=>:get}):
+  haml (3.0.13) lib/sass/plugin/rack.rb:41:in `call'
+
+Rendering rescues/layout (not_found)

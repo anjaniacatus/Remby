@@ -10,6 +10,9 @@ module NavigationHelpers
 
     when /the home\s?page/
       '/'
+    when /the new presentation page/
+      new_presentation_path
+
     when /the new compagny page/
       new_compagny_path
 
