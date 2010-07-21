@@ -8,7 +8,11 @@ ENV['RSPEC'] = "true"
 config.gem "cucumber", :lib => false, :version => ">=0.8.3"
 config.gem "rspec", :lib => false, :version => ">=1.3.0"
 config.gem "rspec-rails", :lib => false, :version => ">=1.3.2"
-config.gem "webrat", :lib => false, :version => ">=0.7.0" 
+config.gem "webrat", :lib => false, :version => ">=0.7.0"
+
+config.gem "pickle", :lib => false
+config.gem "machinist", :lib => false
+
 
 config.cache_classes = true
 

@@ -24,3 +24,29 @@ Feature: Manage presentations
       |title 1|description 1|
       |title 2|description 2|
       |title 4|description 4|
+  
+  Scenario:  See lists of presentation
+    Given the following presentations:
+      |title|description|
+      |title 1|description 1|
+      |title 2|description 2|
+      |title 3|description 3|
+      |title 4|description 4|
+   When I go to path "/presentations"
+   Then I should see presentations table 
+      |title|description|
+      |title 1|description 1|
+      |title 2|description 2|
+      |title 3|description 3|
+      |title 4|description 4|
+
+
+
+  @validation
+  Scenario: Validation data
+    Given I am on the new presentation page 
+    When I fill in "Title" with ""
+    And I fill in "Description" with "descriptin 1"
+    And I press "Create"
+    Then page should contain "Title can't be blank!"
+    And show me the page 

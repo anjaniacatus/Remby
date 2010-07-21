@@ -12,3 +12,14 @@ end
 Then /^I should see the following presentations:$/ do |expected_presentations_table|
   expected_presentations_table.diff!(tableish('table tr', 'td,th'))
 end
+
+Then /^Title can't be blank$/ do
+  Presentation.flash_notice == "Text can't be blank!"
+end
+
+
+Then /^I should see presentations table$/ do |expected_table|
+      
+end  
+
+
