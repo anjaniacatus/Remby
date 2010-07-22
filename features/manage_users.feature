@@ -50,7 +50,7 @@ Feature: Manage users
 			And   I fill in "new password confirmation" with "newpassword"
 		  And   I press "update" 
 		  Then  I should see "fenomchanged"  
-      And   And the value of my "password" should be "password"
+      And   the value of my "password" should be "password"
 
 
   Scenario: Deactive user
