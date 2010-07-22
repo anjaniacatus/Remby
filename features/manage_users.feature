@@ -19,7 +19,7 @@ Feature: Manage users
     Scenario: I want to Register and login as a new member
 		  Given I am a member
 		  When  I am logged in as "fenom" with password "fenom"
-		  Then  I should be on the civil_statuses page
+      Then  I should be on the civil_statuses page
 		  And   I should be able to click the link "profile"
 	
 	@deconnexion
@@ -53,5 +53,5 @@ Feature: Manage users
       And   the value of my "password" should be "password"
 
 
-  Scenario: Deactive user
-    
+  Scenario: Deactivate an account
+  Scenario: Activate an account via mail   
