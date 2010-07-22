@@ -16,8 +16,7 @@ Given /^I am logged in as "([^"]*)" with password "([^"]*)"$/ do |arg1, arg2|
   fill_in "Username", :with => arg1
   fill_in "Password", :with => arg2
   click_button "Log in"
-  response.should contain("Logged in succesfully")
-
+  response.should contain("Bienvenue!")
 end
 
 Then /^I should be able to click the link "([^"]*)"$/ do |arg1|
