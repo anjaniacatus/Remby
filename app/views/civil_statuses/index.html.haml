@@ -17,4 +17,4 @@
   - unless current_user.civil_status.blank?
     = render @civil_status
   - else
-    = link_to 'New civil_status', new_civil_status_path if permitted_to? :create
+    = link_to 'profile', new_civil_status_path if permitted_to? :create

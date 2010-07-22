@@ -1,7 +1,7 @@
 %div{:id => "link home"}
   = link_to "home", root_path
   - if current_user
-    = link_to "Edit Account", edit_user_path(current_user)
+    = link_to "editer mon compte", edit_user_path(current_user)
     |
     \#{link_to "logout", logout_path}
   - else

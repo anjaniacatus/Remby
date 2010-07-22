@@ -10,6 +10,15 @@ module NavigationHelpers
 
     when /the home\s?page/
       '/'
+    when /the new essai page/
+      new_essai_path
+
+    when /the new civil_status page/
+      new_civil_status_path
+
+    when /the new civil_status page/
+      new_civil_status_path
+
     when /the new cv page/
       new_cv_path
 

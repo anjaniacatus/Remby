@@ -1247,3 +1247,289 @@ Rendering rescues/layout (not_found)
   [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
   [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK TO SAVEPOINT active_record_1[0m
   [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mCivilStatus Columns (41.1ms)[0m   [0;1mSHOW FIELDS FROM `civil_statuses`[0m
+  [4;35;1mCompagny Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `compagnies`[0m
+  [4;36;1mContract Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `contracts`[0m
+  [4;35;1mCv Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `cvs`[0m
+  [4;36;1mExperience Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `experiences`[0m
+  [4;35;1mFunction Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `functions`[0m
+  [4;36;1mJob Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `jobs`[0m
+  [4;35;1mLocalisation Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `localisations`[0m
+  [4;36;1mOtherInfo Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `other_infos`[0m
+  [4;35;1mUser Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20091109105426)
+Migrating to CreateFunctions (20091113181558)
+Migrating to CreateContracts (20091113181640)
+Migrating to CreateLocalisations (20091113181726)
+Migrating to AddSlugs (20091115224225)
+Migrating to CreateSchools (20091116072324)
+Migrating to CreateDomains (20091116072607)
+Migrating to CreateOtherInfos (20091116075750)
+Migrating to CreateNotes (20091123040304)
+Migrating to CreateOfferings (20091123193246)
+Migrating to CreateJobs (20091124185405)
+Migrating to CreateCompagnies (20100208091251)
+Migrating to CreateJobSheets (20100209105655)
+Migrating to CreateCivilStatuses (20100326133802)
+Migrating to AddStatusToCivilStatus (20100326141326)
+Migrating to RemoveValueFormatFromContactInfo (20100416081603)
+Migrating to CreateCvs (20100420132319)
+Migrating to CreateLanguages (20100421012235)
+Migrating to AddCvIdToLanguage (20100421013836)
+Migrating to CreateInterests (20100421021124)
+Migrating to CreateOtherSkills (20100421021214)
+Migrating to CreateContactInfos (20100421194239)
+Migrating to CreateDegreeCourses (20100423091945)
+Migrating to CreateExperiences (20100423093419)
+Migrating to AddDurationToExperience (20100503044204)
+Migrating to AddPublishedToCv (20100512114552)
+Migrating to AddUserIdToCivilStatus (20100516180338)
+Migrating to AddRolesToUser (20100519181115)
+Migrating to AddFirstUser (20100520062311)
+Migrating to CreateImages (20100527125837)
+Migrating to CreateFields (20100527233101)
+Migrating to AddFieldIdToDegreeCourse (20100527233843)
+Migrating to CreateSearches (20100601120336)
+Migrating to AddCompagnyIdToJob (20100603072051)
+Migrating to AddUserIdToCompagny (20100603083821)
+Migrating to AddFieldIdToCv (20100604080402)
+Migrating to AddOptionToDegreeCourse (20100604124648)
+Migrating to AddPublishedToJob (20100605101906)
+Migrating to AddCompagnyNameToExperience (20100605165211)
+Migrating to AddValidatedToCompagny (20100605170927)
+Migrating to CreateApplications (20100608102935)
+Migrating to AddApplicationIdToJob (20100608132535)
+Migrating to AddApplicationIdToCv (20100608132612)
+Migrating to CreateEssais (20100721151258)
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW FIELDS FROM `applications`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mdescribe `applications`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `applications`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW FIELDS FROM `civil_statuses`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mdescribe `civil_statuses`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW KEYS FROM `civil_statuses`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW FIELDS FROM `compagnies`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mdescribe `compagnies`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `compagnies`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW FIELDS FROM `contact_infos`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mdescribe `contact_infos`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW KEYS FROM `contact_infos`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW FIELDS FROM `contracts`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mdescribe `contracts`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `contracts`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW FIELDS FROM `cvs`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mdescribe `cvs`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW KEYS FROM `cvs`[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSHOW FIELDS FROM `degree_courses`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mdescribe `degree_courses`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `degree_courses`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW FIELDS FROM `domains`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mdescribe `domains`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW KEYS FROM `domains`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW FIELDS FROM `essais`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mdescribe `essais`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `essais`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW FIELDS FROM `experiences`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mdescribe `experiences`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW KEYS FROM `experiences`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW FIELDS FROM `fields`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mdescribe `fields`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `fields`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW FIELDS FROM `functions`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mdescribe `functions`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW KEYS FROM `functions`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW FIELDS FROM `images`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mdescribe `images`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `images`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW FIELDS FROM `interests`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mdescribe `interests`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW KEYS FROM `interests`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW FIELDS FROM `job_sheets`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mdescribe `job_sheets`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `job_sheets`[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSHOW FIELDS FROM `jobs`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mdescribe `jobs`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW KEYS FROM `jobs`[0m
+  [4;35;1mSQL (37.0ms)[0m   [0mSHOW FIELDS FROM `languages`[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mdescribe `languages`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW KEYS FROM `languages`[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mSHOW FIELDS FROM `localisations`[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mdescribe `localisations`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `localisations`[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mSHOW FIELDS FROM `notes`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mdescribe `notes`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW KEYS FROM `notes`[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSHOW FIELDS FROM `offerings`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mdescribe `offerings`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW KEYS FROM `offerings`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW FIELDS FROM `other_infos`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mdescribe `other_infos`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `other_infos`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW FIELDS FROM `other_skills`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mdescribe `other_skills`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW KEYS FROM `other_skills`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW FIELDS FROM `presentations`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mdescribe `presentations`[0m
+  [4;35;1mSQL (16.8ms)[0m   [0mSHOW KEYS FROM `presentations`[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mSHOW FIELDS FROM `schools`[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mdescribe `schools`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `schools`[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mSHOW FIELDS FROM `searches`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mdescribe `searches`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW KEYS FROM `searches`[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mSHOW FIELDS FROM `slugs`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mdescribe `slugs`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `slugs`[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mSHOW FIELDS FROM `societies`[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mdescribe `societies`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW KEYS FROM `societies`[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mdescribe `users`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20091109105426)
+Migrating to CreateFunctions (20091113181558)
+Migrating to CreateContracts (20091113181640)
+Migrating to CreateLocalisations (20091113181726)
+Migrating to AddSlugs (20091115224225)
+Migrating to CreateSchools (20091116072324)
+Migrating to CreateDomains (20091116072607)
+Migrating to CreateOtherInfos (20091116075750)
+Migrating to CreateNotes (20091123040304)
+Migrating to CreateOfferings (20091123193246)
+Migrating to CreateJobs (20091124185405)
+Migrating to CreateCompagnies (20100208091251)
+Migrating to CreateJobSheets (20100209105655)
+Migrating to CreateCivilStatuses (20100326133802)
+Migrating to AddStatusToCivilStatus (20100326141326)
+Migrating to RemoveValueFormatFromContactInfo (20100416081603)
+Migrating to CreateCvs (20100420132319)
+Migrating to CreateLanguages (20100421012235)
+Migrating to AddCvIdToLanguage (20100421013836)
+Migrating to CreateInterests (20100421021124)
+Migrating to CreateOtherSkills (20100421021214)
+Migrating to CreateContactInfos (20100421194239)
+Migrating to CreateDegreeCourses (20100423091945)
+Migrating to CreateExperiences (20100423093419)
+Migrating to AddDurationToExperience (20100503044204)
+Migrating to AddPublishedToCv (20100512114552)
+Migrating to AddUserIdToCivilStatus (20100516180338)
+Migrating to AddRolesToUser (20100519181115)
+Migrating to AddFirstUser (20100520062311)
+Migrating to CreateImages (20100527125837)
+Migrating to CreateFields (20100527233101)
+Migrating to AddFieldIdToDegreeCourse (20100527233843)
+Migrating to CreateSearches (20100601120336)
+Migrating to AddCompagnyIdToJob (20100603072051)
+Migrating to AddUserIdToCompagny (20100603083821)
+Migrating to AddFieldIdToCv (20100604080402)
+Migrating to AddOptionToDegreeCourse (20100604124648)
+Migrating to AddPublishedToJob (20100605101906)
+Migrating to AddCompagnyNameToExperience (20100605165211)
+Migrating to AddValidatedToCompagny (20100605170927)
+Migrating to CreateApplications (20100608102935)
+Migrating to AddApplicationIdToJob (20100608132535)
+Migrating to AddApplicationIdToCv (20100608132612)
+Migrating to CreateEssais (20100721151258)
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW FIELDS FROM `applications`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mdescribe `applications`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `applications`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW FIELDS FROM `civil_statuses`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mdescribe `civil_statuses`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW KEYS FROM `civil_statuses`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW FIELDS FROM `compagnies`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mdescribe `compagnies`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `compagnies`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW FIELDS FROM `contact_infos`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mdescribe `contact_infos`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW KEYS FROM `contact_infos`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW FIELDS FROM `contracts`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mdescribe `contracts`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `contracts`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW FIELDS FROM `cvs`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mdescribe `cvs`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW KEYS FROM `cvs`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW FIELDS FROM `degree_courses`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mdescribe `degree_courses`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `degree_courses`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW FIELDS FROM `domains`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mdescribe `domains`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW KEYS FROM `domains`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW FIELDS FROM `essais`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mdescribe `essais`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `essais`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW FIELDS FROM `experiences`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mdescribe `experiences`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW KEYS FROM `experiences`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW FIELDS FROM `fields`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mdescribe `fields`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `fields`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW FIELDS FROM `functions`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mdescribe `functions`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW KEYS FROM `functions`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW FIELDS FROM `images`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mdescribe `images`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `images`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW FIELDS FROM `interests`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mdescribe `interests`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW KEYS FROM `interests`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW FIELDS FROM `job_sheets`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mdescribe `job_sheets`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `job_sheets`[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSHOW FIELDS FROM `jobs`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mdescribe `jobs`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW KEYS FROM `jobs`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW FIELDS FROM `languages`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mdescribe `languages`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `languages`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW FIELDS FROM `localisations`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mdescribe `localisations`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW KEYS FROM `localisations`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW FIELDS FROM `notes`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mdescribe `notes`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `notes`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW FIELDS FROM `offerings`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mdescribe `offerings`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW KEYS FROM `offerings`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW FIELDS FROM `other_infos`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mdescribe `other_infos`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `other_infos`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW FIELDS FROM `other_skills`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mdescribe `other_skills`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW KEYS FROM `other_skills`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW FIELDS FROM `presentations`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mdescribe `presentations`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `presentations`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW FIELDS FROM `schools`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mdescribe `schools`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW KEYS FROM `schools`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW FIELDS FROM `searches`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mdescribe `searches`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `searches`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW FIELDS FROM `slugs`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mdescribe `slugs`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW KEYS FROM `slugs`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW FIELDS FROM `societies`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mdescribe `societies`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `societies`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mdescribe `users`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW KEYS FROM `users`[0m
