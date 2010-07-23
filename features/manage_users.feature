@@ -49,7 +49,7 @@ Feature: Manage users
     Then I should see "username 1"
     And I should see "anja1catus@yahoo.fr"
     And the value of my "password" should be "password"
-
+    And I should see "member"
 
   Scenario: Deactivate an account
   Scenario: Activate an account via mail   
