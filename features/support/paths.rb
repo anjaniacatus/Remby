@@ -10,6 +10,9 @@ module NavigationHelpers
 
     when /the home\s?page/
       '/'
+    when /the new cv page/
+      new_cv_path
+
     when /the new user page/
       new_user_path
 

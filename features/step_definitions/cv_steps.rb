@@ -12,12 +12,3 @@ end
 Then /^I should see the following cvs:$/ do |expected_cvs_table|
   expected_cvs_table.diff!(tableish('table tr', 'td,th'))
 end
-Given /^a cv$/ do 
-  Cv.create!(:title => "test", :summary => "sum test", :published => false)
-end
-
-When /^cv is not published$/ do
-  Cv.create!(:title => "test", :summary => "sum test", :published => false)
-end
-
-
