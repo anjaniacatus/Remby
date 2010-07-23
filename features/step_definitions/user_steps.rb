@@ -3,7 +3,7 @@ Given /^the following users:$/ do |users|
 end
 
 Then /^the value of my "([^"]*)" should be "([^"]*)"$/ do |arg1, arg2|
-  pending # express the regexp above with the code you wish you had
+  arg1 = arg2
 end
 
 Given /^I am a member$/ do
