@@ -3,7 +3,8 @@
 %p
   = f.input :name , :label => "Prenom", :hint => "Votre prenom"
 %p
-  = f.input :birthday, :label => "Date de naissance",:start_year => 1930, :use_month_numbers => true, :order => [:day, :month, :year]
+  = f.label "Date de naissance"
+  = f.date_select :birthday,:start_year => 1930, :use_month_numbers => false, :order => [:day, :month, :year]
 %p
   = f.input :hometown, :label => "Lieu de naissance"
 %p

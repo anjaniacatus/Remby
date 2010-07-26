@@ -3,6 +3,7 @@ class CivilStatusesController < ApplicationController
   # GET /civil_statuses.xml
   #filter_resource_access
   caches_page :show, :if => Proc.new { |c| c.request.format.jpg? }
+  before_filter :civil_status
   def index
     @civil_statuses = CivilStatus.all
     if current_user && current_user.roles == "member"
@@ -19,7 +20,6 @@ class CivilStatusesController < ApplicationController
   # GET /civil_statuses/1.xml
   def show
     @civil_status = CivilStatus.find(params[:id])
-
     respond_to do |format|
       format.jpg
       format.html # show.html.erb
@@ -31,10 +31,14 @@ class CivilStatusesController < ApplicationController
   # GET /civil_statuses/new.xml
   def new
     unless current_user.blank?
-      @civil_status = CivilStatus.new
-      respond_to do |format|
-        format.html # new.html.erb
-        format.xml  { render :xml => @civil_status }
+      if civil_status.blank?
+         @civil_status = CivilStatus.new
+         respond_to do |format|
+          format.html # new.html.erb
+          #format.xml  { render :xml => @civil_status }
+         end
+      else
+         redirect_to civil_statuses_path
       end
     else
        flash[:notice] = 'impossible, il faut être membre et à la fois connecté '
@@ -89,6 +93,12 @@ class CivilStatusesController < ApplicationController
     respond_to do |format|
       format.html { redirect_to(civil_statuses_url) }
       format.xml  { head :ok }
+    end
+  end
+  private 
+  def civil_status
+    unless current_user.blank?
+      @civil_status = current_user.civil_status
     end
   end
 end
