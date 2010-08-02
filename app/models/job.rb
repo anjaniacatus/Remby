@@ -1,5 +1,6 @@
 class Job < ActiveRecord::Base
   has_friendly_id :ref, :use_slug => true, :strip_diacritics => true
+  validates_presence_of :function
   belongs_to :compagny
   belongs_to :function
   belongs_to :localisation

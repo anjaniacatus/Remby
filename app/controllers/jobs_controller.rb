@@ -18,8 +18,8 @@ class JobsController < ApplicationController
   # GET /jobs/1.xml
   def show
     if params[:compagny_id] 
-      @comapgny = Compagny.find(params[:compagny_id])
-      @job = @comapgny.jobs.find(params[:id])
+      @compagny = Compagny.find(params[:compagny_id])
+      @job = @compagny.jobs.find(params[:id])
     else
       @job = Job.find(params[:id])
     end

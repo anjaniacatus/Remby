@@ -3,7 +3,7 @@
   = h @application.job.ref
 %p
   %b Cv:
-  = h @application.cv.title
+  = link_to @application.cv.title, cv_path(@application.cv) 
 %p
   %b Title:
   = h @application.title

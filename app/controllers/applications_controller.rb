@@ -2,9 +2,8 @@ class ApplicationsController < ApplicationController
   # GET /applications
   # GET /applications.xml
   def index
-    @applications = Application.all
-    @applications = Cv.all
-    @jobs = Job.all
+    @job = Job.find(params[:job_id])
+    @applications = @job.applications
        respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @applications }
