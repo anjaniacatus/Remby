@@ -14,7 +14,14 @@
     (#{current_user.role_symbols.map(&:to_s) * ','})
     \#{current_user.email}
     %p
-    = link_to "Ma page", civil_statuses_path
+    -if current_user.roles == "member"
+      = link_to "Ma page", civil_statuses_path
+    -else
+      -unless current_user.compagny == nil 
+        =link_to "Ma page", compagny_path(@compagny)
+      -else
+        =link_to "Ma page", new_compagny_path
+ 
   #menu
     = link_to "cvs", cvs_path
     = link_to "compagnies", compagnies_path

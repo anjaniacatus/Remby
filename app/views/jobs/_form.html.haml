@@ -1,7 +1,7 @@
 %p
-  = f.label :ref
-  %br/
-  = f.text_field :ref
+  = f.input :description, :label => "Description de l'offre", :input_html => {:cols => 50, :rows => '3'}
+%p
+  = f.input :ref, :label => "ref"
 .functions
   - params = { :f => f, :default => "N/A" }
   = render :partial => 'functions/select', :locals => params
@@ -12,16 +12,12 @@
   - params = { :f => f, :default => "N/A" }
   = render :partial => 'localisations/select', :locals => params
 %p
-  = f.input :description
+  = f.input :attribution, :label => "Mission", :input_html => {:cols => 50, :rows => '3'}
 %p
-  = f.input :attribution
+  = f.input :profile, :label => "Profil", :input_html => {:cols => 50, :rows => '3'}
 %p
-  = f.input :profile
+  = f.input :folder, :label => "Dossier de candidature", :input_html => {:cols => 50, :rows => '3'}
 %p
-  = f.input :folder
-%p
-  = f.label :dead_line
-  %br/
-  = f.datetime_select :dead_line, :order => [ :day, :month, :year]
+  = f.input :dead_line, :label => "Dead line de l'offre:", :order => [ :day, :month, :year]
 %p
   = f.input :published, :as => :radio
