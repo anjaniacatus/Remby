@@ -1,6 +1,4 @@
 ActionController::Routing::Routes.draw do |map|
-  map.resources :essais
-
   map.resources :jobs do |job|
    job.resources :applications
   end
