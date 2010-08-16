@@ -1,5 +1,5 @@
 class Job < ActiveRecord::Base
-  has_friendly_id :ref, :use_slug => true, :strip_diacritics => true
+  has_friendly_id :job_title, :use_slug => true, :strip_diacritics => true
   belongs_to :compagny
   belongs_to :function
   belongs_to :localisation
