@@ -1,39 +1,43 @@
-%div{:id => "link home"}
+#connected
   = link_to "home", root_path
-  - if current_user
-    = link_to "editer mon compte", edit_user_path(current_user)
-    |
-    \#{link_to "logout", logout_path}
-  - else
-    = link_to "Register", new_user_path
-    |
-    \#{link_to "Login", login_path}
-  #status
-  - unless current_user.blank?
-    = "logged in as: " + current_user.username
-    (#{current_user.role_symbols.map(&:to_s) * ','})
-    \#{current_user.email}
+  -if current_user
+    = link_to "editer mon compte", edit_user_path(current_user) 
+    = link_to "logout", logout_path
     %p
-    -if current_user.roles == "member"
-      = link_to "Ma page", civil_statuses_path
-    -if current_user.compagny == nil && current_user.roles == "compagny"
-      = link_to "Ma page", new_compagny_path
-    -else
-      =link_to "Ma page", compagny_path(current_user.compagny)
- 
-  #menu
-    = link_to "cvs", cvs_path
-    = link_to "compagnies", compagnies_path
-    = link_to "tout les offres", jobs_path
-    -if current_user && current_user.roles == "member" 
+      = "logged in as: " + current_user.username 
+      (#{current_user.role_symbols.map(&:to_s) * ','}) 
+      \#{current_user.email}
+  -else
+    = link_to "Register", new_user_path  
+    = link_to "Login", login_path
+
+#member
+  -if current_user && current_user.roles == "member"
+    - unless current_user.civil_status.blank?
+      %b Gestion des cvs
+      %br
+        = link_to "Mes CV", civil_status_cvs_path(@civil_status)
+        = link_to "Créer un CV", new_civil_status_cv_path(@civil_status)
+      %b Ma page
+      %br
+        = link_to "Editer mon profil", edit_civil_status_path(@civil_status)
+        = link_to "Retour sur mon profil", civil_status_path(@civil_status)
+
+
+#compagny
+  -if current_user && current_user.roles ==  "compagny"
+    - unless current_user.compagny.blank?
+      %b Gestion des offres 
+      %br
+      = link_to "Mes offres", compagny_jobs_path(@compagny)
+      = link_to "Creer un offre", new_compagny_job_path(@compagny)
       %p
-      = link_to 'CV disponible', civil_status_cvs_path(@civil_status)
-      = link_to 'Create_CV', new_civil_status_cv_path(@civil_status)
-    -if current_user   && current_user.roles == "compagny"
-      - @compagny = current_user.compagny
-      - unless @compagny.blank?
-        = link_to 'compagny profil', compagny_path(@compagny)
-        = link_to 'mon offre', compagny_jobs_path(@compagny)
-        = link_to 'Create_Job', new_compagny_job_path(@compagny)
-      - else
-        = link_to "editer mon profil", new_compagny_path
+        %b Ma page
+        %br
+        = link_to "Editer mon profil", edit_compagny_path(@compagny)
+        = link_to "retour à mon profil", compagny_path(@compagny)
+      %p
+        %b Gestion Candidature
+        %br
+        = link_to "Candidature récent"
+        = link_to "tout les candidatures"

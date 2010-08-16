@@ -1,5 +1,5 @@
 %h1 Listing jobs
--if  @compagny == current_user.compagny
+-if current_user && @compagny == current_user.compagny
   = link_to "Nouveau offre", new_compagny_job_path(@compagny)
 
 - @jobs.each do |job|

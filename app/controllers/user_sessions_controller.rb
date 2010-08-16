@@ -10,7 +10,7 @@ class UserSessionsController < ApplicationController
       flash[:notice] = "Bienvenue!" + @user.username
       unless @user.roles == "admin"
         if @user.roles == "member"
-        redirect_to civil_statuses_path
+        redirect_to new_civil_statuses_path
         end
         if @user.roles == "compagny"
          @compagny = @user.compagny 
