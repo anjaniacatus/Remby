@@ -1,5 +1,8 @@
 - title " All CVS "
-= render @cvs
+- if current_user
+  = render @cvs
+- else 
+  = link_to "se connecter", login_url
 - unless current_user.blank?
   - if current_user.roles == "member" && !current_user.civil_status.blank?
     - @civil_status = current_user.civil_status

@@ -1,5 +1,5 @@
 %p
-  = f.input :name, :label => "Dénomination"
+  = f.input :name, :label => "Raison Sociale"
 %p
   = f.input :baseline, :label => "Slogan"
 
@@ -16,9 +16,10 @@
   = f.input :legal_form, :label => "Statut"
   %br/
 %p
-  = f.input :activity, :label => "Activité"
+  = f.input :activity, :label => "Secteur d'Activité"
 %p
   = f.input :sector, :label => "Secteur"
+#contact_info_children
 %p
   - f.fields_for :contact_infos do |contact_info_form|
     = render :partial => 'contact_info', :locals => { :f => contact_info_form }

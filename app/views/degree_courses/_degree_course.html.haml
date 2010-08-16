@@ -1,0 +1,10 @@
+\#{degree_course.school.name}
+\#{degree_course.degree_name}
+- unless degree_course.field.blank?
+  = degree_course.field.field_name
+- else
+  = "no field !!"
+= degree_course.option
+= degree_course.description
+= degree_course.start_on
+= degree_course.end_on

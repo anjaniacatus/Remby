@@ -16,13 +16,24 @@
     %p
     -if current_user.roles == "member"
       = link_to "Ma page", civil_statuses_path
+    -if current_user.compagny == nil && current_user.roles == "compagny"
+      = link_to "Ma page", new_compagny_path
     -else
-      -unless current_user.compagny == nil 
-        =link_to "Ma page", compagny_path(@compagny)
-      -else
-        =link_to "Ma page", new_compagny_path
+      =link_to "Ma page", compagny_path(current_user.compagny)
  
   #menu
     = link_to "cvs", cvs_path
     = link_to "compagnies", compagnies_path
-    = link_to "jobs", jobs_path
+    = link_to "tout les offres", jobs_path
+    -if current_user && current_user.roles == "member" 
+      %p
+      = link_to 'CV disponible', civil_status_cvs_path(@civil_status)
+      = link_to 'Create_CV', new_civil_status_cv_path(@civil_status)
+    -if current_user   && current_user.roles == "compagny"
+      - @compagny = current_user.compagny
+      - unless @compagny.blank?
+        = link_to 'compagny profil', compagny_path(@compagny)
+        = link_to 'mon offre', compagny_jobs_path(@compagny)
+        = link_to 'Create_Job', new_compagny_job_path(@compagny)
+      - else
+        = link_to "editer mon profil", new_compagny_path

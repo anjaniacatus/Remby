@@ -1,8 +1,12 @@
 %h1 Listing jobs
+-if  @compagny == current_user.compagny
+  = link_to "Nouveau offre", new_compagny_job_path(@compagny)
+
 - @jobs.each do |job|
   %p
     -if job.published 
-      = job.function.name
+      - unless job.function.blank?
+        = job.function.name
       = link_to 'show', job_path(job)
       - unless current_user.blank?
         - if current_user.roles == "company"|| "admin" && belongs_to_compagny?(job)

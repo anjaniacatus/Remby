@@ -4,7 +4,7 @@
     %p
       = compagny.name
       = compagny.headquarters
-      = link_to " voir ses offres ", compagny_jobs_path(compagny)
+      = link_to " voir  offres ", compagny_jobs_path(compagny)
 - if !current_user.blank? && current_user.roles == "admin"
   - @compagnies.each do |compagny|
     = h compagny.name
@@ -16,9 +16,4 @@
     = link_to 'Show', compagny
     = link_to 'Edit', edit_compagny_path(compagny)
     = link_to 'Destroy', compagny, :confirm => 'Are you sure?', :method => :delete
-- if current_user   && current_user.roles == "compagny"
-  - @compagny = current_user.compagny
-  - unless @compagny.blank?
-    = link_to "compagny profil", compagny_path(@compagny)
-  - else
-    = link_to "editer mon profil", new_compagny_path
+
