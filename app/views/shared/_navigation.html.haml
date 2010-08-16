@@ -12,32 +12,17 @@
     = link_to "Login", login_path
 
 #member
-  -if current_user && current_user.roles == "member"
-    - unless current_user.civil_status.blank?
-      %b Gestion des cvs
-      %br
-        = link_to "Mes CV", civil_status_cvs_path(@civil_status)
-        = link_to "Créer un CV", new_civil_status_cv_path(@civil_status)
-      %b Ma page
-      %br
-        = link_to "Editer mon profil", edit_civil_status_path(@civil_status)
-        = link_to "Retour sur mon profil", civil_status_path(@civil_status)
-
+-if current_user && current_user.roles == "member" && !current_user.civil_status.blank?
+  = link_to "Mes CV", civil_status_cvs_path(@civil_status)
+  = link_to "Créer un CV", new_civil_status_cv_path(@civil_status)
+  = link_to "Editer mon profil", edit_civil_status_path(current_user.civil_status)
+  = link_to "Retour sur mon profil", civil_status_path(current_user.civil_status)
 
 #compagny
-  -if current_user && current_user.roles ==  "compagny"
-    - unless current_user.compagny.blank?
-      %b Gestion des offres 
-      %br
-      = link_to "Mes offres", compagny_jobs_path(@compagny)
-      = link_to "Creer un offre", new_compagny_job_path(@compagny)
-      %p
-        %b Ma page
-        %br
-        = link_to "Editer mon profil", edit_compagny_path(@compagny)
-        = link_to "retour à mon profil", compagny_path(@compagny)
-      %p
-        %b Gestion Candidature
-        %br
-        = link_to "Candidature récent"
-        = link_to "tout les candidatures"
+-if current_user && current_user.roles ==  "compagny" && !current_user.compagny.blank?
+  = link_to "Mes offres", compagny_jobs_path(@compagny)
+  = link_to "Creer un offre", new_compagny_job_path(@compagny)
+  = link_to "Editer mon profil", edit_compagny_path(@compagny)
+  = link_to "retour à mon profil", compagny_path(@compagny)
+  = link_to "Candidature récent"
+  = link_to "tout les candidatures"

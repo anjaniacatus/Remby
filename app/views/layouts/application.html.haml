@@ -16,6 +16,8 @@
         Search goes here
     #contenu
       #contenu2
+        %p
+          = flash[:notice]
         = yield
       #navigation
         = render :partial => 'shared/navigation'

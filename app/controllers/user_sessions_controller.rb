@@ -7,10 +7,10 @@ class UserSessionsController < ApplicationController
     @user_session = UserSession.new(params[:user_session])
     if @user_session.save
       @user = @user_session.user
-      flash[:notice] = "Bienvenue!" + @user.username
+      flash[:notice] = "Bienvenue! " + @user.username
       unless @user.roles == "admin"
         if @user.roles == "member"
-        redirect_to new_civil_statuses_path
+          redirect_to new_civil_status_path
         end
         if @user.roles == "compagny"
          @compagny = @user.compagny 
