@@ -22,7 +22,7 @@
 -if current_user && current_user.roles ==  "compagny" && !current_user.compagny.blank?
   = link_to "Mes offres", compagny_jobs_path(@compagny)
   = link_to "Creer un offre", new_compagny_job_path(@compagny)
-  = link_to "Editer mon profil", edit_compagny_path(@compagny)
-  = link_to "retour à mon profil", compagny_path(@compagny)
+  = link_to "Editer mon profil", edit_compagny_path(current_user.compagny)
+  = link_to "retour à mon profil", compagny_path(current_user.compagny)
   = link_to "Candidature récent"
   = link_to "tout les candidatures"
