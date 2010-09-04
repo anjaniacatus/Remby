@@ -1,4 +1,9 @@
 class Cv < ActiveRecord::Base
+  searchable do
+    text :title, :default_boost => 2
+    text :summary
+  end
+
   belongs_to :civil_status
   belongs_to :field
   has_many :degree_courses, :dependent => :destroy

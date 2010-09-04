@@ -1,4 +1,11 @@
 - title " All CVS "
+.results
+  -unless @search.blank?
+    -@search.results.each do |cv|
+      .result
+        %h1 = h(cv.title)
+        %p = h(truncate(cv.summary))
+    .pagination = will-paginate(@search.results)
 - if current_user
   = render @cvs
 - else 
@@ -10,3 +17,4 @@
     = link_to 'New cv', new_civil_status_cv_path(@civil_status)
   - if current_user.roles == "compagny"
     = link_to "back", compagny_path(current_user.compagny)
+  

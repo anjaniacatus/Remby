@@ -8,7 +8,13 @@ class CvsController < ApplicationController
 
   # GET /cvs
   # GET /cvs.xml
-   def index
+  def search
+    @search = Cv.search do
+      keywords(params[:q])
+    end
+  end
+ 
+  def index
     unless params[:civil_status_id].blank?  
       @civil_status = CivilStatus.find(params[:civil_status_id])
       @cvs = @civil_status.cvs
