@@ -1,9 +1,4 @@
 - unless civil_status.blank?
-  %p
-  - if current_user && current_user.civil_status == civil_status
-    = link_to 'Edit', edit_civil_status_path(civil_status)
-    = link_to 'Destroy', civil_status, :confirm => 'Are you sure?', :method => :delete
-
   #civil_status
     - user = civil_status.user
     - @civil_status = user.civil_status

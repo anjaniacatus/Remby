@@ -1,7 +1,6 @@
 Feature: Manage civil_statuses
-  In order to [goal]
-  [stakeholder]
-  wants [behaviour]
+  In order to make a CV
+  wants to create and edit civil_status
  
   Background:
    Given I am a member
