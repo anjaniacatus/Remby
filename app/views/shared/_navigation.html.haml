@@ -13,8 +13,8 @@
 
 #member
 -if current_user && current_user.roles == "member" && !current_user.civil_status.blank?
-  = link_to "Mes CV", civil_status_cvs_path(@civil_status)
-  = link_to "Créer un CV", new_civil_status_cv_path(@civil_status)
+  = link_to "Mes CV", civil_status_cvs_path(current_user.civil_status)
+  = link_to "Créer un CV", new_civil_status_cv_path(current_user.civil_status)
   = link_to "Editer mon profil", edit_civil_status_path(current_user.civil_status)
   = link_to "Retour sur mon profil", civil_status_path(current_user.civil_status)
 
