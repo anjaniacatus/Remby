@@ -1,5 +1,5 @@
 class Cv < ActiveRecord::Base
-  acts_as_fleximage
+  #acts_as_fleximage
   belongs_to :civil_status
   belongs_to :field
   has_many :degree_courses, :dependent => :destroy

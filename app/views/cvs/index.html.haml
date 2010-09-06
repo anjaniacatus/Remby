@@ -7,6 +7,5 @@
   - if current_user.roles == "member" && !current_user.civil_status.blank?
     - @civil_status = current_user.civil_status
     = link_to 'Back', civil_status_path(@civil_status)
-    = link_to 'New cv', new_civil_status_cv_path(@civil_status)
   - if current_user.roles == "compagny"
     = link_to "back", compagny_path(current_user.compagny)
