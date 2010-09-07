@@ -5,9 +5,9 @@
   = h cv.summary
   
   -if cv.published?
-    = "publié"
+    =h "publié"
   -else
-    = "non publié"
+    =h "non publié"
   - @civil_status = cv.civil_status
   = link_to 'Show', civil_status_cv_path(@civil_status, cv)
   = link_to 'Edit', edit_civil_status_cv_path(@civil_status, cv)

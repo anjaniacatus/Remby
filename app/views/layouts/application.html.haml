@@ -1,7 +1,7 @@
 %html{:lang => "en", "xml:lang" => "en", :xmlns => "http://www.w3.org/1999/xhtml"}
   %head
     %meta{:content => "text/html;charset=UTF-8", "http-equiv" => "content-type"}/
-    %title
+    .title
       Remby - #{yield(:title) || "Remby: Online Cv and Jobs"}
     = stylesheet_link_tag 'application'
     = javascript_include_tag 'prototype.js'
@@ -10,8 +10,6 @@
     #banner
       #banner1
         %img.flex{ :title => "Où aller ?", :src => "/images/tananalife.png?1252593908", :alt => "Aiza no aleha ?* par http://tananalife.com", :width => "250" }/
-        %p
-          #{yield(:title) || "Remby: Online Cv and Jobs"}
       #banner2
         Search goes here
     #contenu
