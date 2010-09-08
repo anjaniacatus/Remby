@@ -2,16 +2,14 @@
   %head
     %meta{:content => "text/html;charset=UTF-8", "http-equiv" => "content-type"}/
     .title
-      Remby - #{yield(:title) || "Remby: Online Cv and Jobs"}
+      Remby.com by Catus - #{yield(:title) || "Remby:Online Cv and Jobs"}
     = stylesheet_link_tag 'application'
     = javascript_include_tag 'prototype.js'
     = javascript_include_tag 'nested_attributes.js'
   %body    
     #banner
       #banner1
-        %img.flex{ :title => "Où aller ?", :src => "/images/tananalife.png?1252593908", :alt => "Aiza no aleha ?* par http://tananalife.com", :width => "250" }/
-      #banner2
-        Search goes here
+        %img.flex{ :title => "Où aller ?", :src => "/images/header-book.gif?1252593908", :alt => "Aiza no aleha ?* par http://tananalife.com", :width => "180%" }/
     #contenu
       #contenu2
         %p
@@ -19,6 +17,8 @@
         = yield
       #navigation
         = render :partial => 'shared/navigation'
+      #search 
+        = render :partial => 'shared/search'
     #footer
       #about
         %h4 About:
