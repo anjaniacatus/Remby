@@ -40,8 +40,19 @@ SimpleNavigation::Configuration.run do |navigation|
     #                            when the item should be highlighted, you can set a regexp which is matched 
     #                            against the current URI.
     #
-    primary.item :cvs, 'TAYBE', cvs_path
-    
+    primary.item :jobs, "offre d'emploi", jobs_path do |offre|
+      offre.item :jobs_published, 'offre disponible', jobs_path
+      offre.item :new_jobs, 'Créer un offre', new_compagny_job_path(@compagny)
+      offre.item :edition, 'Candidature', job_applications_path(@job)
+    end
+    primary.item :cv, 'CV', cvs_path do |cv|
+      cv.item :cv_disponible, 'Mes CV', cvs_path
+      #music.item :pop, 'Pop', pop_musics_path
+      #music.item :alternative, 'Alternative', alternative_musics_path
+    end
+
+
+
     # Add an item which has a sub navigation (same params, but with block)
     #primary.item :key_2, 'name', url, options do |sub_nav|
       # Add an item to the sub navigation (same params again)
@@ -51,8 +62,8 @@ SimpleNavigation::Configuration.run do |navigation|
     # You can also specify a condition-proc that needs to be fullfilled to display an item.
     # Conditions are part of the options. They are evaluated in the context of the views,
     # thus you can use all the methods and vars you have available in the views.
-    primary.item :key_3, 'Admin', url, :class => 'special', :if => Proc.new { current_user.admin? }
-    primary.item :key_4, 'Account', url, :unless => Proc.new { logged_in? }
+    #primary.item :key_3, 'Admin', url, :class => 'special', :if => Proc.new { current_user.admin? }
+    #primary.item :key_4, 'Account', url, :unless => Proc.new { logged_in? }
 
     # you can also specify a css id or class to attach to this particular level
     # works for all levels of the menu
@@ -63,5 +74,4 @@ SimpleNavigation::Configuration.run do |navigation|
     # primary.auto_highlight = false
   
   end
-  
 end

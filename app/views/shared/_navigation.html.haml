@@ -1,16 +1,3 @@
-#connected
-  = link_to "home", root_path
-  -if current_user
-    = link_to "editer mon compte", edit_user_path(current_user) 
-    = link_to "logout", logout_path
-    %p
-      = "logged in as: " + current_user.username 
-      (#{current_user.role_symbols.map(&:to_s) * ','}) 
-      \#{current_user.email}
-  -else
-    = link_to "Register", new_user_path  
-    = link_to "Login", login_path
-
 #member
 -if current_user && current_user.roles == "member" && !current_user.civil_status.blank?
   = link_to "Mes CV", civil_status_cvs_path(current_user.civil_status)

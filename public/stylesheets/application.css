@@ -45,6 +45,12 @@ a {
     margin-bottom:0.1em;
     margin-top:0.1em;
     margin-left:0.5em;
+  }
+}
+.account{
+    margin-bottom:0.1em;
+    margin-top:0.1em;
+    margin-left:10em;
 }
 #contenu2{
   background-color:white;
