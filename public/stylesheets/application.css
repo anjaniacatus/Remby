@@ -48,9 +48,7 @@ a {
   }
 }
 .account{
-    margin-bottom:0.1em;
-    margin-top:0.1em;
-    margin-left:10em;
+  background-color:white;
 }
 #contenu2{
   background-color:white;
@@ -106,7 +104,13 @@ a {
    font-weight:bold;
    margin-left:0.4em;
    margin-bottom:0.1em;
-   float:left;
+}
+.account{
+  font-size:50%;
+  float:right;
+}
+.text{
+  font-size:70%;
 }
 
 .link_cv {

@@ -1,10 +1,9 @@
 %html{:lang => "en", "xml:lang" => "en", :xmlns => "http://www.w3.org/1999/xhtml"}
   %head
     %meta{:content => "text/html;charset=UTF-8", "http-equiv" => "content-type"}/
-    .account
-      = render :partial => 'shared/account'
     .title
-      Remby.com by Catus - #{yield(:title) || "Remby:Online Cv and Jobs"}
+      Remby.com: Le site de l'emploi à Madagascar - #{yield(:title) || "Remby:Online Cv and Jobs"}
+      = render :partial => 'shared/account'
     #search 
       = render :partial => 'shared/search'
     = stylesheet_link_tag 'application'
@@ -23,6 +22,7 @@
       #navigation
         = render :partial => 'shared/navigation'
         = render_navigation
+        = "Vous êtes ici: "
         = render_navigation :renderer => :breadcrumbs, :join_with => " &gt; "
     #footer
       #about
