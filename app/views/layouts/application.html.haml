@@ -20,9 +20,7 @@
           = flash[:notice]
         = yield
       #navigation
-        = render :partial => 'shared/navigation'
         = render_navigation
-        = "Vous êtes ici: "
         = render_navigation :renderer => :breadcrumbs, :join_with => " &gt; "
     #footer
       #about

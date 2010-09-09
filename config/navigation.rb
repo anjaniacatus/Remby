@@ -41,7 +41,7 @@ SimpleNavigation::Configuration.run do |navigation|
     #                            against the current URI.
     #
     primary.item :jobs, "offre d'emploi", jobs_path do |offre|
-      offre.item :jobs_published, 'offre disponible', jobs_path
+      offre.item :jobs_published, 'offres récentes', jobs_path
       if current_user && current_user.roles ==  "compagny" && !current_user.compagny.blank?
         offre.item :new_jobs, 'Créer un offre', new_compagny_job_path(current_user.compagny)  
         offre.item :edition, 'Candidature', job_applications_path(@job) 
@@ -52,14 +52,23 @@ SimpleNavigation::Configuration.run do |navigation|
      if current_user && current_user.roles == "member" && !current_user.civil_status.blank?
        cv.item :cv_disponible, 'Mes CV', cvs_path
        cv.item :new_cv, 'Créer un CV', new_civil_status_cv_path(current_user.civil_status)
+     end
+     if current_user && current_user.roles == "compagny" && !current_user.compagny.blank?
        cv.item :search_cv, 'rechercher un cv', cvs_path
        cv.item :recent_cv, 'cv  récent',cvs_path
      end
    end
-    #primary.item:profile, "Mon profile", civil_statuses_path do |pro|    
-      #pro.item :edition, 'Modifier mon profil', edit_civil_status_path(current_user.civil_status)
- 
-    #end
+    
+  if current_user && current_user.roles == "member" && !current_user.civil_status.blank?
+    primary.item:profile, "Mon profile", civil_statuses_path do |pro|         pro.item :edition, 'Modifier mon profil', edit_civil_status_path(current_user.civil_status)
+    end
+  end
+
+  if current_user && current_user.roles == "compagny" && !current_user.compagny.blank?
+    primary.item:profile, "Mon profile", compagny_path(current_user.compagny) do |pro|   
+        pro.item :edition, 'Modifier mon profil', edit_compagny_path(current_user.compagny)
+    end
+  end
 
 
 
