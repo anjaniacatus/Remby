@@ -22,8 +22,8 @@
         = yield
       #navigation
         = render :partial => 'shared/navigation'
-        = render_navigation 
-
+        = render_navigation
+        = render_navigation :renderer => :breadcrumbs, :join_with => " &gt; "
     #footer
       #about
         %h4 About:
