@@ -35,6 +35,4 @@
   = render @cv.other_skills
 - if current_user.roles == "member" && belongs_to_user?(current_user)
   = link_to 'Edit', edit_civil_status_cv_path(@civil_status, @cv)
-  = link_to 'Back', civil_status_cvs_path(@civil_status)
-- else
-  = link_to 'Back', cvs_path
+= link_to 'version_imprimable pdf',cv_path(@cv, :format => "pdf") 
