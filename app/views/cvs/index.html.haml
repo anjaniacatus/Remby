@@ -1,11 +1,13 @@
 - title " All CVS "
 - if current_user
-  = render @cvs
+  -unless current_user.civil_status.cvs.blank?
+    = render @cvs
+  -else
+    ="vous ne diposez d'aucun CV pour l'instant!"
 - else 
   = link_to "se connecter", login_url
 - unless current_user.blank?
   - if current_user.roles == "member" && !current_user.civil_status.blank?
-    - @civil_status = current_user.civil_status
-    = link_to 'Back', civil_status_path(@civil_status)
+    - @civil_status = current_user.civil_status 
   - if current_user.roles == "compagny"
-    = link_to "back", compagny_path(current_user.compagny)
+    = "rubrique compagny"

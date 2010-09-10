@@ -59,17 +59,22 @@ SimpleNavigation::Configuration.run do |navigation|
      end
    end
     
-  if current_user && current_user.roles == "member" && !current_user.civil_status.blank?
-    primary.item:profile, "Mon profile", civil_statuses_path do |pro|         pro.item :edition, 'Modifier mon profil', edit_civil_status_path(current_user.civil_status)
+    if current_user && current_user.roles == "member" && !current_user.civil_status.blank?
+      primary.item:profile, "Mon profile", civil_statuses_path do |pro| 
+        pro.item :edition, 'Modifier mon profil', edit_civil_status_path(current_user.civil_status)
+      end
     end
-  end
+    if current_user && current_user.roles == "member" && current_user.civil_status.blank?
+       primary.item:profile, "Mon profile", civil_statuses_path do |pro| 
+        pro.item :edition, 'Editer mon profil', new_civil_status_path
+      end
+    end
 
-  if current_user && current_user.roles == "compagny" && !current_user.compagny.blank?
-    primary.item:profile, "Mon profile", compagny_path(current_user.compagny) do |pro|   
+    if current_user && current_user.roles == "compagny" && !current_user.compagny.blank?
+      primary.item:profile, "Mon profile", compagny_path(current_user.compagny) do |pro|   
         pro.item :edition, 'Modifier mon profil', edit_compagny_path(current_user.compagny)
     end
   end
-
 
 
     # Add an item which has a sub navigation (same params, but with block)
