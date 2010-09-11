@@ -1,18 +1,18 @@
 - title " All CVS "
-.results
-  -unless @search.blank?
-    -@search.results.each do |cv|
-      .result
-        %h1 = h(cv.title)
-        %p = h(truncate(cv.summary))
-    .pagination = will-paginate(@search.results)
-- if current_user
-  -unless current_user.civil_status.cvs.blank?
-    = render @cvs
-  -else
-    ="vous ne diposez d'aucun CV pour l'instant!"
-- else 
+-semantic_form_for(@q ="pilou") do |f|
+  = f.input :q
+  = f.submit 'Search'
+-if @search
+  = @search.total results
+
+- if current_user && current_user.roles == "member" && current_user.civil_status.blank?
+  = render @cvs
+-else
+  ="vous ne diposez d'aucun CV pour l'instant!"
+
+- if !current_user
   = link_to "se connecter", login_url
+
 - unless current_user.blank?
   - if current_user.roles == "member" && !current_user.civil_status.blank?
     - @civil_status = current_user.civil_status 

@@ -1,7 +1,5 @@
 nbproject
-log/development.log
-log/cucumber.log
-/*.log
+log/*.log
 doc/*
 config/database.yml
 test/*
@@ -17,3 +15,4 @@ public/offerings
 *~
 rerun.txt
 config/initializers/site_keys.rb
+solr/*
