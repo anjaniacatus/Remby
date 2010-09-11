@@ -1,4 +1,9 @@
 class Job < ActiveRecord::Base
+  searchable do
+    text :job_title, :default_boost => 2
+    text :description
+  end
+  
   has_friendly_id :job_title, :use_slug => true, :strip_diacritics => true
   belongs_to :compagny
   belongs_to :function

@@ -10,8 +10,9 @@ class CvsController < ApplicationController
   # GET /cvs.xml
   def index
     if params[:q]
+      @search = nil
       query = params[:q]
-      @search = Post.search do
+      @search = Cv.search do
         keywords query
       end
       @cvs = @search.results

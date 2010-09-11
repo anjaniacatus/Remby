@@ -1,11 +1,16 @@
 class JobsController < ApplicationController
   # GET /jobs
   # GET /jobs.xml
-  def search
-    @search = "laplouplou"
-  end
-  
   def index
+     if params[:q]
+      @search = nil
+      query = params[:q]
+      @search = Job.search do
+        keywords query
+      end
+      @jobs = @search.results
+    end
+
     if params[:compagny_id]
       @compagny = Compagny.find(params[:compagny_id])
       @jobs = @compagny.jobs
