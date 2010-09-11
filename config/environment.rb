@@ -24,10 +24,10 @@ Rails::Initializer.run do |config|
     config.gem "RedCloth", :version => '>= 4.1.9', :source => "http://code.whytheluckystiff.net/"
     config.gem "will_paginate"
     config.gem "repeated_auto_complete"
-    config.gem "faker"
     config.gem "haml"
     config.gem "simple-navigation"
     config.gem 'sunspot_rails', :lib => 'sunspot/rails'
+    config.gem 'prawn'
     # Only load the plugins named here, in the order given (default is alphabetical).
   # :all can be used as a placeholder for all plugins not explicitly named
   # config.plugins = [ :exception_notification, :ssl_requirement, :all ]

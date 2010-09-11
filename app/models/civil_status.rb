@@ -8,7 +8,6 @@ class CivilStatus < ActiveRecord::Base
   accepts_nested_attributes_for :cvs, :allow_destroy => true
   # acts_as_illustrated
   acts_as_fleximage do
-    image_directory "uploaded/civil_images"
     use_creation_date_based_directories true
     require_image false
     output_image_jpg_quality  85

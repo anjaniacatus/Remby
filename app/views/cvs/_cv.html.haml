@@ -1,16 +1,21 @@
 - @user = current_user
-- unless !cv.published
-  - if current_user && current_user.roles == "member" && !belongs_to_user?(cv)
+- if current_user && current_user.roles == "member" && belongs_to_user?(cv)
+  = image_tag fleximage_path(cv.civil_status)
+  = h cv.title
+  = h cv.summary
+  
+  -if cv.published?
+    =h "publié"
+  -else
+    =h "non publié"
+  - @civil_status = cv.civil_status
+  = link_to 'Show', civil_status_cv_path(@civil_status, cv)
+  = link_to 'Edit', edit_civil_status_cv_path(@civil_status, cv)
+- if current_user && current_user.roles == "compagny" || current_user.roles == "admin"
+  %p
+  -unless !cv.published?
     = image_tag fleximage_path(cv.civil_status)
     = h cv.title
     = h cv.summary
     - @civil_status = cv.civil_status
     = link_to 'Show', civil_status_cv_path(@civil_status, cv)
-    = link_to 'Edit', edit_civil_status_cv_path(@civil_status, cv)
-
-  - else
-    %p
-      = h cv.title
-      = h cv.summary
-      - @civil_status = cv.civil_status
-      = link_to 'Show', civil_status_cv_path(@civil_status, cv)
