@@ -1,7 +1,5 @@
 nbproject
-log/development.log
-log/cucumber.log
-/*.log
+log/*.log
 doc/*
 config/database.yml
 test/*

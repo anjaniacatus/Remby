@@ -1,4 +1,8 @@
 class Cv < ActiveRecord::Base
+  searchable do
+    text :title, :default_boost => 2
+    text :summary
+  end
   #acts_as_fleximage
   belongs_to :civil_status
   belongs_to :field

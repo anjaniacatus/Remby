@@ -1,4 +1,24 @@
--semantic_form_for(@keywords="key") do |f|
-  = f.input :Keywords
-  = f.submit 'Search'
+-if current_user && current_user.roles == "compagny" 
+  #search
+    - form_tag cvs_path, :method => 'get' do
+      %p
+        = "Rechercher des cvs"
+        = text_field_tag :q, params[:q]
+        = submit_tag "Search", :name => nil
+
+-if current_user && current_user.roles == "member" 
+  #search
+    - form_tag jobs_path, :method => 'get' do
+      %p
+        = "Rechercher des offres"
+        = text_field_tag :q, params[:q]
+        = submit_tag "Search", :name => nil
+
+-if !current_user
+  #search
+    - form_tag jobs_path, :method => 'get' do
+      %p
+        = "Rechercher des offres"
+        = text_field_tag :q, params[:q]
+        = submit_tag "Search", :name => nil
 
