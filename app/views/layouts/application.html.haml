@@ -4,8 +4,8 @@
     .title
       Remby.com: Le site de l'emploi à Madagascar - #{yield(:title) || "Remby: Online Cv and Jobs"}
       = render :partial => 'shared/account'
-    #search 
-      = render :partial => 'shared/search'
+      #search 
+        = render :partial => 'shared/search'
     = stylesheet_link_tag 'application'
     = javascript_include_tag 'prototype.js'
     = javascript_include_tag 'nested_attributes.js'
@@ -16,14 +16,12 @@
           %img.flex{ :title => "recherche emploi ?", :src => "/images/header-book.gif?1252593908", :alt => "Remby ?* par http://remby.com", :width => "180%"}/
     #contenu
       #navigation
-        #nav
-          = render_navigation 
+        = render_navigation
       #contenu2
         #nav
           = render_navigation :renderer => :breadcrumbs, :join_with => " &gt; "
-
-        = flash[:notice]
         = yield
+        = flash[:notice]
     #footer
       #about
         %h4 About:
