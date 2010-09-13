@@ -6,8 +6,9 @@
     = @search.total 
     résultats
   -@search.results.each do |job|
-    = job.job_title
-    = link_to "plus de détail", job_path(job)
+    -if job.published == true
+      = job.job_title
+      = link_to "plus de détail", job_path(job)
 -else
   - @jobs.each do |job|
     %p

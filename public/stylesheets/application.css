@@ -27,7 +27,7 @@ a {
   margin-bottom:9.7em;
 }
 #contenu{
-  margin-left:1em;
+  margin-right:1em;
   background-color:#9AB54F;
 }
 #navigation{
@@ -57,6 +57,9 @@ a {
   margin-top:0.1em;
   margin-bottom:0.1em;
   float:left;
+}
+#nav{
+  background-color:#9AB54F;
 }
 #tag{
     background-color: #EEE;

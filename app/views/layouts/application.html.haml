@@ -15,13 +15,15 @@
         %a{ :href => "/" }
           %img.flex{ :title => "recherche emploi ?", :src => "/images/header-book.gif?1252593908", :alt => "Remby ?* par http://remby.com", :width => "180%"}/
     #contenu
-      #contenu2
-        %p
-          = flash[:notice]
-        = yield
       #navigation
-        = render_navigation
-        = render_navigation :renderer => :breadcrumbs, :join_with => " &gt; "
+        #nav
+          = render_navigation 
+      #contenu2
+        #nav
+          = render_navigation :renderer => :breadcrumbs, :join_with => " &gt; "
+
+        = flash[:notice]
+        = yield
     #footer
       #about
         %h4 About:

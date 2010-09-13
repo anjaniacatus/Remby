@@ -17,3 +17,4 @@ public/offerings
 rerun.txt
 config/initializers/site_keys.rb
 solr/*
+solr/data/*
