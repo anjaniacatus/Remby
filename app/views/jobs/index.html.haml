@@ -1,7 +1,10 @@
 -title  "Offres d'emploi"
 -if @search 
-  = @search.total
-  résultas
+  -if @search.total == 0
+    = "Désolé nous n'avons trouvé aucun offre correspondant à votre recherche"
+  -else
+    = @search.total 
+    résultats
   -@search.results.each do |job|
     = job.job_title
     = link_to "plus de détail", job_path(job)

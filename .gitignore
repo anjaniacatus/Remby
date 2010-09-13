@@ -1,5 +1,6 @@
 nbproject
 log/*.log
+log/*
 doc/*
 config/database.yml
 test/*

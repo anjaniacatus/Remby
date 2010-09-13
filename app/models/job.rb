@@ -1,7 +1,11 @@
 class Job < ActiveRecord::Base
   searchable do
     text :job_title, :default_boost => 2
+    text:ref
     text :description
+    text :my_function
+    text :attribution
+    text :my_localisation
   end
   
   has_friendly_id :job_title, :use_slug => true, :strip_diacritics => true
@@ -20,7 +24,6 @@ class Job < ActiveRecord::Base
       self.function = Function.find_or_create_by_name(my.titleize)
     end
   end
-
   def my_function
     unless function.blank?
       "#{function.name}" unless new_record?
