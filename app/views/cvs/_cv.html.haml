@@ -11,6 +11,7 @@
   - @civil_status = cv.civil_status
   = link_to 'Show', civil_status_cv_path(@civil_status, cv)
   = link_to 'Edit', edit_civil_status_cv_path(@civil_status, cv)
+  = link_to 'delete',cv, :confirm => 'Vous êtes sure?', :method => :delete 
 - if current_user && current_user.roles == "compagny" || current_user.roles == "admin"
   %p
   -unless !cv.published?

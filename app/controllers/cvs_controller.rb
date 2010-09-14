@@ -107,8 +107,8 @@ class CvsController < ApplicationController
   # DELETE /cvs/1
   # DELETE /cvs/1.xml
   def destroy
+    @cv = Cv.find(params[:id])
     @cv.destroy
-
     respond_to do |format|
       format.html { redirect_to(cvs_url) }
       format.xml  { head :ok }
