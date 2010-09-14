@@ -1,4 +1,5 @@
 -title  "Offres d'emploi"
+
 -if @search 
   -if @search.total == 0
     = "Désolé nous n'avons trouvé aucun offre correspondant à votre recherche"
@@ -9,14 +10,27 @@
     -if job.published == true
       = job.job_title
       = link_to "plus de détail", job_path(job)
--else
-  - @jobs.each do |job|
+
+#home
+  -if !current_user
+    ="Rechercher et déposer  des Cv et des offres sur Remby!!! :)"
     %p
-      -if job.published 
-        - unless job.function.blank?
-          = job.function.name
-        = link_to 'show', job_path(job)
-        - unless current_user.blank?
-          - if current_user.roles == "company"|| "admin" && belongs_to_compagny?(job)
-            = link_to 'Edit', edit_job_path(job) if permitted_to?:update
-            = link_to 'Destroy', job, :confirm => 'Are you sure?', :method => :delete if permitted_to?:delete
+      ="Se connecter"
+    %p
+      = "Editer vos profil"
+    %p
+      = "Editer vos offres et vos CV"
+
+  -else
+    - @jobs.each do |job|
+      %p
+        -if job.published 
+          - unless job.function.blank?
+            = job.function.name
+          = link_to 'show', job_path(job)
+            - unless current_user.blank?
+            - if current_user.roles == "company"|| "admin" && belongs_to_compagny?(job)
+              = link_to 'Edit', edit_job_path(job) if permitted_to?:update
+              = link_to 'Destroy', job, :confirm => 'Are you sure?', :method => :delete if permitted_to?:delete
+
+

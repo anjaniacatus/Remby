@@ -7,12 +7,15 @@ body {
   Height:900 em;
 }
 
+a.selected{
+  color:#9AB54F;
+}
 a img {
   border: none;
 }
 
 a {
-  color:#240;
+  color:white;
 }
 #banner{
   margin-top:2em; 
@@ -25,7 +28,8 @@ a {
   width:100%;
   height:30px;
   float:left;
-  margin-bottom:9.7em;
+  margin-top:0.2em;
+  margin-left:0.6em;
 }
 #contenu{
   margin-right:1em;
@@ -34,8 +38,8 @@ a {
     color: #afc0a4; 
     background-color:#766749;
     margin-bottom:0.1em;
-    margin-top:0.1em;
-    margin-left:0.5em;
+    margin-top:11.5em;
+    margin-left:1em;
     float:left;
 }
 #search{
@@ -49,11 +53,14 @@ a {
 .account{
   color:white;
 }
+#home{
+  color: #240;
+}
 #contenu2{
   background-color: transparent;
   width:82%; 
   margin-left:0.8em;
-  margin-top:0.1em;
+  margin-top:11.5em;
   margin-bottom:0.1em;
   float:right;
 }
@@ -103,7 +110,9 @@ a {
   margin-left:1em;
   width:100%
 }
-
+.link{
+   color:#240;
+}
 .title{
    color: #240;
    background: #9AB54F;
@@ -112,23 +121,16 @@ a {
    margin-left:0.4em;
    margin-bottom:0.1em;
 }
-.account{
+#account{
   font-size:50%;
   float:right;
 }
+
 .text{
   font-size:70%;
+  color:white;
 }
 
-.link_cv {
-  position: block;
-  line-height: 1.6em;
-  padding-left: 0px;
-  margin-left: 3px;
-  float:right;
-  margin-bottom: 5px;
-  width: 100px;
-}
 #form_cv{
   width: 300px;
 }

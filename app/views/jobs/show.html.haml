@@ -32,7 +32,7 @@ Tous les dossiers devront être reçus avant le:&nbsp;#{@job.dead_line}
 - if current_user && belongs_to_compagny?(@job)
   = link_to 'Edit', edit_compagny_job_path(@compagny,@job) if permitted_to?:update
   = link_to 'Apply result', job_applications_path(@job)
-= link_to 'Back_to_compagny', compagny_jobs_path(@compagny)
+-# link_to 'Back_to_compagny', compagny_jobs_path(@compagny)
 = link_to 'Back_to_jobs', jobs_path
 -if current_user && current_user.roles == "compagny" && belongs_to_compagny?(@job) 
   = link_to 'candidature', job_applications_path(@job)

@@ -2,7 +2,7 @@
   %head
     %meta{:content => "text/html;charset=UTF-8", "http-equiv" => "content-type"}/
     .title
-      Remby.com: Le site de l'emploi à Madagascar - #{yield(:title) || "Remby: Online Cv and Jobs"}
+      Le site de l'emploi à Madagascar - #{yield(:title) || "Remby: Online Cv and Jobs"}
       = render :partial => 'shared/account'
       #search 
         = render :partial => 'shared/search'
@@ -13,7 +13,7 @@
     #banner
       #banner1
         %a{ :href => "/" }
-          %img.flex{ :title => "recherche emploi ?", :src => "/images/header-book.gif?1252593908", :alt => "Remby ?* par http://remby.com", :width => "180%"}/
+          %img.flex{ :title => "recherche emploi ?", :src => "/images/header-book.gif?1252593908", :alt => "Remby ?* par http://remby.com", :width => "220%"}/
     #contenu
       #navigation
         = render_navigation
