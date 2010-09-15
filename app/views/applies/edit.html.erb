@@ -1,0 +1,24 @@
+<h1>Editing apply</h1>
+
+<% form_for(@apply) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :job_id %><br />
+    <%= f.text_field :job_id %>
+  </p>
+  <p>
+    <%= f.label :cv_id %><br />
+    <%= f.text_field :cv_id %>
+  </p>
+  <p>
+    <%= f.label :description %><br />
+    <%= f.text_field :description %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @apply %> |
+<%= link_to 'Back', applies_path %>

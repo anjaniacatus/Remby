@@ -1,9 +1,9 @@
 ActionController::Routing::Routes.draw do |map|
+
   map.resources :jobs do |job|
    job.resources :applications
+   job.resources :applies
   end
-
-  map.resources :searches
   map.resources :fields
   map.resources :images
   map.resources :degree_courses

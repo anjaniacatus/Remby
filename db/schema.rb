@@ -9,12 +9,20 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100906151814) do
+ActiveRecord::Schema.define(:version => 20100915063919) do
 
   create_table "applications", :force => true do |t|
     t.integer  "job_id"
     t.integer  "cv_id"
     t.string   "title"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "applies", :force => true do |t|
+    t.integer  "job_id"
+    t.integer  "cv_id"
+    t.string   "description"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -32,6 +40,7 @@ ActiveRecord::Schema.define(:version => 20100906151814) do
     t.string   "status"
     t.integer  "user_id"
     t.binary   "image_file_data"
+    t.integer  "job_id"
   end
 
   create_table "compagnies", :force => true do |t|
@@ -77,6 +86,7 @@ ActiveRecord::Schema.define(:version => 20100906151814) do
     t.integer  "job_id"
     t.integer  "application_id"
     t.binary   "image_file_data"
+    t.integer  "applies_id"
   end
 
   create_table "degree_courses", :force => true do |t|
@@ -176,6 +186,7 @@ ActiveRecord::Schema.define(:version => 20100906151814) do
     t.boolean  "published"
     t.integer  "application_id"
     t.string   "job_title"
+    t.integer  "applies_id"
   end
 
   create_table "languages", :force => true do |t|

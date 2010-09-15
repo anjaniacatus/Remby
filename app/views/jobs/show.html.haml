@@ -37,7 +37,7 @@ Tous les dossiers devront être reçus avant le:&nbsp;#{@job.dead_line}
 -if current_user && current_user.roles == "compagny" && belongs_to_compagny?(@job) 
   = link_to 'candidature', job_applications_path(@job)
 - if current_user && current_user.roles == "member"
-  = link_to 'Apply to job ', new_job_application_path(@job)
+  = link_to 'Apply to job ', new_job_apply_path(@job)
 - else
   = "Pour envoyer une candidature pour cette offre, Identifiez vous!!"
   = link_to 'login', login_url

@@ -147,16 +147,26 @@ a {
 #civil_status{
 }
 #flash_notice, #flash_error {
+  color :#B5463F;
   padding: 5px 8px;
   margin: 10px 0;
+  margin-bottom:0.1em;
+  margin-left:1em;
+
 }
 
 #flash_notice {
-  background-color: #CFC;
-  border: solid 1px #6C6;
+  margin-left:0.8em
+  margin-top:20.5em;
+  color:#B5463F;
+  font-size:100%;
+  font-weight:bold;
+  background-color: white;
 }
 
 #flash_error {
+  color:#B5463F;
+  font:
   background-color: #FCC;
   border: solid 1px #4C4338;
 }

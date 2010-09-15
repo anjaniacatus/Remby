@@ -13,6 +13,7 @@ class Cv < ActiveRecord::Base
   has_many :interests,  :dependent => :destroy
   has_many :other_skills,  :dependent => :destroy
   has_many :applications,  :dependent => :destroy
+  has_many :applies, :dependent => :destroy
   has_many :jobs, :through => :applications
   named_scope :ordered, :order => "title ASC"
   accepts_nested_attributes_for :degree_courses, :allow_destroy => true

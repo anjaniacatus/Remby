@@ -2,6 +2,7 @@ class CivilStatus < ActiveRecord::Base
   validates_presence_of :family_name, :name, :gender, :birthday, :current_city
   has_many :contact_infos, :as => :contactable, :dependent => :destroy
   has_many :cvs, :dependent => :destroy
+  belongs_to :job
   belongs_to :user
   has_friendly_id :name, :use_slug => true, :strip_diacritics => true
   accepts_nested_attributes_for :contact_infos, :allow_destroy => true

@@ -1,0 +1,19 @@
+%h1 New application
+-if @job.civil_statuses.member?(current_user.civil_status) 
+  =  @job.civil_statuses.size
+  = "tsy mety tsony!!"
+  = @job.ref
+-else
+  - semantic_form_for([@apply.job, @apply]) do |f|
+    = f.error_messages
+    %p
+      - unless current_user.civil_status.blank?
+        = f.collection_select(:cv_id, @cvs, :id, :title, params  )
+      %br/
+    %p
+      = f.label :description
+      %br/
+      = f.text_field :description
+    %p
+      = f.submit 'Create'
+      

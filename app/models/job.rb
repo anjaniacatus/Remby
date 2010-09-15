@@ -14,7 +14,10 @@ class Job < ActiveRecord::Base
   belongs_to :localisation
   belongs_to :contract
   has_many :applications
+  has_many :applies
   has_many :cvs, :through => :applications
+  has_many :cvs, :through => :applies
+  has_many :civil_statuses 
   named_scope :ordered, :order => "ref ASC"
   named_scope :published, :conditions => {:published => true }
 
