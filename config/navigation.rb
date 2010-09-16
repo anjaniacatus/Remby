@@ -40,6 +40,10 @@ SimpleNavigation::Configuration.run do |navigation|
     #                            when the item should be highlighted, you can set a regexp which is matched 
     #                            against the current URI.
     #
+     primary.item :home, "Accueil", root_path do |home|
+     end
+
+
     primary.item :jobs, "offres récentes", jobs_path do |offre|
       if current_user && current_user.roles ==  "compagny" && !current_user.compagny.blank?
         offre.item :new_jobs, 'Créer un offre', new_compagny_job_path(current_user.compagny)  

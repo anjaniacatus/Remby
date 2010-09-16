@@ -87,7 +87,7 @@ a {
    border-top: 4px solid #766749;
    background-color: #766749;
    width:33%;
-   float:left;
+   float:left;left
    height: 100px;
    margin-left:0.1em;
 }
@@ -112,14 +112,13 @@ a {
 }
 #title{
    color: white;
-   background:#9cb800;
-   font-size:200%;
+   background:#9AB54F;
+   font-size:179%;
    font-weight:bold;
    margin-left:0.4em;
-   margin-bottom:0.1em;
 }
 #account{
-  font-size:50%;
+  font-size:60%;
   float:right;
 }
 #account a{
