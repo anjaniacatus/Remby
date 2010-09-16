@@ -2,7 +2,7 @@
   %head
     %meta{:content => "text/html;charset=UTF-8", "http-equiv" => "content-type"}/
     %a{ :href => "/" }
-      %img.flex{ :title => "recherche emploi ?", :src => "/images/remby1.png?1252593908", :alt => "Remby ?* par http://remby.com", :width => '12%'}/
+      %img.flex{ :title => "recherche emploi ?", :src => "/images/remby1.png?1252593908", :alt => "Remby ?* par http://remby.com"}/
     = stylesheet_link_tag 'application'
     = javascript_include_tag 'prototype.js'
     = javascript_include_tag 'nested_attributes.js'
@@ -21,24 +21,14 @@
           = render_navigation :renderer => :breadcrumbs, :join_with => " &gt; "
         = yield
     #footer
-      #about
-        %h4 About:
+      .about
+        %h4 About
         Lorem ipsum dolor sit amet, 
         consetetur sadipscing elitr, 
-        sed diam nonumyeirmod tempor 
-        invidunt ut labore et dolore 
-      #new
-        %h4 Activité récente:
+      .contact_us
+        %h4 Nous Contactez
         Lorem ipsum dolor sit amet, 
         consetetur sadipscing elitr, 
-        sed diam nonumyeirmod tempor 
-        invidunt ut labore et dolore 
-      #contact_us
-        %h4 Nous Contactez:
-        Lorem ipsum dolor sit amet, 
-        consetetur sadipscing elitr, 
-        sed diam nonumyeirmod tempor 
-        invidunt ut labore et dolore 
     #contentinfo
       \&copy;2010 remby.com &mdash; engineered by 
       %a{:href => "http://jojopil.com"} jojopil! Innovations

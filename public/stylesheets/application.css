@@ -3,8 +3,9 @@ body {
  /* #9AB54F;*/
   font-family: Verdana, Helvetica, Arial;
   font-size: 12px;
-  width:1280 e;
-  Height:900 em;
+  margin-left:10em;
+  margin-right:10em;
+  background-position:center;
 }
 
 a.selected{
@@ -38,9 +39,9 @@ a {
     color: #afc0a4; 
     background-color:#9AB54F;
     /**/#766749;
+    width:15%;
     margin-bottom:0.1em;
-    margin-top:0.5em;
-    margin-left:1em;
+    margin-top:0.1em;
     float:left;
 }
 #search{
@@ -59,15 +60,13 @@ a {
 }
 #contenu2{
   background-color: white;
-  width:82%; 
-  margin-left:0.8em;
-  margin-top:0.5em;
-  float:right;
+  width:85%; 
+  margin-top:4em;
+  margin-left:13.5em;
 }
 #nav{
   background-color:#9AB54F;
   margin-top:0.1em;
-  margin-left:0em;
   margin-bottom:0.2em;
   color :white;
 }
@@ -79,34 +78,26 @@ a {
 }
 
 #footer{
- margin-left:1em;
  background-color:#766749;
  clear:both;
 }
-#new{
-   border-top: 4px solid #766749;
-   background-color: #766749;
-   width:33%;
-   float:left;left
+.contact_us{
+   background-color:#766749;
+   background-repeat:repeat;
+   width:50%;
    height: 100px;
-   margin-left:0.1em;
-}
-#contact_us{
-   border-top: 4px solid #766749;
-   background-color:#766749; 
-   width:33%;
    float:left;
-   height: 100px;
-   margin-left:0.1em;
+   text-align:center;
 }
-#about{
-  border-top: 4px solid #766749;
-  background-color:#766749;; 
-  width:33%;
+.about{
+  background-color:#766749;
+  background-repeat:repeat;
+  width:50%;
   float:left;
   height: 100px;
+  text-align:center;
 }
-#contentinfo{
+contentinfo{
   margin-left:1em;
   width:100%
 }
@@ -115,7 +106,6 @@ a {
    background:#9AB54F;
    font-size:179%;
    font-weight:bold;
-   margin-left:0.4em;
 }
 #account{
   font-size:60%;
