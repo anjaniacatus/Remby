@@ -1,5 +1,5 @@
 body {
-  background-color:#white;
+  background-color:#dbe35d;
  /* #9AB54F;*/
   font-family: Verdana, Helvetica, Arial;
   font-size: 12px;
@@ -8,7 +8,7 @@ body {
 }
 
 a.selected{
-  color:#9AB54F;
+  color:#766749;
 }
 a img {
   border: none;
@@ -36,9 +36,10 @@ a {
 }
 #navigation{
     color: #afc0a4; 
-    background-color:#766749;
+    background-color:#9AB54F;
+    /**/#766749;
     margin-bottom:0.1em;
-    margin-top:11.5em;
+    margin-top:0.5em;
     margin-left:1em;
     float:left;
 }
@@ -54,18 +55,17 @@ a {
   color:white;
 }
 #home{
-  color: #240;
+  color:#766749;
 }
 #contenu2{
-  background-color: transparent;
+  background-color: white;
   width:82%; 
   margin-left:0.8em;
-  margin-top:11.5em;
-  margin-bottom:0.1em;
+  margin-top:0.5em;
   float:right;
 }
 #nav{
-  background-color:#766749;
+  background-color:#9AB54F;
   margin-top:0.1em;
   margin-left:0em;
   margin-bottom:0.2em;
@@ -110,9 +110,9 @@ a {
   margin-left:1em;
   width:100%
 }
-.title{
-   color: #240;
-   background: #9AB54F;
+#title{
+   color: white;
+   background:#9cb800;
    font-size:200%;
    font-weight:bold;
    margin-left:0.4em;
