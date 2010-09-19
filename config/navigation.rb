@@ -74,15 +74,17 @@ SimpleNavigation::Configuration.run do |navigation|
     end
 
     if current_user && current_user.roles == "compagny" && !current_user.compagny.blank?
-      primary.item:profile, "Mon profile", compagny_path(current_user.compagny) do |pro|   
+      primary.item:profile, "Mon profile",  compagny_path(current_user.compagny) do |pro|   
         pro.item :edition, 'Modifier mon profil', edit_compagny_path(current_user.compagny)
     end
   end
     
     if current_user
       primary.item :edition_compte,"editer mon compte",edit_user_path(current_user), :id => 'connected'  do |account|
-       account.item:deconnexion, "logout", logout_path
       end
+      primary.item :edition_compte,"logout",logout_path, :id => 'deconnected'  do |account|
+      end
+
     else
       primary.item :connexion, "Connexion",  root_path, :id => 'connected' do |connexion|
         connexion.item:inscription, "s'inscrire'", new_user_path

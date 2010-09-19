@@ -16,7 +16,8 @@ a img {
 }
 
 a {
-  color:#766749;
+  color:#433A29;
+  font-weight:bold;
 }
 #banner{
   background-color: #77aaaa;
@@ -53,9 +54,8 @@ a {
 }
 #contenu2{
   background-color: white;
-  width:85%; 
-  margin-top:4em;
-  margin-left:13.5em;
+  width:101%;
+  margin-left:0.2em
 }
 #nav{
   background-color:#9AB54F;
@@ -98,6 +98,15 @@ a {
 #connected{
   margin-left:5em;
 }
+#profil{
+  float:left;
+}
+#login{
+  text-align:center;
+}
+.label{
+  margin-right:17em;
+}
 .about{
   background-color:black;
   background-repeat:repeat;
@@ -123,6 +132,10 @@ contentinfo{
   background: #254d78;
 }
 
+.breadcrumbs{
+  float:left;
+  margin-right:0.2em;
+}
 #account
 {
   color:black;
