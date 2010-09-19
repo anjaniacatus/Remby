@@ -86,7 +86,7 @@ SimpleNavigation::Configuration.run do |navigation|
       end
 
     else
-      primary.item :connexion, "Connexion",  root_path, :id => 'connected' do |connexion|
+      primary.item :connexion, "Connexion",  login_path, :id => 'connected' do |connexion|
         connexion.item:inscription, "s'inscrire'", new_user_path
         connexion.item:log, "login", login_path
 
