@@ -6,7 +6,7 @@ SimpleNavigation::Configuration.run do |navigation|
   # navigation.renderer = Your::Custom::Renderer
   
   # Specify the class that will be applied to active navigation items. Defaults to 'selected'
-  # navigation.selected_class = 'your_selected_class'
+   navigation.selected_class = 'navigation'
     
   # Item keys are normally added to list items as id.
   # This setting turns that off
@@ -40,18 +40,18 @@ SimpleNavigation::Configuration.run do |navigation|
     #                            when the item should be highlighted, you can set a regexp which is matched 
     #                            against the current URI.
     #
-     primary.item :home, "Accueil", root_path do |home|
-     end
+    primary.item :home, "Accueil", root_path, :id => 'acceuil' do |home|
+    end
 
 
-    primary.item :jobs, "offres récentes", jobs_path do |offre|
+    primary.item :jobs, "offres récentes", jobs_path, :id => 'link_offre' do |offre|
       if current_user && current_user.roles ==  "compagny" && !current_user.compagny.blank?
         offre.item :new_jobs, 'Créer un offre', new_compagny_job_path(current_user.compagny)  
         offre.item :edition, 'Candidature', job_applications_path(@job) 
       end
     end
     
-    primary.item :cv, 'CV', cvs_path do |cv|
+    primary.item :cv, 'CV', cvs_path, :id => 'link_cv' do |cv|
      if current_user && current_user.roles == "member" && !current_user.civil_status.blank?
        cv.item :cv_disponible, 'Mes CV', cvs_path
        cv.item :new_cv, 'Créer un CV', new_civil_status_cv_path(current_user.civil_status)
@@ -78,7 +78,18 @@ SimpleNavigation::Configuration.run do |navigation|
         pro.item :edition, 'Modifier mon profil', edit_compagny_path(current_user.compagny)
     end
   end
+    
+    if current_user
+      primary.item :edition_compte,"editer mon compte",edit_user_path(current_user), :id => 'connected'  do |account|
+       account.item:deconnexion, "logout", logout_path
+      end
+    else
+      primary.item :connexion, "Connexion",  root_path, :id => 'connected' do |connexion|
+        connexion.item:inscription, "s'inscrire'", new_user_path
+        connexion.item:log, "login", login_path
 
+      end
+    end
 
     # Add an item which has a sub navigation (same params, but with block)
     #primary.item :key_2, 'name', url, options do |sub_nav|

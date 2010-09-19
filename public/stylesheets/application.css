@@ -1,5 +1,5 @@
-body {
-  background-color:#dbe35d;
+body{ 
+  background-color:#b9d3cc;
  /* #9AB54F;*/
   font-family: Verdana, Helvetica, Arial;
   font-size: 12px;
@@ -16,16 +16,15 @@ a img {
 }
 
 a {
-  color:#240;
+  color:#766749;
 }
 #banner{
-  margin-top:2em; 
+  background-color: #77aaaa;
   margin-bottom:1em;
-  margin-left:1em;
-  width:98%;
+  width:100%;
 }  
 #banner1{
-  #background-color:#6E212E;
+  background-color:#ddaaaa;
   width:100%;
   height:30px;
   float:left;
@@ -37,23 +36,17 @@ a {
 }
 #navigation{
     color: #afc0a4; 
-    background-color:#9AB54F;
-    /**/#766749;
-    width:15%;
+    background-color: #77aaaa;
+    width:80%;
     margin-bottom:0.1em;
     margin-top:0.1em;
-    float:left;
-}
+    }
 #search{
-    background-color: #9AB54F;
-    color:white;
-    float:left;
+    float:right;
     font-size:70%;
-    width:100%;
+    width:50%;
+    text-align:right;
   }
-}
-.account{
-  color:white;
 }
 #home{
   color:#766749;
@@ -82,16 +75,33 @@ a {
  clear:both;
 }
 .contact_us{
-   background-color:#766749;
+   background-color:black;
+   color:white;
    background-repeat:repeat;
    width:50%;
    height: 100px;
    float:left;
    text-align:center;
 }
+#acceuil{
+  float:left;
+}
+#link_cv{
+  float:left;
+  margin-left:2em;
+  margin-right:2.5em;
+}
+#link_offre{
+  float:left;
+  margin-left:1.5em;
+}
+#connected{
+  margin-left:5em;
+}
 .about{
-  background-color:#766749;
+  background-color:black;
   background-repeat:repeat;
+  color :white;
   width:50%;
   float:left;
   height: 100px;
@@ -102,22 +112,31 @@ contentinfo{
   width:100%
 }
 #title{
-   color: white;
-   background:#9AB54F;
+   float :right;
+   color:white;   
    font-size:179%;
    font-weight:bold;
 }
-#account{
-  font-size:60%;
-  float:right;
+#logo{
+}
+#head{
+  background: #254d78;
+}
+
+#account
+{
+  color:black;
+  font-size:100%;
+  float: left;
 }
 #account a{
   color: white;
 }
 
 .text{
-  font-size:70%;
-  color:white;
+  font-size:100%;
+  font-weight:bold;
+  color:#cc3333;
 }
 
 #form_cv{

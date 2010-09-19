@@ -1,25 +1,32 @@
 %html{:lang => "en", "xml:lang" => "en", :xmlns => "http://www.w3.org/1999/xhtml"}
   %head
     %meta{:content => "text/html;charset=UTF-8", "http-equiv" => "content-type"}/
-    %a{ :href => "/" }
-      %img.flex{ :title => "recherche emploi ?", :src => "/images/remby1.png?1252593908", :alt => "Remby ?* par http://remby.com"}/
+    #head
+      #title
+        Le site de l'emploi à Madagascar - #{yield(:title) || "Remby: Online Cv and Jobs"}
+
+      #logo
+        %a{ :href => "/" }
+          %img.flex{ :title => "recherche emploi ?", :src => "/images/remby1.png?1252593908", :alt => "Remby ?* par http://remby.com"}/
     = stylesheet_link_tag 'application'
     = javascript_include_tag 'prototype.js'
     = javascript_include_tag 'nested_attributes.js'
   %body    
-    #title
-      Le site de l'emploi à Madagascar - #{yield(:title) || "Remby: Online Cv and Jobs"}
-      = render :partial => 'shared/account'
+    #banner 
       #search 
         = render :partial => 'shared/search'
-    #contenu
-      = flash[:notice]
+      = render :partial => 'shared/account'
       #navigation
         = render_navigation
+
+    #contenu
       #contenu2
         #nav
           = render_navigation :renderer => :breadcrumbs, :join_with => " &gt; "
+          = flash[:notice]
+
         = yield
+
     #footer
       .about
         %h4 About

@@ -1,24 +1,21 @@
 -if current_user && current_user.roles == "compagny" 
-  #search
-    - form_tag cvs_path, :method => 'get' do
-      %p
-        = "CV? "
-        = text_field_tag :q, params[:q]
-        = submit_tag "Search", :name => nil
+  - form_tag cvs_path, :method => 'get' do
+    %p
+      = "CV? "
+      = text_field_tag :q, params[:q]
+      = submit_tag "Search", :name => nil
 
 -if current_user && current_user.roles == "member" 
-  #search
-    - form_tag jobs_path, :method => 'get' do
-      %p
-        = "OFFRES? "
-        = text_field_tag :q, params[:q]
-        = submit_tag "Search", :name => nil
+  - form_tag jobs_path, :method => 'get' do
+    %p
+      = "OFFRES? "
+      = text_field_tag :q, params[:q]
+      = submit_tag "Search", :name => nil
 
 -if !current_user
-  #search
-    - form_tag jobs_path, :method => 'get' do
-      %p
-        = "OFFRES? "
-        = text_field_tag :q, params[:q]
-        = submit_tag "Search", :name => nil
+  - form_tag jobs_path, :method => 'get' do
+    %p
+      = "OFFRES? "
+      = text_field_tag :q, params[:q]
+      = submit_tag "Search", :name => nil
 
