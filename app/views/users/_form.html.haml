@@ -17,7 +17,9 @@
     %br/
     = f.password_field :password_confirmation
   %p
+    
     = f.label :roles
     = f.input :roles, :collection => ["member", "compagny"]
   %p
     = f.submit "Submit"
+    

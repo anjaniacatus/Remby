@@ -1,0 +1,9 @@
+-if current_user && current_user.roles == "member" && !current_user.civil_status.blank?
+  = link_to 'creer un CV', new_civil_status_cv_path(current_user.civil_status)  
+  = link_to  'Modifier mon profil', edit_civil_status_path(current_user.civil_status)
+-if current_user && current_user.roles == "compagny" && !current_user.compagny.blank?
+  = link_to 'Modifier mon profil', edit_compagny_path(current_user.compagny)
+  = link_to 'Créer un offre', new_compagny_job_path(current_user.compagny)  
+
+
+

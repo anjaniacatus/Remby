@@ -40,57 +40,38 @@ SimpleNavigation::Configuration.run do |navigation|
     #                            when the item should be highlighted, you can set a regexp which is matched 
     #                            against the current URI.
     #
-    primary.item :home, "Accueil", root_path, :id => 'acceuil' do |home|
+    primary.item :home, "Acceuil", root_path, :id => 'acceuil' do |home|
     end
 
 
-    primary.item :jobs, "offres récentes", jobs_path, :id => 'link_offre' do |offre|
+    primary.item :jobs, "Offres", jobs_path, :id => 'link_offre' do |offre|
       if current_user && current_user.roles ==  "compagny" && !current_user.compagny.blank?
-        offre.item :new_jobs, 'Créer un offre', new_compagny_job_path(current_user.compagny)  
-        offre.item :edition, 'Candidature', job_applications_path(@job) 
-      end
+             end
     end
     
-    primary.item :cv, 'CV', cvs_path, :id => 'link_cv' do |cv|
-     if current_user && current_user.roles == "member" && !current_user.civil_status.blank?
-       cv.item :cv_disponible, 'Mes CV', cvs_path
-       cv.item :new_cv, 'Créer un CV', new_civil_status_cv_path(current_user.civil_status)
-     end
-     if current_user && current_user.roles == "compagny" && !current_user.compagny.blank?
-       cv.item :search_cv, 'rechercher un cv', cvs_path
-       cv.item :recent_cv, 'cv  récent',cvs_path
-     end
-   end
+    primary.item :cv, 'CV', cvs_path, :id => 'link_cv' 
     
     if current_user && current_user.roles == "member" && !current_user.civil_status.blank?
-      primary.item:profile, "Mon profile", civil_statuses_path do |pro| 
-        pro.item :edition, 'Modifier mon profil', edit_civil_status_path(current_user.civil_status)
-      end
+      primary.item:profile, "Mon profile", civil_statuses_path, :id => 'profil'
     end
     if current_user && current_user.roles == "member" && current_user.civil_status.blank?
-       primary.item:profile, "Mon profile", civil_statuses_path do |pro| 
-        pro.item :edition, 'Editer mon profil', new_civil_status_path
-      end
+       primary.item:profile, "Mon profile", new_civil_status_path  
     end
 
     if current_user && current_user.roles == "compagny" && !current_user.compagny.blank?
-      primary.item:profile, "Mon profile",  compagny_path(current_user.compagny) do |pro|   
-        pro.item :edition, 'Modifier mon profil', edit_compagny_path(current_user.compagny)
+      primary.item:profile, "Mon profile",  compagny_path(current_user.compagny), :id => 'connected'   
     end
-  end
+  
+    if current_user && current_user.roles == "compagny" && current_user.compagny.blank?
+      primary.item:profile, "Mon profile",  new_compagny_path(current_user.compagny), :id => "connected"    
+    end
+
+
     
-    if current_user
-      primary.item :edition_compte,"editer mon compte",edit_user_path(current_user), :id => 'connected'  do |account|
-      end
-      primary.item :edition_compte,"logout",logout_path, :id => 'deconnected'  do |account|
-      end
+    if !current_user
+      primary.item :connexion, "Connexion",  login_path, :id => 'connected'
+      primary.item:inscription, "Inscription", new_user_path, :id => 'subscribe'
 
-    else
-      primary.item :connexion, "Connexion",  login_path, :id => 'connected' do |connexion|
-        connexion.item:inscription, "s'inscrire'", new_user_path
-        connexion.item:log, "login", login_path
-
-      end
     end
 
     # Add an item which has a sub navigation (same params, but with block)

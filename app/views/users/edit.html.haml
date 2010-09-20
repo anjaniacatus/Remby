@@ -1,5 +1,4 @@
-%h1
-  Editing user: #{h @userp.username}
+-title "Editing user: #{h @userp.username}"
 - semantic_form_for(@userp) do |f|
   = f.error_messages
   %p

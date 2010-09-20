@@ -32,5 +32,4 @@
             - if current_user.roles == "company"|| "admin" && belongs_to_compagny?(job)
               = link_to 'Edit', edit_job_path(job) if permitted_to?:update
               = link_to 'Destroy', job, :confirm => 'Are you sure?', :method => :delete if permitted_to?:delete
-
-
+             

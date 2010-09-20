@@ -2,7 +2,6 @@
   .text
     = "Bienvenue: " + current_user.username + " !:)"
     (#{current_user.role_symbols.map(&:to_s) * ','}) 
-.breadcrumbs
-  = "vous êtes ici: "   
-= render_navigation :renderer => :breadcrumbs, :join_with => " &gt; "
-  
+  = link_to 'deconnexion', logout_path 
+  = link_to 'modifier compte', edit_user_path(current_user)
+
