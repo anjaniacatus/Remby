@@ -34,12 +34,16 @@ a {
     background-repeat:repeat;
     width:100%;
     font-size: 120%;
+    margin-top:-0.9em;
+    height:10%;
 }
 
 #search{
    font-size:100%;
+   background-color:#77aaaa;
    text-align:right;
-   width: 100%;
+   float:right;
+   width: 40%;
    font-weight:bold;
 }
 }
@@ -144,7 +148,6 @@ contentinfo{
 }
 #title{
    color:white;   
-   float:left;
    font-size:20;
    font-weight:bold;
    width:100%;

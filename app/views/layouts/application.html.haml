@@ -6,14 +6,13 @@
         %a{ :href => "/" }
           %img.flex{ :title => "recherche emploi ?", :src => "/images/remby1.png?1252593908", :alt => "Remby ?* par http://remby.com"}/
         Une Plateforme pour le travail à Madagascar!!
-      #search
-        = render :partial => 'shared/search' 
     = stylesheet_link_tag 'application'
     = javascript_include_tag 'prototype.js'
     = javascript_include_tag 'nested_attributes.js'
   %body    
     #banner 
-      = "DOUMA BE"
+      #search
+        = render :partial => 'shared/search'
       .text
         = render :partial => 'shared/account'
       #navigation
