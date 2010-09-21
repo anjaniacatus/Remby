@@ -19,5 +19,5 @@ config/initializers/site_keys.rb
 solr/*
 solr/data/*
 vendor/plugins/haml/init.rb
-
+config/database.yml
 .rvmrc
