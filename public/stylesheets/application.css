@@ -29,19 +29,20 @@ a {
     width:100%;
     font-size: 120%;
     margin-top:-0.9em;
-    height:10%;
+    height:7%;
 }
 #navigation{
   float:left;
   width:60%;
-  list-style-type:disc;
-  list-style-position:outside;
+  height:17%
 }
 #navigation a{
 }
 a.navigation{
-  color:white;
+  color:black;
+  background-color:white;
 }
+
 
 .search{
    font-size:100%;
