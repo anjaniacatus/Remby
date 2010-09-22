@@ -4,9 +4,10 @@
     #head
       #title
         %a{ :href => "/" }
-          %img.flex{ :title => "recherche emploi ?", :src => "/images/remby1.png?1252593908", :alt => "Remby ?* par http://remby.com"}/
-        Une Plateforme pour le travail à Madagascar!!
-        = render :partial => 'shared/account'
+          %img.flex{ :title => "recherche emploi ?", :src => "/images/logo_blanc.png?1252593908", :alt => "Remby ?* par http://remby.com", :width => '13%'}/
+        Une Plate-forme pour le travail à Madagascar!!
+         
+    = render :partial => 'shared/account'
     = stylesheet_link_tag 'application'
     = javascript_include_tag 'prototype.js'
     = javascript_include_tag 'nested_attributes.js'
@@ -16,9 +17,12 @@
         = render_navigation
       .search
         = render :partial => 'shared/search'
+        %a{ :href => "/" }
+          %img.flex{ :title => "recherche emploi ?", :src => "/images/abeille.gif?1252593908", :alt => "Remby ?* par http://remby.com"}/
+
     #contenu2
       .pagetitle
-        = yield(:title)
+        = yield(:title)     
       = render :partial => 'shared/nav'
       %p
         = flash[:notice] 

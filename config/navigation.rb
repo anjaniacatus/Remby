@@ -40,13 +40,12 @@ SimpleNavigation::Configuration.run do |navigation|
     #                            when the item should be highlighted, you can set a regexp which is matched 
     #                            against the current URI.
     #
-    primary.item :home, "Acceuil", root_path, :id => 'acceuil' do |home|
+    primary.item :home, "Accueil", root_path, :id => 'acceuil' do |home|
+
     end
 
 
     primary.item :jobs, "Offres", jobs_path, :id => 'link_offre' do |offre|
-      if current_user && current_user.roles ==  "compagny" && !current_user.compagny.blank?
-             end
     end
     
     primary.item :cv, 'CV', cvs_path, :id => 'link_cv' 
@@ -59,12 +58,12 @@ SimpleNavigation::Configuration.run do |navigation|
     end
 
     if current_user && current_user.roles == "compagny" && !current_user.compagny.blank?
-      primary.item:profile, "Mon profile",  compagny_path(current_user.compagny), :id => 'connected'   
+      primary.item:profile, "Mon profile",  compagny_path(current_user.compagny), :id => 'connected'
     end
   
     if current_user && current_user.roles == "compagny" && current_user.compagny.blank?
-      primary.item:profile, "Mon profile",  new_compagny_path(current_user.compagny), :id => "connected"    
-    end
+      primary.item:profile, "Mon profile",  new_compagny_path(current_user.compagny), :id => "connected" 
+   end
 
 
     

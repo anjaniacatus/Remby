@@ -1,6 +1,8 @@
 body{ 
-  background-color:#b9d3cc;
- /* #9AB54F;*/
+  background-color:black;
+  background-image: url('../images/a.png');
+  #b9d3cc;
+ /* #9AB5:4F;*/
   font-family: Verdana, Helvetica, Arial;
   font-size: 12px;
   margin-left:10em;
@@ -9,47 +11,64 @@ body{
 }
 
 a.selected{
-  color:#766749;
+  color:red;
 }
 a img {
   border: none;
 }
+a:hover{
+  color:#254d78;
+ }
 
 a {
   color:#433A29;
   font-weight:bold;      
-}
+  text-decoration:none;
+  }
 #contenu{
   background-color:white;
 }
 
 #banner{
-    color: #afc0a4; 
-    background-color: #77aaaa;
+    #ffb201; 
     width:100%;
     font-size: 120%;
     margin-top:-0.9em;
     height:7%;
 }
+#connexion-text{
+  font-weight:bold;
+  color:#006666;
+}
 #navigation{
   float:left;
   width:60%;
-  height:17%
+  height:17%;
+
 }
 #navigation a{
-}
-a.navigation{
-  color:black;
-  background-color:white;
-}
+  color:white;
+  background-color:#254D78;
+  padding-bottom:0.2em;
+  padding-right:2em;
+  padding-left:2em;
 
+
+}  
+#navigation selected.a{
+  background-color:white;
+  padding-bottom:0.2em;
+  padding-right:0.2em;
+  padding-left:0.2em;
+}
 
 .search{
    font-size:100%;
    font-weight:bold;
    text-align:right;
+   color: white;
 }
-}
+
 #home{
   color:#766749;
 }
@@ -71,11 +90,11 @@ a.navigation{
 }
 
 #footer{
- background-color:#766749;
+ background-color:#254d78;
  clear:both;
 }
 .contact_us{
-   background-color:black;
+   background-color:#254D78;
    color:white;
    background-repeat:repeat;
    width:50%;
@@ -84,41 +103,37 @@ a.navigation{
    text-align:center;
 }
 #acceuil{
-  background-color: #77aaaa;
+  color: #254D78; 
   float:left;
-  margin-right:2em;
+  margin-right:0.2em;
   list-style-type:none;
-}
+  }
 #link_cv{
-  background-color: #77aaaa;
   float:left;
-  margin-left:2em;
-  margin-right:2em;
   list-style-type:none;
+  padding-right:0.2em;
+  padding-left:0.2em;
+
 }
 #link_offre{
-  background-color: #77aaaa;
   float:left;
-  margin-right:2em;
-  margin-left:1.5em;
   list-style-type:none;
+  padding-left:0.2em;
 
 }
 #edit_account{
-   background-color: #77aaaa;
-   margin-left:5em;
-   margin-right:2em;
+  background-color:#433A29;
+  margin-left:0.2em;
+  margin-right:0.2em;
 }
 #connected{
-   background-color: #77aaaa;
-   margin-left:2em;
+   margin-left:0.2em;
    float:left;
-   margin-right:2em;
+   margin-right:0.2em;
    list-style-type:none;
 
 }
 #profil{
-   background-color: #77aaaa;
    list-style-type:none;
 }
 #subscribe{
@@ -126,12 +141,11 @@ a.navigation{
 }
 #create_cv{
   text-align:right;
-  background-color:blue;
 }
 .pagetitle{
-  color:#cc3333;
+  color:#ffb201;
   font-weight:bold;
-  font-size:15;
+  font-size:18;
   text-align:left;
 }
 #login{
@@ -139,9 +153,10 @@ a.navigation{
 }
 .label{
   margin-right:17em;
+  font-weight:bold;
 }
 .about{
-  background-color:black;
+  background-color:#254D78;
   background-repeat:repeat;
   color :white;
   width:50%;
@@ -165,7 +180,8 @@ contentinfo{
   width: 100%;
 }
 #head{
-  background: #254d78;
+  background:; 
+  #254d78;
 }
 
 .breadcrumbs{
@@ -179,15 +195,15 @@ contentinfo{
   font-size:100%;
   float: left;
 }
-#account a{
-  color: white;
+#account.a{
+  color: black;
 }
 
 .text{
   text-align:right;
   font-size:10;
   font-weight:bold;
-  color:black;
+  color:#ffb201;
 }
 .text a{
   color :white;
