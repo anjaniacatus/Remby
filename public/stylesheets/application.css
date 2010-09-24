@@ -46,7 +46,6 @@ a {
 }
 #navigation a{
   color:white;
-  background-color:#254D78;
   padding-bottom:0.2em;
   padding-right:2em;
   padding-left:2em;
@@ -54,14 +53,13 @@ a {
 
 }  
 #navigation a:hover{
-  background-color:black;
+  background-color:#254D78;
 }
 
-#background a:active{
-  background-color:red;
-}
 
-#navigation_on{
+.navigation a{
+   background-color:#254D78;
+   color:white;
 }
 .search{
    font-size:100%;
