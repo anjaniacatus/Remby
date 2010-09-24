@@ -6,6 +6,7 @@ class UserSessionsController < ApplicationController
   def create
     @user_session = UserSession.new(params[:user_session])
     if @user_session.save
+      flash[:notice] = "Successfully logged in"
       @user = @user_session.user
       unless @user.roles == "admin"
        

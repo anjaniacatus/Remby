@@ -24,7 +24,7 @@
       .pagetitle
         = yield(:title)     
       = render :partial => 'shared/nav'
-      %p
+      #flash_notice
         = flash[:notice] 
       = yield
 
@@ -37,6 +37,6 @@
         %h4 Nous Contactez
         Lorem ipsum dolor sit amet, 
         consetetur sadipscing elitr, 
-    #contentinfo
-      \&copy;2010 remby.com &mdash; engineered by 
-      %a{:href => "http://jojopil.com"} jojopil! Innovations
+      .contentinfo
+        \&copy;2010 remby.com &mdash; engineered by 
+        %a{:href => "http://jojopil.com"} jojopil! Innovations

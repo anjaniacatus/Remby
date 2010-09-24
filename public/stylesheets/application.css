@@ -1,6 +1,7 @@
 body{ 
   background-color:black;
   background-image: url('../images/a.png');
+  background-attachment:fixed;
   #b9d3cc;
  /* #9AB5:4F;*/
   font-family: Verdana, Helvetica, Arial;
@@ -17,7 +18,7 @@ a img {
   border: none;
 }
 a:hover{
-  color:#254d78;
+  color:#ffb201;
  }
 
 a {
@@ -55,7 +56,7 @@ a {
 
 
 }  
-#navigation selected.a{
+#navigation a.selected{
   background-color:white;
   padding-bottom:0.2em;
   padding-right:0.2em;
@@ -74,6 +75,7 @@ a {
 }
 #contenu2{
   background-color: white;
+  margin-bottom:-0.1em;
   width:100%;
 }
 #nav{
@@ -89,10 +91,6 @@ a {
     margin-bottom:0.1em;
 }
 
-#footer{
- background-color:#254d78;
- clear:both;
-}
 .contact_us{
    background-color:#254D78;
    color:white;
@@ -155,6 +153,9 @@ a {
   margin-right:17em;
   font-weight:bold;
 }
+#footer{
+  margin-top:-0.1em;
+}
 .about{
   background-color:#254D78;
   background-repeat:repeat;
@@ -164,10 +165,11 @@ a {
   height: 100px;
   text-align:center;
 }
-contentinfo{
-  margin-left:1em;
-  width:100%
+.contentinfo{
+  color:#254D78;
+  background-color:black;
 }
+
 #title{
    color:white;   
    font-size:20;
@@ -224,7 +226,7 @@ contentinfo{
 }
 #civil_status{
 }
-#flash_notice, #flash_error {
+#flash_error {
   color :#B5463F;
   padding: 5px 8px;
   margin: 10px 0;
@@ -236,15 +238,14 @@ contentinfo{
 #flash_notice {
   margin-left:0.8em
   margin-top:20.5em;
-  color:#B5463F;
+  color:black;
   font-size:100%;
   font-weight:bold;
-  background-color: white;
+  background-color: #9AB54F;
 }
 
 #flash_error {
   color:#B5463F;
-  font:
   background-color: #FCC;
   border: solid 1px #4C4338;
 }
@@ -280,7 +281,6 @@ contentinfo{
   background-color:#B5463F;
   color: #fff;
 }
-
 #errorExplanation p {
   color: #333;
   margin-bottom: 0;
