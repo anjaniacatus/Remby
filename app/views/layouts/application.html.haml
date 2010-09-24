@@ -6,27 +6,26 @@
         %a{ :href => "/" }
           %img.flex{ :title => "recherche emploi ?", :src => "/images/logo_blanc.png?1252593908", :alt => "Remby ?* par http://remby.com", :width => '13%'}/
         Une Plate-forme pour le travail à Madagascar!!
-         
-    = render :partial => 'shared/account'
     = stylesheet_link_tag 'application'
     = javascript_include_tag 'prototype.js'
     = javascript_include_tag 'nested_attributes.js'
   %body    
-    #banner 
-      #navigation
-        = render_navigation
+    #navigation
+      = render_navigation
+    #contenu2    
+      .nav
+        = render :partial => 'shared/account'
+        = render :partial => 'shared/nav'     
       .search
         = render :partial => 'shared/search'
-        %a{ :href => "/" }
-          %img.flex{ :title => "recherche emploi ?", :src => "/images/abeille.gif?1252593908", :alt => "Remby ?* par http://remby.com"}/
-
-    #contenu2
+    #flash_notice
+      = flash[:notice] 
+    #contenu3
       .pagetitle
-        = yield(:title)     
-      = render :partial => 'shared/nav'
-      #flash_notice
-        = flash[:notice] 
+        = yield(:title) 
       = yield
+      %a{ :href => "/" }
+      %img.flex{ :title => "recherche emploi ?", :src => "/images/abeille.gif?1252593908", :alt => "Remby ?* par http://remby.com"}/
 
     #footer
       .about
