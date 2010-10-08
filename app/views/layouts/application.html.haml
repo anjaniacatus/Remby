@@ -10,23 +10,19 @@
     = javascript_include_tag 'prototype.js'
     = javascript_include_tag 'nested_attributes.js'
   %body    
-    #navigation
-      = render_navigation
+    = render_navigation
     #contenu2    
       .nav
         = render :partial => 'shared/account'
         = render :partial => 'shared/nav'     
+      .title
+        = yield(:title)
       .search
         = render :partial => 'shared/search'
     #flash_notice
       = flash[:notice] 
     #contenu3
-      .pagetitle
-        = yield(:title) 
-      = yield
-      %a{ :href => "/" }
-      %img.flex{ :title => "recherche emploi ?", :src => "/images/abeille.gif?1252593908", :alt => "Remby ?* par http://remby.com"}/
-
+      =yield
     #footer
       .about
         %h4 About
