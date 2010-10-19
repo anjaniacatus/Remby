@@ -15,12 +15,16 @@ class CvsController < ApplicationController
       @search = Cv.search do
         keywords query
       end
-      @cvs = @search.results
+      @cvs = @search.results.paginate :per_page => 2, :page => params[:page]
+
+        
     end
     unless params[:civil_status_id].blank?  
       @civil_status = CivilStatus.find(params[:civil_status_id])
       @cvs = @civil_status.cvs
       @cv_all = Cv.all
+      @cvs.paginate :per_page => 1, :page => params[:page]
+
     else
       @cvs = Cv.all
          #@cv_paginates = Cv.search(params[:search], params[:page])

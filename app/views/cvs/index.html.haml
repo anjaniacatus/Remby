@@ -2,12 +2,13 @@
 -if @search
   = @search.total
   résultats
-  = will_paginate @search.results
   - @search.results.each do |cv|
     = cv.title
     = link_to "plus de detail", cv_path(cv)
+  = will_paginate @search.results
 
 - if current_user && current_user.roles == "member" && !current_user.civil_status.cvs.blank?
+  = will_paginate @cvs
   = render @cvs
 - if current_user && current_user.roles == "member" && current_user.civil_status.blank?
   ="vous ne diposez d'aucun CV pour l'instant!"
