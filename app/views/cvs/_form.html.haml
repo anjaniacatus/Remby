@@ -10,31 +10,36 @@
   - f.fields_for :degree_courses do |degree_course_form|
     = render :partial => 'degree_course', :locals => { :f => degree_course_form }
   %p
-    = add_child_link "Diplôme d'étude et formation", 'degree_course', f
+    .child_link
+      = add_child_link "Diplôme d'étude et formation", 'degree_course', f
 
 #experience_children
   - f.fields_for :experiences do |experience_form|
     = render :partial => 'experience', :locals => { :f => experience_form }
   %p
-    = add_child_link 'Expérience professionnel', 'experience', f
+    .child_link
+      = add_child_link 'Expérience professionnel', 'experience', f
 
 #interest_children
   - f.fields_for :interests do |interest_form|
     = render :partial => 'interest', :locals => { :f => interest_form }
   %p
-    = add_child_link "Loisir ou centre d'interet", 'interest', f
+    .child_link
+      = add_child_link "Loisir ou centre d'interet", 'interest', f
 
 #language_children
   - f.fields_for :languages do |language_form|
     = render :partial => 'language', :locals => { :f => language_form }
   %p
-    = add_child_link 'Langue', 'language', f
+    .child_link
+      = add_child_link 'Langue', 'language', f
 
 #other_skill_children
   - f.fields_for :other_skills do |other_skill_form|
     = render :partial => 'other_skill', :locals => { :f => other_skill_form }
   %p
-    = add_child_link 'Autre competence', 'other_skill', f
+    .child_link
+      = add_child_link 'Autre competence', 'other_skill', f
 
 %p
   = f.input :published,:label => "published", :as => :radio

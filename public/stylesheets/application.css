@@ -183,6 +183,11 @@ a.selected{
   margin-left:5em;
 
 }
+.summary label{
+  color:black;
+  text-align:left;
+  list-style-type:none;
+}
 .content{
   margin-top:2.9em;
   background-color:white;
@@ -201,7 +206,7 @@ a.selected{
 }
 #footer{
   margin-top:-0.1em;
-}
+  }
 .about{
   background-color:#254D78;
   background-repeat:repeat;
@@ -216,6 +221,13 @@ a.selected{
   background-color:black;
 }
 
+
+.child_link a{
+  color:#254D78;
+}
+.remove_link a{
+  color:#B5463F;
+}
 #title{
    color:white;   
    font-size:20;
@@ -247,7 +259,7 @@ a.selected{
   color: black;
 }
 
-.text{
+.textaccount{
   text-align:right;
   font-size:10;
   font-weight:bold;
@@ -344,4 +356,8 @@ a.selected{
 
 .fields {
   margin: 8px 0;
+}
+
+.child_link{
+  color:#B5463F;
 }

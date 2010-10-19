@@ -17,4 +17,5 @@
     = f.input :end_on, :start_year => 1960, :end_year => 2010
   %p
     = f.hidden_field :_delete, :class => 'delete'
-    = remove_child_link 'remove', f
+    .remove_link
+      = remove_child_link 'remove', f
