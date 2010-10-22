@@ -10,7 +10,8 @@
     = javascript_include_tag 'prototype.js'
     = javascript_include_tag 'nested_attributes.js'
   %body    
-    = render_navigation
+    .navigation
+      = render_navigation
     #contenu2    
       .nav
         = render :partial => 'shared/account'
