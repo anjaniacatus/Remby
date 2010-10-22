@@ -2,10 +2,17 @@
   %head
     %meta{:content => "text/html;charset=UTF-8", "http-equiv" => "content-type"}/
     #head
-      #title
+      #logo
         %a{ :href => "/" }
           %img.flex{ :title => "recherche emploi ?", :src => "/images/logo_blanc.png?1252593908", :alt => "Remby ?* par http://remby.com", :width => '13%'}/
+      .slogan
         Une Plate-forme pour le travail à Madagascar!!
+ 
+      #search
+        = render :partial => 'shared/search'
+
+
+
     = stylesheet_link_tag 'application'
     = javascript_include_tag 'prototype.js'
     = javascript_include_tag 'nested_attributes.js'
@@ -18,21 +25,24 @@
         = render :partial => 'shared/nav'     
       .title
         = yield(:title)
-      .search
-        = render :partial => 'shared/search'
     #flash_notice
       = flash[:notice] 
     #contenu3
-      =yield
-    #footer
-      .about
-        %h4 About
-        Lorem ipsum dolor sit amet, 
-        consetetur sadipscing elitr, 
-      .contact_us
-        %h4 Nous Contactez
-        Lorem ipsum dolor sit amet, 
-        consetetur sadipscing elitr, 
-      .contentinfo
-        \&copy;2010 remby.com &mdash; engineered by 
-        %a{:href => "http://jojopil.com"} jojopil! Innovations
+      = yield
+    .about
+      %h4 À Propos
+      %p
+        Remby est une plate-forme pour l'emploi à Madagascar,
+      %p
+        une application web destinée à la publication des CV et 
+        des offres d'emploi.
+    .contact_us
+      %h4 Nous Contactez
+      %p
+        Pour des suggestions, des remarques ou des commentaires :
+      %p
+        contactez nous au : +261 034 567 89 90, envoyez vos mails : Remby@gmail.com 
+    
+    .contentinfo
+      \&copy;2010 remby.com &mdash; engineered by 
+      %a{:href => "http://jojopil.com"} jojopil! Innovations

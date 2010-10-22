@@ -13,20 +13,21 @@ body{
 
 }
 .active a{
-  color:red;
+  color:#B5463F;
 }
 a img {
   border: none;
   background-color:black;
 }
 a:hover{
-  color:#ffb201;
+  color: #B5463F;
  }
 
 a {
-   color:white;
+   color:#234A73;
    font-weight:bold;      
    text-decoration:none;
+
   }
 a.selected{
   background-repeat:no-repeat;
@@ -56,31 +57,33 @@ a.selected{
 }
 .navigation a{
   color:black;
-  background-image: url('../images/bgbleu.png'); 
+  background-color:#234A73; 
   background-repeat:no-repeat;
-  padding-bottom:0.2em;
-  padding-right:3em;
-  padding-left:3em;
-  font-size:110%;
+  padding-right:2.7em;
+  padding-left:2.7em;
+  padding-bottom:0.5em;
+  padding-top:0.5em;
+  font-size:90%;
 
 }  
 .navigation a:hover{
-  background-color:black;
-  color:white;
+  background-color:#D3D3D3;
+  color:black;
 }
 .navigation a.selected{
-    background-image: url('../images/bgblanc.png'); 
+    /*
+     * /background-image: url('../images/bgblanc.png');   
+*/  background-color:#c7e0ff;
+    padding-bottom:0.5em;
 }
 
-.search{
-   font-size:100%;
+#search{
+   font-size:50%;
    font-weight:bold;
    text-align:right;
    color: white;
-   float:right;
-   margin-top:1em;
    padding-top:0.2em;
-   padding-left:1em;
+   width:100%;
 
 }
 
@@ -88,17 +91,18 @@ a.selected{
   color:#766749;
 }
 #contenu2{
-  background-color: #254D78;
+  background-color: #c7e0ff;
   width:100%;
   padding-bottom:0.5em;
   margin-bottom:-1em;
+  margin-top:0.55em;
   height:15%;
 }
 #contenu3{
-  background-color:white;
+  background-color:#c7e0ff;
 }
 .nav a{
-  color:white;
+  color:#234A73;
 }
 .nav a:hover{
   color:black;
@@ -118,17 +122,18 @@ a.selected{
 }
 
 .contact_us{
-   background-color:#254D78;
    color:white;
    background-repeat:repeat;
+   background-image: url('../images/bg_footer.png');  
    width:50%;
    height: 100px;
    float:left;
    text-align:center;
 }
 #acceuil{
-  margin-right:0.2em;
   float:left;
+  margin-right:0.5em;
+  margin-bottom:1em;
   list-style-type:none;
   background-attachment:fixed;
   background-repeat:no-repeat;
@@ -136,6 +141,7 @@ a.selected{
 }
 #link_cv{
   float:left;
+  margin-right:0.5em;
   list-style-type:none;
   background-attachment:fixed;
   background-repeat:no-repeat;
@@ -143,6 +149,7 @@ a.selected{
 
 #link_offre{
   float:left;
+  margin-right:0.5em;
   list-style-type:none;
   background-attachment:fixed;
   background-repeat:no-repeat;
@@ -152,30 +159,30 @@ a.selected{
   background-color:#433A29;
   margin-left:0.2em;
   margin-right:0.2em;
+  margin-right:0.5em;
   background-attachment:fixed;
   background-repeat:no-repeat;
-  background-image: url('../images/bgbleu.png'); 
 
 }
 #connected{
-   margin-left:0.2em;
    float:left;
-   margin-right:2em;
    list-style-type:none;
+   margin-right:0.5em;
+
 
 }
 #profil{
    list-style-type:none;
    background-attachment:fixed;
    background-repeat:no-repeat;
-   background-image: url('../images/bgbleu.png'); 
+   margin-right:9em;
+   float:left;
 
 
 }
 #subscribe{
-  margin-left:2em;
-  padding-left:2em;
   list-style-type:none;
+  float:left;
 }
 #create_cv{
   text-align:right;
@@ -187,14 +194,13 @@ a.selected{
   width:13%;
 }
 .title{
-  color:#ffb201;
+  color:black;
   font-weight:bold;
   font-size:17;
   float:left;
   text-align:center;
   padding-top:2em;
   padding-bottom:0.1em;
-  margin-left:5em;
 
 }
 .summary label{
@@ -208,11 +214,16 @@ a.selected{
   width:80%;
   float:left;
 }
+#logo{
+  float:left;
+  width:30%;
+  margin-bottom:0.1em;
+}
 #login{
   text-align:left;
-  padding-left:40%;
-  padding-right:20%;
-
+  background-repeat:repeat;
+  margin-left:10em;
+  margin-right:30em;
 }
 .label{
   margin-right:17em;
@@ -220,20 +231,20 @@ a.selected{
 }
 #footer{
   margin-top:-0.1em;
-  }
+ 
+}
 .about{
-  background-color:#254D78;
   background-repeat:repeat;
   color :white;
   width:50%;
   float:left;
   height: 100px;
   text-align:center;
-}
+  background-image: url('../images/bg_footer.png');  
+ }
 .contentinfo{
-  color:#254D78;
-  background-color:black;
-}
+  color:#D3D3D3;
+  }
 
 
 .child_link a{
@@ -252,6 +263,15 @@ a.selected{
 }
 #logo{
   width: 100%;
+}
+.field{
+  padding-bottom:1em;
+  margin-left:115em;
+  float:left;
+}
+
+.slogan{
+  color: white;
 }
 #head{
   background:; 

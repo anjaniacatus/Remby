@@ -48,10 +48,10 @@ SimpleNavigation::Configuration.run do |navigation|
     primary.item :jobs, "Offres", jobs_path, :id => 'link_offre' do |offre|
     end
     
-    primary.item :cv, 'CV', cvs_path, :id => 'link_cv' 
+    primary.item :cv, 'Depôt CV', cvs_path, :id => 'link_cv' 
     
     if current_user && current_user.roles == "member" && !current_user.civil_status.blank?
-      primary.item:profile, "Mon profile", civil_statuses_path, :id => 'profil'
+      primary.item:profile, "Mon profil", civil_statuses_path, :id => 'profil'
     end
     if current_user && current_user.roles == "member" && current_user.civil_status.blank?
        primary.item:profile, "Mon profile", new_civil_status_path  
