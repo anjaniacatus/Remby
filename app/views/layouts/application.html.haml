@@ -5,11 +5,13 @@
       #logo
         %a{ :href => "/" }
           %img.flex{ :title => "recherche emploi ?", :src => "/images/logo_blanc.png?1252593908", :alt => "Remby ?* par http://remby.com", :width => '13%'}/
+        %img.flex{ :title => "Remby!", :src => "/images/ab2.gif?1252593908", :alt => "Remby ?* par http://remby.com"}/
       .slogan
         Une Plate-forme pour le travail à Madagascar!!
  
       #search
         = render :partial => 'shared/search'
+
 
 
 
@@ -19,10 +21,10 @@
   %body    
     .navigation
       = render_navigation
+    = render :partial => 'shared/account'
     #contenu2    
       .nav
-        = render :partial => 'shared/account'
-        = render :partial => 'shared/nav'     
+        = render :partial => 'shared/nav'
       .title
         = yield(:title)
     #flash_notice

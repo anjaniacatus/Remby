@@ -1,10 +1,10 @@
 body{ 
-  background-color:black;
+  background-color:#000000;
   background-image: url('../images/a.png');
   background-attachment:fixed;
   #b9d3cc;
  /* #9AB5:4F;*/
-  font-family: Verdana, Helvetica, Arial;
+  font-family: Verdana, Arial;
   font-size: 12px;
   margin-left:10em;
   margin-right:10em;
@@ -17,7 +17,6 @@ body{
 }
 a img {
   border: none;
-  background-color:black;
 }
 a:hover{
   color: #B5463F;
@@ -35,6 +34,10 @@ a.selected{
   padding-left:3em;
   padding-bottom:5em;
   color: #254D78;
+}
+.abeille{
+  float:right;
+  margin-left:10em;
 }
 #contenu{
   background-color:white;
@@ -54,9 +57,10 @@ a.selected{
   height:2%;
   margin-bottom:0.3em;
   width:100%;
+  float:left;
 }
 .navigation a{
-  color:black;
+  color:white;
   background-color:#234A73; 
   background-repeat:no-repeat;
   padding-right:2.7em;
@@ -73,25 +77,23 @@ a.selected{
 .navigation a.selected{
     /*
      * /background-image: url('../images/bgblanc.png');   
-*/  background-color:#c7e0ff;
+*/  color:black;
+    background-color:white;
     padding-bottom:0.5em;
 }
 
 #search{
    font-size:50%;
    font-weight:bold;
-   text-align:right;
    color: white;
    padding-top:0.2em;
-   width:100%;
-
 }
 
 #home{
   color:#766749;
 }
 #contenu2{
-  background-color: #c7e0ff;
+  background-color: white;
   width:100%;
   padding-bottom:0.5em;
   margin-bottom:-1em;
@@ -99,7 +101,7 @@ a.selected{
   height:15%;
 }
 #contenu3{
-  background-color:#c7e0ff;
+  background-color:white;
 }
 .nav a{
   color:#234A73;
@@ -266,7 +268,7 @@ a.selected{
 }
 .field{
   padding-bottom:1em;
-  margin-left:115em;
+  margin-left:110em;
   float:left;
 }
 
