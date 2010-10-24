@@ -97,7 +97,7 @@ a.selected{
   width:100%;
   padding-bottom:0.5em;
   margin-bottom:-1em;
-  margin-top:0.55em;
+  margin-top:3.2em;
   height:15%;
 }
 #contenu3{
@@ -115,6 +115,12 @@ a.selected{
   font-size:13;
   color :white;
   float:left;
+}
+.account a{
+  color : white;
+  background-color:transparent;
+  padding-right:1em;
+  padding-left:1em;
 }
 #tag{
     background-color: #EEE;
