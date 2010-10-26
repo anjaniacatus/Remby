@@ -23,13 +23,17 @@
 
   -else
     - @jobs.each do |job|
-      %p
-        -if job.published 
-          - unless job.function.blank?
-            = job.function.name
-          = link_to 'show', job_path(job)
-            - unless current_user.blank?
-            - if current_user.roles == "company"|| "admin" && belongs_to_compagny?(job)
-              = link_to 'Edit', edit_job_path(job) if permitted_to?:update
-              = link_to 'Destroy', job, :confirm => 'Are you sure?', :method => :delete if permitted_to?:delete
+      .job
+        %p
+          -if job.published 
+            - unless job.function.blank?
+              .function
+                = job.function.name
+              %p
+              = job.description
+            = link_to 'show', job_path(job)
+              - unless current_user.blank?
+              - if current_user.roles == "company"|| "admin" && belongs_to_compagny?(job)
+                = link_to 'Edit', edit_job_path(job) if permitted_to?:update
+                = link_to 'Destroy', job, :confirm => 'Are you sure?', :method => :delete if permitted_to?:delete
              

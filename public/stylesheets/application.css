@@ -61,7 +61,7 @@ a.selected{
 }
 .navigation a{
   color:white;
-  background-color:#234A73; 
+  background-color:#486688; 
   background-repeat:no-repeat;
   padding-right:2.7em;
   padding-left:2.7em;
@@ -77,7 +77,7 @@ a.selected{
 .navigation a.selected{
     /*
      * /background-image: url('../images/bgblanc.png');   
-*/  color:black;
+*/  color: #486688;
     background-color:white;
     padding-bottom:0.5em;
 }
@@ -86,7 +86,7 @@ a.selected{
    font-size:50%;
    font-weight:bold;
    color: white;
-   padding-top:0.2em;
+   padding-top:1em;
 }
 
 #home{
@@ -113,8 +113,9 @@ a.selected{
   margin-top:1em;
   margin-bottom:0.2em;
   font-size:13;
-  color :white;
-  float:left;
+  color:black;
+  background-color:#486688;
+  float:right;
 }
 .account a{
   color : white;
@@ -183,7 +184,7 @@ a.selected{
    list-style-type:none;
    background-attachment:fixed;
    background-repeat:no-repeat;
-   margin-right:9em;
+   margin-right:3em;
    float:left;
 
 
@@ -202,13 +203,14 @@ a.selected{
   width:13%;
 }
 .title{
-  color:black;
+  color:#486688;
   font-weight:bold;
   font-size:17;
   float:left;
+  margin-left:15em;
+  margin-right:20em;
   text-align:center;
-  padding-top:2em;
-  padding-bottom:0.1em;
+  font-weight:bold;
 
 }
 .summary label{
@@ -226,11 +228,11 @@ a.selected{
   float:left;
   width:30%;
   margin-bottom:0.1em;
+  margin-top:-2em;
 }
 #login{
-  text-align:left;
   background-repeat:repeat;
-  margin-left:10em;
+  margin-left:25em;
   margin-right:30em;
 }
 .label{
@@ -260,14 +262,6 @@ a.selected{
 }
 .remove_link a{
   color:#B5463F;
-}
-#title{
-   color:white;   
-   font-size:20;
-   font-weight:bold;
-   width:100%;
-   text-align:left;
-   height:27%;
 }
 #logo{
   width: 100%;
@@ -326,6 +320,24 @@ a.selected{
 }
 #civil_status{
 }
+.job{
+  padding-left:2em;
+  padding-right:2em;
+  margin-left:20em;
+  background-image: url('../images/bg_transp.png');
+  margin-right:20em;
+  margin-bottom:-1em;
+}
+
+.job a{
+  color: white;
+  background-color:transparent;
+}
+.function{
+  font-weight:bold;
+  font-size:13;
+  color: black;
+}
 #flash_error {
   color :#B5463F;
   padding: 5px 8px;
@@ -335,13 +347,15 @@ a.selected{
 
 }
 
-#flash_notice {
-  margin-left:0.8em
-  margin-top:20.5em;
+.flash_notice {
+  margin-top:0.5em;
+  margin-left:20em;
+  margin-right:30em;
   color:black;
   font-size:100%;
   font-weight:bold;
   background-color: #9AB54F;
+  float:left;
 }
 
 #flash_error {
@@ -358,7 +372,10 @@ a.selected{
   text-align: left;
 }
 
-
+.pub{
+  margin-left:8em;
+  margin-bottom:2em;
+}  
 .fieldWithErrors {
   display: inline;
 }

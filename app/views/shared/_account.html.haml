@@ -4,4 +4,4 @@
     (#{current_user.role_symbols.map(&:to_s) * ','}) 
     = link_to 'déconnexion', logout_path 
     = link_to 'modifier compte', edit_user_path(current_user)
-
+    = link_to 'modifier  profil', edit_civil_status_path(current_user) 

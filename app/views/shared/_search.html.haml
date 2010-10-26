@@ -2,7 +2,6 @@
   -if current_user && current_user.roles == "compagny" 
     - form_tag cvs_path, :method => 'get' do
       %p
-        = "CV? "
         .field
           = text_field_tag :q, params[:q]
         = submit_tag "Search", :name => nil
@@ -10,7 +9,6 @@
   -if current_user && current_user.roles == "member" 
     - form_tag jobs_path, :method => 'get' do
       %p
-        = "OFFRES? "
         .field
           = text_field_tag :q, params[:q]
         = image_submit_tag ("search.png")
@@ -18,7 +16,6 @@
   -if !current_user
     - form_tag jobs_path, :method => 'get' do
       %p
-        = "OFFRES? "
         .field
           = text_field_tag :q, params[:q]
         = image_submit_tag ("search.png")

@@ -15,6 +15,7 @@
       = link_to 'Destroy', civil_status, :confirm => 'Are you sure?', :method => :delete
 - if current_user && current_user.roles == "member"
   - unless current_user.civil_status.blank?
+    - title "Info"
     = render @civil_status
   - else
     = "Créer votre profile pour déposer un CV"
