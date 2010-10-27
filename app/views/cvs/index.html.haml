@@ -7,19 +7,21 @@
     = link_to "plus de detail", cv_path(cv)
 -# = will_paginate @search.results
 
-- if current_user && current_user.roles == "member" && !current_user.civil_status.cvs.blank?
+-if current_user && current_user.roles == "member"  
+  - unless current_user.civil_status.blank?
+    = render @cvs
+  - else
+    ="vous ne diposez d'aucun CV pour l'instant!"
 
-  = render @cvs
-- if current_user && current_user.roles == "member" && current_user.civil_status.blank?
-  ="vous ne diposez d'aucun CV pour l'instant!"
+
+-if current_user && current_user.roles == "compagny"  
+  = render @cvs   
+  
+-if current_user && current_user.roles == "admin"  
+  = render @cvs 
 
 - if !current_user
   = "Si vous voulez déposer un cv ou une offre veuillez vous identifier ou devenez membre"
   = link_to "se connecter", login_url
   = link_to "devenir membre",new_user_path
 
-- unless current_user.blank?
-  - if current_user.roles == "member" && !current_user.civil_status.blank?
-    - @civil_status = current_user.civil_status 
-  - if current_user.roles == "compagny"
-    = "rubrique compagny"

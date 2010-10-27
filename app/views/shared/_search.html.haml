@@ -11,13 +11,13 @@
       %p
         .field
           = text_field_tag :q, params[:q]
-        = image_submit_tag ("search.png")
+        = image_submit_tag("search.png")
 
   -if !current_user
     - form_tag jobs_path, :method => 'get' do
       %p
         .field
           = text_field_tag :q, params[:q]
-        = image_submit_tag ("search.png")
+        = image_submit_tag("search.png")
 
 

@@ -27,7 +27,7 @@ Feature: Manage civil_statuses
   
   @test
   Scenario: visit new civil_status_path when I have already create a civil_status 
-    Given I follow "logout"
+    Given I follow "déconnexion"
     And an other user logged in and he has already a profile 
     When I go to the new civil_status page
     Then I should be on  the civil_statuses page

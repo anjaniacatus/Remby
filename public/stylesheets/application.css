@@ -184,7 +184,7 @@ a.selected{
    list-style-type:none;
    background-attachment:fixed;
    background-repeat:no-repeat;
-   margin-right:3em;
+   margin-right:0.5em;
    float:left;
 
 
@@ -208,7 +208,7 @@ a.selected{
   font-size:17;
   float:left;
   margin-left:15em;
-  margin-right:20em;
+  margin-right:15em;
   text-align:center;
   font-weight:bold;
 
@@ -292,8 +292,7 @@ a.selected{
   float: left;
 }
 #account.a{
-  color: black;
-}
+  color: black15}
 
 .textaccount{
   text-align:right;

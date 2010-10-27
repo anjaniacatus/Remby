@@ -18,7 +18,8 @@ Given /^an other user logged in and he has already a profile$/ do
   visit login_url
   fill_in "Username", :with => "other"
   fill_in "Password", :with => "other"
-  click_button "Log in"
+  click_button "Login"
   CivilStatus.create!(:family_name => "Rakoto", :name => "Bema", :birthday => "12 janvier 1987", :hometown => "Tana", :current_city =>"Tana", :status => "single", :gender => "female", :user_id => user.id )
 end
+
 
